@@ -391,7 +391,7 @@ setting carries it), no hashtags spam, no cross-promotion.
 2–3 per film: one exhibit line, one threshold crossing, one mechanism. Same fairness and fact rules.
 
 ### 13.6 Launch
-The trilogy (§17.3) goes out in order; each end screen points to the next case only.
+The slate (§17.4) goes out in order; each end screen points to the next case only. "Final report" films slot in when a report publishes.
 
 ### 13.7 The YouTube package, every final film
 - [ ] 3 thumbnails (1280×720 JPG) for Test & Compare
@@ -456,18 +456,19 @@ The trilogy (§17.3) goes out in order; each end screen points to the next case 
 ### 17.1 Owner's decisions
 1. **2026-11-02: the repo stays public; nothing in it names the owner or other channels.**
 2. Handoff spec received 2026-11-02 (Part G): brand, five-act structure, look, George, the launch trilogy.
+3. **2026-11-02: the slate changes from the landscape research are approved** (§17.4): Episode 1 unchanged; Episode 2
+   told through AI data-centre power demand; Episode 3 as the neutral, document-led forensic film; a standing "final
+   report" slot; one UK case as film 4 or 5.
+4. **2026-11-02: repo secret `GDRIVE_RCLONE_TOKEN` added** by the owner (render farm can reach Drive). `main` created
+   from the foundation branch the same day.
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle:** `config/brand.yaml` holds `@marginoferror` as a placeholder until the owner confirms the real one.
 2. **Brand art** (logo, avatar, banner, watermark): to design in its own phase, 3 concepts each.
 3. **Acronym format for George:** the spec's hyphen spacing (`N - T - S - B`) is the default; measure it on the
    first test paragraph (§7.5).
-4. **Drive folder:** created 2026-11-02 (`Margin-of-Error`, id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`), pinned in the scripts.
-5. Repo secret `GDRIVE_RCLONE_TOKEN` for the render farm (owner adds it from Termux with `gh secret set`).
-6. **Voice:** the three-way audition (§7.5a).
-7. **Slate changes recommended by the research** (owner to confirm): keep Episode 1; reframe Episode 2 through AI
-   data-centre power demand; Episode 3 as the neutral forensic counterpoint; a "final report" slot; one UK case as
-   film 4 or 5.
+4. **Voice:** the three-way audition (§7.5a).
+(Done: Drive folder `Margin-of-Error`, id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`, pinned in the scripts; the repo secret.)
 
 ### 17.3 The launch trilogy: what research must check first
 The spec's case summaries (Part G §6) were written before research. Each point below is a claim to check against
@@ -485,7 +486,12 @@ memory**, a reason to look, never a fact.
 - The NTSB probable cause, verbatim, and the FAA's actions after it.
 - Any Boeing reacquisition of Spirit and its status at the date of publication.
 
-**Episode 2, *The 4-Year Waiting List for Power* (large power transformers and GOES).**
+**Episode 2, working title *AI Wants the Power. The Grid Can't Get Transformers.* (large power transformers and
+GOES, told through AI data-centre demand; owner, 2026-11-02).**
+- The AI angle is the door in, not the thesis: Act I opens on a documented interconnection or transformer delay for a
+  real data-centre or utility project (sourced: utility filings, grid-operator queue data, DOE/NREL); the margin
+  story (spares, domestic steel, lead times) is unchanged. Data-centre load forecasts only from named, dated sources
+  (EIA, grid operators, DOE/LBNL), said as forecasts.
 - "A single domestic GOES mill": check the current number of US producers (DOE, Commerce/Section 232 records).
 - Lead times "3 to 4 years": check DOE, NREL, NIAC or industry reports and the year they describe.
 - How much of the US large-transformer fleet and GOES is imported: if most is imported, "the entire grid depends on
@@ -659,3 +665,16 @@ in §2 are removed, because this repo is public (owner, 2026-11-02). The full or
 >    CSB, SEC, ASME, IEEE).
 > 3. **Strict Domain Isolation:** Keep the forensic gaze locked on systemic corporate, regulatory, and mechanical
 >    breakdowns. [One clause naming another region's geopolitics is summarised in CLAUDE.md.]
+
+### 17.4 The slate after the research (owner-approved 2026-11-02)
+| # | Slug | Working title | Why it's in this place |
+|---|---|---|---|
+| 1 | `four-missing-bolts` | The Four Missing Bolts | Deepest demand (Boeing); no definitive film from the NTSB final report |
+| 2 | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | Rides the AI data-centre power wave, the strongest current search and browse topic near us |
+| 3 | `east-palestine` | title after the train-length check (§17.3) | The only big film is advocacy; a neutral, document-led one is open |
+| 4–5 | (one UK case) | Grenfell's cladding chain, or Post Office Horizon if a mechanism angle holds | Tests UK appetite: few films, unproven demand |
+
+**The "final report" slot.** When an NTSB (or AAIB, CSB, TSB) final report publishes on a case with strong early
+interest, a film made from the final report and its docket: breaking-news reaction is crowded, the final-report film
+much less, and sourcing is our edge. Candidates to watch: the January 2025 Washington National midair, UPS 2976
+(Louisville). Check each report's publication status before planning; never schedule against an expected date.

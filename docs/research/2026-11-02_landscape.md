@@ -130,3 +130,5 @@ measure pauses and pace with `scripts/vo_review.py` before you pick.
   [Radio Online on Crowd React Media](https://news.radio-online.com/articles/n49138/Study-Listeners-Struggle-to-Spot-AI-Voiceovers),
   [Inside Radio](https://www.insideradio.com/free/study-finds-ai-voices-equal-humans-on-sound-not-trust/article_b8187d55-51da-49a3-8b40-ad1278cac6ad.html),
   [Radio Ink (2026)](https://radioink.com/2026/07/07/radio-listeners-cant-detect-ai-voice-but-dont-trust-it-either/).
+
+**Owner decision (2026-11-02):** recommendations 1–5 approved; the slate is in PLAYBOOK §17.4.
