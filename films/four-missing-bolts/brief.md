@@ -1,17 +1,19 @@
 # The Four Missing Bolts: brief (package first)
 
-Status 2026-11-02: **research blocked.** The session's network policy denies every primary-source host (ntsb.gov,
-data.ntsb.gov, faa.gov, sec.gov, govinfo.gov, federalregister.gov, congress.gov, courtlistener.com). Nothing below is a
-fact until its `claims.csv` row is confirmed from the record. Working titles and numbers are placeholders for the
-fact check, not claims.
+Status 2026-11-02: **research phase done.** NTSB AIR-25-04 read in full; money-trail records collected; 69 claims
+confirmed with verbatim quotes (`claims.csv`, gate passes); treatment written (`treatment.md`). Notes in `research/`.
 
 ## Case sheet (PLAYBOOK §4.3)
 | | |
 |---|---|
-| Corporate decision | **To establish from the record.** Leads: the 2005 sale of the Wichita fuselage operation (Spirit AeroSystems), production-rate pressure, the handling of "traveled work" and rework at Renton, Boeing's later move to buy Spirit back. |
-| Physical failure mode | The left mid-exit door plug of a 737-9 left the airplane in climb; leads say the retention bolts that stop it moving upward were not installed after the plug was opened for rivet rework. Exact hardware, loads and sequence from the final report. |
-| Smoking-gun document | Candidates: the NTSB final report adopted 24 June 2025 (accident ID DCA24MA063) and its docket (records of the plug opening, or the absence of them); the August 2024 investigative hearing transcript. |
-| Target length | 18–22 min (the evidence decides). |
+| Corporate decision | **What the record supports:** a workforce rebuilt fast for a production ramp (about 52 a month before 2018, under 10 at the pandemic low, about 30–38 before the accident) with no risk assessment of the experience loss (NTSB finding 20); a parts-removal instruction known to fail for at least 10 years, fixed with corrective actions the FAA accepted and that did not work (finding 21). Context from filings: the 2005 sale of Wichita (Spirit), $9.0B of buybacks in 2018. **Not supported:** that pressure or buybacks caused it (the NTSB could not assess pressure, finding 27). |
+| Physical failure mode | All 4 bolts that stop the plug moving upward were missing (one lower bolt alone would have held it); over 154 cycles, low-g moments and vibration walked the 63-lb plug up its 12 stop pads until it cleared them at 14,830 ft. |
+| Smoking-gun document | The absent removal record (none was ever created) and the text-message photograph sent about 18:39 on 19 Sep 2023 showing the plug closed with no hardware (NTSB Figure 18). |
+| Target length | 18–20 min (the evidence decides). |
+
+**Corrections to the handoff spec found in the record:** 14,830 ft, not 16,000 (max 16,320); 4 bolts + 12 stop
+fittings, not "4 pins"; the plug was opened and closed by Boeing at Renton (Spirit was not allowed to open it); no
+"piecework quota" source exists.
 
 ## Why now, why us (our YouTube scan, `docs/research/2026-11-02_youtube_scan.csv`)
 - Only one film on this case passes 1M views (Mentour Pilot, 1.95M, March 2024), made **before** the final report.
