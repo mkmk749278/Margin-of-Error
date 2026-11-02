@@ -102,7 +102,11 @@ idea. Small channels still break out here in 2026 with single strong films.
 ### 4.3 Topics
 A failure with (1) an official investigation or court record, (2) a physical mechanism that can be drawn, and (3) a
 documented financial or managerial decision that touched the margin. If (3) is only an allegation, the film says so
-or the case waits. The launch trilogy is in §17.3 with its fact flags.
+or the case waits. The slate is in §17.4, its fact flags in §17.3.
+
+**The case sheet** (top of every `brief.md`, before research starts): the corporate decision · the physical failure
+mode · the "smoking gun" primary document · the target length. If the decision or the document is blank after
+research, the case waits.
 
 ## 5. Story architecture
 The five acts (Part G §3) are the spine; times are guides, the evidence sets the length (about 16–22 minutes).
@@ -112,6 +116,9 @@ The five acts (Part G §3) are the spine; times are guides, the evidence sets th
   reading, a dispatch line that is public). No greeting, no logo, no channel name.
 - Real audio only when it is public and licensed (§9.5). Otherwise the record is shown, not heard: a transcript line
   typing out against a clock is stronger than a fake voice.
+- **Cold-open option, "the dual split"** (strategy review 2026-11-02): the filing line on one side, the sensor trace
+  on the other, no music, a low hum and one mechanical click; then one clinical sentence of fact. One of the 3+ cold
+  opens per film, built only from sourced exhibits.
 - **Name the open loop in the first 60 s** (what we will find, and roughly when), and end the act on the question
   *where did the margin of error run out?* (said or shown, not every film word for word).
 
@@ -123,7 +130,9 @@ they can feel it shrink.
 ### 5.3 Act III: the boardroom (6:00–11:00)
 The investigative turn. Exhibits: SEC filings (10-K, 8-K, proxy), buyback authorizations, contracts, memos produced
 in litigation or to Congress, testimony, regulator findings. **The act must identify a dated, documented decision**
-and show, with the record, how it reached the factory floor or the inspection gate. Where the link is our reading,
+and show, with the record, how it reached the factory floor or the inspection gate. When the record holds one, the
+act includes **the concealed warning**: the whistleblower memo, the ignored non-conformance report, the overruled
+inspection finding, from public records only (dockets, hearing exhibits, court filings, committee reports). Where the link is our reading,
 the narration says so ("Read together, these documents suggest…"), and the fairness pass (§9.6) checks it.
 
 ### 5.4 Act IV: the cascade (11:00–16:00)
@@ -133,8 +142,10 @@ paths, readouts crossing thresholds in Failure Red.
 
 ### 5.5 Act V: the verdict (16:00–end)
 Findings, penalties, litigation (with status and date), regulatory change or its absence. Then the unresolved risk:
-where the same failure mode is still in service, **sourced** (fleet counts, audits, regulator statements). An
-understated sign-off: one line, the channel name, nothing more.
+where the same failure mode is still in service, **sourced** (fleet counts, audits, regulator statements). **The
+reconciliation:** the documented saving against the documented cost (fines, settlements, write-downs, compensation),
+every figure sourced and dated. An understated sign-off: one clinical line over the final exhibit, the channel name,
+then the end screen; never "in conclusion" or "thanks for watching".
 
 ### 5.6 Story deliverables per film
 `brief.md` (package first) → `research/` → `treatment.md` → `claims.csv` → `script/screenplay.md` (TIME | AUDIO |
@@ -259,6 +270,9 @@ re-takes once shipped doubled phrases, and a trim cut the last sentence off bloc
 - `motion.ts`: `tween`, `envelope`, `settle` (the channel spring), `microPush`, `shudder`. `sfx.ts`: cue names.
 - To build when the first film needs them: a schematic line-drawer (SVG paths drawn on), a radar/ADS-B trace plotter,
   a stress-field shader for fracture, a filing table that builds row by row, a redaction-safe quote card.
+- **Equations** go on screen only when the case's own report or a standard uses them, built up in motion and said in
+  plain words. Never as decoration, never a model that doesn't fit the material (a metal crack-tip formula over a
+  composite hull is wrong).
 
 ---
 
@@ -376,7 +390,7 @@ Compare; read Studio at 48 h, 7 days and 28 days.
 
 ### 13.2 Title
 The case + the margin, factual, curiosity without clickbait: *The Four Missing Bolts* works because it is exactly
-true. No question-mark bait, no "EXPOSED", no all-caps.
+true. No question-mark bait, no "EXPOSED", no all-caps, no tabloid words ("shocking", "deadly", "insane").
 
 ### 13.3 Thumbnail
 One object or one line of evidence, one question. Two elements at most (the part and the number; the exhibit line and
@@ -384,14 +398,17 @@ the redaction). Readable on a phone in one second. Honest: what is shown is in t
 
 ### 13.4 Description
 Two or three plain lines on the case, then chapters (`0:00` first), then **sources** (the records the film is built
-on, with links): for a forensic channel the source list is part of the trust. No AI disclosure line (the Studio
+on, with links): for a forensic channel the source list is part of the trust. Name the institutions and record ids
+(NTSB DCA24MA063, SEC Form 10-K, FRA, FAA): they are what the film is about, and search reads them. No AI disclosure line (the Studio
 setting carries it), no hashtags spam, no cross-promotion.
 
 ### 13.5 Shorts
 2–3 per film: one exhibit line, one threshold crossing, one mechanism. Same fairness and fact rules.
 
 ### 13.6 Launch
-The slate (§17.4) goes out in order; each end screen points to the next case only. "Final report" films slot in when a report publishes.
+**Each film goes up when it is finished** (owner, 2026-11-02), in slate order (§17.4); each end screen points to the
+next published case only. Default upload window: Thursday 14:00–16:00 US Eastern (19:00–21:00 UK), until Studio data
+says otherwise. "Final report" films slot in when a report publishes.
 
 ### 13.7 The YouTube package, every final film
 - [ ] 3 thumbnails (1280×720 JPG) for Test & Compare
@@ -461,6 +478,9 @@ The slate (§17.4) goes out in order; each end screen points to the next case on
    report" slot; one UK case as film 4 or 5.
 4. **2026-11-02: repo secret `GDRIVE_RCLONE_TOKEN` added** by the owner (render farm can reach Drive). `main` created
    from the foundation branch the same day.
+5. **2026-11-02: strategy paper reviewed** (`docs/research/2026-11-02_strategy_pdf_review.md`). The approved slate
+   stays (not the paper's Boeing / East Palestine / Key Bridge trio); **each film is released when it is finished**,
+   not all three at once.
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle:** `config/brand.yaml` holds `@marginoferror` as a placeholder until the owner confirms the real one.
@@ -513,6 +533,25 @@ GOES, told through AI data-centre demand; owner, 2026-11-02).**
   adoption timeline from its filings.
 - Trains over 10,000 feet: check the FRA/GAO records on train length.
 - The vent-and-burn decision and its findings belong in Act V only if the record supports the link to the margin.
+
+### 17.4 The slate after the research (owner-approved 2026-11-02)
+| # | Slug | Working title | Why it's in this place |
+|---|---|---|---|
+| 1 | `four-missing-bolts` | The Four Missing Bolts | Deepest demand (Boeing); no definitive film from the NTSB final report |
+| 2 | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | Rides the AI data-centre power wave, the strongest current search and browse topic near us |
+| 3 | `east-palestine` | title after the train-length check (§17.3) | The only big film is advocacy; a neutral, document-led one is open |
+| 4–5 | (one UK case) | Grenfell's cladding chain, or Post Office Horizon if a mechanism angle holds | Tests UK appetite: few films, unproven demand |
+
+**The "final report" slot.** When an NTSB (or AAIB, CSB, TSB) final report publishes on a case with strong early
+interest, a film made from the final report and its docket: breaking-news reaction is crowded, the final-report film
+much less, and sourcing is our edge. Candidates to watch: the January 2025 Washington National midair, UPS 2976
+(Louisville). Check each report's publication status before planning; never schedule against an expected date.
+
+**The bank of later cases** (from the strategy review; each needs its case sheet filled from primary records first):
+Baltimore Key Bridge (NTSB, MV Dali), OceanGate Titan (USCG MBI report), Grenfell (Inquiry Phase 2), Carillion and
+the Royal Liverpool hospital (HC 769), Deepwater Horizon (National Commission), the February 2021 Texas outages
+(FERC-NERC report), the PG&E Camp Fire (CPUC, Cal Fire). **Didcot A is on hold:** check whether UK criminal
+proceedings are active (UK contempt of court rules restrict reporting) before any work.
 
 ---
 
@@ -665,16 +704,3 @@ in §2 are removed, because this repo is public (owner, 2026-11-02). The full or
 >    CSB, SEC, ASME, IEEE).
 > 3. **Strict Domain Isolation:** Keep the forensic gaze locked on systemic corporate, regulatory, and mechanical
 >    breakdowns. [One clause naming another region's geopolitics is summarised in CLAUDE.md.]
-
-### 17.4 The slate after the research (owner-approved 2026-11-02)
-| # | Slug | Working title | Why it's in this place |
-|---|---|---|---|
-| 1 | `four-missing-bolts` | The Four Missing Bolts | Deepest demand (Boeing); no definitive film from the NTSB final report |
-| 2 | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | Rides the AI data-centre power wave, the strongest current search and browse topic near us |
-| 3 | `east-palestine` | title after the train-length check (§17.3) | The only big film is advocacy; a neutral, document-led one is open |
-| 4–5 | (one UK case) | Grenfell's cladding chain, or Post Office Horizon if a mechanism angle holds | Tests UK appetite: few films, unproven demand |
-
-**The "final report" slot.** When an NTSB (or AAIB, CSB, TSB) final report publishes on a case with strong early
-interest, a film made from the final report and its docket: breaking-news reaction is crowded, the final-report film
-much less, and sourcing is our edge. Candidates to watch: the January 2025 Washington National midair, UPS 2976
-(Louisville). Check each report's publication status before planning; never schedule against an expected date.
