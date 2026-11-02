@@ -29,7 +29,7 @@ carried over from earlier production work are written as our own, with the measu
   *Why:* the owner judges the channel by what they see; a rough sample wastes a review and lowers the bar.
 - **Google Drive is the delivery shelf.** Channel folder **`Margin-of-Error`** at the top of My Drive, one folder per
   film (`Margin-of-Error/<slug>/`), channel art in `_Channel/`. `scripts/upload_gdrive.sh --sub <slug> FILE…` finds or
-  creates the folder by name (set `GDRIVE_FOLDER_ID` once its id is known, to pin it). Never write in any other
+  uses the pinned folder id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`; text files can go through the Google Drive connector. Never write in any other
   top-level folder. Deliver the 4K master and a 1080p copy (the phone plays the 1080p one smoothly).
 - **Git:** all work lands on `main`. Each session uses its own branch, opens a PR to `main` and merges it the same
   day. Sessions can't delete branches: tell the owner which ones to delete. *Why:* stale session branches hide work.
@@ -83,6 +83,14 @@ and legal professionals, and curious adults who distrust both PR and outrage. Th
   (most records we show are American; one spelling everywhere looks deliberate). No slang.
 - **Units:** as the record states them (feet, knots, psi, °F, short tons) with SI in a smaller second line on screen
   ("16,000 ft · 4,877 m"). Narration says the record's unit. Currency `$`, millions and billions.
+
+### 4.1a Where we have space, and our edge (research 2026-11-02, `docs/research/2026-11-02_landscape.md`)
+Four neighbouring lanes are each strong and each stop short: aviation-disaster channels stay in the cockpit;
+corporate/finance explainers tell the failure without showing it (and often editorialise); engineering-failure
+channels show the physics but skip the boardroom; TV documentaries do one film per topic. **Our lane is the middle:
+the record on screen, the mechanism moving, the money trail documented, a neutral voice.** Many new template faceless
+channels already pitch this idea and get almost no views, so the edge is visible quality and earned trust, not the
+idea. Small channels still break out here in 2026 with single strong films.
 
 ### 4.2 What we make, and what we never make
 - **Make:** one case per film, followed from the physics of the failure to the documented decision behind it and
@@ -214,6 +222,14 @@ rewrite.
   `...` almost no pause, and tags changed the voice): record one test paragraph with George on Multilingual v2 and
   measure the pause each mark gives (`scripts/vo_review.py`). If `...` or `—` give no pause, the exact beats are cut
   in the edit from the word timings instead. Also listen for how `N - T - S - B` is read.
+
+### 7.5a Choosing the voice (research 2026-11-02, report §5)
+The spec names George. Before the first recording, the owner auditions three voices on `films/_voice/audition.txt`
+(130 words, passes the lint), Multilingual v2, stability 0.62, similarity 0.80, style 0.00: (1) an ElevenLabs Voice
+Design voice made for us (recommended if it passes: no other channel sounds like it); (2) George; (3) a library British
+documentary narrator. MP3s to Drive `Margin-of-Error/_voice/`; we measure them with `scripts/vo_review.py`; the owner
+picks. *Why:* the default voices are the most-heard on YouTube, and trust is where AI voices lose; for a channel whose
+edge is trust, the voice must not sound like a template.
 
 ### 7.6 Recording blocks
 Whenever a VO is ready or changes, the reply carries every block as its own fenced code block (one-tap copy on the
@@ -418,6 +434,13 @@ The trilogy (§17.3) goes out in order; each end screen points to the next case 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Landscape research (2026-11-02).**
+- *`elevenlabs.io` is blocked from the cloud session* (site and API), so voices are auditioned by the owner on the phone.
+- *The YouTube Data API rate-limits at about 80 search calls in a burst* (HTTP 429); pace scans or split them across
+  runs. Searches run with the channel-owner's existing API access; read-only.
+- *Drive connector works* (2026-11-02): it created the channel folder; rclone (videos) still needs its binary, which is
+  blocked from the session but works on GitHub's runners and the phone.
+
 **Channel foundation (2026-11-02).**
 - *The repo is public.* A rules file naming the owner and other channels would tie the "independent studio" to
   them for anyone who looks. Owner's choice: stay public (free runners), name nobody. **Rule:** no owner name, no other
@@ -426,9 +449,7 @@ The trilogy (§17.3) goes out in order; each end screen points to the next case 
   the first field and fail loud on NaN (fixed in `render_shards.mjs`).
 - *White paper swallows overlays* (§6.6). **Rule:** overlays on cards.
 - *Remotion's browser download is blocked in the container.* Use the pre-installed headless shell (§10.5).
-- *The rclone binary download is blocked in the container*, so the Drive folder couldn't be made from this session;
-  the upload script now creates `Margin-of-Error/` by name on first use (from the render farm or a session where the
-  download works).
+- *The rclone binary download is blocked in the container.* Videos go to Drive from GitHub's runners or the phone.
 
 ## 17. Decisions and open questions
 
@@ -441,8 +462,12 @@ The trilogy (§17.3) goes out in order; each end screen points to the next case 
 2. **Brand art** (logo, avatar, banner, watermark): to design in its own phase, 3 concepts each.
 3. **Acronym format for George:** the spec's hyphen spacing (`N - T - S - B`) is the default; measure it on the
    first test paragraph (§7.5).
-4. **Drive folder:** created on the first upload; record its id here and in `upload_gdrive.sh` afterwards.
-5. Repo secret `GDRIVE_RCLONE_TOKEN` for the render farm (owner: Settings → Secrets and variables → Actions).
+4. **Drive folder:** created 2026-11-02 (`Margin-of-Error`, id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`), pinned in the scripts.
+5. Repo secret `GDRIVE_RCLONE_TOKEN` for the render farm (owner adds it from Termux with `gh secret set`).
+6. **Voice:** the three-way audition (§7.5a).
+7. **Slate changes recommended by the research** (owner to confirm): keep Episode 1; reframe Episode 2 through AI
+   data-centre power demand; Episode 3 as the neutral forensic counterpoint; a "final report" slot; one UK case as
+   film 4 or 5.
 
 ### 17.3 The launch trilogy: what research must check first
 The spec's case summaries (Part G §6) were written before research. Each point below is a claim to check against

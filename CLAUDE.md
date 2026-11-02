@@ -50,8 +50,9 @@ the description. Be creative and smart, and stick to the rules.
 ## Owner and workflow
 - The owner works **only from an Android phone** (GitHub app, Claude app, Termux, SSH to a VPS). Everything
   runs in cloud sessions, GitHub Actions or the VPS; results must open on a phone.
-- **Google Drive:** channel folder **`Margin-of-Error`** at the top of My Drive, one folder per film, `<slug>/`.
-  `scripts/upload_gdrive.sh --sub <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`) creates it on first use. Never write in
+- **Google Drive:** channel folder **`Margin-of-Error`** at the top of My Drive (id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`),
+  one folder per film, `<slug>/`. Videos: `scripts/upload_gdrive.sh --sub <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`);
+  small text files through the Google Drive connector. Never write in
   any other top-level Drive folder.
 - **All work lands on `main`.** Each session works on its own branch, opens a PR to `main` and merges it the same day.
   Sessions can't delete branches: tell the owner which ones to delete.
@@ -140,7 +141,8 @@ the description. Be creative and smart, and stick to the rules.
   Telemetry, sfx. `src/`: the Remotion entry (`Root.tsx`), `dev/` (engine check). `public/fonts/`: vendored OFL fonts.
 - `films/<slug>/`: `brief.md`, `research/`, `treatment.md`, `claims.csv`, `script/`, `vo/`, `scenes/`, `remotion/`,
   `media_manifest.csv`, `review/`, `youtube/`. Large media in `assets/` (gitignored) and Drive.
-- `scripts/`: tooling. `prompts/`: review prompts. `docs/PLAYBOOK.md`: everything else.
+- `scripts/`: tooling. `prompts/`: review prompts. `docs/research/`: dated research reports and data.
+  `docs/PLAYBOOK.md`: everything else.
 
 ## Ground rules
 1. Ask before adding paid services, and report the expected cost per film.

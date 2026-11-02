@@ -9,7 +9,7 @@ SRC="${1:?Drive path under Margin-of-Error/, e.g. <slug>/footage}"; DST="${2:?lo
 RCLONE_VER=v1.71.1
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 CACHE="$ROOT/.cache/rclone"
-FOLDER_ID=${GDRIVE_FOLDER_ID:-}
+FOLDER_ID=${GDRIVE_FOLDER_ID:-1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn}   # Margin-of-Error, created 2026-11-02
 PREFIX=""; [[ -n $FOLDER_ID ]] || PREFIX="Margin-of-Error/"
 [[ -n ${GDRIVE_RCLONE_TOKEN:-} ]] || { echo "GDRIVE_RCLONE_TOKEN is not set (see PLAYBOOK §1, Google Drive setup)" >&2; exit 3; }
 RCLONE="$CACHE/rclone-$RCLONE_VER-linux-amd64/rclone"

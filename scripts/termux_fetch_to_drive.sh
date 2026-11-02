@@ -18,7 +18,7 @@
 # (Google Drive): a browser opens, sign in with the account that owns the Margin-of-Error folder, tap Allow.
 set -uo pipefail
 SLUG="${1:?usage: termux_fetch_to_drive.sh <slug> [--list repo/path.txt] [URL[@START-END] ...]}"; shift
-BOB_FOLDER_ID=""   # empty: My Drive root; files go under the channel folder by name, Margin-of-Error/
+BOB_FOLDER_ID=1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn   # the owner's Drive "Margin-of-Error" folder (created 2026-11-02)
 RAW=https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main
 OUT="$HOME/bob_fetch/$SLUG"
 mkdir -p "$OUT" && cd "$OUT" || exit 1
@@ -80,7 +80,7 @@ for e in "${entries[@]}"; do
 done
 echo "$ok of $n ready. Uploading to Drive: Margin-of-Error/$SLUG/footage/"
 rclone copy --drive-chunk-size 64M --retries 4 --stats-one-line --stats 20s \
-  --exclude "list.txt" --exclude "meta.txt" --exclude "*.part" --exclude "*.ytdl" . "moe:Margin-of-Error/$SLUG/footage" && {
+  --exclude "list.txt" --exclude "meta.txt" --exclude "*.part" --exclude "*.ytdl" . "moe:$SLUG/footage" && {
   echo "Done. Tell Claude: footage is in Drive, Margin-of-Error/$SLUG/footage ($ok of $n)."
-  rclone link "moe:Margin-of-Error/$SLUG/footage" 2>/dev/null || true
+  rclone link "moe:$SLUG/footage" 2>/dev/null || true
 }

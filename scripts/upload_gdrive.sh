@@ -9,16 +9,15 @@
 #   use it for frame sequences, where a per-file upload dies with the session's worker part-way.
 #
 # Needs the environment variable GDRIVE_RCLONE_TOKEN: the JSON line that `rclone authorize "drive"` prints
-# (already set in this environment). Optional GDRIVE_FOLDER_ID (default: the folder named
-# Margin-of-Error at the top of My Drive, created on first upload). rclone itself is a pinned binary fetched into .cache/ on first use.
+# (already set in this environment). Optional GDRIVE_FOLDER_ID (default: the
+# Margin-of-Error folder at the top of My Drive, id pinned below, created 2026-11-02). rclone itself is a pinned binary fetched into .cache/ on first use.
 # Small text files (description, SRT, review.md) can also go up through the Google Drive connector without a token;
 # the connector cannot carry video-sized files.
 set -euo pipefail
 RCLONE_VER=v1.71.1
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 CACHE="$ROOT/.cache/rclone"
-# No folder id yet: the channel folder is found (or created) by name at the top of My Drive.
-FOLDER_ID=${GDRIVE_FOLDER_ID:-}
+FOLDER_ID=${GDRIVE_FOLDER_ID:-1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn}   # Margin-of-Error, created 2026-11-02
 PREFIX=""; [[ -n $FOLDER_ID ]] || PREFIX="Margin-of-Error/"
 SUB=""
 if [[ ${1:-} == --sub ]]; then SUB=$2; shift 2; fi
