@@ -451,6 +451,19 @@ says otherwise. "Final report" films slot in when a report publishes.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Film 1 research (2026-11-02).**
+- *The handoff spec's case facts were wrong in four places* (16,000 ft vs 14,830; "4 pins" vs 4 bolts + 12 stops;
+  Spirit vs Boeing opening the plug; an unsourced "piecework quota"). **Rule:** a brief is a lead list; the record
+  writes the film.
+- *The record limits the thesis.* The NTSB could not assess production pressure (finding 27), so Act III shows
+  documented decisions beside documented effects and says plainly where the record stops. That honesty is the
+  channel's edge, not a weakness.
+- *Quote check in code:* every `claims.csv` quote is matched against the source text after normalising quotes and
+  whitespace; PDF text extraction drops footnotes into the middle of sentences, so a miss is read by eye before it is
+  called a miss.
+- *Network:* record hosts needed adding to the environment's allowed domains (ntsb.gov, faa.gov, sec.gov …); SEC EDGAR
+  needs a descriptive User-Agent; oig.dot.gov did not serve the audit PDF at its expected address.
+
 **Landscape research (2026-11-02).**
 - *`elevenlabs.io` is blocked from the cloud session* (site and API), so voices are auditioned by the owner on the phone.
 - *The YouTube Data API rate-limits at about 80 search calls in a burst* (HTTP 429); pace scans or split them across
