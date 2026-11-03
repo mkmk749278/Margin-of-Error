@@ -75,6 +75,7 @@ const FdrOpen: React.FC = () => {
 	const gh = 360;
 	const pts: string[] = [];
 	const redPts: string[] = [];
+	const altPts: string[] = [];
 	for (let k = 0; k <= 240; k++) {
 		const tt = t - tw + (k / 240) * tw;
 		if (tt < 0) continue;
@@ -82,6 +83,7 @@ const FdrOpen: React.FC = () => {
 		const px = gx + (k / 240) * gw;
 		const py = gy + gh - ((v - 7) / (15 - 7)) * gh;
 		(tt <= EVENT_T ? pts : redPts).push(`${px.toFixed(1)},${py.toFixed(1)}`);
+		altPts.push(`${px.toFixed(1)},${(gy + gh - ((altFt(tt) - 13000) / 4000) * gh).toFixed(1)}`);
 	}
 	if (redPts.length && pts.length) redPts.unshift(pts[pts.length - 1]);
 	const draw = tween(f, panelIn + 10, panelIn + 70, 0, 1, ease.draw);
@@ -135,6 +137,10 @@ const FdrOpen: React.FC = () => {
 								</g>
 							);
 						})}
+						<polyline points={altPts.join(' ')} fill="none" stroke={colors.sub} strokeWidth={2} strokeDasharray="6 5" opacity={0.7} />
+						<text x={gx + 8} y={gy + gh - 12} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={13} letterSpacing={2}>
+							- - ALTITUDE 13,000–17,000 FT
+						</text>
 						<polyline points={pts.join(' ')} fill="none" stroke={colors.cyan} strokeWidth={3} strokeDasharray={4000} strokeDashoffset={4000 * (1 - draw)} />
 						{redPts.length > 1 ? <polyline points={redPts.join(' ')} fill="none" stroke={colors.red} strokeWidth={4} /> : null}
 						<line x1={gx + gw} x2={gx + gw} y1={gy - 10} y2={gy + gh + 10} stroke={colors.sub} strokeWidth={1} strokeDasharray="4 6" />
@@ -174,8 +180,10 @@ const Crew: React.FC = () => {
 	const end = sf(7) + 6;
 	return (
 		<>
-			<QuoteCard quote="an explosive experience" who="THE CAPTAIN" where="AS REPORTED IN NTSB AIR-25-04" start={a - 4} end={end} x={260} y={300} w={1400} size={64} />
-			<QuoteCard quote="it was chaos" who="THE FIRST OFFICER" where="AS REPORTED IN NTSB AIR-25-04" start={sf(6) - 4} end={end} x={260} y={590} w={1400} size={64} />
+			<Photo src={media('img/fig09_psu_doors_open.jpg')} iw={1133} ih={879} start={a - 10} end={end} source="NTSB AIR-25-04 · FIG. 9 · THE CABIN AFTER THE FLIGHT" tag="FIG. 9" from={{x: 0, y: 0, w: 1133, h: 879}} to={{x: 120, y: 60, w: 900, h: 700}} />
+			<AbsoluteFill style={{background: 'linear-gradient(90deg, rgba(10,13,18,0.82) 0%, rgba(10,13,18,0.55) 55%, rgba(10,13,18,0.15) 100%)', opacity: envelope(useFilmFrame(), a - 10, end, 16, 16)}} />
+			<QuoteCard quote="an explosive experience" who="THE CAPTAIN" where="AS REPORTED IN NTSB AIR-25-04" start={a - 4} end={end} x={220} y={300} w={1000} size={70} />
+			<QuoteCard quote="it was chaos" who="THE FIRST OFFICER" where="AS REPORTED IN NTSB AIR-25-04" start={sf(6) - 4} end={end} x={220} y={600} w={1000} size={70} />
 		</>
 	);
 };
