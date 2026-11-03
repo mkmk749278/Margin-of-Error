@@ -502,6 +502,9 @@ says otherwise. "Final report" films slot in when a report publishes.
 - *ElevenLabs music and effects* (`scripts/el_sound.py`, owner 2026-11-03): six instrumental cues (2–3 min each)
   and eight effects used about 8,300 credits of the plan; the account counter lags a call or two. Every cue was
   checked by speech-to-text for vocals (none) and by spectral centroid (345–605 Hz: dark, as briefed).
+- *A workflow is only registered from the repo's DEFAULT branch.* With the default branch set to a session branch,
+  GitHub listed no workflows and `workflow_dispatch` returned 404 although the file was on `main`. Rule: `main` is
+  the default branch (owner fixed it 2026-11-03); then the render can be dispatched on any branch.
 - *The YouTube Data API's search endpoint rate-limits from the shared IP* (HTTP 429 after two calls); the
   comments endpoint did not. Benchmark films by their comments: viewers name exactly what a film failed to explain.
 

@@ -20,14 +20,13 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
 
 ## Next, in order
 1. **720p review cut on the render farm** (`remotion-render.yml`: film `four-missing-bolts`, comp `FourMissingBolts`,
-   scale `2/3`, name `four-missing-bolts_review_r1_720p.mp4`). **Blocked 2026-11-03:** GitHub reports no workflows
-   for this repo (Actions appears to be off); the owner enables Actions in the repo settings, then dispatch.
+   scale `2/3`, name `four-missing-bolts_review_r1_720p.mp4`). Dispatched 2026-11-03 (run 41604046525) after the owner set
+   the default branch to `main` (workflows register only from the default branch).
 2. Picture gate (§14.2) on the cut: contact sheets every 2 s with the words, every frame read; independent
    fresh-eyes review in a new session.
 3. Owner review; fixes collected per round; 4K only after approval; then the YouTube package (§13.7).
 
 ## Open with the owner
-- Enable GitHub Actions for this repo (render farm).
 - rclone's shared Drive client id is being retired during 2026 (own client id + re-authorise).
 - Brand art still to design. Before publication: status of the plug design enhancement (C65).
 
