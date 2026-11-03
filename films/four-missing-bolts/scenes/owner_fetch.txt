@@ -1,0 +1,5 @@
+# The Four Missing Bolts: clips the owner fetches on the phone (YouTube refuses the cloud). All are NTSB videos:
+# US government works, public domain. Format: NAME URL[@MM:SS-MM:SS]  # note
+ntsb_media_brief_20240107 https://www.youtube.com/watch?v=0jeO5fwRXLo  # NTSB media brief, 7 Jan 2024 (41 min): first on-scene findings
+ntsb_board_meeting_20250624_open https://www.youtube.com/watch?v=qkixkD96ATE@00:00-45:00  # board meeting opening, staff presentation, any animation
+ntsb_hearing_day1_open https://www.youtube.com/watch?v=a8zqkXSL3Hw@00:00-30:00  # hearing opening and the investigator-in-charge presentation
