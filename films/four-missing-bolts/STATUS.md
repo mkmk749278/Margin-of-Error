@@ -21,6 +21,9 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
 ## Delivered to the owner (2026-11-03)
 Review cut (720p, 16:15): Drive `four-missing-bolts/renders/four-missing-bolts_review_720p.mp4`. Picture gate r1, fresh-eyes review r2
 (`review/fresh_eyes_r2.md`, applied), r3/r4 checked. Waiting for the owner's notes; collect them all, then one round.
+**Owner's notes so far (2026-11-03):** an outside visual review of the 720p cut (audio locked). Every point checked in
+code, timing and rendered stills: `review/outside_visual_r1_check.md` (5 confirmed, 5 partly, 2 not confirmed, 2 new
+faults found) with the fix list for the next round. Not applied yet.
 
 ## Next, in order (history)
 1. **720p review cut on the render farm** (`remotion-render.yml`: film `four-missing-bolts`, comp `FourMissingBolts`,
@@ -36,4 +39,4 @@ Review cut (720p, 16:15): Drive `four-missing-bolts/renders/four-missing-bolts_r
 - Brand art still to design. Before publication: status of the plug design enhancement (C65).
 
 ## Branches
-`ccr-76270493-hjpb56` (merged earlier) can be deleted. This session: `ccr-9288f556-4k3oqe`.
+`ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs session 2026-11-03: `ccr-f2c16d1a-fculpb`.
