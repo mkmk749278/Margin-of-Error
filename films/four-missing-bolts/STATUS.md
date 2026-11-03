@@ -18,7 +18,11 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
   `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
-## Delivered to the owner (2026-11-03)
+## Delivered to the owner (2026-11-03), round 2
+Round-2 cut (owner's PDF notes, audio locked, plus a deep review): Drive `renders/four-missing-bolts_review_round2b_720p.mp4`.
+Motion audit: 0 still runs of 3 s or more (was 76). Loudness −14.0 LUFS, −1.3 dBTP. Waiting for the owner's notes.
+
+## Earlier delivery (round 1)
 Review cut (720p, 16:15): Drive `four-missing-bolts/renders/four-missing-bolts_review_720p.mp4`. Picture gate r1, fresh-eyes review r2
 (`review/fresh_eyes_r2.md`, applied), r3/r4 checked. Waiting for the owner's notes; collect them all, then one round.
 
