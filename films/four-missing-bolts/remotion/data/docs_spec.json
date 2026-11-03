@@ -1,0 +1,68 @@
+{
+ "spirit_2005": {
+  "file": "films/four-missing-bolts/assets/filings/spirit_10k2023.htm",
+  "phrases": [
+   "In 2005, Spirit Holdings became a standalone Delaware company"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ },
+ "spirit_64": {
+  "file": "films/four-missing-bolts/assets/filings/spirit_10k2023.htm",
+  "phrases": [
+   "approximately 64%"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ },
+ "boeing_20b": {
+  "file": "films/four-missing-bolts/assets/filings/boeing_10k2019.htm",
+  "phrases": [
+   "the Board approved a repurchase plan for up to $20 billion of common stock",
+   "Share repurchases under this plan are currently suspended"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ },
+ "boeing_27b": {
+  "file": "films/four-missing-bolts/assets/filings/boeing_10k2019.htm",
+  "phrases": [
+   "totaling $2.7 billion and $9.0 billion"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ },
+ "faa_halt": {
+  "file": "films/four-missing-bolts/assets/faa/FAA_release_2024-01-24_production_halt.html",
+  "phrases": [
+   "will not grant any production expansion of the MAX",
+   "This won\u2019t be back to business as usual for Boeing"
+  ],
+  "css": "*{color:#111 !important; visibility:visible !important; opacity:1 !important; position:static !important; font-family: Arial, sans-serif !important; font-size:17px !important; line-height:1.5 !important;} .visually-hidden,.sr-only{display:none !important;}",
+  "above": 150,
+  "width": 720,
+  "below": 220
+ },
+ "boeing_8k_merger": {
+  "file": "films/four-missing-bolts/assets/filings/boeing_8k_20240701.htm",
+  "phrases": [
+   "entered into an Agreement and Plan of Merger"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ },
+ "boeing_8k_close": {
+  "file": "films/four-missing-bolts/assets/filings/boeing_8k_20251208.htm",
+  "phrases": [
+   "announcing the completion of its acquisition of Spirit AeroSystems"
+  ],
+  "width": 720,
+  "above": 220,
+  "below": 220
+ }
+}

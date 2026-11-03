@@ -30,7 +30,7 @@ export const envelope = (frame: number, start: number, end: number, fadeIn = 12,
 	Math.min(tween(frame, start, start + fadeIn, 0, 1, ease.arrive), tween(frame, end - fadeOut, end, 1, 0, ease.leave));
 
 /** The channel's settle spring (config/brand.yaml `spring`), starting at `start`. */
-export const settle = (frame: number, fps: number, start: number, config: Partial<typeof exhibitSpring> = {}): number =>
+export const settle = (frame: number, fps: number, start: number, config: Partial<{mass: number; damping: number; stiffness: number}> = {}): number =>
 	spring({frame: frame - start, fps, config: {...exhibitSpring, ...config}});
 
 /** A slow 1.02 → 1.05 push across a shot, so no frame is ever static. */

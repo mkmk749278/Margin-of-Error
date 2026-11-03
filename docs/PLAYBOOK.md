@@ -229,8 +229,15 @@ rewrite.
 
 ### 7.5 TTS text for the narrator (owner's spec §5, voice changed 2026-11-03)
 - **Voice (owner, 2026-11-03):** George (male library voice) is dropped. The narrator is the channel's own custom
-  ElevenLabs voice, named **"1"** in the owner's account. `config/voice.yaml` holds the name, model (Multilingual v2,
-  Turbo v2.5 as the fallback) and settings (start: stability 0.62, similarity 0.80, style 0.00, speaker boost on).
+  ElevenLabs voice, named **"1"** in the owner's account. `config/voice.yaml` holds the name, model and settings.
+- **Model and stability (owner, 2026-11-03): Eleven v4 (`eleven_v4`), stability "Creative"**, replacing the spec's
+  Multilingual v2 at 0.62. On v3/v4 the app offers three stability steps, Creative / Natural / Robust, which are
+  0.0 / 0.5 / 1.0 in the API; Creative gives the most varied phrasing and tone. Similarity stays 0.80. v4 takes no
+  `style` and no speaker boost (the models API reports `can_use_style` and `can_use_speaker_boost` false), so they
+  are left out of the config. `tts_elevenlabs.py` sends the neighbouring text for continuity and drops it if a model
+  refuses it. *Why:* the owner's choice after hearing block 1 on Multilingual v2. Because Creative trades
+  predictability for range, every v4 take is measured (`vo_review.py`: word diff, pace, flat windows) and listened
+  to before use, and a block that skips, repeats or drifts is regenerated.
   No voice id is stored in this public repo: the script looks the voice up by name.
 - **Generation in the session (owner, 2026-11-03):** `scripts/tts_elevenlabs.py films/<slug>` reads
   `ELEVENLABS_API_KEY` from the environment and writes one MP3 per recording block (`vo/<slug>_vo_bNN.mp3`, the same
@@ -239,7 +246,7 @@ rewrite.
   colons → tune `config/voice.yaml` if needed → all blocks → upload to Drive `<slug>/vo/`. Each run is logged in
   `vo/tts_log.csv`. It spends characters from the owner's ElevenLabs plan (about 12,000 per film); a regeneration of
   one block costs that block's characters only.
-- **No `...` (owner, 2026-11-03):** Multilingual v2 reads three dots as an emotional cue (vocal fry, a dramatic
+- **No `...` (owner, 2026-11-03):** Multilingual v2 (and the expressive v3/v4 models) read three dots as an emotional cue (vocal fry, a dramatic
   whisper), not a pause; use an em-dash or a colon. `vo_lint.py` fails on `...`. Words said as words are written in
   normal case ("Max", not "MAX") so the voice never spells them.
 - No bracketed emotion or sound tags. Pauses: commas (short), colons, em-dashes (shifts), a blank line
@@ -249,7 +256,7 @@ rewrite.
   (`MAX`) go in `script/say_as_word.txt`.
 - `scripts/vo_lint.py script/vo.txt --say-as-word script/say_as_word.txt` must pass.
 - **To measure before the first full recording** (earlier work found a different ElevenLabs voice and model gave
-  `...` almost no pause, and tags changed the voice): generate block 1 with voice "1" on Multilingual v2 and
+  `...` almost no pause, and tags changed the voice): generate block 1 with voice "1" on the configured model and
   measure the pause each mark gives (`scripts/vo_review.py`). If `...` or `—` give no pause, the exact beats are cut
   in the edit from the word timings instead. Also listen for how `N - T - S - B` is read.
 
@@ -475,6 +482,32 @@ says otherwise. "Final report" films slot in when a report publishes.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Film 1 voice, picture and sound (2026-11-03).**
+- *Eleven v4 takes stability and similarity only* (models API: `can_use_style`, `can_use_speaker_boost` false). The
+  app's "Creative" step is stability 0.0. v4 Creative measured 141–160 wpm and 8–12 semitones of pitch range per
+  6 s window against Multilingual v2's 164 wpm and 5–11: slower and more alive. Acronyms with spaced hyphens
+  (`N - T - S - B`) transcribe back as NTSB: read letter by letter.
+- *Shared library components read `useCurrentFrame()`*, which a `<Sequence>` offsets. A film that cues everything on
+  absolute frames mounts its scenes without Sequence offsets (Film.tsx), or the library's exhibits silently start late.
+- *Timing words joined by an em-dash* ("wrote—and") are one token in vo/timing.json; timing.ts splits them so each
+  word can carry a cue.
+- *Real documents as exhibits:* NTSB pages are rendered from the PDF and highlights are placed on the words' own
+  boxes (`scripts/page_phrases.py`, fails loud on a miss); filings are shot from their own HTML in a 720 px column
+  (`scripts/doc_shots.mjs`). With JavaScript off, Playwright's `addStyleTag` never returns: inject the style with
+  `evaluate`. The FAA release hides its text without its CSS: force visible text for the shot.
+- *A push-in must frame the whole text column*, never a crop around the highlight: crops cut lines mid-word.
+- *ffmpeg `acompressor` takes linear threshold and makeup*, not dB strings; a "-26dB" value silently did nothing.
+  The mix places effects at absolute peaks after the one static gain on voice + bed, then a 4× oversampled
+  true-peak safety limiter (`scripts/mix_film.py`). Result: voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP.
+- *ElevenLabs music and effects* (`scripts/el_sound.py`, owner 2026-11-03): six instrumental cues (2–3 min each)
+  and eight effects used about 8,300 credits of the plan; the account counter lags a call or two. Every cue was
+  checked by speech-to-text for vocals (none) and by spectral centroid (345–605 Hz: dark, as briefed).
+- *A workflow is only registered from the repo's DEFAULT branch.* With the default branch set to a session branch,
+  GitHub listed no workflows and `workflow_dispatch` returned 404 although the file was on `main`. Rule: `main` is
+  the default branch (owner fixed it 2026-11-03); then the render can be dispatched on any branch.
+- *The YouTube Data API's search endpoint rate-limits from the shared IP* (HTTP 429 after two calls); the
+  comments endpoint did not. Benchmark films by their comments: viewers name exactly what a film failed to explain.
+
 **Film 1 assets (2026-11-03).**
 - *The NTSB docket is the richest free source:* 102 items for DCA24MA063, listed in the docket page's own HTML
   (`docBLOB?ID=…` links), including the **FDR tabular data as CSV**: real altitude, cabin pressure, warnings and GPS
@@ -522,6 +555,8 @@ says otherwise. "Final report" films slot in when a report publishes.
 1. **2026-11-02: the repo stays public; nothing in it names the owner or other channels.**
 2. Handoff spec received 2026-11-02 (Part G): brand, five-act structure, look, George, the launch trilogy.
    **2026-11-03: George dropped; the narrator is the owner's custom ElevenLabs voice "1"**, generated by the session.
+   **2026-11-03 (later): Eleven v4 with stability "Creative"** replaces Multilingual v2 at 0.62 (§7.5); this overrides
+   the model and stability lines of the spec's §5 (Part G, kept verbatim).
 3. **2026-11-02: the slate changes from the landscape research are approved** (§17.4): Episode 1 unchanged; Episode 2
    told through AI data-centre power demand; Episode 3 as the neutral, document-led forensic film; a standing "final
    report" slot; one UK case as film 4 or 5.

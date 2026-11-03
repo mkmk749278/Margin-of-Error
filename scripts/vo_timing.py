@@ -118,11 +118,17 @@ def main() -> None:
     # chapter of each beat, from the `## ` headers of vo.txt (beats compared without tags), in spoken order
     norm = lambda t: re.sub(r"\s+", " ", TAG.sub("", t)).strip()  # noqa: E731
     beats, chap = [], None
+    acts_file = film / "script" / "acts.txt"  # optional: act titles keyed to paragraph openings (no headers in vo.txt)
+    acts = [tuple(x.strip() for x in ln.split("|", 1)) for ln in acts_file.read_text().splitlines()
+            if acts_file.exists() and ln.strip() and not ln.startswith("#")] if acts_file.exists() else []
     for para in vo.split("\n\n"):
         para = para.strip()
         if para.startswith("## "):
             chap = para[3:].strip()
         elif para:
+            for title, opening in acts:
+                if norm(para).startswith(norm(opening)):
+                    chap = title
             beats.append((norm(para), chap))
     takes = sorted((out / "takes").glob("b*.mp3"))
     if len(takes) != len(blocks):
