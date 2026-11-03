@@ -90,8 +90,10 @@ the description. Be creative and smart, and stick to the rules.
 - No stock footage of generic offices, no AI imagery of real places, people or aircraft, no neon dashboards.
 
 ## Narration (owner's spec §5; PLAYBOOK §7)
-- **Voice: ElevenLabs "George"** (library voice), Multilingual v2 (or Turbo v2.5): stability 0.60–0.65, similarity
-  0.78–0.82, style 0.00. Never synthesise a real person's voice.
+- **Voice: the channel's own ElevenLabs voice, named "1"** (owner, 2026-11-03: George dropped). Settings in
+  `config/voice.yaml` (Multilingual v2; start at stability 0.62, similarity 0.80, style 0.00). The session generates
+  the narration itself with `scripts/tts_elevenlabs.py` (needs `ELEVENLABS_API_KEY` in the environment; never print
+  it); first one block, measured, then the rest. Never synthesise a real person's voice.
 - No bracketed tags (`[sigh]`, `[pause]`). Pauses from commas, colons, em-dashes and double paragraph breaks. **No `...`**
   (owner, 2026-11-03: the voice reads it as vocal fry or a whisper); write "Max", not "MAX".
 - **VO text:** numbers as words (`sixteen thousand feet`, `four point eight billion dollars`), acronyms pre-spaced
