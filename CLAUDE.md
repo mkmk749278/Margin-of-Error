@@ -32,6 +32,16 @@ the description. Be creative and smart, and stick to the rules.
    the margin it removed. No motive is invented; no link is drawn that the record doesn't support.
 4. **A voice that never raises itself.** Clinical, precise, understated. The evidence carries the anger.
 
+## The audience: the US and the UK first (research 2026-11-03; PLAYBOOK §4.1–§4.1c)
+- **They watch on a TV across the room, at a desk, or on a phone held sideways.** Every frame reads on all three
+  (§6.7), and the number that matters is said, not only shown.
+- **They distrust PR, outrage and AI content alike.** Visible care wins them: the real exhibit and its record id, the
+  finding attributed, the other side's response, a correction pinned the day we learn of it.
+- **Write for both halves of a split US.** No partisan words, no side; the regulator gets the same scrutiny as the
+  company. No outsider's voice ("in the West"); no sneer at workers, crews or a country.
+- Gloss a US body once for UK viewers and a UK body once for US viewers. Dates on screen as `05 JAN 2024`, never
+  `01/05/2024`. Never anything that looks like a recovered recording or a real person's voice.
+
 ## Polished only
 - **Never send the owner a test, draft, sample, preview, placeholder or "v0".** Tests stay inside the session.
 - `high`/`xhigh` effort for building, `max` for fact-checks, legal-fairness passes and final reviews.
@@ -65,6 +75,11 @@ the description. Be creative and smart, and stick to the rules.
 - **Package first:** title, thumbnail concept and search terms in the film's `brief.md` before the script.
 - **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13.7): 3 thumbnails, the title and the
   description in click-to-copy blocks, chapters, English SRT, saved in `films/<slug>/youtube/`.
+- **Reviews and comments live in this repo (owner, 2026-11-03).** The independent forensic review runs in a new
+  session from `prompts/forensic_review_v1.md` (§14.4). Comment replies follow §13.8: the owner approves every reply
+  before it is posted; facts only from the film's `claims.csv`; never a new allegation; no viewer profiles in git.
+- **An outside review is a list of leads (§14.3):** check each point in the code, `vo/timing.json` and a rendered still,
+  write `review/<name>_check.md` (CONFIRMED / PARTLY / NOT CONFIRMED), then fix in the next round.
 
 ## Format: the five-act forensic investigation (owner's spec §3)
 - **Long-form, about 16–22 minutes**, built for desktop and TV; the evidence sets the length, never a target.
@@ -86,7 +101,12 @@ the description. Be creative and smart, and stick to the rules.
 - **Type:** JetBrains Mono for every readout and timestamp; Inter bold, tracked uppercase for structural titles; real
   documents are shown as the real scans, never retyped as if they were the originals.
 - **Motion:** every schematic on a coordinate grid at 0.05 opacity; counters, pressures and timeline bars interpolate
-  (no number ever jumps); documents in 2.5D (`perspective: 1000px`) pulling from the letterhead to the highlighted line.
+  (no number ever jumps); documents in 2.5D (`perspective: 1000px`) pulling from the letterhead to the highlighted line,
+  every document in one desk pose (resting tilt, paper token, same shadow). **Motion counts only if a viewer can see
+  it** (camera ≥ ~3% scale or 30 px per 4 s, a moving readout, a new element); grain and grid drift don't (§6.4).
+- **Legible on a phone held sideways (§6.7):** at 1080, ≥ 36 px for what the narration points to and honesty labels,
+  ≥ 26 px for every other fact-carrying label; `muted` never carries a fact; text inside the 90% safe area, never on
+  a grid line, never clipped. If it isn't plainly readable in the 720p cut, it fails.
 - No stock footage of generic offices, no AI imagery of real places, people or aircraft, no neon dashboards.
 
 ## Narration (owner's spec §5; PLAYBOOK §7)
@@ -113,6 +133,9 @@ the description. Be creative and smart, and stick to the rules.
   `@keyframes`, no `Math.random`, no `Date.now`, no network at render time, no external URLs.
 - Strict TypeScript, no `any`. Fonts vendored in `public/fonts/` via `loadBrandFonts()`. Scenes are `<Sequence>`s on
   frames from `vo/timing.json`. Every visual event exposes an SFX cue (`lib/remotion/sfx.ts`).
+- **Sync (§10.3):** a diagram, list or form builds part by part, each part on its own word; a highlight starts ~15
+  frames before its word so it completes on it; a readout and the trace beside it share one driver. Word times
+  inside a sentence are estimates: listen at the signature cues (§10.4).
 - In the session, pass `--browser-executable` (PLAYBOOK §10.5): Remotion's own browser download is blocked here.
 - Loop: `npx tsc --noEmit` → stills at key frames → look at every image → fix → render.
 - **Full renders run on GitHub's runners** (`remotion-render.yml`), never in the session.

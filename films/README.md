@@ -3,7 +3,7 @@
 One folder per film, `films/<slug>/` (PLAYBOOK §5.6; `_voice/` holds the voice audition text): `brief.md` (package first), `research/`, `treatment.md`,
 `claims.csv`, `script/` (`screenplay.md` with the Q column, `vo.txt`, `terms.txt`, `say_as_word.txt`), `vo/`
 (`timing.json`, `vo_blocks.md`), `scenes/` (handoff docs), `remotion/` (the film's components, registered in
-`src/Root.tsx` inside its own `<Folder>`), `media_manifest.csv`, `review/` (`fairness_vN.md`, `audience_vN.md`),
+`src/Root.tsx` inside its own `<Folder>`), `media_manifest.csv`, `review/` (`fairness_vN.md`, `audience_vN.md`, `forensic_<cut>.md`, `<name>_check.md` for outside reviews, `errata.md`),
 `youtube/`. Large media in `assets/` (gitignored) and Drive `Margin-of-Error/<slug>/`.
 
 ## The slate (owner-approved 2026-11-02; PLAYBOOK §17.4, fact flags in §17.3)
