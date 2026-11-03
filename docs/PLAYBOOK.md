@@ -482,6 +482,29 @@ says otherwise. "Final report" films slot in when a report publishes.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Film 1 voice, picture and sound (2026-11-03).**
+- *Eleven v4 takes stability and similarity only* (models API: `can_use_style`, `can_use_speaker_boost` false). The
+  app's "Creative" step is stability 0.0. v4 Creative measured 141–160 wpm and 8–12 semitones of pitch range per
+  6 s window against Multilingual v2's 164 wpm and 5–11: slower and more alive. Acronyms with spaced hyphens
+  (`N - T - S - B`) transcribe back as NTSB: read letter by letter.
+- *Shared library components read `useCurrentFrame()`*, which a `<Sequence>` offsets. A film that cues everything on
+  absolute frames mounts its scenes without Sequence offsets (Film.tsx), or the library's exhibits silently start late.
+- *Timing words joined by an em-dash* ("wrote—and") are one token in vo/timing.json; timing.ts splits them so each
+  word can carry a cue.
+- *Real documents as exhibits:* NTSB pages are rendered from the PDF and highlights are placed on the words' own
+  boxes (`scripts/page_phrases.py`, fails loud on a miss); filings are shot from their own HTML in a 720 px column
+  (`scripts/doc_shots.mjs`). With JavaScript off, Playwright's `addStyleTag` never returns: inject the style with
+  `evaluate`. The FAA release hides its text without its CSS: force visible text for the shot.
+- *A push-in must frame the whole text column*, never a crop around the highlight: crops cut lines mid-word.
+- *ffmpeg `acompressor` takes linear threshold and makeup*, not dB strings; a "-26dB" value silently did nothing.
+  The mix places effects at absolute peaks after the one static gain on voice + bed, then a 4× oversampled
+  true-peak safety limiter (`scripts/mix_film.py`). Result: voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP.
+- *ElevenLabs music and effects* (`scripts/el_sound.py`, owner 2026-11-03): six instrumental cues (2–3 min each)
+  and eight effects used about 8,300 credits of the plan; the account counter lags a call or two. Every cue was
+  checked by speech-to-text for vocals (none) and by spectral centroid (345–605 Hz: dark, as briefed).
+- *The YouTube Data API's search endpoint rate-limits from the shared IP* (HTTP 429 after two calls); the
+  comments endpoint did not. Benchmark films by their comments: viewers name exactly what a film failed to explain.
+
 **Film 1 assets (2026-11-03).**
 - *The NTSB docket is the richest free source:* 102 items for DCA24MA063, listed in the docket page's own HTML
   (`docBLOB?ID=…` links), including the **FDR tabular data as CSV**: real altitude, cabin pressure, warnings and GPS

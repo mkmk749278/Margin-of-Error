@@ -1,41 +1,35 @@
-# The Four Missing Bolts: status and handoff (2026-11-03)
+# The Four Missing Bolts: status and handoff (2026-11-03, evening)
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
 
-## Done (all merged to `main`)
-- **Research:** NTSB AIR-25-04 read in full (`research/ntsb_AIR-25-04_notes.md`), money trail (`research/money_trail_notes.md`),
-  `claims.csv` (88 rows, every quote verified against its source; gate passes).
-- **Treatment** (`treatment.md`) approved by the owner, with the owner's calibration (2026-11-03) at the end.
-- **Script v2.1** (`script/vo.txt`, 2,068 words, about 15 min of voice): independent audience review applied
-  (`review/audience_v1.md`), fairness pass (`review/fairness_v1.md`), no ellipses, "Max" casing; `vo_lint.py` passes.
-  Recording blocks: `vo/vo_blocks.md` (5 blocks, 12,096 characters).
-- **Screenplay** (`script/screenplay.md`): 66 beats with pictures, claim ids, questions; open-loop lock 5:45–6:15
-  after the promise.
-- **Assets** (`media_manifest.csv`, 89 rows; files in Drive `Margin-of-Error/four-missing-bolts/assets/` and
-  `footage/`, gitignored here): NTSB report figures and pages, 35 docket items (FDR CSVs, structures, materials,
-  manufacturing records, hearing transcripts), 11 NTSB Flickr photos, FAA AD, SEC filings, 2 NTSB YouTube clips,
-  synthesised SFX. Reference-only items are marked; the Spirit video stays reference only (owner, 2026-11-03).
-- **Data:** `remotion/data/fdr_1282.json` (real FDR: altitude, cabin pressure, warnings, GPS);
-  `remotion/telemetry.ts` (sourced values and labels, `checkOpenLoop`).
-- **Design reference:** `scenes/design-reference.md`.
+## Done
+- **Research, claims, treatment, script v2.1, screenplay, assets:** as before (claims now 91 rows, gate passes;
+  C89–C91 added for on-screen facts in Act III).
+- **Voice:** voice "1" on **Eleven v4, stability Creative (0.0), similarity 0.80** (owner, 2026-11-03). All five blocks
+  generated and measured (98–100% of words as written, 141–160 wpm, no flat stretches; `N - T - S - B` read as
+  letters). Takes in Drive `four-missing-bolts/vo/`.
+- **Timing:** `vo/timing.json` = the joined takes (scripts/vo_timing.py, act titles from `script/acts.txt`) plus the
+  edit holds in `script/holds.json` (scripts/film_timing.py). Film **16:15**; open loop **351.7 s** (window 345–375).
+- **Benchmark:** `research/benchmark_youtube.md` (what the existing films missed; applied in Act II).
+- **Picture:** the whole film in Remotion, `remotion/` (Film.tsx, kit, engine3d + PlugModel, docs, scenes/act1–5).
+  Composition `FourMissingBolts`. Stills of every act reviewed in the session.
+- **Sound:** ElevenLabs music (6 cues) and effects (8) via `scripts/el_sound.py` (`sound/el_sound.json`,
+  `sound/el_log.csv`); cues exported from the picture (`sound/cues.json`); mix by `scripts/mix_film.py`
+  (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
+  `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
 ## Next, in order
-1. **Voice (owner, 2026-11-03: custom ElevenLabs voice "1", George dropped).** Check `ELEVENLABS_API_KEY` is set
-   (never print it). Run `python3 scripts/tts_elevenlabs.py films/four-missing-bolts --dry-run`, then `--blocks 1`.
-   Measure block 1 (`scripts/vo_review.py`), listen for `N - T - S - B`, dashes and colons; tune `config/voice.yaml`
-   if needed; then generate the rest. Upload: `scripts/upload_gdrive.sh --sub four-missing-bolts/vo films/four-missing-bolts/vo/*.mp3`.
-   Send the owner block 1 first as an audio file before generating all five.
-2. **Timing:** `scripts/vo_timing.py` → `vo/timing.json`; check the open loop with `checkOpenLoop` (5:45–6:15).
-3. **Scenes in Remotion:** Act I on the real FDR data, Act II plug cutaway (true geometry, `design-reference.md`),
-   then Acts III–V; every mount on exhibit paper (PLAYBOOK §6.5a); stills reviewed in the session.
-4. **Mix** to the owner's standard (PLAYBOOK §12), 720p review cut on the render farm, picture gate (§14.2).
-5. **Package** (§13.7) after the owner approves the cut.
+1. **720p review cut on the render farm** (`remotion-render.yml`: film `four-missing-bolts`, comp `FourMissingBolts`,
+   scale `2/3`, name `four-missing-bolts_review_r1_720p.mp4`). **Blocked 2026-11-03:** GitHub reports no workflows
+   for this repo (Actions appears to be off); the owner enables Actions in the repo settings, then dispatch.
+2. Picture gate (§14.2) on the cut: contact sheets every 2 s with the words, every frame read; independent
+   fresh-eyes review in a new session.
+3. Owner review; fixes collected per round; 4K only after approval; then the YouTube package (§13.7).
 
 ## Open with the owner
-- rclone's shared Google Drive client id is being retired during 2026; the owner should create their own client id
-  and re-authorise (phone and the `GDRIVE_RCLONE_TOKEN` secret) before it breaks.
-- Brand art (logo, avatar, banner) still to design.
-- Before publication: the status of the plug design enhancement (C65).
+- Enable GitHub Actions for this repo (render farm).
+- rclone's shared Drive client id is being retired during 2026 (own client id + re-authorise).
+- Brand art still to design. Before publication: status of the plug design enhancement (C65).
 
-## Branch
-Work happened on `ccr-76270493-hjpb56`, fully merged; the owner can delete it.
+## Branches
+`ccr-76270493-hjpb56` (merged earlier) can be deleted. This session: `ccr-9288f556-4k3oqe`.
