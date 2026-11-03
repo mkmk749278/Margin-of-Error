@@ -41,12 +41,22 @@ const Scenes: React.FC = () => {
 	return (
 		<>
 			{scenes
-				.filter((s) => f >= s.from && f < s.to)
-				.map((s) => (
-					<AbsoluteFill key={s.id}>
-						<s.C />
-					</AbsoluteFill>
-				))}
+				.map((s, i) => ({s, i}))
+				.filter(({s}) => f >= s.from && f < s.to)
+				.map(({s, i}) => {
+					// the camera never stops: a slow push (1.000 → 1.035) and a drift whose direction turns scene by scene
+					const p = Math.min(1, Math.max(0, (f - s.from) / Math.max(1, s.to - s.from)));
+					const e = p * p * (3 - 2 * p);
+					const ang = (i * 2.399963) % (2 * Math.PI);
+					const k = 1 + 0.035 * e;
+					const dx = Math.cos(ang) * 16 * (e - 0.5);
+					const dy = Math.sin(ang) * 10 * (e - 0.5);
+					return (
+						<AbsoluteFill key={s.id} style={{transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: '50% 48%'}}>
+							<s.C />
+						</AbsoluteFill>
+					);
+				})}
 		</>
 	);
 };

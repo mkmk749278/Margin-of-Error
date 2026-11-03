@@ -155,7 +155,7 @@ const FdrOpen: React.FC = () => {
 					<div style={{position: 'absolute', left: 40, top: 590, fontFamily: mono, fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>RECORDED DISCRETES</div>
 					<Annunciator label="CABIN ALT WARNING" on={warnOn} tone="red" x={40} y={625} />
 					<Annunciator label="MASTER CAUTION" on={cautOn} tone="amber" x={400} y={625} />
-					<div style={{position: 'absolute', left: 760, top: 600, width: 900, fontFamily: mono, fontSize: 18, letterSpacing: 2, color: colors.sub, lineHeight: 1.7, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
+					<div style={{position: 'absolute', left: 760, top: 596, width: 900, fontFamily: mono, fontSize: 23, letterSpacing: 1.6, color: '#cbd5e1', lineHeight: 1.6, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
 						<div>17:12:33 · CPC1 14.08 → 9.08 PSI IN 2 S</div>
 						<div style={{color: colors.muted}}>NTSB: CLIMBING THROUGH ABOUT 14,830 FT</div>
 					</div>
@@ -358,6 +358,7 @@ const Paper: React.FC = () => {
 						<TypeOn text="NO AUDIO FROM THE ACCIDENT FLIGHT" start={sf(13) + 20} cps={30} />
 					</div>
 					<div style={{position: 'absolute', left: 30, top: 250, fontFamily: mono, fontSize: 16, letterSpacing: 2.4, color: colors.sub, opacity: tween(f, sf(14), sf(14) + 20, 0, 1)}}>
+						<span style={{display: 'inline-block', width: 10, height: 10, borderRadius: 5, marginRight: 12, background: colors.amber, opacity: Math.round((f / 30) % 2) ? 1 : 0.25}} />
 						RECORDING CONTINUED AFTER LANDING · OVERWRITTEN · NTSB AIR-25-04
 					</div>
 				</div>
@@ -390,7 +391,8 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 	}
 	return (
 		<div style={{position: 'absolute', left: 660, top: 230, width: 600, opacity: o}}>
-			<div style={{width: 600, height: 380, background: '#c9b48a', position: 'relative', boxShadow: '0 30px 80px rgba(0,0,0,0.6)', transform: 'rotate(-2deg)'}}>
+			<div style={{width: 600, height: 380, background: '#c9b48a', position: 'relative', boxShadow: '0 30px 80px rgba(0,0,0,0.6)', transform: `rotate(${-2 + tween(f, start, end, 0, 1.2)}deg) translateY(${tween(f, start, end, 0, -14)}px)`, overflow: 'hidden'}}>
+				<div style={{position: 'absolute', top: 0, bottom: 0, width: 160, left: tween(f, start + 40, end, -200, 760), background: 'linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.16), rgba(255,255,255,0))'}} />
 				<div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 120, background: '#b9a274', clipPath: 'polygon(0 0, 100% 0, 50% 100%)'}} />
 				<div style={{position: 'absolute', left: 40, top: 170, right: 40, fontFamily: mono, color: '#2a2216'}}>
 					<div style={{fontSize: 20, fontWeight: 700, letterSpacing: 4}}>EXHIBIT · PHOTOGRAPH</div>

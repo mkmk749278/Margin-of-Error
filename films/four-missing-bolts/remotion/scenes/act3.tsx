@@ -13,7 +13,7 @@ import {SceneDef} from './types';
 // is silent. No person is named (the NTSB names none). Links the record does not draw are not drawn (C47, C84).
 
 const none: Record<BoltId, number> = {upperFwd: 0, upperAft: 0, lowerFwd: 0, lowerAft: 0};
-const cam = (yaw: number, pitch: number, dist: number, cx = 960, cy = 500, ty = 29): Camera => ({target: [0, ty, -2], yaw, pitch, dist, focal: 1120, cx, cy});
+const cam = (yaw: number, pitch: number, dist: number, cx = 960, cy = 500, ty = 29): Camera => ({target: [0, ty, -2], yaw, pitch, dist, focal: 1250, cx, cy});
 
 // ---------- the life of the plug: one bar, March 2023 → January 2024 (the treatment's structure device)
 const DAY0 = Date.UTC(2023, 2, 1);
@@ -121,7 +121,7 @@ const Journey: React.FC = () => {
 const Spirit: React.FC = () => (
 	<>
 		<RecordDoc doc="spirit_2005" start={sf(51) - 12} end={sf(53) + 6} at={[wf(52, 'five')]} label="EXHIBIT 03" source="SPIRIT AEROSYSTEMS FORM 10-K, FY 2023 · SEC EDGAR" pushTo={wf(52, 'five')} />
-		<RecordDoc doc="spirit_64" start={sf(53) - 6} end={sf(54) + 12} at={[wf(53, 'two')]} label="EXHIBIT 04" source="SPIRIT AEROSYSTEMS FORM 10-K, FY 2023 · SEC EDGAR" pushTo={wf(53, 'two')} />
+		<RecordDoc doc="spirit_64" start={sf(53) - 30} end={sf(54) + 12} at={[wf(53, 'nearly') - 4]} label="EXHIBIT 04" source="SPIRIT AEROSYSTEMS FORM 10-K, FY 2023 · SEC EDGAR" pushTo={wf(53, 'two')} />
 	</>
 );
 
@@ -150,9 +150,9 @@ const Renton: React.FC = () => {
 			<div style={{position: 'absolute', left: 1210, top: 120, width: 620, fontFamily: mono, opacity: envelope(f, a + 20, end, 16, 16)}}>
 				<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>BOEING · RENTON, WASHINGTON</div>
 				<div style={{fontSize: 30, fontWeight: 700, color: colors.ink, marginTop: 8}}>FUSELAGE ARRIVES 31 AUG 2023</div>
-				<div style={{fontSize: 22, letterSpacing: 1.5, color: colors.red, marginTop: 26, opacity: tween(f, rivOn, rivOn + 20, 0, 1)}}>01 SEP · 5 DAMAGED RIVETS</div>
-				<div style={{fontSize: 16, letterSpacing: 1.8, color: colors.sub, marginTop: 6, opacity: tween(f, rivOn, rivOn + 20, 0, 1)}}>EDGE FRAME, JUST FORWARD OF THE PLUG</div>
-				<div style={{fontSize: 16, letterSpacing: 1.8, color: colors.sub, marginTop: 26, opacity: tween(f, sf(56), sf(56) + 20, 0, 1)}}>INSTALLED BY ONE OF SPIRIT'S SUPPLIERS</div>
+				<div style={{fontSize: 30, fontWeight: 700, letterSpacing: 1.5, color: colors.red, marginTop: 26, opacity: tween(f, rivOn, rivOn + 20, 0, 1)}}>01 SEP · 5 DAMAGED RIVETS</div>
+				<div style={{fontSize: 21, letterSpacing: 1.5, color: '#cbd5e1', marginTop: 8, opacity: tween(f, rivOn, rivOn + 20, 0, 1)}}>IN THE EDGE FRAME, JUST FORWARD OF THE PLUG</div>
+				<div style={{fontSize: 21, letterSpacing: 1.5, color: '#cbd5e1', marginTop: 26, opacity: tween(f, sf(56), sf(56) + 20, 0, 1)}}>INSTALLED BY ONE OF SPIRIT'S SUPPLIERS</div>
 			</div>
 			<QuoteCard quote="only Boeing personnel were allowed to perform such work" who="BOEING'S PROCESS" where="AS DESCRIBED IN NTSB AIR-25-04" start={ruleOn} end={end} x={1210} y={430} w={600} size={32} />
 			<LifeLine start={a} end={end} head={head} events={[
@@ -165,7 +165,7 @@ const Renton: React.FC = () => {
 };
 
 // ---------- the removal record: what it is (C73) and that none was written (C29)
-const RemovalForm: React.FC<{start: number; end: number; stamp?: number; x?: number; y?: number; dimmed?: number}> = ({start, end, stamp, x = 560, y = 120, dimmed = 0}) => {
+const RemovalForm: React.FC<{start: number; end: number; stamp?: number; x?: number; y?: number; dimmed?: number; lit?: number[]}> = ({start, end, stamp, x = 560, y = 120, dimmed = 0, lit = []}) => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const a = settle(f, fps, start);
@@ -178,7 +178,7 @@ const RemovalForm: React.FC<{start: number; end: number; stamp?: number; x?: num
 			<div style={{position: 'absolute', left: 44, top: 84, fontSize: 14, letterSpacing: 2, color: '#4b5563'}}>WHAT THE RECORD CONTAINS · PER NTSB AIR-25-04</div>
 			<div style={{position: 'absolute', left: 44, right: 44, top: 116, height: 2, background: colors.paper_ink}} />
 			{rows.map((r, i) => (
-				<div key={r} style={{position: 'absolute', left: 44, right: 44, top: 150 + i * 106, height: 86, border: '1px solid #9ca3af', opacity: tween(f, start + 16 + i * 8, start + 30 + i * 8, 0, 1)}}>
+				<div key={r} style={{position: 'absolute', left: 44, right: 44, top: 150 + i * 106, height: 86, border: `${lit[i] && f >= lit[i] ? 3 : 1}px solid ${lit[i] && f >= lit[i] ? colors.cyan : '#9ca3af'}`, background: lit[i] ? `rgba(56,189,248,${0.14 * tween(f, lit[i], lit[i] + 14, 0, 1)})` : 'transparent', opacity: tween(f, start + 16 + i * 8, start + 30 + i * 8, 0, 1)}}>
 					<div style={{position: 'absolute', left: 14, top: 10, fontSize: 14, letterSpacing: 2, color: '#374151'}}>{r}</div>
 					<div style={{position: 'absolute', left: 14, right: 14, bottom: 16, height: 1, borderBottom: '1px dashed #9ca3af'}} />
 				</div>
@@ -193,7 +193,7 @@ const Record: React.FC = () => {
 	const f = useFilmFrame();
 	return (
 		<>
-			<RemovalForm start={sf(60) - 10} end={sf(61) + 10} />
+			<RemovalForm start={sf(60) - 10} end={sf(61) + 10} lit={[wf(60, 'steps') - 6, wf(60, 'restore') - 6, wf(60, 'quality') - 6, wf(60, 'quality') + 14]} />
 			<Caption text="FORCES THE PART BACK · FORCES AN INSPECTION" start={wf(60, 'quality') - 20} end={sf(61) + 6} tone="amber" x={560} y={800} />
 			<Label text="RECONSTRUCTION" style={{position: 'absolute', left: 1380, top: 130, opacity: envelope(f, sf(60), sf(61), 12, 12)}} />
 			<div style={{position: 'absolute', left: 0, right: 0, top: 470, textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: 46, letterSpacing: 3, color: colors.ink, opacity: envelope(f, sf(59) - 10, sf(60) - 10, 14, 14)}}>
@@ -651,22 +651,21 @@ const Experience: React.FC = () => {
 		<>
 			<ReportPage page={71} start={a} end={barOn + 10} hl={[{key: 'gm_quote', at: sf(116) - 20}]} label="EXHIBIT 08" title="WORKFORCE EXPERIENCE · 737 PROGRAM GENERAL MANAGER" pushTo={sf(116)} pad={[120, 200]} />
 			<Fade start={barOn} end={end}>
-				<div style={{position: 'absolute', left: 260, top: 330, fontFamily: mono}}>
-					<div style={{fontSize: 16, letterSpacing: 3, color: colors.muted}}>WORKFORCE WITH MORE THAN 10 YEARS' EXPERIENCE · AS STATED BY THE 737 PROGRAM'S HEAD</div>
-					<div style={{display: 'flex', alignItems: 'center', gap: 30, marginTop: 30}}>
-						<span style={{width: 220, fontSize: 22, color: colors.sub}}>10 YEARS AGO</span>
-						<div style={{width: 1000, height: 40, border: `1px solid ${colors.border}`}}>
-							<div style={{width: '50%', height: '100%', background: colors.cyan}} />
+				<div style={{position: 'absolute', left: 200, top: 300, fontFamily: mono}}>
+					<div style={{fontSize: 20, letterSpacing: 2.4, color: '#cbd5e1'}}>WORKFORCE WITH MORE THAN 10 YEARS' EXPERIENCE · AS STATED BY THE 737 PROGRAM'S HEAD</div>
+					{[
+						{t: '10 YEARS AGO', w: 50, txt: '~50%', c: colors.cyan},
+						{t: 'TODAY', w: v, txt: '25–30%', c: colors.amber},
+					].map((b, i) => (
+						<div key={b.t} style={{display: 'flex', alignItems: 'center', gap: 30, marginTop: i ? 28 : 36}}>
+							<span style={{width: 240, fontSize: 26, color: colors.ink}}>{b.t}</span>
+							<div style={{width: 1200, height: 92, border: `1px solid ${colors.border}`, background: 'rgba(18,24,36,0.8)'}}>
+								<div style={{width: `${b.w}%`, height: '100%', background: b.c, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', paddingRight: 22, boxSizing: 'border-box'}}>
+									<span style={{fontSize: 52, fontWeight: 700, color: '#0a0d12', whiteSpace: 'nowrap'}}>{b.txt}</span>
+								</div>
+							</div>
 						</div>
-						<span style={{fontSize: 36, fontWeight: 700, color: colors.ink}}>~50%</span>
-					</div>
-					<div style={{display: 'flex', alignItems: 'center', gap: 30, marginTop: 24}}>
-						<span style={{width: 220, fontSize: 22, color: colors.sub}}>TODAY</span>
-						<div style={{width: 1000, height: 40, border: `1px solid ${colors.border}`}}>
-							<div style={{width: `${v}%`, height: '100%', background: colors.amber}} />
-						</div>
-						<span style={{fontSize: 36, fontWeight: 700, color: colors.amber}}>25–30%</span>
-					</div>
+					))}
 				</div>
 			</Fade>
 		</>
@@ -747,7 +746,7 @@ const ActIV: React.FC = () => <ActTitle n="IV" title="The Cascade" start={ef(130
 
 export const act3: SceneDef[] = [
 	{id: 'journey', from: sf(49) - 30, to: sf(51) + 20, C: Journey, cues: [{frame: wf(50, 'four'), sfx: 'relay_click', gainDb: -14}]},
-	{id: 'spirit', from: sf(51) - 20, to: sf(54) + 20, C: Spirit, cues: [{frame: sf(51) - 12, sfx: 'paper_slide', gainDb: -14}, {frame: wf(52, 'five'), sfx: 'highlighter', gainDb: -16}, {frame: wf(53, 'two'), sfx: 'highlighter', gainDb: -16}]},
+	{id: 'spirit', from: sf(51) - 20, to: sf(54) + 20, C: Spirit, cues: [{frame: sf(51) - 12, sfx: 'paper_slide', gainDb: -14}, {frame: wf(52, 'five'), sfx: 'highlighter', gainDb: -16}, {frame: wf(53, 'nearly') - 4, sfx: 'highlighter', gainDb: -16}]},
 	{id: 'renton', from: sf(54) - 24, to: sf(59) + 20, C: Renton, cues: [{frame: wf(55, 'five'), sfx: 'pen_scratch', gainDb: -16}]},
 	{id: 'record', from: sf(59) - 20, to: sf(61) + 20, C: Record, cues: [{frame: sf(60) - 10, sfx: 'paper_slide', gainDb: -14}]},
 	{id: 'ledger', from: sf(61) - 20, to: sf(65) + 16, C: Ledger, cues: [{frame: wf(63, 'painted') - 20, sfx: 'stamp', gainDb: -16}]},
