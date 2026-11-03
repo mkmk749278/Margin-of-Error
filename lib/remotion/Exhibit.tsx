@@ -102,8 +102,8 @@ const ExhibitTag: React.FC<{label: string; source: string; note?: string; start:
 				alignItems: 'baseline',
 			}}
 		>
-			<span style={{fontSize: 18, fontWeight: 700, letterSpacing: 3, color: colors.amber}}>{label}</span>
-			<span style={{fontSize: 15, letterSpacing: 2, color: colors.sub}}>{source}</span>
+			<span style={{fontSize: 20, fontWeight: 700, letterSpacing: 3, color: colors.amber}}>{label}</span>
+			<span style={{fontSize: 19, letterSpacing: 2, color: colors.ink}}>{source}</span>
 			{note ? <span style={{fontSize: 12, letterSpacing: 2, color: colors.muted}}>{note}</span> : null}
 		</div>
 	);

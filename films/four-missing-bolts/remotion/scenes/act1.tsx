@@ -6,7 +6,7 @@ import {ease, envelope, settle, tween} from '../../../../lib/remotion/motion';
 import phrases from '../data/phrases.json';
 import {altArr, altFt, cabinPsi, CAUTION_T, clockText, EVENT_T, GEAR_AIR_T, GEAR_GROUND_T, latArr, lonArr, WARN_T} from '../fdr';
 import {ActTitle, Caption, Fade, media, mono, Mount, Photo, QuoteCard, sans, TypeOn, useFilmFrame} from '../kit';
-import {ef, FPS, OPEN_LOOP, sf, wf} from '../timing';
+import {ef, FPS, sf, wf} from '../timing';
 import {SceneDef} from './types';
 
 // ACT I · THE INCIDENT (screenplay rows 1–9). Cold open on the record: the real FDR (docket DCA24MA063, attachment 1).
@@ -101,7 +101,7 @@ const FdrOpen: React.FC = () => {
 				</div>
 				<div style={{marginTop: 26, fontFamily: mono, fontSize: 20, letterSpacing: 5, color: colors.sub, opacity: tween(f, 70, 110, 0, 1)}}>ALASKA AIRLINES FLIGHT 1282 · BOEING 737-9 · N704AL</div>
 			</AbsoluteFill>
-			<Mount x={110} y={96} w={1700} h={860} source="NTSB DOCKET DCA24MA063 · FLIGHT DATA RECORDER · TABULAR DATA, ATTACHMENT 1" tag="FDR" start={panelIn} end={end} lean={2} labels={['PLAYBACK ' + rate]}>
+			<Mount x={110} y={96} w={1700} h={860} source="DISPLAY REDRAWN FROM NTSB DOCKET DCA24MA063 · FDR TABULAR DATA, ATT. 1" tag="FDR" start={panelIn} end={end} lean={2} labels={['RECONSTRUCTION', 'PLAYBACK ' + rate]}>
 				<div style={{position: 'absolute', inset: 0, transform: `translateX(${shake}px)`}}>
 					{/* clock */}
 					<Panel x={40} y={40} w={640} h={180} title="TIME · PST" right={<span>05 JAN 2024</span>}>
@@ -290,7 +290,7 @@ const Track: React.FC = () => {
 	const landed = t >= GEAR_GROUND_T;
 	const injuries = Math.round(tween(f, sf(11), sf(11) + 50, 0, 8, ease.arrive));
 	return (
-		<Mount x={box.x} y={box.y} w={box.w} h={box.h} source="NTSB DOCKET DCA24MA063 · FDR GPS POSITION · ATTACHMENT 1" tag="FDR" start={a} end={end} lean={2}>
+		<Mount x={box.x} y={box.y} w={box.w} h={box.h} source="TRACK DRAWN FROM NTSB DOCKET DCA24MA063 · FDR GPS POSITION, ATT. 1" tag="FDR" start={a} end={end} lean={2} labels={['RECONSTRUCTION']}>
 			<svg width={box.w} height={box.h - 34} style={{position: 'absolute', left: 0, top: 0}}>
 				<polyline points={path.join(' ')} fill="none" stroke={colors.cyan} strokeWidth={3} />
 				{red.length > 1 ? <polyline points={red.join(' ')} fill="none" stroke={colors.amber} strokeWidth={3} /> : null}
@@ -374,8 +374,6 @@ const Paper: React.FC = () => {
 };
 
 // ---------- the photograph, 108 days earlier (C69, C35): the open loop, named with the minute it lands
-const reveal = OPEN_LOOP.revealStart;
-const revealLabel = `${Math.floor(reveal / 60)}:${String(Math.floor(reveal % 60)).padStart(2, '0')}`;
 export const PendingExhibit: React.FC<{start: number; end: number; small?: boolean}> = ({start, end, small = false}) => {
 	const f = useFilmFrame();
 	const o = envelope(f, start, end, 18, 18);
@@ -383,19 +381,24 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 	if (small) {
 		// the open loop kept in view, quietly: one line, top right, until the photograph is in evidence
 		return (
-			<div style={{position: 'absolute', right: 72, top: 40, opacity: o * 0.85, fontFamily: mono, fontSize: 13, letterSpacing: 2.6, color: colors.sub, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 10}}>
+			<div style={{position: 'absolute', right: 72, top: 34, opacity: o * 0.9, fontFamily: mono, fontSize: 17, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 10}}>
 				<span style={{width: 14, height: 10, border: `1px dashed ${colors.amber}`}} />
 				<span style={{color: colors.amber}}>PENDING</span>
-				<span>PHOTOGRAPH · 19 SEP 2023 · ABOUT 18:39</span>
+				<span>EXHIBIT · PHOTOGRAPH · 19 SEP 2023</span>
 			</div>
 		);
 	}
 	return (
-		<div style={{position: 'absolute', left: 700, top: 250, width: 520, opacity: o}}>
-			<div style={{width: 520, height: 360, border: `2px dashed ${colors.amber}`, background: 'rgba(245,158,11,0.04)', position: 'relative'}}>
-				<div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: mono, fontSize: 22, letterSpacing: 3, color: colors.amber}}>PHOTOGRAPH</div>
+		<div style={{position: 'absolute', left: 660, top: 230, width: 600, opacity: o}}>
+			<div style={{width: 600, height: 380, background: '#c9b48a', position: 'relative', boxShadow: '0 30px 80px rgba(0,0,0,0.6)', transform: 'rotate(-2deg)'}}>
+				<div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 120, background: '#b9a274', clipPath: 'polygon(0 0, 100% 0, 50% 100%)'}} />
+				<div style={{position: 'absolute', left: 40, top: 170, right: 40, fontFamily: mono, color: '#2a2216'}}>
+					<div style={{fontSize: 20, fontWeight: 700, letterSpacing: 4}}>EXHIBIT · PHOTOGRAPH</div>
+					<div style={{fontSize: 18, letterSpacing: 2, marginTop: 14}}>19 SEP 2023 · ABOUT 18:39</div>
+					<div style={{fontSize: 18, letterSpacing: 2, marginTop: 6}}>BOEING · RENTON, WASHINGTON</div>
+					<div style={{fontSize: 15, letterSpacing: 2, marginTop: 18, color: '#4a3d28'}}>NTSB AIR-25-04 · FIG. 18</div>
+				</div>
 			</div>
-			<div style={{marginTop: 12, fontFamily: mono, fontSize: 18, letterSpacing: 2.6, color: colors.sub, whiteSpace: 'nowrap'}}>19 SEP 2023 · ABOUT 18:39 · IN EVIDENCE AT {revealLabel}</div>
 		</div>
 	);
 };

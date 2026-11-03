@@ -305,10 +305,10 @@ const Margin: React.FC = () => {
 	const out = (s: number) => 1 - tween(f, s, s + 34, 0, 1, ease.camera);
 	const back = (s: number) => tween(f, s, s + 34, 0, 1, ease.arrive);
 	let bolts: Record<BoltId, number> = allBolts(1);
-	if (f >= oneA && f < twoA) bolts = {upperFwd: out(oneA + 10), upperAft: out(oneA + 50), lowerAft: out(oneA + 90), lowerFwd: 1};
-	if (f >= twoA && f < allA) bolts = {upperFwd: back(twoA + 6), upperAft: back(twoA + 6), lowerAft: 0, lowerFwd: out(twoA + 6)};
+	if (f >= oneA && f < twoA) bolts = {upperFwd: out(oneA - 40), upperAft: out(oneA - 28), lowerAft: out(oneA - 16), lowerFwd: 1};
+	if (f >= twoA && f < allA) bolts = {upperFwd: back(twoA - 20), upperAft: back(twoA - 20), lowerAft: 0, lowerFwd: out(twoA - 50)};
 	if (f >= allA) bolts = {upperFwd: 1, upperAft: 1, lowerAft: back(allA + 6), lowerFwd: back(allA + 6)};
-	const count = BOLT_IDS.reduce((n, id) => n + (bolts[id] > 0.5 ? 1 : 0), 0);
+	const count = f >= allA + 20 ? 4 : f >= twoA ? 2 : f >= oneA ? 1 : 4;
 	const state: PlugState = {...defaultState, stopGlow: 0.35, boltGlow: 1, bolts};
 	const sub = f >= allA ? 'MARGIN: 4 WHERE 1 HOLDS' : f >= twoA ? 'TWO UPPER ALONE: KEPT ON ITS STOPS' : f >= oneA ? 'ONE LOWER BOLT ALONE: HELD' : 'ALL FOUR INSTALLED';
 	const docO = envelope(f, docA, docB, 14, 14);

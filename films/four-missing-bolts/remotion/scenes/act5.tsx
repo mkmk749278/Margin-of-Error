@@ -145,8 +145,8 @@ const EveryLine: React.FC = () => {
 	return (
 		<Fade start={a} end={end}>
 			<div style={{position: 'absolute', left: 300, top: 260, width: 1320, fontFamily: mono}}>
-				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 52, color: colors.ink, letterSpacing: 2}}>THE FIX IS FOR ONE PLUG</div>
-				<div style={{fontSize: 20, letterSpacing: 2.4, color: colors.sub, marginTop: 20, opacity: tween(f, sf(169), sf(169) + 20, 0, 1)}}>THE QUESTION IS EVERY DISTURBED INSTALLATION, ON EVERY LINE</div>
+				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 76, color: colors.ink, letterSpacing: 3, transform: `scale(${tween(f, a, end, 1, 1.04)})`, transformOrigin: '0 50%'}}>THE FIX IS FOR ONE PLUG</div>
+				<div style={{fontSize: 26, letterSpacing: 2.4, color: colors.amber, marginTop: 24, opacity: tween(f, sf(169), sf(169) + 20, 0, 1)}}>THE QUESTION IS EVERY DISTURBED INSTALLATION, ON EVERY LINE</div>
 			</div>
 			<QuoteCard quote="repeated findings for failure to prevent unauthorized removals" who="BOEING INTERNAL AUDITS · OTHER PRODUCTION LINES · MARCH 2024" where="AS LISTED IN NTSB AIR-25-04" start={sf(170)} end={end} x={300} y={520} w={1320} size={40} />
 		</Fade>
@@ -203,7 +203,7 @@ const Outro: React.FC = () => {
 				<div style={{width: 640 * line, height: 1, background: colors.amber, margin: '26px auto 0'}} />
 				<div style={{fontFamily: mono, fontSize: 18, letterSpacing: 5, color: colors.sub, marginTop: 24, opacity: tween(f, a + 60, a + 100, 0, 1)}}>{channel.tagline.toUpperCase()}</div>
 			</div>
-			<div style={{position: 'absolute', left: 0, right: 0, top: 960, textAlign: 'center', fontFamily: mono, fontSize: 13, letterSpacing: 3, color: colors.muted, opacity: tween(f, a + 90, a + 130, 0, 1)}}>
+			<div style={{position: 'absolute', left: 0, right: 0, top: 960, textAlign: 'center', fontFamily: mono, fontSize: 18, letterSpacing: 2.4, color: colors.sub, opacity: tween(f, a + 90, a + 130, 0, 1)}}>
 				SOURCES: NTSB AIR-25-04 · NTSB DOCKET DCA24MA063 · FAA · SEC EDGAR FILINGS OF BOEING AND SPIRIT AEROSYSTEMS
 			</div>
 		</AbsoluteFill>

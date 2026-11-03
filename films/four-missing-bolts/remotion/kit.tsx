@@ -21,9 +21,9 @@ export const Label: React.FC<{text: string; tone?: 'muted' | 'amber' | 'cyan'; s
 	<span
 		style={{
 			fontFamily: mono,
-			fontSize: 13,
+			fontSize: 18,
 			letterSpacing: 2.4,
-			color: tone === 'muted' ? colors.sub : colors[tone],
+			color: tone === 'muted' ? colors.ink : colors[tone],
 			border: `1px solid ${tone === 'muted' ? colors.border : colors[tone]}`,
 			background: 'rgba(10,13,18,0.85)',
 			padding: '4px 9px 3px',
@@ -83,15 +83,15 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 				<div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>{children}</div>
 				{corner(10, 10, 1, 1)}
 				{corner(w - 28, 10, -1, 1)}
-				{corner(10, h - 28 - 34, 1, -1)}
-				{corner(w - 28, h - 28 - 34, -1, -1)}
+				{corner(10, h - 28 - 44, 1, -1)}
+				{corner(w - 28, h - 28 - 44, -1, -1)}
 				<div
 					style={{
 						position: 'absolute',
 						left: 0,
 						right: 0,
 						bottom: 0,
-						height: 34,
+						height: 44,
 						borderTop: `1px solid ${colors.border}`,
 						background: colors.card,
 						display: 'flex',
@@ -99,9 +99,9 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 						gap: 14,
 						padding: '0 16px',
 						fontFamily: mono,
-						fontSize: 13,
-						letterSpacing: 2.2,
-						color: colors.sub,
+						fontSize: 17,
+						letterSpacing: 2,
+						color: colors.ink,
 						whiteSpace: 'nowrap',
 					}}
 				>
@@ -109,7 +109,7 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 					<span>{source}</span>
 					<span style={{flex: 1}} />
 					{labels.map((l) => (
-						<span key={l} style={{color: colors.muted}}>
+						<span key={l} style={{color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>
 							{l}
 						</span>
 					))}
@@ -147,7 +147,7 @@ export const Photo: React.FC<PhotoProps> = ({src, iw, ih, start, end, source, ta
 		w: from.w * Math.pow(to.w / from.w, t),
 		h: from.h * Math.pow(to.h / from.h, t),
 	};
-	const innerH = box.h - 34;
+	const innerH = box.h - 44;
 	const scale = Math.max(box.w / r.w, innerH / r.h);
 	const cx = r.x + r.w / 2;
 	const cy = r.y + r.h / 2;

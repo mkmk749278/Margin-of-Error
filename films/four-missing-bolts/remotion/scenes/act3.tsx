@@ -88,7 +88,7 @@ const Journey: React.FC = () => {
 		<>
 			<div style={{position: 'absolute', left: 200, top: 240, fontFamily: mono, color: colors.ink, opacity: envelope(f, a + 10, end, 16, 16)}}>
 				<div style={{fontSize: 14, letterSpacing: 3, color: colors.muted}}>LEFT MID EXIT DOOR PLUG · N704AL</div>
-				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 64, letterSpacing: 4, marginTop: 14}}>THE LIFE OF A PART</div>
+				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 84, letterSpacing: 5, marginTop: 14, transform: `scale(${tween(f, a, end, 1, 1.05)})`, transformOrigin: '0 50%'}}>THE LIFE OF A PART</div>
 				<div style={{display: 'flex', gap: 60, marginTop: 50}}>
 					<div style={{opacity: tween(f, wf(49, 'malaysia') - 10, wf(49, 'malaysia') + 10, 0, 1)}}>
 						<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>MADE</div>
@@ -220,7 +220,7 @@ const Ledger: React.FC = () => {
 				<div style={{position: 'absolute', left: 50, top: 40, right: 50, fontFamily: mono}}>
 					<div style={{fontSize: 16, letterSpacing: 3, color: colors.muted}}>06 SEP 2023 · THE SAME DAY · THE SAME RIVETS</div>
 					{row('SPIRIT CONTRACT MECHANIC', 'RECORDED: REPLACED', sf(61) + 40, colors.ink)}
-					{row('BOEING QUALITY INSPECTORS', '“just painted over”', wf(63, 'painted') - 20, colors.red)}
+					{row('BOEING QUALITY INSPECTORS', 'RECORDED: “just painted over”', sf(63) + 20, colors.red)}
 				</div>
 			</Mount>
 			<QuoteCard quote="he had confused [the accident] airplane with another airplane he was working on that day" who="SPIRIT AEROSYSTEMS" where="AS REPORTED IN NTSB AIR-25-04" start={sf(64) - 6} end={end} x={200} y={700} w={1520} size={30} />
@@ -423,19 +423,22 @@ const Photograph: React.FC = () => {
 	];
 	return (
 		<Fade start={a} end={end}>
-			<div style={{position: 'absolute', left: 150, top: 80 + (1 - k) * 40, width: 1000, height: 860, background: colors.paper, opacity: Math.min(1, k * 1.4), boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}}>
+			<div style={{position: 'absolute', left: 150, top: 80 + (1 - k) * 40, width: 1000, height: 860, background: colors.card, border: `2px solid ${colors.cyan}`, opacity: Math.min(1, k * 1.4), boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}}>
 				<div style={{position: 'absolute', left: 30, top: 30, width: 940, height: 740, background: colors.void, overflow: 'hidden'}}>
 					<div style={{position: 'absolute', left: -150 - 30, top: -80 - 30, width: 1920, height: 1080}}>
 						<PlugSvg cam={c} state={state} extra={<>{circles}</>} />
 					</div>
 				</div>
-				<div style={{position: 'absolute', left: 30, right: 30, bottom: 26, display: 'flex', justifyContent: 'space-between', fontFamily: mono, fontSize: 14, letterSpacing: 2, color: colors.paper_ink}}>
-					<span>RECONSTRUCTION · AFTER NTSB AIR-25-04 FIG. 18</span>
-					<span>19 SEP 2023 · ABOUT 18:39</span>
+				<div style={{position: 'absolute', left: 30, right: 30, bottom: 22, display: 'flex', justifyContent: 'space-between', fontFamily: mono, fontSize: 18, letterSpacing: 2, color: colors.ink}}>
+					<span style={{color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 10px'}}>RECONSTRUCTION</span>
+					<span>VIEW OF 19 SEP 2023 · ABOUT 18:39</span>
 				</div>
 			</div>
-			<div style={{position: 'absolute', left: 1220, top: 220, fontFamily: mono}}>
-				<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted, opacity: tween(f, a + 30, a + 50, 0, 1)}}>THE PLUG, CLOSED · 3 OF 4 BOLT POSITIONS IN VIEW</div>
+			<div style={{position: 'absolute', left: 1220, top: 110, width: 600, fontFamily: mono, background: colors.card, border: `1px solid ${colors.amber}`, padding: '14px 18px', fontSize: 17, lineHeight: 1.5, letterSpacing: 1.5, color: colors.ink, opacity: tween(f, a + 10, a + 30, 0, 1)}}>
+				THE PHOTOGRAPH IS NTSB AIR-25-04 FIG. 18 (A BOEING PHOTO). REDRAWN HERE FROM IT AND THE REPORT.
+			</div>
+			<div style={{position: 'absolute', left: 1220, top: 300, fontFamily: mono}}>
+				<div style={{fontSize: 16, letterSpacing: 2.4, color: colors.sub, opacity: tween(f, a + 30, a + 50, 0, 1)}}>THE PLUG, CLOSED · 3 OF 4 BOLT POSITIONS IN VIEW</div>
 				{items.map((it) => {
 					const on = sf(it.w);
 					return (
@@ -445,7 +448,7 @@ const Photograph: React.FC = () => {
 					);
 				})}
 			</div>
-			<div style={{position: 'absolute', left: 1220, top: 800, fontFamily: mono, fontSize: 18, letterSpacing: 3, color: colors.amber, opacity: tween(f, sf(88) + 40, sf(88) + 70, 0, 1)}}>108 DAYS BEFORE PORTLAND</div>
+			<div style={{position: 'absolute', left: 1220, top: 860, fontFamily: mono, fontSize: 18, letterSpacing: 3, color: colors.amber, opacity: tween(f, sf(88) + 40, sf(88) + 70, 0, 1)}}>108 DAYS BEFORE PORTLAND</div>
 		</Fade>
 	);
 };
@@ -466,7 +469,7 @@ const Video: React.FC = () => {
 					<div style={{width: 900, height: 22, border: `1px solid ${colors.border}`}}>
 						<div style={{width: `${(left / 30) * 100}%`, height: '100%', background: left > 0 ? colors.cyan : colors.red}} />
 					</div>
-					<div style={{fontSize: 40, fontWeight: 700, color: left > 0 ? colors.ink : colors.red}}>{left} DAYS</div>
+					<div style={{fontSize: 40, fontWeight: 700, color: left > 0 ? colors.ink : colors.red}}>{left} {left === 1 ? 'DAY' : 'DAYS'}</div>
 				</div>
 				<div style={{fontSize: 16, letterSpacing: 2.4, color: colors.red, marginTop: 16, opacity: tween(f, sf(91), sf(91) + 20, 0, 1)}}>THE ACCIDENT CAME 108 DAYS AFTER · NTSB AIR-25-04</div>
 			</div>
@@ -538,7 +541,7 @@ const Bpi: React.FC = () => {
 	return (
 		<>
 			<ReportPage page={76} start={sf(100) - 8} end={sf(104) + 6} hl={[{key: 'bpi_50', at: wf(100, 'fifty') - 20}, {key: 'bpi_exceptions', at: wf(101, 'exceptions') - 30}, {key: 'bpi_11', at: wf(102, 'eleven') - 16}]} label="EXHIBIT 07" title="BPI “PERFORM PART OR ASSEMBLY REMOVAL”" pushTo={wf(101, 'exceptions')} pad={[120, 260]} />
-			<div style={{position: 'absolute', left: 1360, top: 700, width: 470, fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`, padding: '18px 22px', opacity: envelope(f, sf(102) - 6, sf(104) + 6, 12, 12)}}>
+			<div style={{position: 'absolute', left: 40, top: 640, width: 420, fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`, padding: '18px 22px', opacity: envelope(f, sf(102) - 6, sf(104) + 6, 12, 12)}}>
 				<div style={{fontSize: 14, letterSpacing: 2.4, color: colors.muted}}>REVISIONS 2013–2023</div>
 				<div style={{fontSize: 44, fontWeight: 700, color: colors.amber}}>{Math.round(tween(f, sf(102), sf(102) + 50, 0, 11))}</div>
 				<div style={{fontSize: 14, letterSpacing: 2.4, color: colors.muted, marginTop: 10, opacity: tween(f, sf(103), sf(103) + 10, 0, 1)}}>COMPLIANCE ISSUES 2018–2023</div>
@@ -623,10 +626,10 @@ const Line: React.FC = () => {
 						);
 					})}
 				</svg>
-				<div style={{position: 'absolute', left: 520, top: 110, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 1.8, color: colors.sub, lineHeight: 1.7, opacity: envelope(f, sf(110), sf(112), 14, 14)}}>
+				<div style={{position: 'absolute', left: 520, top: 110, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 1.8, color: colors.sub, lineHeight: 1.7, opacity: envelope(f, sf(110), sf(111) + 10, 14, 14)}}>
 					2018–19 · TWO FATAL 737 MAX ACCIDENTS · PRODUCTION CUT · HIRING STOPPED · LEAVERS NOT REPLACED
 				</div>
-				<div style={{position: 'absolute', left: 520, top: 110, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 1.8, color: colors.sub, lineHeight: 1.7, opacity: envelope(f, sf(111), sf(113), 14, 14)}}>
+				<div style={{position: 'absolute', left: 520, top: 220, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 1.8, color: colors.sub, lineHeight: 1.7, opacity: envelope(f, sf(111), sf(113), 14, 14)}}>
 					THE PANDEMIC · MORE LEFT, PARTICULARLY THOSE ELIGIBLE TO RETIRE
 				</div>
 				<div style={{position: 'absolute', left: 940, top: 110, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 1.8, color: colors.amber, lineHeight: 1.7, opacity: envelope(f, sf(113), end, 14, 14)}}>
@@ -724,8 +727,8 @@ const NotCause: React.FC = () => {
 	return (
 		<>
 			<Fade start={a} end={sf(128) + 24}>
-				<div style={{position: 'absolute', left: 460, top: 380, width: 1000, fontFamily: mono}}>
-					<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>SEARCH · NTSB AIR-25-04 (FULL TEXT)</div>
+				<div style={{position: 'absolute', left: 420, top: 330, width: 1080, fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`, padding: 40, boxShadow: '0 30px 80px rgba(0,0,0,0.55)'}}>
+					<div style={{fontSize: 17, letterSpacing: 2.4, color: colors.ink}}>OUR SEARCH · NTSB AIR-25-04 · FULL TEXT</div>
 					<div style={{marginTop: 14, height: 80, border: `1px solid ${colors.sub}`, background: colors.card, display: 'flex', alignItems: 'center', padding: '0 26px', fontSize: 36, color: colors.ink}}>
 						{typed.slice(0, n)}
 						<span style={{color: colors.cyan}}>▌</span>

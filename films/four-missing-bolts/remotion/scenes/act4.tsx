@@ -152,7 +152,7 @@ const Creep: React.FC = () => {
 				}
 			/>
 			<Panel start={a + 10} end={end} title="FLIGHT CYCLES SINCE DELIVERY" value={`${cyc}`} sub="NTSB: 154 CYCLES · 510 HOURS" tone="ink" y={150} big={64} />
-			<Panel start={c0} end={end} title="RISE TOWARD THE CLEARANCE THRESHOLD" value={`${Math.round((lift / (CLEAR_TRUE_IN * LIFT_EXAG)) * 100)}%`} sub={clearance.stopPadClearance.label} tone={lift > top * 0.8 ? 'amber' : 'cyan'} y={360} />
+			<Panel start={c0} end={end} title="RISE TOWARD THE CLEARANCE THRESHOLD" value={`${Math.round((lift / (CLEAR_TRUE_IN * LIFT_EXAG)) * 100)}%`} sub={`ILLUSTRATIVE VALUES · ${clearance.stopPadClearance.label}`} tone={lift > top * 0.8 ? 'amber' : 'cyan'} y={360} />
 			<Caption text="FRACTIONS OF AN INCH · EACH FLIGHT" start={sf(141)} end={end} x={150} y={900} tone="amber" />
 		</Stage>
 	);
@@ -169,16 +169,16 @@ const Seal: React.FC = () => {
 			<svg width={1400} height={666}>
 				<rect x={0} y={0} width={1400} height={330} fill="#1b2433" />
 				<rect x={0} y={330} width={1400} height={50} fill="#2b3647" />
-				<text x={30} y={300} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={14} letterSpacing={2}>
+				<text x={30} y={300} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={22} letterSpacing={2}>
 					FRAME
 				</text>
-				<text x={30} y={420} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={14} letterSpacing={2}>
+				<text x={30} y={420} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={22} letterSpacing={2}>
 					SEAL · PLUG EDGE
 				</text>
 				{Array.from({length: n}, (_, i) => (
 					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#5a4a2e" strokeWidth={4} opacity={0.6 + 0.04 * i} />
 				))}
-				<text x={1300} y={390 + Math.max(0, n - 1) * 22} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={14} textAnchor="end" opacity={n > 2 ? 1 : 0}>
+				<text x={1300} y={390 + Math.max(0, n - 1) * 22} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={24} textAnchor="end" opacity={n > 2 ? 1 : 0}>
 					DUST · DIRT · PETROLEUM JELLY
 				</text>
 			</svg>
@@ -203,6 +203,7 @@ const Gap: React.FC = () => {
 					</div>
 				))}
 			</div>
+			<Caption text="CHANGE FROM FULLY DOWN: ABOUT 0.55 IN" start={a + 110} end={sf(145)} tone="amber" y={970} />
 			<Caption text="NOT READILY DETECTABLE ON A WALK-AROUND · NTSB" start={sf(145)} end={end} tone="amber" y={970} />
 		</>
 	);
@@ -219,9 +220,10 @@ const Separation: React.FC = () => {
 	const go = wf(150, 'up');
 	const end = ef(150) + 150;
 	const cam = camOf(f, [
-		{f: a, yaw: 1.02, pitch: 0.14, dist: 116, ty: 40},
-		{f: off, yaw: 0.9, pitch: 0.16, dist: 130, ty: 36},
-		{f: go, yaw: 0.85, pitch: 0.18, dist: 150, ty: 34},
+		{f: a, yaw: 1.0, pitch: 0.14, dist: 78, ty: 50},
+		{f: split + 30, yaw: 0.92, pitch: 0.16, dist: 70, ty: 52},
+		{f: twist, yaw: 0.85, pitch: 0.18, dist: 90, ty: 20},
+		{f: go, yaw: 0.85, pitch: 0.18, dist: 140, ty: 32},
 		{f: end, yaw: 0.8, pitch: 0.2, dist: 170, ty: 34},
 	]);
 	const lift = interpolate(f, [a, sf(147), off + 20, go, go + 40], [CLEAR_TRUE_IN * LIFT_EXAG * 0.94, CLEAR_TRUE_IN * LIFT_EXAG * 1.0, CLEAR_TRUE_IN * LIFT_EXAG * 1.15, CLEAR_TRUE_IN * LIFT_EXAG * 1.2, 30], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
@@ -240,8 +242,8 @@ const Separation: React.FC = () => {
 					state={state}
 					extra={
 						<g opacity={hit}>
-							<circle cx={g1.x} cy={g1.y} r={30} fill="rgba(239,68,68,0.2)" stroke={colors.red} strokeWidth={3} />
-							<circle cx={g2.x} cy={g2.y} r={30} fill="rgba(239,68,68,0.2)" stroke={colors.red} strokeWidth={3} />
+							<circle cx={g1.x} cy={g1.y} r={46} fill="rgba(239,68,68,0.2)" stroke={colors.red} strokeWidth={3} />
+							<circle cx={g2.x} cy={g2.y} r={46} fill="rgba(239,68,68,0.2)" stroke={colors.red} strokeWidth={3} />
 						</g>
 					}
 				/>
