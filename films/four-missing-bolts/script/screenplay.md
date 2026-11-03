@@ -1,4 +1,6 @@
-# The Four Missing Bolts: screenplay v1
+# The Four Missing Bolts: screenplay v2
+
+v2 (2026-11-03): narration revised after the audience review (`review/audience_v1.md`); rows 25, 27, 30, 33, 46–48 updated. Paragraph numbers below follow v1 order; v2 moves the conclusion (old 48) before the money passage (old 46–47).
 
 One row per narration paragraph (`vo.txt`, 66 paragraphs, 1,944 words, about 14 min of voice; with holds and the
 silences marked below, about 16 min). **Q** = the question the viewer is holding (PLAYBOOK §7.4). **C** = `claims.csv`
@@ -15,7 +17,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 5 | 0:38 | Seat map, row 25–26 left; 26A and 26B outlined, empty. Silence 1.5 s. | C08 | Who was sitting there? |
 | 6 | 0:45 | Flight path back to PDX on a coordinate grid; LANDED 17:26:46; injury tally counts up (8 minor). | C04 C05 | How did it end? |
 | 7 | 0:58 | CVR panel: "NO AUDIO FROM ACCIDENT FLIGHT" (NTSB wording). Cut to the NTSB report cover sliding onto the desk: AIR-25-04. | C07 C51 | So how do we know anything? |
-| 8 | 1:10 | Timeline bar appears at the bottom: 19 SEP 2023 ●——— 108 DAYS ———● 05 JAN 2024. The left node pulses amber. | C69 | What photograph? (open loop, paid at ~7:30) |
+| 8 | 1:10 | Timeline bar appears at the bottom: 19 SEP 2023 ●——— 108 DAYS ———● 05 JAN 2024. The left node pulses amber. | C69 | What photograph? (open loop "in about six minutes", paid at ~7:00) |
 | 9 | 1:25 | Layers of a defence-in-depth stack (design · process · inspection · oversight) drawn as plates; holes appear. Title card at the end of the line: MARGIN OF ERROR is NOT shown (channel name only in the outro); the act title THE INCIDENT fades. | — | Which layer failed first? |
 
 ## Act II · The Mechanism (1:50–3:50)
@@ -40,7 +42,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 22 | 4:22 | Renton, flow-day line diagram (NTSB Fig 16, redrawn); day 1: five rivets marked red on the frame forward of the plug. | C24 | What went wrong at Renton? |
 | 23 | 4:35 | Two badges: SPIRIT (rework) / BOEING (access). A lock icon is avoided: instead a rule card from the report text, highlighted. | C25 | Who was allowed to open it? |
 | 24 | 4:48 | A removal record drawn as a form: steps, sign-off boxes, final QA box. TRANSCRIPTION of the purpose, not a real record. | C73 | What does that record do? |
-| 25 | 5:02 | NCR timeline 1–14 SEP: stamp "REMOVED & REPLACED" overlaid, then Boeing QA note "just painted over." | C26 | Was it fixed? |
+| 25 | 5:02 | NCR, 6 SEP: two entries side by side, SPIRIT CONTRACT MECHANIC "removed and replaced" / BOEING QA "just painted over"; then Spirit's explanation as a quote card (hearing, 6 Aug 2024). | C26 C85 | Was it fixed? |
 | 26 | 5:15 | Tier ladder 1 → 2 → 3 climbing; the SAT entry 17 SEP 1815 typed, highlighted. | C27 C74 | Did anyone ask for the record? |
 | 27 | 5:30 | SAT entry 18 SEP 0700, typed: "door is being opened by mechanic." | C28 | Who opened it? |
 | 28 | 5:38 | Door-team roster as anonymous tiles; one tile, 25 YRS, greyed ON LEAVE 18–19 SEP; the rest tagged "NEVER OPENED A PLUG". | C31 C32 C34 | Who knew how? |
@@ -61,9 +63,9 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 43 | 9:15 | Same chart; hire markers 2022; "NO PREVIOUS MANUFACTURING EXPERIENCE" tag. | C44 | — |
 | 44 | 9:28 | Experience bar: ~50% → 25–30% with the quote, attributed. | C45 | — |
 | 45 | 9:42 | Finding 20 exhibit, highlight "missed an opportunity". | C46 | — |
-| 46 | 9:52 | Boeing 10-K 2019 exhibit, highlight "$20 billion" and "$9.0 billion" (Warning Amber). | C56 C57 | Where did the money go? |
-| 47 | 10:05 | Finding 27 exhibit, highlighted in full. Two exhibits slide side by side: the 10-K line and the experience chart. Caption: TWO RECORDS · NO INVESTIGATED LINK. | C47 | Did the money cause it? |
-| 48 | 10:25 | Both fade; only the blank removal record remains. | — | — |
+| 46 | 9:52 | (v2 order: after the conclusion) Boeing 10-K 2019 exhibit: timeline 2018 $9.0B → DEC 2018 $20B authorized → 2019 $2.7B → SUSPENDED, in Warning Amber. | C56 C57 C83 | Where did the money go? |
+| 47 | 10:05 | The NTSB report's search bar: "buyback" → 0 results (C84); then finding 27 highlighted in full. No side-by-side of the two records. | C47 C84 | Did the money cause it? |
+| 48 | 9:42 | (v2: moved before 46) The blank removal record alone on the desk; the experience bar dims beside it. | C29 C46 | — |
 
 ## Act IV · The Cascade (10:35–12:15)
 | # | ~Time | Visual | C | Q |
@@ -94,7 +96,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 ## Checks
 - Every factual paragraph maps to a confirmed claim; paragraphs 9, 16, 19, 38, 48, 49, 65, 66 are framing with no
   new fact. Paragraph 48 is labelled as our reading in the narration ("Read together, they suggest").
-- The open loop says "in about seven minutes" at ~0:58; the payoff (paragraph 33) is planned at ~7:00–7:30.
+- The open loop says "in about six minutes" at ~1:25; the payoff (paragraph 33) is at ~7:00 of voice.
   **Re-check against the recorded timing.**
 - No real person is named. No Boeing-owned photograph is used (owner, 2026-11-02): paragraph 33 is a labelled
   reconstruction.

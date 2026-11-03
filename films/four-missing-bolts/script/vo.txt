@@ -10,9 +10,9 @@ The two seats beside it were empty.
 
 Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the ground in Portland. Eight people had minor injuries. No one was seriously hurt.
 
-There is no recording of what was said in the cockpit. The voice recorder kept nothing from the flight. So this investigation was not built on voices. It was built on paper.
+There is no recording of what was said in the cockpit. The voice recorder kept running after landing, and recorded over the flight. So this investigation was not built on voices. It was built on paper.
 
-And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about seven minutes.
+And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about six minutes.
 
 The question was never only why a door plug failed. It was why every layer built to stop it had failed first. Where did the margin of error run out?
 
@@ -28,7 +28,7 @@ That is why there are four bolts. Two at the top, through the guide tracks. Two 
 
 And here is the margin. After the accident, Boeing's engineers worked out how many of those bolts were really needed. One lower bolt, on its own, would have held the plug down. The two upper bolts, on their own, would have kept it on its stops.
 
-Four bolts, where one would do. A margin of error, built in steel.
+Four bolts, where a single lower bolt would have done. A margin of error, built in steel.
 
 On this airplane, all four were missing.
 
@@ -38,7 +38,7 @@ So the question became: who took them out, and why were they never put back?
 
 The plug was made by Spirit AeroSystems, in Malaysia, in March twenty twenty-three. Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty-eighth of July it was closed with all four bolts in place.
 
-Spirit's Wichita plant used to be Boeing's. In two thousand and five, Boeing's operations in Wichita became Spirit AeroSystems — a major supplier of seven thirty-seven fuselages. By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
+Spirit's Wichita plant used to be Boeing's. In two thousand and five, Boeing sold its operations in Wichita, and they became Spirit AeroSystems — a major supplier of seven thirty-seven fuselages. By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
 
 The fuselage arrived at Boeing's factory in Renton, Washington, on the thirty-first of August. The next day, Boeing workers found five damaged rivets in the frame just forward of the plug.
 
@@ -46,37 +46,37 @@ The rivets had been installed by one of Spirit's suppliers. But under Boeing's r
 
 And opening it was not routine. Boeing's own process required a removal record — a document that lists the steps to restore what was disturbed, and the quality sign-offs that prove it was done.
 
-For more than two weeks, the rivets went back and forth. One repair was stamped as complete. Boeing's inspectors found the rivets had just been painted over.
+For more than two weeks, the rivets went back and forth. A Spirit contract mechanic recorded them as replaced. The same day, Boeing's quality inspectors recorded that they had not been replaced, but just painted over. Spirit later said the mechanic had confused this airplane with another.
 
 The request for access was escalated twice. On the seventeenth of September, a note in Boeing's tracking system read: if removal needed, a removal needs to be written first.
 
-The next morning, the door manager reported that the door was being opened by a mechanic.
+The next morning, a Boeing door manager reported that the door was being opened by a mechanic. Which mechanic, the record does not say.
 
 Only Boeing's door team was allowed to work on a plug. The man usually given that job had about twenty-five years on seven thirty-seven doors. That day, and the next, he was on leave. None of the door team on duty had ever opened a plug.
 
 The plug was opened. No removal record was written. No one interviewed said they knew who opened it.
 
-Later that day, a technician moving equipment found the plug lying open on a stand. He pulled it up with a strap, he said... and let it hang.
+Later that day, a technician moving equipment found the plug lying open on a stand. He used a strap to pull it up off the stand, he said, and let it hang... with a gap all round it in the frame.
 
 The next day, the rivet work was finished. And sometime on the evening shift of the nineteenth of September, when no member of the door team was working, the plug was closed.
 
 At about twenty to seven that evening, Boeing workers were texting each other about putting the cabin interior back together. One message carried a photograph.
 
-It shows the plug, closed. And in the three bolt positions you can see... nothing.
+It shows the plug, closed. Three of the four bolt positions are in view. In each of them you can see... nothing.
 
 No bolts. No washers. No nuts. No pins.
 
-No one interviewed said they knew who closed it. Boeing kept its factory security video for thirty days. The accident came long after.
+No one interviewed said they knew who closed it. As a matter of routine, Boeing kept its factory security video for thirty days. The accident came long after.
 
-On the twentieth of September, a quality inspector signed off the job. Her sign-off, she told investigators, did not involve looking at the airplane. She checked that the paperwork was complete. And with no removal record, the paperwork said nothing about the plug.
+On the twentieth of September, a quality inspector signed off the job. Her sign-off, she told investigators, did not involve looking at the airplane. She checked that every step for the rivet work had been signed off. And with no removal record, the paperwork said nothing about the plug.
 
 By then, the cabin wall was already in place over it. Forty-one days later, the airplane was delivered to Alaska Airlines.
 
 It would be easy to stop there, with a missing document and a name no one can give. The N - T - S - B did not stop there.
 
-The instruction that told workers when a removal record was needed ran to more than fifty pages. It listed more exceptions than directions. Boeing had revised it eleven times in ten years. It had come up in sixteen regulatory compliance cases since twenty eighteen.
+The instruction that told workers when a removal record was needed ran to more than fifty pages. The N - T - S - B found it listed more exceptions than directions. Boeing had revised it eleven times in ten years. It had come up in sixteen regulatory compliance cases since twenty eighteen.
 
-Boeing's corrective actions were accepted by its regulator, the F - A - A. For at least ten years, the investigators found, they did not work.
+Boeing's corrective actions were accepted by its regulator, the F - A - A. For at least ten years, the investigators found, those actions were ineffective.
 
 The F - A - A had five inspectors on the seven thirty-seven program while this fuselage was in the factory. In the twelve months up to the build, its audits at Renton logged sixty-eight alleged problems. Not one of them mentioned the removal instruction.
 
@@ -88,19 +88,19 @@ The head of the seven thirty-seven program put it this way. Ten years ago, close
 
 Boeing did not assess what that loss of experience might do to quality. The N - T - S - B called it a missed opportunity.
 
-This is where the money comes in, and where the record has to be read carefully. In December twenty eighteen, Boeing's board approved up to twenty billion dollars of share buybacks. That year, Boeing spent nine billion dollars buying back its own stock.
+So the margin that ran out at Renton was not steel. It was a document no one wrote... and the experience that would have known to write it.
 
-The N - T - S - B said it could not assess whether adverse pressure existed on the production line. So this film will not tell you that the buybacks caused what happened. Boeing's filings record where the money went. The investigation records where the experience went. The two records sit side by side.
+There is one more record a film like this has to read, and read carefully. In twenty eighteen, Boeing spent nine billion dollars buying back its own stock. That December, its board approved up to twenty billion more. In twenty nineteen it bought back two point seven billion. By the start of twenty twenty, the buybacks were suspended.
 
-Read together, they suggest that the margin which ran out at Renton was not steel. It was a document no one wrote... and the experience that would have known to write it.
+The investigation report does not mention them. And the N - T - S - B said it could not assess whether adverse pressure existed on the production line. So the buybacks belong in this story as a fact about where Boeing's money went, not as a cause. The cause the investigators found is in the factory record.
 
 Now go back to the plug, closed in the factory with its bolts gone.
 
-On the ground, a plug like this is hard to lift. On its sister plug, on the other side of the same airplane, a one-hundred-and-twenty-pound pull did not move it. It took two people.
+On the ground, a plug like this is hard to lift. On its sister plug, on the other side of the same airplane, with the bolts taken out on the ground, a one-hundred-and-twenty-pound upward pull did not move it. It took two people.
 
-But an airplane in flight does not sit still. It vibrates. It flexes. And for brief moments, the load on the plug drops below its own weight. At the lowest point the analysis found, the sixty-three-pound plug weighed about twenty-five.
+But an airplane in flight does not sit still. It vibrates. It flexes. And for brief moments, the load on the plug drops below its own weight. At the lowest point the analysis found, the plug's effective weight, the force holding it down, fell from sixty-three pounds to about twenty-five.
 
-Each moment like that could let it rise a little. Fractions of an inch. Across one hundred and fifty-four cycles, it walked itself upward.
+Each moment like that could let it rise a little. Fractions of an inch. Across one hundred and fifty-four flights, it walked itself upward.
 
 It left a record of the climb: parallel lines of dust, dirt and petroleum jelly along the seal, marking its steps.
 
@@ -126,6 +126,6 @@ But the fix is for one plug. The question the investigation raised is about ever
 
 One board member wrote that he was skeptical Boeing's systems at the time could have caught errors like this at all. He also noted that Boeing had already taken at least twenty corrective actions. Another member said that, over the Pacific, it could have been a tragedy.
 
-Four bolts, where one would have done. The steel had margin to spare.
+Four bolts, where a single lower bolt would have done. The steel had margin to spare.
 
 The paperwork had none.

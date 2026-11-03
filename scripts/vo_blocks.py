@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Split a film's vo.txt into George recording blocks (PLAYBOOK §7.6) and write vo/vo_blocks.md: the full narration,
+then one fenced block per take (under --max characters, split only at paragraph breaks), each headed with the voice,
+model, settings and the file name to save.
+
+  python3 scripts/vo_blocks.py films/<slug> [--max 2500] [--title "The Four Missing Bolts"]
+"""
+import argparse
+from pathlib import Path
+
+VOICE = "Voice: George (ElevenLabs) · Model: Multilingual v2 · Stability 0.62 · Similarity 0.80 · Style 0.00 · Speaker boost on"
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("film")
+    ap.add_argument("--max", type=int, default=2500)
+    ap.add_argument("--title", default="")
+    a = ap.parse_args()
+    film = Path(a.film)
+    paras = [p.strip() for p in (film / "script/vo.txt").read_text().split("\n\n") if p.strip()]
+    blocks, cur = [], []
+    for p in paras:
+        if cur and len("\n\n".join(cur + [p])) > a.max:
+            blocks.append(cur)
+            cur = []
+        cur.append(p)
+    if cur:
+        blocks.append(cur)
+    # a short tail (the sign-off) belongs in the same take as the lines before it
+    if len(blocks) > 1 and len("\n\n".join(blocks[-1])) < 300:
+        tail = blocks.pop()
+        blocks[-1] = blocks[-1] + tail
+    slug = film.name
+    out = [f"# {a.title or slug}: recording blocks", "", VOICE, "",
+           f"{len(blocks)} blocks, {sum(len(chr(10).join(b)) for b in blocks):,} characters. Save each take as "
+           f"`{slug}_vo_bNN.mp3` and upload to Drive `Margin-of-Error/{slug}/vo/`.", "", "## Full narration", ""]
+    out += ["\n\n".join(paras), "", "## Blocks", ""]
+    for i, b in enumerate(blocks, 1):
+        text = "\n\n".join(b)
+        out += [f"### Block {i} of {len(blocks)} · {len(text):,} characters · save as `{slug}_vo_b{i:02d}.mp3`", "",
+                "```", text, "```", ""]
+    (film / "vo").mkdir(exist_ok=True)
+    (film / "vo/vo_blocks.md").write_text("\n".join(out))
+    for i, b in enumerate(blocks, 1):
+        print(f"block {i}: {len(chr(10).join(b))} chars, {len(b)} paragraphs, starts: {b[0][:50]}")
+
+
+if __name__ == "__main__":
+    main()
