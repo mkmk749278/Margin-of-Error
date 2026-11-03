@@ -23,6 +23,7 @@ FORBIDDEN_CHARS = {
     "@": "spell it", "+": "say 'plus'", "=": "say 'equals'", "<": "say 'less than'", ">": "say 'more than'",
     "(": "no brackets", ")": "no brackets", "{": "no brackets", "}": "no brackets", '"': "no quotes (spec §5)",
     "“": "no quotes", "”": "no quotes", ";": "no semicolons: a full stop or a dash", "!": "clinical voice: no '!'",
+    "...": "no ellipses: use a dash or a colon (owner, 2026-11-03)", "…": "no ellipses: use a dash or a colon",
     "°": "say 'degrees'", "×": "say 'times'", "±": "say 'plus or minus'", "~": "say 'about'",
 }
 FLUFF = ["in today's video", "in this video", "welcome back", "welcome to", "imagine if", "hey guys", "let's dive",

@@ -94,3 +94,14 @@ Room tone and a 60 Hz hum, paper and stamp foley, quartz ticks on the clock, one
 - The NTSB docket: Figure 18's source file, the Manufacturing Records and Human Performance Factual Report, the hearing
   transcript, for exact quotes and exhibit scans.
 - Rights decision on Boeing-sourced photographs in the NTSB report.
+
+## Owner calibration (2026-11-03), applied
+- Narration: no `...` (dashes or colons instead), "Max" in normal case; recording blocks regenerated (`vo/vo_blocks.md`).
+- Open loop locked: the 18:39 reveal lands 5:45–6:15 after "in about six minutes" (`remotion/telemetry.ts`,
+  `checkOpenLoop`).
+- Clearances never swapped: 0.5 in = CRITICAL CLEARANCE THRESHOLD (design, stop pins clear the pads); 0.630 in = the
+  measured lower-edge gap at stop-pin instability on the exemplar right plug. The record has no "total translation at
+  separation" measurement, so that label is not used (`remotion/telemetry.ts` explains).
+- Framing: the Figure 18 reconstruction and the 10-K charts sit on exhibit paper with a source strip; nothing floats on
+  the bare void (PLAYBOOK §6.5a). The reconstruction is labelled as ours, not as an NTSB docket exhibit.
+- Mix: VO −2 to −3 dB true peak, bed −28 to −32 dB, master −14 LUFS linear (PLAYBOOK §12).
