@@ -20,7 +20,7 @@ const allBolts = (v: number): Record<BoltId, number> => ({upperFwd: v, upperAft:
 const camAt = (f: number, keys: {f: number; yaw: number; pitch: number; dist: number; ty?: number; tx?: number; cx?: number}[]): Camera => {
 	const fr = keys.map((k) => k.f);
 	const g = (sel: (k: (typeof keys)[number]) => number) => interpolate(f, fr, keys.map(sel), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	return {target: [g((k) => k.tx ?? 0), g((k) => k.ty ?? 29), -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1120, cx: g((k) => k.cx ?? 960), cy: 520};
+	return {target: [g((k) => k.tx ?? 0), g((k) => k.ty ?? 29), -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1250, cx: g((k) => k.cx ?? 960), cy: 520};
 };
 
 const Stage: React.FC<{start: number; end: number; source?: string; labels?: string[]; children: React.ReactNode}> = ({start, end, source = 'ILLUSTRATION · AFTER NTSB AIR-25-04 FIGS. 3–6 AND STRUCTURES FACTUAL', labels = ['ILLUSTRATION'], children}) => (
@@ -201,7 +201,7 @@ const OneDirection: React.FC = () => {
 };
 
 // ---------- four bolts (C12)
-const BoltStack: React.FC<{start: number; end: number}> = ({start, end}) => {
+const BoltStack: React.FC<{start: number; end: number; ons: number[]}> = ({start, end, ons}) => {
 	const f = useFilmFrame();
 	const parts = [
 		{t: 'BOLT', w: 300, h: 26},
@@ -217,12 +217,13 @@ const BoltStack: React.FC<{start: number; end: number}> = ({start, end}) => {
 			<svg width={700} height={266}>
 				{parts.map((p, i) => {
 					const px = x + i * 40 * spread;
+					const on = tween(f, ons[i], ons[i] + 14, 0, 1, ease.arrive);
 					x += p.w + 6;
 					return (
 						<g key={i}>
-							<rect x={px} y={120 - p.h / 2} width={p.w} height={p.h} fill={i === 0 ? '#7a4e08' : '#5c3d0a'} stroke={colors.amber} strokeWidth={1.5} rx={i === 3 ? 4 : 2} />
-							{i === 0 ? <rect x={px - 30} y={120 - 26} width={30} height={52} fill="#7a4e08" stroke={colors.amber} strokeWidth={1.5} /> : null}
-							<text x={px + p.w / 2} y={i % 2 ? 196 : 66} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontSize={13} letterSpacing={1.5} opacity={spread}>
+							<rect x={px} y={120 - p.h / 2 - (1 - on) * 30} width={p.w} height={p.h} fill={i === 0 ? '#7a4e08' : '#5c3d0a'} stroke={colors.amber} strokeWidth={1.5} rx={i === 3 ? 4 : 2} opacity={on} />
+							{i === 0 ? <rect x={px - 30} y={120 - 26 - (1 - on) * 30} width={30} height={52} fill="#7a4e08" stroke={colors.amber} strokeWidth={1.5} opacity={on} /> : null}
+							<text x={px + p.w / 2} y={i % 2 ? 196 : 66} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontSize={17} letterSpacing={1.5} opacity={Math.min(spread, on)}>
 								{p.t}
 							</text>
 						</g>
@@ -279,7 +280,7 @@ const FourBolts: React.FC = () => {
 					</>
 				}
 			/>
-			<BoltStack start={stackIn - 10} end={end} />
+			<BoltStack start={stackIn - 10} end={end} ons={[stackIn - 4, wf(35, 'washers') - 6, wf(35, 'washers') + 6, wf(35, 'castle') - 6, wf(35, 'cotter') - 6]} />
 			<Caption text="THEIR ONLY JOB: STOP UPWARD MOVEMENT" start={jobAt} end={end} tone="amber" y={900} x={150} />
 		</Stage>
 	);
@@ -388,7 +389,7 @@ const Question: React.FC = () => {
 	return (
 		<AbsoluteFill style={{opacity: o, alignItems: 'center', justifyContent: 'center'}}>
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, letterSpacing: 1, color: colors.ink, textAlign: 'center', lineHeight: 1.3}}>
-				<TypeOn text="WHO TOOK THEM OUT," start={wf(48, 'who')} cps={24} caret={false} />
+				<TypeOn text="WHO TOOK THEM OUT," start={Math.min(wf(48, 'who'), sf(48) + 30)} cps={24} caret={false} />
 				<br />
 				<TypeOn text="AND WHY WERE THEY NEVER PUT BACK?" start={wf(48, 'why')} cps={24} caret={false} />
 			</div>

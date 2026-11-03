@@ -45,8 +45,9 @@ export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, hi
 	const s = s0 * Math.pow(s1 / s0, t); // log zoom: constant perceived speed
 	const cx = c0.x + (c1.x - c0.x) * t;
 	const cy = c0.y + (c1.y - c0.y) * t;
-	const tilt = (1 - t) * 9 + (1 - arrive) * 14; // lies on the desk, lifts flat as we lean in
-	const yaw = (1 - t) * -2.2;
+	// every document lies on the same table: it never goes fully flat (one tilt, one light, as in the owner's 2026-11-03 note)
+	const tilt = 4 + (1 - t) * 5 + (1 - arrive) * 14;
+	const yaw = -1.4 + (1 - t) * -0.8;
 	const slide = (1 - arrive) * 220;
 	const breathe = tween(frame, start, start + 900, 1, 1.02); // never static
 	return (
@@ -67,6 +68,7 @@ export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, hi
 					}}
 				>
 					{children}
+					<div style={{position: 'absolute', inset: 0, background: 'linear-gradient(118deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 40%, rgba(15,23,42,0.10) 100%)', pointerEvents: 'none'}} />
 					{highlights.map((h, i) => {
 						const k = tween(frame, h.start, h.start + (h.draw ?? 36), 0, 1, ease.draw);
 						return (

@@ -17,7 +17,7 @@ const none: Record<BoltId, number> = {upperFwd: 0, upperAft: 0, lowerFwd: 0, low
 const camOf = (f: number, keys: {f: number; yaw: number; pitch: number; dist: number; cx?: number; ty?: number}[]): Camera => {
 	const fr = keys.map((k) => k.f);
 	const g = (sel: (k: (typeof keys)[number]) => number) => interpolate(f, fr, keys.map(sel), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	return {target: [0, g((k) => k.ty ?? 29), -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1120, cx: g((k) => k.cx ?? 820), cy: 500};
+	return {target: [0, g((k) => k.ty ?? 29), -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1250, cx: g((k) => k.cx ?? 820), cy: 500};
 };
 
 const Stage: React.FC<{start: number; end: number; source?: string; labels?: string[]; children: React.ReactNode; w?: number}> = ({start, end, source = 'ILLUSTRATION · AFTER NTSB AIR-25-04', labels = ['ILLUSTRATION', 'NOT TO SCALE'], children, w = 1728}) => (
@@ -32,9 +32,9 @@ const Panel: React.FC<{start: number; end: number; title: string; value: string;
 	if (o <= 0) return null;
 	return (
 		<div style={{position: 'absolute', left: 1360, top: y, width: 430, opacity: o, background: colors.card, border: `1px solid ${colors.border}`, padding: '14px 20px', fontFamily: mono}}>
-			<div style={{fontSize: 13, letterSpacing: 2.4, color: colors.muted}}>{title}</div>
+			<div style={{fontSize: 15, letterSpacing: 2.2, color: colors.sub}}>{title}</div>
 			<div style={{fontSize: big, fontWeight: 700, color: tone === 'ink' ? colors.ink : colors[tone], marginTop: 6, whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums'}}>{value}</div>
-			{sub ? <div style={{fontSize: 14, letterSpacing: 1.8, color: colors.sub, marginTop: 6}}>{sub}</div> : null}
+			{sub ? <div style={{fontSize: 16, letterSpacing: 1.6, color: '#cbd5e1', marginTop: 6, textShadow: '0 1px 0 rgba(0,0,0,0.8)'}}>{sub}</div> : null}
 		</div>
 	);
 };
@@ -87,7 +87,7 @@ const Flight: React.FC = () => {
 		const d = Math.exp(-Math.pow((u - 0.72) / 0.03, 2));
 		return base * (1 - d) + 0.4 * d;
 	};
-	const reveal = tween(f, sf(138) - 10, dip + 40, 0, 1, ease.camera);
+	const reveal = interpolate(f, [sf(138) - 10, wf(138, 'below') + 24, dip + 40], [0, 0.72, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
 	const pts: string[] = [];
 	for (let i = 0; i <= 300 * reveal; i++) {
 		const u = i / 300;
@@ -176,7 +176,7 @@ const Seal: React.FC = () => {
 					SEAL · PLUG EDGE
 				</text>
 				{Array.from({length: n}, (_, i) => (
-					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#5a4a2e" strokeWidth={4} opacity={0.6 + 0.04 * i} />
+					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#b08a4a" strokeWidth={6} opacity={0.75 + 0.025 * i} />
 				))}
 				<text x={1300} y={390 + Math.max(0, n - 1) * 22} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={24} textAnchor="end" opacity={n > 2 ? 1 : 0}>
 					DUST · DIRT · PETROLEUM JELLY

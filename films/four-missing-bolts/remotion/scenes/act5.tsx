@@ -15,7 +15,7 @@ const none: Record<BoltId, number> = {upperFwd: 0, upperAft: 0, lowerFwd: 0, low
 const camOf = (f: number, keys: {f: number; yaw: number; pitch: number; dist: number; cx?: number}[]): Camera => {
 	const fr = keys.map((k) => k.f);
 	const g = (sel: (k: (typeof keys)[number]) => number) => interpolate(f, fr, keys.map(sel), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	return {target: [0, 29, -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1120, cx: g((k) => k.cx ?? 820), cy: 500};
+	return {target: [0, 29, -2], yaw: g((k) => k.yaw), pitch: g((k) => k.pitch), dist: g((k) => k.dist), focal: 1250, cx: g((k) => k.cx ?? 820), cy: 500};
 };
 
 // ---------- the report and its probable cause (C51, C50)
@@ -74,7 +74,7 @@ const Again: React.FC = () => {
 					<div style={{fontSize: 44, fontWeight: 700, color: colors.ink}}>2005</div>
 					<div style={{fontSize: 15, letterSpacing: 2, color: colors.sub, marginTop: 6}}>BOEING SELLS WICHITA</div>
 				</div>
-				<div style={{position: 'absolute', left: 1220, top: 590, width: 280, textAlign: 'center', fontFamily: mono, opacity: tween(f, loopA + 100, loopA + 130, 0, 1)}}>
+				<div style={{position: 'absolute', left: 1204, top: 590, width: 280, textAlign: 'center', fontFamily: mono, opacity: tween(f, loopA + 100, loopA + 130, 0, 1)}}>
 					<div style={{fontSize: 44, fontWeight: 700, color: colors.amber}}>2025</div>
 					<div style={{fontSize: 15, letterSpacing: 2, color: colors.sub, marginTop: 6}}>PART OF BOEING AGAIN</div>
 				</div>

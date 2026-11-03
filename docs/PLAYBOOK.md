@@ -699,6 +699,10 @@ strongest idea that could replace it, inside the hard lines.
 - *ElevenLabs music and effects* (`scripts/el_sound.py`, owner 2026-11-03): six instrumental cues (2–3 min each)
   and eight effects used about 8,300 credits of the plan; the account counter lags a call or two. Every cue was
   checked by speech-to-text for vocals (none) and by spectral centroid (345–605 Hz: dark, as briefed).
+- *Measure stillness, don't eyeball it* (owner's round-2 notes, 2026-11-03): frames at 4 fps, 320 px grey, a 3 s run
+  where under 0.4% of pixels change by more than 6 levels counts as a still hold. Cut r4 had 76; a slow push spread over
+  each scene's length was not enough on long scenes. Rule: every scene carries a time-based drift (a few px a second,
+  Film.tsx) on top of its own animation; the audit must read 0 before a cut goes to the owner.
 - *A workflow is only registered from the repo's DEFAULT branch.* With the default branch set to a session branch,
   GitHub listed no workflows and `workflow_dispatch` returned 404 although the file was on `main`. Rule: `main` is
   the default branch (owner fixed it 2026-11-03); then the render can be dispatched on any branch.
