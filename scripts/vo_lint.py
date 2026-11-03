@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""VO text gate for the George narrator (owner's spec §5, PLAYBOOK §7.5). Fails on anything the voice would read
+"""VO text gate for the narrator (owner's spec §5, PLAYBOOK §7.5). Fails on anything the voice would read
 wrongly or the spec forbids; warns on rhythm that drifts toward a flat read.
 
   python3 scripts/vo_lint.py films/<slug>/script/vo.txt [--say-as-word films/<slug>/script/say_as_word.txt]
