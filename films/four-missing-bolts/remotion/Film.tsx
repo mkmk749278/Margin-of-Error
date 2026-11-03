@@ -27,7 +27,7 @@ const ActChip: React.FC = () => {
 	const o = envelope(f, c.from + 120, Math.min(c.to, FILM_FRAMES - 14 * 60), 30, 30) * 0.9;
 	const [n, t] = c.title.split(' · ');
 	return (
-		<div style={{position: 'absolute', left: 72, top: 40, opacity: o, fontFamily: mono, fontSize: 14, letterSpacing: 3.2, color: colors.muted, whiteSpace: 'nowrap'}}>
+		<div style={{position: 'absolute', left: 96, top: 54, opacity: o, fontFamily: mono, fontSize: 20, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap'}}>{/* floor-ok: the act chip is navigation, the act title carries it */}
 			<span style={{color: colors.amber}}>ACT {n}</span>
 			<span style={{marginLeft: 14}}>{t.toUpperCase()}</span>
 		</div>

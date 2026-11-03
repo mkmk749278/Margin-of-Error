@@ -26,15 +26,15 @@ const Stage: React.FC<{start: number; end: number; source?: string; labels?: str
 	</Mount>
 );
 
-const Panel: React.FC<{start: number; end: number; title: string; value: string; tone: 'cyan' | 'amber' | 'red' | 'ink'; sub?: string; y: number; big?: number}> = ({start, end, title, value, tone, sub, y, big = 44}) => {
+const Panel: React.FC<{start: number; end: number; title: string; value: string; tone: 'cyan' | 'amber' | 'red' | 'ink'; sub?: string; y: number; big?: number; scale?: number}> = ({start, end, title, value, tone, sub, y, big = 56, scale = 1}) => {
 	const f = useFilmFrame();
 	const o = envelope(f, start, end, 14, 14);
 	if (o <= 0) return null;
 	return (
-		<div style={{position: 'absolute', left: 1360, top: y, width: 430, opacity: o, background: colors.card, border: `1px solid ${colors.border}`, padding: '14px 20px', fontFamily: mono}}>
-			<div style={{fontSize: 15, letterSpacing: 2.2, color: colors.sub}}>{title}</div>
-			<div style={{fontSize: big, fontWeight: 700, color: tone === 'ink' ? colors.ink : colors[tone], marginTop: 6, whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums'}}>{value}</div>
-			{sub ? <div style={{fontSize: 16, letterSpacing: 1.6, color: '#cbd5e1', marginTop: 6, textShadow: '0 1px 0 rgba(0,0,0,0.8)'}}>{sub}</div> : null}
+		<div style={{position: 'absolute', left: 1250, top: y, width: 560, opacity: o, background: colors.card, border: `1px solid ${colors.border}`, padding: '16px 22px 18px', fontFamily: mono}}>
+			<div style={{fontSize: 26, letterSpacing: 1.2, lineHeight: 1.25, color: colors.sub}}>{title}</div>
+			<div style={{fontSize: big, fontWeight: 700, color: tone === 'ink' ? colors.ink : colors[tone], marginTop: 6, whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums', transform: `scale(${scale})`, transformOrigin: '0% 50%'}}>{value}</div>
+			{sub ? <div style={{fontSize: 26, letterSpacing: 1, lineHeight: 1.3, color: colors.ink, marginTop: 6, whiteSpace: 'pre-line'}}>{sub}</div> : null}
 		</div>
 	);
 };
@@ -59,8 +59,8 @@ const Ground: React.FC = () => {
 		<Stage start={a} end={end} source="RECONSTRUCTION · NTSB TEST ON THE RIGHT PLUG OF N704AL, BOLTS REMOVED, ON THE GROUND" labels={['RECONSTRUCTION']}>
 			<PlugSvg cam={cam} state={state} />
 			<Panel start={pull} end={end} title="UPWARD PULL · FORCE GAUGE" value={`${Math.round(gauge)} LB`} sub={f < two ? 'TO THE GAUGE LIMIT · NO MOVEMENT' : 'NO MOVEMENT'} tone="cyan" y={150} />
-			<Panel start={two} end={end} title="TWO PEOPLE · ESTIMATED" value={`> ${plugLoads.liftMoved.value} LB`} sub="THE PLUG MOVED UP" tone="amber" y={330} />
-			<Caption text="SISTER PLUG · SAME AIRPLANE" start={sf(133)} end={end} x={150} y={900} />
+			<Panel start={two} end={end} title="TWO PEOPLE · ESTIMATED" value={`> ${plugLoads.liftMoved.value} LB`} sub="THE PLUG MOVED UP" tone="amber" y={400} />
+			<Caption text="SISTER PLUG · SAME AIRPLANE" start={sf(133)} end={end} x={150} y={846} />
 		</Stage>
 	);
 };
@@ -82,12 +82,22 @@ const Flight: React.FC = () => {
 	const H = 220;
 	const x0 = 1000;
 	const y0 = 640;
+	const dipOf = (u: number) => Math.exp(-Math.pow((u - 0.72) / 0.03, 2));
 	const gAt = (u: number) => {
 		const base = 1 + 0.06 * Math.sin(u * 23) + 0.04 * Math.sin(u * 57 + 1) + 0.03 * Math.sin(u * 131 + 2);
-		const d = Math.exp(-Math.pow((u - 0.72) / 0.03, 2));
+		const d = dipOf(u);
 		return base * (1 - d) + 0.4 * d;
 	};
-	const reveal = interpolate(f, [sf(138) - 10, wf(138, 'below') + 24, dip + 40], [0, 0.72, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
+	// the line starts down on "drops", reaches its lowest point on "lowest" (round 3: one driver with the readout)
+	const reveal = interpolate(f, [sf(138) - 10, wf(138, 'drops'), wf(139, 'lowest'), dip + 40], [0, 0.66, 0.72, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
+	// the readout is driven by the trace: the record's 63 lb at 1 g, scaled by the dip the line has drawn so far, and
+	// holding its lowest value (the record's low point, 0.40 g ≈ 25 lb). The wiggle is illustrative and is left out.
+	const lowest = reveal >= 0.72 ? 0.4 : 1 - 0.6 * dipOf(reveal); // the dip deepens monotonically up to its low point
+	const shownLb = Math.max(plugLoads.effectiveWeightMin.value, plugLoads.weight.value * lowest);
+	const atLow = shownLb <= plugLoads.effectiveWeightMin.value + 0.5;
+	const falling = shownLb < plugLoads.weight.value - 0.5;
+	const said = wf(139, 'twenty-five');
+	const pulse = 1 + 0.08 * Math.max(0, 1 - Math.abs(f - said) / 24);
 	const pts: string[] = [];
 	for (let i = 0; i <= 300 * reveal; i++) {
 		const u = i / 300;
@@ -98,23 +108,24 @@ const Flight: React.FC = () => {
 	return (
 		<Stage start={a} end={end} labels={['ILLUSTRATION', 'ILLUSTRATIVE TRACE SHAPE']}>
 			<PlugSvg cam={cam} state={state} />
-			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" value={`${Math.round(f > dip + 40 ? plugLoads.effectiveWeightMin.value : Math.min(plugLoads.weight.value, interpolate(f, [dip - 30, dip + 40], [plugLoads.weight.value, plugLoads.effectiveWeightMin.value], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})))} LB`} sub={f > dip + 40 ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={f > dip ? 'amber' : 'cyan'} y={150} />
+			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" value={`${atLow ? 'LOWEST ' : ''}${Math.round(shownLb)} LB`} sub={atLow ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : falling ? 'FALLING WITH THE LOAD · 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={falling ? 'amber' : 'cyan'} y={150} scale={pulse} />
 			<div style={{position: 'absolute', left: x0 - 20, top: y0 - 60, width: W + 60, height: H + 110, background: 'rgba(10,13,18,0.7)', border: `1px solid ${colors.border}`, opacity: tween(f, sf(138) - 20, sf(138), 0, 1)}} />
 			<svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0, opacity: tween(f, sf(138) - 20, sf(138), 0, 1)}}>
-				<text x={x0} y={y0 - 30} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={13} letterSpacing={2.4}>
+				<text x={x0} y={y0 - 30} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 					VERTICAL LOAD ON THE PLUG · G
 				</text>
 				{[1, 0.45, 0.4].map((g) => (
-					<g key={g}>
-						<line x1={x0} x2={x0 + W} y1={yG(g)} y2={yG(g)} stroke={g === 1 ? colors.border : colors.amber} strokeDasharray={g === 1 ? undefined : '5 6'} strokeWidth={1} opacity={g === 1 ? 1 : 0.7} />
-						<text x={x0 + W + 8} y={yG(g) + 4} fill={g === 1 ? colors.muted : colors.amber} fontFamily="JetBrains Mono" fontSize={12}>
-							{g.toFixed(2)}
-						</text>
-					</g>
+					<line key={g} x1={x0} x2={x0 + W} y1={yG(g)} y2={yG(g)} stroke={g === 1 ? colors.border : colors.amber} strokeDasharray={g === 1 ? undefined : '5 6'} strokeWidth={1} opacity={g === 1 ? 1 : 0.7} />
 				))}
+				<text x={x0 + W - 4} y={yG(1) - 10} textAnchor="end" fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26}>
+					1 G
+				</text>
+				<text x={x0 + W - 4} y={yG(0.4) + 34} textAnchor="end" fill={colors.amber} fontFamily="JetBrains Mono" fontSize={26}>
+					0.40–0.45 G
+				</text>
 				<polyline points={pts.join(' ')} fill="none" stroke={lowSeen ? colors.amber : colors.cyan} strokeWidth={2.5} />
 			</svg>
-			<Caption text="IT VIBRATES · IT FLEXES" start={sf(136)} end={sf(138) + 20} x={150} y={900} />
+			<Caption text="IT VIBRATES · IT FLEXES" start={sf(136)} end={sf(138) + 20} x={150} y={846} />
 		</Stage>
 	);
 };
@@ -152,8 +163,8 @@ const Creep: React.FC = () => {
 				}
 			/>
 			<Panel start={a + 10} end={end} title="FLIGHT CYCLES SINCE DELIVERY" value={`${cyc}`} sub="NTSB: 154 CYCLES · 510 HOURS" tone="ink" y={150} big={64} />
-			<Panel start={c0} end={end} title="RISE TOWARD THE CLEARANCE THRESHOLD" value={`${Math.round((lift / (CLEAR_TRUE_IN * LIFT_EXAG)) * 100)}%`} sub={`ILLUSTRATIVE VALUES · ${clearance.stopPadClearance.label}`} tone={lift > top * 0.8 ? 'amber' : 'cyan'} y={360} />
-			<Caption text="FRACTIONS OF AN INCH · EACH FLIGHT" start={sf(141)} end={end} x={150} y={900} tone="amber" />
+			<Panel start={c0} end={end} title="RISE TOWARD THE CLEARANCE THRESHOLD" value={`${Math.round((lift / (CLEAR_TRUE_IN * LIFT_EXAG)) * 100)}%`} sub={'ILLUSTRATIVE VALUES\nTHRESHOLD: STOP PINS CLEAR THE PADS (DESIGN)'} tone={lift > top * 0.8 ? 'amber' : 'cyan'} y={420} />
+			<Caption text="FRACTIONS OF AN INCH · EACH FLIGHT" start={sf(141)} end={end} x={150} y={846} tone="amber" />
 		</Stage>
 	);
 };
@@ -165,20 +176,20 @@ const Seal: React.FC = () => {
 	const end = sf(144) + 6;
 	const n = Math.round(tween(f, a + 30, ef(143), 0, 9));
 	return (
-		<Mount x={260} y={150} w={1400} h={700} source="ILLUSTRATION · AFTER NTSB AIR-25-04 · PARALLEL LINES NEAR THE UPPER SEAL" start={a} end={end} labels={['ILLUSTRATION', 'NOT TO SCALE']}>
+		<Mount x={260} y={150} w={1400} h={700} source="AFTER NTSB AIR-25-04 · LINES NEAR THE UPPER SEAL" start={a} end={end} labels={['ILLUSTRATION', 'NOT TO SCALE']}>
 			<svg width={1400} height={666}>
 				<rect x={0} y={0} width={1400} height={330} fill="#1b2433" />
 				<rect x={0} y={330} width={1400} height={50} fill="#2b3647" />
-				<text x={30} y={300} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={22} letterSpacing={2}>
+				<text x={30} y={300} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 					FRAME
 				</text>
-				<text x={30} y={420} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={22} letterSpacing={2}>
+				<text x={30} y={364} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1}>
 					SEAL · PLUG EDGE
 				</text>
 				{Array.from({length: n}, (_, i) => (
-					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#b08a4a" strokeWidth={6} opacity={0.75 + 0.025 * i} />
+					<line key={i} x1={120} x2={1280} y1={400 + i * 22} y2={400 + i * 22} stroke="#b08a4a" strokeWidth={6} opacity={0.75 + 0.025 * i} />
 				))}
-				<text x={1300} y={390 + Math.max(0, n - 1) * 22} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={24} textAnchor="end" opacity={n > 2 ? 1 : 0}>
+				<text x={1280} y={400 + Math.max(0, n - 1) * 22 + 48} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={28} textAnchor="end" opacity={n > 2 ? 1 : 0}>
 					DUST · DIRT · PETROLEUM JELLY
 				</text>
 			</svg>
@@ -199,7 +210,7 @@ const Gap: React.FC = () => {
 				{vals.map((v, i) => (
 					<div key={v.label} style={{width: 500, textAlign: 'center', opacity: tween(f, a + 30 + i * 24, a + 44 + i * 24, 0, 1)}}>
 						<div style={{fontSize: 40, fontWeight: 700, color: i === 2 ? colors.amber : colors.ink}}>{v.value.toFixed(3)} IN</div>
-						<div style={{fontSize: 12, letterSpacing: 1.6, color: colors.sub, marginTop: 6}}>{v.label}</div>
+						<div style={{fontSize: 26, letterSpacing: 1.6, color: colors.sub, marginTop: 6}}>{v.label}</div>
 					</div>
 				))}
 			</div>
@@ -226,9 +237,10 @@ const Separation: React.FC = () => {
 		{f: go, yaw: 0.85, pitch: 0.18, dist: 140, ty: 32},
 		{f: end, yaw: 0.8, pitch: 0.2, dist: 170, ty: 34},
 	]);
-	const lift = interpolate(f, [a, sf(147), off + 20, go, go + 40], [CLEAR_TRUE_IN * LIFT_EXAG * 0.94, CLEAR_TRUE_IN * LIFT_EXAG * 1.0, CLEAR_TRUE_IN * LIFT_EXAG * 1.15, CLEAR_TRUE_IN * LIFT_EXAG * 1.2, 30], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	const swing = interpolate(f, [twist, go, go + 50], [0, 0.18, 1.3], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	const away = tween(f, go + 20, go + 90, 1, 0);
+	// round 3: the plug stays solid while it rises and swings out, and fades only once it has cleared the frame
+	const lift = interpolate(f, [a, sf(147), off + 20, go, go + 40, go + 80], [CLEAR_TRUE_IN * LIFT_EXAG * 0.94, CLEAR_TRUE_IN * LIFT_EXAG * 1.0, CLEAR_TRUE_IN * LIFT_EXAG * 1.15, CLEAR_TRUE_IN * LIFT_EXAG * 1.2, 30, 95], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
+	const swing = interpolate(f, [twist, go, go + 50, go + 80], [0, 0.18, 1.3, 1.5], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
+	const away = tween(f, go + 70, go + 92, 1, 0);
 	const jolt = shudder(f, fps, split, 0.6, 11, 6) + shudder(f, fps, twist, 0.4, 8, 6);
 	const state: PlugState = {...defaultState, bolts: none, stopGlow: 1, guideGlow: f >= split ? 1 : 0.3, lift: lift + jolt, swing, plugAlpha: away, context: 1};
 	const g1 = anchor(state, cam, 'upperFwd');
@@ -251,10 +263,10 @@ const Separation: React.FC = () => {
 				<PlugSvg cam={cam} state={{...state, plugAlpha: 0}} />
 			)}
 			<Panel start={a + 6} end={end} title="05 JAN 2024 · CLIMBING OUT OF PORTLAND" value={f >= off ? 'PINS OFF THE PADS' : 'TOP OF THE STOPS'} tone={f >= off ? 'red' : 'amber'} y={150} big={34} />
-			<Panel start={split} end={end} title="UPPER GUIDE FITTINGS" value="SPLIT BY THE ROLLERS" tone="red" y={290} big={30} />
-			<Panel start={twist} end={end} title="LOWER HINGE FITTINGS" value="TWISTED" tone="red" y={420} big={30} />
-			<Panel start={go} end={end} title="THE PLUG" value="UP · OUT · AFT" tone="red" y={550} big={34} />
-			<Caption text="17:12:33 PST · ABOUT 14,830 FT" start={a + 20} end={end} x={150} y={900} tone="red" />
+			<Panel start={split} end={end} title="UPPER GUIDE FITTINGS" value="SPLIT BY THE ROLLERS" tone="red" y={330} big={32} />
+			<Panel start={twist} end={end} title="LOWER HINGE FITTINGS" value="TWISTED" tone="red" y={470} big={32} />
+			<Panel start={go} end={end} title="THE PLUG" value="UP · OUT · AFT" tone="red" y={610} big={34} />
+			<Caption text="17:12:33 PST · ABOUT 14,830 FT" start={a + 20} end={end} x={150} y={846} tone="red" />
 		</Stage>
 	);
 };

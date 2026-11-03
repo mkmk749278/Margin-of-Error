@@ -599,9 +599,10 @@ question from the record (which layer should have caught it?), no link, no subsc
 - Text readable on a phone; nothing important under YouTube's overlays.
 - **Legibility measured (§6.7):** no fact-carrying text under 26 px at 1080, nothing the narration points to under
   36 px, no fact in `muted`, nothing outside the 90% graphics-safe area, no text on a grid line, nothing clipped at a
-  mount's edge. Search the film code for font sizes below the floor before every render.
+  mount's edge. `scripts/text_floor.py` must read 0 before every render.
 - **Motion a viewer can see (§6.4):** every hold over 2.5 s has a camera move, a moving readout or a new element;
   grain and grid drift don't count. Check the dead zones: after each type-on, counter landing and card build.
+  `scripts/stillness_audit.py` on the cut must read 0.
 - **Sync (§10.3):** multi-part builds on their words; highlights complete on their word; every readout agrees with
   the trace or picture beside it.
 - **One desk pose** for every document (§6.6).
@@ -651,6 +652,10 @@ strongest idea that could replace it, inside the hard lines.
 - `scripts/vo_timing.py` + `scripts/align_script.py`: VO timing. `scripts/vo_review.py`: measures each take.
 - `scripts/score_mix.py`: the mixer. `scripts/contact_sheet.py`: timecoded sheets. `scripts/shoot.mjs`: HTML/SVG → image.
 - `scripts/render_shards.mjs`: sharded renders, flash-frame and length checks.
+- `scripts/stillness_audit.py` (new, 2026-11-03): still holds in a cut (4 fps, 320 px grey, < 0.4% of pixels moving
+  more than 6 levels for 3 s). Must read 0 before a cut goes to the owner.
+- `scripts/text_floor.py` (new, 2026-11-03): the §6.7 lint over the film code: font sizes below 26 px, facts in
+  `muted`, text colours off the tokens. Must read 0 before a render; `// floor-ok: <reason>` only for decoration.
 - `scripts/upload_gdrive.sh`, `scripts/gdrive_pull.sh`, `scripts/termux_fetch_to_drive.sh`: Drive.
 - `.github/workflows/remotion-render.yml`: the render farm.
 - Python needs: `pyyaml` (brand), `numpy`, `pillow`; the VO tools list theirs in their headers.
@@ -661,6 +666,19 @@ strongest idea that could replace it, inside the hard lines.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**Round 2b checked, round 3 applied (2026-11-03).**
+- *Applying an outside note word for word can make the fault worse.* Round 2 moved the g-trace dip earlier, as the
+  note asked; the trace then showed 0.40 g for 8 s while its readout still said 63 lb at 1 g. It shifted the 2025 arc
+  label 16 px, which changed nothing (the real fault was 15 px type over a grid line), and it added a 1 Hz amber
+  blinker that the check had declined. **Rule:** §14.3 is not optional: fix from the `_check.md`, not from the note.
+- *A sync fix needs one driver, not a moved keyframe.* The weight readout is now computed from the trace's head
+  (63 lb × the dip drawn so far, holding the lowest value), so the two cannot disagree at any frame.
+- *"Light the rows on the words" needs the words mapped to the right rows:* row 1 lit on "steps" in round 2. Read
+  the sentence against the rows (`review/round2b_check.md`).
+- *A legibility rule needs a lint.* 150 lines of the film's code sat below 26 px after round 2's targeted fixes; the
+  floor was only met once `scripts/text_floor.py` listed every one. Shared components (mount strip, labels, quote
+  attributions, readouts, timeline labels) carried most of them.
 
 **Outside visual review of the review cut, and the audience research (2026-11-03).**
 - *An outside review is leads, not orders.* Of its twelve points, five were true as stated, five were real problems

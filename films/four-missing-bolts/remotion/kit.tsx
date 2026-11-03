@@ -21,8 +21,8 @@ export const Label: React.FC<{text: string; tone?: 'muted' | 'amber' | 'cyan'; s
 	<span
 		style={{
 			fontFamily: mono,
-			fontSize: 18,
-			letterSpacing: 2.4,
+			fontSize: 26,
+			letterSpacing: 1.2,
 			color: tone === 'muted' ? colors.ink : colors[tone],
 			border: `1px solid ${tone === 'muted' ? colors.border : colors[tone]}`,
 			background: 'rgba(10,13,18,0.85)',
@@ -53,6 +53,9 @@ type MountProps = {
 	paper?: boolean;
 };
 
+/** Height of a mount's source strip: tall enough for 26 px type (PLAYBOOK §6.7). */
+export const STRIP = 58;
+
 /** A desk plate: nothing floats on the void (owner, 2026-11-03). Card, 1 px border, registration corners, source strip. */
 export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [], start, end, children, lean = 6, paper = false}) => {
 	const f = useFilmFrame();
@@ -61,6 +64,7 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 	const o = envelope(f, start, end, 14, 16);
 	if (o <= 0) return null;
 	const tilt = (1 - a) * 12 + lean * (1 - tween(f, start, start + 240, 0, 1));
+	const S = STRIP;
 	const corner = (cx: number, cy: number, sx: number, sy: number) => (
 		<div key={`${cx}${cy}`} style={{position: 'absolute', left: cx, top: cy, width: 18, height: 18, borderLeft: sx > 0 ? `1px solid ${colors.sub}` : undefined, borderRight: sx < 0 ? `1px solid ${colors.sub}` : undefined, borderTop: sy > 0 ? `1px solid ${colors.sub}` : undefined, borderBottom: sy < 0 ? `1px solid ${colors.sub}` : undefined, opacity: 0.6}} />
 	);
@@ -83,15 +87,15 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 				<div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>{children}</div>
 				{corner(10, 10, 1, 1)}
 				{corner(w - 28, 10, -1, 1)}
-				{corner(10, h - 28 - 44, 1, -1)}
-				{corner(w - 28, h - 28 - 44, -1, -1)}
+				{corner(10, h - 28 - S, 1, -1)}
+				{corner(w - 28, h - 28 - S, -1, -1)}
 				<div
 					style={{
 						position: 'absolute',
 						left: 0,
 						right: 0,
 						bottom: 0,
-						height: 44,
+						height: S,
 						borderTop: `1px solid ${colors.border}`,
 						background: colors.card,
 						display: 'flex',
@@ -99,17 +103,18 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 						gap: 14,
 						padding: '0 16px',
 						fontFamily: mono,
-						fontSize: 17,
-						letterSpacing: 2,
+						fontSize: 26,
+						letterSpacing: 0.6,
 						color: colors.ink,
 						whiteSpace: 'nowrap',
 					}}
 				>
-					{tag ? <span style={{color: colors.amber, fontWeight: 700}}>{tag}</span> : null}
-					<span>{source}</span>
+					{tag ? <span style={{color: colors.amber, fontWeight: 700, flexShrink: 0}}>{tag}</span> : null}
+					{/* the honesty chips never give way: if a source line is ever too long it is cut, not the labels */}
+					<span style={{minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis'}}>{source}</span>
 					<span style={{flex: 1}} />
 					{labels.map((l) => (
-						<span key={l} style={{color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>
+						<span key={l} style={{flexShrink: 0, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>
 							{l}
 						</span>
 					))}
@@ -147,7 +152,7 @@ export const Photo: React.FC<PhotoProps> = ({src, iw, ih, start, end, source, ta
 		w: from.w * Math.pow(to.w / from.w, t),
 		h: from.h * Math.pow(to.h / from.h, t),
 	};
-	const innerH = box.h - 44;
+	const innerH = box.h - STRIP;
 	const scale = Math.max(box.w / r.w, innerH / r.h);
 	const cx = r.x + r.w / 2;
 	const cy = r.y + r.h / 2;
@@ -155,7 +160,7 @@ export const Photo: React.FC<PhotoProps> = ({src, iw, ih, start, end, source, ta
 	const oy = innerH / 2 - cy * scale;
 	return (
 		<Mount x={box.x} y={box.y} w={box.w} h={box.h} source={source} tag={tag} start={start} end={end} lean={3} labels={labels}>
-			<div style={{position: 'absolute', left: 0, top: 0, width: box.w, height: innerH, overflow: 'hidden', background: '#000'}}>
+			<div style={{position: 'absolute', left: 0, top: 0, width: box.w, height: innerH, overflow: 'hidden', background: colors.void}}>
 				<Img src={src} style={{position: 'absolute', left: ox, top: oy, width: iw * scale, height: ih * scale}} />
 				{children ? children({sx: (px) => ox + px * scale, sy: (py) => oy + py * scale, scale}) : null}
 			</div>
@@ -201,7 +206,7 @@ export const QuoteCard: React.FC<{quote: string; who: string; where: string; sta
 			<div style={{fontFamily: sans, fontWeight: 600, fontSize: size, lineHeight: 1.22, color: colors.ink, letterSpacing: -0.3}}>
 				<TypeOn text={`“${quote}”`} start={start + 8} cps={30} caret={false} />
 			</div>
-			<div style={{marginTop: 22, fontFamily: mono, fontSize: 15, letterSpacing: 2.6, color: colors.sub}}>
+			<div style={{marginTop: 20, fontFamily: mono, fontSize: 26, letterSpacing: 1, lineHeight: 1.3, color: colors.ink}}>
 				<span style={{color: colors.amber}}>{who}</span>
 				<span style={{marginLeft: 16}}>{where}</span>
 			</div>
@@ -249,10 +254,10 @@ export const ActTitle: React.FC<{n: string; title: string; start: number; end: n
 	const track = tween(f, start, end, 14, 18);
 	return (
 		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: o}}>
-			<div style={{fontFamily: mono, fontSize: 20, letterSpacing: 8, color: colors.amber, marginBottom: 22}}>ACT {n}</div>
+			<div style={{fontFamily: mono, fontSize: 30, letterSpacing: 8, color: colors.amber, marginBottom: 22}}>ACT {n}</div>
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 78, letterSpacing: track, color: colors.ink, textTransform: 'uppercase', marginRight: -track}}>{title}</div>
 			<div style={{width: 760 * line, height: 1, background: colors.sub, marginTop: 30, opacity: 0.7}} />
-			{sub ? <div style={{fontFamily: mono, fontSize: 16, letterSpacing: 4, color: colors.muted, marginTop: 20}}>{sub}</div> : null}
+			{sub ? <div style={{fontFamily: mono, fontSize: 30, letterSpacing: 3, color: colors.sub, marginTop: 22}}>{sub}</div> : null}
 		</AbsoluteFill>
 	);
 };
@@ -265,13 +270,13 @@ export const Caption: React.FC<{text: string; start: number; end: number; tone?:
 	tone = 'ink',
 	x = 72,
 	y = 960,
-	size = 22,
+	size = 26,
 }) => {
 	const f = useFilmFrame();
 	const o = envelope(f, start, end, 12, 14);
 	if (o <= 0) return null;
 	return (
-		<div style={{position: 'absolute', left: x, top: y, opacity: o, fontFamily: mono, fontSize: size, letterSpacing: 3, color: colors[tone], background: colors.card, border: `1px solid ${colors.border}`, padding: '10px 16px 8px', whiteSpace: 'nowrap'}}>
+		<div style={{position: 'absolute', left: x, top: y, opacity: o, fontFamily: mono, fontSize: size, letterSpacing: 1.6, color: colors[tone], background: colors.card, border: `1px solid ${colors.border}`, padding: '10px 16px 8px', whiteSpace: 'nowrap'}}>
 			{text}
 		</div>
 	);
@@ -282,7 +287,7 @@ export const CaseStrip: React.FC<{start: number; end: number; text?: string}> = 
 	const f = useFilmFrame();
 	const o = envelope(f, start, end, 20, 20) * 0.85;
 	if (o <= 0) return null;
-	return <div style={{position: 'absolute', right: 72, bottom: 36, opacity: o, fontFamily: mono, fontSize: 13, letterSpacing: 3, color: colors.muted}}>{text}</div>;
+	return <div style={{position: 'absolute', right: 96, bottom: 54, opacity: o, fontFamily: mono, fontSize: 26, letterSpacing: 1, color: colors.sub}}>{text}</div>;
 };
 
 /** A soft scene envelope for content that should fade together. */

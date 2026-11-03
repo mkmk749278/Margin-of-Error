@@ -19,7 +19,7 @@ const flightT = (f: number): number => (f < F_EVENT ? EVENT_T - (F_EVENT - f) / 
 
 const Panel: React.FC<{x: number; y: number; w: number; h: number; title: string; children?: React.ReactNode; right?: React.ReactNode}> = ({x, y, w, h, title, children, right}) => (
 	<div style={{position: 'absolute', left: x, top: y, width: w, height: h, background: 'rgba(10,13,18,0.6)', border: `1px solid ${colors.border}`}}>
-		<div style={{display: 'flex', justifyContent: 'space-between', padding: '12px 18px 0', fontFamily: mono, fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>
+		<div style={{display: 'flex', justifyContent: 'space-between', padding: '12px 18px 0', fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>
 			<span>{title}</span>
 			{right}
 		</div>
@@ -44,9 +44,9 @@ const Annunciator: React.FC<{label: string; on: number; tone: 'red' | 'amber'; x
 				justifyContent: 'center',
 				fontFamily: mono,
 				fontWeight: 700,
-				fontSize: 22,
+				fontSize: 26,
 				letterSpacing: 3,
-				color: on > 0 ? '#0a0d12' : colors.muted,
+				color: on > 0 ? colors.void : colors.sub,
 				background: on > 0 ? c : 'transparent',
 				opacity: on > 0 ? lit : 1,
 				border: `1px solid ${on > 0 ? c : colors.border}`,
@@ -99,7 +99,7 @@ const FdrOpen: React.FC = () => {
 				<div style={{fontFamily: mono, fontSize: 92, fontWeight: 700, letterSpacing: 10, color: colors.ink}}>
 					<TypeOn text="05 JAN 2024" start={8} cps={14} />
 				</div>
-				<div style={{marginTop: 26, fontFamily: mono, fontSize: 20, letterSpacing: 5, color: colors.sub, opacity: tween(f, 70, 110, 0, 1)}}>ALASKA AIRLINES FLIGHT 1282 · BOEING 737-9 · N704AL</div>
+				<div style={{marginTop: 26, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: tween(f, 70, 110, 0, 1)}}>ALASKA AIRLINES FLIGHT 1282 · BOEING 737-9 · N704AL</div>
 			</AbsoluteFill>
 			<Mount x={110} y={96} w={1700} h={860} source="DISPLAY REDRAWN FROM NTSB DOCKET DCA24MA063 · FDR TABULAR DATA, ATT. 1" tag="FDR" start={panelIn} end={end} lean={2} labels={['RECONSTRUCTION', 'PLAYBACK ' + rate]}>
 				<div style={{position: 'absolute', inset: 0, transform: `translateX(${shake}px)`}}>
@@ -111,9 +111,9 @@ const FdrOpen: React.FC = () => {
 					<Panel x={40} y={250} w={640} h={300} title="PRESSURE ALTITUDE" right={<span style={{color: colors.cyan}}>CLIMBING</span>}>
 						<div style={{position: 'absolute', left: 18, top: 60, fontFamily: mono, fontSize: 132, fontWeight: 700, color: colors.ink, fontVariantNumeric: 'tabular-nums', letterSpacing: -2}}>
 							{Math.round(alt).toLocaleString('en-US')}
-							<span style={{fontSize: 34, color: colors.muted, marginLeft: 14, letterSpacing: 2}}>FT</span>
+							<span style={{fontSize: 34, color: colors.sub, marginLeft: 14, letterSpacing: 2}}>FT</span>
 						</div>
-						<div style={{position: 'absolute', left: 22, top: 222, fontFamily: mono, fontSize: 24, color: colors.sub, fontVariantNumeric: 'tabular-nums', letterSpacing: 2}}>
+						<div style={{position: 'absolute', left: 22, top: 222, fontFamily: mono, fontSize: 26, color: colors.sub, fontVariantNumeric: 'tabular-nums', letterSpacing: 1.2}}>
 							{Math.round(alt * 0.3048).toLocaleString('en-US')} M
 						</div>
 					</Panel>
@@ -121,8 +121,8 @@ const FdrOpen: React.FC = () => {
 					<Panel x={720} y={40} w={940} h={510} title="CABIN PRESSURE · CPC1" right={<span style={{color: after ? colors.red : colors.cyan}}>{after ? 'DEPRESSURIZED' : 'NOMINAL'}</span>}>
 						<div style={{position: 'absolute', left: 18, top: 44, fontFamily: mono, fontSize: 64, fontWeight: 700, color: after ? colors.red : colors.ink, fontVariantNumeric: 'tabular-nums'}}>
 							{psi.toFixed(2)}
-							<span style={{fontSize: 24, color: colors.muted, marginLeft: 10}}>PSI</span>
-							<span style={{fontSize: 24, color: colors.sub, marginLeft: 22}}>{(psi * 6.89476).toFixed(1)} KPA</span>
+							<span style={{fontSize: 26, color: colors.sub, marginLeft: 10}}>PSI</span>
+							<span style={{fontSize: 26, color: colors.sub, marginLeft: 22}}>{(psi * 6.89476).toFixed(1)} KPA</span>
 						</div>
 					</Panel>
 					<svg width={1700} height={860} style={{position: 'absolute', left: 0, top: 0, opacity: draw}}>
@@ -131,33 +131,33 @@ const FdrOpen: React.FC = () => {
 							return (
 								<g key={v}>
 									<line x1={gx} x2={gx + gw} y1={y} y2={y} stroke={colors.border} strokeWidth={1} />
-									<text x={gx + gw + 10} y={y + 5} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={14}>
+									<text x={gx + gw + 10} y={y + 5} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26}>
 										{v}
 									</text>
 								</g>
 							);
 						})}
 						<polyline points={altPts.join(' ')} fill="none" stroke={colors.sub} strokeWidth={2} strokeDasharray="6 5" opacity={0.7} />
-						<text x={gx + 8} y={gy + gh - 12} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={13} letterSpacing={2}>
+						<text x={gx + 8} y={gy + gh - 12} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							- - ALTITUDE 13,000–17,000 FT
 						</text>
 						<polyline points={pts.join(' ')} fill="none" stroke={colors.cyan} strokeWidth={3} strokeDasharray={4000} strokeDashoffset={4000 * (1 - draw)} />
 						{redPts.length > 1 ? <polyline points={redPts.join(' ')} fill="none" stroke={colors.red} strokeWidth={4} /> : null}
 						<line x1={gx + gw} x2={gx + gw} y1={gy - 10} y2={gy + gh + 10} stroke={colors.sub} strokeWidth={1} strokeDasharray="4 6" />
-						<text x={gx} y={gy + gh + 34} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={14} letterSpacing={2}>
+						<text x={gx} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							−60 S
 						</text>
-						<text x={gx + gw - 40} y={gy + gh + 34} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={14} letterSpacing={2}>
+						<text x={gx + gw - 40} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							NOW
 						</text>
 					</svg>
 					{/* annunciators: FDR discretes, drawn as plain tiles (not a cockpit panel) */}
-					<div style={{position: 'absolute', left: 40, top: 590, fontFamily: mono, fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>RECORDED DISCRETES</div>
+					<div style={{position: 'absolute', left: 40, top: 590, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>RECORDED DISCRETES</div>
 					<Annunciator label="CABIN ALT WARNING" on={warnOn} tone="red" x={40} y={625} />
 					<Annunciator label="MASTER CAUTION" on={cautOn} tone="amber" x={400} y={625} />
-					<div style={{position: 'absolute', left: 760, top: 596, width: 900, fontFamily: mono, fontSize: 23, letterSpacing: 1.6, color: '#cbd5e1', lineHeight: 1.6, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
+					<div style={{position: 'absolute', left: 760, top: 596, width: 900, fontFamily: mono, fontSize: 26, letterSpacing: 1.6, color: colors.ink, lineHeight: 1.6, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
 						<div>17:12:33 · CPC1 14.08 → 9.08 PSI IN 2 S</div>
-						<div style={{color: colors.muted}}>NTSB: CLIMBING THROUGH ABOUT 14,830 FT</div>
+						<div style={{color: colors.sub}}>NTSB: CLIMBING THROUGH ABOUT 14,830 FT</div>
 					</div>
 				</div>
 			</Mount>
@@ -219,10 +219,10 @@ const Hole: React.FC = () => {
 							<rect x={x0} y={y0} width={(x1 - x0) * k} height={y1 - y0} fill="none" stroke={colors.red} strokeWidth={3} />
 							<line x1={x0} x2={x0 + (x1 - x0) * k} y1={y0 - 26} y2={y0 - 26} stroke={colors.amber} strokeWidth={2} />
 							<line x1={x0 - 26} x2={x0 - 26} y1={y0} y2={y0 + (y1 - y0) * k} stroke={colors.amber} strokeWidth={2} />
-							<text x={(x0 + x1) / 2} y={y0 - 40} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={24}>
+							<text x={(x0 + x1) / 2} y={y0 - 40} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={26}>
 								29 IN · 74 CM
 							</text>
-							<text x={x0 - 44} y={(y0 + y1) / 2} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={24} transform={`rotate(-90 ${x0 - 44} ${(y0 + y1) / 2})`}>
+							<text x={x0 - 44} y={(y0 + y1) / 2} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={26} transform={`rotate(-90 ${x0 - 44} ${(y0 + y1) / 2})`}>
 								59 IN · 150 CM
 							</text>
 						</svg>
@@ -295,13 +295,13 @@ const Track: React.FC = () => {
 				<polyline points={path.join(' ')} fill="none" stroke={colors.cyan} strokeWidth={3} />
 				{red.length > 1 ? <polyline points={red.join(' ')} fill="none" stroke={colors.amber} strokeWidth={3} /> : null}
 				<circle cx={px(i0)} cy={py(i0)} r={7} fill={colors.ink} />
-				<text x={px(i0) + 16} y={py(i0) + 6} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={18} letterSpacing={2}>
+				<text x={px(i0) + 16} y={py(i0) + 6} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 					PORTLAND INTL · PDX
 				</text>
 				{head >= EVENT_T ? (
 					<g>
 						<circle cx={px(EVENT_T)} cy={py(EVENT_T)} r={10} fill="none" stroke={colors.red} strokeWidth={3} />
-						<text x={px(EVENT_T) + 18} y={py(EVENT_T) - 12} fill={colors.red} fontFamily="JetBrains Mono" fontSize={18} letterSpacing={2}>
+						<text x={px(EVENT_T) + 18} y={py(EVENT_T) - 12} fill={colors.red} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							17:12:33 · PLUG SEPARATES
 						</text>
 					</g>
@@ -309,24 +309,24 @@ const Track: React.FC = () => {
 				<circle cx={px(head)} cy={py(head)} r={6} fill={landed ? colors.ink : colors.amber} />
 			</svg>
 			<div style={{position: 'absolute', left: 1260, top: 60, width: 400, fontFamily: mono, color: colors.ink}}>
-				<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>TIME · PST</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>TIME · PST</div>
 				<div style={{fontSize: 52, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>{clockText(Math.min(t, GEAR_GROUND_T + 5))}</div>
-				<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted, marginTop: 26}}>PRESSURE ALTITUDE</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 26}}>PRESSURE ALTITUDE</div>
 				<div style={{fontSize: 40, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>
-					{Math.max(0, Math.round(altArr[Math.min(head, altArr.length - 1)])).toLocaleString('en-US')} <span style={{fontSize: 18, color: colors.muted}}>FT</span>
+					{Math.max(0, Math.round(altArr[Math.min(head, altArr.length - 1)])).toLocaleString('en-US')} <span style={{fontSize: 26, color: colors.sub}}>FT</span>
 				</div>
-				<div style={{marginTop: 30, fontSize: 22, letterSpacing: 3, color: landed ? colors.cyan : colors.muted}}>{landed ? 'LANDED 17:26:46' : 'RETURNING'}</div>
-				<div style={{fontSize: 16, letterSpacing: 2, color: colors.muted, marginTop: 6, opacity: landed ? 1 : 0}}>ABOUT 14 MIN AFTER THE PLUG SEPARATED</div>
+				<div style={{marginTop: 30, fontSize: 26, letterSpacing: 1.2, color: landed ? colors.cyan : colors.muted}}>{landed ? 'LANDED 17:26:46' : 'RETURNING'}</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 6, opacity: landed ? 1 : 0}}>ABOUT 14 MIN AFTER THE PLUG SEPARATED</div>
 				<div style={{marginTop: 40, opacity: tween(f, sf(11) - 6, sf(11) + 10, 0, 1)}}>
-					<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>INJURIES · NTSB</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>INJURIES · NTSB</div>
 					<div style={{display: 'flex', gap: 40, marginTop: 8}}>
 						<div>
 							<div style={{fontSize: 56, fontWeight: 700, color: colors.amber, fontVariantNumeric: 'tabular-nums'}}>{injuries}</div>
-							<div style={{fontSize: 14, letterSpacing: 2, color: colors.sub}}>MINOR</div>
+							<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>MINOR</div>
 						</div>
 						<div style={{opacity: tween(f, sf(12), sf(12) + 16, 0, 1)}}>
 							<div style={{fontSize: 56, fontWeight: 700, color: colors.ink}}>0</div>
-							<div style={{fontSize: 14, letterSpacing: 2, color: colors.sub}}>SERIOUS</div>
+							<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>SERIOUS</div>
 						</div>
 					</div>
 				</div>
@@ -347,7 +347,7 @@ const Paper: React.FC = () => {
 		<>
 			<AbsoluteFill style={{opacity: cvrO}}>
 				<div style={{position: 'absolute', left: 360, top: 330, width: 1200, height: 300, background: colors.card, border: `1px solid ${colors.border}`}}>
-					<div style={{position: 'absolute', left: 30, top: 24, fontFamily: mono, fontSize: 16, letterSpacing: 3, color: colors.muted}}>COCKPIT VOICE RECORDER · ACCIDENT FLIGHT</div>
+					<div style={{position: 'absolute', left: 30, top: 24, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>COCKPIT VOICE RECORDER · ACCIDENT FLIGHT</div>
 					<svg width={1140} height={120} style={{position: 'absolute', left: 30, top: 70}}>
 						<line x1={0} x2={1140 * flat} y1={60} y2={60} stroke={colors.muted} strokeWidth={2} />
 						{Array.from({length: 40}, (_, i) => (
@@ -357,8 +357,7 @@ const Paper: React.FC = () => {
 					<div style={{position: 'absolute', left: 30, top: 200, fontFamily: mono, fontSize: 34, fontWeight: 700, letterSpacing: 4, color: colors.ink}}>
 						<TypeOn text="NO AUDIO FROM THE ACCIDENT FLIGHT" start={sf(13) + 20} cps={30} />
 					</div>
-					<div style={{position: 'absolute', left: 30, top: 250, fontFamily: mono, fontSize: 16, letterSpacing: 2.4, color: colors.sub, opacity: tween(f, sf(14), sf(14) + 20, 0, 1)}}>
-						<span style={{display: 'inline-block', width: 10, height: 10, borderRadius: 5, marginRight: 12, background: colors.amber, opacity: Math.round((f / 30) % 2) ? 1 : 0.25}} />
+					<div style={{position: 'absolute', left: 30, top: 250, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: tween(f, sf(14), sf(14) + 20, 0, 1)}}>
 						RECORDING CONTINUED AFTER LANDING · OVERWRITTEN · NTSB AIR-25-04
 					</div>
 				</div>
@@ -382,10 +381,11 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 	if (small) {
 		// the open loop kept in view, quietly: one line, top right, until the photograph is in evidence
 		return (
-			<div style={{position: 'absolute', right: 72, top: 34, opacity: o * 0.9, fontFamily: mono, fontSize: 17, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 10}}>
-				<span style={{width: 14, height: 10, border: `1px dashed ${colors.amber}`}} />
+			// round 3: on a card (it sits over exhibit pages, §6.6), inside the safe area, shorter
+			<div style={{position: 'absolute', right: 96, top: 44, opacity: o * 0.95, fontFamily: mono, fontSize: 26, letterSpacing: 0.8, color: colors.ink, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 12, background: colors.card, border: `1px solid ${colors.border}`, padding: '6px 14px 5px'}}>
+				<span style={{width: 16, height: 12, border: `1px dashed ${colors.amber}`}} />
 				<span style={{color: colors.amber}}>PENDING</span>
-				<span>EXHIBIT · PHOTOGRAPH · 19 SEP 2023</span>
+				<span>PHOTOGRAPH · 19 SEP 2023</span>
 			</div>
 		);
 	}
@@ -394,11 +394,11 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 			<div style={{width: 600, height: 380, background: '#c9b48a', position: 'relative', boxShadow: '0 30px 80px rgba(0,0,0,0.6)', transform: `rotate(${-2 + tween(f, start, end, 0, 1.2)}deg) translateY(${tween(f, start, end, 0, -14)}px)`, overflow: 'hidden'}}>
 				<div style={{position: 'absolute', top: 0, bottom: 0, width: 160, left: tween(f, start + 40, end, -200, 760), background: 'linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.16), rgba(255,255,255,0))'}} />
 				<div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 120, background: '#b9a274', clipPath: 'polygon(0 0, 100% 0, 50% 100%)'}} />
-				<div style={{position: 'absolute', left: 40, top: 170, right: 40, fontFamily: mono, color: '#2a2216'}}>
-					<div style={{fontSize: 20, fontWeight: 700, letterSpacing: 4}}>EXHIBIT · PHOTOGRAPH</div>
-					<div style={{fontSize: 18, letterSpacing: 2, marginTop: 14}}>19 SEP 2023 · ABOUT 18:39</div>
-					<div style={{fontSize: 18, letterSpacing: 2, marginTop: 6}}>BOEING · RENTON, WASHINGTON</div>
-					<div style={{fontSize: 15, letterSpacing: 2, marginTop: 18, color: '#4a3d28'}}>NTSB AIR-25-04 · FIG. 18</div>
+				<div style={{position: 'absolute', left: 40, top: 170, right: 40, fontFamily: mono, color: '#2a2216'}}>{/* floor-ok: ink on the manila envelope (8:1), a material, not a token */}
+					<div style={{fontSize: 26, fontWeight: 700, letterSpacing: 1.2}}>EXHIBIT · PHOTOGRAPH</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, marginTop: 14}}>19 SEP 2023 · ABOUT 18:39</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, marginTop: 6}}>BOEING · RENTON, WASHINGTON</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, marginTop: 18, color: '#2a2216'}}>NTSB AIR-25-04 · FIG. 18</div>{/* floor-ok: envelope ink */}
 				</div>
 			</div>
 		</div>
@@ -421,10 +421,10 @@ const Loop: React.FC = () => {
 					<line x1={x0} x2={x0 + (x1 - x0) * bar} y1={820} y2={820} stroke={colors.amber} strokeWidth={3} />
 					<circle cx={x0} cy={820} r={10} fill={colors.amber} />
 					<circle cx={x1} cy={820} r={10} fill={bar >= 1 ? colors.red : colors.border} />
-					<text x={x0} y={870} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={20} letterSpacing={2}>
+					<text x={x0} y={870} fill={colors.ink} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 						19 SEP 2023 · RENTON
 					</text>
-					<text x={x1} y={870} textAnchor="end" fill={colors.ink} fontFamily="JetBrains Mono" fontSize={20} letterSpacing={2}>
+					<text x={x1} y={870} textAnchor="end" fill={colors.ink} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 						05 JAN 2024 · PORTLAND
 					</text>
 					<text x={(x0 + x1) / 2} y={806} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={26} letterSpacing={4} opacity={bar}>
@@ -467,7 +467,7 @@ const Layers: React.FC = () => {
 							}}
 						>
 							<div style={{position: 'absolute', left: 120, top: 180 + i * 6, width: 64, height: 64, borderRadius: 32, background: colors.void, border: `2px solid ${thread > i / 4 ? colors.red : colors.border}`}} />
-							<div style={{position: 'absolute', left: 18, top: 18, right: 14, fontFamily: mono, fontSize: 22, fontWeight: 700, lineHeight: 1.25, letterSpacing: 1.6, color: colors.ink}}>{t}</div>
+							<div style={{position: 'absolute', left: 18, top: 18, right: 14, fontFamily: mono, fontSize: 26, fontWeight: 700, lineHeight: 1.25, letterSpacing: 1.6, color: colors.ink}}>{t}</div>
 						</div>
 					);
 				})}
