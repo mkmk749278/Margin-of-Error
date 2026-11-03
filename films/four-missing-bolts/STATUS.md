@@ -22,8 +22,9 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
 1. **720p review cut on the render farm** (`remotion-render.yml`: film `four-missing-bolts`, comp `FourMissingBolts`,
    scale `2/3`, name `four-missing-bolts_review_r1_720p.mp4`). Dispatched 2026-11-03 (run 41604046525) after the owner set
    the default branch to `main` (workflows register only from the default branch).
-2. Picture gate (§14.2) on the cut: contact sheets every 2 s with the words, every frame read; independent
-   fresh-eyes review in a new session.
+2. Picture gate (§14.2): r1 read frame by frame (review/picture_gate_r1.md), 8 fixes, r2 rendered
+   (Drive `renders/four-missing-bolts_review_r2_720p.mp4`) and the fixes verified. Independent fresh-eyes review of r2
+   running in session session_017FkceYUjxs6FoDdpVxTDCd (report → review/fresh_eyes_r2.md).
 3. Owner review; fixes collected per round; 4K only after approval; then the YouTube package (§13.7).
 
 ## Open with the owner
