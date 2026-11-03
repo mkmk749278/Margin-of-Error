@@ -559,6 +559,10 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
   something visibly moves through every one (§6.4). The word-level picture (§10.6) does the work holds used to do.
   *Why:* 55 holds of 2–4 s (124 s) plus music-out stretches of 25 and 50 s made 26% of Film 1's runtime silence
   between sentences; cut to 54 s of holds, the film went from 16:15 to 15:05 and plays as one continuous piece.
+- **The mix follows the picture's timeline.** After any timing or cue change: export the cues
+  (`npx esbuild films/<slug>/remotion/cues_export.ts --bundle --platform=node --format=esm --loader:.json=json --outfile=/tmp/cues.mjs && node /tmp/cues.mjs > films/<slug>/sound/cues.json`),
+  move the music slots in `sound/mix.json` to the new seconds, run `scripts/mix_film.py`, and put `assets/mix/mix.wav`
+  in Drive `<slug>/mix/` (keep the previous one beside it, renamed) before a render.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
 - Never use a real alarm or cockpit recording that isn't released and licensed; synthesised tones are labelled in
   the manifest as synthesised.
