@@ -1,0 +1,7 @@
+# Act starts for vo_timing.py: "Title | the first words of the act's first paragraph" (vo.txt keeps no headers, so
+# the TTS never reads one aloud). Each act turn gets a chapter gap of silence in the joined VO.
+I · The Incident | Fifth of January, twenty twenty-four.
+II · The Mechanism | The seven thirty-seven nine has an opening
+III · The Boardroom | The plug was made by Spirit AeroSystems
+IV · The Cascade | Now go back to the plug
+V · The Verdict | The N - T - S - B adopted its final report
