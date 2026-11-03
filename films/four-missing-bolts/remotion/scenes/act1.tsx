@@ -456,24 +456,24 @@ const Layers: React.FC = () => {
 							key={t}
 							style={{
 								position: 'absolute',
-								left: 520 + i * 230,
+								left: 380 + i * 330,
 								top: 150,
-								width: 300,
+								width: 290,
 								height: 420,
-								border: `1px solid ${colors.sub}`,
-								background: 'rgba(18,24,36,0.82)',
+								border: `2px solid ${colors.cyan}`,
+								background: 'rgba(18,24,36,0.9)',
 								transform: `translateZ(${-i * 40}px) translateY(${(1 - k) * 40}px)`,
 								opacity: k,
 							}}
 						>
 							<div style={{position: 'absolute', left: 120, top: 180 + i * 6, width: 64, height: 64, borderRadius: 32, background: colors.void, border: `2px solid ${thread > i / 4 ? colors.red : colors.border}`}} />
-							<div style={{position: 'absolute', left: 18, top: 16, fontFamily: mono, fontSize: 15, letterSpacing: 2.4, color: colors.sub}}>{t}</div>
+							<div style={{position: 'absolute', left: 18, top: 18, right: 14, fontFamily: mono, fontSize: 22, fontWeight: 700, lineHeight: 1.25, letterSpacing: 1.6, color: colors.ink}}>{t}</div>
 						</div>
 					);
 				})}
 			</div>
 			<svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0}}>
-				<line x1={420} x2={420 + 1180 * thread} y1={368} y2={368 + 22 * thread} stroke={colors.red} strokeWidth={3} />
+				<line x1={300} x2={300 + 1420 * thread} y1={368} y2={368 + 22 * thread} stroke={colors.red} strokeWidth={3} />
 			</svg>
 			<div style={{position: 'absolute', left: 0, right: 0, top: 800, textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: 58, letterSpacing: 2, color: colors.ink, opacity: tween(f, qOn, qOn + 20, 0, 1)}}>
 				<TypeOn text="WHERE DID THE MARGIN OF ERROR RUN OUT?" start={qOn} cps={26} caret={false} />

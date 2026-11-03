@@ -176,7 +176,7 @@ const Seal: React.FC = () => {
 					SEAL · PLUG EDGE
 				</text>
 				{Array.from({length: n}, (_, i) => (
-					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#5a4a2e" strokeWidth={4} opacity={0.6 + 0.04 * i} />
+					<line key={i} x1={120} x2={1280} y1={380 + i * 22} y2={380 + i * 22} stroke="#b08a4a" strokeWidth={6} opacity={0.75 + 0.025 * i} />
 				))}
 				<text x={1300} y={390 + Math.max(0, n - 1) * 22} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={24} textAnchor="end" opacity={n > 2 ? 1 : 0}>
 					DUST · DIRT · PETROLEUM JELLY

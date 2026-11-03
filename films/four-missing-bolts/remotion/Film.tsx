@@ -49,8 +49,10 @@ const Scenes: React.FC = () => {
 					const e = p * p * (3 - 2 * p);
 					const ang = (i * 2.399963) % (2 * Math.PI);
 					const k = 1 + 0.035 * e;
-					const dx = Math.cos(ang) * 16 * (e - 0.5);
-					const dy = Math.sin(ang) * 10 * (e - 0.5);
+					const t = (f - s.from) / 60;
+					// plus a slow, time-based drift (a few px a second, whatever the scene's length)
+					const dx = Math.cos(ang) * 16 * (e - 0.5) + 11 * Math.sin((2 * Math.PI * t) / 11 + i);
+					const dy = Math.sin(ang) * 10 * (e - 0.5) + 7 * Math.sin((2 * Math.PI * t) / 14 + 2 * i);
 					return (
 						<AbsoluteFill key={s.id} style={{transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: '50% 48%'}}>
 							<s.C />

@@ -389,7 +389,7 @@ const Question: React.FC = () => {
 	return (
 		<AbsoluteFill style={{opacity: o, alignItems: 'center', justifyContent: 'center'}}>
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, letterSpacing: 1, color: colors.ink, textAlign: 'center', lineHeight: 1.3}}>
-				<TypeOn text="WHO TOOK THEM OUT," start={wf(48, 'who')} cps={24} caret={false} />
+				<TypeOn text="WHO TOOK THEM OUT," start={Math.min(wf(48, 'who'), sf(48) + 30)} cps={24} caret={false} />
 				<br />
 				<TypeOn text="AND WHY WERE THEY NEVER PUT BACK?" start={wf(48, 'why')} cps={24} caret={false} />
 			</div>

@@ -380,15 +380,15 @@ const Texts: React.FC = () => {
 	return (
 		<AbsoluteFill style={{opacity: o}}>
 			<div style={{position: 'absolute', left: 700, top: 160, width: 520, height: 700, border: `1px solid ${colors.border}`, background: colors.card, borderRadius: 30}}>
-				<div style={{position: 'absolute', left: 30, top: 30, fontFamily: mono, fontSize: 14, letterSpacing: 2.4, color: colors.muted}}>TEXT MESSAGES · BOEING WORKERS</div>
+				<div style={{position: 'absolute', left: 30, top: 30, fontFamily: mono, fontSize: 18, letterSpacing: 2.2, color: colors.ink}}>TEXT MESSAGES · BOEING WORKERS</div>
 				{[0, 1, 2].map((i) => (
-					<div key={i} style={{position: 'absolute', left: i % 2 ? 150 : 30, top: 100 + i * 110, width: 340, height: 74, borderRadius: 18, background: i % 2 ? '#1e3a52' : '#1e293b', opacity: tween(f, a + 20 + i * 20, a + 34 + i * 20, 0, 1)}} />
+					<div key={i} style={{position: 'absolute', left: i % 2 ? 150 : 30, top: 100 + i * 110, width: 340, height: 74, borderRadius: 18, background: i % 2 ? '#25506f' : '#2b3a52', border: `1px solid ${colors.sub}`, transform: `translateY(${(1 - tween(f, a + 20 + i * 40, a + 34 + i * 40, 0, 1)) * 24}px)`, opacity: tween(f, a + 20 + i * 40, a + 34 + i * 40, 0, 1)}} />
 				))}
 				<div style={{position: 'absolute', left: 30, top: 440, width: 460, height: 200, borderRadius: 18, border: `2px dashed ${colors.amber}`, opacity: tween(f, wf(81, 'photograph') - 10, wf(81, 'photograph') + 10, 0, 1), display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: mono, fontSize: 20, letterSpacing: 3, color: colors.amber}}>
 					PHOTOGRAPH · ABOUT 18:39
 				</div>
 			</div>
-			<div style={{position: 'absolute', left: 1260, top: 200, width: 520, fontFamily: mono, fontSize: 16, letterSpacing: 2, color: colors.sub, lineHeight: 1.8}}>
+			<div style={{position: 'absolute', left: 1260, top: 200, width: 560, fontFamily: mono, fontSize: 21, letterSpacing: 1.6, color: colors.ink, lineHeight: 1.7}}>
 				<div>SUBJECT: PUTTING THE CABIN INTERIOR BACK</div>
 				<div style={{color: colors.muted, marginTop: 20}}>MESSAGE CONTENT NOT SHOWN · NAMES WITHHELD</div>
 				<div style={{color: colors.muted}}>NTSB AIR-25-04</div>
@@ -521,7 +521,7 @@ const Fan: React.FC = () => {
 	const a = sf(98) - 10;
 	const end = sf(100) + 6;
 	const pages = ['pages/p062_sat_entries.jpg', 'pages/p067_qa_signoff.jpg', 'pages/p071_workforce.jpg', 'pages/p076_bpi_50_pages.jpg', 'pages/p134_findings_20_21.jpg'];
-	const spread = tween(f, sf(99) - 20, sf(99) + 40, 0, 1, ease.arrive);
+	const spread = tween(f, a + 10, sf(99) + 30, 0.25, 1, ease.arrive);
 	return (
 		<Fade start={a} end={end}>
 			{pages.map((p, i) => (
@@ -562,8 +562,8 @@ const Regulator: React.FC = () => {
 	const zero = f >= sf(107) + 20;
 	return (
 		<Fade start={a} end={end}>
-			<div style={{position: 'absolute', left: 260, top: 210, fontFamily: mono}}>
-				<div style={{fontSize: 16, letterSpacing: 3, color: colors.muted}}>FAA INSPECTORS ON THE 737 PROGRAM · WHILE THE FUSELAGE WAS AT RENTON</div>
+			<div style={{position: 'absolute', left: 200, top: 170, fontFamily: mono, transform: 'scale(1.35)', transformOrigin: '0 0'}}>
+				<div style={{fontSize: 16, letterSpacing: 3, color: colors.sub}}>FAA INSPECTORS ON THE 737 PROGRAM · WHILE THE FUSELAGE WAS AT RENTON</div>
 				<div style={{display: 'flex', gap: 26, marginTop: 30}}>
 					{[0, 1, 2, 3, 4].map((i) => (
 						<div key={i} style={{width: 90, height: 120, border: `1px solid ${colors.cyan}`, opacity: tween(f, sf(105) + 30 + i * 10, sf(105) + 44 + i * 10, 0, 1), position: 'relative'}}>
@@ -597,7 +597,7 @@ const Line: React.FC = () => {
 	const a = sf(108) - 10;
 	const end = sf(115) + 6;
 	const bars = [
-		{t: 'BEFORE 2018', v: 52, on: wf(109, 'fifty-two') - 20, tone: colors.cyan, note: 'ABOUT 52'},
+		{t: 'BEFORE 2018', v: 52, on: sf(109) + 10, tone: colors.cyan, note: 'ABOUT 52'},
 		{t: 'PANDEMIC LOW', v: 10, on: wf(112, 'ten') - 20, tone: colors.amber, note: 'FEWER THAN 10'},
 		{t: 'BEFORE THE ACCIDENT', v: 38, on: sf(113) + 30, tone: colors.cyan, note: 'ABOUT 30–38'},
 	];
