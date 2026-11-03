@@ -2,7 +2,7 @@ Fifth of January, twenty twenty-four. At twelve minutes and thirty-three seconds
 
 Then the cabin pressure dropped. The cabin altitude warning sounded. One second later, the master caution.
 
-The captain would describe it as an explosive experience. The first officer said simply... it was chaos.
+The captain would describe it as an explosive experience. The first officer said simply: it was chaos.
 
 Behind the wing, on the left side, there was now a hole in the fuselage. A rectangle about twenty-nine inches wide and fifty-nine inches high.
 
@@ -32,7 +32,7 @@ Four bolts, where a single lower bolt would have done. A margin of error, built 
 
 On this airplane, all four were missing.
 
-The investigators could tell from the holes. None of them carried a mark from a bolt. But faint rings around the upper holes showed that washers had once been there. The bolts had been fitted... and then taken out.
+The investigators could tell from the holes. None of them carried a mark from a bolt. But faint rings around the upper holes showed that washers had once been there. The bolts had been fitted—and then taken out.
 
 So the question became: who took them out, and why were they never put back?
 
@@ -56,13 +56,13 @@ Only Boeing's door team was allowed to work on a plug. The man usually given tha
 
 The plug was opened. No removal record was written. No one interviewed said they knew who opened it.
 
-Later that day, a technician moving equipment found the plug lying open on a stand. He used a strap to pull it up off the stand, he said, and let it hang... with a gap all round it in the frame.
+Later that day, a technician moving equipment found the plug lying open on a stand. He used a strap to pull it up off the stand, he said, and let it hang—with a gap all round it in the frame.
 
 The next day, the rivet work was finished. And sometime on the evening shift of the nineteenth of September, when no member of the door team was working, the plug was closed.
 
 At about twenty to seven that evening, Boeing workers were texting each other about putting the cabin interior back together. One message carried a photograph.
 
-It shows the plug, closed. Three of the four bolt positions are in view. In each of them you can see... nothing.
+It shows the plug, closed. Three of the four bolt positions are in view. In each of them you can see—nothing.
 
 No bolts. No washers. No nuts. No pins.
 
@@ -80,15 +80,15 @@ Boeing's corrective actions were accepted by its regulator, the F - A - A. For a
 
 The F - A - A had five inspectors on the seven thirty-seven program while this fuselage was in the factory. In the twelve months up to the build, its audits at Renton logged sixty-eight alleged problems. Not one of them mentioned the removal instruction.
 
-Then there were the people. Before twenty eighteen, the seven thirty-seven line built about fifty-two airplanes a month. After two fatal accidents involving the seven thirty-seven MAX, Boeing cut production, stopped hiring, and did not replace the people who left. The pandemic took more, particularly those eligible to retire.
+Then there were the people. Before twenty eighteen, the seven thirty-seven line built about fifty-two airplanes a month. After two fatal accidents involving the seven thirty-seven Max, Boeing cut production, stopped hiring, and did not replace the people who left. The pandemic took more, particularly those eligible to retire.
 
 At the low point, the line built fewer than ten a month. In twenty twenty-two, Boeing set out to return to its old rate, and it hired fast. Many of the new hires had never worked in manufacturing.
 
-The head of the seven thirty-seven program put it this way. Ten years ago, close to half the workforce had more than ten years' experience. Today... twenty-five or thirty percent.
+The head of the seven thirty-seven program put it this way. Ten years ago, close to half the workforce had more than ten years' experience. Today—twenty-five or thirty percent.
 
 Boeing did not assess what that loss of experience might do to quality. The N - T - S - B called it a missed opportunity.
 
-So the margin that ran out at Renton was not steel. It was a document no one wrote... and the experience that would have known to write it.
+So the margin that ran out at Renton was not steel. It was a document no one wrote—and the experience that would have known to write it.
 
 There is one more record a film like this has to read, and read carefully. In twenty eighteen, Boeing spent nine billion dollars buying back its own stock. That December, its board approved up to twenty billion more. In twenty nineteen it bought back two point seven billion. By the start of twenty twenty, the buybacks were suspended.
 
@@ -106,7 +106,7 @@ It left a record of the climb: parallel lines of dust, dirt and petroleum jelly 
 
 From the outside, the change at its lower edge was about half an inch. Too small, the N - T - S - B found, to catch on a walk-around.
 
-On the fifth of January, climbing out of Portland, the plug reached the top of its stops. The pins rode up off the pads. The upper fittings struck their rollers and split. The lower hinges twisted. And the plug left the airplane... up, out, and back.
+On the fifth of January, climbing out of Portland, the plug reached the top of its stops. The pins rode up off the pads. The upper fittings struck their rollers and split. The lower hinges twisted. And the plug left the airplane: up, out—and back.
 
 The N - T - S - B adopted its final report on the twenty-fourth of June, twenty twenty-five. Its probable cause names a manufacturer and a regulator.
 
@@ -114,7 +114,7 @@ Boeing's failure to provide adequate training, guidance, and oversight necessary
 
 Contributing: the F - A - A's ineffective compliance enforcement surveillance and audit planning activities.
 
-The day after the accident, the F - A - A grounded one hundred and seventy-one seven thirty-seven nines until their plugs were inspected. On the twenty-fourth of January, it told Boeing there would be no production expansion of the MAX. This won't be back to business as usual for Boeing, the administrator said.
+The day after the accident, the F - A - A grounded one hundred and seventy-one seven thirty-seven nines until their plugs were inspected. On the twenty-fourth of January, it told Boeing there would be no production expansion of the Max. This won't be back to business as usual for Boeing, the administrator said.
 
 In June twenty twenty-four, Boeing's head of quality told a media briefing that the company knew the move crew had closed the plug. The N - T - S - B said its interviews had identified no one, and cut Boeing off from its investigative information for releasing details without approval.
 

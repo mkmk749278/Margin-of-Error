@@ -187,6 +187,13 @@ kinetic accents (exhibit tag, readout, timeline bar) → atmosphere (grain, vign
 Glass cards, neon dashboards, glitch transitions, "hacker" green text, red-string conspiracy boards, stock footage of
 office workers or traders, AI imagery of real aircraft, trains, places or people, dramatic lens flares.
 
+### 6.5a Nothing floats on the void (owner, 2026-11-03)
+Every technical schematic, document crop, chart and reconstruction sits on a mount: an exhibit paper border (the
+`Exhibit` page) or a rendered desk plate, never alone on the bare void. The mount's source strip says what it is:
+`NTSB AIR-25-04 · FIG. 13` for a real NTSB figure; `RECONSTRUCTION · AFTER NTSB AIR-25-04 FIG. 18` for our redraws
+(never an NTSB docket label on something we drew); `BOEING 10-K 2019 · SEC EDGAR` for filings. A photoreal desk plate
+(Blender Cycles) is an option the owner raised; it needs Blender added to the pipeline (to decide in the scene phase).
+
 ### 6.6 Overlays on a document (measured 2026-11-02)
 When an exhibit fills the frame the page is near-white, and bare mono text over it disappears. **Every overlay that can
 sit over paper is on a card** (`card` + 1 px `border`): clocks, readouts, timeline bars, titles. While the camera is
@@ -223,7 +230,10 @@ rewrite.
 ### 7.5 TTS text for George (owner's spec §5)
 - **Voice:** ElevenLabs library voice **George**; model Multilingual v2 (Turbo v2.5 as the fallback); stability
   0.60–0.65, similarity 0.78–0.82, style exaggeration 0.00.
-- No bracketed emotion or sound tags. Pauses: commas (short), em-dashes (shifts), `...` (tense halts), a blank line
+- **No `...` (owner, 2026-11-03):** Multilingual v2 reads three dots as an emotional cue (vocal fry, a dramatic
+  whisper), not a pause; use an em-dash or a colon. `vo_lint.py` fails on `...`. Words said as words are written in
+  normal case ("Max", not "MAX") so the voice never spells them.
+- No bracketed emotion or sound tags. Pauses: commas (short), colons, em-dashes (shifts), a blank line
   between paragraphs (tail decay).
 - Numbers as words (`sixteen thousand feet`, `four point eight billion dollars`, `two hundred and fifty-three
   degrees`); acronyms pre-spaced with hyphens (`N - T - S - B`, `F - A - A`, `S - E - C`); words said as words
@@ -371,7 +381,10 @@ semantic-lock line ("at 'four bolts' the four empty holes light red").
   phone with `scripts/termux_fetch_to_drive.sh` (rclone remote `moe`).
 
 ## 12. Sound
-- Dialogue −14 LUFS integrated, −1 dBTP; music low, sparse and cold (drones, single piano notes, room tone), ducked
+- **Owner's mix standard (2026-11-03):** VO peaks at −2.0 to −3.0 dB true peak; an under-speech ambience or drone
+  bed at −28 to −32 dB, always present, so there is never digital silence between synthetic phrases; the master
+  normalised to −14 LUFS with linear (single static gain) normalisation, true peak no higher than −1 dBTP.
+- Music low, sparse and cold (drones, single piano notes, room tone), ducked
   under the voice; SFX from `sfx.ts` (ticks, paper, stamp, highlighter, synthesised alarm chimes, the grid's 60 Hz
   hum). Silence before a key exhibit line.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).

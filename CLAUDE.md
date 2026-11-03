@@ -92,7 +92,8 @@ the description. Be creative and smart, and stick to the rules.
 ## Narration (owner's spec §5; PLAYBOOK §7)
 - **Voice: ElevenLabs "George"** (library voice), Multilingual v2 (or Turbo v2.5): stability 0.60–0.65, similarity
   0.78–0.82, style 0.00. Never synthesise a real person's voice.
-- No bracketed tags (`[sigh]`, `[pause]`). Pauses from commas, em-dashes, `...` and double paragraph breaks.
+- No bracketed tags (`[sigh]`, `[pause]`). Pauses from commas, colons, em-dashes and double paragraph breaks. **No `...`**
+  (owner, 2026-11-03: the voice reads it as vocal fry or a whisper); write "Max", not "MAX".
 - **VO text:** numbers as words (`sixteen thousand feet`, `four point eight billion dollars`), acronyms pre-spaced
   with hyphens (`N - T - S - B`, `F - A - A`), no digits, symbols or brackets. `scripts/vo_lint.py` enforces it.
 - Zero fluff: no "In today's video", "Welcome back", "Imagine if", no hype words, no rhetorical outrage.

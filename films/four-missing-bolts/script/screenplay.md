@@ -26,7 +26,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 10 | 1:50 | Fuselage cutaway: the opening, an exit door ghosted in, then replaced by the plug. ILL (from NTSB Figs 2–3). | C70 | Why is there a plug at all? |
 | 11 | 2:05 | Plug isolated on the grid, weight readout 63 LB (28.6 kg). Two colour families appear: cyan (stops), amber (bolts). | C10 | What are the two restraints? |
 | 12 | 2:15 | 12 stop fittings light in pairs; macro of a stop pin against a pad. | C11 | How do stops work? |
-| 13 | 2:25 | Plug rises 0.5 in on a dimension line; pins slide off the pads; top swings out 15° on the hinges (strap limit). ILL, NOT TO SCALE on the rise. | C13 | So what stops it rising? |
+| 13 | 2:25 | Plug rises on a dimension line labelled `CRITICAL CLEARANCE THRESHOLD · 0.5 IN (DESIGN)`; pins slide off the pads; top swings out 15° on the hinges (strap limit). ILL, NOT TO SCALE on the rise. Values from `remotion/telemetry.ts`. | C13 | So what stops it rising? |
 | 14 | 2:40 | The four bolts fly in to their positions (2 upper guide track, 2 lower arrestor), each exploded: washers, castle nut, cotter pin. | C12 | Why four? |
 | 15 | 2:58 | **Signature 1.** Readout "UPWARD RETENTION" in cyan. Bolts removed one at a time: three gone, readout still holds (one lower bolt left). Reset; both lower gone, two upper left: holds. Source line: BOEING ENGINEERING REVIEW · NTSB p. 33. | C14 | How many were really needed? |
 | 16 | 3:18 | All four back, labelled "MARGIN: 4 WHERE 1 HOLDS". Hold 2 s. | C14 | — |
@@ -50,7 +50,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 30 | 6:10 | **RECON** of the plug open on a stand, a strap pulled up; quote card "just strapped it up there and let it hang." | C33 | Was anyone careful? |
 | 31 | 6:22 | Clock 19 SEP, shifts bar: DOOR TEAM (first shift) ends; second shift lit; plug icon closes. | C34 C80 | Who closed it? |
 | 32 | 6:38 | Phone-message frame drawn as a plain chat bubble (no real names, no real text): "interior restoration" (paraphrase card), 18:39. | C35 | What's in the photo? |
-| 33 | 6:48 | **Signature 2.** RECON of the photograph's view (redrawn from the report's description and geometry, not the Boeing photo): plug closed, three positions circled red, empty. Timeline bar: 108 DAYS TO GO. Silence 1.5 s before. | C35 C69 | — |
+| 33 | 6:48 | **Signature 2.** RECON of the photograph's view (redrawn from the report's description and geometry, not the Boeing photo), mounted on exhibit paper with the strip `RECONSTRUCTION · AFTER NTSB AIR-25-04 FIG. 18` (never on the bare void, §6.5a): plug closed, three positions circled red, empty. Timeline bar: 108 DAYS TO GO. Silence 1.5 s before. **Lock:** lands 5:45–6:15 after the row 8 promise (`checkOpenLoop`). | C35 C69 | — |
 | 34 | 7:05 | The four hardware types fade in and out at each position: bolt, washer, castle nut, cotter pin. | C35 C12 | — |
 | 35 | 7:12 | Security-camera icon with a 30-day counter running out before the timeline reaches January. | C36 C68 | Is there video? |
 | 36 | 7:25 | IP sign-off sheet, 20 SEP, final box stamped; caption "did not involve looking at the airplane." | C38 C37 | Didn't inspection catch it? |
@@ -63,7 +63,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 43 | 9:15 | Same chart; hire markers 2022; "NO PREVIOUS MANUFACTURING EXPERIENCE" tag. | C44 | — |
 | 44 | 9:28 | Experience bar: ~50% → 25–30% with the quote, attributed. | C45 | — |
 | 45 | 9:42 | Finding 20 exhibit, highlight "missed an opportunity". | C46 | — |
-| 46 | 9:52 | (v2 order: after the conclusion) Boeing 10-K 2019 exhibit: timeline 2018 $9.0B → DEC 2018 $20B authorized → 2019 $2.7B → SUSPENDED, in Warning Amber. | C56 C57 C83 | Where did the money go? |
+| 46 | 9:52 | (v2 order: after the conclusion) Boeing 10-K 2019 page on exhibit paper (`BOEING 10-K 2019 · SEC EDGAR`), then the timeline chart on the same paper mount: 2018 $9.0B → DEC 2018 $20B authorized → 2019 $2.7B → SUSPENDED, in Warning Amber. | C56 C57 C83 | Where did the money go? |
 | 47 | 10:05 | The NTSB report's search bar: "buyback" → 0 results (C84); then finding 27 highlighted in full. No side-by-side of the two records. | C47 C84 | Did the money cause it? |
 | 48 | 9:42 | (v2: moved before 46) The blank removal record alone on the desk; the experience bar dims beside it. | C29 C46 | — |
 
@@ -75,7 +75,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 51 | 10:58 | **Signature 3a.** Load readout: plug weight 63 LB, inertial g trace from a QAR-style band; dips to 0.40–0.45 g → effective 25 LB (amber). IV where the trace shape is drawn, values from the report. | C19 C20 | — |
 | 52 | 11:15 | **Signature 3b.** Cycle counter 1 → 154; the plug steps up in tiny increments; pins creep toward the pad edges. NOT TO SCALE on the rise. | C16 C22 | — |
 | 53 | 11:30 | Macro of the seal edge: parallel dark lines appear one by one. ILL. | C17 | — |
-| 54 | 11:40 | Exterior gap ruler: 0.079 → 0.315 → 0.630 in, beside a walk-around figure at ramp distance. | C21 | Why didn't anyone see it? |
+| 54 | 11:40 | Exterior gap ruler on the sister plug: 0.079 → 0.315 → 0.630 in, labelled `LOWER-EDGE GAP AT STOP-PIN INSTABILITY (EXEMPLAR RIGHT PLUG)`, kept visually separate from the 0.5 in design threshold; beside a walk-around figure at ramp distance. | C21 | Why didn't anyone see it? |
 | 55 | 11:52 | Separation sequence from the fracture evidence: pins off pads (red), upper fittings split on the rollers, lower hinges twist, plug exits up, out and aft. Wind noise; then silence. | C16 C76 | — |
 
 ## Act V · The Verdict (12:15–end, about 15:45)
@@ -96,7 +96,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 ## Checks
 - Every factual paragraph maps to a confirmed claim; paragraphs 9, 16, 19, 38, 48, 49, 65, 66 are framing with no
   new fact. Paragraph 48 is labelled as our reading in the narration ("Read together, they suggest").
-- The open loop says "in about six minutes" at ~1:25; the payoff (paragraph 33) is at ~7:00 of voice.
+- The open loop says "in about six minutes" at ~1:25; the payoff (paragraph 33) must land 5:45–6:15 after that line (owner, 2026-11-03), checked in code from `vo/timing.json`. On the script estimate it is ~5:35 after, so the edit holds ~10–40 s before the reveal if the recording runs short.
   **Re-check against the recorded timing.**
 - No real person is named. No Boeing-owned photograph is used (owner, 2026-11-02): paragraph 33 is a labelled
   reconstruction.
