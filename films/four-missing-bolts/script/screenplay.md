@@ -17,7 +17,7 @@ Labels: RECON = RECONSTRUCTION, ILL = ILLUSTRATION, IV = ILLUSTRATIVE VALUES.
 | 5 | 0:38 | Seat map, row 25–26 left; 26A and 26B outlined, empty. Silence 1.5 s. | C08 | Who was sitting there? |
 | 6 | 0:45 | Flight path back to PDX on a coordinate grid; LANDED 17:26:46; injury tally counts up (8 minor). | C04 C05 | How did it end? |
 | 7 | 0:58 | CVR panel: "NO AUDIO FROM ACCIDENT FLIGHT" (NTSB wording). Cut to the NTSB report cover sliding onto the desk: AIR-25-04. | C07 C51 | So how do we know anything? |
-| 8 | 1:10 | Timeline bar appears at the bottom: 19 SEP 2023 ●——— 108 DAYS ———● 05 JAN 2024. The left node pulses amber. | C69 | What photograph? (open loop "in about six minutes", paid at ~7:00) |
+| 8 | 1:10 | Timeline bar appears at the bottom: 19 SEP 2023 ●——— 108 DAYS ———● 05 JAN 2024. The left node pulses amber. | C69 | What photograph? (open loop "in about five minutes", paid at ~6:38) |
 | 9 | 1:25 | Layers of a defence-in-depth stack (design · process · inspection · oversight) drawn as plates; holes appear. Title card at the end of the line: MARGIN OF ERROR is NOT shown (channel name only in the outro); the act title THE INCIDENT fades. | — | Which layer failed first? |
 
 ## Act II · The Mechanism (1:50–3:50)

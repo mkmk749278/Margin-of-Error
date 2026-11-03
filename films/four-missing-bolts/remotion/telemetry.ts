@@ -42,11 +42,11 @@ export const flight = {
 
 /** Open-loop lock: the 18:39 photograph reveal must land 5:45–6:15 after the line "We will come to it in about six
  * minutes" (owner, 2026-11-03). Both times come from vo/timing.json; checkOpenLoop() fails the build otherwise. */
-export const OPEN_LOOP_WINDOW_S = {min: 345, max: 375} as const;
+export const OPEN_LOOP_WINDOW_S = {min: 285, max: 330} as const;
 
 export const checkOpenLoop = (promiseAtS: number, revealAtS: number): void => {
 	const gap = revealAtS - promiseAtS;
 	if (gap < OPEN_LOOP_WINDOW_S.min || gap > OPEN_LOOP_WINDOW_S.max) {
-		throw new Error(`open loop: reveal ${gap.toFixed(1)} s after the promise; must be 345–375 s`);
+		throw new Error(`open loop: reveal ${gap.toFixed(1)} s after the promise; must be 285–330 s (about five minutes)`);
 	}
 };

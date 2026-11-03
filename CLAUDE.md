@@ -133,9 +133,15 @@ the description. Be creative and smart, and stick to the rules.
   `@keyframes`, no `Math.random`, no `Date.now`, no network at render time, no external URLs.
 - Strict TypeScript, no `any`. Fonts vendored in `public/fonts/` via `loadBrandFonts()`. Scenes are `<Sequence>`s on
   frames from `vo/timing.json`. Every visual event exposes an SFX cue (`lib/remotion/sfx.ts`).
-- **Sync (§10.3):** a diagram, list or form builds part by part, each part on its own word; a highlight starts ~15
-  frames before its word so it completes on it; a readout and the trace beside it share one driver. Word times
-  inside a sentence are estimates: listen at the signature cues (§10.4).
+- **Word-level kinetic choreography (§10.6, owner 2026-11-03):** a sentence is never one visual block. Every critical
+  noun, verb, number, direction and pause changes the picture within 30–100 ms of its syllable: numbers roll and land
+  as said, parts light or bracket-lock on their own word, verbs move on the verb, "behind the wing" moves the camera
+  there. The eye is led to each target; an element on screen keeps changing word by word. A highlight starts ~15
+  frames early so it completes on its word; a readout and its trace share one driver. Word times are **measured**
+  (`scripts/word_align.py`, §10.4). Every scripted or coded block gets a choreography table (§10.6) in
+  `scenes/choreography/`; `scripts/sync_audit.py` gates it: no uncued stretch over 1.5 s, no uncued number.
+- **No dead air (owner, 2026-11-03):** holds ≤ 0.8 s except act turns and signature beats; music continuous, a dip
+  never a dropout (§12). To change a locked spoken word, regenerate that one sentence and cut it in at its pauses (§10.4).
 - In the session, pass `--browser-executable` (PLAYBOOK §10.5): Remotion's own browser download is blocked here.
 - Loop: `npx tsc --noEmit` → stills at key frames → look at every image → fix → render.
 - **Full renders run on GitHub's runners** (`remotion-render.yml`), never in the session.

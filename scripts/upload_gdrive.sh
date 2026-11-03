@@ -27,7 +27,9 @@ if [[ ${1:-} == --sub ]]; then SUB=$2; shift 2; fi
 RCLONE="$CACHE/rclone-$RCLONE_VER-linux-amd64/rclone"
 if [[ ! -x $RCLONE ]]; then
   mkdir -p "$CACHE"
-  curl -sSL -m 300 -o "$CACHE/rclone.zip" "https://downloads.rclone.org/$RCLONE_VER/rclone-$RCLONE_VER-linux-amd64.zip"
+  # the same pinned release from two hosts; downloads.rclone.org is blocked in cloud sessions
+  curl -fsSL -m 300 -o "$CACHE/rclone.zip" "https://downloads.rclone.org/$RCLONE_VER/rclone-$RCLONE_VER-linux-amd64.zip" \
+    || curl -fsSL -m 300 -o "$CACHE/rclone.zip" "https://github.com/rclone/rclone/releases/download/$RCLONE_VER/rclone-$RCLONE_VER-linux-amd64.zip"
   (cd "$CACHE" && unzip -q -o rclone.zip && rm rclone.zip)
 fi
 
