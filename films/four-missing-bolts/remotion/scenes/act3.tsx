@@ -541,7 +541,7 @@ const Bpi: React.FC = () => {
 	return (
 		<>
 			<ReportPage page={76} start={sf(100) - 8} end={sf(104) + 6} hl={[{key: 'bpi_50', at: wf(100, 'fifty') - 20}, {key: 'bpi_exceptions', at: wf(101, 'exceptions') - 30}, {key: 'bpi_11', at: wf(102, 'eleven') - 16}]} label="EXHIBIT 07" title="BPI “PERFORM PART OR ASSEMBLY REMOVAL”" pushTo={wf(101, 'exceptions')} pad={[120, 260]} />
-			<div style={{position: 'absolute', left: 40, top: 640, width: 420, fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`, padding: '18px 22px', opacity: envelope(f, sf(102) - 6, sf(104) + 6, 12, 12)}}>
+			<div style={{position: 'absolute', left: 1460, top: 800, width: 400, fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`, padding: '18px 22px', opacity: envelope(f, sf(102) - 6, sf(104) + 6, 12, 12)}}>
 				<div style={{fontSize: 14, letterSpacing: 2.4, color: colors.muted}}>REVISIONS 2013–2023</div>
 				<div style={{fontSize: 44, fontWeight: 700, color: colors.amber}}>{Math.round(tween(f, sf(102), sf(102) + 50, 0, 11))}</div>
 				<div style={{fontSize: 14, letterSpacing: 2.4, color: colors.muted, marginTop: 10, opacity: tween(f, sf(103), sf(103) + 10, 0, 1)}}>COMPLIANCE ISSUES 2018–2023</div>
