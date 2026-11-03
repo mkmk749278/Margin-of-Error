@@ -464,6 +464,17 @@ says otherwise. "Final report" films slot in when a report publishes.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Film 1 assets (2026-11-03).**
+- *The NTSB docket is the richest free source:* 102 items for DCA24MA063, listed in the docket page's own HTML
+  (`docBLOB?ID=…` links), including the **FDR tabular data as CSV**: real altitude, cabin pressure, warnings and GPS
+  for Act I, so readouts are records, not reconstructions.
+- *Public docket ≠ public domain.* Company material filed to the docket keeps its owner's rights: the Spirit
+  production video, the Alaska training video, Boeing presentations and the "MED Plug Enhancements" sheet
+  ("Copyright © Boeing"). NTSB reports also embed Boeing figures ("Reproduced with permission"). **Rule:** scan every
+  docket PDF for copyright/proprietary marks and classify each item in `media_manifest.csv` before use.
+- *NTSB Flickr albums are marked Public Domain Work* and give full-resolution originals (`/sizes/o/`).
+- *Sound without licences:* `scripts/sfx_synth.py` builds the foley bank and the under-speech bed from seeds.
+
 **Film 1 research (2026-11-02).**
 - *The handoff spec's case facts were wrong in four places* (16,000 ft vs 14,830; "4 pins" vs 4 bolts + 12 stops;
   Spirit vs Boeing opening the plug; an unsourced "piecework quota"). **Rule:** a brief is a lead list; the record
