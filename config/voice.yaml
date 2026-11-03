@@ -3,11 +3,10 @@
 # up by name, so no voice id is stored in this public repo. The API key lives only in the environment
 # (ELEVENLABS_API_KEY), never in git, chat or logs.
 voice_name: "1"
-model_id: eleven_multilingual_v2      # owner's spec §5 (Turbo v2.5 as the fallback)
+model_id: eleven_v4                   # owner, 2026-11-03: Eleven v4 replaces Multilingual v2 (spec §5's model)
 output_format: mp3_44100_192          # falls back to mp3_44100_128 if the plan does not allow 192 kbps
-voice_settings:                       # starting point from the spec; re-tuned after the first measured block
-  stability: 0.62
+voice_settings:                       # v4 takes stability and similarity only (no style, no speaker boost)
+  stability: 0.0                      # owner, 2026-11-03: "Creative" (the app's three steps: Creative 0.0,
+                                      # Natural 0.5, Robust 1.0)
   similarity_boost: 0.80
-  style: 0.0
-  use_speaker_boost: true
 block_max_chars: 2500

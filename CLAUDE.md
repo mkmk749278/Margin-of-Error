@@ -91,7 +91,7 @@ the description. Be creative and smart, and stick to the rules.
 
 ## Narration (owner's spec §5; PLAYBOOK §7)
 - **Voice: the channel's own ElevenLabs voice, named "1"** (owner, 2026-11-03: George dropped). Settings in
-  `config/voice.yaml` (Multilingual v2; start at stability 0.62, similarity 0.80, style 0.00). The session generates
+  `config/voice.yaml` (owner, 2026-11-03: **Eleven v4, stability Creative** (0.0), similarity 0.80). The session generates
   the narration itself with `scripts/tts_elevenlabs.py` (needs `ELEVENLABS_API_KEY` in the environment; never print
   it); first one block, measured, then the rest. Never synthesise a real person's voice.
 - No bracketed tags (`[sigh]`, `[pause]`). Pauses from commas, colons, em-dashes and double paragraph breaks. **No `...`**

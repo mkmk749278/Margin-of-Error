@@ -127,12 +127,24 @@ def main():
                 "next_text": blocks[i][:1000] if i < len(blocks) else None,
             }
             fmt = cfg["output_format"]
+
+            def tts(fmt):
+                try:
+                    return call("POST", f"/text-to-speech/{voice_id}?output_format={fmt}", key, body, "audio/mpeg")
+                except RuntimeError as e:  # a model that refuses previous_text/next_text: retry without them
+                    if "previous_text" not in str(e) and "next_text" not in str(e):
+                        raise
+                    body.pop("previous_text", None)
+                    body.pop("next_text", None)
+                    print(f"block {i}: model refused neighbouring text; generating without it")
+                    return call("POST", f"/text-to-speech/{voice_id}?output_format={fmt}", key, body, "audio/mpeg")
+
             try:
-                audio = call("POST", f"/text-to-speech/{voice_id}?output_format={fmt}", key, body, "audio/mpeg")
+                audio = tts(fmt)
             except RuntimeError as e:
                 if "output_format" in str(e) or "HTTP 403" in str(e) or "HTTP 422" in str(e):
                     fmt = "mp3_44100_128"
-                    audio = call("POST", f"/text-to-speech/{voice_id}?output_format={fmt}", key, body, "audio/mpeg")
+                    audio = tts(fmt)
                 else:
                     raise
             dest.write_bytes(audio)
