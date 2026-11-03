@@ -3,6 +3,7 @@ import {AbsoluteFill, Img, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {ease, envelope, settle, tween} from '../../../../lib/remotion/motion';
 import {ReportPage, RecordDoc} from '../docs';
+import {beat, BracketLock, DatePill, flash, LAND, lead, STAGGER, StatusFlip} from '../../../../lib/remotion/Kinetic';
 import {Camera, projectPoint} from '../engine3d';
 import {ActTitle, Caption, Fade, Label, media, mono, Mount, QuoteCard, sans, Stamp, useFilmFrame} from '../kit';
 import {anchor, BoltId, defaultState, PLUG, PlugState, PlugSvg} from '../PlugModel';
@@ -77,38 +78,109 @@ const E = {
 	accident: day(2024, 1, 5),
 };
 
-// ---------- the journey (C55, C23)
+// ---------- the journey (C55, C23): word-level choreography, scenes/choreography/journey.md (PLAYBOOK §10.6)
+const BOLT_LABEL: Record<BoltId, string> = {upperFwd: 'GUIDE TRACK · FWD', upperAft: 'GUIDE TRACK · AFT', lowerFwd: 'ARRESTOR · FWD', lowerAft: 'ARRESTOR · AFT'};
+const BOLT_ORDER: BoltId[] = ['upperFwd', 'upperAft', 'lowerFwd', 'lowerAft']; // Top-L, Top-R, Bottom-L, Bottom-R on screen
 const Journey: React.FC = () => {
 	const f = useFilmFrame();
+	const {fps} = useVideoConfig();
 	const a = sf(49) - 20;
 	const end = sf(51) + 10;
-	const head = interpolate(f, [a + 20, wf(49, 'march'), wf(50, 'wichita'), wf(50, 'place')], [0, E.made, E.made + 40, E.closed], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
-	const boltsOn = wf(50, 'four');
+	// the beats, on measured word starts (vo/timing.json, scripts/word_align.py)
+	const B = {
+		plug: wf(49, 'plug'),
+		made: wf(49, 'made'),
+		spirit: wf(49, 'spirit'),
+		malaysia: wf(49, 'malaysia'),
+		march: wf(49, 'march'),
+		y2023: wf(49, 'twenty-three'),
+		fitted: wf(50, 'fitted'),
+		fuselage: wf(50, 'fuselage'),
+		wichita: wf(50, 'wichita'),
+		kansas: wf(50, 'kansas'),
+		d28: wf(50, 'twenty-eighth'),
+		july: wf(50, 'july'),
+		closed: wf(50, 'closed'),
+		four: wf(50, 'four'),
+		bolts: wf(50, 'bolts'),
+		place: wf(50, 'place'),
+	};
+	const head = interpolate(f, [a + 20, B.march, B.wichita, B.d28, B.july], [0, E.made, E.made + 40, E.closed - 10, E.closed], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
+	// the plug: outline on "plug", carried in on "fitted", the fuselage frame on "fuselage", swung shut on "closed"
+	const carry = beat(f, B.fitted, 30);
+	const swing = interpolate(f, [B.closed - 4, B.closed + 22], [0.42, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.arrive});
+	const boltOn = (i: number) => B.four + i * STAGGER;
+	const bolts = Object.fromEntries(BOLT_ORDER.map((id, i) => [id, beat(f, boltOn(i), 10)])) as Record<BoltId, number>;
+	const state: PlugState = {
+		...defaultState,
+		swing,
+		bolts,
+		context: lead(f, B.fuselage, 18) * 0.9,
+		plugAlpha: 0.25 + 0.75 * lead(f, B.plug, 16),
+		boltGlow: f >= B.place ? 1 - beat(f, B.place + 20, 30) * 0.5 : 0.9,
+		stopGlow: 0.15,
+	};
+	const c = cam(0.2 + 0.12 * (1 - carry), 0.08, 150 + 40 * (1 - carry), 1420 + 120 * (1 - carry), 420);
+	const rx = 1044;
+	const ry = 84;
+	const card = (on: number): React.CSSProperties => ({opacity: tween(f, on - 10, on + 6, 0, 1), transform: `translateY(${(1 - beat(f, on - 10, 16)) * 14}px)`});
+	const lit = (on: number, tone: string = colors.ink): React.CSSProperties => ({color: f >= on ? tone : colors.sub, textShadow: `0 0 ${(18 * flash(f, on, 0)).toFixed(1)}px ${tone}`});
+	const secured = f >= B.place + LAND;
 	return (
 		<>
-			<div style={{position: 'absolute', left: 200, top: 240, fontFamily: mono, color: colors.ink, opacity: envelope(f, a + 10, end, 16, 16)}}>
-				<div style={{fontSize: 14, letterSpacing: 3, color: colors.muted}}>LEFT MID EXIT DOOR PLUG · N704AL</div>
-				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 84, letterSpacing: 5, marginTop: 14, transform: `scale(${tween(f, a, end, 1, 1.05)})`, transformOrigin: '0 50%'}}>THE LIFE OF A PART</div>
-				<div style={{display: 'flex', gap: 60, marginTop: 50}}>
-					<div style={{opacity: tween(f, wf(49, 'malaysia') - 10, wf(49, 'malaysia') + 10, 0, 1)}}>
-						<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>MADE</div>
-						<div style={{fontSize: 34, fontWeight: 700, marginTop: 6}}>24 MAR 2023</div>
-						<div style={{fontSize: 18, letterSpacing: 2, color: colors.sub, marginTop: 4}}>SPIRIT AEROSYSTEMS · MALAYSIA</div>
-					</div>
-					<div style={{opacity: tween(f, wf(50, 'wichita') - 10, wf(50, 'wichita') + 10, 0, 1)}}>
-						<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>FINAL CLOSURE</div>
-						<div style={{fontSize: 34, fontWeight: 700, marginTop: 6}}>28 JUL 2023</div>
-						<div style={{fontSize: 18, letterSpacing: 2, color: colors.sub, marginTop: 4}}>SPIRIT AEROSYSTEMS · WICHITA, KANSAS</div>
-						<div style={{display: 'flex', gap: 8, marginTop: 16}}>
-							{[0, 1, 2, 3].map((i) => (
-								<div key={i} style={{width: 60, height: 16, background: f >= boltsOn + i * 8 ? colors.amber : 'transparent', border: `1px solid ${colors.amber}`}} />
-							))}
-							<span style={{fontSize: 16, letterSpacing: 2, color: colors.amber, marginLeft: 8, opacity: tween(f, boltsOn + 30, boltsOn + 44, 0, 1)}}>4 OF 4 BOLTS</span>
+			<div style={{position: 'absolute', left: 120, top: 96, width: 880, fontFamily: mono, color: colors.ink, opacity: envelope(f, a + 10, end, 16, 16)}}>
+				<div style={{fontSize: 22, letterSpacing: 3, color: colors.sub}}>LEFT MID EXIT DOOR PLUG · N704AL</div>
+				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, letterSpacing: 5, marginTop: 6, ...lit(B.plug)}}>THE LIFE OF A PART</div>
+				{/* sentence 49: made · by Spirit · in Malaysia · in March 2023 */}
+				<div style={{marginTop: 26, padding: '18px 24px', background: colors.card, border: `1px solid ${f >= B.made ? colors.cyan : colors.border}`, ...card(B.made)}}>
+					<div style={{fontSize: 26, letterSpacing: 3, ...lit(B.made, colors.cyan)}}>MADE</div>
+					<div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginTop: 10}}>
+						<div>
+							<div style={{fontSize: 30, fontWeight: 700, ...lit(B.spirit)}}>SPIRIT AEROSYSTEMS</div>
+							<div style={{fontSize: 30, fontWeight: 700, marginTop: 4, opacity: tween(f, B.malaysia - 8, B.malaysia + 4, 0, 1), ...lit(B.malaysia, colors.cyan)}}>MALAYSIA</div>
 						</div>
+						<DatePill f={f} fps={fps} day={24} fromDay={24} month={3} year={2023} dayWord={B.march} monthWord={B.march} yearWord={B.y2023} fromYear={2020} />
 					</div>
 				</div>
-				<div style={{fontSize: 13, letterSpacing: 2.4, color: colors.muted, marginTop: 40}}>NTSB AIR-25-04 · MANUFACTURING RECORDS</div>
+				{/* sentence 50: fitted · fuselage · Wichita, Kansas · 28th of July · closed · all four bolts · in place */}
+				<div style={{marginTop: 20, padding: '18px 24px', background: colors.card, border: `1px solid ${secured ? colors.amber : f >= B.fitted ? colors.cyan : colors.border}`, ...card(B.fitted)}}>
+					<div style={{fontSize: 26, letterSpacing: 3, ...lit(B.fitted, colors.cyan)}}>FITTED TO THE FUSELAGE · FINAL CLOSURE</div>
+					<div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 10}}>
+						<div style={{fontSize: 30, fontWeight: 700}}>
+							<span style={{opacity: tween(f, B.wichita - 8, B.wichita + 4, 0, 1), ...lit(B.wichita)}}>WICHITA, </span>
+							<span style={{opacity: tween(f, B.kansas - 8, B.kansas + 4, 0, 1), ...lit(B.kansas)}}>KANSAS</span>
+						</div>
+						<DatePill f={f} fps={fps} day={28} fromDay={1} month={7} year={2023} dayWord={B.d28} monthWord={B.july} />
+					</div>
+					<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px 18px', marginTop: 18}}>
+						{BOLT_ORDER.map((id, i) => (
+							<div key={id} style={{display: 'flex', alignItems: 'center', gap: 12, opacity: tween(f, boltOn(i) - 10, boltOn(i) + 2, 0.25, 1)}}>
+								<StatusFlip f={f} fps={fps} word={B.place + i * 4} from="OPEN" to="IN" toneFrom="cyan" toneTo="amber" size={26} style={{minWidth: 92, textAlign: 'center'}} />
+								<span style={{fontSize: 26, letterSpacing: 1, ...lit(boltOn(i), colors.amber)}}>{BOLT_LABEL[id]}</span>
+							</div>
+						))}
+					</div>
+					<div style={{marginTop: 18}}>
+						<StatusFlip f={f} fps={fps} word={B.place + 14} from={`BOLTS ${Math.min(4, Math.max(0, Math.floor((f - B.four) / STAGGER) + 1))}/4`} to="SECURED · 4/4" toneFrom="cyan" toneTo="amber" size={30} />
+					</div>
+				</div>
 			</div>
+			<Mount x={rx} y={ry} w={790} h={680} source="ILLUSTRATION · AFTER NTSB AIR-25-04 FIGS 3–6" start={a} end={end} labels={['ILLUSTRATION']}>
+				<div style={{position: 'absolute', left: -rx, top: -ry, width: 1920, height: 1080}}>
+					<PlugSvg
+						cam={c}
+						state={state}
+						extra={
+							<>
+								{BOLT_ORDER.map((id, i) => {
+									const p = anchor(state, c, id);
+									return <BracketLock key={id} f={f} fps={fps} word={boltOn(i)} x={p.x - 30} y={p.y - 30} w={60} h={60} tone={f >= B.place ? 'amber' : 'cyan'} />;
+								})}
+							</>
+						}
+					/>
+				</div>
+			</Mount>
 			<LifeLine start={a} end={end} head={head} events={[
 				{d: E.made, label: 'MADE · MALAYSIA', tone: 'cyan', on: wf(49, 'malaysia')},
 				{d: E.closed, label: 'CLOSED · 4 BOLTS · WICHITA', tone: 'amber', on: wf(50, 'place')},

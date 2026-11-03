@@ -467,11 +467,21 @@ semantic-lock line ("at 'four bolts' the four empty holes light red").
 - **Plan the next move after every landing** (§6.4 dead zones).
 
 ### 10.4 VO timing
-`scripts/vo_timing.py` (silence-to-script alignment + word spreader) writes `vo/timing.json`. No speech recognition.
-Sentence boundaries snap to real pauses; **word times inside a sentence are spread by spoken length, so they are
-estimates.** For the signature cues (the highlighted figure, the threshold crossing), listen to the take at that
-second and nudge the cue with an offset if the word lands elsewhere. An outside reviewer's "late" note is checked
-this way before anything moves.
+`scripts/vo_timing.py` (silence-to-script alignment) places every sentence on the takes' real pauses;
+`scripts/film_timing.py` lays in the edit holds; then **`scripts/word_align.py` measures every word** (CTC forced
+alignment of the locked script on `assets/vo/film_vo.wav`, torchaudio 2.8.0 `MMS_FA`, CPU, about 2 minutes a film) and
+writes the measured start/end into `vo/timing.json` (`words_source` says so). Always run the three in that order;
+`film_timing.py` alone puts the estimates back. Still no transcription: the script is the truth.
+*Why (2026-11-03):* the old word spreader was off by a median 65 ms and up to a second; word-level sync (§10.6) needs
+the syllable, not an estimate. `vo/word_align.md` lists low-score words: spoken numbers score low but sit between
+high-score neighbours, so their times hold; check one by ear only if a neighbour is low too.
+- **Changing a spoken word after the takes are locked** (a promise that names a time, a corrected figure): regenerate
+  that **one sentence** with the same voice and settings, sending the sentences either side as `previous_text` /
+  `next_text`; generate 3–4 takes and keep the one closest in pitch, range and pace to the line it replaces (measured);
+  match its loudness; cut it in **at the silences either side** (the take's own pauses stay, a few-ms fade, no click).
+  Never splice a single word into a phrase: the voice changes mid-phrase and the join is heard.
+  *Why:* the "about six minutes" promise became "about five minutes" when the dead air was cut (§12); pauses either
+  side were kept to within 10 ms of the original.
 
 ### 10.5 Rendering
 - **720p review cuts first** (`scale` `2/3`, written as a fraction), **4K master** (`scale` 2) only after approval.
@@ -481,6 +491,46 @@ this way before anything moves.
   `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --gl=swangle`;
   `scripts/render_shards.mjs` picks that shell up by itself (override with `REMOTION_BROWSER`).
 - Measured 2026-11-02 (session VM): `EngineCheck` (desk, exhibit, readouts) at 720p60: 393 ms a frame.
+
+### 10.6 Word-level kinetic choreography (owner's directive, 2026-11-03)
+**A sentence is never one visual block.** A ten-word sentence never maps to one card, one passive graphic or a
+4-second hold. Every critical noun, verb, metric, direction and pause changes something on screen within 30–100 ms of
+its syllable (2–6 frames at 60 fps) on **measured** word times (§10.4).
+
+**The three laws.**
+1. **Word-to-action atomicity.** *Numbers:* the counter rolls and lands on the exact value as the narrator says it
+   (it never passes a value the narration contradicts, §6.4). *Nouns and parts:* the named part lights, stroke-draws
+   or bracket-locks on its own syllable, not before, not after. *Verbs* ("fell", "cleared", "slid", "split"): the
+   movement runs on the verb. *Prepositions of place* ("behind the wing", "on the left side", "through the hinges"):
+   the camera or the bounding box moves to that place as the words are said.
+2. **Eye-trace continuity.** The viewer never hunts for what is being said: each new trigger carries the eye to its
+   spot (a colour flash, a cyan bracket, a push). The desk stays dark (`void`); the active word's target takes the
+   light (cyan nominal, amber thresholds and money, red failure, `ink` white for the record itself).
+3. **Continuous state mutation (no dead space).** An element that stays through a multi-clause sentence keeps
+   changing on its words: outline → first part lit → dimension line → callout locks.
+
+**Timing.** A stroke or highlight starts about 15 frames (0.25 s) before its word, so it *completes* on the word
+(§10.3); a snap, flip or lock lands **on** the word's measured start (+2 frames). Staggered parts step every
+12 frames (0.2 s). A scale bump on a lock: 1.00 → 1.08 → 1.00 on a stiff spring (damping 12, stiffness 220).
+Colour stays meaning (§6.1), labels stay legible (§6.7), honesty labels stay.
+
+**Deliverable: the choreography table.** Every narration block that is scripted, revised or coded gets one, in
+`films/<slug>/scenes/choreography/<scene>.md`, written from the code (one source: the beats in the scene file) and
+times from `vo/timing.json`. **Frames are the film's 60 fps** (CLAUDE.md pins 60; the directive's own example was at 30):
+
+| Spoken trigger word(s) | Frame offset (60 fps) | On-screen state mutation | Eye-trace and kinetic target | Remotion implementation |
+| :--- | :--- | :--- | :--- | :--- |
+| `twenty-eighth of July` | `F14455–F14520` (`+0.28 s`) | date pill rolls day 24 → 28, month snaps JUL | amber pill under FINAL CLOSURE | `DatePill`, `rollTo()` clamped to the word |
+
+After the table, the scene code that implements it, beats on `wf()` frames (`lib/remotion/Kinetic.tsx`: `beat`,
+`lead`, `bump`, `BracketLock`, `StatusFlip`, `DatePill`, `rollTo`).
+
+**The gate.** `python3 scripts/sync_audit.py films/<slug> --md films/<slug>/review/sync_audit.md` resolves every
+`wf()`/`wef()` cue to its measured word and lists, per sentence, the longest stretch of speech with no word-locked
+event and every spoken number no cue lands on. **Target: no stretch over 1.5 s, no uncued number.** Write literal
+sentence ids in `wf(50, 'four')` so the audit sees them.
+*Why:* the first cut of Film 1 had 69 word cues on 2,097 words; 162 of 177 sentences had an uncued stretch over
+1.5 s (the longest 11 s), and viewers read the picture as a slideshow behind the voice.
 
 ## 11. Assets
 - **Code first:** schematics, mechanisms, telemetry and reconstructions are written, not downloaded.
@@ -502,7 +552,17 @@ this way before anything moves.
   normalised to −14 LUFS with linear (single static gain) normalisation, true peak no higher than −1 dBTP.
 - Music low, sparse and cold (drones, single piano notes, room tone), ducked
   under the voice; SFX from `sfx.ts` (ticks, paper, stamp, highlighter, synthesised alarm chimes, the grid's 60 Hz
-  hum). Silence before a key exhibit line.
+  hum). A **dip** before a key exhibit line, never a dropout: music runs continuously from the first seconds to the
+  end (slots overlap and crossfade; a "silence" is a low drone under the room tone).
+- **No dead air (owner, 2026-11-03: "so many audio gaps, it feels like the video stopped").** Edit holds
+  (`script/holds.json`) are 0.8 s at most; only act turns and the two or three signature beats get 1.5–3 s, and
+  something visibly moves through every one (§6.4). The word-level picture (§10.6) does the work holds used to do.
+  *Why:* 55 holds of 2–4 s (124 s) plus music-out stretches of 25 and 50 s made 26% of Film 1's runtime silence
+  between sentences; cut to 54 s of holds, the film went from 16:15 to 15:05 and plays as one continuous piece.
+- **The mix follows the picture's timeline.** After any timing or cue change: export the cues
+  (`npx esbuild films/<slug>/remotion/cues_export.ts --bundle --platform=node --format=esm --loader:.json=json --outfile=/tmp/cues.mjs && node /tmp/cues.mjs > films/<slug>/sound/cues.json`),
+  move the music slots in `sound/mix.json` to the new seconds, run `scripts/mix_film.py`, and put `assets/mix/mix.wav`
+  in Drive `<slug>/mix/` (keep the previous one beside it, renamed) before a render.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
 - Never use a real alarm or cockpit recording that isn't released and licensed; synthesised tones are labelled in
   the manifest as synthesised.
@@ -661,6 +721,16 @@ strongest idea that could replace it, inside the hard lines.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**Word-level choreography and dead air (owner, 2026-11-03).**
+- *Sentence-level matching read as a slideshow.* 69 word cues on 2,097 words. **Rule:** §10.6, the three laws, the
+  choreography table, `scripts/sync_audit.py`.
+- *Estimated word times can't carry a 30–100 ms sync.* **Rule:** §10.4, measure words with `scripts/word_align.py`.
+- *Holds and music dropouts felt like the video had stopped.* **Rule:** §12, no dead air; holds ≤ 0.8 s.
+- *The ElevenLabs music and effects lived only in the session that made them* and had to be regenerated (different
+  music). **Rule:** every generated asset goes to Drive `<slug>/assets/el/` the moment it is made.
+- *rclone's own download host is blocked, but its GitHub release is not:* `scripts/gdrive_pull.sh` and
+  `upload_gdrive.sh` fetch the pinned binary from `github.com/rclone/rclone/releases` when the first host fails.
 
 **Outside visual review of the review cut, and the audience research (2026-11-03).**
 - *An outside review is leads, not orders.* Of its twelve points, five were true as stated, five were real problems

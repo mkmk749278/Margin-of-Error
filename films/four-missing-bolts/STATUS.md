@@ -18,6 +18,23 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
   `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
+## Round 3 (2026-11-03, in progress): dead air cut, word-level choreography begun
+Owner's notes: "so many audio gaps, it feels like the video stopped"; the word-level kinetic choreography directive
+(PLAYBOOK §10.6); "regenerate the minute number only, nothing that feels stitched".
+- **Word times measured** (`scripts/word_align.py`, CTC forced alignment): the old estimates were off by a median
+  65 ms, up to 1 s.
+- **Dead air cut:** holds 124 s → 54 s (0.8 s cap; act turns and signature beats 1.5–3 s). Film **15:05** (was 16:15).
+  Music continuous from 0:04 (regenerated: the earlier ElevenLabs files had never reached Drive; now in Drive
+  `assets/el/`). Mix −14.0 LUFS, −1.4 dBTP; no stretch under −34 dB longer than 1.2 s. Previous mix kept as
+  `mix/mix_round2b.wav`.
+- **Promise line:** "about six minutes" → "about five minutes" (the reveal now lands 5:17 later). One sentence
+  regenerated (best of 4 takes by pitch and pace), cut in at its own pauses: pauses either side within 10 ms of the
+  original, no click. Take `vo/four-missing-bolts_vo_b01_v2.mp3` in Drive (the original kept).
+- **Word-level choreography:** kit `lib/remotion/Kinetic.tsx`; the journey (sentences 49–50) rebuilt beat by beat
+  (`scenes/choreography/journey.md`); the 154-flight counter now lands on "fifty-four". Audit
+  (`review/sync_audit.md`): 161 of 177 sentences still have an uncued stretch over 1.5 s. **Next: act by act,
+  Act I first.**
+
 ## Delivered to the owner (2026-11-03), round 2
 Round-2 cut (owner's PDF notes, audio locked, plus a deep review): Drive `renders/four-missing-bolts_review_round2b_720p.mp4`.
 Motion audit: 0 still runs of 3 s or more (was 76). Loudness −14.0 LUFS, −1.3 dBTP. Waiting for the owner's notes.

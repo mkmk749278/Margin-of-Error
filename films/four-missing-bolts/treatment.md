@@ -97,7 +97,7 @@ Room tone and a 60 Hz hum, paper and stamp foley, quartz ticks on the clock, one
 
 ## Owner calibration (2026-11-03), applied
 - Narration: no `...` (dashes or colons instead), "Max" in normal case; recording blocks regenerated (`vo/vo_blocks.md`).
-- Open loop locked: the 18:39 reveal lands 5:45–6:15 after "in about six minutes" (`remotion/telemetry.ts`,
+- Open loop locked: the 18:39 reveal lands 4:45–5:30 after "in about five minutes" (owner, 2026-11-03: dead air cut, the line re-voiced) (`remotion/telemetry.ts`,
   `checkOpenLoop`).
 - Clearances never swapped: 0.5 in = CRITICAL CLEARANCE THRESHOLD (design, stop pins clear the pads); 0.630 in = the
   measured lower-edge gap at stop-pin instability on the exemplar right plug. The record has no "total translation at

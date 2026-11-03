@@ -6,8 +6,9 @@ import {Camera} from '../engine3d';
 import {ActTitle, Caption, media, mono, Mount, Photo, useFilmFrame} from '../kit';
 import {anchor, BoltId, CLEAR_TRUE_IN, defaultState, LIFT_EXAG, PlugState, PlugSvg} from '../PlugModel';
 import {clearance, flight, plugLoads} from '../telemetry';
-import {ef, sf, wf} from '../timing';
+import {ef, sf, wef, wf} from '../timing';
 import {SceneDef} from './types';
+import {bump, LAND, rollTo} from '../../../../lib/remotion/Kinetic';
 
 // ACT IV · THE CASCADE (rows 49–55). Every number from remotion/telemetry.ts (claims C10, C13, C16–C22, C76).
 // The clearance figures are never swapped: 0.5 in is the DESIGN clearance (C13); 0.079 / 0.315 / 0.630 in are
@@ -123,19 +124,25 @@ const Flight: React.FC = () => {
 const Creep: React.FC = () => {
 	const f = useFilmFrame();
 	const a = sf(140) - 10;
-	const c0 = wf(142, 'one') - 20;
-	const c1 = ef(142) + 100;
+	// word-level (PLAYBOOK §10.6): the count climbs under "rise a little" / "fractions of an inch", passes 100 on
+	// "one hundred" and lands on 154 on "fifty-four"; the last of the rise runs on "walked itself upward"
+	const c0 = sf(140) + 10;
+	const k100 = wf(142, 'hundred') + LAND;
+	const k154 = wf(142, 'fifty-four') + LAND;
+	const walk = wf(142, 'walked');
+	const up = wef(142, 'upward');
 	const end = sf(143) + 6;
 	const cam = camOf(f, [
 		{f: a, yaw: 0.75, pitch: 0.16, dist: 135},
-		{f: c1, yaw: 1.0, pitch: 0.14, dist: 118, ty: 40},
-		{f: end, yaw: 1.02, pitch: 0.14, dist: 116, ty: 40},
+		{f: up, yaw: 1.0, pitch: 0.14, dist: 118, ty: 40},
+		{f: Math.max(up + 1, end), yaw: 1.02, pitch: 0.14, dist: 116, ty: 40},
 	]);
-	const cyc = Math.round(tween(f, c0, c1, 0, flight.cycles.value, ease.camera));
-	// staircase: lift grows in steps (one per ~8 cycles shown), up to just short of the design clearance
-	const steps = Math.floor(cyc / 8);
+	const cyc = Math.round(rollTo(f, [{frame: c0, value: 0}, {frame: k100, value: 100}, {frame: k154, value: flight.cycles.value}]));
+	// staircase: lift grows in steps with the count (one per ~8 cycles shown) to 85%, then the walk to just short
+	// of the design clearance on "walked itself upward"
 	const top = CLEAR_TRUE_IN * LIFT_EXAG * 0.94;
-	const lift = (steps / Math.floor(flight.cycles.value / 8)) * top;
+	const steps = Math.floor(cyc / 8) / Math.floor(flight.cycles.value / 8);
+	const lift = top * (0.85 * steps + 0.15 * tween(f, walk, up, 0, 1, ease.camera));
 	const state: PlugState = {...defaultState, bolts: none, stopGlow: 0.9, lift};
 	const pin = anchor(state, cam, 'stopTopFwd');
 	const pad = anchor(state, cam, 'padTopFwd');
@@ -151,7 +158,7 @@ const Creep: React.FC = () => {
 					</g>
 				}
 			/>
-			<Panel start={a + 10} end={end} title="FLIGHT CYCLES SINCE DELIVERY" value={`${cyc}`} sub="NTSB: 154 CYCLES · 510 HOURS" tone="ink" y={150} big={64} />
+			<Panel start={a + 10} end={end} title="FLIGHT CYCLES SINCE DELIVERY" value={`${cyc}`} sub="NTSB: 154 CYCLES · 510 HOURS" tone={f >= k154 ? 'amber' : 'ink'} y={150} big={Math.round(64 * bump(f, 60, k154))} />
 			<Panel start={c0} end={end} title="RISE TOWARD THE CLEARANCE THRESHOLD" value={`${Math.round((lift / (CLEAR_TRUE_IN * LIFT_EXAG)) * 100)}%`} sub={`ILLUSTRATIVE VALUES · ${clearance.stopPadClearance.label}`} tone={lift > top * 0.8 ? 'amber' : 'cyan'} y={360} />
 			<Caption text="FRACTIONS OF AN INCH · EACH FLIGHT" start={sf(141)} end={end} x={150} y={900} tone="amber" />
 		</Stage>
@@ -270,7 +277,7 @@ const ActV: React.FC = () => <ActTitle n="V" title="The Verdict" start={sf(151) 
 export const act4: SceneDef[] = [
 	{id: 'ground', from: sf(131) - 20, to: sf(135) + 16, C: Ground, cues: [{frame: sf(133) + 20, sfx: 'quartz_tick', gainDb: -14}, {frame: sf(134) + 10, sfx: 'relay_click', gainDb: -12}]},
 	{id: 'flight', from: sf(135) - 20, to: sf(140) + 16, C: Flight, cues: [{frame: sf(136), sfx: 'transformer_hum', gainDb: -24}]},
-	{id: 'creep', from: sf(140) - 20, to: sf(143) + 16, C: Creep, cues: Array.from({length: 19}, (_, i) => ({frame: wf(142, 'one') - 20 + Math.round(((ef(142) + 120 - wf(142, 'one')) / 19) * i), sfx: 'quartz_tick' as const, gainDb: -18}))},
+	{id: 'creep', from: sf(140) - 20, to: sf(143) + 16, C: Creep, cues: Array.from({length: 19}, (_, i) => ({frame: sf(140) + 10 + Math.round(((wf(142, 'fifty-four') + 2 - sf(140) - 10) / 18) * i), sfx: 'quartz_tick' as const, gainDb: -18}))},
 	{id: 'seal', from: sf(143) - 20, to: sf(144) + 16, C: Seal, cues: [{frame: sf(143) + 20, sfx: 'pen_scratch', gainDb: -18}]},
 	{id: 'gap', from: sf(144) - 20, to: sf(146) + 16, C: Gap},
 	{id: 'separation', from: sf(146) - 20, to: ef(150) + 160, C: Separation, cues: [{frame: wf(147, 'pads'), sfx: 'relay_click', gainDb: -10}, {frame: wf(148, 'split') - 10, sfx: 'metal_snap_sub', gainDb: -6}, {frame: wf(149, 'twisted') - 10, sfx: 'metal_snap_sub', gainDb: -10}, {frame: wf(150, 'up'), sfx: 'pressure_drop', gainDb: -6}]},

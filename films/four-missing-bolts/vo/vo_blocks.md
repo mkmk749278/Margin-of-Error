@@ -20,7 +20,7 @@ Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
 
 There is no recording of what was said in the cockpit. The voice recorder kept running after landing, and recorded over the flight. So this investigation was not built on voices. It was built on paper.
 
-And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about six minutes.
+And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about five minutes.
 
 The question was never only why a door plug failed. It was why every layer built to stop it had failed first. Where did the margin of error run out?
 
@@ -157,7 +157,7 @@ Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
 
 There is no recording of what was said in the cockpit. The voice recorder kept running after landing, and recorded over the flight. So this investigation was not built on voices. It was built on paper.
 
-And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about six minutes.
+And the paper leads to a photograph, taken on a factory floor one hundred and eight days before that afternoon. It shows exactly what was missing. We will come to it in about five minutes.
 
 The question was never only why a door plug failed. It was why every layer built to stop it had failed first. Where did the margin of error run out?
 

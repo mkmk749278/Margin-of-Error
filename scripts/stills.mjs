@@ -15,10 +15,18 @@ fs.mkdirSync(out, {recursive: true});
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts'), webpackOverride: (c) => c});
 const browser = await openBrowser('chrome', {browserExecutable: exe, chromiumOptions: {gl: 'swangle'}});
 const composition = await selectComposition({serveUrl, id: comp, puppeteerInstance: browser});
+const failed = [];
 for (const fr of list.split(',').map(Number)) {
 	const file = path.join(out, `f${String(fr).padStart(6, '0')}.jpg`);
-	await renderStill({composition, serveUrl, frame: fr, output: file, scale, imageFormat: 'jpeg', jpegQuality: 85, puppeteerInstance: browser});
-	process.stdout.write(`${fr} `);
+	try {
+		await renderStill({composition, serveUrl, frame: fr, output: file, scale, imageFormat: 'jpeg', jpegQuality: 85, puppeteerInstance: browser});
+		process.stdout.write(`${fr} `);
+	} catch (e) {
+		// keep going: one broken scene must not hide the others (the list of failures is the point of a sweep)
+		failed.push(`${fr}: ${String(e?.message ?? e).split('\n')[0]}`);
+	}
 }
+if (failed.length) console.log(`\nFAILED ${failed.length}:\n${failed.join('\n')}`);
 await browser.close({silent: true});
 console.log('done');
+if (failed.length) process.exit(1);

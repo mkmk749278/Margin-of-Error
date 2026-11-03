@@ -1,5 +1,5 @@
 {
- "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK \u00a712). Times in film seconds (vo/timing.json). Music: ElevenLabs instrumental cues (sound/el_sound.json); effects: ElevenLabs + our seeded synth bank (scripts/sfx_synth.py). Silence before the 18:39 photograph (treatment) and under the probable cause.",
+ "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK §12). Times in film seconds (vo/timing.json). Music: ElevenLabs instrumental cues (sound/el_sound.json); effects: ElevenLabs + our seeded synth bank (scripts/sfx_synth.py). Silence before the 18:39 photograph (treatment) and under the probable cause. Owner, 2026-11-03: no dead air. Music runs continuously from 0:04 to the end (slots overlap and crossfade); the old music-out stretches (before the photograph, after the separation) are now a low drone. Holds are short (script/holds.json).",
  "target_lufs": -14.0,
  "max_tp": -1.0,
  "voice": {
@@ -17,57 +17,66 @@
  "music": [
   {
    "file": "assets/el/m1_incident.mp3",
-   "start": 22.0,
-   "end": 100.0,
-   "rms_db": -23,
-   "fade_in": 5,
+   "start": 4.0,
+   "end": 98.6,
+   "rms_db": -24,
+   "fade_in": 6,
    "fade_out": 5
   },
   {
    "file": "assets/el/m2_record.mp3",
-   "start": 96.0,
-   "end": 237.0,
+   "start": 95.2,
+   "end": 218.5,
    "rms_db": -23,
    "fade_in": 4,
    "fade_out": 5
   },
   {
    "file": "assets/el/m5_factory.mp3",
-   "start": 233.0,
-   "end": 425.0,
+   "start": 214.8,
+   "end": 400.0,
    "rms_db": -23,
    "fade_in": 4,
-   "fade_out": 6
+   "fade_out": 5
   },
   {
    "file": "assets/el/m6_system.mp3",
-   "start": 452.0,
-   "end": 641.0,
-   "rms_db": -23,
+   "start": 396.5,
+   "end": 590.0,
+   "rms_db": -24,
    "fade_in": 6,
    "fade_out": 5
   },
   {
    "file": "assets/el/m2_record.mp3",
-   "from": 140.0,
-   "start": 637.0,
-   "end": 681.0,
+   "from": 130.0,
+   "start": 586.0,
+   "end": 632.5,
    "rms_db": -24,
    "fade_in": 4,
    "fade_out": 4
   },
   {
    "file": "assets/el/m3_cascade.mp3",
-   "start": 680.0,
-   "end": 774.5,
+   "start": 631.8,
+   "end": 721.5,
    "rms_db": -22,
    "fade_in": 4,
-   "fade_out": 2.5
+   "fade_out": 3
+  },
+  {
+   "file": "assets/el/m1_incident.mp3",
+   "from": 40.0,
+   "start": 719.0,
+   "end": 767.0,
+   "rms_db": -27,
+   "fade_in": 2,
+   "fade_out": 5
   },
   {
    "file": "assets/el/m4_verdict.mp3",
-   "start": 825.0,
-   "end": 975.0,
+   "start": 763.0,
+   "end": 905.1,
    "rms_db": -23,
    "fade_in": 6,
    "fade_out": 4
@@ -91,7 +100,7 @@
  },
  "extra_cues": [
   {
-   "t": 773.0,
+   "t": 718.66,
    "sfx": "wind_roar",
    "gainDb": -9
   }
