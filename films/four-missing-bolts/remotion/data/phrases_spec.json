@@ -1,0 +1,19 @@
+{
+ "title_block": {"page": 1, "phrase": "In-Flight Separation of Left Mid Exit Door"},
+ "title_date": {"page": 1, "phrase": "June 24, 2025"},
+ "one_bolt": {"page": 47, "phrase": "an installation with only one vertical movement arrestor bolt (with both upper guide track bolts and the other vertical movement arrestor bolt missing) was capable of preventing upward movement of the MED plug"},
+ "removal_first": {"page": 62, "phrase": "“If removal needed, a removal needs to [be] written first.”"},
+ "opened_by": {"page": 62, "phrase": "the “door is being opened by mechanic.”"},
+ "move_crew": {"page": 66, "phrase": "“we believe the move crew; we know the move crew closed the plug.”"},
+ "no_tolerate": {"page": 66, "phrase": "we would no longer provide Boeing access to the investigative information"},
+ "no_looking": {"page": 67, "phrase": "her signoff did not involve looking at the airplane"},
+ "gm_quote": {"page": 71, "phrase": "“…10 years ago, we were closer to 50% of employees with more than 10 years’ [experience]. Today, I would say we are at 25 or 30%...,"},
+ "bpi_11": {"page": 76, "phrase": "Assembly Removal” 11 times"},
+ "bpi_50": {"page": 76, "phrase": "the BPI was more than 50 pages long"},
+ "bpi_exceptions": {"page": 76, "phrase": "It listed more exceptions about when the removal process was not needed than guidance"},
+ "finding20": {"page": 134, "phrase": "it missed an opportunity"},
+ "finding21": {"page": 134, "phrase": "corrective actions were ineffective to address the persistent deficiencies"},
+ "finding27": {"page": 135, "phrase": "an assessment of Boeing’s safety culture, including whether adverse pressure existed on the production line, could not be performed as part of this investigation"},
+ "pc_main": {"page": 136, "phrase": "Boeing Commercial Airplanes’ failure to provide adequate training, guidance, and oversight necessary to ensure that manufacturing personnel could consistently and correctly comply with its parts removal process"},
+ "pc_contrib": {"page": 136, "phrase": "Contributing to the accident was the Federal Aviation Administration’s ineffective compliance enforcement surveillance and audit planning activities"}
+}

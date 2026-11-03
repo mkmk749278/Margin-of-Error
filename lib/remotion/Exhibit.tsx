@@ -91,7 +91,7 @@ const ExhibitTag: React.FC<{label: string; source: string; note?: string; start:
 			style={{
 				position: 'absolute',
 				left: 72,
-				top: 220,
+				top: 84,
 				opacity: o,
 				fontFamily: fontStacks.mono,
 				background: colors.card,
