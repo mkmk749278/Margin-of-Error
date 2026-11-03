@@ -42,14 +42,36 @@ export type HL = {key: PhraseKey; at: number};
 export const ReportPage: React.FC<{page: number; start: number; end: number; hl: HL[]; label: string; title: string; pushTo?: number; pad?: [number, number]; dim?: boolean}> = ({page, start, end, hl, label, title, pushTo, pad = [120, 160], dim = false}) => {
 	const rects = hl.flatMap((h) => phrases[h.key].rects);
 	const u = union(rects, pad[0], pad[1]);
-	// always the full text column: a push never cuts a line mid-word
-	const focus = {x: 150, w: 1570, y: u.y, h: Math.max(u.h, 420)};
 	const highlights = hl.flatMap((h) => phrases[h.key].rects.map((r, i) => ({...r, start: h.at + i * 22, draw: 26})));
+	const source = `NTSB AIR-25-04 · P. ${reportPage(page)} · ${title}`;
+	const img = <Img src={media(PAGE_FILES[page])} style={{width: 1870, height: 2420}} />;
+	const col = (r: Rect) => ({x: 150, w: 1570, y: r.y, h: Math.max(r.h, 420)});
+	// passages too far apart to read in one frame: hold on each in turn, dissolving between them
+	if (hl.length > 1 && u.h > 760) {
+		return (
+			<>
+				{hl.map((h, k) => {
+					const a = k === 0 ? start : h.at - 50;
+					const b = k === hl.length - 1 ? end : hl[k + 1].at - 30;
+					const focus = col(union(phrases[h.key].rects, pad[0], pad[1]));
+					return (
+						<Fade key={h.key} start={a} end={b} inF={k === 0 ? 16 : 24} outF={k === hl.length - 1 ? 16 : 24}>
+							{dim ? <AbsoluteFill style={{background: 'rgba(10,13,18,0.7)'}} /> : null}
+							<Exhibit page={{w: 1870, h: 2420}} start={k === 0 ? start : a - 400} push={{from: k === 0 ? start + 12 : a - 60, to: k === 0 ? (pushTo ?? start + 110) : a, focus}} highlights={highlights} label={label} source={source}>
+								{img}
+							</Exhibit>
+						</Fade>
+					);
+				})}
+			</>
+		);
+	}
+	const focus = col(u);
 	return (
 		<Fade start={start} end={end}>
 			{dim ? <AbsoluteFill style={{background: 'rgba(10,13,18,0.7)'}} /> : null}
-			<Exhibit page={{w: 1870, h: 2420}} start={start} push={{from: start + 12, to: pushTo ?? start + 110, focus}} highlights={highlights} label={label} source={`NTSB AIR-25-04 · P. ${reportPage(page)} · ${title}`}>
-				<Img src={media(PAGE_FILES[page])} style={{width: 1870, height: 2420}} />
+			<Exhibit page={{w: 1870, h: 2420}} start={start} push={{from: start + 12, to: pushTo ?? start + 110, focus}} highlights={highlights} label={label} source={source}>
+				{img}
 			</Exhibit>
 		</Fade>
 	);

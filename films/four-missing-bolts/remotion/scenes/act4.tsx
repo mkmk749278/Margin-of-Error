@@ -93,14 +93,12 @@ const Flight: React.FC = () => {
 		const u = i / 300;
 		pts.push(`${(x0 + u * W).toFixed(1)},${(y0 + H - ((gAt(u) - 0.2) / 1.0) * H).toFixed(1)}`);
 	}
-	const gNow = gAt(Math.max(0, reveal));
 	const lowSeen = reveal >= 0.72;
-	const w = lowSeen ? Math.min(plugLoads.weight.value * gNow, plugLoads.weight.value) : plugLoads.weight.value * gNow;
 	const yG = (g: number) => y0 + H - ((g - 0.2) / 1.0) * H;
 	return (
 		<Stage start={a} end={end} labels={['ILLUSTRATION', 'ILLUSTRATIVE TRACE SHAPE']}>
 			<PlugSvg cam={cam} state={state} />
-			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" value={`${Math.round(f > dip + 40 ? plugLoads.effectiveWeightMin.value : w)} LB`} sub={f > dip + 40 ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={f > dip ? 'amber' : 'cyan'} y={150} />
+			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" value={`${Math.round(f > dip + 40 ? plugLoads.effectiveWeightMin.value : Math.min(plugLoads.weight.value, interpolate(f, [dip - 30, dip + 40], [plugLoads.weight.value, plugLoads.effectiveWeightMin.value], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})))} LB`} sub={f > dip + 40 ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={f > dip ? 'amber' : 'cyan'} y={150} />
 			<div style={{position: 'absolute', left: x0 - 20, top: y0 - 60, width: W + 60, height: H + 110, background: 'rgba(10,13,18,0.7)', border: `1px solid ${colors.border}`, opacity: tween(f, sf(138) - 20, sf(138), 0, 1)}} />
 			<svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0, opacity: tween(f, sf(138) - 20, sf(138), 0, 1)}}>
 				<text x={x0} y={y0 - 30} fill={colors.muted} fontFamily="JetBrains Mono" fontSize={13} letterSpacing={2.4}>
@@ -261,7 +259,7 @@ const Separation: React.FC = () => {
 
 const Recovered: React.FC = () => {
 	const a = ef(150) + 120;
-	const end = sf(151) - 60;
+	const end = sf(151) - 100;
 	return <Photo src={media('img/fig10_left_plug_recovered.jpg')} iw={1431} ih={1116} start={a} end={end} source="NTSB AIR-25-04 · FIG. 10 · THE LEFT PLUG, RECOVERED" tag="FIG. 10" from={{x: 0, y: 0, w: 1431, h: 1116}} to={{x: 100, y: 60, w: 1200, h: 940}} />;
 };
 
@@ -274,7 +272,7 @@ export const act4: SceneDef[] = [
 	{id: 'seal', from: sf(143) - 20, to: sf(144) + 16, C: Seal, cues: [{frame: sf(143) + 20, sfx: 'pen_scratch', gainDb: -18}]},
 	{id: 'gap', from: sf(144) - 20, to: sf(146) + 16, C: Gap},
 	{id: 'separation', from: sf(146) - 20, to: ef(150) + 160, C: Separation, cues: [{frame: wf(147, 'pads'), sfx: 'relay_click', gainDb: -10}, {frame: wf(148, 'split') - 10, sfx: 'metal_snap_sub', gainDb: -6}, {frame: wf(149, 'twisted') - 10, sfx: 'metal_snap_sub', gainDb: -10}, {frame: wf(150, 'up'), sfx: 'pressure_drop', gainDb: -6}]},
-	{id: 'recovered', from: ef(150) + 110, to: sf(151) - 50, C: Recovered},
+	{id: 'recovered', from: ef(150) + 110, to: sf(151) - 90, C: Recovered},
 	{id: 'act5title', from: sf(151) - 90, to: sf(151) + 40, C: ActV, cues: [{frame: sf(151) - 80, sfx: 'whoosh', gainDb: -20}]},
 ];
 

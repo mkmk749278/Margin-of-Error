@@ -134,7 +134,7 @@ export const buildScene = (s: PlugState): {faces: Face[]; lines: Line[]} => {
 		// lower hinge fitting
 		P.push(...box([sx * 9 - 1.4, -0.4, -4.0], [sx * 9 + 1.4, 3.6, -2.6], '#22324a', PLUG_EDGE, {bias: 4}));
 	}
-	faces.push(...mapFaces(P, plugXf(s)));
+	faces.push(...mapFaces(P, plugXf(s)).map((f) => ({...f, opacity: Math.min(f.opacity ?? 1, s.plugAlpha)})));
 	// --- bolts (amber), with the plug; removal slides each out along its axis
 	const boltFaces: Face[] = [];
 	const boltAt = (id: BoltId): {x0: number; x1: number; y: number; z: number; dir: number} => {
@@ -167,7 +167,7 @@ export const buildScene = (s: PlugState): {faces: Face[]; lines: Line[]} => {
 			boltFaces.push({pts: ring, fill: 'rgba(239,68,68,0.18)', stroke: '#ef4444', strokeWidth: 2.4, opacity: s.emptyHoles, bias: 12});
 		}
 	}
-	faces.push(...mapFaces(boltFaces, plugXf(s)));
+	faces.push(...mapFaces(boltFaces, plugXf(s)).map((f) => ({...f, opacity: (f.opacity ?? 1) * Math.min(1, s.plugAlpha * 1.2)})));
 	return {faces, lines};
 };
 

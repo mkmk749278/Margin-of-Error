@@ -219,7 +219,7 @@ const Ledger: React.FC = () => {
 			<Mount x={200} y={150} w={1520} h={520} source="NTSB AIR-25-04 · RIVET REWORK RECORDS, SEPTEMBER 2023" start={a} end={end} labels={['SUMMARY OF THE RECORD']}>
 				<div style={{position: 'absolute', left: 50, top: 40, right: 50, fontFamily: mono}}>
 					<div style={{fontSize: 16, letterSpacing: 3, color: colors.muted}}>06 SEP 2023 · THE SAME DAY · THE SAME RIVETS</div>
-					{row('SPIRIT CONTRACT MECHANIC', 'RECORDED: REPLACED', sf(62), colors.ink)}
+					{row('SPIRIT CONTRACT MECHANIC', 'RECORDED: REPLACED', sf(61) + 40, colors.ink)}
 					{row('BOEING QUALITY INSPECTORS', '“just painted over”', wf(63, 'painted') - 20, colors.red)}
 				</div>
 			</Mount>
@@ -279,7 +279,7 @@ const DoorTeam: React.FC = () => {
 	return (
 		<Fade start={a} end={end}>
 			<div style={{position: 'absolute', left: 340, top: 230, fontFamily: mono, fontSize: 16, letterSpacing: 3, color: colors.muted}}>BOEING DOOR TEAM · ONLY THEY COULD WORK ON A PLUG</div>
-			{tile('MOST EXPERIENCED MEMBER', ['ABOUT 25 YEARS', 'ON 737 DOORS', 'ON LEAVE 18–19 SEP'], sf(70), colors.amber, 340)}
+			{tile('MOST EXPERIENCED MEMBER', ['ABOUT 25 YEARS', 'ON 737 DOORS', 'ON LEAVE 18–19 SEP'], sf(69) + 30, colors.amber, 340)}
 			{tile('ON DUTY', ['NONE HAD EVER', 'OPENED A PLUG'], sf(72), colors.red, 1020)}
 			<div style={{position: 'absolute', left: 340, top: 680, fontFamily: mono, fontSize: 14, letterSpacing: 2.4, color: colors.muted, opacity: tween(f, sf(70), sf(70) + 20, 0, 1)}}>NTSB AIR-25-04 · INTERVIEWS AND STATEMENTS · NO NAMES</div>
 		</Fade>
@@ -499,8 +499,9 @@ const Wall: React.FC = () => {
 	return (
 		<>
 			<Mount x={96} y={84} w={1440} h={700} source="ILLUSTRATION · CABIN SIDEWALL INSTALLED OVER THE PLUG" start={a} end={end} labels={['ILLUSTRATION']}>
+				<Caption text="SIDEWALL ON · PLUG NO LONGER IN VIEW" start={sf(96) + 40} end={end} x={40} y={600} />
 				<div style={{position: 'absolute', left: -96, top: -84, width: 1920, height: 1080}}>
-					<PlugSvg cam={c} state={state} extra={<polygon points={`${p0.x},${p0.y + ty} ${p1.x},${p1.y + ty} ${p2.x},${p2.y + ty} ${p3.x},${p3.y + ty}`} fill="#cbd5e1" opacity={0.92} stroke={colors.sub} strokeWidth={2} />} />
+					<PlugSvg cam={c} state={state} extra={<polygon points={`${p0.x},${p0.y + ty} ${p1.x},${p1.y + ty} ${p2.x},${p2.y + ty} ${p3.x},${p3.y + ty}`} fill="rgba(148,163,184,0.38)" stroke={colors.sub} strokeWidth={2} />} />
 				</div>
 			</Mount>
 			<LifeLine start={a} end={end} head={head} events={[
@@ -687,7 +688,7 @@ const NotSteel: React.FC = () => {
 // ---------- the money, read carefully (C56, C57, C83, C84, C47)
 const Money: React.FC = () => {
 	const f = useFilmFrame();
-	const end = sf(127) + 6;
+	const end = sf(127) - 6;
 	const items = [
 		{t: '2018', v: '$9.0 BILLION', s: 'REPURCHASED', on: wf(123, 'nine') - 10},
 		{t: 'DEC 2018', v: 'UP TO $20 BILLION', s: 'AUTHORIZED BY THE BOARD', on: wf(124, 'twenty') - 10},
@@ -716,13 +717,13 @@ const Money: React.FC = () => {
 
 const NotCause: React.FC = () => {
 	const f = useFilmFrame();
-	const a = sf(127) - 10;
-	const end = sf(131) + 6;
+	const a = sf(127) + 8;
+	const end = ef(130) + 36;
 	const typed = 'buyback';
 	const n = Math.max(0, Math.min(typed.length, Math.floor((f - a - 20) / 5)));
 	return (
 		<>
-			<Fade start={a} end={sf(128) + 10}>
+			<Fade start={a} end={sf(128) + 24}>
 				<div style={{position: 'absolute', left: 460, top: 380, width: 1000, fontFamily: mono}}>
 					<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>SEARCH · NTSB AIR-25-04 (FULL TEXT)</div>
 					<div style={{marginTop: 14, height: 80, border: `1px solid ${colors.sub}`, background: colors.card, display: 'flex', alignItems: 'center', padding: '0 26px', fontSize: 36, color: colors.ink}}>
@@ -732,7 +733,7 @@ const NotCause: React.FC = () => {
 					<div style={{marginTop: 20, fontSize: 28, fontWeight: 700, color: colors.amber, opacity: tween(f, a + 70, a + 84, 0, 1)}}>0 RESULTS · ALSO “SHARE REPURCHASE”: 0</div>
 				</div>
 			</Fade>
-			<ReportPage page={135} start={sf(128) - 6} end={end} hl={[{key: 'finding27', at: wf(128, 'assess') - 20}]} label="FINDING 27" title="FINDINGS" pushTo={wf(128, 'assess')} pad={[120, 240]} />
+			<ReportPage page={135} start={sf(128) + 16} end={end} hl={[{key: 'finding27', at: wf(128, 'assess') - 20}]} label="FINDING 27" title="FINDINGS" pushTo={wf(128, 'assess')} pad={[120, 240]} />
 			<Caption text="A FACT ABOUT WHERE THE MONEY WENT · NOT A CAUSE" start={sf(129)} end={sf(130)} tone="amber" y={950} />
 			<Caption text="THE CAUSE IS IN THE FACTORY RECORD" start={sf(130)} end={end} y={950} />
 		</>
