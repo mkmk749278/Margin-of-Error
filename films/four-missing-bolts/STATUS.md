@@ -18,6 +18,13 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
   `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
+## Round 3 (2026-11-03, this session)
+Round 2b checked (`review/round2b_check.md`: measured clean on motion, flash and loudness; 13 faults open, among
+them an ~8 s readout/trace contradiction at 11:52 and ~150 labels below the 26 px floor). All fixed in code
+(commit "Film 1 round 3"), lint `scripts/text_floor.py` 0, typecheck clean, 200+ stills checked. 720p cut rendering
+on the farm: run 41644586157 → Drive `renders/four-missing-bolts_review_round3_720p.mp4`. Next: stillness audit,
+flash check, loudness and a sheet read of that cut, then to the owner.
+
 ## Delivered to the owner (2026-11-03), round 2
 Round-2 cut (owner's PDF notes, audio locked, plus a deep review): Drive `renders/four-missing-bolts_review_round2b_720p.mp4`.
 Motion audit: 0 still runs of 3 s or more (was 76). Loudness −14.0 LUFS, −1.3 dBTP. Waiting for the owner's notes.
@@ -43,4 +50,4 @@ faults found) with the fix list for the next round. Not applied yet.
 - Brand art still to design. Before publication: status of the plug design enhancement (C65).
 
 ## Branches
-`ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs session 2026-11-03: `ccr-f2c16d1a-fculpb`.
+`ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs and round-3 session 2026-11-03: `ccr-f2c16d1a-fculpb`.
