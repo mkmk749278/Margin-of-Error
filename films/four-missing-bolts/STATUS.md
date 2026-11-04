@@ -47,8 +47,18 @@ Owner's notes: "so many audio gaps, it feels like the video stopped"; the word-l
 - **Mix patched for the moved effects** (pressure drop, two chimes, paper, highlighter, pen, a new stamp):
   `scripts/patch_mix_sfx.py` (old mix − old cues + new cues, same limiter; changes confined to 15.4–79.3 s).
   −14.0 LUFS, −1.4 dBTP, unchanged. Drive `mix/mix.wav`; the previous kept as `mix/mix_round3a.wav`.
-- **Next: Act II choreography** (sentences 23 on), then III, IV, V; then the 720p round-3 cut on the farm, its
-  stillness, flash and loudness checks and a sheet read, then to the owner.
+- **The whole film choreographed word by word (2026-11-04):** Acts II–V on the same kit (sentences 23–176), plus shared
+  beats in `remotion/beats.tsx` (`KeyLine`: key phrases that land on their words; `ChunkQuote`: a record quote revealed
+  chunk by chunk as the narration reaches it; `WordLine`). **Sync audit 177/177 pass, 887 word cues** (was 69 cues, 162
+  failing). Every counted cue drives a visible change (a check found 13 names defined but never drawn; all wired).
+  Choreography: `scenes/choreography/act1.md`, `journey.md` (hand-written) and `acts2-5.md` (generated from the code by
+  `scripts/choreo_index.py`). One behaviour change in Act IV: the g trace and the effective-weight readout now dip
+  together on "fell from sixty-three pounds to about twenty-five" (before, the readout reached 25 lb on "lowest", ~5 s
+  before the narration said the number).
+- **Effects re-exported, mix patched again** (48 cues, changes 2:02–14:45, −14.0 LUFS, −1.4 dBTP). Drive `mix/mix.wav`;
+  previous kept as `mix/mix_round3_act1.wav`.
+- **720p round-3b cut rendering on the farm** → Drive `renders/four-missing-bolts_review_round3b_720p.mp4`. Then: still
+  holds, flash, loudness and a sheet read of the cut, then to the owner.
 
 ## Delivered to the owner (2026-11-03), round 2
 Round-2 cut (owner's PDF notes, audio locked, plus a deep review): Drive `renders/four-missing-bolts_review_round2b_720p.mp4`.
@@ -76,5 +86,6 @@ faults found) with the fix list for the next round. Not applied yet.
 
 ## Branches
 All merged into `main` and safe to delete: `ccr-1364b7b0-rh2ico`, `ccr-f2c16d1a-fculpb` (merged 2026-11-04),
-`review-fresh-eyes-r2` (review session), and this session's `ccr-e72aa454-utqxe5` once its PR is merged.
+`review-fresh-eyes-r2` (review session), `ccr-76270493-hjpb56`, `ccr-9288f556-4k3oqe`, and this session's
+`ccr-e72aa454-utqxe5` once its PR is merged.
 `ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs and round-3 session 2026-11-03: `ccr-f2c16d1a-fculpb`.
