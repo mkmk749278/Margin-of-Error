@@ -8,23 +8,12 @@ import phrases from '../data/phrases.json';
 import {altArr, altFt, cabinPsi, CAUTION_T, clockText, EVENT_T, GEAR_AIR_T, GEAR_GROUND_T, latArr, lonArr, WARN_T} from '../fdr';
 import {ActTitle, Fade, media, mono, Mount, Photo, sans, Stamp, useFilmFrame} from '../kit';
 import {ef, FPS, sf, wf} from '../timing';
+import {Arrive, litStyle} from '../beats';
 import {SceneDef} from './types';
 
 // ACT I · THE INCIDENT (screenplay rows 1–9). Cold open on the record: the real FDR (docket DCA24MA063, attachment 1).
 // Word-level choreography (PLAYBOOK §10.6): every beat below sits on a MEASURED word (vo/timing.json); the table that
 // describes them is scenes/choreography/act1.md. Sentence ids are literal so scripts/sync_audit.py can resolve them.
-
-/** Text that takes the light on its word: `sub` before, `tone` after, with a glow that guides the eye. */
-const litStyle = (f: number, on: number, tone: string = colors.ink): React.CSSProperties => ({
-	color: f >= on ? tone : colors.sub,
-	textShadow: `0 0 ${(18 * flash(f, on, 0)).toFixed(1)}px ${tone}`,
-});
-
-/** A word or figure that arrives on its own syllable: rises 12 px and fades in, completing on the word, then bumps. */
-const Arrive: React.FC<{f: number; fps: number; on: number; children: React.ReactNode; style?: React.CSSProperties; dur?: number}> = ({f, fps, on, children, style, dur = 8}) => {
-	const k = lead(f, on, dur);
-	return <span style={{display: 'inline-block', opacity: k, transform: `translateY(${((1 - k) * 12).toFixed(2)}px) scale(${bump(f, fps, on + LAND, 0.06).toFixed(4)})`, transformOrigin: '0 70%', ...style}}>{children}</span>;
-};
 
 // ---------- the flight clock: real time until the pressure drop, then a quarter-speed replay so each recorded event
 // lands on the words that name it (C02, FDR discretes). The drop is anchored to "dropped"; at ×0.25 the recorded cabin
@@ -626,7 +615,7 @@ const Track: React.FC = () => {
 						</text>
 					</g>
 				) : null}
-				<circle cx={px(head)} cy={py(head)} r={7} fill={t >= tLand ? colors.ink : colors.amber} />
+				<circle cx={px(head)} cy={py(head)} r={7 * bump(f, fps, T.back + LAND, 0.4)} fill={t >= tLand ? colors.ink : colors.amber} />
 			</svg>
 			<div style={{position: 'absolute', left: 1250, top: 44, width: 420, fontFamily: mono, color: colors.ink}}>
 				{/* "Alaska Airlines flight twelve eighty-two": the flight lights, its number lands in two parts */}
@@ -700,7 +689,6 @@ const Paper: React.FC = () => {
 		built: wf(16, 'built'),
 		paper: wf(16, 'paper'),
 		paper2: wf(17, 'paper'),
-		leads: wf(17, 'leads'),
 	};
 	const pIn = C.built - 8;
 	const end = wf(17, 'photograph') + 24;
@@ -935,7 +923,7 @@ const Layers: React.FC = () => {
 							border: `3px solid ${plugRed ? colors.red : colors.cyan}`,
 							borderRadius: 18,
 							background: plugRed ? 'rgba(239,68,68,0.12)' : 'rgba(56,189,248,0.06)',
-							transform: `translateZ(-200px) scale(${bump(f, fps, Q.failed + LAND).toFixed(4)})`,
+							transform: `translateZ(-200px) scale(${Math.max(bump(f, fps, Q.plug + LAND), bump(f, fps, Q.failed + LAND)).toFixed(4)})`,
 							opacity: plugK,
 						}}
 					>

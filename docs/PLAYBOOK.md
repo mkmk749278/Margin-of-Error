@@ -720,6 +720,7 @@ strongest idea that could replace it, inside the hard lines.
   more than 6 levels for 3 s). Must read 0 before a cut goes to the owner.
 - `scripts/text_floor.py` (new, 2026-11-03): the §6.7 lint over the film code: font sizes below 26 px, facts in
   `muted`, text colours off the tokens. Must read 0 before a render; `// floor-ok: <reason>` only for decoration.
+- `scripts/choreo_index.py` (new, 2026-11-04): the choreography index of a film's word cues, generated from the scene code.
 - `scripts/patch_mix_sfx.py` (new, 2026-11-04): moves effects in a finished mix when only cues changed (§12).
 - `scripts/upload_gdrive.sh`, `scripts/gdrive_pull.sh`, `scripts/termux_fetch_to_drive.sh`: Drive.
 - `.github/workflows/remotion-render.yml`: the render farm.
@@ -731,6 +732,21 @@ strongest idea that could replace it, inside the hard lines.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**The whole film choreographed (2026-11-04).**
+- *A word cue that changes nothing still passes the audit.* `sync_audit.py` counts every `wf()` it can resolve, so a
+  beat defined in a scene's word table but never used (13 of them) counted as a cue with nothing on screen. **Rule:**
+  every name in a scene's word table is used by something visible; check with a grep for `X.name` in the component
+  before trusting a pass. *Why:* the audit measures intent in the code, not pixels.
+- *Document scenes need words to land on too.* A report page that pushes and highlights once carries 5–10 s of speech
+  with nothing changing. **Rule:** a document on screen gets a key-phrase line (`KeyLine`, parts on their words) and
+  per-rect highlight timing (`HL.ats`), and a record quote is revealed chunk by chunk as the narration reaches each
+  part (`ChunkQuote`), never typed on at a fixed speed.
+- *When two rules pull apart, keep both by moving the driver.* "One driver for a trace and its readout" and "a number
+  lands as it is said" collided in Act IV (the readout hit 25 lb on "lowest", the narration said "twenty-five" 5 s
+  later). Fix: the dip itself is drawn between "fell" and "twenty-five"; "lowest" only marks where it will go.
+- *Inline-block parts lose their trailing spaces.* A key-phrase line built from inline-block spans ran its words
+  together; spacing is a margin on each part, not a space character.
 
 **Act I choreographed; a review branch never merged (2026-11-04).**
 - *A rendered review branch that never reached `main`.* The round-2b fixes (the 26 px floor across the film, 13
