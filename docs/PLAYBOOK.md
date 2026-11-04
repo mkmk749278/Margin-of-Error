@@ -215,8 +215,17 @@ allows DIN Pro; it is a paid licence, so Inter until the owner decides otherwise
 scanned type.
 
 ### 6.2 Brand assets
-Not built yet (logo, avatar, banner, watermark: §17.2). They are code-built like everything else, kept in
-`assets/brand/`, originals in Drive `_Channel/`.
+Code-built like everything else: `node scripts/brand_art.mjs` draws the marks in SVG from the brand tokens and shoots
+them with the pre-installed Chromium and the vendored fonts; `python3 scripts/brand_sheet.py assets/brand OUT.jpg`
+makes the comparison sheet. Outputs in `assets/brand/`, copies in Drive `_Channel/`. Three concepts (2026-11-04):
+**A Redline** (a gauge, needle in the last band before red), **B Trace** (the M as a load trace, one peak short of a
+dashed limit, one through it), **C Tolerance** (the ± with its minus bar fractured). **The owner chose B Trace
+(2026-11-04)**; the finals are `assets/brand/final/margin-of-error_*` (the lockup is transparent, for dark grounds).
+- **YouTube sizes:** avatar 800×800, cropped to a circle and seen at 98 px and ~40 px; banner 2560×1440 with only
+  the centred 1546×423 safe area seen on a phone and only the 2560×423 strip on desktop, under 6 MB; watermark
+  150×150 PNG, under 1 MB. *Why:* a first banner pass put the type wider than 1546 px and the trace below the strip,
+  so phones would have clipped the name and no device but a TV would have shown the trace. Check every banner with
+  the safe area drawn on it.
 
 ### 6.3 Layers in every frame
 The desk (void, coordinate grid at 0.05 opacity, pooled light) → the evidence (exhibit, schematic, telemetry trace) →
@@ -899,10 +908,10 @@ strongest idea that could replace it, inside the hard lines.
    not all three at once.
 6. **2026-11-03: this channel's independent reviews and comment replies are handled inside this repo** (§13.8,
    §14.4), so nothing public ties the channel to anything else.
+7. **2026-11-04: brand mark B "Trace" chosen** for the avatar, banner, watermark and logo (§6.2).
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle:** `config/brand.yaml` holds `@marginoferror` as a placeholder until the owner confirms the real one.
-2. **Brand art** (logo, avatar, banner, watermark): to design in its own phase, 3 concepts each.
 3. **Acronym format for voice "1":** the spec's hyphen spacing (`N - T - S - B`) is the default; check it on the
    first generated block (§7.5).
 4. **Voice:** settled 2026-11-03, the custom voice "1" (§7.5). Key: `ELEVENLABS_API_KEY` in the environment.
