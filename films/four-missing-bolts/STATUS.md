@@ -18,7 +18,20 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
   `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
-## Round 3 (2026-11-03, in progress): dead air cut, word-level choreography begun
+## Final pass (2026-11-04): forensic review, fixes, 4K master
+- **Forensic review of the round-3b cut:** `review/forensic_review_round3b_720p.md` (0 gaps, 0 black/frozen frames,
+  0 still holds, −14.1 LUFS / −1.3 dBTP; claims 92/92; sync 177/177). Six fixes in code (bolt readout never passes
+  3 OF 4; NTSB on screen as one word; the production chart no longer sits empty; door-team tiles larger and off the
+  grid lines; "INCREASED HIRING"; the Graham quote ends with an ellipsis; "SAID THE COMPANY KNEW"). Voice and mix
+  unchanged. PR #16, merged.
+- **4K master done** (run 41779692152, scale 2, CRF 16, 30 Mb/s cap): Drive
+  `renders/four-missing-bolts_master_4k.mp4`, 3840×2160, 60 fps, 54,316 frames (15:05.27, = timing.json), H.264
+  High, 11.3 Mb/s average, 1.28 GB; the six fixes checked in its frames; −14.1 LUFS, −1.3 dBTP, 0 black or frozen frames (measured on the file).
+- **YouTube package:** `youtube/package.md` (3 titles, description with chapters and sources, tags, pinned comment,
+  Studio checklist), 3 thumbnails, `four-missing-bolts.en.srt` (230 cues).
+- **For the owner:** two spoken paraphrases kept ("it hired fast"; "at all"), see the review's last section.
+
+## Round 3 (2026-11-03): dead air cut, word-level choreography begun
 Owner's notes: "so many audio gaps, it feels like the video stopped"; the word-level kinetic choreography directive
 (PLAYBOOK §10.6); "regenerate the minute number only, nothing that feels stitched".
 - **Word times measured** (`scripts/word_align.py`, CTC forced alignment): the old estimates were off by a median
@@ -87,5 +100,5 @@ faults found) with the fix list for the next round. Not applied yet.
 ## Branches
 All merged into `main` and safe to delete: `ccr-1364b7b0-rh2ico`, `ccr-f2c16d1a-fculpb` (merged 2026-11-04),
 `review-fresh-eyes-r2` (review session), `ccr-76270493-hjpb56`, `ccr-9288f556-4k3oqe`, and this session's
-`ccr-e72aa454-utqxe5` once its PR is merged.
+`ccr-e72aa454-utqxe5`, and `ccr-13a84ff1-gtorhw` (this pass) once its PRs are merged.
 `ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs and round-3 session 2026-11-03: `ccr-f2c16d1a-fculpb`.
