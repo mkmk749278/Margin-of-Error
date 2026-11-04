@@ -1,0 +1,1061 @@
+1
+00:00:00,081 --> 00:00:02,602
+Fifth of January, 2024.
+
+2
+00:00:03,384 --> 00:00:07,566
+At twelve minutes and thirty-three
+seconds past five in the afternoon, a
+
+3
+00:00:07,606 --> 00:00:14,010
+Boeing 737-9 climbed through
+14,830 feet over Portland,
+
+4
+00:00:14,050 --> 00:00:15,050
+Oregon.
+
+5
+00:00:15,425 --> 00:00:17,484
+Then the cabin pressure dropped.
+
+6
+00:00:17,903 --> 00:00:20,082
+The cabin altitude warning sounded.
+
+7
+00:00:20,602 --> 00:00:23,141
+One second later, the master caution.
+
+8
+00:00:23,764 --> 00:00:27,761
+The captain would describe it
+as an explosive experience.
+
+9
+00:00:28,210 --> 00:00:31,436
+The first officer said
+simply: it was chaos.
+
+10
+00:00:32,289 --> 00:00:36,678
+Behind the wing, on the left side,
+there was now a hole in the fuselage.
+
+11
+00:00:37,057 --> 00:00:41,363
+A rectangle about 29 inches
+wide and 59 inches high.
+
+12
+00:00:41,869 --> 00:00:43,987
+The two seats beside it were empty.
+
+13
+00:00:44,731 --> 00:00:49,723
+Fourteen minutes later, Alaska Airlines
+flight 1282 was back on the ground in
+
+14
+00:00:49,763 --> 00:00:50,763
+Portland.
+
+15
+00:00:51,105 --> 00:00:53,244
+Eight people had minor injuries.
+
+16
+00:00:53,529 --> 00:00:55,394
+No one was seriously hurt.
+
+17
+00:00:56,049 --> 00:00:58,776
+There is no recording of
+what was said in the cockpit.
+
+18
+00:00:59,239 --> 00:01:03,421
+The voice recorder kept running after
+landing, and recorded over the flight.
+
+19
+00:01:04,061 --> 00:01:07,000
+So this investigation
+was not built on voices.
+
+20
+00:01:07,187 --> 00:01:08,876
+It was built on paper.
+
+21
+00:01:09,506 --> 00:01:15,052
+And the paper leads to a photograph,
+taken on a factory floor 108 days before
+
+22
+00:01:15,092 --> 00:01:16,193
+that afternoon.
+
+23
+00:01:16,799 --> 00:01:18,920
+It shows exactly what was missing.
+
+24
+00:01:19,359 --> 00:01:21,694
+We will come to it in about five minutes.
+
+25
+00:01:22,366 --> 00:01:25,741
+The question was never only
+why a door plug failed.
+
+26
+00:01:26,066 --> 00:01:29,925
+It was why every layer built
+to stop it had failed first.
+
+27
+00:01:30,551 --> 00:01:32,808
+Where did the margin of error run out?
+
+28
+00:01:36,916 --> 00:01:42,424
+The 737-9 has an opening in each side
+of the fuselage, behind the wing, for an
+
+29
+00:01:42,464 --> 00:01:44,226
+extra emergency exit.
+
+30
+00:01:44,868 --> 00:01:49,893
+Airlines that do not need that exit
+get a plug instead a lighter, simpler
+
+31
+00:01:49,933 --> 00:01:51,834
+panel that fills the hole.
+
+32
+00:01:53,222 --> 00:01:55,602
+The plug weighs 63 pounds.
+
+33
+00:01:56,132 --> 00:02:00,226
+Two kinds of restraint hold it in place,
+and the difference between them is
+
+34
+00:02:00,266 --> 00:02:01,409
+the whole story.
+
+35
+00:02:02,096 --> 00:02:06,858
+Twelve stop fittings, six down each
+side, keep it from moving outward.
+
+36
+00:02:07,424 --> 00:02:10,873
+Small pins on the plug bear
+against pads on the frame.
+
+37
+00:02:12,153 --> 00:02:14,782
+But stops only work in one direction.
+
+38
+00:02:15,328 --> 00:02:19,779
+Lift the plug about half an inch,
+and the pins slide clear of the pads.
+
+39
+00:02:20,209 --> 00:02:22,489
+Then the top of the plug can swing out.
+
+40
+00:02:23,780 --> 00:02:25,866
+That is why there are four bolts.
+
+41
+00:02:26,183 --> 00:02:28,498
+Two at the top, through the guide tracks.
+
+42
+00:02:28,739 --> 00:02:30,939
+Two at the bottom, through the hinges.
+
+43
+00:02:31,362 --> 00:02:35,312
+Each one fitted with washers,
+a castle nut and a cotter pin.
+
+44
+00:02:36,603 --> 00:02:39,713
+Their only job is to
+stop the plug moving up.
+
+45
+00:02:40,428 --> 00:02:42,081
+And here is the margin.
+
+46
+00:02:42,808 --> 00:02:47,261
+After the accident, Boeing's engineers
+worked out how many of those bolts were
+
+47
+00:02:47,301 --> 00:02:48,324
+really needed.
+
+48
+00:02:48,955 --> 00:02:52,607
+One lower bolt, on its own,
+would have held the plug down.
+
+49
+00:02:53,864 --> 00:02:57,899
+The two upper bolts, on their own,
+would have kept it on its stops.
+
+50
+00:02:59,151 --> 00:03:02,439
+Four bolts, where a single
+lower bolt would have done.
+
+51
+00:03:02,967 --> 00:03:05,492
+A margin of error, built in steel.
+
+52
+00:03:07,128 --> 00:03:09,793
+On this airplane, all four were missing.
+
+53
+00:03:11,625 --> 00:03:13,975
+The investigators could
+tell from the holes.
+
+54
+00:03:14,329 --> 00:03:16,585
+None of them carried a mark from a bolt.
+
+55
+00:03:17,020 --> 00:03:20,998
+But faint rings around the upper holes
+showed that washers had once been
+
+56
+00:03:21,038 --> 00:03:21,926
+there.
+
+57
+00:03:21,966 --> 00:03:24,895
+The bolts had been fitted
+and then taken out.
+
+58
+00:03:26,164 --> 00:03:31,243
+So the question became: who took them
+out, and why were they never put back?
+
+59
+00:03:35,715 --> 00:03:41,447
+The plug was made by Spirit
+AeroSystems, in Malaysia, in March 2023.
+
+60
+00:03:42,170 --> 00:03:47,577
+Spirit fitted it to the fuselage in
+Wichita, Kansas, and on the 28th of July
+
+61
+00:03:47,657 --> 00:03:50,581
+it was closed with all
+four bolts in place.
+
+62
+00:03:52,183 --> 00:03:54,851
+Spirit's Wichita plant
+used to be Boeing's.
+
+63
+00:03:55,224 --> 00:04:00,789
+In 2005, Boeing sold its operations
+in Wichita, and they became Spirit
+
+64
+00:04:00,829 --> 00:04:05,693
+AeroSystems a major
+supplier of 737 fuselages.
+
+65
+00:04:06,261 --> 00:04:11,159
+By 2023, nearly two thirds of
+Spirit's revenue came from Boeing.
+
+66
+00:04:12,593 --> 00:04:17,638
+The fuselage arrived at Boeing's factory
+in Renton, Washington, on the 31st of
+
+67
+00:04:17,678 --> 00:04:18,678
+August.
+
+68
+00:04:18,838 --> 00:04:23,483
+The next day, Boeing workers found
+five damaged rivets in the frame just
+
+69
+00:04:23,523 --> 00:04:24,764
+forward of the plug.
+
+70
+00:04:26,100 --> 00:04:29,370
+The rivets had been installed
+by one of Spirit's suppliers.
+
+71
+00:04:29,862 --> 00:04:33,910
+But under Boeing's rules, Spirit's
+people were not allowed to take apart a
+
+72
+00:04:33,950 --> 00:04:35,353
+finished installation.
+
+73
+00:04:35,831 --> 00:04:37,768
+Only Boeing could open the plug.
+
+74
+00:04:38,153 --> 00:04:40,412
+And opening it was not routine.
+
+75
+00:04:41,010 --> 00:04:46,041
+Boeing's own process required a removal
+record a document that lists the steps
+
+76
+00:04:46,081 --> 00:04:50,050
+to restore what was disturbed, and the
+quality sign-offs that prove it was
+
+77
+00:04:50,090 --> 00:04:51,090
+done.
+
+78
+00:04:52,103 --> 00:04:55,478
+For more than two weeks, the
+rivets went back and forth.
+
+79
+00:04:55,894 --> 00:04:59,487
+A Spirit contract mechanic
+recorded them as replaced.
+
+80
+00:04:59,943 --> 00:05:03,928
+The same day, Boeing's quality inspectors
+recorded that they had not been
+
+81
+00:05:03,968 --> 00:05:06,230
+replaced, but just painted over.
+
+82
+00:05:06,868 --> 00:05:10,674
+Spirit later said the mechanic had
+confused this airplane with another.
+
+83
+00:05:12,033 --> 00:05:14,920
+The request for access
+was escalated twice.
+
+84
+00:05:15,413 --> 00:05:19,662
+On the 17th of September, a note
+in Boeing's tracking system read:
+
+85
+00:05:20,084 --> 00:05:23,892
+if removal needed, a removal
+needs to be written first.
+
+86
+00:05:25,318 --> 00:05:29,206
+The next morning, a Boeing door manager
+reported that the door was being
+
+87
+00:05:29,246 --> 00:05:30,708
+opened by a mechanic.
+
+88
+00:05:31,099 --> 00:05:33,666
+Which mechanic, the record does not say.
+
+89
+00:05:35,218 --> 00:05:38,324
+Only Boeing's door team was
+allowed to work on a plug.
+
+90
+00:05:38,793 --> 00:05:44,122
+The man usually given that job had
+about twenty-five years on 737 doors.
+
+91
+00:05:44,634 --> 00:05:47,689
+That day, and the next, he was on leave.
+
+92
+00:05:48,241 --> 00:05:51,490
+None of the door team on
+duty had ever opened a plug.
+
+93
+00:05:52,850 --> 00:05:54,286
+The plug was opened.
+
+94
+00:05:54,559 --> 00:05:56,537
+No removal record was written.
+
+95
+00:05:57,000 --> 00:05:59,789
+No one interviewed said
+they knew who opened it.
+
+96
+00:06:01,040 --> 00:06:05,486
+Later that day, a technician moving
+equipment found the plug lying open on a
+
+97
+00:06:05,526 --> 00:06:06,526
+stand.
+
+98
+00:06:06,719 --> 00:06:11,415
+He used a strap to pull it up off the
+stand, he said, and let it hang with a
+
+99
+00:06:11,455 --> 00:06:13,461
+gap all round it in the frame.
+
+100
+00:06:14,892 --> 00:06:17,579
+The next day, the rivet work was finished.
+
+101
+00:06:17,961 --> 00:06:22,431
+And sometime on the evening shift of
+the 19th of September, when no member of
+
+102
+00:06:22,471 --> 00:06:25,657
+the door team was working,
+the plug was closed.
+
+103
+00:06:27,083 --> 00:06:31,192
+At about twenty to seven that evening,
+Boeing workers were texting each other
+
+104
+00:06:31,232 --> 00:06:33,877
+about putting the cabin
+interior back together.
+
+105
+00:06:34,612 --> 00:06:36,609
+One message carried a photograph.
+
+106
+00:06:38,430 --> 00:06:40,726
+It shows the plug, closed.
+
+107
+00:06:41,030 --> 00:06:43,578
+Three of the four bolt
+positions are in view.
+
+108
+00:06:44,010 --> 00:06:46,778
+In each of them you can see nothing.
+
+109
+00:06:47,906 --> 00:06:48,906
+No bolts.
+
+110
+00:06:48,996 --> 00:06:50,012
+No washers.
+
+111
+00:06:50,132 --> 00:06:51,132
+No nuts.
+
+112
+00:06:51,183 --> 00:06:52,183
+No pins.
+
+113
+00:06:54,332 --> 00:06:57,099
+No one interviewed said
+they knew who closed it.
+
+114
+00:06:57,637 --> 00:07:01,983
+As a matter of routine, Boeing kept
+its factory security video for thirty
+
+115
+00:07:02,023 --> 00:07:03,023
+days.
+
+116
+00:07:03,083 --> 00:07:05,048
+The accident came long after.
+
+117
+00:07:06,485 --> 00:07:10,677
+On the 20th of September, a quality
+inspector signed off the job.
+
+118
+00:07:11,141 --> 00:07:16,049
+Her sign-off, she told investigators,
+did not involve looking at the airplane.
+
+119
+00:07:16,409 --> 00:07:19,917
+She checked that every step for
+the rivet work had been signed off.
+
+120
+00:07:20,351 --> 00:07:24,516
+And with no removal record, the
+paperwork said nothing about the plug.
+
+121
+00:07:26,024 --> 00:07:29,646
+By then, the cabin wall was
+already in place over it.
+
+122
+00:07:30,223 --> 00:07:34,550
+Forty-one days later, the airplane
+was delivered to Alaska Airlines.
+
+123
+00:07:35,820 --> 00:07:40,259
+It would be easy to stop there, with a
+missing document and a name no one can
+
+124
+00:07:40,299 --> 00:07:41,299
+give.
+
+125
+00:07:41,529 --> 00:07:45,029
+The N T S B did not stop there.
+
+126
+00:07:46,478 --> 00:07:50,869
+The instruction that told workers when
+a removal record was needed ran to more
+
+127
+00:07:50,909 --> 00:07:52,432
+than fifty pages.
+
+128
+00:07:52,907 --> 00:07:57,314
+The N T S B found it listed
+more exceptions than directions.
+
+129
+00:07:57,797 --> 00:08:01,242
+Boeing had revised it
+eleven times in ten years.
+
+130
+00:08:01,547 --> 00:08:06,142
+It had come up in sixteen regulatory
+compliance cases since 2018.
+
+131
+00:08:07,683 --> 00:08:12,246
+Boeing's corrective actions were
+accepted by its regulator, the F A A.
+
+132
+00:08:12,927 --> 00:08:16,969
+For at least ten years, the
+investigators found, those actions were
+
+133
+00:08:17,009 --> 00:08:18,030
+ineffective.
+
+134
+00:08:18,570 --> 00:08:24,274
+The F A A had five inspectors on the
+737 program while this fuselage was in
+
+135
+00:08:24,314 --> 00:08:25,314
+the factory.
+
+136
+00:08:25,851 --> 00:08:30,343
+In the twelve months up to the build,
+its audits at Renton logged sixty-eight
+
+137
+00:08:30,383 --> 00:08:31,666
+alleged problems.
+
+138
+00:08:31,974 --> 00:08:34,694
+Not one of them mentioned
+the removal instruction.
+
+139
+00:08:36,118 --> 00:08:37,715
+Then there were the people.
+
+140
+00:08:38,389 --> 00:08:43,878
+Before 2018, the 737 line built
+about fifty-two airplanes a month.
+
+141
+00:08:44,411 --> 00:08:50,064
+After two fatal accidents involving
+the 737 MAX, Boeing cut production,
+
+142
+00:08:50,185 --> 00:08:53,612
+stopped hiring, and did not
+replace the people who left.
+
+143
+00:08:54,085 --> 00:08:58,357
+The pandemic took more, particularly
+those eligible to retire.
+
+144
+00:08:58,844 --> 00:09:02,384
+At the low point, the line
+built fewer than ten a month.
+
+145
+00:09:02,835 --> 00:09:08,615
+In 2022, Boeing set out to return
+to its old rate, and it hired fast.
+
+146
+00:09:09,054 --> 00:09:12,276
+Many of the new hires had
+never worked in manufacturing.
+
+147
+00:09:13,513 --> 00:09:16,686
+The head of the 737
+program put it this way.
+
+148
+00:09:17,171 --> 00:09:21,130
+Ten years ago, close to half the
+workforce had more than ten years'
+
+149
+00:09:21,170 --> 00:09:22,254
+experience.
+
+150
+00:09:22,512 --> 00:09:25,457
+Today twenty-five or thirty percent.
+
+151
+00:09:26,752 --> 00:09:30,846
+Boeing did not assess what that loss
+of experience might do to quality.
+
+152
+00:09:31,343 --> 00:09:34,728
+The N T S B called it
+a missed opportunity.
+
+153
+00:09:36,310 --> 00:09:39,480
+So the margin that ran out
+at Renton was not steel.
+
+154
+00:09:39,898 --> 00:09:43,924
+It was a document no one wrote and the
+experience that would have known to
+
+155
+00:09:43,964 --> 00:09:44,964
+write it.
+
+156
+00:09:46,120 --> 00:09:50,513
+There is one more record a film like
+this has to read, and read carefully.
+
+157
+00:09:51,094 --> 00:09:56,095
+In 2018, Boeing spent $9 billion
+buying back its own stock.
+
+158
+00:09:56,446 --> 00:10:00,212
+That December, its board
+approved up to $20 billion more.
+
+159
+00:10:00,732 --> 00:10:04,547
+In 2019 it bought back $2.7 billion.
+
+160
+00:10:05,063 --> 00:10:08,669
+By the start of 2020, the
+buybacks were suspended.
+
+161
+00:10:09,810 --> 00:10:12,438
+The investigation report
+does not mention them.
+
+162
+00:10:12,768 --> 00:10:17,264
+And the N T S B said it could not assess
+whether adverse pressure existed on
+
+163
+00:10:17,304 --> 00:10:18,588
+the production line.
+
+164
+00:10:19,800 --> 00:10:23,665
+So the buybacks belong in this story
+as a fact about where Boeing's money
+
+165
+00:10:23,705 --> 00:10:25,707
+went, not as a cause.
+
+166
+00:10:26,033 --> 00:10:29,587
+The cause the investigators
+found is in the factory record.
+
+167
+00:10:33,647 --> 00:10:37,644
+Now go back to the plug, closed in
+the factory with its bolts gone.
+
+168
+00:10:38,173 --> 00:10:41,369
+On the ground, a plug
+like this is hard to lift.
+
+169
+00:10:41,710 --> 00:10:45,698
+On its sister plug, on the other side
+of the same airplane, with the bolts
+
+170
+00:10:45,738 --> 00:10:50,827
+taken out on the ground, a 120-pound
+upward pull did not move it.
+
+171
+00:10:51,134 --> 00:10:52,538
+It took two people.
+
+172
+00:10:53,815 --> 00:10:56,541
+But an airplane in flight
+does not sit still.
+
+173
+00:10:56,822 --> 00:10:57,948
+It vibrates.
+
+174
+00:10:57,996 --> 00:10:59,045
+It flexes.
+
+175
+00:10:59,235 --> 00:11:03,529
+And for brief moments, the load on
+the plug drops below its own weight.
+
+176
+00:11:04,105 --> 00:11:08,609
+At the lowest point the analysis found,
+the plug's effective weight, the force
+
+177
+00:11:08,649 --> 00:11:13,293
+holding it down, fell from 63
+pounds to about twenty-five.
+
+178
+00:11:14,732 --> 00:11:17,440
+Each moment like that
+could let it rise a little.
+
+179
+00:11:17,668 --> 00:11:19,075
+Fractions of an inch.
+
+180
+00:11:19,417 --> 00:11:23,564
+Across 154 flights, it
+walked itself upward.
+
+181
+00:11:24,689 --> 00:11:29,733
+It left a record of the climb: parallel
+lines of dust, dirt and petroleum
+
+182
+00:11:29,773 --> 00:11:32,635
+jelly along the seal, marking its steps.
+
+183
+00:11:33,785 --> 00:11:38,075
+From the outside, the change at its
+lower edge was about half an inch.
+
+184
+00:11:38,485 --> 00:11:42,973
+Too small, the N T S B found,
+to catch on a walk-around.
+
+185
+00:11:44,253 --> 00:11:48,738
+On the fifth of January, climbing out
+of Portland, the plug reached the top of
+
+186
+00:11:48,778 --> 00:11:49,778
+its stops.
+
+187
+00:11:50,097 --> 00:11:52,322
+The pins rode up off the pads.
+
+188
+00:11:52,615 --> 00:11:55,410
+The upper fittings struck
+their rollers and split.
+
+189
+00:11:55,583 --> 00:11:57,303
+The lower hinges twisted.
+
+190
+00:11:57,500 --> 00:11:59,324
+And the plug left the airplane:
+
+191
+00:11:59,585 --> 00:12:01,689
+up, out and back.
+
+192
+00:12:06,841 --> 00:12:12,584
+The N T S B adopted its final
+report on the 24th of June, 2025.
+
+193
+00:12:13,030 --> 00:12:16,740
+Its probable cause names a
+manufacturer and a regulator.
+
+194
+00:12:17,991 --> 00:12:22,393
+Boeing's failure to provide adequate
+training, guidance, and oversight
+
+195
+00:12:22,473 --> 00:12:26,795
+necessary to ensure that manufacturing
+personnel could consistently and
+
+196
+00:12:26,835 --> 00:12:30,296
+correctly comply with its
+parts removal process.
+
+197
+00:12:31,709 --> 00:12:37,573
+Contributing: the F A A's ineffective
+compliance enforcement surveillance and
+
+198
+00:12:37,613 --> 00:12:39,294
+audit planning activities.
+
+199
+00:12:40,859 --> 00:12:47,530
+The day after the accident,
+the F A A grounded 171 737-9s
+
+200
+00:12:47,591 --> 00:12:49,594
+until their plugs were inspected.
+
+201
+00:12:50,087 --> 00:12:54,622
+On the 24th of January, it told Boeing
+there would be no production expansion
+
+202
+00:12:54,662 --> 00:12:55,662
+of the Max.
+
+203
+00:12:56,159 --> 00:13:00,515
+This won't be back to business as usual
+for Boeing, the administrator said.
+
+204
+00:13:02,056 --> 00:13:07,492
+In June 2024, Boeing's head of quality
+told a media briefing that the company
+
+205
+00:13:07,532 --> 00:13:09,879
+knew the move crew had closed the plug.
+
+206
+00:13:10,463 --> 00:13:15,674
+The N T S B said its interviews had
+identified no one, and cut Boeing off from
+
+207
+00:13:15,714 --> 00:13:19,983
+its investigative information for
+releasing details without approval.
+
+208
+00:13:21,350 --> 00:13:25,615
+At the end of that month, Boeing
+agreed to buy Spirit AeroSystems.
+
+209
+00:13:25,901 --> 00:13:30,073
+The deal was completed on
+the 8th of December, 2025.
+
+210
+00:13:30,203 --> 00:13:34,356
+Twenty years after Wichita was
+sold, it was part of Boeing again.
+
+211
+00:13:35,579 --> 00:13:38,376
+The fix Boeing and Spirit
+designed is simple.
+
+212
+00:13:38,701 --> 00:13:43,158
+Two extra devices that stop the
+plug rising even with no bolts in.
+
+213
+00:13:43,535 --> 00:13:47,678
+Cabin panels that cannot be fitted
+unless those devices are engaged.
+
+214
+00:13:47,961 --> 00:13:52,958
+And lanyards on the bolts, so a removed
+bolt hangs where everyone can see it.
+
+215
+00:13:53,381 --> 00:13:59,029
+In May 2025, Boeing told investigators
+it expected to fit it to new airplanes
+
+216
+00:13:59,069 --> 00:14:00,491
+in 2026.
+
+217
+00:14:01,796 --> 00:14:04,136
+But the fix is for one plug.
+
+218
+00:14:04,526 --> 00:14:09,243
+The question the investigation raised
+is about every disturbed installation on
+
+219
+00:14:09,283 --> 00:14:10,326
+every line.
+
+220
+00:14:10,781 --> 00:14:16,210
+In March 2024, two months after the
+accident, Boeing's own audits on other
+
+221
+00:14:16,250 --> 00:14:20,758
+production lines were still recording
+repeated findings of unauthorized part
+
+222
+00:14:20,798 --> 00:14:21,798
+removals.
+
+223
+00:14:23,081 --> 00:14:27,031
+One board member wrote that he was
+skeptical Boeing's systems at the time
+
+224
+00:14:27,071 --> 00:14:29,176
+could have caught errors like this at all.
+
+225
+00:14:29,664 --> 00:14:33,550
+He also noted that Boeing had already
+taken at least twenty corrective
+
+226
+00:14:33,590 --> 00:14:34,590
+actions.
+
+227
+00:14:34,769 --> 00:14:39,087
+Another member said that, over the
+Pacific, it could have been a tragedy.
+
+228
+00:14:40,344 --> 00:14:43,559
+Four bolts, where a single
+lower bolt would have done.
+
+229
+00:14:43,879 --> 00:14:45,827
+The steel had margin to spare.
+
+230
+00:14:46,822 --> 00:14:48,347
+The paperwork had none.

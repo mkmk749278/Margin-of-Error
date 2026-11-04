@@ -873,6 +873,14 @@ strongest idea that could replace it, inside the hard lines.
 - *Remotion's browser download is blocked in the container.* Use the pre-installed headless shell (§10.5).
 - *The rclone binary download is blocked in the container.* Videos go to Drive from GitHub's runners or the phone.
 
+- **2026-11-04 (Film 1 forensic review of round 3b).** (1) *On-screen text is not the voice script:* a word-by-word
+  line built from the VO tokens printed `N T S B`; letters may light on their syllables, but they join on screen
+  (`KeyLine` part `join`). (2) *A swap must not pass through a state the narration contradicts:* removing one bolt and
+  fitting two others at different words showed `3 OF 4` on "the two upper bolts"; move both on the same word and show
+  the count the narration names. (3) *A chart never opens empty:* each slot and its label arrive on their own words
+  before the bar rises; no bar height before its number is said. (4) *Truncated quotes end with an ellipsis.*
+  (5) *Attribution on screen too:* a claim the record disputes reads "SAID …" on screen, as it does in the narration.
+
 ## 17. Decisions and open questions
 
 ### 17.1 Owner's decisions
