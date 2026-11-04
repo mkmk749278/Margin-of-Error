@@ -8,23 +8,12 @@ import phrases from '../data/phrases.json';
 import {altArr, altFt, cabinPsi, CAUTION_T, clockText, EVENT_T, GEAR_AIR_T, GEAR_GROUND_T, latArr, lonArr, WARN_T} from '../fdr';
 import {ActTitle, Fade, media, mono, Mount, Photo, sans, Stamp, useFilmFrame} from '../kit';
 import {ef, FPS, sf, wf} from '../timing';
+import {Arrive, litStyle} from '../beats';
 import {SceneDef} from './types';
 
 // ACT I · THE INCIDENT (screenplay rows 1–9). Cold open on the record: the real FDR (docket DCA24MA063, attachment 1).
 // Word-level choreography (PLAYBOOK §10.6): every beat below sits on a MEASURED word (vo/timing.json); the table that
 // describes them is scenes/choreography/act1.md. Sentence ids are literal so scripts/sync_audit.py can resolve them.
-
-/** Text that takes the light on its word: `sub` before, `tone` after, with a glow that guides the eye. */
-const litStyle = (f: number, on: number, tone: string = colors.ink): React.CSSProperties => ({
-	color: f >= on ? tone : colors.sub,
-	textShadow: `0 0 ${(18 * flash(f, on, 0)).toFixed(1)}px ${tone}`,
-});
-
-/** A word or figure that arrives on its own syllable: rises 12 px and fades in, completing on the word, then bumps. */
-const Arrive: React.FC<{f: number; fps: number; on: number; children: React.ReactNode; style?: React.CSSProperties; dur?: number}> = ({f, fps, on, children, style, dur = 8}) => {
-	const k = lead(f, on, dur);
-	return <span style={{display: 'inline-block', opacity: k, transform: `translateY(${((1 - k) * 12).toFixed(2)}px) scale(${bump(f, fps, on + LAND, 0.06).toFixed(4)})`, transformOrigin: '0 70%', ...style}}>{children}</span>;
-};
 
 // ---------- the flight clock: real time until the pressure drop, then a quarter-speed replay so each recorded event
 // lands on the words that name it (C02, FDR discretes). The drop is anchored to "dropped"; at ×0.25 the recorded cabin
