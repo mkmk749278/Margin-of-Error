@@ -92,7 +92,33 @@ def no_record(src: Path) -> Image.Image:
     return out
 
 
+def the_hole(src: Path) -> Image.Image:
+    """NTSB Figure 1 (public domain, shown at 0:43): row 26 and the hole, the image US and UK viewers know from the
+    news. The real exhibit, so the honesty line is its record id, not a RECONSTRUCTION label."""
+    im = Image.open(src).convert("RGBA")
+    photo = im  # whole figure, with the report's own seat call-outs: it reads as the record
+    scale = H / photo.height
+    photo = photo.resize((int(photo.width * scale), H), Image.LANCZOS)
+    out = Image.new("RGBA", (W, H), VOID + (255,))
+    out.alpha_composite(photo, (-150, 0))
+    shade = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(shade).rectangle((820, 0, W, H), fill=VOID + (255,))
+    out.alpha_composite(shade.filter(ImageFilter.GaussianBlur(50)))
+    f1 = ImageFont.truetype(BOLD, 128)
+    x = 1240 - width("BOLTS", f1, 4)
+    shadowed(out, (x, 170), "NO", f1, INK, tracking=4)
+    shadowed(out, (x, 310), "BOLTS", f1, RED, tracking=4)
+    f2 = ImageFont.truetype(MONO, 28)
+    shadowed(out, (x + 4, 490), "NTSB AIR-25-04 · FIG. 1", f2, AMBER, spread=6)
+    return out
+
+
 def main() -> int:
+    if sys.argv[1] == "--hole":  # thumbnail D from the NTSB figure itself: make_thumbnails.py --hole FIG01.jpg OUTDIR
+        out = Path(sys.argv[3])
+        the_hole(Path(sys.argv[2])).convert("RGB").save(out / "thumb_d_the_hole.jpg", quality=90, optimize=True)
+        print(out / "thumb_d_the_hole.jpg")
+        return 0
     stills, out = Path(sys.argv[1]), Path(sys.argv[2])
     out.mkdir(parents=True, exist_ok=True)
     for name, fn, frame in (("thumb_a_no_bolts", no_bolts, 24720), ("thumb_b_zero_found", all_four, 11640), ("thumb_c_no_paper", no_record, 21480)):

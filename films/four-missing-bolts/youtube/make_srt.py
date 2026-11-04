@@ -18,7 +18,9 @@ MAXC, MAXDUR = 78, 6.5
 PHRASES = [
     ("seven thirty-seven nines", "737-9s"), ("seven thirty-seven nine", "737-9"), ("seven thirty-seven Max", "737 MAX"),
     ("seven thirty-seven", "737"), ("twelve eighty-two", "1282"),
-    ("N - T - S - B", "NTSB"), ("F - A - A", "FAA"),
+    # the word aligner keeps the letters but drops the hyphens: match the letters as spoken
+    ("N T S B's", "NTSB's"), ("F A A's", "FAA's"), ("N T S B", "NTSB"), ("F A A", "FAA"),
+    ("N - T - S - B", "NTSB"), ("F - A - A", "FAA"), ("the Max", "the MAX"),
     ("twenty twenty-four", "2024"), ("twenty twenty-five", "2025"), ("twenty twenty-six", "2026"),
     ("twenty twenty-three", "2023"), ("twenty twenty-two", "2022"), ("twenty twenty", "2020"),
     ("twenty nineteen", "2019"), ("twenty eighteen", "2018"), ("two thousand and five", "2005"),
@@ -34,6 +36,13 @@ PHRASES = [
 
 def norm(w: str) -> str:
     return re.sub(r"[^\w'-]", "", w).lower()
+
+
+def fits(text: str) -> bool:
+    """True when the text fits two lines of at most 42 characters, split at a space."""
+    if len(text) <= 42:
+        return True
+    return any(max(k, len(text) - k - 1) <= 42 for k, ch in enumerate(text) if ch == " ")
 
 
 def main() -> int:
@@ -86,6 +95,17 @@ def main() -> int:
                 cur = []
         if cur:
             cues.append(cur)
+        # no one-word tail on screen for a second: merge it back if two lines still fit, else move a word down
+        while len(cues) > 1 and cues[-1] and cues[-2] and cues[-1][0][1] > cues[-2][0][1] and \
+                len(" ".join(x[0] for x in cues[-1])) < 14 and cues[-2][-1][0][-1] not in ".?:;—":
+            both = " ".join(x[0] for x in cues[-2] + cues[-1])
+            if len(both) <= 84 and fits(both) and cues[-1][-1][2] - cues[-2][0][1] <= 7.5:
+                tail = cues.pop()
+                cues[-1] = cues[-1] + tail
+            elif len(cues[-2]) > 2:
+                cues[-1].insert(0, cues[-2].pop())
+            else:
+                break
     out = []
     for n, c in enumerate(cues, 1):
         a, b = c[0][1], c[-1][2]
@@ -101,7 +121,7 @@ def main() -> int:
         out.append(f"{n}\n{ts(a)} --> {ts(b)}\n{text}\n")
     p = FILM / "youtube/four-missing-bolts.en.srt"
     p.write_text("\n".join(out), encoding="utf-8")
-    left = sorted({m for m in re.findall(r"\b(?:N - T|F - A)\b", p.read_text())})
+    left = sorted({m for m in re.findall(r"\b(?:N -? ?T -? ?S|F -? ?A -? ?A)\b", p.read_text())})
     print(p, len(cues), "cues", "· leftover spaced acronyms:", left or "none")
     return 0
 
