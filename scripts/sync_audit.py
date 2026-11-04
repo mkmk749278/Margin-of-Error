@@ -3,7 +3,7 @@
 
   python3 scripts/sync_audit.py films/<slug> [--max-gap 1.5] [--md films/<slug>/review/sync_audit.md]
 
-Reads every word cue the picture code places on the narration, wf(<sentence>, '<word>'[, nth]) and
+Reads every word cue the picture code places on the narration, wf(<sentence>, '<word>'[, nth]) (single or double quotes) and
 wef(...), in films/<slug>/remotion/**/*.ts(x), and resolves it to measured frames from vo/timing.json (word times from
 scripts/word_align.py). For every spoken sentence it reports the cued words and the longest stretch of speech with no
 word-locked visual event (sentence start and end count as edges, not as events). A sentence fails when that stretch
@@ -16,7 +16,7 @@ import json
 import re
 from pathlib import Path
 
-CUE = re.compile(r"\bw(?:e)?f\(\s*(\d+)\s*,\s*'([^']+)'\s*(?:,\s*(\d+))?\s*\)")
+CUE = re.compile(r"""\bw(?:e)?f\(\s*(\d+)\s*,\s*(?:'([^']+)'|"([^"]+)")\s*(?:,\s*(\d+))?\s*\)""")
 NUM = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
        "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty",
        "sixty", "seventy", "eighty", "ninety", "hundred", "thousand", "million", "billion", "first", "second", "third",
@@ -45,7 +45,7 @@ def main() -> None:
     cued: dict[int, set[int]] = {}
     for src in sorted((a.film / "remotion").rglob("*.ts*")):
         for m in CUE.finditer(src.read_text()):
-            sid, word, nth = int(m.group(1)), clean(m.group(2)), int(m.group(3) or 0)
+            sid, word, nth = int(m.group(1)), clean(m.group(2) or m.group(3)), int(m.group(4) or 0)
             hits = [k for k, w in enumerate(by_s.get(sid, [])) if clean(w["w"]) == word]
             if len(hits) > nth:
                 cued.setdefault(sid, set()).add(hits[nth])
