@@ -36,7 +36,7 @@ const Legend: React.FC<{start: number; end: number; items: {c: string; t: string
 			{items.map((it, i) => {
 				const o = envelope(f, start + i * 18, end, 14, 14);
 				return (
-					<div key={it.t} style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, opacity: o, fontFamily: mono, fontSize: 18, letterSpacing: 2.4, color: colors.ink}}>
+					<div key={it.t} style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, opacity: o, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.ink}}>
 						<span style={{width: 26, height: 10, background: it.c}} />
 						{it.t}
 					</div>
@@ -52,9 +52,9 @@ const Readout: React.FC<{start: number; end: number; title: string; value: strin
 	if (o <= 0) return null;
 	return (
 		<div style={{position: 'absolute', left: x, top: y, width: 420, opacity: o, background: colors.card, border: `1px solid ${colors.border}`, padding: '14px 20px 14px', fontFamily: mono}}>
-			<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>{title}</div>
+			<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>{title}</div>
 			<div style={{fontSize: 34, fontWeight: 700, color: colors[tone], marginTop: 6, letterSpacing: 1, whiteSpace: 'nowrap'}}>{value}</div>
-			{sub ? <div style={{fontSize: 15, letterSpacing: 2, color: colors.sub, marginTop: 6}}>{sub}</div> : null}
+			{sub ? <div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 6}}>{sub}</div> : null}
 		</div>
 	);
 };
@@ -87,7 +87,7 @@ const Opening: React.FC = () => {
 					<PlugSvg cam={camAt(f, [{f: toPlug, yaw: 0, pitch: 0.02, dist: 170}, {f: end, yaw: 0.12, pitch: 0.05, dist: 150}])} state={{...defaultState, bolts: allBolts(0)}} />
 					<OpenDoorGhost start={toPlug} />
 				</Stage>
-				<Caption text="EXIT DOOR ONLY WHEN REQUIRED · OTHERWISE A PLUG" start={toPlug + 20} end={end} y={900} x={150} />
+				<Caption text="EXIT DOOR ONLY WHEN REQUIRED · OTHERWISE A PLUG" start={toPlug + 20} end={end} y={846} x={150} />
 			</Fade>
 		</>
 	);
@@ -99,7 +99,7 @@ const OpenDoorGhost: React.FC<{start: number}> = ({start}) => {
 	if (o <= 0) return null;
 	return (
 		<div style={{position: 'absolute', left: 960 - 190, top: 520 - 330, width: 380, height: 660, border: `2px dashed ${colors.sub}`, borderRadius: 40, opacity: o * 0.8}}>
-			<div style={{position: 'absolute', top: -34, left: 0, fontFamily: mono, fontSize: 16, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap'}}>EMERGENCY EXIT DOOR</div>
+			<div style={{position: 'absolute', top: -34, left: 0, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, whiteSpace: 'nowrap'}}>EMERGENCY EXIT DOOR</div>
 		</div>
 	);
 };
@@ -141,7 +141,7 @@ const Restraints: React.FC = () => {
 	const stopLabel = (i: number, side: 1 | -1) => {
 		const p = projectPoint(cam, [side * (PLUG.w / 2 + 6.5), STOP_Y[i], -0.5]);
 		return (
-			<text key={`${i}${side}`} x={p.x} y={p.y + 5} textAnchor="middle" fill={colors.cyan} fontFamily="JetBrains Mono" fontSize={15} opacity={Math.max(0, Math.min(1, lit - i * 2)) * glow}>
+			<text key={`${i}${side}`} x={p.x} y={p.y + 5} textAnchor="middle" fill={colors.cyan} fontFamily="JetBrains Mono" fontSize={26} opacity={Math.max(0, Math.min(1, lit - i * 2)) * glow}>
 				{i + 1}
 				{side > 0 ? 'F' : 'A'}
 			</text>
@@ -152,7 +152,7 @@ const Restraints: React.FC = () => {
 			<PlugSvg cam={cam} state={state} extra={<>{arrows}{[0, 1, 2, 3, 4, 5].flatMap((i) => [stopLabel(i, 1), stopLabel(i, -1)])}</>} />
 			<Readout start={a + 10} end={stopsIn + 10} title="PLUG WEIGHT · 1 G · NTSB" value={`${Math.round(63 * w)} LB`} sub="28.6 KG" tone="cyan" />
 			<Legend start={sf(26)} end={end} items={[{c: colors.cyan, t: 'STOPS · AGAINST OUTWARD'}, {c: colors.amber, t: 'BOLTS · AGAINST UPWARD'}]} />
-			<Caption text="CABIN PRESSURE PUSHES OUTWARD · 12 STOPS CARRY IT" start={wf(28, 'bear')} end={end} tone="cyan" y={900} x={150} />
+			<Caption text="CABIN PRESSURE PUSHES OUTWARD · 12 STOPS CARRY IT" start={wf(28, 'bear')} end={end} tone="cyan" y={846} x={150} />
 		</Stage>
 	);
 };
@@ -194,8 +194,8 @@ const OneDirection: React.FC = () => {
 				}
 			/>
 			<Readout start={liftA - 10} end={end} title="CRITICAL CLEARANCE THRESHOLD" value={`${shown.toFixed(2)} / 0.50 IN`} sub={cleared ? 'STOP PINS CLEAR THE PADS' : 'STOP PINS BEARING ON PADS'} tone={cleared ? 'red' : 'cyan'} />
-			<Caption text="STOPS HOLD OUTWARD · NOT UPWARD" start={sf(29) + 10} end={liftA} y={900} x={150} />
-			<Caption text="TOP SWINGS OUT ABOUT THE LOWER HINGES" start={swingA + 10} end={end} y={900} x={150} tone="red" />
+			<Caption text="STOPS HOLD OUTWARD · NOT UPWARD" start={sf(29) + 10} end={liftA} y={846} x={150} />
+			<Caption text="TOP SWINGS OUT ABOUT THE LOWER HINGES" start={swingA + 10} end={end} y={846} x={150} tone="red" />
 		</Stage>
 	);
 };
@@ -212,18 +212,19 @@ const BoltStack: React.FC<{start: number; end: number; ons: number[]}> = ({start
 	];
 	const spread = tween(f, start + 20, start + 80, 0, 1, ease.arrive);
 	let x = 60;
+	// round 3: wide enough that every part and label stays inside the mount (the cotter pin was cut off)
 	return (
-		<Mount x={1100} y={640} w={680} h={290} source="ILLUSTRATION · AFTER NTSB AIR-25-04 P. 12" start={start} end={end} lean={2}>
-			<svg width={700} height={266}>
+		<Mount x={980} y={630} w={840} h={300} source="ILLUSTRATION · AFTER NTSB AIR-25-04 P. 12" start={start} end={end} lean={2}>
+			<svg width={840} height={244}>
 				{parts.map((p, i) => {
-					const px = x + i * 40 * spread;
+					const px = x + i * 56 * spread;
 					const on = tween(f, ons[i], ons[i] + 14, 0, 1, ease.arrive);
 					x += p.w + 6;
 					return (
 						<g key={i}>
 							<rect x={px} y={120 - p.h / 2 - (1 - on) * 30} width={p.w} height={p.h} fill={i === 0 ? '#7a4e08' : '#5c3d0a'} stroke={colors.amber} strokeWidth={1.5} rx={i === 3 ? 4 : 2} opacity={on} />
 							{i === 0 ? <rect x={px - 30} y={120 - 26 - (1 - on) * 30} width={30} height={52} fill="#7a4e08" stroke={colors.amber} strokeWidth={1.5} opacity={on} /> : null}
-							<text x={px + p.w / 2} y={i % 2 ? 196 : 66} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontSize={17} letterSpacing={1.5} opacity={Math.min(spread, on)}>
+							<text x={px + p.w / 2} y={i % 2 ? 200 : 62} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1} opacity={Math.min(spread, on)}>
 								{p.t}
 							</text>
 						</g>
@@ -257,10 +258,12 @@ const FourBolts: React.FC = () => {
 	const callout = (name: string, text: string, on: number) => {
 		const p = anchor(state, cam, name);
 		const o = tween(f, on, on + 16, 0, 1);
+		// round 3: the lower right label gives way to the fastener stack when it arrives (they shared the space)
+		const textO = name === 'lowerFwd' ? 1 - tween(f, stackIn - 14, stackIn + 6, 0, 1) : 1;
 		return (
 			<g key={name} opacity={o}>
 				<circle cx={p.x} cy={p.y} r={18} fill="none" stroke={colors.amber} strokeWidth={2} />
-				<text x={p.x + (name.includes('Fwd') ? 30 : -30)} y={p.y + 6} textAnchor={name.includes('Fwd') ? 'start' : 'end'} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={16} letterSpacing={1.6}>
+				<text x={p.x + (name.includes('Fwd') ? 30 : -30)} y={p.y + 6} textAnchor={name.includes('Fwd') ? 'start' : 'end'} fill={colors.amber} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1} opacity={textO}>
 					{text}
 				</text>
 			</g>
@@ -281,7 +284,7 @@ const FourBolts: React.FC = () => {
 				}
 			/>
 			<BoltStack start={stackIn - 10} end={end} ons={[stackIn - 4, wf(35, 'washers') - 6, wf(35, 'washers') + 6, wf(35, 'castle') - 6, wf(35, 'cotter') - 6]} />
-			<Caption text="THEIR ONLY JOB: STOP UPWARD MOVEMENT" start={jobAt} end={end} tone="amber" y={900} x={150} />
+			<Caption text="THEIR ONLY JOB: STOP UPWARD MOVEMENT" start={jobAt} end={end} tone="amber" y={846} x={150} />
 		</Stage>
 	);
 };
@@ -320,7 +323,7 @@ const Margin: React.FC = () => {
 				<PlugSvg cam={cam} state={state} />
 				<Readout start={a + 6} end={end} title="UPWARD RETENTION" value="HOLDS" sub={sub} tone="cyan" y={180} />
 				<div style={{position: 'absolute', left: 1380, top: 360, width: 380, fontFamily: mono, opacity: envelope(f, oneA, end, 14, 10)}}>
-					<div style={{fontSize: 14, letterSpacing: 2.6, color: colors.muted}}>BOLTS INSTALLED</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>BOLTS INSTALLED</div>
 					<div style={{display: 'flex', gap: 10, marginTop: 10}}>
 						{BOLT_IDS.map((id) => (
 							<div key={id} style={{width: 72, height: 18, background: bolts[id] > 0.5 ? colors.amber : 'transparent', border: `1px solid ${colors.amber}`, opacity: 0.4 + 0.6 * bolts[id]}} />
@@ -328,10 +331,10 @@ const Margin: React.FC = () => {
 					</div>
 					<div style={{fontSize: 30, fontWeight: 700, color: colors.ink, marginTop: 10}}>{count} OF 4</div>
 				</div>
-				<div style={{position: 'absolute', left: 150, top: 820, fontFamily: sans, fontWeight: 700, fontSize: 54, letterSpacing: 6, color: colors.ink, opacity: k, transform: `translateY(${(1 - k) * 20}px)`}}>
+				<div style={{position: 'absolute', left: 150, top: 772, fontFamily: sans, fontWeight: 700, fontSize: 54, letterSpacing: 6, color: colors.ink, opacity: k, transform: `translateY(${(1 - k) * 20}px)`}}>
 					4 WHERE 1 HOLDS
 				</div>
-				<div style={{position: 'absolute', left: 150, top: 890, fontFamily: mono, fontSize: 16, letterSpacing: 2.4, color: colors.sub, opacity: k}}>BOEING ENGINEERING REVIEW · REPORTED IN NTSB AIR-25-04 P. 33</div>
+				<div style={{position: 'absolute', left: 150, top: 852, fontFamily: mono, fontSize: 26, letterSpacing: 1, color: colors.sub, opacity: k}}>BOEING ENGINEERING REVIEW · REPORTED IN NTSB AIR-25-04 P. 33</div>
 			</Stage>
 			{docO > 0 ? (
 				<AbsoluteFill style={{opacity: docO}}>
@@ -369,7 +372,7 @@ const Missing: React.FC = () => {
 const Holes: React.FC = () => {
 	const a = sf(44) - 14;
 	const swap = sf(46) - 8;
-	const end = sf(48) + 6;
+	const end = sf(48) + 40; // round 3: fades out under the question, never onto a bare desk
 	return (
 		<>
 			<Photo src={media('img/fig13_arrestor_bolt_holes.jpg')} iw={1289} ih={793} start={a} end={swap + 16} source="NTSB AIR-25-04 · FIG. 13 · VERTICAL MOVEMENT ARRESTOR BOLT HOLES" tag="FIG. 13" from={{x: 0, y: 0, w: 1289, h: 793}} to={{x: 60, y: 40, w: 640, h: 500}} />
@@ -389,7 +392,7 @@ const Question: React.FC = () => {
 	return (
 		<AbsoluteFill style={{opacity: o, alignItems: 'center', justifyContent: 'center'}}>
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, letterSpacing: 1, color: colors.ink, textAlign: 'center', lineHeight: 1.3}}>
-				<TypeOn text="WHO TOOK THEM OUT," start={Math.min(wf(48, 'who'), sf(48) + 30)} cps={24} caret={false} />
+				<TypeOn text="WHO TOOK THEM OUT," start={sf(48) + 34} cps={18} caret={false} />
 				<br />
 				<TypeOn text="AND WHY WERE THEY NEVER PUT BACK?" start={wf(48, 'why')} cps={24} caret={false} />
 			</div>
@@ -406,7 +409,7 @@ export const act2: SceneDef[] = [
 	{id: 'fourbolts', from: sf(32) - 20, to: sf(37) + 20, C: FourBolts, cues: [{frame: sf(33), sfx: 'relay_click', gainDb: -12}, {frame: sf(34), sfx: 'relay_click', gainDb: -12}, {frame: sf(36) + 20, sfx: 'metal_snap_sub', gainDb: -20}]},
 	{id: 'margin', from: sf(37) - 20, to: sf(43) + 6, C: Margin, cues: [{frame: sf(38), sfx: 'paper_slide', gainDb: -14}, {frame: sf(38) + 60, sfx: 'highlighter', gainDb: -16}, {frame: sf(39) + 10, sfx: 'relay_click', gainDb: -16}, {frame: sf(39) + 50, sfx: 'relay_click', gainDb: -16}, {frame: sf(39) + 90, sfx: 'relay_click', gainDb: -16}, {frame: sf(41) + 6, sfx: 'relay_click', gainDb: -14}, {frame: sf(41) + 40, sfx: 'stamp', gainDb: -14}]},
 	{id: 'missing', from: sf(43) - 16, to: sf(44) + 20, C: Missing, cues: [{frame: wf(43, 'missing') - 30, sfx: 'metal_snap_sub', gainDb: -10}]},
-	{id: 'holes', from: sf(44) - 24, to: sf(48) + 16, C: Holes, cues: [{frame: sf(44), sfx: 'paper_slide', gainDb: -16}]},
+	{id: 'holes', from: sf(44) - 24, to: sf(48) + 50, C: Holes, cues: [{frame: sf(44), sfx: 'paper_slide', gainDb: -16}]},
 	{id: 'question', from: sf(48) - 20, to: ef(48) + 130, C: Question},
 	{id: 'act3title', from: ef(48) + 100, to: sf(49) + 50, C: ActIII, cues: [{frame: ef(48) + 110, sfx: 'whoosh', gainDb: -20}]},
 ];

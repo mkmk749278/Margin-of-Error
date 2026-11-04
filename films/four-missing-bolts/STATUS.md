@@ -1,4 +1,4 @@
-# The Four Missing Bolts: status and handoff (2026-11-03, evening)
+# The Four Missing Bolts: status and handoff (2026-11-04)
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
 
@@ -32,8 +32,23 @@ Owner's notes: "so many audio gaps, it feels like the video stopped"; the word-l
   original, no click. Take `vo/four-missing-bolts_vo_b01_v2.mp3` in Drive (the original kept).
 - **Word-level choreography:** kit `lib/remotion/Kinetic.tsx`; the journey (sentences 49–50) rebuilt beat by beat
   (`scenes/choreography/journey.md`); the 154-flight counter now lands on "fifty-four". Audit
-  (`review/sync_audit.md`): 161 of 177 sentences still have an uncued stretch over 1.5 s. **Next: act by act,
-  Act I first.**
+  (`review/sync_audit.md`): 161 of 177 sentences still had an uncued stretch over 1.5 s.
+- **Legibility pass merged (2026-11-04).** The round-2b check and its fixes (every label ≥ 26 px across the film,
+  one driver for the g trace, the removal record rebuilt, 13 faults; `review/round2b_check.md`) sat on branch
+  `ccr-f2c16d1a-fculpb` and had never reached `main`: the round-3a render was built without them. Merged here, Act I
+  re-floored by hand; `scripts/text_floor.py` reads 0.
+- **Act I choreographed word by word (2026-11-04):** sentences 0–22, 113 word cues
+  (`scenes/choreography/act1.md`). The date, the event time, the aircraft, the NTSB altitude, the alarms, the
+  quotes, the photographs' camera ("behind the wing", "left side", "hole"), the 29 × 59 in dimensions, the seats,
+  the track and injury counts, the voice-recorder tape, the report, the 108-day bar and the question all change on
+  their own words. **The FDR replay is now anchored to "dropped":** at ×0.25 the recorded warning and master
+  caution then land within 100 ms of their words from the record itself. Sync audit: Act I 23/23 pass; film
+  139 of 177 sentences still fail (Acts II–V).
+- **Mix patched for the moved effects** (pressure drop, two chimes, paper, highlighter, pen, a new stamp):
+  `scripts/patch_mix_sfx.py` (old mix − old cues + new cues, same limiter; changes confined to 15.4–79.3 s).
+  −14.0 LUFS, −1.4 dBTP, unchanged. Drive `mix/mix.wav`; the previous kept as `mix/mix_round3a.wav`.
+- **Next: Act II choreography** (sentences 23 on), then III, IV, V; then the 720p round-3 cut on the farm, its
+  stillness, flash and loudness checks and a sheet read, then to the owner.
 
 ## Delivered to the owner (2026-11-03), round 2
 Round-2 cut (owner's PDF notes, audio locked, plus a deep review): Drive `renders/four-missing-bolts_review_round2b_720p.mp4`.
@@ -60,4 +75,6 @@ faults found) with the fix list for the next round. Not applied yet.
 - Brand art still to design. Before publication: status of the plug design enhancement (C65).
 
 ## Branches
-`ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs session 2026-11-03: `ccr-f2c16d1a-fculpb`.
+All merged into `main` and safe to delete: `ccr-1364b7b0-rh2ico`, `ccr-f2c16d1a-fculpb` (merged 2026-11-04),
+`review-fresh-eyes-r2` (review session), and this session's `ccr-e72aa454-utqxe5` once its PR is merged.
+`ccr-76270493-hjpb56` and `ccr-9288f556-4k3oqe` (merged) can be deleted. Docs and round-3 session 2026-11-03: `ccr-f2c16d1a-fculpb`.

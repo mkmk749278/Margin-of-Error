@@ -563,6 +563,10 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
   (`npx esbuild films/<slug>/remotion/cues_export.ts --bundle --platform=node --format=esm --loader:.json=json --outfile=/tmp/cues.mjs && node /tmp/cues.mjs > films/<slug>/sound/cues.json`),
   move the music slots in `sound/mix.json` to the new seconds, run `scripts/mix_film.py`, and put `assets/mix/mix.wav`
   in Drive `<slug>/mix/` (keep the previous one beside it, renamed) before a render.
+- **Only effects moved?** When `sound/cues.json` changes but `vo/timing.json`, the voice and the music slots don't,
+  patch instead of rebuilding: `python3 scripts/patch_mix_sfx.py films/<slug> OLD_CUES.json` (old mix − the removed
+  cues + the added cues, the same limiter; it prints the changed span and both measurements). *Why (2026-11-04):*
+  rebuilding needs `film_vo.wav`, which holds a one-sentence re-take cut in by hand; the patch leaves the voice untouched.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
 - Never use a real alarm or cockpit recording that isn't released and licensed; synthesised tones are labelled in
   the manifest as synthesised.
@@ -659,9 +663,10 @@ question from the record (which layer should have caught it?), no link, no subsc
 - Text readable on a phone; nothing important under YouTube's overlays.
 - **Legibility measured (§6.7):** no fact-carrying text under 26 px at 1080, nothing the narration points to under
   36 px, no fact in `muted`, nothing outside the 90% graphics-safe area, no text on a grid line, nothing clipped at a
-  mount's edge. Search the film code for font sizes below the floor before every render.
+  mount's edge. `scripts/text_floor.py` must read 0 before every render.
 - **Motion a viewer can see (§6.4):** every hold over 2.5 s has a camera move, a moving readout or a new element;
   grain and grid drift don't count. Check the dead zones: after each type-on, counter landing and card build.
+  `scripts/stillness_audit.py` on the cut must read 0.
 - **Sync (§10.3):** multi-part builds on their words; highlights complete on their word; every readout agrees with
   the trace or picture beside it.
 - **One desk pose** for every document (§6.6).
@@ -711,6 +716,11 @@ strongest idea that could replace it, inside the hard lines.
 - `scripts/vo_timing.py` + `scripts/align_script.py`: VO timing. `scripts/vo_review.py`: measures each take.
 - `scripts/score_mix.py`: the mixer. `scripts/contact_sheet.py`: timecoded sheets. `scripts/shoot.mjs`: HTML/SVG → image.
 - `scripts/render_shards.mjs`: sharded renders, flash-frame and length checks.
+- `scripts/stillness_audit.py` (new, 2026-11-03): still holds in a cut (4 fps, 320 px grey, < 0.4% of pixels moving
+  more than 6 levels for 3 s). Must read 0 before a cut goes to the owner.
+- `scripts/text_floor.py` (new, 2026-11-03): the §6.7 lint over the film code: font sizes below 26 px, facts in
+  `muted`, text colours off the tokens. Must read 0 before a render; `// floor-ok: <reason>` only for decoration.
+- `scripts/patch_mix_sfx.py` (new, 2026-11-04): moves effects in a finished mix when only cues changed (§12).
 - `scripts/upload_gdrive.sh`, `scripts/gdrive_pull.sh`, `scripts/termux_fetch_to_drive.sh`: Drive.
 - `.github/workflows/remotion-render.yml`: the render farm.
 - Python needs: `pyyaml` (brand), `numpy`, `pillow`; the VO tools list theirs in their headers.
@@ -722,6 +732,20 @@ strongest idea that could replace it, inside the hard lines.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Act I choreographed; a review branch never merged (2026-11-04).**
+- *A rendered review branch that never reached `main`.* The round-2b fixes (the 26 px floor across the film, 13
+  faults) were rendered from their own branch and reported, but the PR was never opened; the next session branched
+  from `main` and the round-3a cut silently lost them. **Rule:** at the start of every session, run
+  `git log --oneline main..origin/<branch>` for each branch on the remote; anything unmerged is merged (or reported)
+  before new work. A render is reported only from a commit that is on `main` or in an open PR.
+- *Sync a replay to the narration by choosing its anchor, never by moving the record.* At ×0.25 the FDR's own
+  intervals (warning +0.587 s, master caution +1.447 s after the drop) land on "warning" and "caution" once the drop
+  is placed on "dropped"; before, with the drop at the sentence start, both alarms lit about a second early.
+- *A photograph's camera can follow the words.* `Photo` takes a `path` of focus rectangles on word frames ("behind
+  the wing" → the wing root, "left side" → the whole side, "hole" → the opening). Keep the box's aspect (about
+  2.1 : 1) in every rectangle or the cover-fit crops the subject; keep the record's own labels (NTSB's seat callouts)
+  in frame.
+
 **Word-level choreography and dead air (owner, 2026-11-03).**
 - *Sentence-level matching read as a slideshow.* 69 word cues on 2,097 words. **Rule:** §10.6, the three laws, the
   choreography table, `scripts/sync_audit.py`.
@@ -731,6 +755,19 @@ strongest idea that could replace it, inside the hard lines.
   music). **Rule:** every generated asset goes to Drive `<slug>/assets/el/` the moment it is made.
 - *rclone's own download host is blocked, but its GitHub release is not:* `scripts/gdrive_pull.sh` and
   `upload_gdrive.sh` fetch the pinned binary from `github.com/rclone/rclone/releases` when the first host fails.
+
+**Round 2b checked, round 3 applied (2026-11-03).**
+- *Applying an outside note word for word can make the fault worse.* Round 2 moved the g-trace dip earlier, as the
+  note asked; the trace then showed 0.40 g for 8 s while its readout still said 63 lb at 1 g. It shifted the 2025 arc
+  label 16 px, which changed nothing (the real fault was 15 px type over a grid line), and it added a 1 Hz amber
+  blinker that the check had declined. **Rule:** §14.3 is not optional: fix from the `_check.md`, not from the note.
+- *A sync fix needs one driver, not a moved keyframe.* The weight readout is now computed from the trace's head
+  (63 lb × the dip drawn so far, holding the lowest value), so the two cannot disagree at any frame.
+- *"Light the rows on the words" needs the words mapped to the right rows:* row 1 lit on "steps" in round 2. Read
+  the sentence against the rows (`review/round2b_check.md`).
+- *A legibility rule needs a lint.* 150 lines of the film's code sat below 26 px after round 2's targeted fixes; the
+  floor was only met once `scripts/text_floor.py` listed every one. Shared components (mount strip, labels, quote
+  attributions, readouts, timeline labels) carried most of them.
 
 **Outside visual review of the review cut, and the audience research (2026-11-03).**
 - *An outside review is leads, not orders.* Of its twelve points, five were true as stated, five were real problems

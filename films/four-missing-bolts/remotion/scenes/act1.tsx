@@ -41,7 +41,7 @@ const Panel: React.FC<{x: number; y: number; w: number; h: number; title: string
 	const glow = on === undefined ? 0 : flash(f, on, 0.25);
 	return (
 		<div style={{position: 'absolute', left: x, top: y, width: w, height: h, background: 'rgba(10,13,18,0.6)', border: `1px solid ${lit > 0.5 ? tone : colors.border}`, boxShadow: glow > 0.01 ? `0 0 ${(28 * glow).toFixed(1)}px ${tone}44` : 'none'}}>
-			<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 18px 0', fontFamily: mono, fontSize: 16, letterSpacing: 2.6, color: lit > 0.5 ? colors.ink : colors.sub}}>
+			<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 18px 0', fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: lit > 0.5 ? colors.ink : colors.sub}}>
 				<span>{title}</span>
 				{right}
 			</div>
@@ -69,7 +69,7 @@ const Annunciator: React.FC<{label: string; on: number; tone: 'red' | 'amber'; x
 				justifyContent: 'center',
 				fontFamily: mono,
 				fontWeight: 700,
-				fontSize: 24,
+				fontSize: 26,
 				letterSpacing: 3,
 				color: active ? '#0a0d12' : colors.sub,
 				background: active ? c : 'transparent',
@@ -164,7 +164,7 @@ const FdrOpen: React.FC = () => {
 				</div>
 				<div style={{marginTop: 26, fontFamily: mono, fontSize: 26, letterSpacing: 5, color: colors.sub, opacity: tween(f, D.year + 10, D.year + 40, 0, 1)}}>ALASKA AIRLINES FLIGHT 1282 · BOEING 737-9 · N704AL</div>
 			</AbsoluteFill>
-			<Mount x={110} y={96} w={1700} h={860} source="DISPLAY REDRAWN FROM NTSB DOCKET DCA24MA063 · FDR TABULAR DATA, ATT. 1" tag="FDR" start={panelIn} end={end} lean={2} labels={['RECONSTRUCTION', 'PLAYBACK ' + rate]}>
+			<Mount x={110} y={96} w={1700} h={860} source="REDRAWN FROM NTSB DOCKET DCA24MA063 · FDR DATA, ATT. 1" tag="FDR" start={panelIn} end={end} lean={2} labels={['RECONSTRUCTION', 'PLAYBACK ' + rate]}>
 				<div style={{position: 'absolute', inset: 0, transform: `translateX(${shake}px)`}}>
 					{/* clock, and the event time built on "twelve minutes / thirty-three seconds / past five / afternoon" */}
 					<Panel x={40} y={40} w={640} h={180} title="TIME · PST" on={E.min}>
@@ -185,7 +185,7 @@ const FdrOpen: React.FC = () => {
 						h={300}
 						title="PRESSURE ALTITUDE"
 						on={E.climbed}
-						right={<span style={{color: colors.cyan, fontSize: 22, display: 'inline-block', transform: `scale(${bump(f, fps, E.climbed + LAND).toFixed(4)})`, textShadow: `0 0 ${(16 * flash(f, E.climbed, 0)).toFixed(1)}px ${colors.cyan}`}}>CLIMBING</span>}
+						right={<span style={{color: colors.cyan, fontSize: 26, display: 'inline-block', transform: `scale(${bump(f, fps, E.climbed + LAND).toFixed(4)})`, textShadow: `0 0 ${(16 * flash(f, E.climbed, 0)).toFixed(1)}px ${colors.cyan}`}}>CLIMBING</span>}
 					>
 						<div style={{position: 'absolute', left: 18, top: 60, fontFamily: mono, fontSize: 132, fontWeight: 700, color: colors.ink, fontVariantNumeric: 'tabular-nums', letterSpacing: -2}}>
 							{Math.round(alt).toLocaleString('en-US')}
@@ -203,7 +203,7 @@ const FdrOpen: React.FC = () => {
 						h={510}
 						title="CABIN PRESSURE · CPC1"
 						on={P.cabin}
-						right={<StatusFlip f={f} fps={fps} word={P.dropped} from="NOMINAL" to="PRESSURE LOSS" toneFrom="cyan" toneTo="red" size={20} style={{padding: '2px 10px'}} />}
+						right={<StatusFlip f={f} fps={fps} word={P.dropped} from="NOMINAL" to="PRESSURE LOSS" toneFrom="cyan" toneTo="red" size={26} style={{padding: '0 10px'}} />}
 					>
 						<div style={{position: 'absolute', left: 18, top: 52, fontFamily: mono, fontSize: 64, fontWeight: 700, color: f >= F_EVENT ? colors.red : colors.ink, fontVariantNumeric: 'tabular-nums'}}>
 							{psi.toFixed(2)}
@@ -217,7 +217,7 @@ const FdrOpen: React.FC = () => {
 							return (
 								<g key={v}>
 									<line x1={gx} x2={gx + gw} y1={y} y2={y} stroke={colors.border} strokeWidth={1} />
-									<text x={gx + gw + 10} y={y + 5} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={16}>
+									<text x={gx + gw + 10} y={y + 5} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26}>
 										{v}
 									</text>
 								</g>
@@ -234,21 +234,21 @@ const FdrOpen: React.FC = () => {
 								</text>
 							</g>
 						) : null}
-						<text x={gx + 8} y={gy + gh - 12} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={16} letterSpacing={2}>
+						<text x={gx + 8} y={gy + gh - 12} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							- - ALTITUDE 13,000–17,000 FT
 						</text>
 						<polyline points={pts.join(' ')} fill="none" stroke={colors.cyan} strokeWidth={3} strokeDasharray={4000} strokeDashoffset={4000 * (1 - draw)} />
 						{redPts.length > 1 ? <polyline points={redPts.join(' ')} fill="none" stroke={colors.red} strokeWidth={4} /> : null}
 						<line x1={gx + gw} x2={gx + gw} y1={gy - 10} y2={gy + gh + 10} stroke={colors.sub} strokeWidth={1} strokeDasharray="4 6" />
-						<text x={gx} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={16} letterSpacing={2}>
+						<text x={gx} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							−60 S
 						</text>
-						<text x={gx + gw - 44} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={16} letterSpacing={2}>
+						<text x={gx + gw - 58} y={gy + gh + 34} fill={colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2}>
 							NOW
 						</text>
 					</svg>
 					{/* annunciators: FDR discretes, drawn as plain tiles (not a cockpit panel) */}
-					<div style={{position: 'absolute', left: 40, top: 590, fontFamily: mono, fontSize: 16, letterSpacing: 2.6, color: colors.sub}}>RECORDED DISCRETES</div>
+					<div style={{position: 'absolute', left: 40, top: 560, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>RECORDED DISCRETES</div>
 					<Annunciator label="CABIN ALT WARNING" on={F_WARN} tone="red" x={40} y={625} />
 					<Annunciator label="MASTER CAUTION" on={F_CAUT} tone="amber" x={400} y={625} />
 					<svg width={1700} height={860} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
@@ -261,13 +261,13 @@ const FdrOpen: React.FC = () => {
 								<line x1={205} x2={205 + 360 * oneSec} y1={614} y2={614} stroke={colors.amber} strokeWidth={2} />
 								<line x1={205} x2={205} y1={606} y2={622} stroke={colors.amber} strokeWidth={2} />
 								<line x1={205 + 360 * oneSec} x2={205 + 360 * oneSec} y1={606} y2={622} stroke={colors.amber} strokeWidth={2} />
-								<text x={385} y={604} textAnchor="middle" fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={26} transform={`translate(385 596) scale(${bump(f, fps, P.second + LAND).toFixed(4)}) translate(-385 -596)`}>
+								<text x={205 + 360 * oneSec + 12} y={622} fill={colors.amber} fontFamily="JetBrains Mono" fontWeight={700} fontSize={26} transform={`translate(${205 + 360 * oneSec + 12} 612) scale(${bump(f, fps, P.second + LAND).toFixed(4)}) translate(${-(205 + 360 * oneSec + 12)} -612)`}>
 									+1 S
 								</text>
 							</g>
 						) : null}
 					</svg>
-					<div style={{position: 'absolute', left: 760, top: 592, width: 900, fontFamily: mono, fontSize: 26, letterSpacing: 1.4, color: '#cbd5e1', lineHeight: 1.5, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
+					<div style={{position: 'absolute', left: 760, top: 592, width: 900, fontFamily: mono, fontSize: 26, letterSpacing: 1.4, color: colors.ink, lineHeight: 1.5, opacity: tween(f, F_EVENT + 20, F_EVENT + 60, 0, 1)}}>
 						<div>17:12:33 · CPC1 14.08 → 9.08 PSI IN 2 S</div>
 						<div style={{color: colors.sub}}>NTSB: CLIMBING THROUGH ABOUT 14,830 FT</div>
 					</div>
@@ -642,9 +642,9 @@ const Track: React.FC = () => {
 						</Arrive>
 					</span>
 				</div>
-				<div style={{fontSize: 22, letterSpacing: 2.6, color: colors.sub, marginTop: 24}}>TIME · PST</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 24}}>TIME · PST</div>
 				<div style={{fontSize: 52, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>{clockText(Math.min(t, GEAR_GROUND_T + 5))}</div>
-				<div style={{fontSize: 22, letterSpacing: 2.6, color: colors.sub, marginTop: 14}}>PRESSURE ALTITUDE</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 14}}>PRESSURE ALTITUDE</div>
 				<div style={{fontSize: 40, fontWeight: 700, fontVariantNumeric: 'tabular-nums'}}>
 					{Math.max(0, Math.round(altArr[Math.min(head, altArr.length - 1)])).toLocaleString('en-US')} <span style={{fontSize: 26, color: colors.sub}}>FT</span>
 				</div>
@@ -658,7 +658,7 @@ const Track: React.FC = () => {
 					<span style={{fontSize: 26, letterSpacing: 1.4, color: colors.sub, opacity: lead(f, T.later, 10)}}>AFTER 17:12:33</span>
 				</div>
 				<div style={{marginTop: 28, opacity: lead(f, T.eight, 12)}}>
-					<div style={{fontSize: 22, letterSpacing: 2.6, color: colors.sub}}>INJURIES · NTSB</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>INJURIES · NTSB</div>
 					<div style={{display: 'flex', gap: 40, marginTop: 6}}>
 						<div>
 							<div style={{fontSize: 56, fontWeight: 700, color: colors.amber, fontVariantNumeric: 'tabular-nums', display: 'inline-block', transform: `scale(${bump(f, fps, T.eight + LAND).toFixed(4)})`}}>{injuries}</div>
@@ -724,7 +724,7 @@ const Paper: React.FC = () => {
 						COCKPIT VOICE RECORDER
 						<div style={{position: 'absolute', left: -6, right: -6, top: 16, height: 3, background: colors.red, transform: `scaleX(${strike.toFixed(3)})`, transformOrigin: '0 50%'}} />
 					</div>
-					<div style={{position: 'absolute', right: 30, top: 26, fontFamily: mono, fontSize: 20, letterSpacing: 2.4, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>ILLUSTRATION · NOT TO SCALE</div>
+					<div style={{position: 'absolute', right: 30, top: 26, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>ILLUSTRATION · NOT TO SCALE</div>
 					<svg width={bw + 20} height={150} style={{position: 'absolute', left: bx, top: 80, overflow: 'visible'}}>
 						{/* the two stretches of the recording */}
 						<rect x={0} y={30} width={split} height={60} fill="rgba(56,189,248,0.06)" stroke={f >= C.cockpit ? colors.cyan : colors.border} strokeWidth={f >= C.cockpit ? 2 : 1} />
@@ -734,14 +734,14 @@ const Paper: React.FC = () => {
 						{/* "recorded over the flight": the overwrite runs back over the flight's stretch */}
 						{over > 0 ? <rect x={0} y={30} width={Math.min(split, over)} height={60} fill={colors.red} opacity={0.42} /> : null}
 						{f >= C.recorder ? <line x1={headX} x2={headX} y1={18} y2={102} stroke={colors.ink} strokeWidth={3} opacity={lead(f, C.recorder, 8)} /> : null}
-						<text x={split} y={18} textAnchor="middle" fontFamily="JetBrains Mono" fontSize={24} letterSpacing={2} fill={colors.amber} opacity={lead(f, C.landing, 8)}>
-							▲ LANDING 17:26:46
+						<text x={split} y={18} textAnchor="middle" fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2} fill={colors.amber} opacity={lead(f, C.landing, 8)}>
+							▼ LANDING 17:26:46
 						</text>
 					</svg>
 					<div style={{position: 'absolute', left: bx, top: 184, fontFamily: mono, fontSize: 26, letterSpacing: 2.4, opacity: lead(f, C.cockpit, 10)}}>
 						<StatusFlip f={f} fps={fps} word={C.flight} from="ACCIDENT FLIGHT" to="OVERWRITTEN" toneFrom="cyan" toneTo="red" size={24} style={{padding: '2px 10px', background: f >= C.flight ? colors.red : 'rgba(10,13,18,0.85)'}} />
 					</div>
-					<div style={{position: 'absolute', left: bx + split + 4, top: 188, fontFamily: mono, fontSize: 24, letterSpacing: 2.4, color: colors.amber, opacity: lead(f, C.running, 10)}}>AFTER LANDING</div>
+					<div style={{position: 'absolute', left: bx + split + 4, top: 188, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.amber, opacity: lead(f, C.running, 10)}}>AFTER LANDING</div>
 					<div style={{position: 'absolute', left: 30, top: 270, fontFamily: mono, fontSize: 40, fontWeight: 700, letterSpacing: 4, color: colors.ink, whiteSpace: 'nowrap'}}>
 						<Arrive f={f} fps={fps} on={C.no}>
 							NO AUDIO
@@ -774,10 +774,10 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 	if (small) {
 		// the open loop kept in view, quietly: one line, top right, until the photograph is in evidence
 		return (
-			<div style={{position: 'absolute', right: 72, top: 34, opacity: o * 0.9, fontFamily: mono, fontSize: 17, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 10}}>
-				<span style={{width: 14, height: 10, border: `1px dashed ${colors.amber}`}} />
+			<div style={{position: 'absolute', right: 96, top: 44, opacity: o * 0.95, fontFamily: mono, fontSize: 26, letterSpacing: 0.8, color: colors.ink, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 12, background: colors.card, border: `1px solid ${colors.border}`, padding: '6px 14px 5px'}}>
+				<span style={{width: 16, height: 12, border: `1px dashed ${colors.amber}`}} />
 				<span style={{color: colors.amber}}>PENDING</span>
-				<span>EXHIBIT · PHOTOGRAPH · 19 SEP 2023</span>
+				<span>PHOTOGRAPH · 19 SEP 2023</span>
 			</div>
 		);
 	}
@@ -792,11 +792,11 @@ export const PendingExhibit: React.FC<{start: number; end: number; small?: boole
 				{/* "It shows": a sheen crosses the envelope on the verb */}
 				<div style={{position: 'absolute', top: 0, bottom: 0, width: 160, left: tween(f, L.shows - 6, L.shows + 60, -200, 760), background: 'linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.22), rgba(255,255,255,0))'}} />
 				<div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 120, background: '#b9a274', clipPath: 'polygon(0 0, 100% 0, 50% 100%)'}} />
-				<div style={{position: 'absolute', left: 40, top: 150, right: 40, fontFamily: mono, color: '#2a2216'}}>
+				<div style={{position: 'absolute', left: 40, top: 150, right: 40, fontFamily: mono, color: '#2a2216'}}>{/* floor-ok: ink on the manila envelope (8:1), a material, not a token */}
 					<div style={{fontSize: 26, fontWeight: 700, letterSpacing: 4}}>EXHIBIT · PHOTOGRAPH</div>
 					<div style={{fontSize: 26, letterSpacing: 2, marginTop: 12, opacity: lead(f, L.taken, 10)}}>19 SEP 2023 · ABOUT 18:39</div>
 					<div style={{fontSize: 26, letterSpacing: 2, marginTop: 6, opacity: lead(f, L.factory, 10)}}>BOEING · RENTON, WASHINGTON</div>
-					<div style={{fontSize: 22, letterSpacing: 2, marginTop: 16, color: '#4a3d28'}}>NTSB AIR-25-04 · FIG. 18</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, marginTop: 14, color: '#2a2216'}}>NTSB AIR-25-04 · FIG. 18</div>{/* floor-ok: envelope ink */}
 				</div>
 			</div>
 			<svg width={600} height={380} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
