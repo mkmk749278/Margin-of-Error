@@ -4,39 +4,53 @@ Cut: `four-missing-bolts_master_4k.mp4` (Drive `four-missing-bolts/renders/`), 3
 Chapters below are from `vo/timing.json`, the same timing the master is rendered on.
 
 ## Title (pick one; recommended first)
-Recommended (audience review 2026-11-04, `review/audience_us_uk_4k.md` P1): US and UK viewers search and browse for
-*Boeing* and *Alaska Airlines door plug*, so Boeing leads. Every word is on the record (C23, C50).
+Curiosity-led for the US and UK (owner, 2026-11-04). Each title opens a question the film answers, starts with the
+words this audience types (Boeing, Alaska, door plug), and stands on a confirmed row of `claims.csv`. No question
+marks, no all-caps, no tabloid words (§13.2). Pair each title with its thumbnail.
+
+| # | Title | The question it opens | Thumbnail | Record |
+|---|---|---|---|---|
+| 1 | The Boeing Door Plug That Flew 154 Flights With No Bolts | how did it stay in? (Act IV answers it) | E | C22, C20 |
+| 2 | Alaska 1282: A Photo Showed No Bolts 108 Days Before the Door Plug Blew Out | why did no one catch it? (Act III) | F | C35, C69 |
+| 3 | Boeing's Door Plug: Four Bolts Removed, No Record, No One Identified | who, and how could that happen? (Acts III, V) | D | C29, C32, C52 |
+
+```
+The Boeing Door Plug That Flew 154 Flights With No Bolts
+```
+
+```
+Alaska 1282: A Photo Showed No Bolts 108 Days Before the Door Plug Blew Out
+```
+
+```
+Boeing's Door Plug: Four Bolts Removed, No Record, No One Identified
+```
+
+Search-safe fallback (if Studio shows low click-through after 7 days):
 
 ```
 Boeing's Four Missing Bolts: The NTSB Final Report on Alaska 1282
 ```
 
-```
-The Alaska Airlines Door Plug: Four Missing Bolts and the Record No One Wrote
-```
-
-```
-The Four Missing Bolts: How Alaska 1282 Lost Its Door Plug
-```
-
-## Thumbnails (Test & Compare: D, B, C)
+## Thumbnails (Test & Compare: E, F, D)
 | File | Reads | Built from |
 |---|---|---|
-| `thumb_d_the_hole.jpg` | NO BOLTS | NTSB AIR-25-04 Fig. 1 (public domain, on screen at 0:43): the hole, row 26, the oxygen masks. **Recommended**: the real exhibit this audience remembers |
-| `thumb_b_zero_found.jpg` | 4 BOLTS. 0 FOUND. | NTSB AIR-25-04 Fig. 13, the bolt holes (public domain) |
-| `thumb_c_no_paper.jpg` | NO PAPER | the film's removal-record card with its NO RECORD FOUND stamp (labelled RECONSTRUCTION) |
-| `thumb_a_no_bolts.jpg` (kept, not in the test) | NO BOLTS | the film's reconstruction of the 19 Sep 2023 photograph; at browse size it does not read as an aircraft (review P5) |
+| `thumb_e_154_flights.jpg` | 154 FLIGHTS · NO BOLTS | NTSB AIR-25-04 Fig. 1 (public domain, on screen at 0:43): the hole, row 26, the oxygen masks. **Recommended**, pairs with title 1 |
+| `thumb_f_108_days.jpg` | 108 DAYS | left: the film's reconstruction of the 19 Sep 2023 photograph, bolt positions circled and empty (labelled RECONSTRUCTION); right: NTSB Fig. 1, 05 Jan 2024. Pairs with title 2 |
+| `thumb_d_the_hole.jpg` | NO BOLTS | NTSB Fig. 1 with the record id. Pairs with title 3 |
+| `thumb_a_no_bolts.jpg`, `thumb_b_zero_found.jpg`, `thumb_c_no_paper.jpg` (kept, not in the test) | | earlier set; A and C are reconstructions that do not read as an aircraft at browse size |
 
 Rebuild A–C: `python3 films/four-missing-bolts/youtube/make_thumbnails.py <stills> films/four-missing-bolts/youtube`;
-D: `python3 films/four-missing-bolts/youtube/make_thumbnails.py --hole <fig01_interior_hole_row26.jpg> films/four-missing-bolts/youtube`
-(the figure is in Drive `four-missing-bolts/render-media/img/`).
+D: `… make_thumbnails.py --hole <fig01_interior_hole_row26.jpg> <out>`; E and F: `… make_thumbnails.py --curious
+<fig01_interior_hole_row26.jpg> <still at 6:45.9 (frame 24354)> <out>` (Fig. 1 is in Drive
+`four-missing-bolts/render-media/img/`).
 
 ## Description
 
 ```
-On 5 January 2024 a door plug left Alaska Airlines Flight 1282, a Boeing 737-9 MAX (737 MAX 9), over Portland, Oregon. The US National Transportation Safety Board (NTSB) found that all four bolts meant to hold it down had been removed in Boeing's Renton factory and never put back, and that no record of the removal was ever written.
+A Boeing 737-9 MAX (737 MAX 9) door plug flew 154 flights with none of the four bolts meant to hold it down. On 5 January 2024, climbing out of Portland, Oregon, it left Alaska Airlines Flight 1282.
 
-This film follows the investigators' record: how the plug is held, the 108 days between a factory photograph and the accident, the removal instruction, the workforce and the US regulator (the FAA), and the NTSB's probable cause. Findings are the NTSB's; our own reading is said as ours.
+A photograph taken in Boeing's Renton factory 108 days earlier showed no bolts in the three positions it could see. This film reads the final report of the US National Transportation Safety Board (NTSB), record by record: how a 63-pound plug is held, why no removal record was written, why the investigation identified no one who opened or closed the plug, what the US regulator (the FAA) missed, and how the plug walked itself up off its stops. Findings are the NTSB's; our own reading is said as ours.
 
 The photograph at 6:38 is a Boeing photograph reproduced in the NTSB report (Figure 18, page 51, linked below). We show it redrawn and labelled RECONSTRUCTION; the original is in the report.
 
@@ -67,7 +81,7 @@ Reconstructions and illustrations are labelled on screen; values not from a reco
 ## Tags (Studio "Tags" field)
 
 ```
-Boeing door plug, Alaska Airlines 1282, 737 MAX 9, NTSB final report, AIR-25-04, missing bolts, Spirit AeroSystems, aviation accident investigation, Boeing Renton
+Boeing door plug, Alaska Airlines door plug blowout, Alaska Airlines 1282, 737 MAX 9, NTSB final report, AIR-25-04, missing bolts, Spirit AeroSystems, aviation accident investigation, Boeing Renton
 ```
 
 ## Pinned opening comment (§13.8)
