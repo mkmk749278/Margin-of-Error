@@ -109,3 +109,16 @@ Format: `[time / scene]: what is wrong → why it costs trust or clicks → the 
 - `youtube/make_srt.py`, `youtube/four-missing-bolts.en.srt` (P4).
 - `youtube/make_thumbnails.py`, `youtube/thumb_d_the_hole.jpg` (P5).
 - `docs/PLAYBOOK.md`: L1–L7 as lessons. `STATUS.md`.
+
+## Round 2 (owner, 2026-11-04): the most curious package for the US and UK
+Each title opens a question the film answers and stands on the record; each has its own thumbnail
+(`youtube/package.md`):
+1. **The Boeing Door Plug That Flew 154 Flights With No Bolts** + E (`154 FLIGHTS · NO BOLTS` on NTSB Fig. 1).
+   It breaks an intuition (how did it stay in?), which is the channel's promise, and Act IV pays it off with the
+   physics (stops, 0.40 g, walking up). Recommended.
+2. **Alaska 1282: A Photo Showed No Bolts 108 Days Before the Door Plug Blew Out** + F (before/after: the labelled
+   reconstruction of 19 SEP 2023 beside Fig. 1 on 05 JAN 2024).
+3. **Boeing's Door Plug: Four Bolts Removed, No Record, No One Identified** + D.
+Rejected: "Nobody knows who removed the bolts" (a false absolute; the record says the interviews identified no one);
+"Boeing knew" (implies knowledge the record doesn't show); any question-mark title (§13.2).
+Description lines 1–2 now open on the 154 flights and the 108-day photograph, with the search phrases kept.
