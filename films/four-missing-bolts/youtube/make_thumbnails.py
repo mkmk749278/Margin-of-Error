@@ -167,7 +167,121 @@ def days(still: Path, fig01: Path) -> Image.Image:
     return out
 
 
+def broadcast(fig01: Path, plug_still: Path) -> Image.Image:
+    """Title 1's thumbnail at broadcast finish (owner's mock-up, 2026-11-04, rebuilt from the record): the real NTSB
+    Fig. 1, unaltered but graded and cropped; the number in heavy type with depth; a restrained glow on the failure
+    line; the film's own plug schematic as a faint ghost behind the type. No invented readouts, no markings on the
+    photograph, no watermark. Built at 2x and downsampled so every edge is clean on a TV."""
+    from PIL import ImageEnhance, ImageChops
+    S2 = 2
+    w, h = W * S2, H * S2
+    out = Image.new("RGBA", (w, h), VOID + (255,))
+    # the exhibit: whole figure, scaled to fill the height; Seat 26A's call-out falls off the left edge
+    # a plain crop below the report's label strip and call-out arrows (y < 170 in the figure); nothing painted out
+    fig = Image.open(fig01).convert("RGB").crop((0, 170, 1430, 848))
+    fig = ImageEnhance.Contrast(fig).enhance(1.06)
+    fig = ImageEnhance.Brightness(fig).enhance(1.04)
+    fig = ImageEnhance.Color(fig).enhance(0.94)
+    fig = fig.resize((int(fig.width * h / fig.height), h), Image.LANCZOS).convert("RGBA")
+    out.alpha_composite(fig, (-420, 0))  # the opening and the stowed 26A seat back on the left, the insulation edge in the middle
+    # cool the shadows a little so the photo sits in the channel's void
+    tint = Image.new("RGBA", (w, h), (10, 20, 40, 28))
+    out.alpha_composite(tint)
+    # the evidence panel: a gradient from the photo into the void
+    grad = Image.new("L", (w, 1))
+    for x in range(w):
+        grad.putpixel((x, 0), int(255 * min(1, max(0, (x - 1330) / 420))))
+    panel = Image.new("RGBA", (w, h), VOID + (255,))
+    panel.putalpha(grad.resize((w, h)))
+    out.alpha_composite(panel)
+    # the coordinate grid, faint, on the panel only
+    grid = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grid)
+    for x in range(1500, w, 80):
+        gd.line((x, 0, x, h), fill=(56, 189, 248, 14), width=2)
+    for y in range(0, h, 80):
+        gd.line((1500, y, w, y), fill=(56, 189, 248, 14), width=2)
+    out.alpha_composite(grid)
+    # ghost of the film's plug schematic (Act II illustration) behind the type, cyan, low alpha
+    still = Image.open(plug_still).convert("L").crop((520, 60, 1150, 960))
+    still = still.resize((int(still.width * 1.75), int(still.height * 1.75)), Image.LANCZOS)
+    still = ImageChops.subtract(still, Image.new("L", still.size, 40)).point(lambda v: min(255, v * 2))
+    ghost = Image.new("RGBA", still.size, (56, 189, 248, 0))
+    ghost.putalpha(still.point(lambda v: int(v * 0.30)))
+    out.alpha_composite(ghost, (w - ghost.width - 40, (h - ghost.height) // 2))
+    # vignette
+    vig = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(vig).rectangle((0, 0, w, h), outline=255, width=1)
+    vig = Image.new("L", (w, h), 0)
+    vd = ImageDraw.Draw(vig)
+    for i in range(60):
+        vd.rectangle((i * 4, i * 4, w - i * 4, h - i * 4), outline=int(110 * (1 - i / 60)), width=4)
+    dark = Image.new("RGBA", (w, h), (0, 0, 0, 255))
+    dark.putalpha(vig.filter(ImageFilter.GaussianBlur(40)))
+    out.alpha_composite(dark)
+
+    right = w - 90
+    def heavy(text, size, colour, y, glow=None):
+        font = ImageFont.truetype(BOLD, size)
+        stroke = max(2, size // 40)
+        tw = font.getlength(text) + stroke * 2
+        x = right - tw
+        sh = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        sd = ImageDraw.Draw(sh)
+        for k in range(1, 9):  # a short hard extrusion for depth
+            sd.text((x + k * 2, y + k * 3), text, font=font, fill=(0, 0, 0, 255), stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
+        out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(3)))
+        soft = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        ImageDraw.Draw(soft).text((x + 10, y + 22), text, font=font, fill=(0, 0, 0, 200), stroke_width=stroke)
+        out.alpha_composite(soft.filter(ImageFilter.GaussianBlur(28)))
+        if glow:
+            g = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            ImageDraw.Draw(g).text((x, y), text, font=font, fill=glow + (150,), stroke_width=stroke * 3, stroke_fill=glow + (150,))
+            out.alpha_composite(g.filter(ImageFilter.GaussianBlur(34)))
+        ImageDraw.Draw(out).text((x, y), text, font=font, fill=colour, stroke_width=stroke, stroke_fill=colour)
+        # a faint top highlight, the broadcast "lit from above" finish
+        hl = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        ImageDraw.Draw(hl).text((x, y), text, font=font, fill=(255, 255, 255, 46), stroke_width=stroke)
+        bb = font.getbbox(text, stroke_width=stroke)
+        top, tall = y + bb[1], bb[3] - bb[1]
+        col = Image.new("L", (1, h), 0)
+        for yy in range(h):  # smooth falloff from the top edge of the letters to their middle: no visible band
+            t = (yy - top) / (tall * 0.6)
+            col.putpixel((0, yy), int(255 * max(0.0, 1 - t)) if 0 <= t else 0)
+        mask = col.resize((w, h))
+        hl.putalpha(ImageChops.multiply(hl.getchannel("A"), mask))
+        out.alpha_composite(hl)
+        return font
+
+    heavy("154", 560, AMBER, 70)
+    heavy("FLIGHTS", 238, AMBER, 640)
+    heavy("NO BOLTS", 238, RED, 920, glow=RED)
+
+    # chips: what the picture is, in the record's own words
+    mono = ImageFont.truetype(MONO, 46)
+    def chip(text, x, y, anchor_right=False, colour=INK):
+        tw = mono.getlength(text)
+        if anchor_right:
+            x = x - tw - 40
+        d = ImageDraw.Draw(out)
+        d.rectangle((x, y, x + tw + 40, y + 76), fill=(10, 13, 18, 215), outline=(30, 41, 59, 255), width=2)
+        d.text((x + 20, y + 12), text, font=mono, fill=colour)
+    chip("NTSB EVIDENCE", 56, 48, colour=INK)
+    chip("NTSB AIR-25-04 · FIG. 1", right, h - 150, anchor_right=True)
+    # corner brackets in failure red
+    d = ImageDraw.Draw(out)
+    L, T = 90, 6
+    d.line((w - 60 - L, 60, w - 60, 60), fill=RED, width=T); d.line((w - 60, 60, w - 60, 60 + L), fill=RED, width=T)
+    d.line((60, h - 60 - L, 60, h - 60), fill=RED, width=T); d.line((60, h - 60, 60 + L, h - 60), fill=RED, width=T)
+    return out.resize((W, H), Image.LANCZOS)
+
+
 def main() -> int:
+    if sys.argv[1] == "--broadcast":  # make_thumbnails.py --broadcast FIG01.jpg PLUG_STILL.png OUTDIR
+        img = broadcast(Path(sys.argv[2]), Path(sys.argv[3])).convert("RGB")
+        img.save(Path(sys.argv[4]) / "thumb_g_154_flights_broadcast.jpg", quality=94, optimize=True)
+        print(Path(sys.argv[4]) / "thumb_g_154_flights_broadcast.jpg")
+        return 0
     if sys.argv[1] == "--curious":  # make_thumbnails.py --curious FIG01.jpg STILL_6m45s.png OUTDIR
         fig01, still, out = Path(sys.argv[2]), Path(sys.argv[3]), Path(sys.argv[4])
         flights(fig01).convert("RGB").save(out / "thumb_e_154_flights.jpg", quality=90, optimize=True)

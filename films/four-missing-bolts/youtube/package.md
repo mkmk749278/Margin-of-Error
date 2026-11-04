@@ -10,7 +10,7 @@ marks, no all-caps, no tabloid words (§13.2). Pair each title with its thumbnai
 
 | # | Title | The question it opens | Thumbnail | Record |
 |---|---|---|---|---|
-| 1 | The Boeing Door Plug That Flew 154 Flights With No Bolts | how did it stay in? (Act IV answers it) | E | C22, C20 |
+| 1 | The Boeing Door Plug That Flew 154 Flights With No Bolts | how did it stay in? (Act IV answers it) | G | C22, C20 |
 | 2 | Alaska 1282: A Photo Showed No Bolts 108 Days Before the Door Plug Blew Out | why did no one catch it? (Act III) | F | C35, C69 |
 | 3 | Boeing's Door Plug: Four Bolts Removed, No Record, No One Identified | who, and how could that happen? (Acts III, V) | D | C29, C32, C52 |
 
@@ -32,17 +32,19 @@ Search-safe fallback (if Studio shows low click-through after 7 days):
 Boeing's Four Missing Bolts: The NTSB Final Report on Alaska 1282
 ```
 
-## Thumbnails (Test & Compare: E, F, D)
+## Thumbnails (Test & Compare: G, F, D)
 | File | Reads | Built from |
 |---|---|---|
-| `thumb_e_154_flights.jpg` | 154 FLIGHTS · NO BOLTS | NTSB AIR-25-04 Fig. 1 (public domain, on screen at 0:43): the hole, row 26, the oxygen masks. **Recommended**, pairs with title 1 |
+| `thumb_g_154_flights_broadcast.jpg` | 154 FLIGHTS · NO BOLTS | **Recommended**, pairs with title 1. Broadcast finish from the owner's mock-up (2026-11-04), rebuilt on the real NTSB Fig. 1 (public domain, on screen at 0:43): a plain crop below the report's label strip, light grade, heavy type with depth, a restrained glow on NO BOLTS, the film's plug schematic as a faint ghost, corner brackets. The mock-up's AI-regenerated photo, invented HUD readouts, red circle on a fitting and watermark were not used |
+| `thumb_e_154_flights.jpg` (kept) | 154 FLIGHTS · NO BOLTS | the plain version of G |
 | `thumb_f_108_days.jpg` | 108 DAYS | left: the film's reconstruction of the 19 Sep 2023 photograph, bolt positions circled and empty (labelled RECONSTRUCTION); right: NTSB Fig. 1, 05 Jan 2024. Pairs with title 2 |
 | `thumb_d_the_hole.jpg` | NO BOLTS | NTSB Fig. 1 with the record id. Pairs with title 3 |
 | `thumb_a_no_bolts.jpg`, `thumb_b_zero_found.jpg`, `thumb_c_no_paper.jpg` (kept, not in the test) | | earlier set; A and C are reconstructions that do not read as an aircraft at browse size |
 
 Rebuild A–C: `python3 films/four-missing-bolts/youtube/make_thumbnails.py <stills> films/four-missing-bolts/youtube`;
 D: `… make_thumbnails.py --hole <fig01_interior_hole_row26.jpg> <out>`; E and F: `… make_thumbnails.py --curious
-<fig01_interior_hole_row26.jpg> <still at 6:45.9 (frame 24354)> <out>` (Fig. 1 is in Drive
+<fig01_interior_hole_row26.jpg> <still at 6:45.9 (frame 24354)> <out>`; G: `… make_thumbnails.py --broadcast
+<fig01_interior_hole_row26.jpg> <still at 3:01.4 (frame 10884)> <out>` (Fig. 1 is in Drive
 `four-missing-bolts/render-media/img/`).
 
 ## Description
