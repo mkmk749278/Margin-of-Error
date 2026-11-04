@@ -103,7 +103,6 @@ const Journey: React.FC = () => {
 		july: wf(50, 'july'),
 		closed: wf(50, 'closed'),
 		four: wf(50, 'four'),
-		bolts: wf(50, 'bolts'),
 		place: wf(50, 'place'),
 	};
 	const head = interpolate(f, [a + 20, B.march, B.wichita, B.d28, B.july], [0, E.made, E.made + 40, E.closed - 10, E.closed], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ease.camera});
@@ -298,7 +297,7 @@ const Renton: React.FC = () => {
 					<DatePill f={f} fps={fps} day={31} fromDay={1} month={8} year={2023} dayWord={R.d31} monthWord={R.august} size={28} />
 				</div>
 				<div style={{fontSize: 30, fontWeight: 700, letterSpacing: 1.5, color: colors.red, marginTop: 26}}>
-					<span style={{opacity: on(f, R.day, 8)}}>01 SEP ·</span> <Arrive f={f} fps={fps} on={R.five}>5</Arrive> <span style={{opacity: on(f, wf(55, 'damaged'), 8)}}>DAMAGED</span> <span style={{opacity: on(f, wf(55, 'rivets'), 8)}}>RIVETS</span>
+					<span style={{opacity: on(f, R.day, 8), ...litStyle(f, R.found, colors.red)}}>01 SEP ·</span> <Arrive f={f} fps={fps} on={R.five}>5</Arrive> <span style={{opacity: on(f, wf(55, 'damaged'), 8)}}>DAMAGED</span> <span style={{opacity: on(f, wf(55, 'rivets'), 8)}}>RIVETS</span>
 				</div>
 				<div style={{fontSize: 26, letterSpacing: 1.5, color: colors.ink, marginTop: 8}}>
 					<span style={{opacity: on(f, R.frame, 8)}}>IN THE EDGE FRAME,</span> <span style={{opacity: on(f, R.forward, 8), ...litStyle(f, R.forward, colors.ink)}}>JUST FORWARD OF THE PLUG</span>

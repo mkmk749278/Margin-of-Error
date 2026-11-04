@@ -177,7 +177,7 @@ const Flight: React.FC = () => {
 					) : null
 				}
 			/>
-			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" titleAt={L.effective} value={`${atLow ? 'LOWEST ' : ''}${Math.round(shownLb)} LB`} sub={atLow ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : falling ? 'FALLING WITH THE LOAD · 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={falling ? 'amber' : 'cyan'} y={150} scale={Math.max(bump(f, fps, L.s63 + LAND), bump(f, fps, L.s25 + LAND), bump(f, fps, L.weight + LAND))} />
+			<Panel start={a + 10} end={end} title="EFFECTIVE WEIGHT OF THE PLUG" titleAt={L.effective} value={`${atLow ? 'LOWEST ' : ''}${Math.round(shownLb)} LB`} sub={atLow ? 'AT 0.40–0.45 G · NTSB · WAS 63 LB AT 1 G' : falling ? 'FALLING WITH THE LOAD · 63 LB AT 1 G' : 'AT 1 G: 63 LB · NTSB'} tone={falling ? 'amber' : 'cyan'} y={150} scale={Math.max(bump(f, fps, L.s63 + LAND), bump(f, fps, L.pounds + LAND), bump(f, fps, L.s25 + LAND), bump(f, fps, L.weight + LAND), bump(f, fps, L.weight2 + LAND))} />
 			<div style={{position: 'absolute', left: x0 - 20, top: y0 - 60, width: W + 60, height: H + 110, background: 'rgba(10,13,18,0.7)', border: `1px solid ${colors.border}`, opacity: panelO}} />
 			<svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0, opacity: panelO}}>
 				<text x={x0} y={y0 - 30} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1.2} fill={f >= L.load ? colors.ink : colors.sub}>
@@ -203,7 +203,8 @@ const Flight: React.FC = () => {
 			</svg>
 			<KeyLine f={f} fps={fps} start={sf(135) - 6} end={sf(138) + 20} x={150} y={846} parts={[
 				{t: 'IN FLIGHT', at: L.flight, tone: colors.cyan},
-				{t: 'IT DOES NOT SIT STILL', at: L.not},
+				{t: 'IT DOES NOT', at: L.not},
+				{t: 'SIT STILL', at: L.still},
 				{t: '· IT VIBRATES', at: L.vibrates, tone: colors.amber},
 				{t: '· IT FLEXES', at: L.flexes, tone: colors.amber},
 			]} />
@@ -416,7 +417,8 @@ const Separation: React.FC = () => {
 				</div>
 				<KeyLine f={f} fps={fps} start={P.upper - 10} end={end} x={0} y={110} w={560} parts={[
 					{t: 'UPPER GUIDE FITTINGS', at: P.upper},
-					{t: 'STRUCK THE ROLLERS', at: P.struck, tone: colors.red},
+					{t: 'STRUCK', at: P.struck, tone: colors.red},
+					{t: 'THE ROLLERS', at: P.rollers, tone: colors.red},
 					{t: '· SPLIT', at: P.split, tone: colors.red},
 				]} />
 				<KeyLine f={f} fps={fps} start={P.hinges - 10} end={end} x={0} y={270} w={560} parts={[

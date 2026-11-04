@@ -113,7 +113,7 @@ const Opening: React.FC = () => {
 				</Photo>
 				<div style={{position: 'absolute', left: 150, top: 952, display: 'flex', gap: 14, fontFamily: mono, fontSize: 28, letterSpacing: 1.2, background: colors.card, border: `1px solid ${colors.border}`, padding: '8px 16px 6px', whiteSpace: 'nowrap', opacity: on(f, O.nine, 10)}}>
 					<span style={litStyle(f, O.nine, colors.ink)}>737-9</span>
-					<span style={{opacity: on(f, O.each, 8), ...litStyle(f, O.each, colors.cyan)}}>· AN OPENING EACH SIDE</span>
+					<span style={{opacity: on(f, O.each, 8), ...litStyle(f, O.fuselage, colors.cyan)}}>· AN OPENING EACH SIDE</span>
 					<span style={{opacity: on(f, O.wing, 8), ...litStyle(f, O.wing, colors.amber)}}>· AFT OF THE WING</span>
 					<span style={{opacity: on(f, O.emergency, 8), ...litStyle(f, O.emergency, colors.cyan), display: 'inline-block', transform: `scale(${bump(f, fps, O.exit + LAND).toFixed(4)})`}}>· FOR AN EXTRA EMERGENCY EXIT</span>
 				</div>
@@ -127,11 +127,11 @@ const Opening: React.FC = () => {
 				</Stage>
 				{/* "Airlines that do not need that exit get a plug instead — a lighter, simpler panel that fills the hole." */}
 				<div style={{position: 'absolute', left: 150, top: 846, display: 'flex', gap: 16, fontFamily: mono, fontSize: 30, letterSpacing: 1.4, background: colors.card, border: `1px solid ${colors.border}`, padding: '10px 16px 8px'}}>
-					<span style={litStyle(f, O.not, colors.ink)}>EXIT NOT NEEDED</span>
+					<span style={{opacity: on(f, O.airlines, 8), ...litStyle(f, O.not, colors.ink)}}>EXIT NOT NEEDED</span>
 					<span style={{opacity: on(f, O.plug, 8), ...litStyle(f, O.plug, colors.cyan)}}>→ A PLUG</span>
 					<span style={{opacity: on(f, O.lighter, 8), ...litStyle(f, O.lighter, colors.ink)}}>· LIGHTER</span>
 					<span style={{opacity: on(f, O.simpler, 8), ...litStyle(f, O.simpler, colors.ink)}}>· SIMPLER</span>
-					<span style={{opacity: on(f, O.fills, 8), ...litStyle(f, O.fills, colors.cyan)}}>· FILLS THE HOLE</span>
+					<span style={{opacity: on(f, O.fills, 8), ...litStyle(f, O.fills, colors.cyan), display: 'inline-block', transform: `scale(${bump(f, fps, O.hole + LAND).toFixed(4)})`}}>· FILLS THE HOLE</span>
 				</div>
 			</Fade>
 		</>
@@ -548,7 +548,7 @@ const Margin: React.FC = () => {
 				/>
 				<div style={{position: 'absolute', left: 1340, top: 180, width: 420, opacity: envelope(f, M.margin - 10, end, 14, 14), background: colors.card, border: `1px solid ${colors.cyan}`, padding: '14px 20px 14px', fontFamily: mono}}>
 					<div style={{fontSize: 26, letterSpacing: 1.2, ...litStyle(f, M.margin, colors.ink)}}>UPWARD RETENTION</div>
-					<div style={{fontSize: 34, fontWeight: 700, color: colors.cyan, marginTop: 6, display: 'inline-block', transform: `scale(${Math.max(bump(f, fps, M.held + LAND), bump(f, fps, M.kept + LAND)).toFixed(4)})`, transformOrigin: '0 50%'}}>HOLDS</div>
+					<div style={{fontSize: 34, fontWeight: 700, color: colors.cyan, marginTop: 6, display: 'inline-block', transform: `scale(${Math.max(bump(f, fps, M.held + LAND), bump(f, fps, M.down + LAND), bump(f, fps, M.kept + LAND)).toFixed(4)})`, transformOrigin: '0 50%'}}>HOLDS</div>
 					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 6}}>{sub}</div>
 				</div>
 				<div style={{position: 'absolute', left: 1380, top: 420, width: 380, fontFamily: mono, opacity: envelope(f, M.one - 10, end, 14, 10)}}>

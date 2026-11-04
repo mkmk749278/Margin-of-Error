@@ -615,7 +615,7 @@ const Track: React.FC = () => {
 						</text>
 					</g>
 				) : null}
-				<circle cx={px(head)} cy={py(head)} r={7} fill={t >= tLand ? colors.ink : colors.amber} />
+				<circle cx={px(head)} cy={py(head)} r={7 * bump(f, fps, T.back + LAND, 0.4)} fill={t >= tLand ? colors.ink : colors.amber} />
 			</svg>
 			<div style={{position: 'absolute', left: 1250, top: 44, width: 420, fontFamily: mono, color: colors.ink}}>
 				{/* "Alaska Airlines flight twelve eighty-two": the flight lights, its number lands in two parts */}
@@ -689,7 +689,6 @@ const Paper: React.FC = () => {
 		built: wf(16, 'built'),
 		paper: wf(16, 'paper'),
 		paper2: wf(17, 'paper'),
-		leads: wf(17, 'leads'),
 	};
 	const pIn = C.built - 8;
 	const end = wf(17, 'photograph') + 24;
@@ -924,7 +923,7 @@ const Layers: React.FC = () => {
 							border: `3px solid ${plugRed ? colors.red : colors.cyan}`,
 							borderRadius: 18,
 							background: plugRed ? 'rgba(239,68,68,0.12)' : 'rgba(56,189,248,0.06)',
-							transform: `translateZ(-200px) scale(${bump(f, fps, Q.failed + LAND).toFixed(4)})`,
+							transform: `translateZ(-200px) scale(${Math.max(bump(f, fps, Q.plug + LAND), bump(f, fps, Q.failed + LAND)).toFixed(4)})`,
 							opacity: plugK,
 						}}
 					>

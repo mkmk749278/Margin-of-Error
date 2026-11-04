@@ -1,6 +1,6 @@
 # Sync audit: four-missing-bolts
 
-177 sentences · 888 word cues on 2097 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+177 sentences · 887 word cues on 2097 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -54,7 +54,7 @@
 | 47 | 3:22.0 | 3/9 | 1.2 s ok |  | The bolts had been fitted—and then taken out. |
 | 48 | 3:26.1 | 13/15 | 1.1 s ok |  | So the question became: who took them out, and why were they never put |
 | 49 | 3:35.7 | 7/13 | 1.3 s ok |  | The plug was made by Spirit AeroSystems, in Malaysia, in March twenty  |
-| 50 | 3:42.1 | 10/24 | 1.5 s ok |  | Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty |
+| 50 | 3:42.1 | 9/24 | 1.5 s ok |  | Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty |
 | 51 | 3:52.1 | 2/7 | 1.0 s ok |  | Spirit's Wichita plant used to be Boeing's. |
 | 52 | 3:55.2 | 10/23 | 1.5 s ok |  | In two thousand and five, Boeing sold its operations in Wichita, and t |
 | 53 | 4:06.3 | 5/12 | 1.3 s ok |  | By twenty twenty-three, nearly two thirds of Spirit's revenue came fro |
