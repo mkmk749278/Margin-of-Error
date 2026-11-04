@@ -221,6 +221,10 @@ makes the comparison sheet. Outputs in `assets/brand/`, copies in Drive `_Channe
 **A Redline** (a gauge, needle in the last band before red), **B Trace** (the M as a load trace, one peak short of a
 dashed limit, one through it), **C Tolerance** (the ± with its minus bar fractured). **The owner chose B Trace
 (2026-11-04)**; the finals are `assets/brand/final/margin-of-error_*` (the lockup is transparent, for dark grounds).
+- **The profile photo is its own design, not the logo shrunk (owner, 2026-11-04: "not proper to upload").** The mark
+  fills about 70% of the circle, its strokes are heavy enough for 40 px, it is optically centred, a ring in `border`
+  gives it an edge on YouTube's dark and light themes, and the grid fades out before the crop. Deliver it as JPG and
+  PNG. *Why:* the first avatar was the logo at 78% with thin strokes, off-centre, floating in empty void.
 - **YouTube sizes:** avatar 800×800, cropped to a circle and seen at 98 px and ~40 px; banner 2560×1440 with only
   the centred 1546×423 safe area seen on a phone and only the 2560×423 strip on desktop, under 6 MB; watermark
   150×150 PNG, under 1 MB. *Why:* a first banner pass put the type wider than 1546 px and the trace below the strip,

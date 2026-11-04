@@ -55,13 +55,13 @@ const markRedline = () => {
 // B, TRACE: the letter M drawn as a load trace under a dashed limit. The first peak stops short of the limit (the
 // margin you can see); the second goes through it, and what is past the limit is red.
 const markTrace = () => {
-	const lim = 232, w = 66;
-	const d = 'M150 676 L272 304 L400 530 L528 120 L650 676';
+	const lim = 236, w = 84;
+	const d = 'M168 676 L286 302 L400 524 L514 146 L632 676';
 	return `
 	<defs><clipPath id="past"><rect x="0" y="0" width="800" height="${lim}"/></clipPath></defs>
 	<path d="${d}" stroke="${C.cyan}" stroke-width="${w}" fill="none" stroke-linejoin="round"/>
 	<path d="${d}" stroke="${C.red}" stroke-width="${w}" fill="none" stroke-linejoin="round" clip-path="url(#past)"/>
-	<line x1="90" y1="${lim}" x2="710" y2="${lim}" stroke="${C.amber}" stroke-width="16" stroke-dasharray="34 20"/>`;
+	<line x1="104" y1="${lim}" x2="696" y2="${lim}" stroke="${C.amber}" stroke-width="18" stroke-dasharray="36 20"/>`;
 };
 
 // C, TOLERANCE: the plus-minus sign of a margin of error and an engineering tolerance; the minus bar has fractured.
@@ -94,8 +94,12 @@ const pool = (id, cx, cy, r) => `<defs><radialGradient id="${id}" cx="${cx}" cy=
 
 // ---- assets -----------------------------------------------------------------------------------------------------
 const avatar = (m) => `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-	${pool('p', 400, 400, 520)}<rect width="800" height="800" fill="url(#p)"/>${grid(800, 800, 80, 0.05)}
-	<g transform="translate(400 400) scale(0.78) translate(-400 -400)">${m.draw()}</g></svg>`;
+	${pool('p', 400, 400, 420)}<rect width="800" height="800" fill="url(#p)"/>
+	<defs><radialGradient id="gf" cx="400" cy="400" r="360" gradientUnits="userSpaceOnUse"><stop offset="0.55" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+	<mask id="gm"><rect width="800" height="800" fill="url(#gf)"/></mask></defs>
+	<g mask="url(#gm)">${grid(800, 800, 80, 0.06, 40, 40)}</g>
+	<circle cx="400" cy="400" r="378" fill="none" stroke="${C.border}" stroke-width="12"/>
+	<g transform="translate(400 398) scale(0.86) translate(-400 -400)">${m.draw()}</g></svg>`;
 
 const watermark = (m) => `<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 800 800">
 	<rect x="10" y="10" width="780" height="780" rx="90" fill="${C.void}" fill-opacity="0.82" stroke="${C.border}" stroke-width="14"/>
