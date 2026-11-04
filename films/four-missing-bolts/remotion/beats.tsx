@@ -31,7 +31,7 @@ export const WordLine: React.FC<{f: number; fps: number; words: [string, number]
 /** Opacity that arrives on a word (fade completes on the word). */
 export const on = (f: number, w: number, dur = 10): number => lead(f, w, dur);
 
-export type Part = {t: string; at: number; tone?: string; br?: boolean; big?: boolean};
+export type Part = {t: string; at: number; tone?: string; br?: boolean; big?: boolean; join?: boolean};
 
 /**
  * A key-phrase line on a card: each part arrives and takes the light on its own spoken word (parts keep their space,
@@ -75,7 +75,7 @@ export const KeyLine: React.FC<{f: number; fps: number; parts: Part[]; start: nu
 			{parts.map((p, i) => (
 				<React.Fragment key={i}>
 					{p.br ? <br /> : null}
-					<span style={{opacity: lead(f, p.at, 8), fontWeight: p.big ? 700 : 400, fontSize: p.big ? size * 1.5 : size, display: 'inline-block', whiteSpace: 'nowrap', marginRight: i < parts.length - 1 && !parts[i + 1].br ? '0.6em' : 0, transform: `scale(${bump(f, fps, p.at + LAND, 0.05).toFixed(4)})`, transformOrigin: '0 70%', ...litStyle(f, p.at, p.tone ?? colors.ink)}}>
+					<span style={{opacity: lead(f, p.at, 8), fontWeight: p.big ? 700 : 400, fontSize: p.big ? size * 1.5 : size, display: 'inline-block', whiteSpace: 'nowrap', marginRight: i < parts.length - 1 && !parts[i + 1].br && !p.join ? '0.6em' : 0, transform: `scale(${bump(f, fps, p.at + LAND, 0.05).toFixed(4)})`, transformOrigin: '0 70%', ...litStyle(f, p.at, p.tone ?? colors.ink)}}>
 						{p.t}
 					</span>
 				</React.Fragment>

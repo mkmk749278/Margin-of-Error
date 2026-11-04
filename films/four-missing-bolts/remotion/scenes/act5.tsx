@@ -41,9 +41,9 @@ const Verdict: React.FC = () => {
 				pad={[100, 120]}
 			/>
 			<KeyLine f={f} fps={fps} start={sf(151) - 8} end={sf(152) - 4} x={72} y={950} parts={[
-				{t: 'N', at: wf(151, 'n'), tone: colors.cyan},
-				{t: 'T', at: wf(151, 't'), tone: colors.cyan},
-				{t: 'S', at: wf(151, 's'), tone: colors.cyan},
+				{t: 'N', at: wf(151, 'n'), tone: colors.cyan, join: true},
+				{t: 'T', at: wf(151, 't'), tone: colors.cyan, join: true},
+				{t: 'S', at: wf(151, 's'), tone: colors.cyan, join: true},
 				{t: 'B', at: wf(151, 'b'), tone: colors.cyan},
 				{t: 'ADOPTED', at: wf(151, 'adopted')},
 				{t: 'ITS FINAL REPORT', at: wf(151, 'report')},
@@ -145,7 +145,7 @@ const Briefing: React.FC = () => {
 				{t: 'HEAD OF QUALITY', at: wf(158, 'quality')},
 				{t: '· MEDIA', at: wf(158, 'media')},
 				{t: 'BRIEFING', at: wf(158, 'briefing')},
-				{t: '· THE COMPANY', at: wf(158, 'company')},
+				{t: '· SAID THE COMPANY', at: wf(158, 'company')},
 				{t: 'KNEW', at: wf(158, 'knew'), tone: colors.amber},
 				{t: 'THE MOVE CREW', at: wf(158, 'move')},
 				{t: 'HAD CLOSED THE PLUG', at: wf(158, 'closed'), tone: colors.amber},
@@ -361,7 +361,7 @@ const Board: React.FC = () => {
 					['Boeing’s systems', wf(171, 'systems')],
 					['at the time', wf(171, 'time')],
 					['were equipped to catch', wf(171, 'caught')],
-					['these types of errors', wf(171, 'errors')],
+					['these types of errors …', wf(171, 'errors')],
 				]}
 				who="NTSB MEMBER GRAHAM"
 				whoAt={wf(171, 'member')}

@@ -519,13 +519,16 @@ const Margin: React.FC = () => {
 	const back = (s0: number) => tween(f, s0, s0 + 24, 0, 1, ease.arrive);
 	let bolts: Record<BoltId, number> = allBolts(1);
 	if (f >= M.one - 10 && f < M.two - 10) bolts = {upperFwd: out(M.one - 6), upperAft: out(M.one + 16), lowerAft: out(M.own - 20), lowerFwd: 1};
-	// "The two upper bolts, on their own": the uppers back on "two", the last lower out by "own"
-	if (f >= M.two - 10 && f < M.four - 10) bolts = {upperFwd: back(M.two - 10), upperAft: back(M.two - 4), lowerAft: 0, lowerFwd: out(M.own2 - 24)};
+	// "The two upper bolts, on their own": one swap on "two": the lower bolt out as the uppers go back, so the
+	// readout goes 1 -> 2 and never passes 3 (forensic review r3b: it read 3 OF 4 for about a second)
+	if (f >= M.two - 10 && f < M.four - 10) bolts = {upperFwd: back(M.two - 10), upperAft: back(M.two - 4), lowerAft: 0, lowerFwd: out(M.two - 12)};
 	// "Four bolts": all back
 	if (f >= M.four - 10) bolts = {upperFwd: 1, upperAft: 1, lowerAft: back(M.four - 14), lowerFwd: back(M.four - 8)};
-	const count = BOLT_IDS.filter((id) => bolts[id] > 0.5).length;
+	const physical = BOLT_IDS.filter((id) => bolts[id] > 0.5).length;
+	// the number is the state the narration names: 2 from "two" until all four come back
+	const count = f >= M.two && f < M.four - 10 ? 2 : physical;
 	const state: PlugState = {...defaultState, stopGlow: 0.35 + 0.65 * flash(f, M.stops, 0), boltGlow: Math.min(1, 0.7 + 0.3 * flash(f, M.steel, 0)), bolts};
-	const sub = f >= M.four ? 'MARGIN: 4 WHERE 1 HOLDS' : f >= M.kept ? 'TWO UPPER ALONE: KEPT ON ITS STOPS' : f >= M.held ? 'ONE LOWER BOLT ALONE: HELD' : f >= M.one ? 'TESTING: ONE LOWER BOLT' : 'ALL FOUR INSTALLED';
+	const sub = f >= M.four ? 'MARGIN: 4 WHERE 1 HOLDS' : f >= M.kept ? 'TWO UPPER ALONE: KEPT ON ITS STOPS' : f >= M.two ? 'TESTING: TWO UPPER BOLTS' : f >= M.held ? 'ONE LOWER BOLT ALONE: HELD' : f >= M.one ? 'TESTING: ONE LOWER BOLT' : 'ALL FOUR INSTALLED';
 	const docO = envelope(f, docA, docB, 14, 14);
 	const k = lead(f, M.done, 14);
 	const lowF = anchor(state, cam, 'lowerFwd');

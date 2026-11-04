@@ -627,10 +627,10 @@ const DoorTeam: React.FC = () => {
 	};
 	const yrs = Math.round(rollTo(f, [{frame: D.y25 - 16, value: 0}, {frame: D.y25 + LAND, value: 25}], true));
 	const tile = (title: string, titleAt: number, lines: React.ReactNode[], inAt: number, tone: string, x: number) => (
-		<div style={{position: 'absolute', left: x, top: 330, width: 560, height: 300, border: `1px solid ${tone}`, background: colors.card, opacity: on(f, inAt, 12), fontFamily: mono, padding: 30}}>
-			<div style={{fontSize: 26, letterSpacing: 1.2, ...litStyle(f, titleAt, tone)}}>{title}</div>
+		<div style={{position: 'absolute', left: x, top: 340, width: 600, height: 330, border: `1px solid ${tone}`, background: colors.card, opacity: on(f, inAt, 12), fontFamily: mono, padding: 30}}>
+			<div style={{fontSize: 30, letterSpacing: 1.2, ...litStyle(f, titleAt, tone)}}>{title}</div>
 			{lines.map((l, i) => (
-				<div key={i} style={{fontSize: i === 0 ? 34 : 26, fontWeight: i === 0 ? 700 : 400, color: i === 0 ? colors.ink : colors.sub, marginTop: i === 0 ? 30 : 12, letterSpacing: 1.5}}>
+				<div key={i} style={{fontSize: i === 0 ? 46 : 30, fontWeight: i === 0 ? 700 : 400, color: i === 0 ? colors.ink : colors.sub, marginTop: i === 0 ? 30 : 12, letterSpacing: 1.5}}>
 					{l}
 				</div>
 			))}
@@ -643,10 +643,10 @@ const DoorTeam: React.FC = () => {
 				fps={fps}
 				start={a}
 				end={end}
-				x={340}
-				y={222}
+				x={300}
+				y={250}
 				card={false}
-				size={26}
+				size={30}
 				parts={[
 					{t: 'ONLY', at: wf(69, 'only'), tone: colors.amber},
 					{t: "BOEING'S DOOR TEAM", at: wf(69, 'door')},
@@ -668,7 +668,7 @@ const DoorTeam: React.FC = () => {
 				],
 				D.man,
 				colors.amber,
-				340,
+				300,
 			)}
 			{tile(
 				'THE DOOR TEAM ON DUTY',
@@ -681,7 +681,7 @@ const DoorTeam: React.FC = () => {
 				colors.red,
 				1020,
 			)}
-			<div style={{position: 'absolute', left: 340, top: 680, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: on(f, D.man, 14)}}>NTSB AIR-25-04 · INTERVIEWS AND STATEMENTS · NO NAMES</div>
+			<div style={{position: 'absolute', left: 300, top: 726, fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: on(f, D.man, 14)}}>NTSB AIR-25-04 · INTERVIEWS AND STATEMENTS · NO NAMES</div>
 		</Fade>
 	);
 };
@@ -1140,9 +1140,9 @@ const Fan: React.FC = () => {
 				{t: 'NO ONE CAN GIVE', at: wf(98, 'one')},
 			]} />
 			<KeyLine f={f} fps={fps} start={sf(99) - 4} end={end} x={620} y={800} parts={[
-				{t: 'N', at: wf(99, 'n'), tone: colors.cyan},
-				{t: 'T', at: wf(99, 't'), tone: colors.cyan},
-				{t: 'S', at: wf(99, 's'), tone: colors.cyan},
+				{t: 'N', at: wf(99, 'n'), tone: colors.cyan, join: true},
+				{t: 'T', at: wf(99, 't'), tone: colors.cyan, join: true},
+				{t: 'S', at: wf(99, 's'), tone: colors.cyan, join: true},
 				{t: 'B', at: wf(99, 'b'), tone: colors.cyan},
 				{t: '· DID NOT STOP THERE', at: wf(99, 'not')},
 				{t: '· AIR-25-04', at: wf(99, 'there')},
@@ -1324,6 +1324,17 @@ const Line: React.FC = () => {
 								<text x={x + 100} y={600 - h} textAnchor="middle" fill={colors.ink} fontFamily="JetBrains Mono" fontWeight={700} fontSize={34} opacity={tween(k, 0.85, 1, 0, 1)}>
 									{b.note}
 								</text>
+							</g>
+						);
+					})}
+					{/* each slot and its label arrive on the label's own words, before the bar rises (forensic review r3b:
+					    the chart sat empty for about 5 s before its first bar) */}
+					{bars.map((b, i) => {
+						const x = 220 + i * 420;
+						const o = on(f, b.tAt - 6, 10);
+						return (
+							<g key={`slot-${b.t}`} opacity={o}>
+								<rect x={x} y={612} width={200 * on(f, b.tAt, 14)} height={8} fill={b.tone} opacity={0.5} />
 								<text x={x + 100} y={664} textAnchor="middle" fill={f >= b.tAt ? colors.ink : colors.sub} fontFamily="JetBrains Mono" fontSize={26} letterSpacing={1}>
 									{b.t}
 								</text>
@@ -1353,7 +1364,7 @@ const Line: React.FC = () => {
 					{t: '2022', at: wf(113, 'twenty-two'), tone: colors.amber},
 					{t: '· BOEING SET OUT', at: wf(113, 'boeing')},
 					{t: 'TO RETURN TO ITS OLD RATE', at: wf(113, 'return')},
-					{t: '· HIRING FAST', at: wf(113, 'hired'), tone: colors.amber},
+					{t: '· INCREASED HIRING', at: wf(113, 'hired'), tone: colors.amber},
 					{t: '· MANY NEW HIRES', at: wf(114, 'hires'), br: true},
 					{t: 'HAD NEVER WORKED', at: wf(114, 'never'), tone: colors.amber},
 					{t: 'IN MANUFACTURING', at: wf(114, 'manufacturing'), tone: colors.amber},
