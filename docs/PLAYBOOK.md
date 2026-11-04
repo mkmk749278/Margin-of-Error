@@ -981,6 +981,12 @@ strongest idea that could replace it, inside the hard lines.
 5. **Currency in a UK case** (before film 4 or 5): the spec says `$` everywhere; a UK record states pounds. Options to
    put to the owner then: the record's `£` with a dated `$` line beneath, or `$` with the `£` beneath.
 6. **Comment tooling:** connect the channel's YouTube access when the first film is public (§13.8).
+   *2026-11-04 check:* no YouTube access yet: no `YT_REFRESH_TOKEN_MARGINOFERROR` in the environment, and the handle
+   `@marginoferror` resolves to no channel on the YouTube Data API (so the real handle is still to confirm, item 1).
+   The owner signs the channel in once from Termux with the existing OAuth client (`YT_CLIENT_ID`,
+   `YT_CLIENT_SECRET`, scope `youtube.force-ssl`) and saves the printed `YT_REFRESH_TOKEN_MARGINOFERROR` as an
+   environment secret; the sign-in also prints the channel id and handle, which go into `config/brand.yaml`. The
+   fetch/post script is still to build (§13.8).
 (Done: Drive folder `Margin-of-Error`, id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`, pinned in the scripts; the repo secret.)
 
 ### 17.3 The launch trilogy: what research must check first
