@@ -586,6 +586,7 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
   under the voice; SFX from `sfx.ts` (ticks, paper, stamp, highlighter, synthesised alarm chimes, the grid's 60 Hz
   hum). A **dip** before a key exhibit line, never a dropout: music runs continuously from the first seconds to the
   end (slots overlap and crossfade; a "silence" is a low drone under the room tone).
+- **Where the music comes from:** the channel's own library (§12.1), one bed per act from its `use` column.
 - **No dead air (owner, 2026-11-03: "so many audio gaps, it feels like the video stopped").** Edit holds
   (`script/holds.json`) are 0.8 s at most; only act turns and the two or three signature beats get 1.5–3 s, and
   something visibly moves through every one (§6.4). The word-level picture (§10.6) does the work holds used to do.
@@ -602,6 +603,48 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
 - Never use a real alarm or cockpit recording that isn't released and licensed; synthesised tones are labelled in
   the manifest as synthesised.
+
+### 12.1 The music library (owner, 2026-11-04)
+The channel's music is its own library, generated with **Google Lyria 3.5 through the Gemini API** (`GEMINI_API_KEY`)
+and kept in **one Drive folder: `Music-Library/forensic/`** (id `1mOKSQevnOmstbnuqoh4zlCJi1Is-GcOa`, inside
+`Music-Library` at the top of My Drive). Only this folder is ours; nothing else in `Music-Library` is used, named or
+described here. *Why:* Lyria output is ours to use (Google claims no ownership of output under the Gemini API terms),
+costs $0.08 a track, carries an inaudible SynthID watermark and is registered with no Content ID owner; and a library
+made once and kept in Drive never has to be made again (§16, the music that lived only in a session).
+- **The record:** `config/music_library.csv` (id, title, what it is for, mood, tempo, key, length, loudness, the
+  instruments heard); `config/music_library.json` holds the exact prompts. Each WAV in Drive has a JSON sidecar with
+  the prompt, the Lyria interaction id and the listening check.
+- **The palette** follows the five acts: `fx01_incident` (Act I), `fx02_mechanism` (Act II), `fx03_boardroom`
+  (Act III), `fx04_cascade` (Act IV), `fx05_verdict` (Act V); `fx06_record_drone` (the near-static bed under quiet
+  stretches, so a "silence" is never a dropout), `fx07_evidence` (exhibits), `fx08_countdown` (a timeline running down
+  to the failure), `fx09_aftermath` (wreckage and the people affected, with dignity), `fx10_signoff` (outro),
+  `fx11_shorts` (vertical Shorts, about a minute, starts at once).
+- **Use:** pull the beds with `scripts/music_pull.sh films/<slug>/assets/music fx01_incident fx06_record_drone …`,
+  place them as slots in `sound/mix.json` (continuous, overlapping crossfades; a long act reuses a bed with a `from`
+  offset), run `scripts/mix_film.py`, and log each in the film's `media_manifest.csv`: source
+  `Music-Library/forensic/<id>.wav`, licence "Generated with Google Lyria 3.5 (Gemini API, Paid Tier); Google claims
+  no ownership of output; SynthID watermark". No AI disclosure in public descriptions (the owner sets Studio's
+  synthetic-content flag at upload).
+- **Level:** tracks arrive mastered loud (about −11 to −13 LUFS, peaks near 0 dBFS); `mix.json` sets each slot by RMS
+  (−23 to −24 dB under the §12 duck). Never use a track at its delivered level.
+- **A new track:** add an entry to `config/music_library.json` (id `fx<NN>_<name>`, a prompt with tempo, key,
+  instruments and shape, and a one-line `brief`), run
+  `python3 scripts/lyria_music.py generate config/music_library.json films/<slug>/assets/lyria --only <id>`, listen to
+  the kept take, push it with `scripts/music_pull.sh --push films/<slug>/assets/lyria`, rebuild the CSV with
+  `scripts/lyria_music.py catalog` over the whole palette pulled from Drive, and commit both files.
+- **The check:** Lyria has no instrumental switch and often adds choir or "ooh" pads even when the prompt forbids
+  them. `lyria_music.py` has two Gemini models listen to every take: `gemini-3.5-flash` for vocals, defects, a hard
+  ending, an unsteady level and the fit to the brief, then `gemini-3.1-pro-preview` for voices alone (it caught choir
+  pads in 3 of the first 15 takes the first listener passed). A take either flags is made again, up to five times;
+  only clean takes are kept (`--attempts 5`). A person
+  still listens to a track before its first film. Never prompt for a named artist, film score or song; never villain
+  music (§4).
+- **Still to make:** `fx01_incident`, `fx05_verdict` and `fx06_record_drone` failed five takes each (choir pads)
+  and the run stopped at the project's spending cap; their prompts are already rewritten in
+  `config/music_library.json` (strings, piano, electric hum and synth bass, no pads). Until then: Act I
+  `fx08_countdown` or `fx02_mechanism`, Act V `fx10_signoff`, the quiet bed `fx09_aftermath` at a low level.
+- **Film 1** (`four-missing-bolts`) keeps the ElevenLabs cues it was mixed with; a re-mix with library beds is the
+  owner's call.
 
 ## 13. Discovery and packaging
 
@@ -804,6 +847,20 @@ strongest idea that could replace it, inside the hard lines.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**The music library (2026-11-04).**
+- *Lyria adds voices it was told not to.* In the first library run 102 takes were billed for 38 kept tracks (61 rejected, mostly for choir or "ooh" pads and vocal chops
+  despite "Instrumental only, no vocals" in the prompt); the stronger second listener caught pads in 3 of the first 15
+  tracks the first listener had passed. Prompts that ask for sustained "pads", "drones" or "harmonics", or for
+  epic suspense, drift into choir most often: ask for bowed strings, piano, electric hum or analogue synth bass instead.
+  **Rule:** every generated take is heard by both listeners before it is kept, and a person listens before a track's
+  first film (§12.1).
+- *The Gemini project has a monthly spending cap* (set in AI Studio, ai.studio/spend). The first run hit it after
+  about $8.25 of Lyria takes plus the listening checks, and every request then returned HTTP 429 "exceeded its monthly
+  spending cap". **Rule:** before a batch, estimate takes × $0.08 × about 2.7 (the first run's takes per kept track)
+  and tell the owner if it needs a higher cap.
+- *"About three minutes" works:* Lyria 3.5 returned beds of close to three minutes (about two by default), so one
+  bed covers most of an act.
 
 **The whole film choreographed (2026-11-04).**
 - *A word cue that changes nothing still passes the audit.* `sync_audit.py` counts every `wf()` it can resolve, so a
