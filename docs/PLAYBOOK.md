@@ -617,9 +617,49 @@ Compare; read Studio at 48 h, 7 days and 28 days.
 The case + the margin, factual, curiosity without clickbait: *The Four Missing Bolts* works because it is exactly
 true. No question-mark bait, no "EXPOSED", no all-caps, no tabloid words ("shocking", "deadly", "insane").
 
+**Curiosity standard (owner, 2026-11-04; film 1's package):**
+- **Open a question the film answers.** The strongest is a broken intuition stated as a fact: *The Boeing Door Plug
+  That Flew 154 Flights With No Bolts* (how did it stay in? Act IV answers with the physics). Next: a gap in time
+  (*A Photo Showed No Bolts 108 Days Before…*: why did no one catch it?), then a gap in the record (*Four Bolts
+  Removed, No Record, No One Identified*).
+- **Lead with the words the viewer types:** the company, the flight, the part. Our phrase comes after.
+- **Every word stands on a confirmed `claims.csv` row,** cited in the package table next to the title. Write a
+  promise only if the film pays it off.
+- **Rejected forms:** a false absolute ("Nobody knows who…" when the record says the interviews identified no one);
+  an implied motive or knowledge ("Boeing knew"); a question mark.
+- **Write three titles, one per angle, each paired with its own thumbnail;** keep a search-safe fallback (company +
+  report + flight) for a low click-through rate at 7 days.
+
 ### 13.3 Thumbnail
 One object or one line of evidence, one question. Two elements at most (the part and the number; the exhibit line and
 the redaction). Readable on a phone in one second. Honest: what is shown is in the film.
+
+**Curious and broadcast-level (owner, 2026-11-04; film 1's G, `make_thumbnails.py --broadcast`):**
+- **The real exhibit, not a reconstruction, wherever one exists:** the picture this audience remembers from the news
+  (film 1: NTSB Fig. 1, the cabin hole). A schematic of a part reads as furniture at browse size. A reconstruction
+  may appear only beside a real exhibit, labelled.
+- **The number that breaks the intuition, said in 2–3 words,** paired with the title: `154 / FLIGHTS / NO BOLTS`.
+  The number in Warning Amber, the failure in Failure Red (colour = meaning).
+- **Finish:**
+  - **Supersampling:** build at 2× (2560×1440) and downsample to 1280×720.
+  - **Type:** heavy Inter (700 plus a same-colour stroke), right-aligned with a ~45 px margin, a short hard extrusion
+    for depth, a soft shadow, a top-light gradient (smooth falloff, no visible band), and a glow on the failure line
+    only (restrained: no neon).
+  - **Photo:** a light grade only (contrast ≤ +8%, brightness ≤ +4%, saturation ≥ −8%, a faint cool tint). Then a
+    gradient into a Void panel with the 0.05-opacity grid, the film's own schematic as a faint ghost behind the type,
+    an edge vignette and red corner brackets.
+  - **Chips:** a small mono chip that says what the picture is (`NTSB EVIDENCE`) and its record id
+    (`NTSB AIR-25-04 · FIG. 1`).
+  - **File:** JPG, quality 94, under 2 MB.
+- **The photo stays the record:** crop and grade only. Never repaint, remove an annotation, add a mark on a part
+  (a circle implies a finding) or regenerate it. If the report's labels or call-out arrows don't fit, crop below
+  them, never paint them out.
+- **No invented data:** no HUD numbers, scales, timecodes or readouts that aren't from the record. No watermark of
+  any tool, ever.
+- **AI mock-ups are layout sketches only** (§4.1c): take the composition and finish, rebuild on the real exhibit.
+- **Gate before upload:** squint test at 168 px wide (the subject reads as an aircraft or the part; the words read);
+  no clipped text or half-cut labels at any edge; every fact on it has a `claims.csv` row; three thumbnails in Test &
+  Compare, one per title angle.
 
 ### 13.4 Description
 Two or three plain lines on the case, then chapters (`0:00` first), then **sources** (the records the film is built
