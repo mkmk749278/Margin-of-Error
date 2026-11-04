@@ -24,8 +24,9 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   3 OF 4; NTSB on screen as one word; the production chart no longer sits empty; door-team tiles larger and off the
   grid lines; "INCREASED HIRING"; the Graham quote ends with an ellipsis; "SAID THE COMPANY KNEW"). Voice and mix
   unchanged. PR #16, merged.
-- **4K master** on the farm (run 41779692152, scale 2, CRF 16, 30 Mb/s cap) → Drive
-  `renders/four-missing-bolts_master_4k.mp4`.
+- **4K master done** (run 41779692152, scale 2, CRF 16, 30 Mb/s cap): Drive
+  `renders/four-missing-bolts_master_4k.mp4`, 3840×2160, 60 fps, 54,316 frames (15:05.27, = timing.json), H.264
+  High, 11.3 Mb/s average, 1.28 GB; the six fixes checked in its frames; −14.1 LUFS, −1.3 dBTP, 0 black or frozen frames (measured on the file).
 - **YouTube package:** `youtube/package.md` (3 titles, description with chapters and sources, tags, pinned comment,
   Studio checklist), 3 thumbnails, `four-missing-bolts.en.srt` (230 cues).
 - **For the owner:** two spoken paraphrases kept ("it hired fast"; "at all"), see the review's last section.
