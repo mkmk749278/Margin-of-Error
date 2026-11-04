@@ -87,8 +87,11 @@ export const RecordDoc: React.FC<{doc: DocKey; start: number; end: number; at: n
 	return (
 		<Fade start={start} end={end}>
 			<Exhibit page={{w: d.w, h: d.h}} start={start} push={{from: start + 12, to: pushTo ?? start + 110, focus}} highlights={highlights} label={label} source={source}>
-				<div style={{width: d.w, height: d.h, background: '#fff'}}>
-					<Img src={media(`docs/${d.file}`)} style={{width: d.w, height: d.h}} />
+				<div style={{width: d.w, height: d.h, background: colors.paper, position: 'relative'}}>
+					<Img src={media(`docs/${d.file}`)} style={{width: d.w, height: d.h, mixBlendMode: 'multiply'}} />
+					{/* round 3: a filing shot from HTML takes the paper token like the scans (never pure white); a stray line
+					    from the previous section above the crop is covered with paper */}
+					{'trimTop' in d && d.trimTop ? <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: d.trimTop, background: colors.paper}} /> : null}
 				</div>
 			</Exhibit>
 		</Fade>

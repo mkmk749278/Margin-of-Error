@@ -52,7 +52,7 @@ export const Desk: React.FC<DeskProps> = ({pitch = 48, duration = 600, coords = 
 const Coords: React.FC<{pitch: number; drift: number}> = ({pitch, drift}) => {
 	const xs = Array.from({length: Math.ceil(1920 / pitch) + 1}, (_, i) => i);
 	const ys = Array.from({length: Math.ceil(1080 / pitch) + 1}, (_, i) => i);
-	const style: React.CSSProperties = {position: 'absolute', fontFamily: fontStacks.mono, fontSize: 11, letterSpacing: 1.5, color: colors.muted, opacity: 0.55};
+	const style: React.CSSProperties = {position: 'absolute', fontFamily: fontStacks.mono, fontSize: 11, letterSpacing: 1.5, color: colors.muted, opacity: 0.55}; // floor-ok: grid coordinates are decoration, never a fact
 	return (
 		<>
 			{xs.map((i) => (

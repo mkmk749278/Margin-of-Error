@@ -33,7 +33,8 @@
      "h": 36
     }
    ]
-  ]
+  ],
+  "trimTop": 30
  },
  "boeing_20b": {
   "file": "boeing_20b.png",

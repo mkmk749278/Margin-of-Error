@@ -1,32 +1,32 @@
 # Sync audit: four-missing-bolts
 
-177 sentences · 83 word cues on 2097 words · 161 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+177 sentences · 198 word cues on 2097 words · 139 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
-| 0 | 0:00.0 | 0/5 | 2.4 s **FAIL** | Fifth January, twenty twenty-four. | Fifth of January, twenty twenty-four. |
-| 1 | 0:03.4 | 0/28 | 11.1 s **FAIL** | twelve; thirty-three; five; seven thirty-seven nine; fourteen thousand, eight hundred thirty | At twelve minutes and thirty-three seconds past five in the afternoon, |
-| 2 | 0:15.4 | 0/5 | 1.8 s **FAIL** |  | Then the cabin pressure dropped. |
-| 3 | 0:17.9 | 0/5 | 1.9 s **FAIL** |  | The cabin altitude warning sounded. |
-| 4 | 0:20.5 | 0/6 | 2.4 s **FAIL** | One second | One second later, the master caution. |
-| 5 | 0:23.8 | 0/9 | 3.7 s **FAIL** |  | The captain would describe it as an explosive experience. |
-| 6 | 0:28.2 | 0/8 | 3.0 s **FAIL** | first | The first officer said simply: it was chaos. |
-| 7 | 0:32.3 | 0/15 | 4.1 s **FAIL** |  | Behind the wing, on the left side, there was now a hole in the fuselag |
-| 8 | 0:37.0 | 1/10 | 3.9 s **FAIL** | twenty-nine; fifty-nine | A rectangle about twenty-nine inches wide and fifty-nine inches high. |
-| 9 | 0:41.9 | 0/7 | 1.9 s **FAIL** | two | The two seats beside it were empty. |
-| 10 | 0:44.7 | 1/15 | 4.6 s **FAIL** | Fourteen; twelve eighty-two | Fourteen minutes later, Alaska Airlines flight twelve eighty-two was b |
-| 11 | 0:51.1 | 0/5 | 1.9 s **FAIL** | Eight | Eight people had minor injuries. |
-| 12 | 0:53.5 | 0/5 | 1.7 s **FAIL** | one | No one was seriously hurt. |
-| 13 | 0:56.1 | 0/11 | 2.4 s **FAIL** |  | There is no recording of what was said in the cockpit. |
-| 14 | 0:59.3 | 0/12 | 3.9 s **FAIL** |  | The voice recorder kept running after landing, and recorded over the f |
-| 15 | 1:04.0 | 0/8 | 2.7 s **FAIL** |  | So this investigation was not built on voices. |
-| 16 | 1:07.2 | 0/5 | 1.5 s ok |  | It was built on paper. |
-| 17 | 1:09.5 | 1/20 | 5.8 s **FAIL** | one hundred eight | And the paper leads to a photograph, taken on a factory floor one hund |
-| 18 | 1:16.8 | 0/6 | 1.8 s **FAIL** |  | It shows exactly what was missing. |
-| 19 | 1:19.4 | 0/9 | 2.1 s **FAIL** | five | We will come to it in about five minutes. |
-| 20 | 1:22.4 | 0/10 | 3.1 s **FAIL** |  | The question was never only why a door plug failed. |
-| 21 | 1:26.0 | 1/12 | 2.7 s **FAIL** | first. | It was why every layer built to stop it had failed first. |
-| 22 | 1:30.5 | 0/8 | 2.0 s **FAIL** |  | Where did the margin of error run out? |
+| 0 | 0:00.0 | 4/5 | 0.9 s ok |  | Fifth of January, twenty twenty-four. |
+| 1 | 0:03.4 | 15/28 | 1.5 s ok |  | At twelve minutes and thirty-three seconds past five in the afternoon, |
+| 2 | 0:15.4 | 3/5 | 0.6 s ok |  | Then the cabin pressure dropped. |
+| 3 | 0:17.9 | 1/5 | 1.4 s ok |  | The cabin altitude warning sounded. |
+| 4 | 0:20.5 | 3/6 | 1.2 s ok |  | One second later, the master caution. |
+| 5 | 0:23.8 | 5/9 | 1.3 s ok |  | The captain would describe it as an explosive experience. |
+| 6 | 0:28.2 | 5/8 | 1.2 s ok |  | The first officer said simply: it was chaos. |
+| 7 | 0:32.3 | 7/15 | 0.7 s ok |  | Behind the wing, on the left side, there was now a hole in the fuselag |
+| 8 | 0:37.0 | 7/10 | 0.9 s ok |  | A rectangle about twenty-nine inches wide and fifty-nine inches high. |
+| 9 | 0:41.9 | 4/7 | 0.8 s ok |  | The two seats beside it were empty. |
+| 10 | 0:44.7 | 9/15 | 1.3 s ok |  | Fourteen minutes later, Alaska Airlines flight twelve eighty-two was b |
+| 11 | 0:51.1 | 3/5 | 0.9 s ok |  | Eight people had minor injuries. |
+| 12 | 0:53.5 | 2/5 | 1.0 s ok |  | No one was seriously hurt. |
+| 13 | 0:56.1 | 4/11 | 1.0 s ok |  | There is no recording of what was said in the cockpit. |
+| 14 | 0:59.3 | 5/12 | 0.9 s ok |  | The voice recorder kept running after landing, and recorded over the f |
+| 15 | 1:04.0 | 3/8 | 1.0 s ok |  | So this investigation was not built on voices. |
+| 16 | 1:07.2 | 2/5 | 0.7 s ok |  | It was built on paper. |
+| 17 | 1:09.5 | 10/20 | 1.1 s ok |  | And the paper leads to a photograph, taken on a factory floor one hund |
+| 18 | 1:16.8 | 3/6 | 1.0 s ok |  | It shows exactly what was missing. |
+| 19 | 1:19.4 | 2/9 | 1.0 s ok |  | We will come to it in about five minutes. |
+| 20 | 1:22.4 | 6/10 | 0.8 s ok |  | The question was never only why a door plug failed. |
+| 21 | 1:26.0 | 6/12 | 0.9 s ok |  | It was why every layer built to stop it had failed first. |
+| 22 | 1:30.5 | 8/8 | 0.4 s ok |  | Where did the margin of error run out? |
 | 23 | 1:36.9 | 1/21 | 4.6 s **FAIL** | seven thirty-seven nine | The seven thirty-seven nine has an opening in each side of the fuselag |
 | 24 | 1:44.8 | 0/19 | 6.7 s **FAIL** |  | Airlines that do not need that exit get a plug instead — a lighter, si |
 | 25 | 1:53.2 | 0/5 | 2.1 s **FAIL** | sixty-three | The plug weighs sixty-three pounds. |
@@ -52,7 +52,7 @@
 | 45 | 3:14.3 | 0/9 | 2.0 s **FAIL** |  | None of them carried a mark from a bolt. |
 | 46 | 3:17.0 | 0/14 | 4.2 s **FAIL** |  | But faint rings around the upper holes showed that washers had once be |
 | 47 | 3:22.0 | 0/9 | 2.7 s **FAIL** |  | The bolts had been fitted—and then taken out. |
-| 48 | 3:26.1 | 2/15 | 1.8 s **FAIL** |  | So the question became: who took them out, and why were they never put |
+| 48 | 3:26.1 | 1/15 | 3.4 s **FAIL** |  | So the question became: who took them out, and why were they never put |
 | 49 | 3:35.7 | 6/13 | 1.7 s **FAIL** |  | The plug was made by Spirit AeroSystems, in Malaysia, in March twenty  |
 | 50 | 3:42.1 | 10/24 | 1.5 s ok |  | Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty |
 | 51 | 3:52.1 | 0/7 | 2.5 s **FAIL** |  | Spirit's Wichita plant used to be Boeing's. |
@@ -64,7 +64,7 @@
 | 57 | 4:29.9 | 0/15 | 5.2 s **FAIL** |  | But under Boeing's rules, Spirit's people were not allowed to take apa |
 | 58 | 4:35.8 | 0/6 | 1.7 s **FAIL** |  | Only Boeing could open the plug. |
 | 59 | 4:38.1 | 0/6 | 2.0 s **FAIL** |  | And opening it was not routine. |
-| 60 | 4:41.0 | 3/27 | 4.7 s **FAIL** |  | Boeing's own process required a removal record — a document that lists |
+| 60 | 4:41.0 | 4/27 | 4.7 s **FAIL** |  | Boeing's own process required a removal record — a document that lists |
 | 61 | 4:52.1 | 0/11 | 3.1 s **FAIL** | two | For more than two weeks, the rivets went back and forth. |
 | 62 | 4:55.9 | 0/8 | 3.3 s **FAIL** |  | A Spirit contract mechanic recorded them as replaced. |
 | 63 | 4:59.9 | 1/17 | 5.3 s **FAIL** |  | The same day, Boeing's quality inspectors recorded that they had not b |
@@ -113,7 +113,7 @@
 | 106 | 8:25.8 | 0/16 | 5.6 s **FAIL** | twelve; sixty-eight | In the twelve months up to the build, its audits at Renton logged sixt |
 | 107 | 8:31.9 | 0/8 | 2.5 s **FAIL** | one | Not one of them mentioned the removal instruction. |
 | 108 | 8:36.1 | 0/5 | 1.3 s ok |  | Then there were the people. |
-| 109 | 8:38.4 | 0/13 | 5.2 s **FAIL** | twenty eighteen, seven thirty-seven; fifty-two | Before twenty eighteen, the seven thirty-seven line built about fifty- |
+| 109 | 8:38.4 | 1/13 | 3.6 s **FAIL** | twenty eighteen, seven thirty-seven | Before twenty eighteen, the seven thirty-seven line built about fifty- |
 | 110 | 8:44.4 | 0/22 | 9.0 s **FAIL** | two; seven thirty-seven | After two fatal accidents involving the seven thirty-seven Max, Boeing |
 | 111 | 8:54.1 | 0/9 | 4.0 s **FAIL** |  | The pandemic took more, particularly those eligible to retire. |
 | 112 | 8:58.8 | 1/12 | 2.6 s **FAIL** |  | At the low point, the line built fewer than ten a month. |
@@ -142,8 +142,8 @@
 | 135 | 10:53.8 | 0/9 | 2.5 s **FAIL** |  | But an airplane in flight does not sit still. |
 | 136 | 10:56.8 | 0/2 | 0.9 s ok |  | It vibrates. |
 | 137 | 10:57.9 | 0/2 | 0.8 s ok |  | It flexes. |
-| 138 | 10:59.2 | 1/14 | 2.9 s **FAIL** |  | And for brief moments, the load on the plug drops below its own weight |
-| 139 | 11:04.0 | 1/23 | 8.2 s **FAIL** | sixty-three | At the lowest point the analysis found, the plug's effective weight, t |
+| 138 | 10:59.2 | 1/14 | 2.5 s **FAIL** |  | And for brief moments, the load on the plug drops below its own weight |
+| 139 | 11:04.0 | 2/23 | 7.8 s **FAIL** | sixty-three | At the lowest point the analysis found, the plug's effective weight, t |
 | 140 | 11:14.7 | 0/10 | 2.5 s **FAIL** |  | Each moment like that could let it rise a little. |
 | 141 | 11:17.6 | 0/4 | 1.2 s ok |  | Fractions of an inch. |
 | 142 | 11:19.4 | 4/10 | 1.5 s **FAIL** |  | Across one hundred and fifty-four flights, it walked itself upward. |

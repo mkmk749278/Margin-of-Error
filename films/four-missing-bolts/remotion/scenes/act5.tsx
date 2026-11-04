@@ -37,12 +37,12 @@ const Grounded: React.FC = () => {
 		<>
 			<Fade start={a} end={docA + 20}>
 				<div style={{position: 'absolute', left: 300, top: 300, fontFamily: mono}}>
-					<div style={{fontSize: 16, letterSpacing: 3, color: colors.muted}}>FAA · EMERGENCY AIRWORTHINESS DIRECTIVE 2024-02-51 · 06 JAN 2024</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub}}>FAA · EMERGENCY AIRWORTHINESS DIRECTIVE 2024-02-51 · 06 JAN 2024</div>
 					<div style={{display: 'flex', alignItems: 'baseline', gap: 30, marginTop: 30}}>
 						<span style={{fontSize: 170, fontWeight: 700, color: colors.amber, fontVariantNumeric: 'tabular-nums'}}>{n}</span>
 						<span style={{fontSize: 30, color: colors.ink, letterSpacing: 3}}>BOEING 737-9s GROUNDED</span>
 					</div>
-					<div style={{fontSize: 18, letterSpacing: 2.4, color: colors.sub, marginTop: 10}}>UNTIL THEIR PLUGS WERE INSPECTED · NTSB AIR-25-04</div>
+					<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 10}}>UNTIL THEIR PLUGS WERE INSPECTED · NTSB AIR-25-04</div>
 				</div>
 				<Stamp text="GROUNDED" start={wf(155, 'grounded') + 30} x={1500} y={420} tone="amber" size={46} />
 			</Fade>
@@ -70,13 +70,14 @@ const Again: React.FC = () => {
 					<path d="M 560 560 C 760 300, 1160 300, 1360 560" fill="none" stroke={colors.border} strokeWidth={2} />
 					<path d="M 560 560 C 760 300, 1160 300, 1360 560" fill="none" stroke={colors.amber} strokeWidth={3} strokeDasharray="1200" strokeDashoffset={1200 * (1 - tween(f, loopA + 10, loopA + 120, 0, 1, ease.draw))} />
 				</svg>
-				<div style={{position: 'absolute', left: 420, top: 590, width: 280, textAlign: 'center', fontFamily: mono}}>
-					<div style={{fontSize: 44, fontWeight: 700, color: colors.ink}}>2005</div>
-					<div style={{fontSize: 15, letterSpacing: 2, color: colors.sub, marginTop: 6}}>BOEING SELLS WICHITA</div>
+				{/* round 3: the two ends on cards (no grid line through the text), labels at the §6.7 floor */}
+				<div style={{position: 'absolute', left: 560 - 230, top: 590, width: 460, padding: '14px 0 16px', textAlign: 'center', fontFamily: mono, background: colors.card, border: `1px solid ${colors.border}`}}>
+					<div style={{fontSize: 56, fontWeight: 700, color: colors.ink}}>2005</div>
+					<div style={{fontSize: 28, letterSpacing: 1.2, color: colors.ink, marginTop: 6}}>BOEING SELLS WICHITA</div>
 				</div>
-				<div style={{position: 'absolute', left: 1204, top: 590, width: 280, textAlign: 'center', fontFamily: mono, opacity: tween(f, loopA + 100, loopA + 130, 0, 1)}}>
-					<div style={{fontSize: 44, fontWeight: 700, color: colors.amber}}>2025</div>
-					<div style={{fontSize: 15, letterSpacing: 2, color: colors.sub, marginTop: 6}}>PART OF BOEING AGAIN</div>
+				<div style={{position: 'absolute', left: 1360 - 230, top: 590, width: 460, padding: '14px 0 16px', textAlign: 'center', fontFamily: mono, background: colors.card, border: `1px solid ${colors.amber}`, opacity: tween(f, loopA + 100, loopA + 130, 0, 1)}}>
+					<div style={{fontSize: 56, fontWeight: 700, color: colors.amber}}>2025</div>
+					<div style={{fontSize: 28, letterSpacing: 1.2, color: colors.ink, marginTop: 6}}>PART OF BOEING AGAIN</div>
 				</div>
 			</Fade>
 		</>
@@ -99,7 +100,7 @@ const Fix: React.FC = () => {
 	const p2 = anchor(state, cam, 'upperAft');
 	const bolts = ['upperFwd', 'upperAft', 'lowerFwd', 'lowerAft'].map((n) => anchor(state, cam, n));
 	return (
-		<Mount x={96} y={84} w={1728} h={900} source="ILLUSTRATION · BOEING/SPIRIT DESIGN ENHANCEMENT AS DESCRIBED IN NTSB AIR-25-04" start={a} end={end} labels={['ILLUSTRATION', 'SUBJECT TO CERTIFICATION']}>
+		<Mount x={96} y={84} w={1728} h={900} source="BOEING/SPIRIT DESIGN CHANGE AS DESCRIBED IN NTSB AIR-25-04" start={a} end={end} labels={['ILLUSTRATION', 'SUBJECT TO CERTIFICATION']}>
 			<div style={{position: 'absolute', left: -96, top: -84, width: 1920, height: 1080}}>
 				<PlugSvg
 					cam={cam}
@@ -109,7 +110,7 @@ const Fix: React.FC = () => {
 							{[p1, p2].map((p, i) => (
 								<g key={i} opacity={dev}>
 									<rect x={p.x - 26} y={p.y + 40} width={52} height={70} fill="rgba(56,189,248,0.25)" stroke={colors.cyan} strokeWidth={2.5} />
-									<text x={p.x + (i ? -36 : 36)} y={p.y + 80} textAnchor={i ? 'end' : 'start'} fill={colors.cyan} fontFamily="JetBrains Mono" fontSize={14}>
+									<text x={p.x + (i ? -36 : 36)} y={p.y + 80} textAnchor={i ? 'end' : 'start'} fill={colors.cyan} fontFamily="JetBrains Mono" fontSize={26}>
 										RETENTION DEVICE
 									</text>
 								</g>
@@ -127,11 +128,11 @@ const Fix: React.FC = () => {
 					{t: 'CABIN PANELS WILL NOT FIT UNLESS THEY ARE ENGAGED', on: sf(165)},
 					{t: 'LANYARDS: A REMOVED BOLT HANGS IN VIEW', on: sf(166)},
 				].map((x) => (
-					<div key={x.t} style={{fontSize: 18, letterSpacing: 1.6, color: colors.ink, padding: '14px 0', borderBottom: `1px solid ${colors.border}`, opacity: tween(f, x.on, x.on + 16, 0, 1)}}>
+					<div key={x.t} style={{fontSize: 26, letterSpacing: 1.6, color: colors.ink, padding: '14px 0', borderBottom: `1px solid ${colors.border}`, opacity: tween(f, x.on, x.on + 16, 0, 1)}}>
 						{x.t}
 					</div>
 				))}
-				<div style={{fontSize: 15, letterSpacing: 1.8, color: colors.amber, marginTop: 24, lineHeight: 1.6, opacity: tween(f, sf(167), sf(167) + 20, 0, 1)}}>BOEING TO THE NTSB, MAY 2025: NEW PRODUCTION LIKELY FROM 2026, ONCE CERTIFIED</div>
+				<div style={{fontSize: 26, letterSpacing: 1.2, color: colors.amber, marginTop: 24, lineHeight: 1.6, opacity: tween(f, sf(167), sf(167) + 20, 0, 1)}}>BOEING TO THE NTSB, MAY 2025: NEW PRODUCTION LIKELY FROM 2026, ONCE CERTIFIED</div>
 			</div>
 		</Mount>
 	);
@@ -182,7 +183,7 @@ const Last: React.FC = () => {
 	return (
 		<AbsoluteFill style={{opacity: o}}>
 			<PlugSvg cam={cam} state={f < sf(175) + 50 ? s2 : state} />
-			<div style={{position: 'absolute', left: 0, right: 0, top: 940, textAlign: 'center', fontFamily: mono, fontSize: 16, letterSpacing: 4, color: colors.muted, opacity: tween(f, sf(176), sf(176) + 30, 0, 1)}}>
+			<div style={{position: 'absolute', left: 0, right: 0, top: 940, textAlign: 'center', fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: tween(f, sf(176), sf(176) + 30, 0, 1)}}>
 				N704AL · LEFT MID EXIT DOOR PLUG · 0 OF 4 BOLTS
 			</div>
 			<Label text="ILLUSTRATION" style={{position: 'absolute', right: 72, top: 940}} />
@@ -201,9 +202,9 @@ const Outro: React.FC = () => {
 			<div style={{position: 'absolute', left: 0, right: 0, top: 170, textAlign: 'center'}}>
 				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 64, letterSpacing: 18, color: colors.ink, marginRight: -18}}>{channel.name.toUpperCase()}</div>
 				<div style={{width: 640 * line, height: 1, background: colors.amber, margin: '26px auto 0'}} />
-				<div style={{fontFamily: mono, fontSize: 18, letterSpacing: 5, color: colors.sub, marginTop: 24, opacity: tween(f, a + 60, a + 100, 0, 1)}}>{channel.tagline.toUpperCase()}</div>
+				<div style={{fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, marginTop: 24, opacity: tween(f, a + 60, a + 100, 0, 1)}}>{channel.tagline.toUpperCase()}</div>
 			</div>
-			<div style={{position: 'absolute', left: 0, right: 0, top: 960, textAlign: 'center', fontFamily: mono, fontSize: 18, letterSpacing: 2.4, color: colors.sub, opacity: tween(f, a + 90, a + 130, 0, 1)}}>
+			<div style={{position: 'absolute', left: 0, right: 0, top: 960, textAlign: 'center', fontFamily: mono, fontSize: 26, letterSpacing: 1.2, color: colors.sub, opacity: tween(f, a + 90, a + 130, 0, 1)}}>
 				SOURCES: NTSB AIR-25-04 · NTSB DOCKET DCA24MA063 · FAA · SEC EDGAR FILINGS OF BOEING AND SPIRIT AEROSYSTEMS
 			</div>
 		</AbsoluteFill>
