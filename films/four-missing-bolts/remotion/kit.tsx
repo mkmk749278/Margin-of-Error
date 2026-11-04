@@ -131,6 +131,8 @@ type PhotoProps = {
 	/** Ken Burns: focus rectangles in image pixels, from → to over the shot */
 	from: {x: number; y: number; w: number; h: number};
 	to: {x: number; y: number; w: number; h: number};
+	/** Word-keyed camera (PLAYBOOK §10.6): focus rectangles on frames; overrides from/to when given. */
+	path?: {frame: number; r: {x: number; y: number; w: number; h: number}}[];
 	/** frame box on screen */
 	box?: {x: number; y: number; w: number; h: number};
 	children?: (k: {sx: (px: number) => number; sy: (py: number) => number; scale: number}) => React.ReactNode;
@@ -138,15 +140,25 @@ type PhotoProps = {
 };
 
 /** A real photograph on a desk plate, unaltered (crop and slow push only, PLAYBOOK §9.5), credited on the strip. */
-export const Photo: React.FC<PhotoProps> = ({src, iw, ih, start, end, source, tag, from, to, box = {x: 150, y: 110, w: 1620, h: 820}, children, labels}) => {
+type R = {x: number; y: number; w: number; h: number};
+const mixRect = (a: R, b: R, t: number): R => ({
+	x: interpolate(t, [0, 1], [a.x, b.x]),
+	y: interpolate(t, [0, 1], [a.y, b.y]),
+	w: a.w * Math.pow(b.w / a.w, t),
+	h: a.h * Math.pow(b.h / a.h, t),
+});
+/** The focus rectangle on a word-keyed path: held before the first key and after the last, eased between keys. */
+const rectOnPath = (f: number, path: {frame: number; r: R}[]): R => {
+	if (f <= path[0].frame) return path[0].r;
+	for (let i = 0; i + 1 < path.length; i++) {
+		if (f < path[i + 1].frame) return mixRect(path[i].r, path[i + 1].r, tween(f, path[i].frame, path[i + 1].frame, 0, 1, ease.camera));
+	}
+	return path[path.length - 1].r;
+};
+
+export const Photo: React.FC<PhotoProps> = ({src, iw, ih, start, end, source, tag, from, to, path, box = {x: 150, y: 110, w: 1620, h: 820}, children, labels}) => {
 	const f = useFilmFrame();
-	const t = tween(f, start, end, 0, 1, ease.camera);
-	const r = {
-		x: interpolate(t, [0, 1], [from.x, to.x]),
-		y: interpolate(t, [0, 1], [from.y, to.y]),
-		w: from.w * Math.pow(to.w / from.w, t),
-		h: from.h * Math.pow(to.h / from.h, t),
-	};
+	const r = path && path.length ? rectOnPath(f, path) : mixRect(from, to, tween(f, start, end, 0, 1, ease.camera));
 	const innerH = box.h - 44;
 	const scale = Math.max(box.w / r.w, innerH / r.h);
 	const cx = r.x + r.w / 2;
