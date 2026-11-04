@@ -18,6 +18,13 @@ Read this first in a new session, then `CLAUDE.md` and the playbook parts it nam
   (`sound/mix.json`, `sound/mix_report.md`): voice −2.3 dBTP, master −14.0 LUFS, −1.4 dBTP. Mix in Drive
   `four-missing-bolts/mix/mix.wav`; render media in Drive `four-missing-bolts/render-media/`.
 
+## US and UK audience review of the 4K master (2026-11-04)
+- `review/audience_us_uk_4k.md`: 177 sentence frames of the master read, plus sequential decodes and 4K crops.
+  **Verdict: ship; no re-render.** Package fixed: new recommended title (Boeing first), description line 1
+  ("737-9 MAX", NTSB and FAA glossed, where the real Fig. 18 is), search-phrase chapters, thumbnail D (NTSB Fig. 1)
+  for Test & Compare D/B/C, end-screen step, SRT rebuilt (NTSB/FAA/MAX as text, no one-word tails; 223 cues).
+  Claims 93/93 (C93 added). Cut lessons L1–L7 in PLAYBOOK §4.1c.
+
 ## Final pass (2026-11-04): forensic review, fixes, 4K master
 - **Forensic review of the round-3b cut:** `review/forensic_review_round3b_720p.md` (0 gaps, 0 black/frozen frames,
   0 still holds, −14.1 LUFS / −1.3 dBTP; claims 92/92; sync 177/177). Six fixes in code (bolt readout never passes

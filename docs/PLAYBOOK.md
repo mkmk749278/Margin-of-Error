@@ -130,6 +130,22 @@ way past it.
 
 One spelling (American), one date form (`05 JAN 2024`), one fairness standard for both.
 
+**Lessons from the US and UK review of film 1's 4K master (2026-11-04, `films/four-missing-bolts/review/audience_us_uk_4k.md`):**
+- **Say the gloss, don't only show it.** Film 1 never said what the NTSB is; a UK viewer had to infer it. Gloss the
+  first spoken mention ("the N - T - S - B, America's accident investigator"). *Why:* a TV viewer may not be looking.
+- **The record's name and the public's name, once, side by side** ("the seven thirty-seven nine, the Max nine"). The
+  public searches for the name the news used, and the title and description line 1 carry it too.
+- **Two boards in one film: name which board every time** ("one N - T - S - B board member"). Film 1 had Boeing's
+  board approving buybacks at 9:56 and "one board member" at 14:22; only the screen said NTSB.
+- **Neutral clock times and idioms:** "six forty", not "twenty to seven"; "all around", not "all round".
+- **When the key exhibit cannot be shown, say where the original is** (description and pinned comment: report, figure,
+  page). The redraw stays labelled RECONSTRUCTION. *Why:* the promise was "a photograph"; pointing to the real one
+  is what this audience calls visible care.
+- **The title leads with the name the viewer types** (the company, the flight, the part), then our phrase.
+- **A browse thumbnail must read as its subject at 168 px wide.** A schematic of a plug reads as a cupboard; the real
+  exhibit (the cabin hole, NTSB Fig. 1) reads at once.
+- **Outro text inside the 90% safe area and above the end-screen zone;** the outro window is the end screen's slot.
+
 ### 4.1a Where we have space, and our edge (research 2026-11-02, `docs/research/2026-11-02_landscape.md`)
 Four neighbouring lanes are each strong and each stop short: aviation-disaster channels stay in the cockpit;
 corporate/finance explainers tell the failure without showing it (and often editorialise); engineering-failure
