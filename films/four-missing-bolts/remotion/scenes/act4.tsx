@@ -281,7 +281,7 @@ const Seal: React.FC = () => {
 		<Mount x={260} y={150} w={1400} h={700} source="AFTER NTSB AIR-25-04 · LINES NEAR THE UPPER SEAL" start={a} end={end} labels={['ILLUSTRATION', 'NOT TO SCALE']}>
 			<svg width={1400} height={642}>
 				<rect x={0} y={0} width={1400} height={330} fill="#1b2433" />
-				<rect x={0} y={330} width={1400} height={50} fill={f >= S.seal ? '#344257' : '#2b3647'} />
+				<rect x={0} y={330} width={1400} height={50} fill={f >= S.seal ? '#344257' : '#2b3647'} opacity={0.9 + 0.1 * bump(f, fps, S.steps + LAND)} />
 				<text x={30} y={60} fontFamily="JetBrains Mono" fontSize={30} letterSpacing={1.2} fill={colors.ink} opacity={on(f, S.record, 10)}>
 					A RECORD OF THE CLIMB
 				</text>
@@ -303,7 +303,6 @@ const Seal: React.FC = () => {
 				{t: '· ALONG THE SEAL', at: S.seal, br: true},
 				{t: '· MARKING ITS STEPS', at: S.marking, tone: colors.amber},
 			]} />
-			<div style={{position: 'absolute', right: 120, top: 260, fontFamily: mono, fontSize: 56, fontWeight: 700, color: colors.amber, opacity: on(f, S.parallel, 10), transform: `scale(${bump(f, fps, S.steps + LAND).toFixed(4)})`, transformOrigin: '100% 50%'}}>{n}</div>
 		</Mount>
 	);
 };

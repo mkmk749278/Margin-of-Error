@@ -36,14 +36,16 @@ const union = (rs: Rect[], padX: number, padY: number): Rect => {
 	return {x: x0, y: y0, w: x1 - x0, h: y1 - y0};
 };
 
-export type HL = {key: PhraseKey; at: number};
+/** A highlighted phrase: its rects draw in turn from `at`, or each on its own word frame in `ats` (PLAYBOOK §10.6). */
+export type HL = {key: PhraseKey; at: number; ats?: number[]};
 
 /** An NTSB report page: slides on at `start`, pushes in to the union of the highlighted phrases, draws them in turn. */
 export const ReportPage: React.FC<{page: number; start: number; end: number; hl: HL[]; label: string; title: string; pushTo?: number; pad?: [number, number]; dim?: boolean}> = ({page, start, end, hl, label, title, pushTo, pad = [120, 160], dim = false}) => {
 	const rects = hl.flatMap((h) => phrases[h.key].rects);
 	const u = union(rects, pad[0], pad[1]);
-	const highlights = hl.flatMap((h) => phrases[h.key].rects.map((r, i) => ({...r, start: h.at + i * 22, draw: 26})));
-	const source = `NTSB AIR-25-04 · P. ${reportPage(page)} · ${title}`;
+	const highlights = hl.flatMap((h) => phrases[h.key].rects.map((r, i) => ({...r, start: h.ats?.[i] ?? h.at + i * 22, draw: 26})));
+	// the report's front matter (cover, title page) has no printed page number
+	const source = `NTSB AIR-25-04 · ${reportPage(page) > 0 ? `P. ${reportPage(page)}` : 'TITLE PAGE'} · ${title}`;
 	const img = <Img src={media(PAGE_FILES[page])} style={{width: 1870, height: 2420}} />;
 	const col = (r: Rect) => ({x: 150, w: 1570, y: r.y, h: Math.max(r.h, 420)});
 	// passages too far apart to read in one frame: hold on each in turn, dissolving between them
