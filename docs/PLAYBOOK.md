@@ -145,6 +145,9 @@ One spelling (American), one date form (`05 JAN 2024`), one fairness standard fo
 - **A browse thumbnail must read as its subject at 168 px wide.** A schematic of a plug reads as a cupboard; the real
   exhibit (the cabin hole, NTSB Fig. 1) reads at once.
 - **Outro text inside the 90% safe area and above the end-screen zone;** the outro window is the end screen's slot.
+- **An AI mock-up of a thumbnail is a layout sketch, never a source** (owner's mock-up, 2026-11-04). Take its
+  composition and finish; rebuild on the real exhibit. Drop anything it invents: a regenerated photo, HUD numbers
+  that mean nothing, a circle on a part that is not what it implies, a generator's watermark.
 
 ### 4.1a Where we have space, and our edge (research 2026-11-02, `docs/research/2026-11-02_landscape.md`)
 Four neighbouring lanes are each strong and each stop short: aviation-disaster channels stay in the cockpit;
