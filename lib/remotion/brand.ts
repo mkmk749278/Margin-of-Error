@@ -41,6 +41,6 @@ export const camera = {
 
 export const channel = {
   name: 'Margin of Error',
-  handle: '@marginoferror',
+  handle: '@marginoferrorfilmstv',
   tagline: 'Where accounting meets the laws of physics.',
 } as const;

@@ -1291,15 +1291,23 @@ only against our own rules hides what the competing films already do better.
    what everyone says against the record, the treatment as the plan with a beat sheet, owner approval of the
    treatment, the narration, the audio and the cut, independent reviews at three points (§14.5), Cowork for sources
    blocked from the cloud (§11.1), a shared runner budget (§10.5) and the after-release reads (§13.6).
+9. **2026-11-05: film 2 is East Palestine** (slate #3 moved up); the transformer film moves to film 3 or later.
+   *Why:* film 1 is public, and a new channel's second film does best when it reaches the first film's viewers
+   (suggested traffic) with the same kind of film: a transport failure told from an NTSB docket. East Palestine fits
+   all five acts; the transformer case still lacks a single incident for Act I and a dated decision for Act III.
 
 ### 17.2 Open (to settle before or during Film 1)
-1. **Handle:** `config/brand.yaml` holds `@marginoferror` as a placeholder until the owner confirms the real one.
+1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
+   channel's own YouTube access; in `config/brand.yaml`.
 3. **Acronym format for voice "1":** the spec's hyphen spacing (`N - T - S - B`) is the default; check it on the
    first generated block (§7.5).
 4. **Voice:** settled 2026-11-03, the custom voice "1" (§7.5). Key: `ELEVENLABS_API_KEY` in the environment.
 5. **Currency in a UK case** (before film 4 or 5): the spec says `$` everywhere; a UK record states pounds. Options to
    put to the owner then: the record's `£` with a dated `$` line beneath, or `$` with the `£` beneath.
 6. **Comment tooling:** connect the channel's YouTube access when the first film is public (§13.8).
+   *2026-11-05:* `YT_REFRESH_TOKEN_MARGINOFERROR` is now in the environment and works read-only (channel, uploads,
+   public comments). Film 1 went public 04 NOV 2026 as "Why Boeing Flew 154 Times With No Bolts". The fetch/post
+   script is still to build; posting stays owner-approved (§13.8).
    *2026-11-04 check:* no YouTube access yet: no `YT_REFRESH_TOKEN_MARGINOFERROR` in the environment, and the handle
    `@marginoferror` resolves to no channel on the YouTube Data API (so the real handle is still to confirm, item 1).
    The owner signs the channel in once from Termux with the existing OAuth client (`YT_CLIENT_ID`,
@@ -1356,8 +1364,8 @@ GOES, told through AI data-centre demand; owner, 2026-11-02).**
 | # | Slug | Working title | Why it's in this place |
 |---|---|---|---|
 | 1 | `four-missing-bolts` | The Four Missing Bolts | Deepest demand (Boeing); no definitive film from the NTSB final report |
-| 2 | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | Rides the AI data-centre power wave, the strongest current search and browse topic near us |
-| 3 | `east-palestine` | title after the train-length check (§17.3) | The only big film is advocacy; a neutral, document-led one is open |
+| 2 | `east-palestine` | title after the train-length check (§17.3) | The only big film is advocacy; a neutral, document-led one is open. Moved up 2026-11-05 (§17.1 item 9) |
+| 3+ | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | Waits for an incident for Act I and a dated decision for Act III; rides the AI data-centre power wave, the strongest current search and browse topic near us |
 | 4–5 | (one UK case) | Grenfell's cladding chain, or Post Office Horizon if a mechanism angle holds | Tests UK appetite: few films, unproven demand |
 
 **The "final report" slot.** When an NTSB (or AAIB, CSB, TSB) final report publishes on a case with strong early
