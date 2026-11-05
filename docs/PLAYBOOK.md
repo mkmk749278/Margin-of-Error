@@ -177,6 +177,12 @@ Thumbnail candidates are noted while building, so the best frames are ready.
 **15. Release and the first 28 days** (§13.6), then the lessons: each into the rule it belongs to, with its reason
 (§16).
 
+**Skills that walk through the steps** (`.claude/skills/`, adopted 2026-11-05): `/new-film` (all of it, stopping at
+each gate), `/fact-check` (step 4 and every change), `/fairness-pass` (§9.6, before the narration reaches the owner),
+`/source-exhibits` (§11), `/choreograph` (§10.3, §10.6), `/parallel-render` (§10.5), `/review-cut` (§14.2), `/deliver`
+(§13). A skill is a checklist that points here; it never holds a rule of its own. A changed rule is changed here, and
+the skill only if its step changed.
+
 ---
 
 # Part B: The channel
@@ -1096,6 +1102,9 @@ only against our own rules hides what the competing films already do better.
 - *The account's 20 runners are shared with other repos;* a 20-runner render can queue everyone else. **Rule:** §10.5,
   6 by default.
 - *Some sources need a home network.* **Rule:** §11.1, a click-to-copy Cowork request beside the Termux line.
+- *Long rules are skipped under pressure; a checklist is not.* **Rule:** eight skills walk the steps and point to the
+  rules here (§3a), so the rules stay in one place. Two are our own: `/fairness-pass` and `/choreograph`, the two
+  steps where this channel's films are won or lost.
 
 **The music library (2026-11-04).**
 - *Lyria adds voices it was told not to.* In the first library run 102 takes were billed for 38 kept tracks (61 rejected, mostly for choir or "ooh" pads and vocal chops
