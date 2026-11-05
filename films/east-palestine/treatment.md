@@ -111,7 +111,7 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 ## Signature moments
 1. **The blind nineteen miles** (10:30): an austere telemetry strip and the route line from Salem to East Palestine at
    true relative scale, driven by the NTSB's own event-recorder data for lead locomotive NS 4178 (1 Hz CSV, docket
-   items 16–17): the real speed (19–43 mph between the detectors), the elapsed clock 8:13 → 8:52 p.m., miles
+   items 16–17): the real speed (19–45 mph between the detectors, on the recorder's clock), the elapsed clock 8:13 → 8:52 p.m., miles
    travelled; source strip `NTSB EVENT RECORDER DATA · NS 4178 · RRD23MR005`; compressed to about 40 s; mileposts ticking; between the detectors no readout at
    all, a dark strip labelled `NO DETECTOR · 19 MI`; only the dashed ILLUSTRATIVE band of what the inside of the
    bearing may be doing. Then `MP 49.81` and the last minute in real time, no music: `MAX 253°F`, the critical alarm as
