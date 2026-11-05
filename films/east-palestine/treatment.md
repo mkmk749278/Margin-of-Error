@@ -157,7 +157,7 @@ politician; firefighter training, radios, placards (one line on the consist dela
 merger. The ladder as a repeated device; the second bearing segment; buybacks by year; buybacks beside costs.
 
 ## Owner decisions (2026-11-05)
-- **Treatment v2 approved.** **Narration v1 approved** (`script/narration.md`, 2026-11-05).
+- **Treatment v2 approved.** **Narration v1 approved** (`script/narration.md`, 2026-11-05). **Audio approved** (Drive `east-palestine/vo/east-palestine_narration_v1_full.mp3` and takes b01–b07, 2026-11-05; film 21:32 with holds, every word measured in `vo/timing.json`).
 - **The Salem camera frame:** a labelled RECONSTRUCTION, with "the real frame: NTSB RIR-24-05, fig. 5" on screen and in
   the description. No license request.
 - **The plume:** a short (3–5 s), credited excerpt of the Columbiana County Commissioner's Office drone video from the
