@@ -22,6 +22,15 @@ K20 = 'https://www.sec.gov/Archives/edgar/data/702165/000070216521000006/nsc-202
 K22 = 'https://www.sec.gov/Archives/edgar/data/702165/000070216523000010/nsc-20221231.htm'
 K23 = 'https://www.sec.gov/Archives/edgar/data/702165/000070216524000005/nsc-20231231.htm'
 K25 = 'https://www.sec.gov/Archives/edgar/data/702165/000162828026006268/nsc-20251231.htm'
+Q = 'https://data.ntsb.gov/Docket/Document/docBLOB?ID=16623716&FileExtension=pdf&FileName=CLASS%201%20WAYSIDE%20QUESTIONNAIRE%20RESULTS-Rel.pdf'
+RULE = 'https://data.ntsb.gov/Docket/Document/docBLOB?ID=16604436&FileExtension=pdf&FileName=NS%20OPERATING%20RULE%20-%20DEFECTIVE%20EQUIPMENT%20DETECTORS-Rel.pdf'
+CRS = 'https://www.congress.gov/crs_external_products/R/PDF/R47911/R47911.7.pdf'
+RECS = 'https://www.ntsb.gov/investigations/Documents/East%20Palestine%20Safety%20Recommendations%20status%20as%20of%202-3-2025.pdf'
+NS25 = 'https://norfolksouthern.investorroom.com/2024-06-25-Norfolk-Southern-Safety-Enhancements-Align-with-NTSB-East-Palestine-Final-Recommendations'
+CD = 'https://www.govinfo.gov/content/pkg/USCOURTS-ohnd-4_23-cv-00517/pdf/USCOURTS-ohnd-4_23-cv-00517-4.pdf'
+CL = 'https://www.govinfo.gov/content/pkg/USCOURTS-ohnd-4_23-cv-00242/pdf/USCOURTS-ohnd-4_23-cv-00242-22.pdf'
+K21 = 'https://www.sec.gov/Archives/edgar/data/702165/000070216522000007/nsc-20211231.htm'
+FR = 'https://www.govinfo.gov/content/pkg/FR-2024-07-17/html/2024-15691.htm'
 P21 = 'https://www.sec.gov/Archives/edgar/data/702165/000155278121000163/e21086_nsc-def14a.htm'
 TEXT = {
     R: norm((SRC / 'RIR2405.txt').read_text(errors='ignore')),
@@ -33,6 +42,15 @@ TEXT = {
     P21: norm(htmltext(SRC / 'def14a_2021.htm')),
     K23: norm(htmltext(SRC / 'tenk/nsc-20231231.htm')),
     K25: norm(htmltext(SRC / 'tenk/nsc-20251231.htm')),
+    Q: norm((SRC / 'docket/16623716.txt').read_text(errors='ignore')),
+    RULE: norm((SRC / 'docket/16604436.txt').read_text(errors='ignore')),
+    CRS: norm((SRC / 'status/crs_R47911_7.txt').read_text(errors='ignore')),
+    RECS: norm((SRC / 'status/ntsb_recs_2025.txt').read_text(errors='ignore')),
+    NS25: norm(htmltext(SRC / 'status/ns_20240625.htm')),
+    CD: norm((SRC / 'status/gi/4.txt').read_text(errors='ignore')),
+    CL: norm((SRC / 'status/gi242/22.txt').read_text(errors='ignore')),
+    K21: norm(htmltext(SRC / 'tenk/nsc-20211231.htm')),
+    FR: norm(htmltext(SRC / 'status/fr_2024_15691_gi.htm')),
 }
 ROWS = [
  ('On 03 FEB 2023 about 8:54 p.m., eastbound Norfolk Southern train 32N derailed 38 freight cars at milepost 49.5 in East Palestine, Ohio', R, 'On February 3, 2023, about 8:54 p.m., eastbound Norfolk Southern Railway (NS) train 32N derailed 38 mixed freight railcars at milepost 49.5', 'p. x'),
@@ -108,6 +126,37 @@ ROWS = [
  ('In 2025 recoveries exceeded incident expenses by $254 million', K25, 'insurance and other recoveries that exceeded additional Incident-related expenses by $254 million', '2025 10-K'),
  ('The NTSB: the AAR definition relates to billing for repairs, not directly to safety or wayside detection', R, 'it relates to billing for repairs, not directly to safety or wayside detection', 'p. 107'),
  ('NS based its thresholds on its own experience with HBDs and AAR standards (NS testimony)', R, 'NS based its alert and alarm temperature thresholds on its own experience with HBDs and AAR standards', 'p. 106; NS side, always with C23'),
+ ('NS testified its average detector spacing on key routes was 13.9 miles', H2, 'Our average spacing on our key routes is currently 13.9 miles across our system', 'hearing day 2 p. 259, NS (Mr. Hopewell); identifies Railroad #2 in the Class I questionnaire'),
+ ('An NTSB questioner: NS had come back with a higher number than the AAR recommendations', H2, "They've come back with a higher number than what the AAR recommendations", 'hearing day 2 p. 259'),
+ ('AAR witness: not all railroads used 170; some used higher; all are now committed to 170', H2, 'They are now all committed to using 170 degrees on their railroad to take a look at bearings', 'hearing day 2 p. 263'),
+ ('Railroad #2 (13.9-mile spacing = NS) had a critical alarm at 200°F above ambient before 02 FEB 2023, 170°F after', Q, 'Critical 200', 'docket item 70 table: prior "Critical 200 / Non-Critical between 170 and 200", post 170; #2 = NS by C74 and NTSB p. 105 (253 more than 50 above critical)'),
+ ('NS rule: on a CRITICAL ALARM the train must be immediately stopped for inspection', RULE, 'The train must be immediately stopped for inspection', 'NS Operating Rule 147(a), eff. 01 JAN 2019, docket item 68'),
+ ('NS rule: on a non-critical defect message, slow to not less than 8 MPH, then stop for inspection once the rear clears', RULE, 'the train must immediately reduce speed to not less than 8 MPH until the rear of the train clears the detector at which point the train must be stopped for inspection', 'NS Operating Rule 147(b)'),
+ ('The NTSB recovered the L1 bearing parts on 05 FEB 2023, west of the pileup, the day before the vent and burn', R, 'On February 5, after photographing the L1 bearing and journal in their as-found condition, the NTSB recovered the separated axle journal and several bearing components', 'p. 46; answers "the burn destroyed the evidence"'),
+ ('The bearing parts were found west of the pileup, far from the rest of the wheelset', R, 'The components’ positions west of the pileup and far from the rest of the wheelset indicate that they became separated from the hopper car in the earliest moments of the derailment', 'p. 102'),
+ ('The hopper car was owned by GATX and leased to Braskem America', R, 'GPLX75465 was a covered hopper railcar owned by the GATX Corporation and leased to Braskem America, Inc.', 'p. 45'),
+ ('The crew was an engineer, a conductor and a conductor trainee', R, 'an engineer, a conductor, and a conductor trainee', 'p. 4; three in the cab'),
+ ('As of 24 JUL 2026, federal regulations did not require wayside detectors or set temperature thresholds', CRS, 'Federal regulations do not currently require the use of wayside defect detectors or specify temperature thresholds for inspection or removal of cars with overheating bearings', 'CRS R47911, updated 24 JUL 2026, p. 10'),
+ ('Train 32N did not qualify as a High Hazard Flammable Train', CRS, 'The train that derailed in East Palestine did not qualify as such due to the type and quantity of cargo it carried', 'CRS summary'),
+ ('The ECP brake requirement (for high-hazard flammable unit trains) was removed in 2018 after costs were found to exceed benefits', CRS, "When the rule's costs were found to exceed its benefits, the ECP requirement was removed in 2018", 'CRS p. 6; applied to HHFUTs only'),
+ ('NTSB R-24-03 asks the FRA for minimum requirements including alert and alarm thresholds and maximum detector spacing', RECS, 'minimum requirements for bearing defect detection systems, including criteria for bearing alert and alarm thresholds and maximum distances between wayside detectors', 'NTSB status document as of 03 FEB 2025: Open - Initial Response Received'),
+ ('FRA Safety Advisory 2023-01 asks railroads to review the adequacy of their trend analysis and thresholds', FR, "to determine the adequacy of the railroad's current trend analysis and thresholds levels", '89 FR (17 JUL 2024), second supplement; an advisory, not a rule'),
+ ("NS: its and its contractors' only motivation in recommending the vent and burn was the health and safety of the community and first responders", NS25, "Norfolk Southern and its expert contractors' only motivation in recommending the vent and burn to the Unified Command was the health and safety of the community and first responders", 'NS statement 25 JUN 2024; the other side at the NTSB finding'),
+ ('NS: Unified Command was advised about 20 hours ahead that a vent and burn might be necessary', NS25, 'Unified Command was advised that a vent and burn procedure might be necessary approximately 20 hours before the Unified Command made the final decision', 'NS statement 25 JUN 2024'),
+ ('NS: 187 additional hot bearing detectors, average spacing about 12 miles on its core network', NS25, 'Installing 187 additional hot bearing detectors, reducing core network average distance between detectors to approximately 12 miles', 'NS statement 25 JUN 2024 (company claim)'),
+ ('The 153–158°F range came from the SPSI president and SRS project manager (NS contractors)', R, 'The SPSI president and SRS project manager told the incident commander that if a tank car', 'p. 28'),
+ ('The NTSB found no evidence attendees other than NS and its contractors knew of Oxy\'s dissent', R, 'The NTSB did not find evidence that attendees other than NS and its contractors were aware that Oxy Vinyls had developed a dissenting opinion about polymerization', 'p. 27'),
+ ('Polymerization: small molecules combine into larger ones; VCM becomes PVC, a hard plastic', R, 'VCM polymerizes into polyvinyl chloride (PVC), a hard plastic', 'p. 18 n.'),
+ ('On-scene temperature trends did not indicate polymerization, and post-accident examinations confirmed it', R, 'On-scene temperature trends did not indicate that a polymerization reaction was occurring and postaccident examinations confirmed this.', 'p. xi'),
+ ('The United States moved for entry of the federal consent decree on 10 OCT 2024', CD, 'On October 10, 2024 the United States filed a motion for entry of a consent decree', 'N.D. Ohio 4:23-cv-517, Doc. 301, 09 MAR 2026'),
+ ('On 09 MAR 2026 the court let residents intervene and stayed pending motions; the decree was not yet entered', CD, 'Accordingly, the motion to intervene is GRANTED', 'Doc. 301; status to re-check on upload day'),
+ ('The judge: this is not a rubber stamp court', CD, 'this is not a rubber stamp court', 'Doc. 301 quoting Doc. 219'),
+ ('The class settlement is a non-reversionary $600 million fund, approved 27 SEP 2024', CL, 'The Settlement creates a non-reversionary fund of $600 million', 'N.D. Ohio 4:23-cv-242, Doc. 1053 (01 MAY 2026); final approval ECF 557, 27 SEP 2024'),
+ ('The Sixth Circuit dismissed the objectors\' appeals on 05 NOV 2025; certiorari denied 02 MAR 2026', CL, 'cert. denied, No. 25-929, 2026 WL 568332 (March 2, 2026)', 'Doc. 1053 n. 1; dismissal on 05 NOV 2025 at p. 15'),
+ ('On 01 MAY 2026 the court denied motions to reopen the class judgment', CL, '994) are denied', 'Doc. 1053'),
+ ('NS share repurchases were $2,781 million in 2018', K19, 'Share repurchases ( 17 ) ( 125 ) ( 2,639 ) ( 2,781 )', '2019 10-K equity statement (2018 column)'),
+ ('NS share repurchases were $2,099 million in 2019', K21, 'Share repurchases ( 11 ) ( 88 ) ( 2,000 ) ( 2,099 )', '2021 10-K equity statement'),
+ ('NS share repurchases were $3,390 million in 2021', K21, 'Share repurchases ( 13 ) ( 106 ) ( 3,271 ) ( 3,390 )', '2021 10-K; 2018–2022 total $12,819M, OUR CALCULATION'),
 ]
 bad = 0
 with OUT.open('w', newline='') as f:
