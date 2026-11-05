@@ -7,7 +7,9 @@ built like an NTSB inquiry, never commentary or gossip. Audience: the US, UK, Ca
 
 This file holds the rules every session must follow. **`docs/PLAYBOOK.md` is the only other instruction file**: full
 specs, how-tos, the reason behind each rule, the launch slate's fact flags (§17.3) and the owner's handoff spec word
-for word (Part G). Read the parts that apply before starting work. Add new lessons to the playbook (with the reason),
+for word (Part G). Read the parts that apply before starting work. **Skills in `.claude/skills/`** walk through the steps
+(`/new-film`, `/fact-check`, `/fairness-pass`, `/source-exhibits`, `/choreograph`, `/parallel-render`, `/review-cut`,
+`/deliver`); they point to the playbook and hold no rules of their own. Add new lessons to the playbook (with the reason),
 never to new doc files.
 
 ## Your role: creative director and lead investigator
@@ -104,6 +106,7 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 11. **720p review cut** after our own measured review (§14.2), until a round finds nothing.
 12. **Independent viewer review and forensic review**, each point checked (§14.3). **The owner approves the cut.**
 13. **4K master** once. 14. **YouTube package** (§13.7). 15. **Release**, the 24 h / 7 d / 28 d reads, lessons.
+`/new-film` walks the whole path and stops at each gate.
 
 ## Format: the five-act forensic investigation (owner's spec §3)
 - **Long-form, about 16–22 minutes**, built for desktop and TV; the evidence sets the length, never a target.
