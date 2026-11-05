@@ -9,7 +9,8 @@ reason), never in new doc files.
 carried over from earlier production work are written as our own, with the measured reason.
 
 **Contents**
-- Part A: How we work. 1 Owner and delivery · 2 Claude: creative director and lead investigator · 3 Sessions
+- Part A: How we work. 1 Owner and delivery · 2 Claude: creative director and lead investigator · 3 Sessions ·
+  3a How we make a film (the fifteen steps and the owner's four gates)
 - Part B: The channel. 4 Identity and audience · 5 Story architecture · 6 The look · 7 Narration ·
   8 Visual toolkit
 - Part C: Production. 9 Facts, fairness and evidence · 10 Remotion engine · 11 Assets · 12 Sound ·
@@ -61,11 +62,120 @@ chosen); the evidence spine (the 6–10 exhibits the film is built on); signatur
 round to finish sooner. Knowledge stops at June 2026: every fact comes from collected sources (§9).
 
 ## 3. Sessions
-- **One session does the work.** A new session only for an **independent review** (audience §7.8, fact-check,
-  fairness §9.6, fresh-eyes picture review §14), archived when done. *Why:* every session eats the shared usage limit.
+- **One session does the work.** A new session only for an **independent review** (treatment and cut §14.5,
+  audience §7.8, fact-check, fairness §9.6, forensic §14.4), archived when done. *Why:* every session eats the
+  shared usage limit.
 - Each cloud session is a VM of about 4 vCPU / 16 GB. Idle VMs pause and can be reclaimed: start long jobs detached
   (`setsid nohup … < /dev/null & disown`), watch with Monitor, make them resumable.
 - **Full renders run on GitHub's runners, never in the session** (§10.5).
+- **One heavy job at a time** (about 14 GB of memory). If ffmpeg or a render dies with an empty error, check for OOM
+  first. Never name a shell function after a command it calls (it recursed, forked about 1,500 shells and OOM-killed
+  a render); never `pkill -f` a pattern that appears in the same command line (it kills its own shell): kill by PID.
+- **At session start:** `git log --oneline main..origin/<branch>` for each branch on the remote; anything unmerged is
+  merged or reported before new work (§16, the review branch that never merged).
+
+## 3a. How we make a film (adopted 2026-11-05)
+Fifteen steps in five phases. The five acts (§5) say what the film is; this says the order we build it in, and where
+the owner decides. Two principles run through every step:
+- **Creativity in every step, not only at the end.** Each step below has a creative question. The obvious answer
+  (a push-in on the report cover, a stock clip of the aircraft, a montage of headlines) is the floor, never the
+  result. The narration and the picture get the most of it.
+- **Decide early, build once.** Direction is cheapest to change on paper and most expensive after the voice is
+  recorded and the picture is cued to it. So the owner approves the treatment before the narration is written and the
+  narration before any audio. The slow work (collecting exhibits, owner fetches, building the hero mechanism) starts
+  the day the treatment is approved, beside the writing.
+
+**Owner gates: the treatment (3), the narration (5), the audio (6), the cut (12).** At each one the owner gets a
+finished, phone-readable piece and a short report (§1), never a draft. Between gates, Claude decides and says what it
+decided.
+
+### Phase A: find the case
+**1. The case → `brief.md`.** From the slate (§17.4), a "final report" slot, or the owner's idea. The case sheet
+(§4.3) and the package (title, thumbnail concept, search phrases) come first, because the package is the promise.
+*Creative question:* what single fact about this failure would make an engineer and an accountant both stop scrolling?
+
+**2. Deep research → `research/landscape.md`.** Four parts:
+- **What everyone says,** with links: the news coverage, the company's statements, the regulator's press releases, and
+  the 3–5 strongest existing films (title, angle, length, views) with what their comments say they failed to explain
+  (comments name the gaps exactly; §16).
+- **What the record says:** the report, the docket, the filings, the testimony. Every fact goes into a draft
+  `claims.csv` as it is found (claim, URL, verbatim quote), never reconstructed later.
+- **Our edge, in one sentence.** Usually the primary document the others paraphrased, the threshold they never named,
+  or the decision they never dated. **No edge, no film;** no dated, documented decision, the case waits (§4.3).
+- **What exhibits exist,** found now, with their licence: report figures, docket photos and data files, filings,
+  public footage and audio whose release is confirmed (§9.5), reference photos of the real part. What we can show
+  shapes the treatment.
+*Creative question:* where does the record contradict what the public remembers?
+
+### Phase B: decide everything
+**3. The treatment → `treatment.md`** (the plan; the most important step). Everything is decided here, on paper:
+- the items in §2.1 (logline, the margin in one line, 3+ angles, the evidence spine, signature moments, sound palette,
+  package) and 3+ cold opens and 3+ sign-offs, each with the chosen one and why;
+- **the questions viewers actually ask** (from search, comments and the research), and the minute each is answered;
+- **the beat sheet:** every beat with its time, act, the viewer's question (the Q column, §7.4), its turn, its picture
+  (which exhibit and record id, or which reconstruction), its sound and its music bed;
+- **the 2–3 signature moments designed in full:** the line on the exhibit, the reading crossing its threshold, the part
+  visible by its absence;
+- **the hero builds** (the 3D part, the mechanism, the trace replay) named with their camera moves, so they start early;
+- **the fairness flags:** every beat that names a company or person, marked for the §9.6 pass;
+- **what was cut:** every beat the viewer doesn't need to follow the margin, however interesting.
+Then an **independent treatment review** (§14.5) against the strongest existing films; fixes applied. The owner gets
+a short phone-readable summary. **Owner approves the treatment.**
+*Creative question:* what will an engineer tell a colleague about this film the next morning?
+
+### Phase C: words (and, in parallel, the pictures start)
+**4. Facts first.** The fact-check of everything the treatment claims runs at `max` effort, in a fresh context that did
+not write it (a subagent or a review session), before the narration is final (§9.1). Rows the writer marked
+`confirmed` with a primary URL and verbatim quote are opened once and confirmed; real research goes to weak rows,
+every number and date, our own calculations and on-screen values. A fact that falls changes the treatment now, not the
+edit later.
+
+**5. Narration → `script/vo.txt`, `script/screenplay.md`.** Written from the beat sheet, then:
+- a **creative pass:** sharpen the cold open and every act's first line, plant and pay off the open loop, cut every
+  line the picture already says (§7.2);
+- the checks: the lean-in test, `vo_lint.py`, the fairness pass (§9.6), the independent audience review (§7.8).
+Output: **`script/narration.md`** sent with SendUserFile: the full narration as it will be voiced, what changed after
+review, and what to listen for (acronyms, names, numbers). **Owner approves the narration.**
+
+*In parallel, from treatment approval:* exhibits are collected and rendered (report pages, docket files, filing shots,
+§11), owner fetch requests go out (step 7), reference sheets are made, and the hero builds are coded and checked in
+stills. Their lengths are trimmed to the audio later. The owner's fetching time and the build time become no waiting.
+
+**6. Audio.** Only after the narration is approved: `scripts/tts_elevenlabs.py` (§7.5), block 1 first and measured,
+then the rest; every take through `vo_review.py` and listened to; a flagged block regenerated. Then the timing chain
+(`vo_timing.py` → `film_timing.py` → `word_align.py`, §10.4). The joined VO to Drive `<slug>/vo/`, sent to the owner.
+**Owner approves the audio.** After that, a changed word is one regenerated sentence cut in at its pauses (§10.4).
+
+### Phase D: the picture
+**7. Exhibits and footage.** The record before anything made (§11). YouTube clips by one Termux line; anything else
+blocked from the cloud by one Cowork request (§11.1). Every file looked at and logged before use.
+*Creative question:* which real exhibit makes this sentence undeniable?
+
+**8. Word-level choreography (the major part).** From the measured word times, every number, part, verb and place
+moves on its word, and the pictures of each sentence together say the whole sentence (§10.6). Scene handoffs first
+(§10.3), then code, stills at every cue, the sync audit.
+*Creative question:* for each sentence, what makes the viewer *see* the margin shrink, not just read a label?
+
+**9. Render on GitHub,** inside the shared runner budget (§10.5).
+
+**10. Music and sound.** A bed per act from the library, a cue on every visual event, the dip before the key exhibit
+line, the voice always on top (§12).
+
+### Phase E: review and finish
+**11. The 720p review cut,** finished like the final, after our own full review (§14.2) until a round finds nothing
+worth fixing. Uploaded to Drive.
+
+**12. Independent reviews of the cut:** the viewer review (did it give viewers what they came for, better than the
+other films?) and the forensic review (§14.4). Every point checked before fixing (§14.3); the fixes made in one round;
+the `_check.md` with its outcomes sent to the owner. **Owner approves the cut,** then nobody edits it.
+
+**13. The 4K master,** rendered once, to Drive (§10.5).
+
+**14. The YouTube package** (§13.7): three thumbnails, title, description, chapters from the exact uploaded file, SRT.
+Thumbnail candidates are noted while building, so the best frames are ready.
+
+**15. Release and the first 28 days** (§13.6), then the lessons: each into the rule it belongs to, with its reason
+(§16).
 
 ---
 
@@ -213,8 +323,10 @@ every figure sourced and dated. An understated sign-off: one clinical line over 
 then the end screen; never "in conclusion" or "thanks for watching".
 
 ### 5.6 Story deliverables per film
-`brief.md` (package first) → `research/` → `treatment.md` → `claims.csv` → `script/screenplay.md` (TIME | AUDIO |
-VISUAL | Q) and `script/vo.txt` → `vo/` → `scenes/` → `remotion/` → `review/` → `youtube/`.
+`brief.md` (package first) → `research/landscape.md` → `treatment.md` (with its beat sheet) and
+`review/treatment_review_vN.md` → `claims.csv` → `script/screenplay.md` (TIME | AUDIO | VISUAL | Q), `script/vo.txt`
+and `script/narration.md` → `vo/` → `scenes/` → `remotion/` → `sound/` → `review/` → `youtube/`. The order and the
+owner's gates: §3a.
 
 ## 6. The look
 
@@ -402,6 +514,8 @@ re-takes once shipped doubled phrases, and a trim cut the last sentence off bloc
 3. The lean-in test and `vo_lint.py`.
 4. **Independent audience review:** a new cloud session with no repo gets `prompts/audience_review_v1.md`. Apply
    fact-safe fixes, re-check, save `films/<slug>/review/audience_vN.md`.
+5. **`script/narration.md` to the owner** (§3a step 5): the narration as it will be voiced, what changed after the
+   reviews, what to listen for. No audio is generated before the owner approves it.
 
 ## 8. Visual toolkit (`lib/remotion/`)
 - `Desk.tsx`: the void, the drifting coordinate grid (0.05 opacity, major lines every 5 cells, coordinate anchors),
@@ -517,8 +631,22 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
 
 ### 10.5 Rendering
 - **720p review cuts first** (`scale` `2/3`, written as a fraction), **4K master** (`scale` 2) only after approval.
-- **Full renders on GitHub's runners** (`.github/workflows/remotion-render.yml`: up to 20 runners, 30 s shards,
-  joined, mix laid under, film to Drive `<film>/renders/`). Needs the repo secret `GDRIVE_RCLONE_TOKEN`.
+- **Full renders on GitHub's runners** (`.github/workflows/remotion-render.yml`: 30 s shards, joined, mix laid
+  under, film to Drive `<film>/renders/`). Needs the repo secret `GDRIVE_RCLONE_TOKEN`. The session triggers the
+  workflow, ends its turn and comes back to check; the runners need no watching and cost no Claude usage.
+- **The runner budget is shared (2026-11-05).** GitHub's Free plan allows **20 jobs at once for the whole account**,
+  shared by every repo on it. Extra jobs queue; nothing fails, but one repo can block the others for hours. So this
+  repo uses **at most 6 runners at once** (the workflow's default). Before a big render, check what is already running
+  on the account (GitHub MCP `actions_list`); use more only when nothing else is running, fewer when something is.
+  Never re-render a shard that already passed (`join_from`).
+- **Public repo, public logs:** never echo a secret; a render that holds third-party excerpts goes to Drive, never to
+  a run artifact; shard artifacts are kept 7 days at most.
+- **Seams and shot times:** a shard's frame count is round(length × fps), checked by `render_shards.mjs`; check a strip
+  of three frames either side of every seam on the joined film. Place shot starts a hair *before* their frame, never
+  after (rounded times landed half a millisecond late in earlier work and flashed the background for one frame, 13
+  times in one film).
+- **Look at the runner's frames, not only the session's stills:** a runner image once lacked a font the session had,
+  and its labels rendered as empty boxes.
 - **In the session:** Remotion's own browser download (`remotion.media`) is blocked, so stills need
   `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell --gl=swangle`;
   `scripts/render_shards.mjs` picks that shell up by itself (override with `REMOTION_BROWSER`).
@@ -540,6 +668,17 @@ its syllable (2–6 frames at 60 fps) on **measured** word times (§10.4).
    light (cyan nominal, amber thresholds and money, red failure, `ink` white for the record itself).
 3. **Continuous state mutation (no dead space).** An element that stays through a multi-clause sentence keeps
    changing on its words: outline → first part lit → dimension line → callout locks.
+4. **The sentence whole (adopted 2026-11-05).** The word-cues of a sentence must add up to what the sentence means.
+   A run of cues that each fit their word but tell a different story fails. Plan each sentence as a small scene: a
+   base picture carries the sentence (the exhibit, the schematic, the trace), the word-cues happen on it or cut in
+   and return to it, and the base continues underneath as if it never stopped. *Why:* in earlier production work,
+   films that passed every frame measurement still put a name, a year or a place over a picture that belonged to
+   another sentence; the viewer noticed at once and the audit had not. A topic picture is not enough: "the 2005
+   sale" needs the 2005 filing, "Renton" needs Renton on the record's own diagram.
+- **When no exhibit exists for a sentence, draw what the words say** (a labelled `RECONSTRUCTION` or `ILLUSTRATION`,
+  §9.4), never a related filler picture.
+- **Audit it twice:** the sync audit below (does every cue land), then a **sentence pass** at the cut: one strip of
+  frames per sentence, read against the sentence, graded WRONG / WEAK / OK (§14.2).
 
 **Timing.** A stroke or highlight starts about 15 frames (0.25 s) before its word, so it *completes* on the word
 (§10.3); a snap, flip or lock lands **on** the word's measured start (+2 frames). Staggered parts step every
@@ -575,8 +714,49 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
 - Third-party photos and footage: commercial-use licences only (no NC/ND), short credited excerpts where fair use
   applies and the owner agrees.
 - **Blocked from the cloud:** `downloads.rclone.org`, Remotion's browser download, YouTube (intermittent), Vimeo,
-  Mixkit, the Pexels/Pixabay websites (the Pixabay API works). Never route around blocks; the owner fetches on the
-  phone with `scripts/termux_fetch_to_drive.sh` (rclone remote `moe`).
+  Mixkit, the Pexels/Pixabay websites (the Pixabay API works). Never route around blocks with a VPN, proxy or another
+  client; the owner fetches instead (§11.1).
+
+**The chain, best first (adopted 2026-11-05):** the record's own exhibits (report figures, docket photos, data files
+and videos, agency photo albums, filings, hearing records) → public footage from official sources, short and credited →
+licence-clean stock and archive (Pixabay API, Wikimedia Commons, Openverse with `license_type=commercial`,
+archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real place, person, aircraft or vehicle (§6.5).
+**Look in the film's Drive `footage/` folder before searching outside:** the owner may already have dropped it there.
+
+### 11.1 When the cloud can't fetch it: the owner's two one-tap routes
+- **YouTube clips: one Termux line** on the owner's phone (mobile IP), written out complete by the session:
+  ```bash
+  curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- \
+    <slug> "URL" "URL@01:10-01:40"
+  ```
+  It downloads only the ranges (max 1080p) straight to Drive `Margin-of-Error/<slug>/footage/`;
+  `scripts/gdrive_pull.sh` brings them in. A longer list goes in `films/<slug>/scenes/owner_fetch.txt` (`--list`).
+- **Anything else blocked** (stock and archive websites, Vimeo, news or court sites that refuse cloud IPs): **one
+  click-to-copy request for Cowork,** which the owner runs in the Claude desktop app on a home laptop (home network)
+  and drives from the phone. The request is complete in itself:
+  ```text
+  Download these files and save them to Google Drive, folder Margin-of-Error/<slug>/footage/cowork/ (create it if
+  missing). Keep the original file names, the highest quality offered, no re-encoding.
+  1. <exact page URL> : <what it is> (take: <the variant or size>; range <mm:ss-mm:ss> if a video)
+  2. ...
+  When done, also save list.csv in the same folder: file name, source page URL, title, author, licence shown on the page.
+  ```
+  Then `scripts/gdrive_pull.sh <slug>/footage/cowork films/<slug>/assets/cowork`, look at every file, log each in
+  `media_manifest.csv`. Licence-clean sources only; never a login to a paid archive without asking (§1).
+- Neither route is used for something the cloud can fetch itself; both are batched, one request per round.
+
+### 11.2 Look at every asset before using it
+- **A contact sheet is the record** (`scripts/contact_sheet.py`, two frames per clip), not the search tags or the
+  manifest line. *Measured in earlier work:* about a third of stock search hits were wrong for their label (a skyline
+  from another city, a "data centre" that was a quarry, CGI sold as footage). Read the signs, screens and liveries in
+  every frame: a stand-in aircraft must not carry another airline's colours.
+- **Strip every third-party clip end to end** (`fps=1/2,tile=6x5`) and write its clean spans (no tickers, burned-in
+  captions, logos, presenters) before choosing in-points; sum the clean seconds before planning screen time.
+- **Probe every source's frame rate** and conform it to 60 fps (30 → 60 doubles each frame cleanly; 24/25 fps is
+  motion-interpolated for the seconds used only). *Why:* 24/25 fps footage in a 30 fps timeline repeated every fifth
+  frame and read as judder.
+- **No stock clip more than twice in a film;** real footage of the named place or part is exempt.
+- **Fact-check before sourcing:** sourcing for a claim that turns out wrong wastes the most time.
 
 ## 12. Sound
 - **Owner's mix standard (2026-11-03):** VO peaks at −2.0 to −3.0 dB true peak; an under-speech ambience or drone
@@ -601,6 +781,12 @@ sentence ids in `wf(50, 'four')` so the audit sees them.
   cues + the added cues, the same limiter; it prints the changed span and both measurements). *Why (2026-11-04):*
   rebuilding needs `film_vo.wav`, which holds a one-sentence re-take cut in by hand; the patch leaves the voice untouched.
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
+  *Why linear:* single-pass `loudnorm` pumped the silent pauses up in earlier work. The AAC encode adds about 0.8 dB of
+  true peak to sharp transients (stamps, clicks), so the limiter sits lower than the −1 dBTP target needs on paper.
+- **Voice polish, if a take needs it:** high-pass at 70 Hz, a gentle low shelf (+1.5 to +2.5 dB near 120 Hz), a de-esser
+  at 6–8 kHz, light compression (2:1 to 3:1). Never pitch-shift the voice.
+- **Real sound carries the big moments** when it is released and licensed (§9.5): the voice never talks over real
+  speech, and a released recording keeps 2–6 s of its own room before the narration returns.
 - Never use a real alarm or cockpit recording that isn't released and licensed; synthesised tones are labelled in
   the manifest as synthesised.
 
@@ -717,6 +903,22 @@ setting carries it), no hashtags spam, no cross-promotion.
 **Each film goes up when it is finished** (owner, 2026-11-02), in slate order (§17.4); each end screen points to the
 next published case only. Default upload window: Thursday 14:00–16:00 US Eastern (19:00–21:00 UK), until Studio data
 says otherwise. "Final report" films slot in when a report publishes.
+- **Upload Unlisted at least 3 hours before going public** and schedule it. *Why:* YouTube processes 4K about four
+  times longer than HD and 60 fps longer still; early viewers of a half-processed film get a blurry stream and leave.
+  Content ID, ad-suitability checks and captions finish in that window.
+- **At the slot:** the film goes public; the pinned opening comment (§13.8) goes up within 60 seconds.
+
+**After release (adopted 2026-11-05):**
+- **No self-views** from the owner's phone, home network or linked accounts in the first 48 hours. (No official source
+  says a creator's own views hurt; it costs nothing and keeps the retention data clean.)
+- **Don't touch anything in the first 2–4 hours:** YouTube shows a new film to a small seed audience first and pauses
+  before widening.
+- **Read Studio at 24 hours.** Impressions over 1,500 and click-through under 2.5%: switch to the challenger thumbnail,
+  unless Test & Compare is still running (let it finish).
+- **Then at 7 and 28 days:** click-through and impressions per traffic source (browse, suggested, search), retention at
+  0:30, 1:00 and each act turn, rewinds and cliffs with what was on screen, the search-terms report. Low click-through
+  with good retention: the package failed the film (the search-safe fallback title, §13.2). High click-through with an
+  early cliff: the film broke its promise; fix the next film's opening. Each lesson into §16 and the rule it changes.
 
 ### 13.7 The YouTube package, every final film
 - [ ] 3 thumbnails (1280×720 JPG) for Test & Compare
@@ -785,8 +987,22 @@ question from the record (which layer should have caught it?), no link, no subsc
 - **Sync (§10.3):** multi-part builds on their words; highlights complete on their word; every readout agrees with
   the trace or picture beside it.
 - **One desk pose** for every document (§6.6).
-- −14 LUFS, −1 dBTP; picture length = film length (the shard script fails loud if not).
-- Independent viewer review in a new session for final cuts, and the forensic review (§14.4).
+- −14 LUFS, −1 dBTP; picture length = film length (the shard script fails loud if not); picture and audio within
+  0.15 s of each other.
+- **Measured on the decoded cut (adopted 2026-11-05):**
+  - *Flash frames:* no frame darker than 45% of both its neighbours; no shot of 1–9 frames at a cut.
+  - *Frozen holds:* `freezedetect=n=0.002:d=1.5` at 480p, every hit fixed but the end card.
+  - *Judder:* repeated frames measured with `tblend=all_mode=difference,signalstats` before a source is blamed;
+    anything that steps with time (grain, ticks) steps once per film frame (`Math.round(t * fps)`), never at 24 a
+    second on a 60 fps film.
+- **The shot-word audit and the sentence pass (§10.6 law 4):** every shot with the words over it and one frame,
+  graded WRONG / WEAK / OK; then one strip per sentence read against the sentence. Every WRONG is fixed; names, record
+  ids, years and places are the hard cases.
+- **A creative pass over the whole film,** not only the flagged shots: where would a sharper exhibit, a match cut, a
+  sound beat or a better visual idea make a moment unforgettable?
+- Write `review/picture_gate_rN.md` (issue → time and scene → fix), fix, render the next round, review again. One cut
+  per round: collect every fix first, never re-render to fix one thing mid-review.
+- Independent reviews of the cut (§14.5) and the forensic review (§14.4).
 
 ### 14.3 Outside reviews: check every point before fixing (2026-11-03)
 An outside review (another tool, a reviewer the owner asked, a viewer) is a list of leads. Check each point against
@@ -800,6 +1016,10 @@ Then fix in the next round with the owner's other notes.
 - A misread is evidence in itself: text an outside eye can't read is too small.
 - A suggestion that breaks a rule is declined with the reason (a blinking amber dot carries no threshold meaning; a
   film-time readout breaks the desk).
+- **The `_check.md` closes the round (adopted 2026-11-05):** after the fixes, each point gets its outcome (FIXED,
+  FIXED NEXT ROUND, OPEN, DECLINED with the reason) and the evidence (frame, commit), plus anything we found that the
+  reviewer missed. It goes to the owner with the next cut. A reviewer's rewrite never adds a fact: every changed line
+  is checked against `claims.csv`.
 
 ### 14.4 The independent forensic review (owner, 2026-11-03: done in this repo)
 Every final cut, and the 720p cut before the owner's last round, gets a forensic review from a new session that did
@@ -822,6 +1042,24 @@ with timecodes and `claims.csv`, never the treatment or build notes, so the judg
 Each finding: `[time / scene]: what is wrong → why it costs trust or retention → the exact fix`. Values are measured
 (px, frame numbers), never guessed; an estimate is labelled as one. For every weak or generic moment, propose the
 strongest idea that could replace it, inside the hard lines.
+
+### 14.5 Independent reviews at three points: does it give viewers what they came for? (adopted 2026-11-05)
+Each is a new cloud session **with no repo attached** (`create_session` with no `source_url`), so it judges as an
+outsider and not against our own rules. It gets only what it needs, plays real US and UK viewers (an engineer, a
+pilot or mechanic, an analyst, a curious adult; §4.1), and **compares us with what already exists**: the 3–5 strongest
+films on the case from `research/landscape.md`. Archived when done.
+- **At the treatment (step 3):** the edge sentence, the beat sheet, the signature moments and the strongest existing
+  films. Would these viewers click and stay? Which of their real questions are missing? What do the other films
+  already do better? Which beats are padding? What would make this the definitive film on the case?
+  → `review/treatment_review_vN.md`.
+- **At the narration (step 5):** §7.8, `prompts/audience_review_v1.md`, with the lean-in map and the comparison with the
+  existing films. → `review/audience_vN.md`.
+- **At the 720p cut (step 12):** the cut (a Drive link) and the narration with times. Not "was it built right" (that
+  is §14.2 and §14.4) but: did it meet what viewers wanted from this case, better than the others? Where did attention
+  drop, what confused, what will they remember? → `review/viewer_cut_rN.md`.
+- Every review is a list of leads (§14.3); only fixes that keep every fact true are applied.
+*Why:* we read our own script and watch our own cut so often that we can't see them as a stranger does, and judging
+only against our own rules hides what the competing films already do better.
 
 ## 15. Tools
 - `scripts/brand_ts.py`: `config/brand.yaml` → `lib/remotion/brand.ts`.
@@ -847,6 +1085,17 @@ strongest idea that could replace it, inside the hard lines.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**The production process written down (2026-11-05).**
+- *The rules said what a film must be, not the order to build it in,* so direction was still changing after the voice
+  and the cues were locked (film 1: a promise re-voiced, holds re-cut, a mix rebuilt). **Rule:** §3a, fifteen steps in
+  five phases with four owner gates (treatment, narration, audio, cut); the slow work starts at treatment approval.
+- *Cues that each fit their word can still tell the wrong sentence.* **Rule:** §10.6 law 4 and the sentence pass.
+- *Reviews judged against our own rules miss what the competing films do better.* **Rule:** §14.5, independent
+  reviews at the treatment, the narration and the cut, each compared with the strongest existing films.
+- *The account's 20 runners are shared with other repos;* a 20-runner render can queue everyone else. **Rule:** §10.5,
+  6 by default.
+- *Some sources need a home network.* **Rule:** §11.1, a click-to-copy Cowork request beside the Termux line.
 
 **The music library (2026-11-04).**
 - *Lyria adds voices it was told not to.* In the first library run 102 takes were billed for 38 kept tracks (61 rejected, mostly for choir or "ooh" pads and vocal chops
@@ -1029,6 +1278,10 @@ strongest idea that could replace it, inside the hard lines.
 6. **2026-11-03: this channel's independent reviews and comment replies are handled inside this repo** (§13.8,
    §14.4), so nothing public ties the channel to anything else.
 7. **2026-11-04: brand mark B "Trace" chosen** for the avatar, banner, watermark and logo (§6.2).
+8. **2026-11-05: the step-by-step production process** (§3a), refined for this channel's format: research that sets
+   what everyone says against the record, the treatment as the plan with a beat sheet, owner approval of the
+   treatment, the narration, the audio and the cut, independent reviews at three points (§14.5), Cowork for sources
+   blocked from the cloud (§11.1), a shared runner budget (§10.5) and the after-release reads (§13.6).
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle:** `config/brand.yaml` holds `@marginoferror` as a placeholder until the owner confirms the real one.

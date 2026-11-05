@@ -1,10 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Download clips and files on the owner's phone and put them straight into Google Drive, in
-# Margin-of-Error/<slug>/footage/, where a cloud session pulls them with scripts/gdrive_pull.sh (PLAYBOOK §11.4).
+# Margin-of-Error/<slug>/footage/, where a cloud session pulls them with scripts/gdrive_pull.sh (PLAYBOOK §11.1).
 # Carried over from our earlier tooling): Drive folder Margin-of-Error, rclone
 # remote "moe", a list file in this repo, and direct file links (images, PDFs, audio) fetched with curl.
 # Why on the phone: YouTube refuses the cloud container; the phone's mobile IP works. Only footage we may use: short,
-# credited excerpts of official or news footage, owner-cleared (PLAYBOOK §11.3–11.4).
+# credited excerpts of official or news footage, owner-cleared (PLAYBOOK §11.1).
 #
 # One command in Termux (the session that needs the clips writes it out for you):
 #   curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- four-missing-bolts --list films/four-missing-bolts/scenes/owner_fetch.txt
@@ -18,9 +18,9 @@
 # (Google Drive): a browser opens, sign in with the account that owns the Margin-of-Error folder, tap Allow.
 set -uo pipefail
 SLUG="${1:?usage: termux_fetch_to_drive.sh <slug> [--list repo/path.txt] [URL[@START-END] ...]}"; shift
-BOB_FOLDER_ID=1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn   # the owner's Drive "Margin-of-Error" folder (created 2026-11-02)
+MOE_FOLDER_ID=1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn   # the owner's Drive "Margin-of-Error" folder (created 2026-11-02)
 RAW=https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main
-OUT="$HOME/bob_fetch/$SLUG"
+OUT="$HOME/moe_fetch/$SLUG"
 mkdir -p "$OUT" && cd "$OUT" || exit 1
 
 entries=()
@@ -44,7 +44,7 @@ python3 -m pip show yt-dlp 2>/dev/null | grep -q "^Version: 2026.8.19" || python
 
 if ! rclone listremotes | grep -q "^moe:$"; then
   echo "One-time Google Drive sign-in: a browser opens; choose the account that owns the Margin-of-Error folder and tap Allow."
-  rclone config create moe drive scope=drive root_folder_id="$BOB_FOLDER_ID" || { echo "rclone sign-in failed" >&2; exit 3; }
+  rclone config create moe drive scope=drive root_folder_id="$MOE_FOLDER_ID" || { echo "rclone sign-in failed" >&2; exit 3; }
 fi
 
 [[ -f fetched.csv ]] || echo "name,file,url,section,title,uploader,duration_s" > fetched.csv

@@ -2,7 +2,7 @@
 # Pull a folder from the owner's Google Drive "Margin-of-Error" folder into the cloud session (Carried over from our earlier tooling;
 # counterpart of the phone fetch script, which puts clips in Margin-of-Error/<slug>/footage/).
 #
-# Usage: scripts/gdrive_pull.sh tata-history/assets films/tata-history/assets/media
+# Usage: scripts/gdrive_pull.sh <slug>/footage films/<slug>/assets/footage
 # Needs GDRIVE_RCLONE_TOKEN, exactly like scripts/upload_gdrive.sh (PLAYBOOK §1); reuses its pinned rclone.
 set -euo pipefail
 SRC="${1:?Drive path under Margin-of-Error/, e.g. <slug>/footage}"; DST="${2:?local folder}"

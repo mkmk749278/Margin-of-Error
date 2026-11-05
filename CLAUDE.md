@@ -59,15 +59,17 @@ the description. Be creative and smart, and stick to the rules.
 
 ## Owner and workflow
 - The owner works **only from an Android phone** (GitHub app, Claude app, Termux, SSH to a VPS). Everything
-  runs in cloud sessions, GitHub Actions or the VPS; results must open on a phone.
+  runs in cloud sessions, GitHub Actions or the VPS; results must open on a phone. For sources blocked from the cloud,
+  the owner runs **Cowork** (Claude desktop app) on a home laptop from the phone: give one click-to-copy request
+  (PLAYBOOK §11.1), and one click-to-copy Termux line for YouTube clips.
 - **Google Drive:** channel folder **`Margin-of-Error`** at the top of My Drive (id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`),
   one folder per film, `<slug>/`. Videos: `scripts/upload_gdrive.sh --sub <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`);
   small text files through the Google Drive connector. Music lives in `Music-Library/forensic/` (below). Never write
   in any other top-level Drive folder.
 - **All work lands on `main`.** Each session works on its own branch, opens a PR to `main` and merges it the same day.
   Sessions can't delete branches: tell the owner which ones to delete.
-- **One session does the work.** A new session only for an independent review (audience, fact-check, fairness,
-  fresh-eyes picture review), archived when done. All sessions share one usage limit and one IP.
+- **One session does the work.** A new session only for an independent review (treatment, audience, cut,
+  fact-check, fairness, forensic), archived when done. All sessions share one usage limit and one IP.
 - **Standing permission:** run any command and archive sessions without asking each time. Still ask before anything
   paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 - Build in phases; at the end of each, stop and report what was built, what was checked and what is left.
@@ -80,6 +82,28 @@ the description. Be creative and smart, and stick to the rules.
   before it is posted; facts only from the film's `claims.csv`; never a new allegation; no viewer profiles in git.
 - **An outside review is a list of leads (§14.3):** check each point in the code, `vo/timing.json` and a rendered still,
   write `review/<name>_check.md` (CONFIRMED / PARTLY / NOT CONFIRMED), then fix in the next round.
+
+## How we make a film (PLAYBOOK §3a; adopted 2026-11-05)
+**Creativity in every step** (each step has a creative question; the obvious answer is the floor) and **decide early,
+build once** (direction is cheap on paper, expensive after the voice is cued). Owner gates are in **bold**.
+1. **Case** → `brief.md`: the case sheet and the package first.
+2. **Research** → `research/landscape.md`: what everyone says (news, statements, the 3–5 strongest films and their
+   comments) vs what the record says (draft `claims.csv`), **our edge in one sentence**, what exhibits exist. No edge
+   or no dated decision: the case waits.
+3. **Treatment** → `treatment.md`: angles, cold opens, sign-offs, the viewers' real questions, a beat sheet (time,
+   question, turn, exhibit and record id, sound, bed), signature moments, hero builds, fairness flags, what was cut.
+   Independent treatment review (§14.5). **The owner approves the treatment.**
+4. **Facts** at `max` in a fresh context; `claims_check.py` passes before the narration is final.
+5. **Narration**: creative pass, lean-in test, `vo_lint.py`, fairness pass, audience review → `script/narration.md`.
+   **The owner approves the narration.** From treatment approval, in parallel: exhibits, owner fetches, hero builds.
+6. **Audio** with voice "1", block 1 measured first; timing chain to measured words. **The owner approves the audio.**
+7. **Exhibits and footage**, the record first; every file looked at and logged.
+8. **Word-level choreography** (the major part): every word cued, and each sentence's cues say the whole sentence.
+9. **Render on GitHub**, at most 6 runners at once (the account's 20 are shared).
+10. **Music and sound** from the library; a cue on every visual event; dips, never dropouts.
+11. **720p review cut** after our own measured review (§14.2), until a round finds nothing.
+12. **Independent viewer review and forensic review**, each point checked (§14.3). **The owner approves the cut.**
+13. **4K master** once. 14. **YouTube package** (§13.7). 15. **Release**, the 24 h / 7 d / 28 d reads, lessons.
 
 ## Format: the five-act forensic investigation (owner's spec §3)
 - **Long-form, about 16–22 minutes**, built for desktop and TV; the evidence sets the length, never a target.
@@ -144,7 +168,8 @@ the description. Be creative and smart, and stick to the rules.
   never a dropout (§12). To change a locked spoken word, regenerate that one sentence and cut it in at its pauses (§10.4).
 - In the session, pass `--browser-executable` (PLAYBOOK §10.5): Remotion's own browser download is blocked here.
 - Loop: `npx tsc --noEmit` → stills at key frames → look at every image → fix → render.
-- **Full renders run on GitHub's runners** (`remotion-render.yml`), never in the session.
+- **Full renders run on GitHub's runners** (`remotion-render.yml`), never in the session: **at most 6 runners at
+  once** (the account's 20 concurrent jobs are shared with other repos; check `actions_list` before a big render).
 - Remotion is free for individuals and companies with up to 3 employees; beyond that a company licence is needed.
 
 ## Facts, fairness and rights (PLAYBOOK §9, §11)
@@ -167,7 +192,8 @@ the description. Be creative and smart, and stick to the rules.
 
 ## Cloud session traps
 - Backgrounded commands die at ~30 min: start long jobs with `setsid nohup … < /dev/null & disown`, watch with Monitor.
-- Never `pkill -f`/`pgrep -f` with a pattern that appears in the same command line.
+- Never `pkill -f`/`pgrep -f` with a pattern that appears in the same command line; never name a shell function after
+  a command it calls. One heavy job at a time (~14 GB); an empty ffmpeg error is usually OOM.
 - Bitrate-cap every encode. Large media stays out of git (Drive).
 - Blocked from this container: `downloads.rclone.org`, Remotion's browser download, YouTube (intermittent), Vimeo,
   Mixkit, the Pexels/Pixabay websites (the Pixabay API works). Never route around blocks with VPNs or proxies.

@@ -1,5 +1,5 @@
 # A film's Remotion render on GitHub's runners (PLAYBOOK §10.5). Free and
-# unlimited on a public repo; up to 20 runners at once, each a fresh 4-CPU / 16 GB VM with up to 6 h per job. One
+# unlimited on a public repo; up to 20 runners at once (6 by default: the account's 20 are shared), each a fresh 4-CPU / 16 GB VM with up to 6 h per job. One
 # Remotion workspace serves every film (repo root). Each runner pulls the film's media from Drive
 # (Margin-of-Error/<film>/render-media → public/films/<film>/), renders its block of 30 s shards with
 # scripts/render_shards.mjs and uploads them as an artifact; one last job joins them, lays the master mix under the
@@ -19,8 +19,8 @@ on:
         description: "2/3 = 720p review cut (always first), 1 = 1080p, 2 = 4K master (only after the owner approves)"
         default: "2/3"
       runners:
-        description: "parallel runners (1-20)"
-        default: "20"
+        description: "parallel runners (1-20; default 6: the account's 20 are shared, PLAYBOOK §10.5)"
+        default: "6"
       crf:
         description: "x264 CRF"
         default: "16"
