@@ -1,0 +1,6 @@
+# Act starts for vo_timing.py: "Title | the first words of the act's first paragraph" (vo.txt keeps no headers).
+I · The Incident | The third of February, twenty twenty-three.
+II · The Mechanism | Each end of each axle on a railcar
+III · The Boardroom | The answer is in the industry's rulebook.
+IV · The Cascade | Back to the bearing.
+V · The Verdict | In June twenty twenty-four, the N - T - S - B adopted
