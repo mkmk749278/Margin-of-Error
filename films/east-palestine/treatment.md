@@ -109,8 +109,10 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 3. **The dual split** (`Correct.` beside the 103 readout): its halves become the cold open and signature 2.
 
 ## Signature moments
-1. **The blind nineteen miles** (10:30): the route line from Salem to East Palestine at true relative scale; the train's
-   head moving at its real 43 mph compressed to about 40 s; mileposts ticking; between the detectors no readout at
+1. **The blind nineteen miles** (10:30): an austere telemetry strip and the route line from Salem to East Palestine at
+   true relative scale, driven by the NTSB's own event-recorder data for lead locomotive NS 4178 (1 Hz CSV, docket
+   items 16–17): the real speed (19–43 mph between the detectors), the elapsed clock 8:13 → 8:52 p.m., miles
+   travelled; source strip `NTSB EVENT RECORDER DATA · NS 4178 · RRD23MR005`; compressed to about 40 s; mileposts ticking; between the detectors no readout at
    all, a dark strip labelled `NO DETECTOR · 19 MI`; only the dashed ILLUSTRATIVE band of what the inside of the
    bearing may be doing. Then `MP 49.81` and the last minute in real time, no music: `MAX 253°F`, the critical alarm as
    text, brake air, 43 → 0 mph, 38 s (C10–C12, C55, C56). Until here the viewer has seen only single readings.
@@ -125,7 +127,7 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 
 ## Hero builds (start at treatment approval)
 1. **The route line** (Remotion): Fort Wayne Line MP 79.8 → 49.5, three detectors, the train to scale, the blind
-   strip; one driver for readouts and the train's head. RECONSTRUCTION after NTSB figs. 3 and 29.
+   strip; one driver for readouts and the train's head, read from the event-recorder CSV (never typed values). RECONSTRUCTION after NTSB figs. 3 and 29.
 2. **The bearing** (Three.js): tapered roller bearing, the detector's view of the cup, an ILLUSTRATIVE heat gradient,
    burn-off and separation (NOT TO SCALE); redrawn from the report and real photos (fig. 17 is SKF's).
 3. **The plot** (Remotion): signature 3, with its source strips.
@@ -134,8 +136,8 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 ## Package (each word on a claims row; three for Test & Compare)
 | # | Title | Thumbnail | Claims |
 |---|---|---|---|
-| A2 (recommended) | **East Palestine: The Wheel Was on Fire. The Alarm Line Came From a Billing Rule.** | the burning wheelset; `+103°F` in amber visibly short of a bright `STOP LINE 170°` | C04, C05, C07, C25–C28, C73, C76 (fairness pass) |
-| A | East Palestine: The Wheel Was on Fire. The Detector Read 103°. | same picture, words `103° / STOP AT 170°` | C04, C05, C07 |
+| A2 (recommended) | **East Palestine's Alarm Line Came From a Billing Rule** (52 characters; outside refinement r1) | the burning wheelset; `+103°F` in amber visibly short of a bright `STOP LINE 170°` | C04, C05, C07, C25–C28, C73, C76 (fairness pass) |
+| A | East Palestine: The Wheel Was on Fire. The Detector Read 103°. | same picture, words `READ 103° / STOP AT 170°` | C04, C05, C07 |
 | D | Why the NTSB Says East Palestine's Vent and Burn Wasn't Necessary | the falling temperature line under the amber `153–158°F · NO SOURCE` band | C37, C64, C65 |
 Search-safe fallback: *East Palestine Derailment: What the NTSB Final Report Found*. Chapters: the verdict cards as
 questions ("Was it the grease?", "Did the burn destroy the evidence?", "Did cost cutting cause it?", "Why blow up the
@@ -154,11 +156,12 @@ Health and testing disputes (no single record settles them); the lobbying fight 
 politician; firefighter training, radios, placards (one line on the consist delay only); other NS derailments; the
 merger. The ladder as a repeated device; the second bearing segment; buybacks by year; buybacks beside costs.
 
-## Owner decisions before the exhibits are fetched
-1. **The Salem camera frame** (a private business's video; reported owner not confirmed by a primary record): ask for a
-   license, or keep the RECONSTRUCTION with "the real frame: NTSB RIR-24-05, fig. 5" on screen and in the description.
-2. **The plume** (no public-domain footage): a short, credited excerpt of the Columbiana County Commissioner's Office
-   drone video from the NTSB docket (fair use; the owner agrees), a license request, or no plume.
+## Owner decisions (2026-11-05)
+- **Treatment v2 approved.**
+- **The Salem camera frame:** a labelled RECONSTRUCTION, with "the real frame: NTSB RIR-24-05, fig. 5" on screen and in
+  the description. No license request.
+- **The plume:** a short (3–5 s), credited excerpt of the Columbiana County Commissioner's Office drone video from the
+  NTSB docket (item 57), under fair use, the owner agreeing (PLAYBOOK §11).
 
 ## To confirm at the fact-check (`/fact-check`, max effort, fresh context)
 - Finding 14 (consist delay) as a claim row; the NTSB special investigation's status; the decree's status on upload
