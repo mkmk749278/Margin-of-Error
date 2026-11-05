@@ -1,4 +1,5 @@
 """Draft claims.csv for east-palestine: every quote checked against the downloaded source text."""
+# RETIRED 2026-11-05: the fact-check (review/factcheck_v1.md) edited claims.csv directly; re-running this would overwrite those rows.
 import csv, html, re, sys
 from pathlib import Path
 SRC = Path(sys.argv[1]); OUT = Path(sys.argv[2])

@@ -77,7 +77,7 @@ end). CLIP = a real NTSB hearing excerpt placed in the edit (no narration over i
 - N9 four VCM cars released material from pressure relief devices (p. x).
 - N11 finding 14, the consist delay.
 - N12 polymerization of VCM is exothermic (RIR §1.8.1).
-- N13 the incident commander was the East Palestine Fire Department's deputy chief (p. 9); a volunteer department (finding 11).
+- N13 the incident commander from 2:00 a.m. on 04 FEB was the East Palestine fire chief, who approved the burn (C138, C139); the deputy chief led on the first night.
 - N14 the 06 FEB meeting: 60–100 people including the governors of Ohio and Pennsylvania (p. 27).
 - N15 speed 19–43 mph between 20:13:00 and 20:52:30 (event recorder CSV, OUR CALCULATION).
 - N16 the AAR witness's title (p. 106: "the AAR Senior Vice President of Safety and Operations").

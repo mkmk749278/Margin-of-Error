@@ -13,7 +13,7 @@ At 8:13 p.m. on 03 FEB 2023 a wheel bearing on the twenty-third car of a 9,309-f
 factory's camera, and the detector beside the track read it at 103°F above ambient: below the 170° line at which a
 crew is told to stop (C04, C05, C07, C79). That line is the railroads' billing definition of an overheated bearing.
 Thirty-nine minutes later the bearing read 253°F, the highest that detector could show, and the axle broke away (C11,
-C55). Three days later a second number, which the investigators found in no written guidance, set a 13-minute clock on
+C55). Three days later a second number, which the investigators did not find in the written guidance consulted at the scene, set a 13-minute clock on
 the decision to blow open five tank cars of vinyl chloride (C62–C64).
 
 ## The margin, in one line
@@ -23,7 +23,7 @@ that "relates to billing for repairs, not directly to safety" (C72), with detect
 that took about 30 (C13, C16), and no federal rule that sets either (C84).
 
 ## Angles (3 considered; 1 + 2 chosen)
-1. **Two numbers** (spine): 170°F on night one, a billing line; 153–158°F on day four, found in no guidance. Both
+1. **Two numbers** (spine): 170°F on night one, a billing line; 153–158°F on day four, absent from the guidance consulted at the scene. Both
    thresholds; both followed; neither came from the physics in front of them.
 2. **The comments against the record** (the device, from the review): the beliefs that fill every other film's
    comments, each tested on screen against the docket, with a verdict that states only what the record holds:
@@ -66,9 +66,9 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 | 0:20 | I | Who knew? | Nobody in the cab | route line: `ALERT → WAYSIDE HELP DESK`, cab dark (C08) | desk chime | fx08 in |
 | 0:40 | I | **Loop 1** | "Why the stop line sat at 170 is on the record, in the industry's own words, from the federal hearing. We'll hear it at about minute seven." | the hearing transcript, face down | paper | fx08 |
 | 0:55 | I | Then? | 8:52, 253°, the detector's ceiling | readout climbs, hits `MAX 253°F` (C11, C55); `CRITICAL ALARM, CRITICAL ALARM, CRITICAL ALARM.` types out as text (C53, C54) | three ticks, stop | fx08 dips |
-| 1:20 | I | Did the crew react? | Yes, properly | event-recorder RECONSTRUCTION 43 → 0 mph, 1,160 ft, 38 s; three figures in the cab; `NTSB FINDING 1` (C10, C15, C56, C83) | brake air | fx08 |
+| 1:20 | I | Did the crew react? | Yes, properly | event-recorder RECONSTRUCTION 41 mph at the emergency → 0 in 38 s, about 1,160 ft (event recorder; the emergency came through the train line); three figures in the cab; `NTSB FINDING 1` (C10, C15, C56, C83) | brake air | fx08 |
 | 1:45 | I | Then? | 38 cars, a fire, 2,000 evacuated | derailment layout RECONSTRUCTION; `911 · 8:56:49 P.M.`; the 1-mile ring (C01, C34, C57) | low fire | fx09 low |
-| 2:05 | I | **Loop 2** | "Three days later, a second number would decide what happened to five tank cars of vinyl chloride. The investigators found it in no written guidance." | five tank cars as outlines, one amber band | | fx09 |
+| 2:05 | I | **Loop 2** | "Three days later, a second number would decide what happened to five tank cars of vinyl chloride. The investigators could not find it in the written guidance used at the scene." | five tank cars as outlines, one amber band | | fx09 |
 | 2:20 | I | **Act question** | where did the margin run out? | three numbers: 103, 170, 19 miles | dip | → |
 | 2:30 | II | How should a train catch this? | The design | 3D tapered roller bearing; the detector's infrared view of the cup's inner edge (hero 2, C17) | mechanism | fx02 |
 | 3:15 | II | What counts as hot? | Three lines, three actions | NS's ladder: 90° alert → desk; 170° → slow to 8 mph, then stop; critical → stop at once; NS's critical line `200°F` before the accident (C06, C77–C79) | | fx02 |
@@ -90,7 +90,7 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 | 12:00 | IV | Why the fire? | The second consequence | the punctured DOT-111 and the fire (C42); the five VCM cars; responders without the consist (finding 14, to add) | low fire | fx04 |
 | 12:30 | IV | What were they afraid of? | Polymerization, in 25 s | small molecules joining into PVC, a hard plastic; heat drives it (C94) | | fx04 |
 | 13:00 | IV | — | **Signature 3: the second number** (below) | one plot over three days (C59–C66, C92, C93) | clock | fx08 |
-| 14:50 | IV | — | The line, once | "Two numbers decided this town's week. One was written for billing. The other was found in no guidance." | | fx08 dip |
+| 14:50 | IV | — | The line, once | "Two numbers decided this town's week. One was written for billing. The other appeared in none of the guidance used at the scene." | | fx08 dip |
 | 15:00 | IV | Was it needed? | "Not necessary" | NTSB p. xi: temperature trends did not indicate polymerization (C95); "compromised the integrity… unwarranted urgency" (C67); NS: "only motivation… health and safety", advised 20 hours ahead (C89, C90); the incident commander: he bore the responsibility (C68) | low thud only | fx09 |
 | 15:50 | IV | — | Verdict card 4 | `"THEY BURNED IT BECAUSE IT WAS CHEAPEST"` → `NOT IN THE RECORD`; what is: the urgency, the information, NS's stated reason | stamp | → |
 | 16:10 | V | The verdict | Probable cause, 25 s | RIR-24-05 probable cause, line by line (C42) | | fx10 low |
@@ -115,7 +115,7 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
    travelled; source strip `NTSB EVENT RECORDER DATA · NS 4178 · RRD23MR005`; compressed to about 40 s; mileposts ticking; between the detectors no readout at
    all, a dark strip labelled `NO DETECTOR · 19 MI`; only the dashed ILLUSTRATIVE band of what the inside of the
    bearing may be doing. Then `MP 49.81` and the last minute in real time, no music: `MAX 253°F`, the critical alarm as
-   text, brake air, 43 → 0 mph, 38 s (C10–C12, C55, C56). Until here the viewer has seen only single readings.
+   text, brake air, 41 → 0 mph, 38 s (C10–C12, C55, C56). Until here the viewer has seen only single readings.
 2. **"Correct."** (6:50): the NTSB's own video of the hearing; the question highlighted on the transcript page phrase
    by phrase as it is asked; the witness's answer and his next sentence, in one breath, as recorded. Nothing cut,
    nothing added. A beat of room tone after the clip; then the NTSB's p. 107 line (C72) on the page.
@@ -138,7 +138,7 @@ Times on screen as the record gives them: `8:13 P.M. EST · 03 FEB 2023`. Beds f
 |---|---|---|---|
 | A2 (recommended) | **East Palestine's Alarm Line Came From a Billing Rule** (52 characters; outside refinement r1) | the burning wheelset; `+103°F` in amber visibly short of a bright `STOP LINE 170°` | C04, C05, C07, C25–C28, C73, C76 (fairness pass) |
 | A | East Palestine: The Wheel Was on Fire. The Detector Read 103°. | same picture, words `READ 103° / STOP AT 170°` | C04, C05, C07 |
-| D | Why the NTSB Says East Palestine's Vent and Burn Wasn't Necessary | the falling temperature line under the amber `153–158°F · NO SOURCE` band | C37, C64, C65 |
+| D | Why the NTSB Says East Palestine's Vent and Burn Wasn't Necessary | the falling temperature line under the amber `153–158°F · NOT IN THE GUIDANCE CONSULTED` band | C37, C64, C65 |
 Search-safe fallback: *East Palestine Derailment: What the NTSB Final Report Found*. Chapters: the verdict cards as
 questions ("Was it the grease?", "Did the burn destroy the evidence?", "Did cost cutting cause it?", "Why blow up the
 tank cars?", "Could it happen again?"). Description: a sourced timeline with record ids and docket numbers.
@@ -148,7 +148,7 @@ tank cars?", "Could it happen again?"). Description: a sourced timeline with rec
 1. **The status** (chosen): "From a normal reading to a broken axle: about thirty miles. The detectors were nineteen
    miles apart. As of July twenty twenty-six, no federal rule sets the temperature at which a train must stop. The
    N - T - S - B has asked for one." (C13, C16, C84, C87; re-checked at upload)
-2. "One number was written for billing. The other was found in no guidance. Both were followed." (used at 14:50)
+2. "One number was written for billing. The other appeared in none of the guidance used at the scene. Both were followed." (used at 14:50)
 3. "The bearing destroyed the evidence of why it failed. The record of who drew the line did not burn." (a Short)
 
 ## What was cut (and why)
