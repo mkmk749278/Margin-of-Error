@@ -30,15 +30,19 @@ def main() -> None:
     fps = t["fps"]
     sents = t["sentences"]
 
-    def find(prefix: str) -> int:
+    def find(prefix: str, nth: int | None = None) -> int:
         hits = [s["id"] for s in sents if norm(s["text"]).startswith(norm(prefix))]
+        if nth is not None:  # a sentence said more than once: pick its occurrence (0-based), never guess
+            if nth >= len(hits):
+                sys.exit(f"hold anchor {prefix!r}: occurrence {nth} of {len(hits)}")
+            return hits[nth]
         if len(hits) != 1:
-            sys.exit(f"hold anchor {prefix!r}: {len(hits)} sentence matches")
+            sys.exit(f"hold anchor {prefix!r}: {len(hits)} sentence matches (add \"nth\")")
         return hits[0]
 
     holds = []
     for h in cfg["holds"]:
-        i = find(h["after"])
+        i = find(h["after"], h.get("nth"))
         nxt = sents[i + 1]["start"] if i + 1 < len(sents) else sents[i]["end"] + 0.3
         at = round((sents[i]["end"] + nxt) / 2, 3) if i + 1 < len(sents) else round(sents[i]["end"] + 0.3, 3)
         holds.append({"after": i, "at": at, "s": h["s"], "why": h.get("why", "")})

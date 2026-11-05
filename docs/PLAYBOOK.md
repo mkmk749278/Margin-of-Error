@@ -1092,6 +1092,17 @@ only against our own rules hides what the competing films already do better.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Film 2 narration takes (2026-11-05).**
+- *The full-block speech-to-text pass drops and doubles words that are there.* On East Palestine, `vo_review.py`'s
+  small model flagged "9,309" as "9,300", a doubled "train", and a missing "settlement"; two fresh takes showed the
+  same flags, and the larger model (`--model medium.en`) on a short cut around each flag heard the words correctly.
+  **Rule:** run `vo_review.py --model medium.en`, and check every flag on its own 10 s cut before spending characters
+  on a re-take. One flag in three blocks was real (block 7, first take).
+- *A sentence said more than once can't anchor a hold.* "The record can't say." is said three times. **Rule:**
+  `holds.json` takes an optional 0-based `nth` (`scripts/film_timing.py`).
+- *Never watch a process with `pgrep -f` on a pattern in the watcher's own command line* (it matches itself); watch
+  the job's own output or its task notice.
+
 **The production process written down (2026-11-05).**
 - *The rules said what a film must be, not the order to build it in,* so direction was still changing after the voice
   and the cues were locked (film 1: a promise re-voiced, holds re-cut, a mix rebuilt). **Rule:** §3a, fifteen steps in

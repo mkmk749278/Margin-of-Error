@@ -1,0 +1,63 @@
+{
+ "_doc": "Edit holds (PLAYBOOK §10.4, §12): seconds of picture time after a sentence, matched by its words. Holds over 0.8 s only at act turns, signature beats and the two real NTSB hearing clips (their own room sound plays; no narration over them). tail = the outro.",
+ "holds": [
+  {
+   "after": "So where did the margin of error run out?",
+   "s": 2.0,
+   "why": "act I question; act II title"
+  },
+  {
+   "after": "Either way: where did one hundred and seventy come",
+   "s": 2.0,
+   "why": "act II to III turn; transcript turns face up"
+  },
+  {
+   "after": "In June twenty twenty-three, at a public hearing in",
+   "s": 56.0,
+   "why": "CLIP 1: NTSB hearing video day 2, 01:18:44-01:19:40 (clip01 from 00:04), unaltered, caption band cropped"
+  },
+  {
+   "after": "Then a member of the N - T -",
+   "s": 38.0,
+   "why": "CLIP 2: 01:20:32-01:21:10 (clip01 01:52-02:30): the question and 'Correct ... not to have derailments'"
+  },
+  {
+   "after": "The record can't say.",
+   "s": 2.0,
+   "why": "act III to IV turn; verdict card 1 lands",
+   "nth": 0
+  },
+  {
+   "after": "Nineteen miles of track, and nothing reads it.",
+   "s": 3.0,
+   "why": "signature 1: the blind strip runs on the event-recorder data"
+  },
+  {
+   "after": "From the emergency, the lead locomotives travel another one",
+   "s": 1.5,
+   "why": "signature 1 lands: stillness after the stop"
+  },
+  {
+   "after": "The charges went off at four thirty-seven.",
+   "s": 4.0,
+   "why": "the plume: 3-5 s credited excerpt, Columbiana County drone, docket item 57"
+  },
+  {
+   "after": "The other, investigators could not find in the guidance",
+   "s": 1.5,
+   "why": "signature 3 line"
+  },
+  {
+   "after": "The N - T - S - B itself",
+   "s": 2.0,
+   "why": "act IV to V turn; verdict card 4"
+  }
+ ],
+ "tail": 14.0,
+ "open_loop": {
+  "promise": "We will hear them later in this film.",
+  "reveal": "In June twenty twenty-three, at a public hearing in East Palestine,",
+  "min": 200,
+  "max": 600
+ }
+}

@@ -1,0 +1,10 @@
+time_utc,block,chars,file,model,format,settings
+2026-11-05T14:07:47Z,1,2375,east-palestine_vo_b01.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:13:22Z,1,2375,east-palestine_vo_b01.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:16:24Z,2,2374,east-palestine_vo_b02.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:17:01Z,3,2481,east-palestine_vo_b03.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:17:33Z,4,2178,east-palestine_vo_b04.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:18:13Z,5,2315,east-palestine_vo_b05.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:18:44Z,6,2202,east-palestine_vo_b06.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:19:15Z,7,2072,east-palestine_vo_b07.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
+2026-11-05T14:36:30Z,7,2072,east-palestine_vo_b07.mp3,eleven_v4,mp3_44100_192,"{""similarity_boost"": 0.8, ""stability"": 0.0}"
