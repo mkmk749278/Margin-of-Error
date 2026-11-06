@@ -54,19 +54,19 @@ A Boeing 737-9 MAX (737 MAX 9) door plug flew 154 flights with none of the four 
 
 A photograph taken in Boeing's Renton factory 108 days earlier showed no bolts in the three positions it could see. This film reads the final report of the US National Transportation Safety Board (NTSB), record by record: how a 63-pound plug is held, why no removal record was written, why the investigation identified no one who opened or closed the plug, what the US regulator (the FAA) missed, and how the plug walked itself up off its stops. Findings are the NTSB's; our own reading is said as ours.
 
-The photograph at 6:38 is a Boeing photograph reproduced in the NTSB report (Figure 18, page 51, linked below). We show it redrawn and labelled RECONSTRUCTION; the original is in the report.
+The photograph at 5:56 is a Boeing photograph reproduced in the NTSB report (Figure 18, page 51, linked below). We show it redrawn and labelled RECONSTRUCTION; the original is in the report.
 
 0:00 Alaska Airlines 1282: the incident
-1:36 How a 737-9 door plug is held
-3:35 From Spirit AeroSystems to Boeing Renton
-5:52 The plug was opened with no removal record
-6:38 The photograph: no bolts
-7:41 Boeing's removal instruction and the FAA
-8:36 The workforce: experience lost
-9:46 The buybacks, and what the report says
-10:33 154 flights: how the plug walked up
-12:06 The NTSB's probable cause
-13:35 The fix, and what is still open
+1:27 How a 737-9 door plug is held
+3:13 From Spirit AeroSystems to Boeing Renton
+5:14 The plug was opened with no removal record
+5:56 The photograph: no bolts
+6:54 Boeing's removal instruction and the FAA
+7:42 The workforce: experience lost
+8:46 The buybacks, and what the report says
+9:29 154 flights: how the plug walked up
+10:56 The NTSB's probable cause
+12:18 The fix, and what is still open
 
 Sources
 NTSB Aviation Investigation Report AIR-25-04, In-Flight Separation of Left Mid Exit Door Plug, Alaska Airlines Flight 1282 (adopted 24 June 2025): https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf
@@ -78,6 +78,7 @@ Boeing Form 8-K, 1 July 2024 (agreement to acquire Spirit AeroSystems): https://
 Boeing Form 8-K, 8 December 2025 (acquisition completed): https://www.sec.gov/Archives/edgar/data/12927/000162828025055825/ba-20251208.htm
 
 Reconstructions and illustrations are labelled on screen; values not from a record are marked ILLUSTRATIVE.
+Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 ```
 
 ## Tags (Studio "Tags" field)
@@ -91,7 +92,7 @@ Boeing door plug, Alaska Airlines door plug blowout, Alaska Airlines 1282, 737 M
 ```
 Four bolts held the plug down; one lower bolt alone would have done. The NTSB named Boeing's parts-removal process and the FAA's oversight. Which layer, in your view, should have caught it first: the instruction, the inspection, or the audit?
 
-The factory photograph at 6:38 is shown redrawn: the original is a Boeing photograph, Figure 18 on page 51 of the NTSB report (link in the description).
+The factory photograph at 5:56 is shown redrawn: the original is a Boeing photograph, Figure 18 on page 51 of the NTSB report (link in the description).
 ```
 
 ## Captions
@@ -104,7 +105,7 @@ text). Upload as English, "Upload file → With timing". Rebuild: `python3 films
 - [ ] Category: Science & Technology (or Education). Made for kids: **No**. Language: English.
 - [ ] Captions: upload the SRT. Chapters: from the description (first line 0:00).
 - [ ] Test & Compare: thumbnails D, B, C (A stays on file).
-- [ ] End screen (14:52–15:05, the outro card): a subscribe element, plus the next case once it is published
+- [ ] End screen (13:31–13:44, the outro card): a subscribe element, plus the next case once it is published
       (§13.6), placed between the channel title and the sources line.
 - [ ] Public in the default window: **Thursday 14:00–16:00 US Eastern (19:00–21:00 UK)** (§13.6).
 - [ ] After public: pin the opening comment.
