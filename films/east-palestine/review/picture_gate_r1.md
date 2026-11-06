@@ -17,3 +17,9 @@ Cut: Drive `east-palestine/renders/east-palestine_review_r1_720p.mp4` (render 42
 **Fix (r2):** both title cards are now a centred card on the desk (card colour, border, amber edge, shadow), so the
 desk stays visible and the incoming document still can't show through. Stills at 59610, 59700, 59768, 61134, 61204
 checked. Re-render block 50400–61200 only (`blocks` + `reuse_from` 42214755971), then measure the joined cut again.
+
+## r2 (render 42238582203: block 50400–61200 re-rendered, the rest reused)
+Drive `east-palestine/renders/east-palestine_review_r2_720p.mp4`: 66,549 frames, 1109.15 s, audio 1109.15 s.
+Loudness −14.0 LUFS / −1.3 dBTP; **black: none**; stillness 0; the same three freezes, all under 2.5 s. Frames at
+16:33.5 and 16:58.9 read from the file: both title cards sit on the desk. **Verdict: passes.** Next: the owner
+approves the cut → 4K master.
