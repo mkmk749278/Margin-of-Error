@@ -11,8 +11,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `June` | `F63356` (+0.23 s) | Report | DatePill · <DatePill f={f} fps={fps} day={25} month={6} year={2024} dayWord={wf(1 |
-| `twenty-four` | `F63397` (+0.92 s) | Report | DatePill · <DatePill f={f} fps={fps} day={25} month={6} year={2024} dayWord={wf(1 |
+| `June` | `F63356` (+0.23 s) | Report | <span style={T(44, {fontWeight: 700, color: colors.ink, background: colors.void, |
+| `twenty-four` | `F63397` (+0.92 s) | Report | text: 2024 |
 | `N` | `F63475` (+2.22 s) | Report | <span style={T(36, {fontWeight: 700, color: colors.void, background: colors.cyan |
 | `adopted` | `F63534` (+3.20 s) | Report | text: ADOPTS / ITS FINAL REPORT |
 | `final` | `F63580` (+3.97 s) | Report | text: ADOPTS / ITS FINAL REPORT |
@@ -56,13 +56,13 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `twenty-five` | `F65081` (+0.55 s) | Paid | {row('2025', wf(179, 'twenty-five'), `−$${y25}M`, wf(179, 'two'), 'RECOVERIES EX |
+| `twenty-five` | `F65081` (+0.55 s) | Paid | {row('2025', wf(179, 'twenty-five'), `${y25 > 0 ? '−' : ''}$${y25}M`, wf(179, 't |
 | `insurance` | `F65152` (+1.73 s) | Paid | <div style={T(26, {color: colors.ink, marginTop: 40, opacity: onW(f, wf(179, 'in |
 | `other` | `F65202` (+2.57 s) | Paid | text: AND OTHER RECOVERIES / WERE |
-| `recoveries` | `F65216` (+2.80 s) | Paid | {row('2025', wf(179, 'twenty-five'), `−$${y25}M`, wf(179, 'two'), 'RECOVERIES EX |
+| `recoveries` | `F65216` (+2.80 s) | Paid | {row('2025', wf(179, 'twenty-five'), `${y25 > 0 ? '−' : ''}$${y25}M`, wf(179, 't |
 | `larger` | `F65279` (+3.85 s) | Paid | text: AND OTHER RECOVERIES / WERE |
 | `costs` | `F65331` (+4.72 s) | Paid | text: AND OTHER RECOVERIES / WERE |
-| `two` | `F65399` (+5.85 s) | Paid | {row('2025', wf(179, 'twenty-five'), `−$${y25}M`, wf(179, 'two'), 'RECOVERIES EX |
+| `two` | `F65399` (+5.85 s) | Paid | {row('2025', wf(179, 'twenty-five'), `${y25 > 0 ? '−' : ''}$${y25}M`, wf(179, 't |
 | `fifty-four` | `F65442` (+6.57 s) | (scene list) | {id: 'a5_paid', from: sf(178) - 20, to: sf(180) + 14, C: Paid, cues: [cue(wf(178 |
 | `million` | `F65479` (+7.18 s) | Paid | text: AND OTHER RECOVERIES / WERE |
 

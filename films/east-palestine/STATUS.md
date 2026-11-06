@@ -39,7 +39,11 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   Acts I–IV: 176/176 sentences pass.
 - **Act V done (2026-11-06):** `remotion/scenes/act5.tsx` (report, who paid, courts, could it happen again, verdict 5,
   sign-off on the dark route line, outro). **Whole film: 198/198 sentences pass the sync audit.**
-- **Next session, first:** look at the Act V stills sweep (rendered, not yet reviewed: `node scripts/stills.mjs
-  EastPalestine <out> <frames 63400–73662 every 240> --scale 0.5`) and fix any overlaps; write `scenes/act5.md`.
-  Then step 9: the 720p render on GitHub (`/parallel-render`), then sound (mix must lay the two hearing clips at F22329
-  and F25882).
+- **Act V stills reviewed and fixed (2026-11-06):** handoff `scenes/act5.md`. Long right-anchored chips capped at
+  1500 px (they ran off the left edge), the cover's date pill made a solid JUN 2024 chip, the 2029 pill given a void
+  background, no "−$0M" before the 2025 roll. Gates: tsc, text floor 0, sync 198/198, claims pass.
+
+## Next
+- **Step 10 before step 9:** the render workflow lays Drive `east-palestine/mix/mix.wav` under the picture, and no mix
+  exists yet. Build the mix first (voice from Drive `vo/`, the two hearing clips' sound at F22329 and F25882, the
+  forensic music bed, SFX on every cue), put it in Drive `mix/`, then the 720p render (`/parallel-render`).
