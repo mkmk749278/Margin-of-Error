@@ -10,7 +10,8 @@
 - **Mix:** slots and the wind cue mapped sentence by sentence: −14.00 LUFS, −1.40 dBTP, voice −2.4 dBTP; Drive
   `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`). Takes: Drive `vo/marcus/`; full narration
   `vo/four-missing-bolts_narration_marcus_full.mp3`.
-- **Next:** owner approves the audio; 720p review cut (after the East Palestine render, inside the runner budget);
+- **Owner gate passed (2026-11-06):** the owner approved the Marcus audio ("Approved").
+- **Next:** 720p review cut (after the East Palestine render, inside the runner budget);
   review; owner approves the cut; 4K master; the package again with the voice note in the description.
 
 
