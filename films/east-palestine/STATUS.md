@@ -7,7 +7,7 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - **Timing:** `vo/timing.json`, every word measured. Film **20:27.7** (10 holds, 107.2 s; tail 14 s); open loop 298 s.
   The two hearing-clip holds were re-cut on 2026-11-06 (below); the voice is unchanged.
 - **Exhibits (step 7, 2026-11-06):** all record files fetched (`assets/src/`, also Drive `east-palestine/src/`) and
-  logged in `media_manifest.csv` (52 rows). Render media in Drive `east-palestine/render-media/` →
+  logged in `media_manifest.csv` (53 rows). Render media in Drive `east-palestine/render-media/` →
   `public/films/east-palestine/`:
   - `pages/`: 51 pages at 220 dpi from RIR-24-05 (27), the hearing transcript (9), NS rule 147, the event-recorder
     factual report, CRS R47911, the NTSB recommendation status, the two court orders. Highlight boxes on the located
@@ -26,5 +26,8 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 ## Blocked
 - **Docket item 70** returns 0 bytes; RIR Table 7 (pdf 58) carries its figures and is used instead.
 
-## Next
-- Step 8, choreography (`/choreograph`): scenes on `vo/timing.json`, every word cued, `sync_audit.py`.
+## Step 8, choreography (in progress)
+- **Act I done (2026-11-06):** `remotion/scenes/act1.tsx` (11 scenes, sentences 0–31), handoff `scenes/act1.md`, table
+  `scenes/choreography/act1.md` (`python3 scenes/choreography/act1_table.py`). Act I: 32/32 sentences pass the sync audit.
+  Composition `EastPalestine` (src/Root.tsx); stills: `node scripts/stills.mjs EastPalestine <out> <frames> --scale 0.5`.
+- **Next:** Act II (s32 on, F8521), then III–V, each with its handoff, table, stills and audit; then the 720p render.
