@@ -763,6 +763,21 @@ archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real p
   frame and read as judder.
 - **No stock clip more than twice in a film;** real footage of the named place or part is exempt.
 - **Fact-check before sourcing:** sourcing for a claim that turns out wrong wastes the most time.
+- **Probe every fetched clip's video and audio durations separately** (`ffprobe -show_entries stream=codec_type,duration`).
+  *Why (2026-11-06):* a phone-fetched hearing range came back with 138.9 s of video and 155 s of audio; the planned
+  "Correct." moment sat in the 16 s with no picture, and a format probe showed only the longer duration.
+- **Cut a real recording on its own words, not on a timecode.** Align the official transcript to the clip's audio
+  (`scripts/clip_align.py`), then put each in- and out-point in a measured silence between words. *Why
+  (2026-11-06):* the approved spans, chosen by timecode from the live captions (which lag the speech by 2–4 s), cut
+  into the first word and ended mid-sentence. The transcript alignment also gives the captions their times.
+- **Highlights on an exhibit are located, never guessed** (`scripts/page_phrases.py` for PDFs, `scripts/doc_shots.mjs`
+  for HTML). Hearing transcripts: `--min-x 100 --min-y 60 --sort-lines` (line numbers and the running page number
+  otherwise break a phrase that wraps; pdftotext emits some lines out of order). Filings: doc_shots turns
+  non-breaking spaces into spaces before searching. *Why (2026-11-06):* iXBRL puts a non-breaking space in
+  "$1,116 million", so the highlight silently started after the number it was meant to show.
+- **An empty download is a failure, not a file.** The NTSB docket can answer 200 with 0 bytes (a cached empty
+  response) for hours; check sizes, use the report's own copy of the data where it has one (RIR-24-05 Table 7
+  carries the wayside questionnaire's figures), and log the gap in the manifest.
 
 ## 12. Sound
 - **Owner's mix standard (2026-11-03):** VO peaks at −2.0 to −3.0 dB true peak; an under-speech ambience or drone

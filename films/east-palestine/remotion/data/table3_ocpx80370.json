@@ -1,0 +1,148 @@
+{
+ "_source": "NTSB RIR-24-05 (corrected 23 JUL 2024), Table 3, p. 24 (pdf 39): SPSI tank car temperature measurements, OCPX80370 column; 2:00-4:00 a.m. on 06 FEB not measured ('-'). Fig. 32 p. 153 adds the 5:47 p.m. 05 FEB recommendation and the 4:37 p.m. 06 FEB vent and burn. Hours are from 00:00 05 FEB 2023 EST.",
+ "_footnote": "*12:00 a.m. 139: 'When interviewed by the NTSB, the EPFD fire chief noted that this increase in temperature coincided with the ignition of a small fire underneath tank car OCPX80370, and that the temperature decreased after the fire was extinguished.'",
+ "car": "OCPX80370",
+ "points": [
+  {
+   "date": "2/5/2023",
+   "time": "4:00 p.m.",
+   "h": 16.0,
+   "f": 135,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "5:00 p.m.",
+   "h": 17.0,
+   "f": 138,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "6:00 p.m.",
+   "h": 18.0,
+   "f": 136,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "7:00 p.m.",
+   "h": 19.0,
+   "f": 136,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "8:00 p.m.",
+   "h": 20.0,
+   "f": 130,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "9:00 p.m.",
+   "h": 21.0,
+   "f": 130,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "10:00 p.m.",
+   "h": 22.0,
+   "f": 130,
+   "star": false
+  },
+  {
+   "date": "2/5/2023",
+   "time": "11:00 p.m.",
+   "h": 23.0,
+   "f": 131,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "12:00 a.m.",
+   "h": 24.0,
+   "f": 139,
+   "star": true
+  },
+  {
+   "date": "2/6/2023",
+   "time": "1:00 a.m.",
+   "h": 25.0,
+   "f": 129,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "7:00 a.m.",
+   "h": 31.0,
+   "f": 120,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "8:37 a.m.",
+   "h": 32.617,
+   "f": 127,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "9:30 a.m.",
+   "h": 33.5,
+   "f": 126,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "10:30 a.m.",
+   "h": 34.5,
+   "f": 126,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "11:30 a.m.",
+   "h": 35.5,
+   "f": 126,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "12:30 p.m.",
+   "h": 36.5,
+   "f": 126,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "1:30 p.m.",
+   "h": 37.5,
+   "f": 126,
+   "star": false
+  },
+  {
+   "date": "2/6/2023",
+   "time": "2:30 p.m.",
+   "h": 38.5,
+   "f": 126,
+   "star": false
+  }
+ ],
+ "events": [
+  {
+   "h": 17.783333333333335,
+   "label": "5:47 P.M. 05 FEB \u00b7 VENT AND BURN RECOMMENDED"
+  },
+  {
+   "h": 40.61666666666667,
+   "label": "4:37 P.M. 06 FEB \u00b7 VENT AND BURN"
+  }
+ ],
+ "band": {
+  "lo": 153,
+  "hi": 158,
+  "source": "RIR p. 28 (C63, C64)"
+ }
+}

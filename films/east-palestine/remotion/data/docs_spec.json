@@ -1,0 +1,157 @@
+{
+ "ns_8k_or60": {
+  "file": "films/east-palestine/assets/src/sec/nspr-0811191.htm",
+  "phrases": [
+   "targeting an operating ratio of 60 percent by 2021",
+   "our 2018 operating ratio of 65.4 percent"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_8k_psr": {
+  "file": "films/east-palestine/assets/src/sec/nspr-0811191.htm",
+  "phrases": [
+   "As we implement precision scheduled railroading",
+   "serving our customers, managing our assets, controlling our costs, working safely, and developing our people"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_8k_buyback": {
+  "file": "films/east-palestine/assets/src/sec/nspr-0811191.htm",
+  "phrases": [
+   "continuance of share repurchases using free cash flow and borrowing capacity"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10k19_employees": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20191231.htm",
+  "phrases": [
+   "Average number of employees"
+  ],
+  "width": 900,
+  "above": 260,
+  "below": 120
+ },
+ "ns_10k19_or_def": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20191231.htm",
+  "phrases": [
+   "railway operating ratio (a measure of the amount of operating revenues consumed by operating expenses)"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10k22_employees": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20221231.htm",
+  "phrases": [
+   "We employed an average of 18,900 employees during 2022"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_proxy21_or": {
+  "file": "films/east-palestine/assets/src/sec/e21086_nsc-def14a.htm",
+  "phrases": [
+   "payable based on our performance relative to pre-determined performance measures for operating ratio and operating income"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10k23_incident": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20231231.htm",
+  "phrases": [
+   "$1,116 million of expenses for costs directly attributable to the Incident, which is presented net of $101 million in insurance recoveries"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10k25_net": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20251231.htm",
+  "phrases": [
+   "net expenses of $325 million associated with the Incident"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10k25_recoveries": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20251231.htm",
+  "phrases": [
+   "recoveries that exceeded additional Incident-related expenses by $254 million"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10q26_decree": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20260930.htm",
+  "phrases": [
+   "The DOJ filed a motion on October 10, 2024 seeking entry of the Consent Decree, which motion remains pending before the Court."
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_10q26_appeal": {
+  "file": "films/east-palestine/assets/src/sec/nsc-20260930.htm",
+  "phrases": [
+   "Those class members appealed that decision to the U.S. Court of Appeals for the Sixth Circuit, which is currently pending before the court."
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_release_motivation": {
+  "file": "films/east-palestine/assets/src/web/ns_2024-06-25.html",
+  "phrases": [
+   "only motivation in recommending the vent and burn to the Unified Command was the health and safety of the"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_release_20h": {
+  "file": "films/east-palestine/assets/src/web/ns_2024-06-25.html",
+  "phrases": [
+   "Unified Command was advised that a vent and burn procedure might be necessary approximately 20 hours before"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_release_withheld": {
+  "file": "films/east-palestine/assets/src/web/ns_2024-06-25.html",
+  "phrases": [
+   "Norfolk Southern does not agree with the conclusion that it"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ns_release_187": {
+  "file": "films/east-palestine/assets/src/web/ns_2024-06-25.html",
+  "phrases": [
+   "Installing 187 additional hot bearing detectors, reducing core network average distance between detectors to approximately 12 miles"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ },
+ "ntsb_nr_special": {
+  "file": "films/east-palestine/assets/src/web/NR20230323_body.html",
+  "phrases": [
+   "announced today a special investigation of Norfolk Southern Railway"
+  ],
+  "width": 720,
+  "above": 200,
+  "below": 200
+ }
+}

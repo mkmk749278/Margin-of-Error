@@ -1,0 +1,314 @@
+{
+ "C01": {
+  "page": 11,
+  "phrase": "On February 3, 2023, about 8:54 p.m., eastbound Norfolk Southern Railway (NS) train 32N derailed 38 mixed freight railcars at milepost 49.5 on the NS Fort Wayne Line of the Keystone Division in East Palestine, Ohio"
+ },
+ "C34": {
+  "page": 11,
+  "phrase": "Emergency responders established a 1-mile evacuation zone that affected about 2,000 residents."
+ },
+ "C36": {
+  "page": 11,
+  "phrase": "A contractor hired by NS breached the VCM tank cars at 4:37 p.m. on February 6"
+ },
+ "C169": {
+  "page": 11,
+  "phrase": "A fire ignited during the derailment and grew to involve lading released from these three mechanically breached tank cars"
+ },
+ "C171": {
+  "page": 11,
+  "phrase": "over the next day, four of these tank cars were exposed to fires and released material from pressure relief devices"
+ },
+ "C37": {
+  "page": 12,
+  "phrase": "The vent and burn procedure was not necessary to prevent a polymerization-induced explosion."
+ },
+ "C95": {
+  "page": 12,
+  "phrase": "On-scene temperature trends did not indicate that a polymerization reaction was occurring and postaccident examinations confirmed this."
+ },
+ "C179": {
+  "page": 12,
+  "phrase": "Research will be necessary to determine whether changes to wayside bearing defect detection systems\u2014such as lower alert and alarm thresholds\u2014would produce a significant safety improvement"
+ },
+ "C42": {
+  "page": 13,
+  "phrase": "the failure of the L1 bearing on the 23rd railcar in the consist that overheated and caused the axle to separate"
+ },
+ "C130": {
+  "page": 13,
+  "phrase": "leading to a postderailment fire that likely began with the release of a Class 3 flammable liquid from a DOT-111 tank car that was punctured during the derailment"
+ },
+ "C131": {
+  "page": 13,
+  "phrase": "Contributing to the postderailment fire and the severity of the hazardous materials release was the continued use of DOT-111 tank cars in hazardous materials service."
+ },
+ "C132": {
+  "page": 13,
+  "phrase": "the failure of Norfolk Southern Railway and its contractors to communicate relevant expertise and dissenting opinions to the incident"
+ },
+ "C133": {
+  "page": 13,
+  "phrase": "the inaccurate representation by Norfolk Southern Railway and its contractors that the tank cars were at risk of catastrophic failure from a polymerization reaction, which created unwarranted urgency and led to the unnecessary decision to vent and burn five derailed vinyl chloride monomer tank cars"
+ },
+ "C134": {
+  "page": 13,
+  "phrase": "Contributing to the exposure of emergency responders and the public to postderailment hazards were (1) Norfolk Southern Railway's delay in transmitting the train consist information to emergency responders and (2) the state of Ohio's insufficient training requirements for volunteer firefighters."
+ },
+ "C83": {
+  "page": 19,
+  "phrase": "accident crew\u2014an engineer, a conductor, and a conductor trainee\u2014went on duty"
+ },
+ "C116": {
+  "page": 19,
+  "phrase": "using a pair of upward-facing infrared cameras to measure bearing temperatures relative to ambient (background) temperatures"
+ },
+ "C118": {
+  "page": 19,
+  "phrase": "Overheated bearings occur when inadequate lubrication, component misalignment, or mechanical damage increase bearing friction."
+ },
+ "C02": {
+  "page": 19,
+  "phrase": "train 32N consisted of 3 locomotives and 149 mixed freight cars (including 9 empty railcars distributed throughout the consist); the train weighed 17,977 tons and was 9,309 feet long"
+ },
+ "C04": {
+  "page": 21,
+  "phrase": "The images showed a fire on wheelset #1 of the hopper car."
+ },
+ "C05": {
+  "page": 21,
+  "phrase": "At 8:13 p.m., train 32N passed over the HBD in Salem, Ohio, (MP 69.01) near the surveillance cameras that recorded fire on the hopper car. The HBD recorded a temperature 103\u00b0F above ambient on the L1 bearing of the hopper"
+ },
+ "C06": {
+  "page": 22,
+  "phrase": "temperature exceeding NS's 90\u00b0F above-ambient threshold for a non-critical alert"
+ },
+ "C08": {
+  "page": 22,
+  "phrase": "did not broadcast an alarm to the train's crew"
+ },
+ "C10": {
+  "page": 22,
+  "phrase": "Locomotive event recorder data showed the train was traveling about 43 mph. The maximum authorized speed in the area was 50 mph."
+ },
+ "C11": {
+  "page": 22,
+  "phrase": "this HBD recorded a temperature 253\u00b0F above ambient on"
+ },
+ "C106": {
+  "page": 22,
+  "phrase": "About 8:52 p.m. on February 3, 2023, train 32N began to traverse an HBD at MP 49.81 in East Palestine, Ohio."
+ },
+ "C53": {
+  "page": 23,
+  "phrase": "Critical alarm, critical alarm, critical alarm. Norfolk Southern milepost 49.8, track 1 hotbox, axle 101, south rail."
+ },
+ "C55": {
+  "page": 23,
+  "phrase": "A reading of 253\u00b0F above ambient is the maximum reading for the type of HBD installed at MP 49.81; the actual temperature may have been higher."
+ },
+ "C56": {
+  "page": 23,
+  "phrase": "The head-end locomotives then traveled about 1,160 feet before coming to a stop 38 seconds later."
+ },
+ "C57": {
+  "page": 23,
+  "phrase": "received the first 911 call reporting a derailment, explosion, and fire at 8:56:49"
+ },
+ "C59": {
+  "page": 36,
+  "phrase": "NS and SPSI first communicated directly with Oxy Vinyls, about 6:00 p.m. on February 4, in a conference call that included Oxy Vinyls' special situation team and four managers based in Dallas, Texas. During the conference call, Oxy Vinyls assessed a low probability of polymerization based on the observed PRD behavior"
+ },
+ "C60": {
+  "page": 42,
+  "phrase": "Representatives from Oxy Vinyls were not present and had not been invited to attend."
+ },
+ "C93": {
+  "page": 42,
+  "phrase": "The NTSB did not find evidence that attendees other than NS and its contractors were aware that Oxy Vinyls had developed a dissenting opinion about polymerization"
+ },
+ "C141": {
+  "page": 42,
+  "phrase": "This meeting involved an estimated 60\u2013100 individuals, including people and organizations not part of the formal incident command, such as the governors of Ohio and Pennsylvania."
+ },
+ "C62": {
+  "page": 43,
+  "phrase": "the SPSI president and SRS project manager said in this meeting that he had 13 minutes to decide whether to allow them to proceed with the vent and burn because they wanted to begin before 3:00 p.m. to avoid the effects of atmospheric temperature inversion and allow the vapor cloud to disperse"
+ },
+ "C63": {
+  "page": 43,
+  "phrase": "if the temperature in a tank car reached 153\u2013158\u00b0F, the result would be an uncontrolled polymerization reaction"
+ },
+ "C64": {
+  "page": 43,
+  "phrase": "The NTSB did not find this temperature range in written guidance about VCM consulted at the scene or in communications between Oxy Vinyls and NS and NS contractors"
+ },
+ "C65": {
+  "page": 43,
+  "phrase": "the highest tank car temperatures had fallen from about 138\u00b0F the previous afternoon to about 126\u00b0F"
+ },
+ "C68": {
+  "page": 43,
+  "phrase": "the incident commander said that he bore the responsibility for this decision"
+ },
+ "C92": {
+  "page": 43,
+  "phrase": "The SPSI president and SRS project manager told the incident commander that if a tank"
+ },
+ "C77": {
+  "page": 58,
+  "phrase": "After the East Palestine derailment, NS eliminated the \"warm bearing\" alarm and set its critical alarm threshold at 170\u00b0F above ambient."
+ },
+ "C82": {
+  "page": 60,
+  "phrase": "GPLX75465 was a covered hopper railcar owned by the GATX Corporation and leased to Braskem America, Inc."
+ },
+ "C80": {
+  "page": 61,
+  "phrase": "On February 5, after photographing the L1 bearing and journal in their as-found condition, the NTSB recovered the separated axle journal and several bearing components"
+ },
+ "C40": {
+  "page": 66,
+  "phrase": "by May 1, 2029, tank cars transporting flammable liquids must meet the newer DOT-117 specification"
+ },
+ "C21": {
+  "page": 102,
+  "phrase": "NS did not inspect the hopper car relevant to the East Palestine derailment because it had been added to the train in the TRRA yard"
+ },
+ "C30": {
+  "page": 102,
+  "phrase": "identified FRA-reportable defects on 26% of the railcars, all of which had received NS or TRRA mechanical inspections"
+ },
+ "C31": {
+  "page": 102,
+  "phrase": "appearing to state a target time of 90 seconds for both inbound and outbound railcars"
+ },
+ "C33": {
+  "page": 102,
+  "phrase": "In March 2023, the NTSB announced that we would conduct a special investigation of NS's organization and safety culture."
+ },
+ "C182": {
+  "page": 102,
+  "phrase": "decreasing freight car inspection times afforded to inspectors at NS railyards"
+ },
+ "C07": {
+  "page": 119,
+  "phrase": "This measurement was below the 170\u00b0F threshold that would have triggered an alarm broadcast to the train crew, which remained unaware that a bearing was showing unusual behavior."
+ },
+ "C09": {
+  "page": 119,
+  "phrase": "immediately seeing the Salem HBD alert would not have prevented the derailment"
+ },
+ "C167": {
+  "page": 119,
+  "phrase": "Images from these cameras showed a fire on the L1 bearing of the hopper car."
+ },
+ "C168": {
+  "page": 119,
+  "phrase": "Shortly after the train passed the field of view of these surveillance cameras, it traversed an HBD in Salem, Ohio"
+ },
+ "C12": {
+  "page": 120,
+  "phrase": "Its exterior temperature measurement had reached at least 253\u00b0F, more than 50\u00b0F above the critical bearing alarm threshold."
+ },
+ "C13": {
+  "page": 120,
+  "phrase": "by the time the train reached the next HBD, about 19 miles away in East Palestine, the L1 bearing was already failing"
+ },
+ "C17": {
+  "page": 120,
+  "phrase": "did not reflect the true temperature and failing condition of the L1 wheel bearing"
+ },
+ "C117": {
+  "page": 120,
+  "phrase": "The HBD in Salem, Ohio, was configured to take its temperature readings from the inner edge of the bearing cup."
+ },
+ "C176": {
+  "page": 120,
+  "phrase": "changes in the exterior temperature of a bearing tend to lag behind changes in the interior temperature"
+ },
+ "C14": {
+  "page": 121,
+  "phrase": "The bearing separated less than a minute later, as the crew began to stop the train."
+ },
+ "C18": {
+  "page": 121,
+  "phrase": "did not give the train's crew adequate warning to stop the train before the suspect bearing failed and caused the derailment"
+ },
+ "C23": {
+  "page": 121,
+  "phrase": "the AAR definition of an overheated bearing is based on what makes a railcar repair billable to the railcar owner or lessor"
+ },
+ "C24": {
+  "page": 121,
+  "phrase": "balancing between preventing bearing failures and avoiding unnecessary stops"
+ },
+ "C73": {
+  "page": 121,
+  "phrase": "NS based its alert and alarm temperature thresholds on its own experience with HBDs and AAR standards"
+ },
+ "C114": {
+  "page": 121,
+  "phrase": "In the East Palestine derailment, the three HBDs of interest were an average of about 15 miles apart, but the interval between the Salem HBD and East Palestine HBD was about 19 miles"
+ },
+ "C16": {
+  "page": 122,
+  "phrase": "the bearing that led to the derailment went from below the alert threshold to separated in about 30 miles"
+ },
+ "C72": {
+  "page": 122,
+  "phrase": "it relates to billing for repairs, not directly to safety or wayside detection"
+ },
+ "C115": {
+  "page": 122,
+  "phrase": "However, the HBDs traversed by train 32N shortly before the derailment met this criterion"
+ },
+ "C19": {
+  "page": 126,
+  "phrase": "the root cause of the bearing's failure remains unclear"
+ },
+ "C20": {
+  "page": 126,
+  "phrase": "were erased by the high temperatures of the burn-off and subsequent fire exposure"
+ },
+ "C119": {
+  "page": 126,
+  "phrase": "a bearing can go from below an alarm temperature to seized (no longer able to rotate as designed) in less than a minute (Leedham 1992)"
+ },
+ "C129": {
+  "page": 126,
+  "phrase": "a bearing failure significant enough to lead to an accident tends to destroy the evidence of its underlying cause"
+ },
+ "C39": {
+  "page": 149,
+  "phrase": "such action is unlikely because of economic and business disincentives"
+ },
+ "C66": {
+  "page": 169,
+  "phrase": "indicating that 3:00 p.m. was not a hard deadline for the procedure"
+ },
+ "C67": {
+  "page": 169,
+  "phrase": "NS and its contractors compromised the integrity of the vent and burn decision by creating unwarranted urgency"
+ },
+ "C139": {
+  "page": 168,
+  "phrase": "The incident commander, the EPFD fire chief, approved the vent and burn based on information from NS, SRS, and SPSI."
+ },
+ "C147": {
+  "page": 170,
+  "phrase": "the evidence did not support a determination of which of these explanations, if any, was the main reason for the sustained preference for the vent and burn"
+ },
+ "C15": {
+  "page": 181,
+  "phrase": "the train crew's proper train handling and appropriate response to the bearing alarm and derailment"
+ },
+ "C22": {
+  "page": 181,
+  "phrase": "There is insufficient evidence to determine if the Terminal Railroad"
+ },
+ "C135": {
+  "page": 182,
+  "phrase": "The delayed transmittal of consist information by Norfolk Southern Railway to emergency responders needlessly increased the time emergency responders spent near the derailment pileup and delayed the evacuation order"
+ }
+}

@@ -1,0 +1,38 @@
+during a shift they have to analyze these reports from the wayside
+detectors is two to three times per shift just to make some
+context in terms of workload.
+Now, going to the issue of how we arrived at those
+thresholds. So let’s talk, first of all, what those thresholds
+represent. Those are thresholds in AAR’s car repair billing rules
+which authorize the ability of a railroad to take a car out of
+service, make the repairs that are necessary. Those threshold --
+the way in which the thresholds are developed really is a function
+of experience, and you’re balancing a couple of considerations.
+One of those considerations is, of course, the detection of
+issues with the bearings. The other issue, as it was talked about
+earlier, is -- you know, if you put the thresholds too low, you’re
+going to have a lot of false stops and you’re really going to
+bollocks up the railroad system. You’re going to cause issues
+with respect to customer service, and you’re eventually going to
+lead to shippers choosing other modes of transportation, which
+really is not in the interest. It’s really an experience issue in
+terms of where to establish those thresholds.
+Having said that, as I think some people in the room are
+aware, we have been taking a look at those thresholds and will
+continue to look at those thresholds. It’s an ongoing exercise in
+terms of taking experience into account. But really, that’s what
+it comes down to is taking your experience in terms of what
+threshold’s appropriate in terms of getting those defective
+bearings off the system but at the same time not constantly
+stopping trains.
+MR. ARONIAN: Thank you. So these overheated bearing
+temperature thresholds established in the rule, then, are not
+absolute limits for safe operating temperatures of bearings? If I
+understand properly what you just described, they are a standard
+at which bearings can be removed from service and billing and the
+car owners could be billed for it?
+MR. RUSH: Correct. Now, keep in mind it’s in the interest
+of the operating railroad not to have derailments attributable to
+hot bearings but the structure, the way in which AR standards work
+is our ability to impose standards is through what we call our
+interchange agreement.
