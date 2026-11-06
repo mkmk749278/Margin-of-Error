@@ -1,0 +1,34 @@
+Make three instrumental music tracks in Google Flow Music (https://www.flowmusic.app, Google Labs; sign in with my
+Google account in Chrome) and save them to my Google Drive.
+
+Rules for every track:
+- Instrumental only. If Flow Music has an instrumental switch or a "no vocals" option, turn it on. Leave any lyrics
+  box empty.
+- Paste the prompt exactly as written below. Do not add an artist, band, film or song name.
+- Make 2 takes of each track (6 files in all). If a setting sets the length, choose the longest up to about 3 minutes.
+- Download each take in the best quality offered (WAV if offered, otherwise the highest-bitrate MP3). Do not
+  re-encode or trim.
+- Name the files exactly: <id>_take1.<ext> and <id>_take2.<ext>, using the ids below.
+
+Save all 6 files to Google Drive, folder Music-Library/forensic/flow/ (create "flow" inside Music-Library/forensic
+if it is missing; the forensic folder's id is 1mOKSQevnOmstbnuqoh4zlCJi1Is-GcOa). Do not put anything anywhere else
+in Music-Library.
+
+TRACK 1 · id fx01_incident · "The Incident" (Act I, the incident in media res on the record)
+Prompt:
+Cold and tense, in media res. 72 BPM, D minor. A low analogue synth bass drone, a slow soft kick-like pulse every bar, a quiet ticking like an instrument panel clock, sparse single felt-piano notes, low cello held notes. Clinical and restrained, like reading timestamps on a flight record. No melody. Instrumental only: no vocals, no choir, no humming, no spoken words, no vocal samples, and no pads or synths that sound like voices or a choir: sustained sounds come from bowed strings, piano, electric piano, organ-free analogue synths and electronic hum. This is a documentary underscore that plays under a narrator's voice: no lead melody in the speech range, no sudden loud hits or long silences, a steady overall level from start to finish, clean cinematic mix, wide stereo. Make it about three minutes long. It ends with a final held chord or note that decays naturally, never an abrupt cut.
+
+TRACK 2 · id fx05_verdict · "The Verdict" (Act V, findings, litigation, regulation; the sign-off)
+Prompt:
+Sober and reflective. 66 BPM, E minor. Single sparse felt-piano notes over low held cello and double bass, a faint electric hum underneath. Understated, calm and quiet, room to think. Ends on a single low held piano note. Instrumental only: no vocals, no choir, no humming, no spoken words, no vocal samples, and no pads or synths that sound like voices or a choir: sustained sounds come from bowed strings, piano, electric piano, organ-free analogue synths and electronic hum. This is a documentary underscore that plays under a narrator's voice: no lead melody in the speech range, no sudden loud hits or long silences, a steady overall level from start to finish, clean cinematic mix, wide stereo. Make it about three minutes long. It ends with a final held chord or note that decays naturally, never an abrupt cut.
+
+TRACK 3 · id fx06_record_drone · "Room Tone Drone" (The continuous low bed under quiet stretches; the 'silence' that is never silent)
+Prompt:
+A near-static low bed. A very low analogue synth bass tone and a soft electrical hum like a server room, held double bass notes that change every twenty seconds, faint air-conditioning hiss. No rhythm, no melody, no piano. It should almost disappear under a voice. Constant and seamless. Instrumental only: no vocals, no choir, no humming, no spoken words, no vocal samples, and no pads or synths that sound like voices or a choir: sustained sounds come from bowed strings, piano, electric piano, organ-free analogue synths and electronic hum. This is a documentary underscore that plays under a narrator's voice: no lead melody in the speech range, no sudden loud hits or long silences, a steady overall level from start to finish, clean cinematic mix, wide stereo. Make it about three minutes long. It ends with a final held chord or note that decays naturally, never an abrupt cut.
+
+When done, also save list.csv in the same folder with one row per file: file name, track id, take, the exact
+prompt used, the settings chosen (instrumental on/off, length), the date and time it was made, and any song page URL
+Flow Music gives.
+Then save terms.txt in the same folder: open Flow Music's terms of service and any page about using generated music,
+and copy word for word, with each page's URL, the sentences about commercial use, who owns the output, and
+whether you must credit it. If you can't find them, write "not found" and list the pages you checked.

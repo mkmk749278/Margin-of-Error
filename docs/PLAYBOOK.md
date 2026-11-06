@@ -850,6 +850,15 @@ made once and kept in Drive never has to be made again (§16, the music that liv
   and the run stopped at the project's spending cap; their prompts are already rewritten in
   `config/music_library.json` (strings, piano, electric hum and synth bass, no pads). Until then: Act I
   `fx08_countdown` or `fx02_mechanism`, Act V `fx10_signoff`, the quiet bed `fx09_aftermath` at a low level.
+- **The Flow Music route (owner, 2026-11-06):** Google Flow Music (Google Labs, Lyria 3 Pro) under the owner's Gemini
+  subscription, driven by **Cowork in Chrome** from one click-to-copy request (§11.1) that holds each track's prompt
+  (its `config/music_library.json` prompt plus `common`), 2 takes per track, named `<id>_take<N>.<ext>`, saved to
+  Drive `Music-Library/forensic/flow/` with `list.csv` and `terms.txt`. *Why:* Google offers no official Flow Music
+  API (the only one found, 2026-11-06, is a third-party reseller that holds the user's Google token), and the
+  subscription costs nothing per track. The session then pulls the takes, measures them (length, loudness, peak, the
+  ending), and the owner listens for voices on the phone before a take enters the library (the Gemini listening
+  check needs `GEMINI_API_KEY`). **Before first use, `terms.txt` must show commercial use is allowed** (§11 licences);
+  if it doesn't, the takes are not used.
 - **Film 1** (`four-missing-bolts`) keeps the ElevenLabs cues it was mixed with; a re-mix with library beds is the
   owner's call.
 
