@@ -1,5 +1,7 @@
-import json,re
-# Choreography index (PLAYBOOK §10.6): run from films/<slug>/ ; writes scenes/choreography/acts2-5.md from the scene code.
+import json,re,sys
+# Choreography index (PLAYBOOK §10.6): run from films/<slug>/ ; writes a choreography table from the scene code.
+#   python3 ../../scripts/choreo_index.py                       (Film 1 default: acts 2-5 -> scenes/choreography/acts2-5.md)
+#   python3 ../../scripts/choreo_index.py act1 [act2 ...]      (-> scenes/choreography/<first>[-<last>].md, every sentence)
 from pathlib import Path
 film=Path('.')
 t=json.load(open('vo/timing.json'))
@@ -8,7 +10,9 @@ for w in t['words']: by.setdefault(w['s'],[]).append(w)
 CUE=re.compile(r"""\bw(?:e)?f\(\s*(\d+)\s*,\s*(?:'([^']+)'|"([^"]+)")\s*(?:,\s*(\d+))?\s*\)""")
 clean=lambda w: re.sub(r"[^a-z0-9']","",w.lower())
 cues={}
-for act in ['act2','act3','act4','act5']:
+ACTS=sys.argv[1:] or ['act2','act3','act4','act5']
+DEFAULT=not sys.argv[1:]
+for act in ACTS:
     lines=(film/f'remotion/scenes/{act}.tsx').read_text().splitlines()
     scene='?'
     starts=[i for i,l in enumerate(lines) if re.match(r'^const (\w+): React\.FC',l)]+[len(lines)]
@@ -44,19 +48,21 @@ for act in ['act2','act3','act4','act5']:
             # what the line does: the quoted label text if any, else the property it drives
             what=describe(i, ln)
             cues.setdefault(s,{})[(clean(w),n)]=(x['startFrame'],x['w'],scene,what.replace('|','/'))
-out=['# Choreography index: Acts II–V (sentences 23–176)','',
+name=('acts2-5' if DEFAULT else (ACTS[0] if len(ACTS)==1 else f"{ACTS[0]}-{ACTS[-1].replace('act','')}"))
+out=[('# Choreography index: Acts II–V (sentences 23–176)' if DEFAULT else f"# Choreography index: {', '.join(a.replace('act','Act ') for a in ACTS)}"),'',
  'Word-level choreography (PLAYBOOK §10.6), **generated from the scene code** (`python3 scripts/choreo_index.py` from the film folder; re-run after',
  'any edit) so it cannot drift from it. One row per word-locked event: the spoken trigger, its measured frame (60 fps) and offset',
  'from the sentence start, the scene component, and what changes (the on-screen text that arrives, or the driving line of',
  'code). Kit: `lib/remotion/Kinetic.tsx` and `remotion/beats.tsx` (`KeyLine` parts land on their words, `ChunkQuote` reveals a',
  'record quote chunk by chunk, `WordLine` builds a title word by word). Hand-written tables: `act1.md`, `journey.md`.',
- 'Sync audit: 177/177 sentences pass (`review/sync_audit.md`).','']
+ ('Sync audit: 177/177 sentences pass (`review/sync_audit.md`).' if DEFAULT else 'Sync audit: `review/sync_audit.md`.'),'']
 for s in sorted(cues):
-    if s<23: continue
+    if DEFAULT and s<23: continue
     S=t['sentences'][s]
     out+=[f"**{s}** · {S['text']}", '', '| Trigger | Frame (offset) | Scene | Change |','| :--- | :--- | :--- | :--- |']
     for k,(fr,w,sc,what) in sorted(cues[s].items(), key=lambda kv: kv[1][0]):
         out.append(f"| `{w.strip(',.:;?')}` | `F{fr}` (+{(fr-S['startFrame'])/60:.2f} s) | {sc} | {what} |")
     out.append('')
-Path('scenes/choreography/acts2-5.md').write_text('\n'.join(out)+'\n')
+Path('scenes/choreography').mkdir(parents=True, exist_ok=True)
+Path(f'scenes/choreography/{name}.md').write_text('\n'.join(out)+'\n')
 print(len(out))
