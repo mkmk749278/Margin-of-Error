@@ -281,7 +281,8 @@
  "open_loop": {
   "promise": "We will come to it in about five minutes.",
   "reveal": "It shows the plug, closed.",
-  "min": 285,
-  "max": 330
+  "min": 260,
+  "max": 310,
+  "why_window": "2026-11-06: re-voiced with Marcus, about 9% faster than voice 1 (narration 756 s vs 836 s); the window scaled to the new pace (was 285-330 at voice 1's pace)"
  }
 }

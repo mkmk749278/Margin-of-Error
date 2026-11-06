@@ -17,32 +17,32 @@
  "music": [
   {
    "file": "assets/el/m1_incident.mp3",
-   "start": 4.0,
-   "end": 98.6,
+   "start": 3.6,
+   "end": 89.5,
    "rms_db": -24,
    "fade_in": 6,
    "fade_out": 5
   },
   {
    "file": "assets/el/m2_record.mp3",
-   "start": 95.2,
-   "end": 218.5,
+   "start": 86.4,
+   "end": 196.0,
    "rms_db": -23,
    "fade_in": 4,
    "fade_out": 5
   },
   {
    "file": "assets/el/m5_factory.mp3",
-   "start": 214.8,
-   "end": 400.0,
+   "start": 192.8,
+   "end": 358.3,
    "rms_db": -23,
    "fade_in": 4,
    "fade_out": 5
   },
   {
    "file": "assets/el/m6_system.mp3",
-   "start": 396.5,
-   "end": 590.0,
+   "start": 354.8,
+   "end": 529.8,
    "rms_db": -24,
    "fade_in": 6,
    "fade_out": 5
@@ -50,16 +50,16 @@
   {
    "file": "assets/el/m2_record.mp3",
    "from": 130.0,
-   "start": 586.0,
-   "end": 632.5,
+   "start": 526.0,
+   "end": 568.4,
    "rms_db": -24,
    "fade_in": 4,
    "fade_out": 4
   },
   {
    "file": "assets/el/m3_cascade.mp3",
-   "start": 631.8,
-   "end": 721.5,
+   "start": 567.8,
+   "end": 651.4,
    "rms_db": -22,
    "fade_in": 4,
    "fade_out": 3
@@ -67,16 +67,16 @@
   {
    "file": "assets/el/m1_incident.mp3",
    "from": 40.0,
-   "start": 719.0,
-   "end": 767.0,
+   "start": 648.7,
+   "end": 694.1,
    "rms_db": -27,
    "fade_in": 2,
    "fade_out": 5
   },
   {
    "file": "assets/el/m4_verdict.mp3",
-   "start": 763.0,
-   "end": 905.1,
+   "start": 690.6,
+   "end": 823.9,
    "rms_db": -23,
    "fade_in": 6,
    "fade_out": 4
@@ -100,7 +100,7 @@
  },
  "extra_cues": [
   {
-   "t": 718.66,
+   "t": 648.38,
    "sfx": "wind_roar",
    "gainDb": -9
   }

@@ -1,88 +1,103 @@
 # Word alignment: four-missing-bolts
 
-2097 words measured. Shift from the old estimates: median 65 ms, 90th percentile 226 ms, max 1012 ms.
+2097 words measured. Shift from the old estimates: median 68 ms, 90th percentile 215 ms, max 966 ms.
 
 ## Words to check by ear (score under 0.35)
-- 0.08s `Fifth` score 0.14: Fifth of January, twenty twenty-four.
-- 1.35s `twenty` score 0.032: Fifth of January, twenty twenty-four.
-- 1.72s `twenty-four.` score 0.004: Fifth of January, twenty twenty-four.
-- 4.41s `thirty-three` score 0.015: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 8.07s `seven` score 0.02: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 8.37s `thirty-seven` score 0.001: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 9.05s `nine` score 0.003: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 10.51s `fourteen` score 0.017: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 11.01s `thousand,` score 0.008: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 11.61s `eight` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 11.83s `hundred` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 12.09s `and` score 0.001: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 12.23s `thirty` score 0.004: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
-- 39.76s `fifty-nine` score 0.16: A rectangle about twenty-nine inches wide and fifty-nine inches high.
-- 47.66s `twelve` score 0.135: Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
-- 48.04s `eighty-two` score 0.089: Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
-- 73.49s `one` score 0.043: And the paper leads to a photograph, taken on a factory floor one hundred and ei
-- 73.69s `hundred` score 0.026: And the paper leads to a photograph, taken on a factory floor one hundred and ei
-- 74.01s `and` score 0.088: And the paper leads to a photograph, taken on a factory floor one hundred and ei
-- 74.17s `eight` score 0.084: And the paper leads to a photograph, taken on a factory floor one hundred and ei
-- 97.06s `seven` score 0.1: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
-- 97.36s `thirty-seven` score 0.004: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
-- 98.00s `nine` score 0.008: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
-- 114.09s `sixty-three` score 0.246: The plug weighs sixty-three pounds.
-- 220.12s `twenty` score 0.0: The plug was made by Spirit AeroSystems, in Malaysia, in March twenty twenty-thr
-- 220.50s `twenty-three.` score 0.0: The plug was made by Spirit AeroSystems, in Malaysia, in March twenty twenty-thr
-- 226.16s `twenty-eighth` score 0.029: Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty-eighth of
-- 235.36s `two` score 0.006: In two thousand and five, Boeing sold its operations in Wichita, and they became
-- 235.54s `thousand` score 0.014: In two thousand and five, Boeing sold its operations in Wichita, and they became
-- 235.94s `and` score 0.032: In two thousand and five, Boeing sold its operations in Wichita, and they became
-- 236.09s `five,` score 0.009: In two thousand and five, Boeing sold its operations in Wichita, and they became
-- 243.91s `thirty-seven` score 0.155: In two thousand and five, Boeing sold its operations in Wichita, and they became
-- 246.44s `twenty` score 0.029: By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
-- 246.80s `twenty-three,` score 0.015: By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
-- 256.86s `thirty-first` score 0.001: The fuselage arrived at Boeing's factory in Renton, Washington, on the thirty-fi
-- 315.63s `seventeenth` score 0.14: On the seventeenth of September, a note in Boeing's tracking system read: if rem
-- 379.94s `nineteenth` score 0.1: And sometime on the evening shift of the nineteenth of September, when no member
-- 388.02s `seven` score 0.312: At about twenty to seven that evening, Boeing workers were texting each other ab
-- 426.71s `twentieth` score 0.178: On the twentieth of September, a quality inspector signed off the job.
-- 485.38s `eighteen.` score 0.243: It had come up in sixteen regulatory compliance cases since twenty eighteen.
-- 509.66s `sixty-eight` score 0.083: In the twelve months up to the build, its audits at Renton logged sixty-eight al
-- 519.13s `eighteen,` score 0.119: Before twenty eighteen, the seven thirty-seven line built about fifty-two airpla
-- 527.02s `thirty-seven` score 0.188: After two fatal accidents involving the seven thirty-seven Max, Boeing cut produ
-- 542.96s `twenty` score 0.007: In twenty twenty-two, Boeing set out to return to its old rate, and it hired fas
-- 543.30s `twenty-two,` score 0.004: In twenty twenty-two, Boeing set out to return to its old rate, and it hired fas
-- 591.21s `twenty` score 0.027: In twenty eighteen, Boeing spent nine billion dollars buying back its own stock.
-- 591.62s `eighteen,` score 0.009: In twenty eighteen, Boeing spent nine billion dollars buying back its own stock.
-- 600.87s `twenty` score 0.011: In twenty nineteen it bought back two point seven billion.
-- 601.23s `nineteen` score 0.003: In twenty nineteen it bought back two point seven billion.
-- 602.88s `two` score 0.006: In twenty nineteen it bought back two point seven billion.
-- 603.14s `point` score 0.031: In twenty nineteen it bought back two point seven billion.
-- 603.52s `seven` score 0.029: In twenty nineteen it bought back two point seven billion.
-- 647.54s `one-hundred-and-twenty-pound` score 0.253: On its sister plug, on the other side of the same airplane, with the bolts taken
-- 670.47s `sixty-three` score 0.05: At the lowest point the analysis found, the plug's effective weight, the force h
-- 672.23s `twenty-five.` score 0.27: At the lowest point the analysis found, the plug's effective weight, the force h
-- 679.86s `one` score 0.018: Across one hundred and fifty-four flights, it walked itself upward.
-- 680.04s `hundred` score 0.005: Across one hundred and fifty-four flights, it walked itself upward.
-- 680.34s `and` score 0.057: Across one hundred and fifty-four flights, it walked itself upward.
-- 680.48s `fifty-four` score 0.009: Across one hundred and fifty-four flights, it walked itself upward.
-- 704.47s `fifth` score 0.074: On the fifth of January, climbing out of Portland, the plug reached the top of i
-- 729.77s `twenty-fourth` score 0.013: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
-- 731.20s `twenty` score 0.001: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
-- 731.54s `twenty-five.` score 0.0: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
-- 764.16s `one` score 0.005: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 764.37s `hundred` score 0.001: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 764.67s `and` score 0.009: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 764.81s `seventy-one` score 0.019: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 765.69s `seven` score 0.035: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 766.05s `thirty-seven` score 0.005: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 766.79s `nines` score 0.058: The day after the accident, the F - A - A grounded one hundred and seventy-one s
-- 770.29s `twenty-fourth` score 0.019: On the twenty-fourth of January, it told Boeing there would be no production exp
-- 782.56s `twenty` score 0.0: In June twenty twenty-four, Boeing's head of quality told a media briefing that 
-- 782.92s `twenty-four,` score 0.0: In June twenty twenty-four, Boeing's head of quality told a media briefing that 
-- 807.39s `eighth` score 0.333: The deal was completed on the eighth of December, twenty twenty-five.
-- 808.59s `twenty` score 0.009: The deal was completed on the eighth of December, twenty twenty-five.
-- 808.97s `twenty-five.` score 0.002: The deal was completed on the eighth of December, twenty twenty-five.
-- 829.91s `a` score 0.143: And lanyards on the bolts, so a removed bolt hangs where everyone can see it.
-- 833.80s `twenty` score 0.001: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
-- 834.14s `twenty-five,` score 0.0: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
-- 839.21s `twenty` score 0.294: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
-- 839.57s `twenty-six.` score 0.107: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
-- 851.24s `twenty` score 0.0: In March twenty twenty-four, two months after the accident, Boeing's own audits 
-- 851.58s `twenty-four,` score 0.0: In March twenty twenty-four, two months after the accident, Boeing's own audits 
+- 0.10s `Fifth` score 0.051: Fifth of January, twenty twenty-four.
+- 1.34s `twenty` score 0.0: Fifth of January, twenty twenty-four.
+- 1.70s `twenty-four.` score 0.0: Fifth of January, twenty twenty-four.
+- 4.05s `thirty-three` score 0.001: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 7.70s `seven` score 0.003: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 7.96s `thirty-seven` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 8.68s `nine` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 9.82s `fourteen` score 0.002: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 10.32s `thousand,` score 0.001: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 10.93s `eight` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 11.15s `hundred` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 11.45s `and` score 0.0: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 11.63s `thirty` score 0.001: At twelve minutes and thirty-three seconds past five in the afternoon, a Boeing 
+- 34.94s `twenty-nine` score 0.133: A rectangle about twenty-nine inches wide and fifty-nine inches high.
+- 36.52s `fifty-nine` score 0.027: A rectangle about twenty-nine inches wide and fifty-nine inches high.
+- 43.99s `twelve` score 0.026: Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
+- 44.39s `eighty-two` score 0.012: Fourteen minutes later, Alaska Airlines flight twelve eighty-two was back on the
+- 66.74s `one` score 0.001: And the paper leads to a photograph, taken on a factory floor one hundred and ei
+- 67.12s `hundred` score 0.001: And the paper leads to a photograph, taken on a factory floor one hundred and ei
+- 67.40s `and` score 0.002: And the paper leads to a photograph, taken on a factory floor one hundred and ei
+- 67.60s `eight` score 0.009: And the paper leads to a photograph, taken on a factory floor one hundred and ei
+- 88.12s `seven` score 0.015: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
+- 88.36s `thirty-seven` score 0.001: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
+- 89.06s `nine` score 0.001: The seven thirty-seven nine has an opening in each side of the fuselage, behind 
+- 102.83s `sixty-three` score 0.01: The plug weighs sixty-three pounds.
+- 197.41s `twenty` score 0.0: The plug was made by Spirit AeroSystems, in Malaysia, in March twenty twenty-thr
+- 197.82s `twenty-three.` score 0.0: The plug was made by Spirit AeroSystems, in Malaysia, in March twenty twenty-thr
+- 202.70s `twenty-eighth` score 0.005: Spirit fitted it to the fuselage in Wichita, Kansas, and on the twenty-eighth of
+- 210.79s `two` score 0.001: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 210.95s `thousand` score 0.002: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 211.25s `and` score 0.004: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 211.44s `five,` score 0.003: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 217.91s `seven` score 0.061: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 218.21s `thirty-seven` score 0.01: In two thousand and five, Boeing sold its operations in Wichita, and they became
+- 220.21s `twenty` score 0.004: By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
+- 220.53s `twenty-three,` score 0.003: By twenty twenty-three, nearly two thirds of Spirit's revenue came from Boeing.
+- 229.53s `thirty-first` score 0.0: The fuselage arrived at Boeing's factory in Renton, Washington, on the thirty-fi
+- 281.80s `seventeenth` score 0.048: On the seventeenth of September, a note in Boeing's tracking system read: if rem
+- 339.58s `nineteenth` score 0.088: And sometime on the evening shift of the nineteenth of September, when no member
+- 346.69s `twenty` score 0.015: At about twenty to seven that evening, Boeing workers were texting each other ab
+- 347.05s `to` score 0.096: At about twenty to seven that evening, Boeing workers were texting each other ab
+- 347.23s `seven` score 0.052: At about twenty to seven that evening, Boeing workers were texting each other ab
+- 382.79s `twentieth` score 0.032: On the twentieth of September, a quality inspector signed off the job.
+- 434.47s `twenty` score 0.133: It had come up in sixteen regulatory compliance cases since twenty eighteen.
+- 434.85s `eighteen.` score 0.084: It had come up in sixteen regulatory compliance cases since twenty eighteen.
+- 448.51s `seven` score 0.019: The F - A - A had five inspectors on the seven thirty-seven program while this f
+- 448.75s `thirty-seven` score 0.004: The F - A - A had five inspectors on the seven thirty-seven program while this f
+- 455.82s `sixty-eight` score 0.012: In the twelve months up to the build, its audits at Renton logged sixty-eight al
+- 464.22s `twenty` score 0.026: Before twenty eighteen, the seven thirty-seven line built about fifty-two airpla
+- 464.56s `eighteen,` score 0.04: Before twenty eighteen, the seven thirty-seven line built about fifty-two airpla
+- 465.69s `thirty-seven` score 0.146: Before twenty eighteen, the seven thirty-seven line built about fifty-two airpla
+- 467.17s `fifty-two` score 0.062: Before twenty eighteen, the seven thirty-seven line built about fifty-two airpla
+- 471.40s `seven` score 0.02: After two fatal accidents involving the seven thirty-seven Max, Boeing cut produ
+- 471.68s `thirty-seven` score 0.005: After two fatal accidents involving the seven thirty-seven Max, Boeing cut produ
+- 486.70s `twenty` score 0.0: In twenty twenty-two, Boeing set out to return to its old rate, and it hired fas
+- 487.02s `twenty-two,` score 0.0: In twenty twenty-two, Boeing set out to return to its old rate, and it hired fas
+- 497.18s `seven` score 0.28: The head of the seven thirty-seven program put it this way.
+- 497.43s `thirty-seven` score 0.06: The head of the seven thirty-seven program put it this way.
+- 505.59s `twenty-five` score 0.308: Today—twenty-five or thirty percent.
+- 530.78s `twenty` score 0.011: In twenty eighteen, Boeing spent nine billion dollars buying back its own stock.
+- 531.14s `eighteen,` score 0.014: In twenty eighteen, Boeing spent nine billion dollars buying back its own stock.
+- 532.67s `nine` score 0.093: In twenty eighteen, Boeing spent nine billion dollars buying back its own stock.
+- 539.64s `twenty` score 0.003: In twenty nineteen it bought back two point seven billion.
+- 539.96s `nineteen` score 0.001: In twenty nineteen it bought back two point seven billion.
+- 541.31s `two` score 0.0: In twenty nineteen it bought back two point seven billion.
+- 541.65s `point` score 0.0: In twenty nineteen it bought back two point seven billion.
+- 542.01s `seven` score 0.001: In twenty nineteen it bought back two point seven billion.
+- 582.25s `one-hundred-and-twenty-pound` score 0.277: On its sister plug, on the other side of the same airplane, with the bolts taken
+- 603.06s `sixty-three` score 0.003: At the lowest point the analysis found, the plug's effective weight, the force h
+- 604.60s `twenty-five.` score 0.004: At the lowest point the analysis found, the plug's effective weight, the force h
+- 611.15s `one` score 0.019: Across one hundred and fifty-four flights, it walked itself upward.
+- 611.33s `hundred` score 0.008: Across one hundred and fifty-four flights, it walked itself upward.
+- 611.65s `and` score 0.18: Across one hundred and fifty-four flights, it walked itself upward.
+- 611.81s `fifty-four` score 0.005: Across one hundred and fifty-four flights, it walked itself upward.
+- 633.38s `fifth` score 0.011: On the fifth of January, climbing out of Portland, the plug reached the top of i
+- 660.07s `twenty-fourth` score 0.002: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
+- 661.29s `twenty` score 0.0: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
+- 661.63s `twenty-five.` score 0.0: The N - T - S - B adopted its final report on the twenty-fourth of June, twenty 
+- 691.64s `one` score 0.002: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 691.80s `hundred` score 0.0: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 692.10s `and` score 0.002: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 692.26s `seventy-one` score 0.005: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 693.09s `seven` score 0.001: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 693.41s `thirty-seven` score 0.0: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 694.05s `nines` score 0.017: The day after the accident, the F - A - A grounded one hundred and seventy-one s
+- 696.87s `twenty-fourth` score 0.001: On the twenty-fourth of January, it told Boeing there would be no production exp
+- 697.44s `of` score 0.293: On the twenty-fourth of January, it told Boeing there would be no production exp
+- 708.32s `twenty` score 0.0: In June twenty twenty-four, Boeing's head of quality told a media briefing that 
+- 708.64s `twenty-four,` score 0.0: In June twenty twenty-four, Boeing's head of quality told a media briefing that 
+- 730.61s `eighth` score 0.223: The deal was completed on the eighth of December, twenty twenty-five.
+- 731.58s `twenty` score 0.0: The deal was completed on the eighth of December, twenty twenty-five.
+- 731.90s `twenty-five.` score 0.0: The deal was completed on the eighth of December, twenty twenty-five.
+- 755.55s `twenty` score 0.0: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
+- 755.91s `twenty-five,` score 0.0: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
+- 760.84s `twenty` score 0.012: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
+- 761.18s `twenty-six.` score 0.003: In May twenty twenty-five, Boeing told investigators it expected to fit it to ne
+- 771.64s `twenty` score 0.0: In March twenty twenty-four, two months after the accident, Boeing's own audits 
+- 772.04s `twenty-four,` score 0.0: In March twenty twenty-four, two months after the accident, Boeing's own audits 
