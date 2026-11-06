@@ -67,7 +67,7 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   cards (now on the void, no see-through), the 2023 cost row's "$0.0B". Hearing clips now at F19820 and F23330.
 - **Mix:** rebuilt on the new timing (slots mapped sentence by sentence): −14.00 LUFS, −1.40 dBTP, voice −2.4 dBTP.
   Drive `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`).
-- **Owner gate open:** the audio approval for Marcus.
+- **Owner gate passed (2026-11-06):** the owner approved the Marcus audio ("audio approved").
 
 ## Next
 - The 720p review cut on GitHub, then `/review-cut`.
