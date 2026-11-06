@@ -1,6 +1,6 @@
 ---
 name: new-film
-description: Make a Margin of Error forensic film from a slate case or the owner's idea - case sheet, research (what everyone says vs the record, our edge), the treatment with its beat sheet (owner approves), facts, fairness, narration (owner approves), voice "1" audio (owner approves), exhibits, word-level choreography, GitHub renders, sound, the 720p cut, independent reviews (owner approves), the 4K master, the YouTube package, release. Stops for the owner at each gate.
+description: Make a Margin of Error forensic film from a slate case or the owner's idea - case sheet, research (what everyone says vs the record, our edge), the treatment with its beat sheet (owner approves), facts, fairness, narration (owner approves), channel-voice audio (Marcus) (owner approves), exhibits, word-level choreography, GitHub renders, sound, the 720p cut, independent reviews (owner approves), the 4K master, the YouTube package, release. Stops for the owner at each gate.
 ---
 
 # New film

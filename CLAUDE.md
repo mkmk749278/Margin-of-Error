@@ -98,7 +98,7 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 4. **Facts** at `max` in a fresh context; `claims_check.py` passes before the narration is final.
 5. **Narration**: creative pass, lean-in test, `vo_lint.py`, fairness pass, audience review → `script/narration.md`.
    **The owner approves the narration.** From treatment approval, in parallel: exhibits, owner fetches, hero builds.
-6. **Audio** with voice "1", block 1 measured first; timing chain to measured words. **The owner approves the audio.**
+6. **Audio** with the channel voice (Marcus), block 1 measured first; timing chain to measured words. **The owner approves the audio.**
 7. **Exhibits and footage**, the record first; every file looked at and logged.
 8. **Word-level choreography** (the major part): every word cued, and each sentence's cues say the whole sentence.
 9. **Render on GitHub**, at most 6 runners at once (the account's 20 are shared).
@@ -119,6 +119,9 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 - **Act V, The Verdict (16:00–end):** findings, litigation, regulation; the same failure mode still in service
   (sourced); an understated sign-off. Channel name only in the outro.
 - Times are a guide; the open question lands by 2:30 and an open loop is named in the first 60 s.
+- **The first 45 s in three beats (2026-11-06, PLAYBOOK §5.1a):** 0:00–0:10 the anomaly on the record; 0:10–0:25 the
+  stakes beyond this one failure; 0:25–0:45 the method (which records we read). Each act ends with its finding, the
+  contradiction it exposes, and the next act's question.
 
 ## The look (owner's spec §4; PLAYBOOK §6)
 - **An investigator's desk:** Void `#0a0d12` (never `#000000`), cards `#121824` with a 1 px `#1e293b` border.
@@ -137,10 +140,15 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 - No stock footage of generic offices, no AI imagery of real places, people or aircraft, no neon dashboards.
 
 ## Narration (owner's spec §5; PLAYBOOK §7)
-- **Voice: the channel's own ElevenLabs voice, named "1"** (owner, 2026-11-03: George dropped). Settings in
-  `config/voice.yaml` (owner, 2026-11-03: **Eleven v4, stability Creative** (0.0), similarity 0.80). The session generates
-  the narration itself with `scripts/tts_elevenlabs.py` (needs `ELEVENLABS_API_KEY` in the environment; never print
-  it); first one block, measured, then the rest. Never synthesise a real person's voice.
+- **Voice: "Marcus - Baritone(Stoic)"** (owner, 2026-11-06), a professional ElevenLabs Voice Library voice on the
+  owner's account; it replaces the custom voice "1" (which replaced George). Settings in `config/voice.yaml`
+  (**Eleven v4, stability Natural** (0.5), similarity 0.80). The session generates the narration itself with
+  `scripts/tts_elevenlabs.py` (needs `ELEVENLABS_API_KEY` in the environment; never print it); first one block,
+  measured, then the rest; every take through `vo_review.py --model medium.en` (every spoken number checked). Never
+  synthesise or clone a real person's voice; a library voice its owner licenses for use is not that.
+- **Pace (2026-11-06, PLAYBOOK §7.5b):** about 145–160 words a minute, slower on documents and numbers; a short
+  pause before a key number, a longer one after a primary exhibit (cut in the edit if the voice doesn't give it);
+  statements end on a falling pitch.
 - No bracketed tags (`[sigh]`, `[pause]`). Pauses from commas, colons, em-dashes and double paragraph breaks. **No `...`**
   (owner, 2026-11-03: the voice reads it as vocal fry or a whisper); write "Max", not "MAX".
 - **VO text:** numbers as words (`sixteen thousand feet`, `four point eight billion dollars`), acronyms pre-spaced

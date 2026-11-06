@@ -1,162 +1,177 @@
 # Word alignment: east-palestine
 
-2706 words measured. Shift from the old estimates: median 80 ms, 90th percentile 340 ms, max 1438 ms.
+2706 words measured. Shift from the old estimates: median 84 ms, 90th percentile 295 ms, max 1073 ms.
 
 ## Words to check by ear (score under 0.35)
-- 1.39s `twenty` score 0.015: The third of February, twenty twenty-three.
-- 1.73s `twenty-three.` score 0.004: The third of February, twenty twenty-three.
-- 28.63s `one` score 0.002: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
-- 28.79s `hundred` score 0.0: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
-- 29.09s `and` score 0.001: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
-- 29.17s `three` score 0.001: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
-- 36.07s `one` score 0.185: The line at which the crew would be told to slow down and stop is one hundred an
-- 36.23s `hundred` score 0.185: The line at which the crew would be told to slow down and stop is one hundred an
-- 36.55s `and` score 0.182: The line at which the crew would be told to slow down and stop is one hundred an
-- 36.71s `seventy.` score 0.231: The line at which the crew would be told to slow down and stop is one hundred an
-- 46.98s `thirty-two` score 0.002: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 47.50s `N.` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 47.52s `One` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 47.62s `hundred` score 0.145: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 48.44s `and` score 0.001: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 49.00s `forty-nine` score 0.001: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 50.44s `nine` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 50.74s `thousand,` score 0.001: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 51.28s `three` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 51.56s `hundred` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 51.82s `and` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 51.94s `nine` score 0.001: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
-- 54.94s `one` score 0.002: Why that line sat at one hundred and seventy is on the record, in the railroad i
-- 55.08s `hundred` score 0.002: Why that line sat at one hundred and seventy is on the record, in the railroad i
-- 55.36s `and` score 0.007: Why that line sat at one hundred and seventy is on the record, in the railroad i
-- 55.52s `seventy` score 0.012: Why that line sat at one hundred and seventy is on the record, in the railroad i
-- 64.11s `Thirty-nine` score 0.192: Thirty-nine minutes after Salem, the train crosses the next detector, in East Pa
-- 71.59s `two` score 0.004: This time the reading is two hundred and fifty-three degrees above the air.
-- 71.77s `hundred` score 0.001: This time the reading is two hundred and fifty-three degrees above the air.
-- 72.11s `and` score 0.025: This time the reading is two hundred and fifty-three degrees above the air.
-- 72.25s `fifty-three` score 0.002: This time the reading is two hundred and fifty-three degrees above the air.
-- 166.64s `Ninety` score 0.18: Ninety degrees above the air: an alert to the help desk, which watches the next 
-- 173.21s `One` score 0.004: One hundred and seventy: a message to the crew, who must slow down, and then sto
-- 173.37s `hundred` score 0.004: One hundred and seventy: a message to the crew, who must slow down, and then sto
-- 173.67s `and` score 0.013: One hundred and seventy: a message to the crew, who must slow down, and then sto
-- 173.84s `seventy:` score 0.009: One hundred and seventy: a message to the crew, who must slow down, and then sto
-- 188.55s `two` score 0.284: Before this accident, Norfolk Southern set that critical line at two hundred deg
-- 188.83s `hundred` score 0.08: Before this accident, Norfolk Southern set that critical line at two hundred deg
-- 192.25s `one` score 0.214: At Salem the reading was one hundred and three.
-- 192.43s `hundred` score 0.272: At Salem the reading was one hundred and three.
-- 192.75s `and` score 0.347: At Salem the reading was one hundred and three.
-- 192.91s `three.` score 0.204: At Salem the reading was one hundred and three.
-- 278.24s `thirteen` score 0.006: Norfolk Southern testified that its average spacing on key routes was thirteen p
-- 278.78s `point` score 0.005: Norfolk Southern testified that its average spacing on key routes was thirteen p
-- 279.10s `nine.` score 0.001: Norfolk Southern testified that its average spacing on key routes was thirteen p
-- 291.64s `thirty-eight` score 0.008: At the detector before Salem, in Sebring, about eleven miles back, the same bear
-- 345.37s `one` score 0.001: The A - A - R, the Association of American Railroads, defines an overheated bear
-- 345.57s `hundred` score 0.001: The A - A - R, the Association of American Railroads, defines an overheated bear
-- 345.87s `and` score 0.006: The A - A - R, the Association of American Railroads, defines an overheated bear
-- 346.05s `seventy` score 0.004: The A - A - R, the Association of American Railroads, defines an overheated bear
-- 346.45s `degrees` score 0.222: The A - A - R, the Association of American Railroads, defines an overheated bear
-- 361.80s `twenty` score 0.0: In June twenty twenty-three, at a public hearing in East Palestine, the board's 
-- 362.18s `twenty-three,` score 0.0: In June twenty twenty-three, at a public hearing in East Palestine, the board's 
-- 506.23s `one` score 0.18: At the same hearing, the industry's witness said the railroads were now all comm
-- 506.41s `hundred` score 0.176: At the same hearing, the industry's witness said the railroads were now all comm
-- 506.71s `and` score 0.173: At the same hearing, the industry's witness said the railroads were now all comm
-- 506.89s `seventy.` score 0.142: At the same hearing, the industry's witness said the railroads were now all comm
-- 544.21s `twenty` score 0.0: In February twenty nineteen, Norfolk Southern told investors its plan.
-- 544.53s `nineteen,` score 0.125: In February twenty nineteen, Norfolk Southern told investors its plan.
-- 556.46s `twenty` score 0.117: An operating ratio, the share of revenue spent running the railroad, of sixty pe
-- 556.80s `twenty-one,` score 0.083: An operating ratio, the share of revenue spent running the railroad, of sixty pe
-- 558.36s `sixty-five` score 0.013: An operating ratio, the share of revenue spent running the railroad, of sixty pe
-- 559.00s `point` score 0.064: An operating ratio, the share of revenue spent running the railroad, of sixty pe
-- 559.30s `four.` score 0.004: An operating ratio, the share of revenue spent running the railroad, of sixty pe
-- 573.64s `twenty-six` score 0.005: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 574.30s `thousand,` score 0.008: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 574.87s `six` score 0.01: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 575.03s `hundred` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 575.41s `and` score 0.004: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 575.57s `sixty-two` score 0.004: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 576.37s `twenty` score 0.01: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 576.77s `eighteen,` score 0.002: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 579.49s `eighteen` score 0.002: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 579.88s `thousand,` score 0.002: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 580.34s `nine` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 580.66s `hundred` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 581.22s `twenty` score 0.003: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 581.60s `twenty-two:` score 0.003: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 584.22s `twenty-nine` score 0.009: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
-- 586.30s `twenty` score 0.001: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
-- 586.68s `nineteen` score 0.0: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
-- 587.38s `twenty` score 0.001: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
-- 587.74s `twenty-two,` score 0.001: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
-- 645.00s `twenty-three` score 0.149: Car twenty-three was inspected elsewhere.
-- 655.13s `twenty` score 0.0: In March twenty twenty-three, the N - T - S - B opened a special investigation i
-- 655.49s `twenty-three,` score 0.271: In March twenty twenty-three, the N - T - S - B opened a special investigation i
-- 656.79s `the` score 0.015: In March twenty twenty-three, the N - T - S - B opened a special investigation i
-- 708.43s `nineteen` score 0.175: From Salem, the train runs east, at between nineteen and forty-five miles an hou
-- 709.31s `forty-five` score 0.173: From Salem, the train runs east, at between nineteen and forty-five miles an hou
-- 722.20s `forty-nine` score 0.085: Milepost forty-nine point eight one.
-- 723.23s `eight` score 0.305: Milepost forty-nine point eight one.
-- 724.33s `Two` score 0.003: Two hundred and fifty-three degrees, the top of the scale.
-- 724.60s `hundred` score 0.003: Two hundred and fifty-three degrees, the top of the scale.
-- 724.90s `and` score 0.079: Two hundred and fifty-three degrees, the top of the scale.
-- 725.04s `fifty-three` score 0.003: Two hundred and fifty-three degrees, the top of the scale.
-- 741.59s `one` score 0.095: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 741.81s `thousand,` score 0.215: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 742.47s `one` score 0.023: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 742.67s `hundred` score 0.007: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 742.99s `and` score 0.016: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 743.17s `sixty` score 0.049: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 744.85s `thirty-eight` score 0.062: From the emergency, the lead locomotives travel another one thousand, one hundre
-- 786.93s `fifth` score 0.024: Investigators recovered the bearing's pieces on the fifth of February, west of t
-- 860.10s `fourth` score 0.038: On the evening of the fourth of February, the shipper of the vinyl chloride, Oxy
-- 875.14s `one` score 0.003: The hottest car's temperature, measured by those contractors, peaked at about on
-- 875.32s `hundred` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
-- 875.64s `and` score 0.003: The hottest car's temperature, measured by those contractors, peaked at about on
-- 875.70s `thirty-eight` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
-- 876.37s `degrees` score 0.34: The hottest car's temperature, measured by those contractors, peaked at about on
-- 917.49s `one` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 917.69s `hundred` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 917.99s `and` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 918.11s `fifty-three` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 919.11s `one` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 919.29s `hundred` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 919.59s `and` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 919.71s `fifty-eight` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 920.25s `degrees,` score 0.266: Two contractor firms told him that if a car reached one hundred and fifty-three 
-- 1056.24s `twenty` score 0.0: In June twenty twenty-four, the N - T - S - B adopted its final report.
-- 1056.62s `twenty-four,` score 0.0: In June twenty twenty-four, the N - T - S - B adopted its final report.
-- 1076.47s `one` score 0.002: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1076.67s `point` score 0.001: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1077.05s `one` score 0.001: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1078.32s `twenty` score 0.002: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1078.66s `twenty-three,` score 0.002: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1080.00s `three` score 0.001: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1080.30s `hundred` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1080.58s `and` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1080.70s `twenty-five` score 0.002: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1082.14s `twenty` score 0.003: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1082.50s `twenty-four.` score 0.001: Norfolk Southern's annual reports put its net cost from the derailment, after in
-- 1084.34s `twenty` score 0.001: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1084.68s `twenty-five,` score 0.002: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1089.99s `two` score 0.003: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1090.17s `hundred` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1090.55s `and` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1090.69s `fifty-four` score 0.001: In twenty twenty-five, insurance and other recoveries were larger than new costs
-- 1095.03s `six` score 0.216: A class action settlement created a six hundred million dollar fund for resident
-- 1095.33s `hundred` score 0.029: A class action settlement created a six hundred million dollar fund for resident
-- 1107.59s `twenty` score 0.0: An appeal over residents' personal injury releases was still pending in October 
-- 1107.97s `twenty-six.` score 0.0: An appeal over residents' personal injury releases was still pending in October 
-- 1116.20s `twenty` score 0.0: In March twenty twenty-six, letting residents join that case, the judge's order 
-- 1116.58s `twenty-six,` score 0.0: In March twenty twenty-six, letting residents join that case, the judge's order 
-- 1129.87s `twenty` score 0.0: As of July twenty twenty-six, federal rules did not require trackside detectors 
-- 1130.23s `twenty-six,` score 0.0: As of July twenty twenty-six, federal rules did not require trackside detectors 
-- 1152.11s `twenty` score 0.01: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1152.47s `twenty-four` score 0.006: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1154.65s `one` score 0.013: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1154.83s `hundred` score 0.003: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1155.15s `and` score 0.002: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1155.33s `eighty-seven` score 0.028: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
-- 1170.94s `twenty` score 0.002: And the kind of tank car the investigators found likely started the fire stays l
-- 1171.30s `twenty-nine.` score 0.0: And the kind of tank car the investigators found likely started the fire stays l
-- 1185.75s `twenty` score 0.174: The brake rule repealed in twenty eighteen: it applied to a different kind of tr
-- 1186.15s `eighteen:` score 0.042: The brake rule repealed in twenty eighteen: it applied to a different kind of tr
-- 1196.95s `twenty` score 0.0: As of July twenty twenty-six, no federal rule sets the temperature at which a tr
-- 1197.27s `twenty-six,` score 0.001: As of July twenty twenty-six, no federal rule sets the temperature at which a tr
+- 1.81s `twenty-three.` score 0.25: The third of February, twenty twenty-three.
+- 27.05s `one` score 0.001: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
+- 27.21s `hundred` score 0.0: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
+- 27.49s `and` score 0.004: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
+- 27.57s `three` score 0.002: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
+- 27.93s `degrees` score 0.29: It reads that bearing at one hundred and three degrees Fahrenheit above the air 
+- 33.98s `one` score 0.115: The line at which the crew would be told to slow down and stop is one hundred an
+- 34.12s `hundred` score 0.154: The line at which the crew would be told to slow down and stop is one hundred an
+- 34.40s `and` score 0.247: The line at which the crew would be told to slow down and stop is one hundred an
+- 34.58s `seventy.` score 0.07: The line at which the crew would be told to slow down and stop is one hundred an
+- 43.70s `thirty-two` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 44.36s `N.` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 44.42s `One` score 0.299: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 44.54s `hundred` score 0.146: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 45.65s `and` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 45.81s `forty-nine` score 0.001: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 47.17s `nine` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 47.47s `thousand,` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 47.99s `three` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 48.26s `hundred` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 48.54s `and` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 48.66s `nine` score 0.0: The train is Norfolk Southern thirty-two N. One hundred and forty-nine cars, nin
+- 51.27s `one` score 0.003: Why that line sat at one hundred and seventy is on the record, in the railroad i
+- 51.39s `hundred` score 0.001: Why that line sat at one hundred and seventy is on the record, in the railroad i
+- 51.67s `and` score 0.008: Why that line sat at one hundred and seventy is on the record, in the railroad i
+- 51.87s `seventy` score 0.005: Why that line sat at one hundred and seventy is on the record, in the railroad i
+- 59.07s `Thirty-nine` score 0.012: Thirty-nine minutes after Salem, the train crosses the next detector, in East Pa
+- 65.83s `two` score 0.001: This time the reading is two hundred and fifty-three degrees above the air.
+- 66.09s `hundred` score 0.001: This time the reading is two hundred and fifty-three degrees above the air.
+- 66.39s `and` score 0.131: This time the reading is two hundred and fifty-three degrees above the air.
+- 66.60s `fifty-three` score 0.001: This time the reading is two hundred and fifty-three degrees above the air.
+- 95.09s `Thirty-eight` score 0.075: Thirty-eight cars left the track, and the wreckage caught fire.
+- 150.80s `Ninety` score 0.051: Ninety degrees above the air: an alert to the help desk, which watches the next 
+- 156.56s `One` score 0.039: One hundred and seventy: a message to the crew, who must slow down, and then sto
+- 156.72s `hundred` score 0.038: One hundred and seventy: a message to the crew, who must slow down, and then sto
+- 157.04s `and` score 0.141: One hundred and seventy: a message to the crew, who must slow down, and then sto
+- 157.23s `seventy:` score 0.025: One hundred and seventy: a message to the crew, who must slow down, and then sto
+- 170.83s `two` score 0.046: Before this accident, Norfolk Southern set that critical line at two hundred deg
+- 171.11s `hundred` score 0.02: Before this accident, Norfolk Southern set that critical line at two hundred deg
+- 174.21s `one` score 0.134: At Salem the reading was one hundred and three.
+- 174.39s `hundred` score 0.269: At Salem the reading was one hundred and three.
+- 174.94s `three.` score 0.155: At Salem the reading was one hundred and three.
+- 228.91s `that` score 0.268: Hold that thought.
+- 229.13s `thought.` score 0.213: Hold that thought.
+- 231.03s `it.` score 0.247: The record can't confirm it.
+- 246.09s `thirteen` score 0.304: Norfolk Southern testified that its average spacing on key routes was thirteen p
+- 246.92s `nine.` score 0.276: Norfolk Southern testified that its average spacing on key routes was thirteen p
+- 257.54s `thirty-eight` score 0.001: At the detector before Salem, in Sebring, about eleven miles back, the same bear
+- 262.96s `thirty` score 0.27: From there to a broken axle: about thirty miles.
+- 290.61s `one` score 0.177: Either way: where did one hundred and seventy come from?
+- 290.79s `hundred` score 0.228: Either way: where did one hundred and seventy come from?
+- 291.31s `seventy` score 0.3: Either way: where did one hundred and seventy come from?
+- 305.35s `one` score 0.001: The A - A - R, the Association of American Railroads, defines an overheated bear
+- 305.53s `hundred` score 0.002: The A - A - R, the Association of American Railroads, defines an overheated bear
+- 306.09s `seventy` score 0.006: The A - A - R, the Association of American Railroads, defines an overheated bear
+- 306.51s `degrees` score 0.282: The A - A - R, the Association of American Railroads, defines an overheated bear
+- 320.72s `twenty` score 0.0: In June twenty twenty-three, at a public hearing in East Palestine, the board's 
+- 321.08s `twenty-three,` score 0.0: In June twenty twenty-three, at a public hearing in East Palestine, the board's 
+- 460.37s `one` score 0.028: At the same hearing, the industry's witness said the railroads were now all comm
+- 460.54s `hundred` score 0.025: At the same hearing, the industry's witness said the railroads were now all comm
+- 460.81s `and` score 0.225: At the same hearing, the industry's witness said the railroads were now all comm
+- 460.98s `seventy.` score 0.009: At the same hearing, the industry's witness said the railroads were now all comm
+- 494.34s `twenty` score 0.0: In February twenty nineteen, Norfolk Southern told investors its plan.
+- 494.70s `nineteen,` score 0.125: In February twenty nineteen, Norfolk Southern told investors its plan.
+- 504.70s `sixty` score 0.242: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 505.73s `twenty` score 0.003: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 506.05s `twenty-one,` score 0.013: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 507.51s `sixty-five` score 0.003: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 508.17s `point` score 0.007: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 508.47s `four.` score 0.0: An operating ratio, the share of revenue spent running the railroad, of sixty pe
+- 520.87s `twenty-six` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 521.51s `thousand,` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 521.99s `six` score 0.002: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 522.15s `hundred` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 522.49s `and` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 522.65s `sixty-two` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 523.53s `twenty` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 523.87s `eighteen,` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 526.30s `eighteen` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 526.74s `thousand,` score 0.001: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 527.20s `nine` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 527.52s `hundred` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 527.94s `twenty` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 528.32s `twenty-two:` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 530.62s `twenty-nine` score 0.0: Average employees fell from twenty-six thousand, six hundred and sixty-two in tw
+- 532.32s `twenty` score 0.001: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
+- 532.64s `nineteen` score 0.001: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
+- 533.34s `twenty` score 0.0: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
+- 533.66s `twenty-two,` score 0.0: From twenty nineteen to twenty twenty-two, the company spent ten billion dollars
+- 587.71s `twenty-three` score 0.004: Car twenty-three was inspected elsewhere.
+- 596.41s `twenty` score 0.0: In March twenty twenty-three, the N - T - S - B opened a special investigation i
+- 597.11s `twenty-three,` score 0.27: In March twenty twenty-three, the N - T - S - B opened a special investigation i
+- 597.82s `the` score 0.004: In March twenty twenty-three, the N - T - S - B opened a special investigation i
+- 645.55s `nineteen` score 0.055: From Salem, the train runs east, at between nineteen and forty-five miles an hou
+- 646.35s `forty-five` score 0.022: From Salem, the train runs east, at between nineteen and forty-five miles an hou
+- 657.98s `forty-nine` score 0.01: Milepost forty-nine point eight one.
+- 658.95s `eight` score 0.048: Milepost forty-nine point eight one.
+- 659.79s `Two` score 0.0: Two hundred and fifty-three degrees, the top of the scale.
+- 660.01s `hundred` score 0.0: Two hundred and fifty-three degrees, the top of the scale.
+- 660.31s `and` score 0.007: Two hundred and fifty-three degrees, the top of the scale.
+- 660.45s `fifty-three` score 0.0: Two hundred and fifty-three degrees, the top of the scale.
+- 661.03s `degrees,` score 0.342: Two hundred and fifty-three degrees, the top of the scale.
+- 675.17s `one` score 0.001: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 675.35s `thousand,` score 0.004: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 675.95s `one` score 0.0: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 676.11s `hundred` score 0.0: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 676.39s `and` score 0.005: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 676.55s `sixty` score 0.006: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 678.22s `thirty-eight` score 0.001: From the emergency, the lead locomotives travel another one thousand, one hundre
+- 716.46s `fifth` score 0.015: Investigators recovered the bearing's pieces on the fifth of February, west of t
+- 779.22s `fourth` score 0.008: On the evening of the fourth of February, the shipper of the vinyl chloride, Oxy
+- 792.59s `one` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
+- 792.73s `hundred` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
+- 793.01s `and` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
+- 793.19s `thirty-eight` score 0.0: The hottest car's temperature, measured by those contractors, peaked at about on
+- 793.65s `degrees` score 0.343: The hottest car's temperature, measured by those contractors, peaked at about on
+- 801.97s `one` score 0.025: By the afternoon of the sixth, it had fallen to about one hundred and twenty-six
+- 802.09s `hundred` score 0.046: By the afternoon of the sixth, it had fallen to about one hundred and twenty-six
+- 802.39s `and` score 0.155: By the afternoon of the sixth, it had fallen to about one hundred and twenty-six
+- 802.50s `twenty-six.` score 0.053: By the afternoon of the sixth, it had fallen to about one hundred and twenty-six
+- 828.47s `one` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 828.53s `hundred` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 829.09s `and` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 829.21s `fifty-three` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 830.09s `one` score 0.319: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 830.15s `hundred` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 830.69s `and` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 830.81s `fifty-eight` score 0.0: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 831.37s `degrees,` score 0.196: Two contractor firms told him that if a car reached one hundred and fifty-three 
+- 861.40s `thirty-seven.` score 0.123: The charges went off at four thirty-seven.
+- 953.96s `twenty` score 0.0: In June twenty twenty-four, the N - T - S - B adopted its final report.
+- 954.34s `twenty-four,` score 0.0: In June twenty twenty-four, the N - T - S - B adopted its final report.
+- 972.18s `one` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 972.36s `point` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 972.74s `one` score 0.001: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 973.96s `twenty` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 974.33s `twenty-three,` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 975.57s `three` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 975.83s `hundred` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 976.13s `and` score 0.002: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 976.21s `twenty-five` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 977.51s `twenty` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 977.83s `twenty-four.` score 0.0: Norfolk Southern's annual reports put its net cost from the derailment, after in
+- 979.35s `twenty` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 979.67s `twenty-five,` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 984.45s `two` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 984.71s `hundred` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 984.99s `and` score 0.001: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 985.15s `fifty-four` score 0.0: In twenty twenty-five, insurance and other recoveries were larger than new costs
+- 988.94s `six` score 0.084: A class action settlement created a six hundred million dollar fund for resident
+- 989.20s `hundred` score 0.006: A class action settlement created a six hundred million dollar fund for resident
+- 1000.72s `twenty` score 0.0: An appeal over residents' personal injury releases was still pending in October 
+- 1001.08s `twenty-six.` score 0.0: An appeal over residents' personal injury releases was still pending in October 
+- 1008.37s `twenty` score 0.0: In March twenty twenty-six, letting residents join that case, the judge's order 
+- 1008.75s `twenty-six,` score 0.0: In March twenty twenty-six, letting residents join that case, the judge's order 
+- 1020.67s `twenty` score 0.0: As of July twenty twenty-six, federal rules did not require trackside detectors 
+- 1021.07s `twenty-six,` score 0.0: As of July twenty twenty-six, federal rules did not require trackside detectors 
+- 1026.74s `at` score 0.348: As of July twenty twenty-six, federal rules did not require trackside detectors 
+- 1040.74s `twenty` score 0.0: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1041.09s `twenty-four` score 0.0: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1042.91s `one` score 0.004: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1043.07s `hundred` score 0.001: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1043.39s `and` score 0.002: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1043.61s `eighty-seven` score 0.013: Norfolk Southern said in twenty twenty-four that it was installing one hundred a
+- 1056.31s `first` score 0.262: And the kind of tank car the investigators found likely started the fire stays l
+- 1057.11s `twenty` score 0.0: And the kind of tank car the investigators found likely started the fire stays l
+- 1057.45s `twenty-nine.` score 0.0: And the kind of tank car the investigators found likely started the fire stays l
+- 1069.79s `twenty` score 0.01: The brake rule repealed in twenty eighteen: it applied to a different kind of tr
+- 1070.15s `eighteen:` score 0.015: The brake rule repealed in twenty eighteen: it applied to a different kind of tr
+- 1080.16s `twenty` score 0.0: As of July twenty twenty-six, no federal rule sets the temperature at which a tr
+- 1080.46s `twenty-six,` score 0.0: As of July twenty twenty-six, no federal rule sets the temperature at which a tr
+- 1083.60s `at` score 0.006: As of July twenty twenty-six, no federal rule sets the temperature at which a tr

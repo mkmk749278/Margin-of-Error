@@ -202,7 +202,7 @@ behind this section, with sources: `docs/research/2026-11-03_us_uk_audience.md`.
   on it (Ofcom, Media Nations 2025). The rest watch at a desk or on a phone held sideways. So every frame reads at
   2.5 m on a TV and on a 6-inch phone (§6.7), and **the number that matters is said, not only shown**: a TV viewer
   may look away.
-- **Language:** precise international English, read by the channel's own voice "1" (§7.5). **On-screen text in
+- **Language:** precise international English, read by the channel's voice, Marcus (§7.5). **On-screen text in
   American spelling** (most records we show are American; one spelling everywhere looks deliberate). No slang. A
   British record keeps its own spelling inside its quotes (never edit a record).
 - **Units:** as the record states them (feet, knots, psi, °F, short tons) with SI in a smaller second line on screen
@@ -285,6 +285,11 @@ A failure with (1) an official investigation or court record, (2) a physical mec
 documented financial or managerial decision that touched the margin. If (3) is only an allegation, the film says so
 or the case waits. The slate is in §17.4, its fact flags in §17.3.
 
+**Not our topics, even when they pay** (reports review 2026-11-06): sanctions shadow fleets, defence procurement and
+war attrition, mineral concessions in other regions, foreign events framed as threats to "Western" viewers. They sit
+outside the domain (CLAUDE.md, channel separation) or need fear framing. RPM estimates by topic are vendor numbers,
+never a reason to pick a case.
+
 **The case sheet** (top of every `brief.md`, before research starts): the corporate decision · the physical failure
 mode · the "smoking gun" primary document · the target length. If the decision or the document is blank after
 research, the case waits.
@@ -300,6 +305,11 @@ The five acts (Part G §3) are the spine; times are guides, the evidence sets th
 - **Cold-open option, "the dual split"** (strategy review 2026-11-02): the filing line on one side, the sensor trace
   on the other, no music, a low hum and one mechanical click; then one clinical sentence of fact. One of the 3+ cold
   opens per film, built only from sourced exhibits.
+- **The first 45 s in three beats (reports review 2026-11-06):** 0:00–0:10 the anomaly on the record (the exhibit,
+  never a greeting); 0:10–0:25 the stakes beyond this one failure; 0:25–0:45 the method, which records we read, so
+  the viewer knows what the film will audit. The treatment's beat sheet marks all three.
+- **Act turns in three steps:** close the act on its finding; show the contradiction that finding exposes; turn it
+  into the next act's question. *Why:* a resolved act with no new question is where viewers leave.
 - **Name the open loop in the first 60 s** (what we will find, and roughly when), and end the act on the question
   *where did the margin of error run out?* (said or shown, not every film word for word).
 
@@ -463,10 +473,17 @@ were missing." is stronger than any adjective. No sarcasm, no outrage, no "shock
 `script/screenplay.md` has a **Q column**: the question the viewer is holding in that paragraph. Empty Q = cut or
 rewrite.
 
-### 7.5 TTS text for the narrator (owner's spec §5, voice changed 2026-11-03)
-- **Voice (owner, 2026-11-03):** George (male library voice) is dropped. The narrator is the channel's own custom
-  ElevenLabs voice, named **"1"** in the owner's account. `config/voice.yaml` holds the name, model and settings.
-- **Model and stability (owner, 2026-11-03): Eleven v4 (`eleven_v4`), stability "Creative"**, replacing the spec's
+### 7.5 TTS text for the narrator (owner's spec §5, voice changed 2026-11-03 and 2026-11-06)
+- **Voice (owner, 2026-11-06):** **"Marcus - Baritone(Stoic)"**, a professional voice from the ElevenLabs Voice
+  Library, added to the owner's account: a deep, calm baritone (its listing: narration, English and Korean; its
+  creator tunes it at stability 0.81, similarity 0.78, speed 0.91). It replaces the custom voice "1" (2026-11-03),
+  which had replaced George. East Palestine (Film 2) was re-voiced with it before its first cut. `config/voice.yaml`
+  holds the name, model and settings.
+- **Stability for Marcus (owner, 2026-11-06): Natural (0.5)**, similarity 0.80, Eleven v4. *Measured on Film 2:* the
+  whole narration ran 988 s against 1106.5 s for voice "1" (about 160 words a minute against 145), with tighter
+  pauses (median 0.41 s against 0.52 s); the edit holds carry the long beats. The forced aligner scores spoken numbers
+  low with either voice (172 and 157 words under 0.35), so numbers are checked by speech-to-text, not by that score.
+- **Model and stability for voice "1" (owner, 2026-11-03; history): Eleven v4 (`eleven_v4`), stability "Creative"**, replacing the spec's
   Multilingual v2 at 0.62. On v3/v4 the app offers three stability steps, Creative / Natural / Robust, which are
   0.0 / 0.5 / 1.0 in the API; Creative gives the most varied phrasing and tone. Similarity stays 0.80. v4 takes no
   `style` and no speaker boost (the models API reports `can_use_style` and `can_use_speaker_boost` false), so they
@@ -492,11 +509,23 @@ rewrite.
   (`MAX`) go in `script/say_as_word.txt`.
 - `scripts/vo_lint.py script/vo.txt --say-as-word script/say_as_word.txt` must pass.
 - **To measure before the first full recording** (earlier work found a different ElevenLabs voice and model gave
-  `...` almost no pause, and tags changed the voice): generate block 1 with voice "1" on the configured model and
+  `...` almost no pause, and tags changed the voice): generate block 1 with the channel voice on the configured model and
   measure the pause each mark gives (`scripts/vo_review.py`). If `...` or `—` give no pause, the exact beats are cut
   in the edit from the word timings instead. Also listen for how `N - T - S - B` is read.
 
-### 7.5a Choosing the voice (research 2026-11-02, report §5; **settled 2026-11-03**: the owner built the custom voice "1", option 1 below)
+### 7.5b Pace and pauses (reports review 2026-11-06, `docs/research/2026-11-06_retention_and_whitespace_review.md`)
+- **Targets, measured on every take** (`vo_review.py`): about 145–160 words a minute overall; slower, about 125–135,
+  where a document, a transcript line or a number is read; a short pause (0.2–0.35 s) before a key number or part
+  name; 0.5–0.8 s after the line that reveals a primary exhibit. Where the voice doesn't give the pause, cut it in at
+  the word (§10.4), never with `...` or tags. *Why:* listeners judge authority on pace and silence in the first
+  seconds; a uniform rate reads as synthetic.
+- **Falling ends:** a declarative ends on a falling pitch. A statement that rises at the end (uptalk) is a re-take
+  of that sentence (§10.4).
+- **Sentence mix:** short declaratives (4–7 words) as anchors, tension clauses (12–18), explanations (22–32) for a
+  mechanism or a chain of custody, a short downbeat (8–12) to close the point; active voice with the actor named
+  where the record names one (fairness still applies, §9.6).
+
+### 7.5a Choosing the voice (research 2026-11-02, report §5; settled 2026-11-03 on the custom voice "1"; **changed 2026-11-06 to Marcus**, §7.5; history below)
 The spec named George. Before the first recording, the owner auditions three voices on `films/_voice/audition.txt`
 (130 words, passes the lint), Multilingual v2, stability 0.62, similarity 0.80, style 0.00: (1) an ElevenLabs Voice
 Design voice made for us (recommended if it passes: no other channel sounds like it); (2) George; (3) a library British
@@ -821,7 +850,11 @@ archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real p
 - Master measured twice, stereo made before measuring, checked per channel in the final MP4 (`scripts/score_mix.py`).
   *Why linear:* single-pass `loudnorm` pumped the silent pauses up in earlier work. The AAC encode adds about 0.8 dB of
   true peak to sharp transients (stamps, clicks), so the limiter sits lower than the −1 dBTP target needs on paper.
-- **Voice polish, if a take needs it:** high-pass at 70 Hz, a gentle low shelf (+1.5 to +2.5 dB near 120 Hz), a de-esser
+- **Ambience level, to test on the next mix (reports review 2026-11-06):** the report puts the room bed 34–38 dB under
+  the voice and document foley 24–28 dB under it; ours sits about 17 dB under. Measure both against the voice and try
+  the bed at −34 dB relative, by ear on a phone and on headphones, before changing the standard.
+- **Voice polish, if a take needs it** (the report's chain, 2026-11-06: high-pass 80 Hz, a narrow −2 to −3 dB cut at
+  250–350 Hz, +1.5 to +2 dB near 3.2 kHz for phone speakers, de-ess 5.5–7.8 kHz): high-pass at 70 Hz, a gentle low shelf (+1.5 to +2.5 dB near 120 Hz), a de-esser
   at 6–8 kHz, light compression (2:1 to 3:1). Never pitch-shift the voice.
 - **Real sound carries the big moments** when it is released and licensed (§9.5): the voice never talks over real
   speech, and a released recording keeps 2–6 s of its own room before the narration returns.
@@ -1120,7 +1153,7 @@ only against our own rules hides what the competing films already do better.
 ## 15. Tools
 - `scripts/brand_ts.py`: `config/brand.yaml` → `lib/remotion/brand.ts`.
 - `scripts/claims_check.py`: the fact gate. `scripts/vo_lint.py`: the narration text gate (new, 2026-11-02).
-- `scripts/tts_elevenlabs.py` + `config/voice.yaml`: generate the narration with voice "1" (new, 2026-11-03).
+- `scripts/tts_elevenlabs.py` + `config/voice.yaml`: generate the narration with the channel voice in `config/voice.yaml` (Marcus since 2026-11-06).
 - `scripts/sfx_synth.py`: the seeded foley bank and bed (new, 2026-11-03). `scripts/vo_blocks.py`: recording blocks.
 - `scripts/vo_timing.py` + `scripts/align_script.py`: VO timing. `scripts/vo_review.py`: measures each take.
 - `scripts/score_mix.py`: the mixer. `scripts/contact_sheet.py`: timecoded sheets. `scripts/shoot.mjs`: HTML/SVG → image.
@@ -1335,6 +1368,8 @@ only against our own rules hides what the competing films already do better.
 1. **2026-11-02: the repo stays public; nothing in it names the owner or other channels.**
 2. Handoff spec received 2026-11-02 (Part G): brand, five-act structure, look, George, the launch trilogy.
    **2026-11-03: George dropped; the narrator is the owner's custom ElevenLabs voice "1"**, generated by the session.
+   **2026-11-06: the narrator is "Marcus - Baritone(Stoic)"** (ElevenLabs Voice Library), Eleven v4, stability
+   Natural 0.5 (§7.5); Film 2 re-voiced with it.
    **2026-11-03 (later): Eleven v4 with stability "Creative"** replaces Multilingual v2 at 0.62 (§7.5); this overrides
    the model and stability lines of the spec's §5 (Part G, kept verbatim).
 3. **2026-11-02: the slate changes from the landscape research are approved** (§17.4): Episode 1 unchanged; Episode 2
@@ -1360,9 +1395,9 @@ only against our own rules hides what the competing films already do better.
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
    channel's own YouTube access; in `config/brand.yaml`.
-3. **Acronym format for voice "1":** the spec's hyphen spacing (`N - T - S - B`) is the default; check it on the
+3. **Acronym format for the channel voice:** the spec's hyphen spacing (`N - T - S - B`) is the default; check it on the
    first generated block (§7.5).
-4. **Voice:** settled 2026-11-03, the custom voice "1" (§7.5). Key: `ELEVENLABS_API_KEY` in the environment.
+4. **Voice:** settled 2026-11-06, Marcus (§7.5; voice "1" from 2026-11-03 before it). Key: `ELEVENLABS_API_KEY` in the environment.
 5. **Currency in a UK case** (before film 4 or 5): the spec says `$` everywhere; a UK record states pounds. Options to
    put to the owner then: the record's `£` with a dated `$` line beneath, or `$` with the `£` beneath.
 6. **Comment tooling:** connect the channel's YouTube access when the first film is public (§13.8).
