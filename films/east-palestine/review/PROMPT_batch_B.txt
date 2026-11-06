@@ -1,0 +1,126 @@
+MARCUS VOICE CHECK · BATCH B · 7 audio files: marcus_part08.mp3, marcus_part09.mp3, marcus_part10.mp3, marcus_part11.mp3, marcus_part12.mp3, marcus_part13.mp3, marcus_part14.mp3
+
+You are a strict documentary audio supervisor. The attached files are consecutive parts of one narration for an investigative documentary about the 2023 East Palestine, Ohio train derailment, read by a synthetic narrator. Listen to EACH file completely, start to end, on its own. Do not merge files. If you cannot open or hear a file, say "COULD NOT HEAR" for it instead of guessing.
+
+For each file, compare what you hear with its script below, word for word. Spoken numbers matter most.
+
+Answer with one block per file, in exactly this format and nothing else:
+
+FILE: <exact file name>
+LENGTH HEARD: <m:ss>
+WORDS: OK, or a list of every word that differs from the script, with time, as  m:ss  script "..." → heard "..."
+NUMBERS: OK, or every number that is wrong or unclear, with time
+ACCENT: none / slight / strong (any non-native or regional accent a US or UK viewer would notice), with times of the clearest examples
+RISING ENDS: times where a statement ends with a rising, question-like pitch, or "none"
+DELIVERY: one line: calm, authoritative, flat, rushed, theatrical?
+DEFECTS: clicks, glitches, distortion, breaths that sound artificial, sudden level jumps, long silences, with times, or "none"
+LETTERS: how "N - T - S - B" and other spelled-out letters sound (clear separate letters, or run together), or "none in this part"
+SCORE: 0-10 as narration for a serious US/UK documentary
+
+When you have answered all 7 files, put the whole answer in a Google Doc: tap Share & export, then Export to Docs, and name the doc "marcus_check_batch_B".
+
+THE SCRIPTS
+
+--- marcus_part08.mp3 (1:11.9) ---
+That is our reading of the record: no investigator links the plan to this bearing.
+What the record does show is where the stop line was drawn: at a number the industry wrote for billing, which Norfolk Southern says it combined with its own experience.
+A claim you will find in many comment sections: cost cutting caused this.
+The record can't say.
+Back to the bearing.
+As it fails, the rollers and the cup grind and heat.
+The grease burns.
+The seals go.
+Then the end of the axle, the journal, breaks away, and the wheelset drops.
+Watch the last nineteen miles.
+From Salem, the train runs east, at between nineteen and forty-five miles an hour.
+Between the detectors, nothing measures the bearing.
+Nineteen miles of track, and nothing reads it.
+Milepost forty-nine point eight one.
+Two hundred and fifty-three degrees, the top of the scale.
+Critical alarm.
+The crew begins to slow the train.
+Less than a minute later, the axle separates, and the brakes go into emergency on their own.
+From the emergency, the lead locomotives travel another one thousand, one hundred and sixty feet, and stop thirty-eight seconds later.
+
+--- marcus_part09.mp3 (1:10.1) ---
+So was it the grease?
+The record can't say.
+The investigators found that the root cause of the bearing's failure remains unclear.
+Whatever started it, fatigue, a loss of lubrication, water, was erased by the heat of its own failure.
+And the N - T - S - B noted that this is a pattern: a bearing that fails badly enough to derail a train tends to destroy the evidence of why.
+Another claim: the burn, three days later, destroyed that evidence.
+That is not in the record.
+Investigators recovered the bearing's pieces on the fifth of February, west of the wreck, where they had fallen in the first moments.
+The burn was on the sixth, on five other cars.
+The fire, the N - T - S - B found, likely began with a tank car.
+In the derailment, a D - O - T one eleven tank car carrying a flammable liquid was punctured, and its contents fed the fire.
+In the same pile lay five pressure tank cars of vinyl chloride.
+Heat from the fire set off the relief valves on four of them, the valves that open when the pressure inside a tank gets too high.
+The responders did not yet know what was on the train.
+
+--- marcus_part10.mp3 (1:11.7) ---
+The N - T - S - B found that Norfolk Southern's delay in sending the list of cars kept responders near the fire longer than they needed to be, and delayed the evacuation order.
+Vinyl chloride is the raw material of P - V - C, a plastic.
+Its molecules can join into long chains, and that reaction gives off heat.
+In a closed tank, a runaway reaction could build pressure until the tank fails.
+That was the fear.
+Now the second number.
+On the evening of the fourth of February, the shipper of the vinyl chloride, Oxy Vinyls, told Norfolk Southern and its contractors it saw a low probability of that reaction.
+The hottest car's temperature, measured by those contractors, peaked at about one hundred and thirty-eight degrees Fahrenheit.
+This time that is the actual temperature, not a number above the air.
+By the afternoon of the sixth, it had fallen to about one hundred and twenty-six.
+That afternoon the incident commander, the village's fire chief, met the governors of Ohio and Pennsylvania and dozens of other officials.
+Oxy Vinyls was not invited, the incident commander told investigators.
+The N - T - S - B found no evidence that anyone outside Norfolk Southern and its contractors knew the shipper disagreed.
+
+--- marcus_part11.mp3 (1:13.0) ---
+Then came a smaller meeting.
+Two contractor firms told him that if a car reached one hundred and fifty-three to one hundred and fifty-eight degrees, the reaction would run out of control.
+The investigators did not find that range in the written guidance consulted at the scene, or in the shipper's messages.
+The incident commander said he was given thirteen minutes to decide.
+The burn, they told him, had to start before three in the afternoon, to finish in daylight and avoid a temperature inversion, a layer of air that would keep the vapor cloud from dispersing.
+The incident commander consented.
+The charges went off at four thirty-seven.
+Three in the afternoon, the N - T - S - B noted, was not a hard deadline.
+Two numbers decided this town's week.
+One matched a definition written for billing.
+The other, investigators could not find in the guidance used at the scene.
+The N - T - S - B's finding: the temperatures on scene did not show that reaction, and examinations afterwards confirmed it.
+The vent and burn was not necessary.
+Norfolk Southern and its contractors, the board found, compromised the integrity of the decision by creating unwarranted urgency.
+
+--- marcus_part12.mp3 (1:15.2) ---
+The board also found that one industry guide consulted at the scene overstated the risk of that reaction.
+Norfolk Southern's answer: the only motivation of the company and its contractors was the health and safety of the community and the first responders, and the incident command had been told about twenty hours ahead that a burn might be needed.
+The company does not agree that it withheld the shipper's views.
+The incident commander told investigators that he bore the responsibility.
+One more claim you will often see: they burned it because it was the cheapest option.
+That is not in the record.
+What is in the record is the urgency, the information the incident commander was given, and the reason Norfolk Southern gives.
+The N - T - S - B itself could not determine the main reason for the company's preference for the burn.
+In June twenty twenty-four, the N - T - S - B adopted its final report.
+The probable cause: the failure of the bearing on the twenty-third car, which overheated and caused the axle to separate.
+Norfolk Southern's annual reports put its net cost from the derailment, after insurance, at about one point one billion dollars in twenty twenty-three, and three hundred and twenty-five million in twenty twenty-four.
+
+--- marcus_part13.mp3 (1:10.6) ---
+In twenty twenty-five, insurance and other recoveries were larger than new costs, by two hundred and fifty-four million.
+A class action settlement created a six hundred million dollar fund for residents and businesses.
+The appeals against the settlement were dismissed.
+An appeal over residents' personal injury releases was still pending in October twenty twenty-six.
+A separate settlement with the federal government still awaited the court's approval at that date.
+In March twenty twenty-six, letting residents join that case, the judge's order repeated words from an earlier hearing: this is not a rubber stamp court.
+Could it happen again?
+As of July twenty twenty-six, federal rules did not require trackside detectors at all, or set the temperature at which a car must be stopped.
+The N - T - S - B has recommended that the F - R - A, the federal railroad regulator, set minimum requirements, including alarm thresholds and the distance between detectors.
+Norfolk Southern said in twenty twenty-four that it was installing one hundred and eighty-seven more detectors, to bring the average spacing on its core network to about twelve miles.
+
+--- marcus_part14.mp3 (0:46.2) ---
+And the kind of tank car the investigators found likely started the fire stays legal in flammable service until the first of May, twenty twenty-nine.
+Retiring them sooner, the investigators found, is feasible, but unlikely, because of economic and business disincentives.
+Two last claims.
+The brake rule repealed in twenty eighteen: it applied to a different kind of train, and this train did not qualify.
+Too few crew: there were three people in the cab.
+As of July twenty twenty-six, no federal rule sets the temperature at which a train must stop.
+The N - T - S - B has asked for one.
+From below the alert line to a broken axle: about thirty miles.
+The last two detectors were nineteen miles apart.

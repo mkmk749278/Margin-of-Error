@@ -1,6 +1,6 @@
 ---
 name: new-film
-description: Make a Margin of Error forensic film from a slate case or the owner's idea - case sheet, research (what everyone says vs the record, our edge), the treatment with its beat sheet (owner approves), facts, fairness, narration (owner approves), voice "1" audio (owner approves), exhibits, word-level choreography, GitHub renders, sound, the 720p cut, independent reviews (owner approves), the 4K master, the YouTube package, release. Stops for the owner at each gate.
+description: Make a Margin of Error forensic film from a slate case or the owner's idea - case sheet, research (what everyone says vs the record, our edge), the treatment with its beat sheet (owner approves), facts, fairness, narration (owner approves), channel-voice audio (Marcus) (owner approves), exhibits, word-level choreography, GitHub renders, sound, the 720p cut, independent reviews (owner approves), the 4K master, the YouTube package, release. Stops for the owner at each gate.
 ---
 
 # New film
@@ -10,15 +10,19 @@ Rules: `CLAUDE.md`. Each step in full: `docs/PLAYBOOK.md` §3a, the acts in §5.
 Only finished work goes to the owner. At session start: unmerged branches check (§3).
 
 **Phase A: find the case**
-1. **Case** → `films/<slug>/brief.md`: the case sheet (decision · failure mode · smoking-gun document · length) and
-   the package first (title ideas, thumbnail concept, search phrases). The slate's fact flags: §17.3.
+1. **Case** → `films/<slug>/brief.md`: the case sheet (decision · failure mode · smoking-gun document · target
+   length, argued from the story: §5) and the package first (30+ title variants, thumbnail concepts, the search
+   phrase the viewer types). The slate's fact flags: §17.3; the 2026 candidates and the final-report kit: §17.4.
 2. **Research** → `research/landscape.md`: what everyone says (news, statements, regulator releases, the 3–5
    strongest films and what their comments say they missed), what the record says (draft `claims.csv` as you go),
-   **our edge in one sentence**, what exhibits exist and their licence. No edge or no dated decision: the case waits.
+   **our edge in one sentence**, what exhibits exist and their licence, and the human through-line the record offers
+   (one person in a public role, §5). No edge or no dated decision: the case waits.
 
 **Phase B: decide everything**
 3. **Treatment** → `treatment.md`: logline, the margin in one line, 3+ angles / cold opens / sign-offs, the viewers'
-   real questions, the beat sheet (time · act · Q · turn · exhibit + record id · sound · bed), 2–3 signature moments
+   real questions, the beat sheet (time · act · Q · turn · exhibit + record id · sound · bed; the 0:07 confirm, the
+   0:30 hook, the 2:30 question, the minute-3 and minute-6 re-hooks marked; each beat earns its minutes, so the run
+   time is argued here), 2–3 signature moments
    in full, hero builds, fairness flags, what was cut. Independent treatment review (§14.5, new session, no repo) →
    `review/treatment_review_vN.md` → fixes. **[owner approves the treatment]**
 
@@ -38,6 +42,7 @@ Only finished work goes to the owner. At session start: unmerged branches check 
 10. **Sound** (PLAYBOOK §12): library beds per act, cues exported from the picture, `mix_film.py`, −14 LUFS / −1 dBTP.
 
 **Phase E: review and finish**
+Before release: the catalogue distinctness audit (§14.2a) and the method statement in the description (§13.4).
 11. **720p cut:** `/review-cut` until a round finds nothing; to Drive.
 12. **Independent reviews:** the viewer review (§14.5) and the forensic review (§14.4, `prompts/forensic_review_v1.md`);
     every point checked (§14.3) → fixes → `_check.md` with outcomes to the owner. **[owner approves the cut]**

@@ -1,12 +1,13 @@
-# The channel narrator (PLAYBOOK §7.5). Owner, 2026-11-03: George (male library voice) dropped; the channel uses its
-# own custom ElevenLabs voice, named "1" in the owner's ElevenLabs account. scripts/tts_elevenlabs.py looks the voice
-# up by name, so no voice id is stored in this public repo. The API key lives only in the environment
+# The channel narrator (PLAYBOOK §7.5). Owner, 2026-11-06: the channel's voice is "Marcus - Baritone(Stoic)", a
+# professional voice from the ElevenLabs Voice Library added to the owner's account (deep, calm baritone; its listing
+# says it narrates in English and Korean). It replaces the custom voice "1" (2026-11-03), which replaced George.
+# scripts/tts_elevenlabs.py looks the voice up by its name on the account. The API key lives only in the environment
 # (ELEVENLABS_API_KEY), never in git, chat or logs.
-voice_name: "1"
-model_id: eleven_v4                   # owner, 2026-11-03: Eleven v4 replaces Multilingual v2 (spec §5's model)
+voice_name: "Marcus - Baritone(Stoic)"
+model_id: eleven_v4                   # owner, 2026-11-03: Eleven v4 (the voice supports it)
 output_format: mp3_44100_192          # falls back to mp3_44100_128 if the plan does not allow 192 kbps
 voice_settings:                       # v4 takes stability and similarity only (no style, no speaker boost)
-  stability: 0.0                      # owner, 2026-11-03: "Creative" (the app's three steps: Creative 0.0,
-                                      # Natural 0.5, Robust 1.0)
+  stability: 0.5                      # owner, 2026-11-06: "Natural" for Marcus (the app's three steps: Creative 0.0,
+                                      # Natural 0.5, Robust 1.0); the voice's creator tunes it at 0.81, speed 0.91
   similarity_boost: 0.80
 block_max_chars: 2500

@@ -381,10 +381,10 @@ const Spacing: React.FC = () => {
 			<Pop f={f} fps={fps} on={wf(57, 'nineteen')} style={{position: 'absolute', left: 1000, top: 300}}>
 				<div style={T(56, {fontWeight: 700, color: colors.amber, background: colors.card, padding: '4px 12px'})}>≈19 MI · NTSB P. 105</div>
 			</Pop>
-			<Pop f={f} fps={fps} on={wf(60, 'before')} style={{position: 'absolute', left: 200, top: 158}}>
+			<Pop f={f} fps={fps} on={wf(60, 'before')} style={{position: 'absolute', left: 200, top: 196}}>
 				<div style={T(36, {color: colors.ink, background: colors.card, padding: '4px 12px'})}>THE DETECTOR BEFORE SALEM</div>
 			</Pop>
-			<Pop f={f} fps={fps} on={wf(60, 'eleven')} style={{position: 'absolute', left: 200, top: 206}}>
+			<Pop f={f} fps={fps} on={wf(60, 'eleven')} style={{position: 'absolute', left: 200, top: 250}}>
 				<div style={T(44, {fontWeight: 700, color: colors.cyan, background: colors.card, padding: '4px 12px'})}>≈11 MI <span style={{opacity: onW(f, wf(60, 'back'), 8)}}>BACK (BY MILEPOST)</span></div>
 			</Pop>
 			{/* the facts below the map, each on its words */}
@@ -399,23 +399,23 @@ const Spacing: React.FC = () => {
 				</Card>
 				<Card x={0} y={146} w={820} h={134} o={onW(f, wf(59, 'spacing'), 10)}>
 					<div style={{padding: '10px 24px'}}>
-						<div style={T(26, {...lit(f, wf(59, 'recommended'), colors.ink)})}>INDUSTRY RECOMMENDED <span style={{...lit(f, wf(59, 'practice'), colors.ink)}}>PRACTICE (AAR)</span> · NTSB P. 107</div>
+						<div style={T(26, {...lit(f, wf(59, 'recommended'), colors.ink)})}>AAR RECOMMENDED <span style={{...lit(f, wf(59, 'practice'), colors.ink)}}>PRACTICE</span> · NTSB P. 107</div>
 						<div style={T(56, {fontWeight: 700, color: colors.ink, marginTop: 6})}>
 							<span style={{opacity: onW(f, wf(59, 'forty'), 8)}}>≤ 40 MI</span> <span style={T(36, {color: colors.cyan, opacity: onW(f, wf(59, 'met'), 8)})}>MET</span>
 						</div>
 					</div>
 				</Card>
 			</div>
-			<div style={{position: 'absolute', left: 1000, top: 716, width: 820}}>
-				<Card x={0} y={0} w={800} h={134} o={onW(f, wf(60, 'sebring'), 10)} accent={colors.cyan}>
+			<div style={{position: 'absolute', left: 980, top: 716, width: 840}}>
+				<Card x={0} y={0} w={840} h={134} o={onW(f, wf(60, 'sebring'), 10)} accent={colors.cyan}>
 					<div style={{padding: '10px 24px'}}>
-						<div style={T(26, {color: colors.ink})}>SEBRING · MP 79.8 · 7:37 P.M. · <span style={{...lit(f, wf(60, 'same'), colors.cyan)}}>SAME BEARING</span></div>
+						<div style={{...T(26, {color: colors.ink}), whiteSpace: 'nowrap'}}>SEBRING · MP 79.8 · 7:37 P.M. · <span style={{...lit(f, wf(60, 'same'), colors.cyan)}}>SAME BEARING</span></div>
 						<div style={T(56, {fontWeight: 700, color: colors.cyan, marginTop: 6})}>
 							<span style={{opacity: onW(f, wf(60, 'thirty-eight'), 8)}}>+38</span><span style={{opacity: onW(f, wf(60, 'degrees'), 6)}}>°F</span> <span style={T(30, {color: colors.ink, opacity: onW(f, wf(60, 'below'), 8)})}>BELOW THE ALERT LINE · P. 5</span>
 						</div>
 					</div>
 				</Card>
-				<Card x={0} y={146} w={800} h={134} o={onW(f, wf(61, 'from'), 10)} accent={colors.red}>
+				<Card x={0} y={146} w={840} h={134} o={onW(f, wf(61, 'from'), 10)} accent={colors.red}>
 					<div style={{padding: '10px 24px'}}>
 						<div style={T(26, {color: colors.ink})}>BELOW ALERT LINE → <span style={{...lit(f, wf(61, 'axle'), colors.red)}}>BROKEN AXLE</span> · P. 107</div>
 						<div style={T(56, {fontWeight: 700, color: colors.red, marginTop: 6, opacity: onW(f, wf(61, 'thirty'), 8)})}>≈30 MI</div>

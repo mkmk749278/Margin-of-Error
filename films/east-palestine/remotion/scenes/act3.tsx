@@ -57,14 +57,14 @@ const Rulebook: React.FC = () => {
 					<span style={{opacity: onW(f, wf(68, 'least'), 6)}}>AT LEAST</span> <span style={{opacity: onW(f, wf(68, 'one', 1), 6)}}>{f >= wf(68, 'seventy') ? '170' : '1··'}°F</span> <span style={{opacity: onW(f, wf(68, 'air'), 6)}}>ABOVE THE AIR</span>
 				</div>
 			</Pop>
-			<RecordPage set="rir" start={sf(69) - 10} end={sf(70) + 14} label="NTSB RIR-24-05" title="THE AAR DEFINITION" hl={[{key: 'C23', at: wf(69, 'definition'), ats: [wf(69, 'definition'), wf(69, 'billable'), wf(69, 'owner')]}]} pushTo={wf(69, 'found')} />
+			<RecordPage set="rir" start={sf(69) - 10} end={sf(70) + 14} label="NTSB RIR-24-05" title="THE AAR DEFINITION" hl={[{key: 'C23', at: wf(69, 'definition'), ats: [wf(69, 'definition'), wf(69, 'based'), wf(69, 'billable'), wf(69, 'owner')]}]} pushTo={wf(69, 'found')} />
 			<div style={{position: 'absolute', right: 120, top: 940, ...T(36, {color: colors.ink, background: colors.card, padding: '4px 14px', opacity: Math.min(onW(f, wf(69, 'makes'), 8), offW(f, sf(70) - 6, 12))})}}>
 				WHAT MAKES A REPAIR <span style={{opacity: onW(f, wf(69, 'billable'), 6), color: colors.amber}}>BILLABLE</span> <span style={{opacity: onW(f, wf(69, 'owner'), 6)}}>TO THE OWNER</span>
 			</div>
 			<Pop f={f} fps={fps} on={wf(69, 'b')} off={sf(70) - 6} style={{position: 'absolute', right: 120, top: 860, maxWidth: 1000, textAlign: 'right'}}>
 				<div style={T(36, {fontWeight: 700, color: colors.void, background: colors.cyan, padding: '4px 14px'})}>THE NTSB FOUND</div>
 			</Pop>
-			<RecordPage set="rir" start={sf(70) - 10} end={sf(71) + 14} label="NTSB RIR-24-05" title="FINDINGS ON THE THRESHOLD" hl={[{key: 'C72', at: wf(70, 'billing'), ats: [wf(70, 'billing'), wf(70, 'safety')]}]} pushTo={wf(70, 'relates')} />
+			<RecordPage set="rir" start={sf(70) - 10} end={sf(71) + 14} label="NTSB RIR-24-05" title="FINDINGS ON THE THRESHOLD" hl={[{key: 'C72', at: wf(70, 'billing'), ats: [wf(70, 'billing'), wf(70, 'repairs'), wf(70, 'safety')]}]} pushTo={wf(70, 'relates')} />
 			<Pop f={f} fps={fps} on={wf(70, 'board')} off={sf(71) - 6} style={{position: 'absolute', right: 120, top: 860, maxWidth: 1000, textAlign: 'right'}}>
 				<div style={T(36, {fontWeight: 700, color: colors.void, background: colors.cyan, padding: '4px 14px'})}>THE BOARD <span style={{opacity: onW(f, wf(70, 'wrote'), 6)}}>WROTE</span></div>
 			</Pop>
@@ -256,7 +256,7 @@ const NSLine: React.FC = () => {
 								</div>
 								<div style={{width: 200 * lead16(f, wf(80, 'became')), height: 6, background: colors.ink}} />
 								<div style={{opacity: onW(f, wf(80, 'line'), 8)}}>
-									<div style={T(30, {color: colors.ink})}>BECAME THE LINE AT WHICH A TRAIN</div>
+									<div style={T(30, {color: colors.ink})}>BECAME THE LINE <span style={{opacity: onW(f, wf(80, 'train'), 6)}}>AT WHICH A TRAIN</span></div>
 									<div style={T(56, {fontWeight: 700, color: colors.red, opacity: onW(f, wf(80, 'stop'), 8)})}>
 										MUST STOP <span style={{opacity: onW(f, wf(80, 'once'), 6)}}>AT ONCE</span>
 									</div>
@@ -636,7 +636,7 @@ const Reading: React.FC = () => {
 								A NUMBER THE INDUSTRY <span style={{opacity: onW(f, wf(109, 'wrote'), 6)}}>WROTE</span> <span style={{opacity: onW(f, wf(109, 'billing'), 6)}}>FOR BILLING</span>
 							</div>
 							<div style={T(36, {color: colors.ink, marginTop: 40, opacity: onW(f, wf(109, 'norfolk'), 8)})}>
-								NORFOLK SOUTHERN <span style={{opacity: onW(f, wf(109, 'says'), 6)}}>SAYS IT COMBINED IT</span> <span style={{opacity: onW(f, wf(109, 'experience'), 6)}}>WITH ITS OWN EXPERIENCE · NTSB P. 106</span>
+								NORFOLK SOUTHERN <span style={{opacity: onW(f, wf(109, 'says'), 6)}}>SAYS</span> <span style={{opacity: onW(f, wf(109, 'combined'), 6)}}>IT COMBINED IT</span> <span style={{opacity: onW(f, wf(109, 'experience'), 6)}}>WITH ITS OWN EXPERIENCE · NTSB P. 106</span>
 							</div>
 						</div>
 					</Card>
