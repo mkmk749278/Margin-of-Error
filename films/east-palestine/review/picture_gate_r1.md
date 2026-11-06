@@ -23,3 +23,10 @@ Drive `east-palestine/renders/east-palestine_review_r2_720p.mp4`: 66,549 frames,
 Loudness −14.0 LUFS / −1.3 dBTP; **black: none**; stillness 0; the same three freezes, all under 2.5 s. Frames at
 16:33.5 and 16:58.9 read from the file: both title cards sit on the desk. **Verdict: passes.** Next: the owner
 approves the cut → 4K master.
+
+## r3: real federal footage (render 42266689658: blocks 0–10800 and 50400–61200, the rest reused)
+Drive `east-palestine/renders/east-palestine_review_r3_720p.mp4`: 66,549 frames, 1109.15 s, audio 1109.15 s.
+Loudness −14.0 LUFS / −1.3 dBTP; black: none; stillness 0; the same three short freezes. Frames read from the file:
+0:00.5–0:06.5 (NTSB drone over the burning cars under the dateline, strip "05 FEB 2023 · THE WRECK, TWO DAYS
+LATER"), 1:34–1:41.5 (the reconstruction hands over to the NTSB drone pass, then the NTSB aerial; the counters on
+cards), 14:23.5 (EPA aircraft, 07 FEB, still smoking). **Verdict: passes.** Next: the owner approves the cut.
