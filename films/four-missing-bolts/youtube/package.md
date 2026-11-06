@@ -1,6 +1,7 @@
 # The Four Missing Bolts: YouTube package (PLAYBOOK §13.7)
 
-Cut: `four-missing-bolts_master_4k.mp4` (Drive `four-missing-bolts/renders/`), 3840×2160, 60 fps, 15:05.
+Cut: `four-missing-bolts_master_4k_marcus.mp4` (Drive `four-missing-bolts/renders/`), 3840×2160, 60 fps, 13:44.2
+(re-voiced with Marcus, 2026-11-06; the voice-"1" master `four-missing-bolts_master_4k.mp4` is retired).
 Chapters below are from `vo/timing.json`, the same timing the master is rendered on.
 
 ## Title (pick one; recommended first)
