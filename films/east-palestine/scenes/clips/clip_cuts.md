@@ -50,3 +50,6 @@ First words: “Thank you. So these overheated bearing temperature thresholds”
 
 ## Not used
 - clip02 (NS witness: 13.9-mile average spacing) and clip03 (AAR witness: “all committed to using 170”): their facts are in the narration (C74–C76); no hold in the edit. Kept in Drive.
+
+## CLIP 2 re-fetched (2026-11-06)
+- clip01's video ended at 138.93 s, so CLIP 2 had no picture from 01:20:58.9. The owner fetched clip04 (01:20:20–01:21:30). Its audio is clip01's offset by exactly 100.00 s ("Thank" 13.00 vs 113.00, aligned by `clip_align.py`, `clip04_words.json`); the cut is clip04 12.00–49.35, the same silences. clip04's own picture also stops early (61.43 s of 70 s), after the span used. The NTSB camera cuts to the witness at 28.0 s, before "Correct." at 28.1 s.

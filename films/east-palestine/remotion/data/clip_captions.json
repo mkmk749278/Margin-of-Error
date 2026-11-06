@@ -762,9 +762,9 @@
    ]
   },
   "clip2": {
-   "src": "clip01.mp4",
-   "in": 112.0,
-   "out": 149.35,
+   "src": "clip04.mp4",
+   "in": 12.0,
+   "out": 49.35,
    "hearing_in": "01:20:32.00",
    "transcript": "transcript p. 216",
    "dur": 37.35,
