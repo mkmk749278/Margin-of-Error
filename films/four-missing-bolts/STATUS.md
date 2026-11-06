@@ -11,8 +11,11 @@
   `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`). Takes: Drive `vo/marcus/`; full narration
   `vo/four-missing-bolts_narration_marcus_full.mp3`.
 - **Owner gate passed (2026-11-06):** the owner approved the Marcus audio ("Approved").
-- **Next:** 720p review cut (after the East Palestine render, inside the runner budget);
-  review; owner approves the cut; 4K master; the package again with the voice note in the description.
+- **720p review cut** (run 42225170073, Drive `renders/four-missing-bolts_review_marcus_720p.mp4`): passes the
+  picture gate (`review/picture_gate_marcus_r1.md`).
+- **Package updated:** chapters, the photograph timecode (5:56) and the end screen remapped; the voice note in the
+  description; SRT rebuilt (223 cues).
+- **Next:** the owner approves the cut → 4K master → upload.
 
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
