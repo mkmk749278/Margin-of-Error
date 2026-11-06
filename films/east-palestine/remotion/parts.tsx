@@ -61,8 +61,8 @@ export const onW = (f: number, w: number, dur = 10): number => lead(f, w, dur);
 export const offW = (f: number, w: number, dur = 14): number => 1 - interpolate(f, [w, w + dur], [0, 1], clamp);
 
 /** A word or chip that arrives on its word and bumps. */
-export const Pop: React.FC<{f: number; fps: number; on: number; children: React.ReactNode; style?: React.CSSProperties}> = ({f, fps, on, children, style}) => {
-	const k = lead(f, on, 8);
+export const Pop: React.FC<{f: number; fps: number; on: number; off?: number; children: React.ReactNode; style?: React.CSSProperties}> = ({f, fps, on, off, children, style}) => {
+	const k = Math.min(lead(f, on, 8), off === undefined ? 1 : offW(f, off, 12));
 	if (k <= 0) return null;
 	return <div style={{opacity: k, transform: `translateY(${((1 - k) * 12).toFixed(1)}px) scale(${bump(f, fps, on + LAND, 0.06).toFixed(4)})`, transformOrigin: '0 60%', ...style}}>{children}</div>;
 };
