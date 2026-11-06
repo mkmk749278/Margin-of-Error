@@ -4,7 +4,8 @@
   python3 scripts/mix_film.py films/<slug>
 
 Inputs: assets/vo/film_vo.wav (scripts/film_timing.py), vo/timing.json (speech for ducking), sound/cues.json (every
-SFX cue, exported from the picture code), sound/mix.json (music slots, room tone, SFX file map), assets/el/*.mp3
+SFX cue, exported from the picture code), sound/mix.json (music slots, room tone, SFX file map, and `clips`: released
+recordings laid in on their picture frame at a set loudness, with the music ducked `clip_duck_db` under them), assets/el/*.mp3
 (ElevenLabs music and effects) and assets/sfx/*.wav (our seeded synthesised bank).
 Standard: VO peaks −2 to −3 dBTP; an ambience bed always present at −28 to −32 dB (never digital silence); music low,
 ducked under the voice; master −14 LUFS by ONE static gain, true peak ≤ −1 dBTP; stereo made before measuring;
@@ -134,12 +135,32 @@ def main() -> None:
         mv = measure(out / "voice.wav")
         voice = tp_limit(voice * db(vcfg["target_lufs"] - mv["I"]), db(vcfg["peak_dbtp"]))
 
+    # ---- real recordings (released excerpts, PLAYBOOK §12): their own sound laid into the voice stem at a set
+    # loudness, on the frame the picture plays them; the music ducks deeper under them (the voice never talks over
+    # real speech, and nothing else does either)
+    clip_spans = []
+    for c in cfg.get("clips", []):
+        cw = out / f"clip_{Path(c['file']).stem}.wav"
+        run(["ffmpeg", "-v", "error", "-y", "-i", str(film / c["file"]), "-vn", "-ar", str(SR), "-ac", "2", "-c:a", "pcm_s24le", str(cw)])
+        x = decode(cw)
+        x = x * db(c["lufs"] - measure(cw)["I"])
+        x = tp_limit(x, db(vcfg["peak_dbtp"]))
+        x = fades(x, 0.04, 0.08)
+        a = int(round(c["frame"] / fps * SR))
+        voice[a: a + len(x)] += x[: max(0, n - a)]
+        clip_spans.append((a, a + len(x)))
+
     # ---- speech mask → duck envelope (0.5 s ramps)
     speech = np.zeros(n, dtype=bool)
     for s in timing["sentences"]:
         a, b = int((s["start"] - 0.05) * SR), int((s["end"] + 0.15) * SR)
         speech[max(0, a): min(n, b)] = True
+    clip_mask = np.zeros(n, dtype=bool)
+    for a, b in clip_spans:
+        clip_mask[a: min(n, b)] = True
+    speech |= clip_mask
     duck_db = np.where(speech, -cfg["music_duck_db"], 0.0).astype(np.float32)
+    duck_db = np.where(clip_mask, -cfg.get("clip_duck_db", cfg["music_duck_db"]), duck_db).astype(np.float32)
     hop = 480
     d = duck_db[::hop]
     ramp = int(0.5 * SR / hop)

@@ -682,6 +682,6 @@ export const act3: SceneDef[] = [
 	{id: 'a3_filings', from: sf(92) - 20, to: sf(95) + 14, C: Filings, cues: [cue(wf(93, 'sixty-two'), 'quartz_tick'), cue(wf(93, 'hundred', 1), 'quartz_tick'), cue(wf(93, 'percent'), 'stamp', -24), cue(wf(94, 'billion'), 'quartz_tick')]},
 	{id: 'a3_car', from: sf(95) - 20, to: sf(103) + 14, C: Car, cues: [cue(wf(96, 'stops'), 'stamp', -20), cue(wf(100, 'checked'), 'relay_click'), cue(wf(101, 'not'), 'relay_click')]},
 	{id: 'a3_othercars', from: sf(103) - 20, to: sf(108) + 14, C: OtherCars, cues: [cue(wf(103, 'quarter'), 'quartz_tick'), cue(sf(107) - 10, 'paper_slide')]},
-	{id: 'a3_reading', from: sf(108) - 20, to: sf(112) + 30, C: Reading, cues: [cue(wf(111, 'say'), 'stamp', -14), cue(ef(111) + 110, 'stamp', -22)]},
+	{id: 'a3_reading', from: sf(108) - 20, to: sf(112) + 30, C: Reading, cues: [cue(wf(108, 'reading'), 'stamp', -24), cue(wf(109, 'stop'), 'highlighter', -24), cue(wf(109, 'number'), 'relay_click', -24), cue(wf(110, 'claim'), 'paper_slide', -22), cue(wf(111, 'say'), 'stamp', -14), cue(ef(111) + 110, 'stamp', -22)]},
 ];
 
