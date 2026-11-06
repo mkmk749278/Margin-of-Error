@@ -93,7 +93,7 @@ jobs:
       - name: Install
         run: npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: ffmpeg (the flash-frame check; the 2026 runner image no longer ships it)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends -o Acquire::Retries=3 ffmpeg > /dev/null && ffmpeg -version | head -1
       - name: Media and voice from Drive
         run: |
           scripts/gdrive_pull.sh "$FILM/render-media" "public/films/$FILM" > /dev/null
@@ -124,7 +124,7 @@ jobs:
       - name: Free disk (a 4K film and its shards need ~12 GB); ffmpeg for the join
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
+          sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends -o Acquire::Retries=3 ffmpeg > /dev/null && ffmpeg -version | head -1
       - uses: actions/checkout@v4.2.2
       - uses: actions/setup-node@v4.1.0
         with:
