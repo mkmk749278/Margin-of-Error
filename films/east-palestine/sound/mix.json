@@ -1,5 +1,5 @@
 {
- "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK §12). Times in film seconds (vo/timing.json). Music: the channel's own library (Music-Library/forensic, PLAYBOOK §12.1), one bed per act, continuous from 0:03 to the end with 4 s overlapping crossfades. Act I fx08 (fx01 failed its voice check twice), Act II fx02, Act III fx07/fx03 (documents, the boardroom), Act IV fx04/fx09 (the cascade; the vent and burn and the plume with dignity), Act V fx05 (Google Flow Music take, checked clean of voices 2026-11-06). The two NTSB hearing clips play their own sound on the picture's frames (22330, 25883; act3.tsx C1/C2) with the music ducked 14 dB under them. Effects: our ElevenLabs bank (commercial plan) and the seeded synth bank, reused from film 1.",
+ "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK §12). Times in film seconds (vo/timing.json). Music: the channel's own library (Music-Library/forensic, PLAYBOOK §12.1), one bed per act, continuous from 0:03 to the end with 4 s overlapping crossfades. Act I fx08 (fx01 failed its voice check twice), Act II fx02, Act III fx07/fx03 (documents, the boardroom), Act IV fx04/fx09 (the cascade; the vent and burn and the plume with dignity), Act V fx05 (Google Flow Music take, checked clean of voices 2026-11-06). The two NTSB hearing clips play their own sound on the picture's frames (19820, 23330; act3.tsx C1/C2) with the music ducked 14 dB under them. Effects: our ElevenLabs bank (commercial plan) and the seeded synth bank, reused from film 1.",
  "target_lufs": -14.0,
  "max_tp": -1.0,
  "voice": {
@@ -16,20 +16,113 @@
   "rms_db": -31
  },
  "clips": [
-  {"file": "../../public/films/east-palestine/excerpts/hearing_clip1.mp4", "frame": 22330, "lufs": -15.5, "why": "CLIP 1, NTSB hearing day 2, unaltered"},
-  {"file": "../../public/films/east-palestine/excerpts/hearing_clip2.mp4", "frame": 25883, "lufs": -15.5, "why": "CLIP 2, NTSB hearing day 2, unaltered"}
+  {
+   "file": "../../public/films/east-palestine/excerpts/hearing_clip1.mp4",
+   "frame": 19820,
+   "lufs": -15.5,
+   "why": "CLIP 1, NTSB hearing day 2, unaltered"
+  },
+  {
+   "file": "../../public/films/east-palestine/excerpts/hearing_clip2.mp4",
+   "frame": 23330,
+   "lufs": -15.5,
+   "why": "CLIP 2, NTSB hearing day 2, unaltered"
+  }
  ],
  "music": [
-  {"file": "assets/music/fx08_countdown.wav", "start": 3.0, "end": 145.5, "rms_db": -25, "fade_in": 4, "fade_out": 4, "why": "Act I, the incident"},
-  {"file": "assets/music/fx02_mechanism.wav", "start": 141.5, "end": 316.0, "rms_db": -24, "fade_in": 4, "fade_out": 4, "why": "Act II, the mechanism"},
-  {"file": "assets/music/fx07_evidence.wav", "start": 312.0, "end": 372.5, "rms_db": -25, "fade_in": 4, "fade_out": 4, "why": "Act III opens on the transcript"},
-  {"file": "assets/music/fx03_boardroom.wav", "start": 368.5, "end": 545.0, "rms_db": -24, "fade_in": 4, "fade_out": 4, "why": "Act III, the hearing and the boardroom (deep duck under both clips)"},
-  {"file": "assets/music/fx07_evidence.wav", "from": 60.0, "start": 541.0, "end": 655.0, "rms_db": -25, "fade_in": 4, "fade_out": 4, "why": "the filings and the car's record"},
-  {"file": "assets/music/fx03_boardroom.wav", "from": 100.0, "start": 651.0, "end": 691.0, "rms_db": -25, "fade_in": 4, "fade_out": 3, "why": "our reading; verdict 1"},
-  {"file": "assets/music/fx04_cascade.wav", "start": 688.0, "end": 864.0, "rms_db": -24, "fade_in": 3, "fade_out": 4, "why": "Act IV, the burn-off and the blind 19 miles"},
-  {"file": "assets/music/fx09_aftermath.wav", "start": 860.0, "end": 1035.0, "rms_db": -25, "fade_in": 4, "fade_out": 4, "why": "the vent and burn, the plume"},
-  {"file": "assets/music/fx04_cascade.wav", "from": 120.0, "start": 1031.0, "end": 1056.5, "rms_db": -25, "fade_in": 4, "fade_out": 3, "why": "verdict 4, the turn to Act V"},
-  {"file": "assets/music/fx05_verdict.wav", "start": 1053.5, "end": 1227.4, "rms_db": -24, "fade_in": 3, "fade_out": 8, "why": "Act V, the verdict and the sign-off"}
+  {
+   "file": "assets/music/fx08_countdown.wav",
+   "start": 3.0,
+   "end": 132.1,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act I, the incident"
+  },
+  {
+   "file": "assets/music/fx02_mechanism.wav",
+   "start": 128.4,
+   "end": 278.0,
+   "rms_db": -24,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act II, the mechanism"
+  },
+  {
+   "file": "assets/music/fx07_evidence.wav",
+   "start": 274.8,
+   "end": 330.8,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III opens on the transcript"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "start": 327.0,
+   "end": 495.2,
+   "rms_db": -24,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III, the hearing and the boardroom (deep duck under both clips)"
+  },
+  {
+   "file": "assets/music/fx07_evidence.wav",
+   "from": 60.0,
+   "start": 491.7,
+   "end": 596.4,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "the filings and the car's record"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "from": 100.0,
+   "start": 593.2,
+   "end": 629.4,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 3,
+   "why": "our reading; verdict 1"
+  },
+  {
+   "file": "assets/music/fx04_cascade.wav",
+   "start": 626.7,
+   "end": 782.8,
+   "rms_db": -24,
+   "fade_in": 3,
+   "fade_out": 4,
+   "why": "Act IV, the burn-off and the blind 19 miles"
+  },
+  {
+   "file": "assets/music/fx09_aftermath.wav",
+   "start": 779.1,
+   "end": 934.7,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "the vent and burn, the plume"
+  },
+  {
+   "file": "assets/music/fx04_cascade.wav",
+   "from": 120.0,
+   "start": 931.3,
+   "end": 954.2,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 3,
+   "why": "verdict 4, the turn to Act V"
+  },
+  {
+   "file": "assets/music/fx05_verdict.wav",
+   "start": 951.5,
+   "end": 1108.9,
+   "rms_db": -24,
+   "fade_in": 3,
+   "fade_out": 8,
+   "why": "Act V, the verdict and the sign-off"
+  }
  ],
  "silences": [],
  "sfx_trim_db": 0,

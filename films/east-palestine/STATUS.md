@@ -55,5 +55,19 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   `vo/east-palestine_narration_v1_full.mp3` + the holds in `vo/timing.json` (speech onsets 18–100 ms after each
   measured start, no drift).
 
+## Re-voice with Marcus (2026-11-06)
+- **Voice:** "Marcus - Baritone(Stoic)", Eleven v4, stability 0.5 (owner). 15,997 characters. Film now **18:29.2**
+  (narration 988 s; holds unchanged, 107.2 s; open loop 261.7 s). Takes: Drive `vo/marcus/`; full narration
+  `vo/east-palestine_narration_marcus_full.mp3`; voice "1" kept in Drive (`vo/east-palestine_vo_bNN.mp3`).
+- **Checks:** `vo_review.py --model medium.en` 99.4–100% words as written in all 7 blocks, every flag checked on its own
+  cut (number formatting only); Gemini listening check, 14 parts (`review/PROMPT_batch_A/B.txt`): General American,
+  words and numbers OK, letters clear, rising pitch only on questions, no defects, 9–9.5/10. Word alignment re-run.
+- **Picture:** four cues added (s69, s70, s80, s109), sync 198/198; stills swept every 8 s; fixed: the Act II detector
+  scene (chips over the header, two bottom cards whose headers wrapped), the DISMISSED and "Could it happen again?"
+  cards (now on the void, no see-through), the 2023 cost row's "$0.0B". Hearing clips now at F19820 and F23330.
+- **Mix:** rebuilt on the new timing (slots mapped sentence by sentence): −14.00 LUFS, −1.40 dBTP, voice −2.4 dBTP.
+  Drive `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`).
+- **Owner gate open:** the audio approval for Marcus.
+
 ## Next
-- Step 9: the 720p review cut on GitHub (`/parallel-render`, 6 runners), then `/review-cut`.
+- The 720p review cut on GitHub, then `/review-cut`.

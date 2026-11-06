@@ -55,7 +55,7 @@ const Paid: React.FC = () => {
 	const row = (yr: string, yrAt: number, val: string, valAt: number, note: string, noteAt: number, tone: string) => (
 		<div style={{display: 'flex', alignItems: 'baseline', gap: 30, marginTop: 28, opacity: onW(f, Math.min(yrAt, valAt) - 10, 10)}}>
 			<span style={T(44, {fontWeight: 700, color: colors.ink, width: 140, opacity: onW(f, yrAt, 6)})}>{yr}</span>
-			<span style={T(96, {fontWeight: 700, color: tone, width: 520, opacity: onW(f, valAt - 12, 8)})}>{val}</span>
+			<span style={T(96, {fontWeight: 700, color: tone, width: 520, opacity: onW(f, valAt - 4, 8)})}>{val}</span>
 			<span style={T(30, {color: colors.ink, opacity: onW(f, noteAt, 6)})}>{note}</span>
 		</div>
 	);
@@ -94,7 +94,7 @@ const Courts: React.FC = () => {
 				</div>
 			</Pop>
 			{dismissed > 0 ? (
-				<AbsoluteFill style={{opacity: dismissed, alignItems: 'center', justifyContent: 'center'}}>
+				<AbsoluteFill style={{opacity: dismissed, alignItems: 'center', justifyContent: 'center', background: colors.void}}>
 					<div style={T(44, {color: colors.ink, opacity: onW(f, wf(181, 'appeals'), 6)})}>
 						THE APPEALS <span style={{opacity: onW(f, wf(181, 'settlement'), 6)}}>AGAINST THE SETTLEMENT</span>
 					</div>
@@ -138,7 +138,7 @@ const Again: React.FC = () => {
 	return (
 		<>
 			{qO > 0 ? (
-				<AbsoluteFill style={{opacity: qO, alignItems: 'center', justifyContent: 'center'}}>
+				<AbsoluteFill style={{opacity: qO, alignItems: 'center', justifyContent: 'center', background: colors.void}}>
 					<div style={T(96, {fontWeight: 700, color: colors.ink, opacity: onW(f, wf(185, 'could'), 6)})}>
 						COULD IT <span style={{opacity: onW(f, wf(185, 'happen'), 6), color: colors.amber}}>HAPPEN AGAIN?</span>
 					</div>
