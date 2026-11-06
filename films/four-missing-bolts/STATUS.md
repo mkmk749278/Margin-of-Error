@@ -16,7 +16,10 @@
 - **Package updated:** chapters, the photograph timecode (5:56) and the end screen remapped; the voice note in the
   description; SRT rebuilt (223 cues).
 - **Owner gate passed (2026-11-06):** the owner approved the Marcus cut ("Film 1 approved").
-- **Next:** 4K master (scale 2) → the package → upload.
+- **4K master (Marcus)** (run 42249186313): Drive `renders/four-missing-bolts_master_4k_marcus.mp4`, 3840×2160, 60 fps,
+  49,452 frames = 824.2 s, audio 824.2 s, 11.4 Mb/s, 1.18 GB; −14.0 LUFS / −1.2 dBTP; black none; stillness 0;
+  freezes 1.7, 2.4, 1.6 s. Sample frames clean at 4K.
+- **Next:** the owner re-uploads with `youtube/package.md` (voice note in the description).
 
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
