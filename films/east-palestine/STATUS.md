@@ -69,6 +69,13 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   Drive `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`).
 - **Owner gate passed (2026-11-06):** the owner approved the Marcus audio ("audio approved").
 
+## Real footage (owner, 2026-11-06: "where is the connection?")
+- Federal sources only (owner). The cold open now starts on the NTSB's drone over the burning tank cars (05 FEB 2023,
+  labelled), under the date and place; s24 runs on the NTSB's overhead drone pass of the pileup, s25 on the NTSB's
+  aerial photo of the wreck beside the village; the hold after s160 shows the EPA aircraft's photo of the cars still
+  smoking the next afternoon (07 FEB). The county's drone clip (rights not cleared) is withdrawn. Narration unchanged.
+  Sources: `media_manifest.csv`; Drive `east-palestine/federal/`.
+
 ## Next
 - **720p review cut r2 passes** (`review/picture_gate_r1.md`; Drive `renders/east-palestine_review_r2_720p.mp4`).
   The owner approves the cut → 4K master → YouTube package (with the voice note).

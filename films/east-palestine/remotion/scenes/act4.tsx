@@ -1,14 +1,14 @@
 import React from 'react';
-import {AbsoluteFill, Img, interpolate, OffthreadVideo, Sequence, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {ease, tween} from '../../../../lib/remotion/motion';
 import {SfxCue} from '../../../../lib/remotion/sfx';
 import {RecordDoc, RecordPage} from '../docs';
-import {ActTitle, media, Mount, STRIP, useFilmFrame} from '../kit';
+import {ActTitle, media, Mount, useFilmFrame} from '../kit';
 import {Card, Honesty, lit, mono, offW, onW, Pop} from '../parts';
 import {BearingSection} from '../parts2';
-import {VerdictCard} from '../parts3';
+import {RealFootage, VerdictCard} from '../parts3';
 import {BlindStrip, Chains, erAt, erSec, PlotEvent, TankPlot} from '../parts4';
 import {ef, hold, sf, wf} from '../timing';
 import {SceneDef} from './types';
@@ -565,17 +565,11 @@ const Plot: React.FC = () => {
 				</div>
 				{line('NTSB RIR-24-05 P. 154', wf(161, 'hard'), 26)}
 			</Beat>
-			{/* the plume (hold after s160): 4 s of the county's drone video, credited */}
+			{/* the hold after s160 (2026-11-06): the county's drone video (rights not cleared) is out; the EPA aircraft's
+			    photograph of the next afternoon, labelled with its own date: the cars still smoking */}
 			{plumeO > 0 ? (
-				<AbsoluteFill style={{opacity: plumeO}}>
-					<div style={{position: 'absolute', left: 160, top: 100, width: 1600, height: 900, overflow: 'hidden', background: colors.void, border: `1px solid ${colors.border}`}}>
-						<Sequence from={PLUME.from - 4} durationInFrames={PLUME.frames + 20} layout="none">
-							<OffthreadVideo src={media('excerpts/plume_item57.mp4')} muted style={{width: 1600, height: 900}} />
-						</Sequence>
-					</div>
-					<div style={{position: 'absolute', left: 160, top: 1000 - STRIP, width: 1600, height: STRIP, background: colors.card, display: 'flex', alignItems: 'center', padding: '0 16px', ...T(26, {color: colors.ink})}}>
-						<span style={{color: colors.amber, marginRight: 14}}>06 FEB 2023 · THE VENT AND BURN</span> COLUMBIANA COUNTY COMMISSIONER'S OFFICE DRONE VIDEO · NTSB DOCKET ITEM 57
-					</div>
+				<AbsoluteFill style={{opacity: plumeO, background: colors.void}}>
+					<RealFootage f={f} start={PLUME.from - 14} end={PLUME.from + PLUME.frames + 14} src="img/epa_aspect_20230207_6262.jpg" date="07 FEB 2023" what="THE NEXT AFTERNOON, STILL SMOKING" source="U.S. EPA AIRCRAFT · PUBLIC DOMAIN" push={0.06} focus={[0.6, 0.5]} box={{x: 160, y: 100, w: 1600, h: 900}} />
 				</AbsoluteFill>
 			) : null}
 		</>
