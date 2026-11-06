@@ -645,6 +645,12 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   repo uses **at most 6 runners at once** (the workflow's default). Before a big render, check what is already running
   on the account (GitHub MCP `actions_list`); use more only when nothing else is running, fewer when something is.
   Never re-render a shard that already passed (`join_from`).
+- **One block failed? Re-render only it (2026-11-06):** trigger the workflow again with the same `runners` (so the plan
+  names the same blocks), `blocks` = the failed block(s) (e.g. `25200-36000`) and `reuse_from` = the earlier run's id:
+  the join takes the earlier run's shards, lays this run's over them, and checks the whole film. A plain "re-run
+  failed jobs" re-renders the OLD commit, so it cannot carry a fix. *Why:* a word cue that named "industry" for the
+  spoken "industry's" threw at frame 28144 on a runner; stills had never landed on it. `scripts/sync_audit.py` now
+  fails on any `wf()`/`wef()` whose word is not in its sentence, so this is caught before a render.
 - **Public repo, public logs:** never echo a secret; a render that holds third-party excerpts goes to Drive, never to
   a run artifact; shard artifacts are kept 7 days at most.
 - **Seams and shot times:** a shard's frame count is round(length × fps), checked by `render_shards.mjs`; check a strip

@@ -140,7 +140,7 @@ const Billing: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const chunks: [string, number][] = [
-		["it's in the interest", wf(74, 'industry')],
+		["it's in the interest", wf(74, "industry's")],
 		['of the operating railroad', wf(74, 'point')],
 		['not to have derailments', wf(74, 'railroad')],
 		['attributable to hot bearings', wf(74, 'derailment')],

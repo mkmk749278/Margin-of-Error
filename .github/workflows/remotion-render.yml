@@ -30,6 +30,12 @@ on:
       join_from:
         description: "run id: skip rendering, join that run's shards (kept 7 days)"
         default: ""
+      blocks:
+        description: "only these frame blocks, comma-separated as the plan names them (e.g. 25200-36000); empty = the whole film"
+        default: ""
+      reuse_from:
+        description: "run id whose shards fill every block not rendered here (use with blocks; kept 7 days)"
+        default: ""
 
 permissions:
   contents: read
@@ -51,6 +57,7 @@ jobs:
         env:
           FILM: ${{ inputs.film }}
           RUNNERS: ${{ inputs.runners }}
+          BLOCKS: ${{ inputs.blocks }}
         run: |
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
           import json, os
@@ -60,6 +67,10 @@ jobs:
           n = max(1, min(20, int(os.environ["RUNNERS"])))
           size = -(-len(starts) // n)
           blocks = [f"{s[0]}-{s[-1]}" for s in (starts[i:i + size] for i in range(0, len(starts), size))]
+          only = [b.strip() for b in os.environ.get("BLOCKS", "").split(",") if b.strip()]
+          if only:  # re-render just these blocks (a failed shard): each must be one the plan would make
+              assert all(b in blocks for b in only), f"blocks {only} not in the plan {blocks}"
+              blocks = only
           print("blocks=" + json.dumps(blocks))
           EOF
 
@@ -120,6 +131,15 @@ jobs:
           node-version: "22.11.0"
       - name: Install
         run: npm ci --no-audit --no-fund && npx remotion browser ensure
+      - name: Earlier run's shards (reuse_from), overwritten below by this run's
+        if: inputs.reuse_from != ''
+        uses: actions/download-artifact@v4.1.8
+        with:
+          pattern: shards_*
+          path: out
+          merge-multiple: true
+          run-id: ${{ inputs.reuse_from }}
+          github-token: ${{ github.token }}
       - uses: actions/download-artifact@v4.1.8
         with:
           pattern: shards_*
