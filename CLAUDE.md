@@ -12,14 +12,21 @@ for word (Part G). Read the parts that apply before starting work. **Skills in `
 `/deliver`); they point to the playbook and hold no rules of their own. Add new lessons to the playbook (with the reason),
 never to new doc files.
 
-## Your role: creative director and lead investigator
-Claude decides the case, the angle, the evidence, the narration, the look, the sound, the thumbnail, the title and
-the description. Be creative and smart, and stick to the rules.
-- **Craft rules are a floor, not a ceiling.** When a bolder idea serves the viewer better, use it, write why in the
-  film's `treatment.md`, and log the lesson in the playbook.
+## Your role: creative director, lead investigator, writer and YouTuber
+Claude decides the case, the angle, the evidence, the story, the narration, the look, the sound, the thumbnail, the
+title and the description. **The goal is views, because views are revenue** (owner, 2026-11-06), and on YouTube views
+come from satisfied viewers: the ranking counts minutes viewers rate as time well spent, Test & Compare picks the
+package by watch time, and a catalogue that looks templated is demonetised channel-wide (strategy research
+2026-11-06, `docs/research/2026-11-06_youtube_strategy_deep_research.md`, PLAYBOOK §4.1d). So **the story comes
+first**: case, angle, narration and story building carry the film; everything else serves them.
+- **Craft rules are a floor, not a ceiling** (owner, 2026-11-06: "no ceiling on anything, be creative everywhere").
+  The repo's rules are traps set for known mistakes, never a template: when a bolder idea serves the viewer better,
+  use it, write why in the film's `treatment.md`, and log the lesson in the playbook. **Each film must look and play
+  differently from the last** (cold-open form, hero build, title formula, thumbnail composition): sameness across the
+  catalogue is a monetisation risk, not only a craft one (PLAYBOOK §14.2a).
 - **The hard lines never bend:** facts from primary records, fair attribution, honesty labels, licences, respect,
   channel separation, "polished only", and the owner's decisions.
-- **Never settle for the first idea:** 3+ angles, 3+ cold opens, 3+ thumbnail concepts per film; 2–3 signature
+- **Never settle for the first idea:** 3+ angles, 3+ cold opens, 3+ thumbnail concepts, 30+ titles per film; 2–3 signature
   moments (the exhibit line that lands, the reading that crosses the threshold).
 - **Ask the owner with choices** (AskUserQuestion, recommended option first, one-line reason each) when a decision is
   theirs. Never ask what a sensible default or the repo answers.
@@ -76,7 +83,11 @@ the description. Be creative and smart, and stick to the rules.
   paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 - Build in phases; at the end of each, stop and report what was built, what was checked and what is left.
 - Once the owner approves a cut, stop editing it.
-- **Package first:** title, thumbnail concept and search terms in the film's `brief.md` before the script.
+- **Package first:** title, thumbnail concept and search terms in the film's `brief.md` before the script; 30+ title
+  variants, cut to three title-and-thumbnail pairs for Test & Compare (PLAYBOOK §13.2). Concrete titles that state
+  the case and the decision; an investigator's own verdict word ("preventable") is allowed when attributed, our own
+  adjectives and question bait never. The case name the viewer types is in the title, thumbnail, description line 1
+  and the spoken first minute (a new channel is matched on topic).
 - **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13.7): 3 thumbnails, the title and the
   description in click-to-copy blocks, chapters, English SRT, saved in `films/<slug>/youtube/`.
 - **Reviews and comments live in this repo (owner, 2026-11-03).** The independent forensic review runs in a new
@@ -109,16 +120,25 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 `/new-film` walks the whole path and stops at each gate.
 
 ## Format: the five-act forensic investigation (owner's spec §3)
-- **Long-form, about 16–22 minutes**, built for desktop and TV; the evidence sets the length, never a target.
-  2–3 vertical Shorts per film.
-- **Act I, The Incident (0:00–2:30):** in media res on the record (timestamps, radar traces, sensor telemetry,
+- **The story sets the length, with no band** (owner, 2026-11-06: some films run shorter, some longer). Built for
+  TV, desktop and phone. `brief.md` and the treatment state a target run time and justify it beat by beat (each beat
+  names its new fact, exhibit or turn); the cut removes any minute that carries nothing new. Expect roughly 14–35
+  minutes; outside that, one sentence in the treatment says why. Mid-rolls sit in the pause after an act's finding.
+- **A Short only where a beat works alone in 20–30 s** (one exhibit line, one threshold crossing), always linked to
+  the film; none is fine when no beat qualifies.
+- The five acts are **duties and proportions, not a clock** (the times below are Film 1's shape, a guide only):
+- **Act I, The Incident (about the first 10–15%):** in media res on the record (timestamps, radar traces, sensor telemetry,
   dispatch audio that is public), no greeting, no logo; ends on *where did the margin of error run out?*
-- **Act II, The Mechanism (2:30–6:00):** how the system was designed to work; its fail-safes and redundancy.
-- **Act III, The Boardroom (6:00–11:00):** the documented decision that traded a safety margin for a financial one.
-- **Act IV, The Cascade (11:00–16:00):** the physical consequence, down to the crack, the bearing, the missing bolt.
-- **Act V, The Verdict (16:00–end):** findings, litigation, regulation; the same failure mode still in service
+- **Act II, The Mechanism:** how the system was designed to work; its fail-safes and redundancy.
+- **Act III, The Boardroom:** the documented decision that traded a safety margin for a financial one; it opens on a
+  new exhibit, never a recap (a re-hook point).
+- **Act IV, The Cascade:** the physical consequence, down to the crack, the bearing, the missing bolt.
+- **Act V, The Verdict:** findings, litigation, regulation; the same failure mode still in service
   (sourced); an understated sign-off. Channel name only in the outro.
-- Times are a guide; the open question lands by 2:30 and an open loop is named in the first 60 s.
+- **Fixed times, because the evidence supports them:** the thumbnail's exhibit is on screen by 0:07; the open loop
+  (a new hook the thumbnail didn't promise) by about 0:30; the open question by 2:30; re-hooks near minutes 3 and 6.
+- **A human through-line from the record:** one person in a public role (the inspector, the engineer who testified,
+  the crew) whose documented words carry the film; never victims' faces, never more than the record shows.
 - **The first 45 s in three beats (2026-11-06, PLAYBOOK §5.1a):** 0:00–0:10 the anomaly on the record; 0:10–0:25 the
   stakes beyond this one failure; 0:25–0:45 the method (which records we read). Each act ends with its finding, the
   contradiction it exposes, and the next act's question.

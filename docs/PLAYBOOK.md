@@ -265,6 +265,23 @@ One spelling (American), one date form (`05 JAN 2024`), one fairness standard fo
   composition and finish; rebuild on the real exhibit. Drop anything it invents: a regenerated photo, HUD numbers
   that mean nothing, a circle on a part that is not what it implies, a generator's watermark.
 
+### 4.1d What the 2026 strategy research changes (2026-11-06, `docs/research/2026-11-06_youtube_strategy_deep_research.md`)
+The full report carries the sources and strength marks; the rules it changes are written into §5, §12, §13, §14 and
+§17.4. In one paragraph: **YouTube ranks on predicted satisfaction**, not clicks ("valued watch time" counts minutes
+viewers rate 4–5 stars; Test & Compare picks by watch time; subscribers skip about 90% of uploads, so every film wins
+new viewers on its own; a new channel is matched on the video's topic; old films resurface when an event makes them
+relevant). **The July 2025 "inauthentic content" rule** reviews the channel as a whole and targets templated sameness
+and narration that only reads other people's material, not AI voices or faceless formats. **Length follows the
+story:** high performers cluster at 18–24 min, padded ultra-long was demoted in 2025, TV (15.8% of all US TV viewing,
+Nielsen Aug 2026; about 46% of UK in-home YouTube, Ofcom 2026) rewards depth only while it holds. **Audiences**
+trust the document, not the messenger (trust in news: US 25%, UK 30%, Canada 37%, DNR 2026; Republicans 8% trust the
+media, Democrats 11% trust big business: scrutinise company and regulator alike); 45% want news that takes no side
+against 20% who want their own view (DNR 2026). The synthetic voice's trust cost comes from felt deception, not from
+the sound (weak evidence), so visible human editorial work is the defence. **The white space:** no active channel
+delivers the documented decision that removed the margin, proven from primary records, with the physics solved, in a
+neutral voice; faceless template films on the same pitch get 7–260 views, so the idea alone wins nothing, the visible
+quality does. CSB's unpackaged animations at 0.4–0.7M views show demand for the record itself.
+
 ### 4.1a Where we have space, and our edge (research 2026-11-02, `docs/research/2026-11-02_landscape.md`)
 Four neighbouring lanes are each strong and each stop short: aviation-disaster channels stay in the cockpit;
 corporate/finance explainers tell the failure without showing it (and often editorialise); engineering-failure
@@ -295,9 +312,23 @@ mode · the "smoking gun" primary document · the target length. If the decision
 research, the case waits.
 
 ## 5. Story architecture
-The five acts (Part G §3) are the spine; times are guides, the evidence sets the length (about 16–22 minutes).
+The five acts (Part G §3) are the spine, as **duties and proportions, not a clock** (owner, 2026-11-06: the story sets
+the length; some films run shorter, some longer). The act times below are Film 1's shape, a guide only.
+- **The length is argued, not assumed:** `brief.md` and the treatment state a target run time and justify it beat by
+  beat (each beat names its new fact, exhibit or turn); the cut removes any minute that carries nothing new. Expect
+  roughly 14–35 minutes; outside that, one sentence in the treatment says why. *Why:* no source names a best length;
+  satisfaction per minute is what ranks (§4.1d).
+- **Fixed times, because the evidence supports them:** the thumbnail's exhibit on screen by 0:07; the open loop by
+  about 0:30; the open question by 2:30; re-hooks near minutes 3 and 6, whatever act they fall in.
+- **A human through-line from the record:** one identifiable person in a public role (the inspector who flagged it,
+  the engineer who testified, the crew the report describes), carried by their own documented words. Never victims'
+  faces, never more than the record shows (§9.6). *Why:* identifiable characters are among the strongest drivers of
+  narrative transportation (van Laer et al., meta-analysis of 132 effects).
 
-### 5.1 Act I: the incident (0:00–2:30)
+### 5.1 Act I: the incident (about the first 10–15%; the question by 2:30)
+- **Confirm the click in 7 seconds:** the exhibit the thumbnail promised is on screen by 0:07, and a new hook the
+  thumbnail did not promise lands by about 0:30; US/UK glosses come after the hook. *Why:* practitioner data on
+  first-minute loss (Galloway 2025; the leaked MrBeast guide: 21M of 60M viewers lost in the first minute).
 - **In media res on the record:** the first frame is the event's own data (a timestamp, an altitude, a detector
   reading, a dispatch line that is public). No greeting, no logo, no channel name.
 - Real audio only when it is public and licensed (§9.5). Otherwise the record is shown, not heard: a transcript line
@@ -310,28 +341,29 @@ The five acts (Part G §3) are the spine; times are guides, the evidence sets th
   the viewer knows what the film will audit. The treatment's beat sheet marks all three.
 - **Act turns in three steps:** close the act on its finding; show the contradiction that finding exposes; turn it
   into the next act's question. *Why:* a resolved act with no new question is where viewers leave.
-- **Name the open loop in the first 60 s** (what we will find, and roughly when), and end the act on the question
+- **Name the open loop by about 0:30, at the latest 60 s** (what we will find), and end the act on the question
   *where did the margin of error run out?* (said or shown, not every film word for word).
 
-### 5.2 Act II: the mechanism (2:30–6:00)
+### 5.2 Act II: the mechanism
 How the system was designed to work under ideal conditions: the load path, the redundancy factor, the interlock, the
 inspection gate. Every number from the standard, certificate or report. The viewer must understand the margin before
 they can feel it shrink.
 
-### 5.3 Act III: the boardroom (6:00–11:00)
-The investigative turn. Exhibits: SEC filings (10-K, 8-K, proxy), buyback authorizations, contracts, memos produced
+### 5.3 Act III: the boardroom
+The investigative turn. **It opens on a new exhibit, never a recap:** it usually falls near the minute-6 re-hook point. Exhibits: SEC filings (10-K, 8-K, proxy), buyback authorizations, contracts, memos produced
 in litigation or to Congress, testimony, regulator findings. **The act must identify a dated, documented decision**
 and show, with the record, how it reached the factory floor or the inspection gate. When the record holds one, the
 act includes **the concealed warning**: the whistleblower memo, the ignored non-conformance report, the overruled
 inspection finding, from public records only (dockets, hearing exhibits, court filings, committee reports). Where the link is our reading,
 the narration says so ("Read together, these documents suggest…"), and the fairness pass (§9.6) checks it.
 
-### 5.4 Act IV: the cascade (11:00–16:00)
+### 5.4 Act IV: the cascade
 The physical consequence, down to the mechanism: crack growth, thermal runaway in a bearing, a missing fastener, a
-sensor saturating, a ticket never opened. This is the most technical act and the one we draw best: cutaways, load
+sensor saturating, a ticket never opened. **The margin ledger:** the cascade as 3–10 numbered links on screen, each
+filled in as the record proves it (more than 10 are merged: long lists feel generic). This is the most technical act and the one we draw best: cutaways, load
 paths, readouts crossing thresholds in Failure Red.
 
-### 5.5 Act V: the verdict (16:00–end)
+### 5.5 Act V: the verdict
 Findings, penalties, litigation (with status and date), regulatory change or its absence. Then the unresolved risk:
 where the same failure mode is still in service, **sourced** (fleet counts, audits, regulator statements). **The
 reconciliation:** the documented saving against the documented cost (fines, settlements, write-downs, compensation),
@@ -824,7 +856,8 @@ archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real p
   end (slots overlap and crossfade; a "silence" is a low drone under the room tone).
 - **Where the music comes from:** the channel's own library (§12.1), one bed per act from its `use` column.
 - **No dead air (owner, 2026-11-03: "so many audio gaps, it feels like the video stopped").** Edit holds
-  (`script/holds.json`) are 0.8 s at most; only act turns and the two or three signature beats get 1.5–3 s, and
+  (`script/holds.json`) are 0.8 s at most; only act turns, the two or three signature beats and **one contemplative
+  beat per act** (after its exhibit line lands, up to about 1.5 s, music continuous; 2026-11-06) get 1.5–3 s, and
   something visibly moves through every one (§6.4). The word-level picture (§10.6) does the work holds used to do.
   *Why:* 55 holds of 2–4 s (124 s) plus music-out stretches of 25 and 50 s made 26% of Film 1's runtime silence
   between sentences; cut to 54 s of holds, the film went from 16:15 to 15:05 and plays as one continuous piece.
@@ -930,6 +963,10 @@ what people watch together; satisfaction counts beside watch time; tags barely m
 watch-time share. So: the main search phrase in the title's first ~40 characters and said in the first minute;
 description line 1 carries it; chapter names are search phrases; upload our exact SRT; three thumbnails in Test &
 Compare; read Studio at 48 h, 7 days and 28 days.
+**Since the 2026 research (§4.1d):** the ranking predicts satisfaction, so the target is minutes viewers rate as well
+spent, never clicks alone; a new channel is matched on topic, so **the case name the viewer types is in the title,
+thumbnail, description line 1 and the spoken first minute**; a film resurfaces when an event (a final report, a
+ruling, an anniversary) makes it relevant again, so update its description and pinned comment that day.
 
 ### 13.2 Title
 The case + the margin, factual, curiosity without clickbait: *The Four Missing Bolts* works because it is exactly
@@ -945,7 +982,13 @@ true. No question-mark bait, no "EXPOSED", no all-caps, no tabloid words ("shock
   promise only if the film pays it off.
 - **Rejected forms:** a false absolute ("Nobody knows who…" when the record says the interviews identified no one);
   an implied motive or knowledge ("Boeing knew"); a question mark.
-- **Write three titles, one per angle, each paired with its own thumbnail;** keep a search-safe fallback (company +
+- **Write 30+ title variants** across the three angles (2026-11-06; Galloway writes 30–40), then cut to three, each
+  paired with its own thumbnail. Concrete summary titles beat questions and curiosity bait (Scacco and Muddiman: 6,701
+  vs 5,324 views across 5,288 headlines). **In this niche the titles that win state a verdict on the decision for one
+  named case;** a verdict word is allowed only when the investigator said it and the film attributes it
+  ("preventable": the USCG board on Titan, Ofgem on North Hyde), never our own adjective. The literal "what the report
+  found" form is the fallback, not the first choice: it is what the zero-view template channels use.
+- **The three titles, keep a search-safe fallback (company +
   report + flight) for a low click-through rate at 7 days.
 
 ### 13.3 Thumbnail
@@ -981,12 +1024,17 @@ the redaction). Readable on a phone in one second. Honest: what is shown is in t
 
 ### 13.4 Description
 Two or three plain lines on the case, then chapters (`0:00` first), then **sources** (the records the film is built
-on, with links): for a forensic channel the source list is part of the trust. Name the institutions and record ids
+on, with links): for a forensic channel the source list is part of the trust. **Method statement** (2026-11-06): the
+About page and every description say which records the film uses, how claims are checked, and the corrections
+policy; a correction is pinned the day we learn of it. *Why:* YouTube's channel-level review reads the About page and
+metadata, and viewers in this niche reward visible care ("thank you for taking your time to get all the facts"). Name the institutions and record ids
 (NTSB DCA24MA063, SEC Form 10-K, FRA, FAA): they are what the film is about, and search reads them. No AI disclosure line (the Studio
 setting carries it), no hashtags spam, no cross-promotion.
 
 ### 13.5 Shorts
-2–3 per film: one exhibit line, one threshold crossing, one mechanism. Same fairness and fact rules.
+**Only where a beat works alone in 20–30 s** (one exhibit line, one threshold crossing, one mechanism), always with the
+related-video link to the film; none is fine when no beat qualifies (2026-11-06: the lift from Shorts to long-form is
+correlational). Same fairness and fact rules.
 
 ### 13.6 Launch
 **Each film goes up when it is finished** (owner, 2026-11-02), in slate order (§17.4); each end screen points to the
@@ -1004,7 +1052,14 @@ says otherwise. "Final report" films slot in when a report publishes.
   before widening.
 - **Read Studio at 24 hours.** Impressions over 1,500 and click-through under 2.5%: switch to the challenger thumbnail,
   unless Test & Compare is still running (let it finish).
-- **Then at 7 and 28 days:** click-through and impressions per traffic source (browse, suggested, search), retention at
+- **Test & Compare on titles as well as thumbnails** (2026-11-06): it picks by watch time; run the full two weeks, never
+  edit the package by hand mid-test, log the result in `films/<slug>/youtube/`.
+- **Mid-roll markers at act turns:** place manual mid-rolls in the pause after each act's finding and check in Studio
+  that automatic slots don't land mid-sentence (automatic plus manual earned >5% more in YouTube's test).
+- **Before upload, write a predicted outcome** (impressions, click-through, average view duration, TV share at 7 days)
+  in `films/<slug>/youtube/`, to judge the reads against.
+- **Then at 7 and 28 days** (plus the satisfaction proxies: minutes watched per impression, the device split with TV
+  share, likes per view, returning viewers): click-through and impressions per traffic source (browse, suggested, search), retention at
   0:30, 1:00 and each act turn, rewinds and cliffs with what was on screen, the search-terms report. Low click-through
   with good retention: the package failed the film (the search-safe fallback title, §13.2). High click-through with an
   early cliff: the film broke its promise; fix the next film's opening. Each lesson into §16 and the rule it changes.
@@ -1092,6 +1147,13 @@ question from the record (which layer should have caught it?), no link, no subsc
 - Write `review/picture_gate_rN.md` (issue → time and scene → fix), fix, render the next round, review again. One cut
   per round: collect every fix first, never re-render to fix one thing mid-review.
 - Independent reviews of the cut (§14.5) and the forensic review (§14.4).
+
+### 14.2a Catalogue distinctness, before every release (2026-11-06)
+Compare the new film with every published one on four things: cold-open form, hero build, thumbnail composition, title
+formula. Two matches out of four means a rework of one of them. Narration that only reads a report aloud fails: every
+quoted passage is followed by our own analysis (the mechanism solved, the decision joined to the margin). *Why:*
+YouTube's "inauthentic content" review (July 2025) judges the channel as a whole and targets templated sameness and
+"readings of other materials"; a strong pipeline that repeats itself is the one structural threat to monetisation.
 
 ### 14.3 Outside reviews: check every point before fixing (2026-11-03)
 An outside review (another tool, a reviewer the owner asked, a viewer) is a list of leads. Check each point against
@@ -1468,6 +1530,16 @@ GOES, told through AI data-centre demand; owner, 2026-11-02).**
 interest, a film made from the final report and its docket: breaking-news reaction is crowded, the final-report film
 much less, and sourcing is our edge. Candidates to watch: the January 2025 Washington National midair, UPS 2976
 (Louisville). Check each report's publication status before planning; never schedule against an expected date.
+
+**Candidates from the 2026 strategy research** (ranked; leads only, each needs its case sheet from the primary
+record; full table in `docs/research/2026-11-06_youtube_strategy_deep_research.md`): **Heathrow North Hyde substation
+fire** (UK, NESO final July 2025; a fault first found in 2018; Ofgem enforcement pending), **the Potomac midair**
+(NTSB AIR-26-02; the regulator's decisions are Act III), **Baltimore Key Bridge** (NTSB final 18 NOV 2025),
+**UPS 2976** (build the final-report kit now: mechanism, fleet history, exhibits; release within days of the report),
+**the Iberian blackout** (ENTSO-E final 2026), **Optus Triple Zero** (Australia; software decision with a documented
+margin), **Titan from the USCG report**, **Camp Fire / PG&E** (the clearest coverage gap). Grenfell and Post Office
+Horizon stay on hold for the UK contempt check. CSB reports with a decision layer are a steady stream (CSB's own
+unpackaged animations draw 0.4–0.7M views).
 
 **The bank of later cases** (from the strategy review; each needs its case sheet filled from primary records first):
 Baltimore Key Bridge (NTSB, MV Dali), OceanGate Titan (USCG MBI report), Grenfell (Inquiry Phase 2), Carillion and
