@@ -1,4 +1,18 @@
-# The Four Missing Bolts: status and handoff (2026-11-04)
+# The Four Missing Bolts: status and handoff (2026-11-06)
+
+## Re-voice with Marcus (2026-11-06; the owner took the voice-"1" upload down)
+- **Voice:** "Marcus - Baritone(Stoic)", Eleven v4, stability 0.5. 12,097 characters, text unchanged (2,091 words,
+  matched word for word to the final narration). Film now **13:44.2** (narration 756 s; 55 holds, 54.1 s). Open-loop
+  window scaled to Marcus's pace (260–310 s; the gap is 283 s, and "about five minutes" stays true).
+- **Checks:** `vo_review.py --model medium.en` 99.5–100% of words as written; every flag checked on its own cut
+  (number formatting; one diff artefact). Word alignment re-run (2,097 words). Three cues added (s26 "between", s143
+  "jelly", s150 "airplane"); sync 177/177. Stills swept every 8 s: clean.
+- **Mix:** slots and the wind cue mapped sentence by sentence: −14.00 LUFS, −1.40 dBTP, voice −2.4 dBTP; Drive
+  `mix/mix.wav` (the voice-1 mix kept as `mix_voice1.wav`). Takes: Drive `vo/marcus/`; full narration
+  `vo/four-missing-bolts_narration_marcus_full.mp3`.
+- **Next:** owner approves the audio; 720p review cut (after the East Palestine render, inside the runner budget);
+  review; owner approves the cut; 4K master; the package again with the voice note in the description.
+
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
 

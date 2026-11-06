@@ -275,7 +275,7 @@ const Seal: React.FC = () => {
 	const {fps} = useVideoConfig();
 	const a = sf(143) - 10;
 	const end = sf(144) + 6;
-	const S = {record: wf(143, 'record'), climb: wf(143, 'climb'), parallel: wf(143, 'parallel'), lines: wf(143, 'lines'), dust: wf(143, 'dust'), dirt: wf(143, 'dirt'), petroleum: wf(143, 'petroleum'), seal: wf(143, 'seal'), marking: wf(143, 'marking'), steps: wf(143, 'steps')};
+	const S = {record: wf(143, 'record'), climb: wf(143, 'climb'), parallel: wf(143, 'parallel'), lines: wf(143, 'lines'), dust: wf(143, 'dust'), dirt: wf(143, 'dirt'), petroleum: wf(143, 'petroleum'), jelly: wf(143, 'jelly'), seal: wf(143, 'seal'), marking: wf(143, 'marking'), steps: wf(143, 'steps')};
 	// one line a step, from "parallel" to "steps"
 	const n = Math.round(rollTo(f, [{frame: S.parallel - 10, value: 0}, {frame: S.steps + LAND, value: 9}], true));
 	return (
@@ -300,7 +300,8 @@ const Seal: React.FC = () => {
 				{t: 'PARALLEL LINES', at: S.lines, tone: colors.amber},
 				{t: '· DUST', at: S.dust},
 				{t: '· DIRT', at: S.dirt},
-				{t: '· PETROLEUM JELLY', at: S.petroleum},
+				{t: '· PETROLEUM', at: S.petroleum},
+				{t: 'JELLY', at: S.jelly},
 				{t: '· ALONG THE SEAL', at: S.seal, br: true},
 				{t: '· MARKING ITS STEPS', at: S.marking, tone: colors.amber},
 			]} />
@@ -366,6 +367,7 @@ const Separation: React.FC = () => {
 		twisted: wf(149, 'twisted'),
 		plug2: wf(150, 'plug'),
 		left: wf(150, 'left'),
+		airplane: wf(150, 'airplane'),
 		up: wf(150, 'up'),
 		out: wf(150, 'out'),
 		back: wf(150, 'back'),
@@ -426,7 +428,8 @@ const Separation: React.FC = () => {
 					{t: '· TWISTED', at: P.twisted, tone: colors.red},
 				]} />
 				<KeyLine f={f} fps={fps} start={P.plug2 - 10} end={end} x={0} y={370} w={560} size={34} parts={[
-					{t: 'THE PLUG LEFT:', at: P.left, tone: colors.red},
+					{t: 'THE PLUG LEFT', at: P.left, tone: colors.red},
+					{t: 'THE AIRPLANE:', at: P.airplane, tone: colors.red},
 					{t: 'UP', at: P.up, tone: colors.red},
 					{t: '· OUT', at: P.out, tone: colors.red},
 					{t: '· AFT', at: P.back, tone: colors.red},

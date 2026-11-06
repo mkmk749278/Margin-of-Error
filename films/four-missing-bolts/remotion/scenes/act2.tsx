@@ -162,6 +162,7 @@ const Restraints: React.FC = () => {
 		restraint: wf(26, 'restraint'),
 		place: wf(26, 'place'),
 		difference: wf(26, 'difference'),
+		between: wf(26, 'between'),
 		whole: wf(26, 'whole'),
 		twelve: wf(27, 'twelve'),
 		six: wf(27, 'six'),
@@ -249,7 +250,7 @@ const Restraints: React.FC = () => {
 				</div>
 				<div style={{display: 'flex', alignItems: 'center', gap: 12, opacity: on(f, R.place, 10), transform: `scale(${bump(f, fps, R.whole + LAND).toFixed(4)})`, transformOrigin: '0 50%'}}>
 					<span style={{width: 26, height: 10, background: colors.amber}} />
-					BOLTS · AGAINST <span style={{...litStyle(f, R.difference + 12, colors.amber), fontWeight: 700}}>UPWARD</span>
+					BOLTS · AGAINST <span style={{...litStyle(f, R.between, colors.amber), fontWeight: 700}}>UPWARD</span>
 				</div>
 			</div>
 			{/* "Twelve … six down each side": the count, said and shown */}
