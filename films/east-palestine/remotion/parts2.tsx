@@ -28,8 +28,12 @@ export const BearingSection: React.FC<{
 	spin?: number;
 	jitter?: number;
 	scanOn?: number | null;
+	/** burn-off (Act IV): grease burned 0..1, seals gone 0..1, the journal broken away and dropping 0..1 */
+	burn?: number;
+	sealsGone?: number;
+	drop?: number;
 	labels?: {t: string; at: number; x: number; y: number; tone?: string}[];
-}> = ({f, x, y, scale = 1, axleOn, cupOn, rollersOn, sealsOn, greaseOn, heat = 0, outsideHeat = 0, spin = 0, jitter = 0, scanOn, labels = []}) => {
+}> = ({f, x, y, scale = 1, axleOn, cupOn, rollersOn, sealsOn, greaseOn, heat = 0, outsideHeat = 0, spin = 0, jitter = 0, scanOn, burn = 0, sealsGone = 0, drop = 0, labels = []}) => {
 	const L = (at: number, d = 14): number => lead(f, at, d);
 	const cupX = 360;
 	const cupW = 640;
@@ -50,11 +54,16 @@ export const BearingSection: React.FC<{
 			</defs>
 			{/* the axle's journal */}
 			<g opacity={L(axleOn, 18)}>
-				<rect x={0} y={250} width={1100} height={100} fill={colors.card} stroke={colors.sub} strokeWidth={3} />
-				<rect x={0} y={230} width={300} height={140} fill={colors.card} stroke={colors.sub} strokeWidth={3} />
+				{/* the wheelset side drops when the journal breaks away (Act IV) */}
+				<g transform={`translate(${(-40 * drop).toFixed(1)} ${(200 * drop * drop).toFixed(1)}) rotate(${(10 * drop).toFixed(2)} 330 300)`}>
+					<rect x={0} y={250} width={330} height={100} fill={colors.card} stroke={drop > 0 ? colors.red : colors.sub} strokeWidth={3} />
+					<rect x={0} y={230} width={300} height={140} fill={colors.card} stroke={drop > 0 ? colors.red : colors.sub} strokeWidth={3} />
+				</g>
+				<rect x={330} y={250} width={770} height={100} fill={colors.card} stroke={colors.sub} strokeWidth={3} />
+				{drop > 0 ? <path d="M 330 240 L 345 270 L 322 300 L 345 330 L 330 360" fill="none" stroke={colors.red} strokeWidth={6} /> : null}
 			</g>
 			{/* grease fills the space between cup and cones */}
-			{greaseOn ? <rect x={cupX + 20} y={cupY + 30} width={cupW - 40} height={cupH - 60} fill={colors.amber} opacity={0.16 * L(greaseOn, 20)} /> : null}
+			{greaseOn ? <rect x={cupX + 20} y={cupY + 30} width={cupW - 40} height={cupH - 60} fill={burn > 0.5 ? colors.red : colors.amber} opacity={0.16 * L(greaseOn, 20) * (1 - burn) + 0.3 * burn * (1 - burn) * 4 * 0.25} /> : null}
 			{/* heat from the inside */}
 			{heat > 0 ? <ellipse cx={cupX + cupW / 2} cy={300} rx={420 * (0.6 + 0.4 * heat)} ry={200 * (0.6 + 0.4 * heat)} fill="url(#bheat)" opacity={heat} /> : null}
 			{/* the outer cup */}
@@ -79,7 +88,7 @@ export const BearingSection: React.FC<{
 				)}
 			</g>
 			{/* seals at each end */}
-			<g opacity={L(sealsOn, 12)}>
+			<g opacity={L(sealsOn, 12) * (1 - sealsGone)}>
 				{[cupX - 20, cupX + cupW].map((sx) => (
 					<g key={sx}>
 						<rect x={sx} y={cupY + 40} width={20} height={70} fill={colors.amber} />

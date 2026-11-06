@@ -1,6 +1,6 @@
 # Sync audit: east-palestine
 
-198 sentences · 636 word cues on 2706 words · 76 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+198 sentences · 1006 word cues on 2706 words · 21 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -116,70 +116,70 @@
 | 109 | 11:08.4 | 9/30 | 1.4 s ok |  | What the record does show is where the stop line was drawn: at a numbe |
 | 110 | 11:18.7 | 6/13 | 1.5 s ok |  | A claim you will find in many comment sections: cost cutting caused th |
 | 111 | 11:23.8 | 2/4 | 0.8 s ok |  | The record can't say. |
-| 112 | 11:29.2 | 0/4 | 0.9 s ok |  | Back to the bearing. |
-| 113 | 11:30.7 | 0/11 | 3.4 s **FAIL** |  | As it fails, the rollers and the cup grind and heat. |
-| 114 | 11:34.6 | 0/3 | 1.0 s ok |  | The grease burns. |
-| 115 | 11:35.9 | 0/3 | 0.9 s ok |  | The seals go. |
-| 116 | 11:37.4 | 0/14 | 4.8 s **FAIL** |  | Then the end of the axle, the journal, breaks away, and the wheelset d |
-| 117 | 11:42.8 | 0/5 | 1.9 s **FAIL** | nineteen | Watch the last nineteen miles. |
-| 118 | 11:45.4 | 0/14 | 5.3 s **FAIL** | nineteen forty-five | From Salem, the train runs east, at between nineteen and forty-five mi |
-| 119 | 11:51.4 | 0/7 | 2.8 s **FAIL** |  | Between the detectors, nothing measures the bearing. |
-| 120 | 11:54.8 | 0/8 | 2.8 s **FAIL** | Nineteen | Nineteen miles of track, and nothing reads it. |
-| 121 | 12:01.4 | 0/5 | 2.3 s **FAIL** | forty-nine eight one. | Milepost forty-nine point eight one. |
-| 122 | 12:04.3 | 0/10 | 3.2 s **FAIL** | Two hundred fifty-three | Two hundred and fifty-three degrees, the top of the scale. |
-| 123 | 12:08.2 | 0/2 | 0.9 s ok |  | Critical alarm. |
-| 124 | 12:09.7 | 0/7 | 1.8 s **FAIL** |  | The crew begins to slow the train. |
-| 125 | 12:12.1 | 0/17 | 5.4 s **FAIL** |  | Less than a minute later, the axle separates, and the brakes go into e |
-| 126 | 12:18.2 | 0/20 | 8.2 s **FAIL** | one thousand, one hundred sixty; thirty-eight | From the emergency, the lead locomotives travel another one thousand,  |
-| 127 | 12:28.5 | 0/5 | 1.2 s ok |  | So was it the grease? |
-| 128 | 12:30.2 | 0/4 | 1.2 s ok |  | The record can't say. |
-| 129 | 12:32.0 | 0/13 | 4.7 s **FAIL** |  | The investigators found that the root cause of the bearing's failure r |
-| 130 | 12:37.4 | 0/18 | 7.3 s **FAIL** |  | Whatever started it, fatigue, a loss of lubrication, water, was erased |
-| 131 | 12:45.6 | 0/29 | 9.2 s **FAIL** |  | And the N - T - S - B noted that this is a pattern: a bearing that fai |
-| 132 | 12:55.8 | 0/10 | 5.0 s **FAIL** | three | Another claim: the burn, three days later, destroyed that evidence. |
-| 133 | 13:01.5 | 0/6 | 1.4 s ok |  | That is not in the record. |
-| 134 | 13:04.1 | 0/22 | 7.4 s **FAIL** | fifth February,; first | Investigators recovered the bearing's pieces on the fifth of February, |
-| 135 | 13:12.4 | 0/10 | 3.1 s **FAIL** | sixth, five | The burn was on the sixth, on five other cars. |
-| 136 | 13:16.2 | 0/14 | 4.4 s **FAIL** |  | The fire, the N - T - S - B found, likely began with a tank car. |
-| 137 | 13:21.5 | 0/23 | 8.1 s **FAIL** | one eleven | In the derailment, a D - O - T one eleven tank car carrying a flammabl |
-| 138 | 13:30.7 | 0/12 | 3.9 s **FAIL** | five | In the same pile lay five pressure tank cars of vinyl chloride. |
-| 139 | 13:35.4 | 0/26 | 7.3 s **FAIL** | four | Heat from the fire set off the relief valves on four of them, the valv |
-| 140 | 13:43.7 | 0/11 | 2.8 s **FAIL** |  | The responders did not yet know what was on the train. |
-| 141 | 13:47.2 | 0/32 | 10.5 s **FAIL** |  | The N - T - S - B found that Norfolk Southern's delay in sending the l |
-| 142 | 13:58.8 | 0/12 | 4.4 s **FAIL** |  | Vinyl chloride is the raw material of P - V - C, a plastic. |
-| 143 | 14:03.8 | 0/13 | 4.6 s **FAIL** |  | Its molecules can join into long chains, and that reaction gives off h |
-| 144 | 14:09.3 | 0/14 | 5.2 s **FAIL** |  | In a closed tank, a runaway reaction could build pressure until the ta |
-| 145 | 14:15.3 | 0/4 | 0.9 s ok |  | That was the fear. |
-| 146 | 14:17.2 | 0/4 | 1.2 s **FAIL** | second | Now the second number. |
-| 147 | 14:19.2 | 0/30 | 10.4 s **FAIL** | fourth February, | On the evening of the fourth of February, the shipper of the vinyl chl |
-| 148 | 14:30.5 | 0/17 | 6.9 s **FAIL** | one hundred thirty-eight | The hottest car's temperature, measured by those contractors, peaked a |
-| 149 | 14:38.4 | 0/13 | 4.3 s **FAIL** |  | This time that is the actual temperature, not a number above the air. |
-| 150 | 14:43.5 | 0/15 | 4.5 s **FAIL** | sixth,; one hundred twenty-six. | By the afternoon of the sixth, it had fallen to about one hundred and  |
-| 151 | 14:49.0 | 0/21 | 8.7 s **FAIL** |  | That afternoon the incident commander, the village's fire chief, met t |
-| 152 | 14:58.6 | 0/10 | 4.6 s **FAIL** |  | Oxy Vinyls was not invited, the incident commander told investigators. |
-| 153 | 15:04.0 | 0/20 | 7.3 s **FAIL** |  | The N - T - S - B found no evidence that anyone outside Norfolk Southe |
-| 154 | 15:12.0 | 0/5 | 1.6 s **FAIL** |  | Then came a smaller meeting. |
-| 155 | 15:14.3 | 0/27 | 9.0 s **FAIL** | Two; one hundred fifty-three one hundred fifty-eight | Two contractor firms told him that if a car reached one hundred and fi |
-| 156 | 15:24.2 | 0/20 | 6.4 s **FAIL** |  | The investigators did not find that range in the written guidance cons |
-| 157 | 15:31.4 | 0/11 | 3.7 s **FAIL** | thirteen | The incident commander said he was given thirteen minutes to decide. |
-| 158 | 15:36.0 | 0/34 | 11.3 s **FAIL** | three | The burn, they told him, had to start before three in the afternoon, t |
-| 159 | 15:48.4 | 0/4 | 1.8 s **FAIL** |  | The incident commander consented. |
-| 160 | 15:50.9 | 0/7 | 2.3 s **FAIL** | four thirty-seven. | The charges went off at four thirty-seven. |
-| 161 | 15:58.0 | 0/15 | 4.7 s **FAIL** | Three | Three in the afternoon, the N - T - S - B noted, was not a hard deadli |
-| 162 | 16:03.6 | 0/6 | 2.2 s **FAIL** | Two | Two numbers decided this town's week. |
-| 163 | 16:06.4 | 0/7 | 2.2 s **FAIL** | One | One matched a definition written for billing. |
-| 164 | 16:09.3 | 0/13 | 4.1 s **FAIL** |  | The other, investigators could not find in the guidance used at the sc |
-| 165 | 16:16.0 | 0/20 | 7.9 s **FAIL** |  | The N - T - S - B's finding: the temperatures on scene did not show th |
-| 166 | 16:24.5 | 0/7 | 2.4 s **FAIL** |  | The vent and burn was not necessary. |
-| 167 | 16:27.8 | 0/18 | 8.2 s **FAIL** |  | Norfolk Southern and its contractors, the board found, compromised the |
-| 168 | 16:36.8 | 0/18 | 6.2 s **FAIL** | one | The board also found that one industry guide consulted at the scene ov |
-| 169 | 16:44.0 | 0/41 | 14.7 s **FAIL** | first; twenty | Norfolk Southern's answer: the only motivation of the company and its  |
-| 170 | 16:59.8 | 0/11 | 3.3 s **FAIL** |  | The company does not agree that it withheld the shipper's views. |
-| 171 | 17:04.0 | 0/10 | 4.2 s **FAIL** |  | The incident commander told investigators that he bore the responsibil |
-| 172 | 17:09.3 | 0/16 | 5.2 s **FAIL** | One | One more claim you will often see: they burned it because it was the c |
-| 173 | 17:15.2 | 0/6 | 1.4 s ok |  | That is not in the record. |
-| 174 | 17:17.4 | 0/21 | 7.5 s **FAIL** |  | What is in the record is the urgency, the information the incident com |
-| 175 | 17:25.7 | 0/19 | 5.6 s **FAIL** |  | The N - T - S - B itself could not determine the main reason for the c |
+| 112 | 11:29.2 | 1/4 | 0.5 s ok |  | Back to the bearing. |
+| 113 | 11:30.7 | 5/11 | 0.9 s ok |  | As it fails, the rollers and the cup grind and heat. |
+| 114 | 11:34.6 | 2/3 | 0.5 s ok |  | The grease burns. |
+| 115 | 11:35.9 | 2/3 | 0.4 s ok |  | The seals go. |
+| 116 | 11:37.4 | 6/14 | 1.3 s ok |  | Then the end of the axle, the journal, breaks away, and the wheelset d |
+| 117 | 11:42.8 | 4/5 | 0.5 s ok |  | Watch the last nineteen miles. |
+| 118 | 11:45.4 | 8/14 | 1.1 s ok |  | From Salem, the train runs east, at between nineteen and forty-five mi |
+| 119 | 11:51.4 | 3/7 | 1.5 s ok |  | Between the detectors, nothing measures the bearing. |
+| 120 | 11:54.8 | 4/8 | 1.0 s ok |  | Nineteen miles of track, and nothing reads it. |
+| 121 | 12:01.4 | 4/5 | 1.0 s ok |  | Milepost forty-nine point eight one. |
+| 122 | 12:04.3 | 5/10 | 1.0 s ok |  | Two hundred and fifty-three degrees, the top of the scale. |
+| 123 | 12:08.2 | 2/2 | 0.5 s ok |  | Critical alarm. |
+| 124 | 12:09.7 | 2/7 | 0.8 s ok |  | The crew begins to slow the train. |
+| 125 | 12:12.1 | 7/17 | 1.2 s ok |  | Less than a minute later, the axle separates, and the brakes go into e |
+| 126 | 12:18.2 | 10/20 | 1.3 s ok |  | From the emergency, the lead locomotives travel another one thousand,  |
+| 127 | 12:28.5 | 4/5 | 0.4 s ok |  | So was it the grease? |
+| 128 | 12:30.2 | 2/4 | 0.8 s ok |  | The record can't say. |
+| 129 | 12:32.0 | 5/13 | 1.4 s ok |  | The investigators found that the root cause of the bearing's failure r |
+| 130 | 12:37.4 | 7/18 | 1.5 s ok |  | Whatever started it, fatigue, a loss of lubrication, water, was erased |
+| 131 | 12:45.6 | 8/29 | 1.4 s ok |  | And the N - T - S - B noted that this is a pattern: a bearing that fai |
+| 132 | 12:55.8 | 5/10 | 1.3 s ok |  | Another claim: the burn, three days later, destroyed that evidence. |
+| 133 | 13:01.5 | 2/6 | 0.5 s ok |  | That is not in the record. |
+| 134 | 13:04.1 | 9/22 | 1.2 s ok |  | Investigators recovered the bearing's pieces on the fifth of February, |
+| 135 | 13:12.4 | 5/10 | 1.0 s ok |  | The burn was on the sixth, on five other cars. |
+| 136 | 13:16.2 | 6/14 | 1.0 s ok |  | The fire, the N - T - S - B found, likely began with a tank car. |
+| 137 | 13:21.5 | 11/23 | 1.4 s ok |  | In the derailment, a D - O - T one eleven tank car carrying a flammabl |
+| 138 | 13:30.7 | 4/12 | 1.2 s ok |  | In the same pile lay five pressure tank cars of vinyl chloride. |
+| 139 | 13:35.4 | 8/26 | 1.4 s ok |  | Heat from the fire set off the relief valves on four of them, the valv |
+| 140 | 13:43.7 | 3/11 | 1.3 s ok |  | The responders did not yet know what was on the train. |
+| 141 | 13:47.2 | 10/32 | 1.4 s ok |  | The N - T - S - B found that Norfolk Southern's delay in sending the l |
+| 142 | 13:58.8 | 6/12 | 1.3 s ok |  | Vinyl chloride is the raw material of P - V - C, a plastic. |
+| 143 | 14:03.8 | 7/13 | 1.2 s ok |  | Its molecules can join into long chains, and that reaction gives off h |
+| 144 | 14:09.3 | 6/14 | 1.3 s ok |  | In a closed tank, a runaway reaction could build pressure until the ta |
+| 145 | 14:15.3 | 1/4 | 0.6 s ok |  | That was the fear. |
+| 146 | 14:17.2 | 2/4 | 0.5 s ok |  | Now the second number. |
+| 147 | 14:19.2 | 13/30 | 1.3 s ok |  | On the evening of the fourth of February, the shipper of the vinyl chl |
+| 148 | 14:30.5 | 8/17 | 1.2 s ok |  | The hottest car's temperature, measured by those contractors, peaked a |
+| 149 | 14:38.4 | 5/13 | 1.3 s ok |  | This time that is the actual temperature, not a number above the air. |
+| 150 | 14:43.5 | 5/15 | 1.0 s ok |  | By the afternoon of the sixth, it had fallen to about one hundred and  |
+| 151 | 14:49.0 | 10/21 | 1.4 s ok |  | That afternoon the incident commander, the village's fire chief, met t |
+| 152 | 14:58.6 | 6/10 | 1.1 s ok |  | Oxy Vinyls was not invited, the incident commander told investigators. |
+| 153 | 15:04.0 | 7/20 | 1.3 s ok |  | The N - T - S - B found no evidence that anyone outside Norfolk Southe |
+| 154 | 15:12.0 | 2/5 | 0.7 s ok |  | Then came a smaller meeting. |
+| 155 | 15:14.3 | 13/27 | 1.5 s ok |  | Two contractor firms told him that if a car reached one hundred and fi |
+| 156 | 15:24.2 | 6/20 | 1.4 s ok |  | The investigators did not find that range in the written guidance cons |
+| 157 | 15:31.4 | 6/11 | 1.1 s ok |  | The incident commander said he was given thirteen minutes to decide. |
+| 158 | 15:36.0 | 13/34 | 1.4 s ok |  | The burn, they told him, had to start before three in the afternoon, t |
+| 159 | 15:48.4 | 2/4 | 1.0 s ok |  | The incident commander consented. |
+| 160 | 15:50.9 | 4/7 | 0.7 s ok |  | The charges went off at four thirty-seven. |
+| 161 | 15:58.0 | 6/15 | 1.1 s ok |  | Three in the afternoon, the N - T - S - B noted, was not a hard deadli |
+| 162 | 16:03.6 | 3/6 | 1.2 s ok |  | Two numbers decided this town's week. |
+| 163 | 16:06.4 | 5/7 | 0.6 s ok |  | One matched a definition written for billing. |
+| 164 | 16:09.3 | 5/13 | 1.2 s ok |  | The other, investigators could not find in the guidance used at the sc |
+| 165 | 16:16.0 | 6/20 | 1.4 s ok |  | The N - T - S - B's finding: the temperatures on scene did not show th |
+| 166 | 16:24.5 | 3/7 | 1.4 s ok |  | The vent and burn was not necessary. |
+| 167 | 16:27.8 | 9/18 | 1.2 s ok |  | Norfolk Southern and its contractors, the board found, compromised the |
+| 168 | 16:36.8 | 8/18 | 0.9 s ok |  | The board also found that one industry guide consulted at the scene ov |
+| 169 | 16:44.0 | 17/41 | 1.4 s ok |  | Norfolk Southern's answer: the only motivation of the company and its  |
+| 170 | 16:59.8 | 4/11 | 1.1 s ok |  | The company does not agree that it withheld the shipper's views. |
+| 171 | 17:04.0 | 5/10 | 1.4 s ok |  | The incident commander told investigators that he bore the responsibil |
+| 172 | 17:09.3 | 6/16 | 1.4 s ok |  | One more claim you will often see: they burned it because it was the c |
+| 173 | 17:15.2 | 2/6 | 0.5 s ok |  | That is not in the record. |
+| 174 | 17:17.4 | 9/21 | 1.3 s ok |  | What is in the record is the urgency, the information the incident com |
+| 175 | 17:25.7 | 6/19 | 1.3 s ok |  | The N - T - S - B itself could not determine the main reason for the c |
 | 176 | 17:35.7 | 0/13 | 4.9 s **FAIL** | June twenty twenty-four, | In June twenty twenty-four, the N - T - S - B adopted its final report |
 | 177 | 17:41.5 | 0/20 | 8.0 s **FAIL** | twenty-third | The probable cause: the failure of the bearing on the twenty-third car |
 | 178 | 17:50.1 | 0/32 | 13.1 s **FAIL** | one one billion; twenty twenty-three, three hundred twenty-five million twenty twenty-four. | Norfolk Southern's annual reports put its net cost from the derailment |
