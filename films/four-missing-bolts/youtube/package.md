@@ -32,6 +32,17 @@ Search-safe fallback (if Studio shows low click-through after 7 days):
 Boeing's Four Missing Bolts: The NTSB Final Report on Alaska 1282
 ```
 
+## Thumbnails, CTR fix (2026-11-06; Test & Compare: K, J, I)
+First 1.0K impressions at 1.5% CTR on the drawn "NO BOLTS" thumbnail. New set on the real NTSB photo of the opening
+(flickr.com/photos/ntsb/53450363008, Public Domain Work, 07 JAN 2024), credited on the frame; built by
+`make_thumbnails_real.py <fig01> <flickr photo> <out>`. Text facts: finding 11 (all four bolts missing), C22 (154 cycles).
+
+| File | Text | Note |
+|---|---|---|
+| `thumb_k_154_zero.jpg` | 154 FLIGHTS · 0 BOLTS | **Recommended**: tight on the opening, the number the title promises |
+| `thumb_j_all4_missing.jpg` | ALL 4 BOLTS · MISSING | adds a fact the title doesn't say |
+| `thumb_i_hole_no_bolts.jpg` | 154 FLIGHTS · NO BOLTS | full frame, closest to the title |
+
 ## Thumbnails (Test & Compare: G, F, D)
 | File | Reads | Built from |
 |---|---|---|
