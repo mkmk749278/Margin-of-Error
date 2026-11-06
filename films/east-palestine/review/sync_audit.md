@@ -1,6 +1,6 @@
 # Sync audit: east-palestine
 
-198 sentences · 356 word cues on 2706 words · 119 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+198 sentences · 636 word cues on 2706 words · 76 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -71,51 +71,51 @@
 | 64 | 5:11.7 | 4/12 | 0.9 s ok |  | Had the crew line been lower, the crew would have been told. |
 | 65 | 5:15.8 | 11/37 | 1.4 s ok |  | Whether that would have stopped this train in time, the N - T - S - B  |
 | 66 | 5:29.0 | 5/10 | 1.3 s ok |  | Either way: where did one hundred and seventy come from? |
-| 67 | 5:36.0 | 0/7 | 2.3 s **FAIL** |  | The answer is in the industry's rulebook. |
-| 68 | 5:38.8 | 0/25 | 8.9 s **FAIL** | one; one hundred seventy | The A - A - R, the Association of American Railroads, defines an overh |
-| 69 | 5:48.5 | 0/21 | 6.1 s **FAIL** |  | The N - T - S - B found that this definition is based on what makes a  |
-| 70 | 5:55.2 | 0/13 | 5.1 s **FAIL** |  | It relates, the board wrote, to billing for repairs, not directly to s |
-| 71 | 6:01.3 | 0/29 | 10.2 s **FAIL** | June twenty twenty-three, | In June twenty twenty-three, at a public hearing in East Palestine, th |
-| 72 | 7:03.6 | 0/22 | 7.2 s **FAIL** |  | Then a member of the N - T - S - B's technical panel asked whether the |
-| 73 | 7:49.3 | 0/3 | 1.1 s ok |  | A billing standard. |
-| 74 | 7:51.2 | 0/13 | 5.5 s **FAIL** |  | And, in the same breath, the industry's point: no railroad wants a der |
-| 75 | 7:57.8 | 0/28 | 8.7 s **FAIL** |  | The witness went on to explain that the association can set standards  |
-| 76 | 8:07.4 | 0/17 | 6.3 s **FAIL** |  | Norfolk Southern testified that it based its own thresholds on its exp |
-| 77 | 8:14.3 | 0/9 | 3.4 s **FAIL** | two hundred. | Its critical alarm, before the accident, was two hundred. |
-| 78 | 8:18.2 | 0/6 | 2.0 s **FAIL** | one hundred seventy. | After it, one hundred and seventy. |
-| 79 | 8:21.1 | 0/20 | 6.2 s **FAIL** | one hundred seventy. | At the same hearing, the industry's witness said the railroads were no |
-| 80 | 8:28.1 | 0/24 | 8.0 s **FAIL** |  | So after East Palestine, on this railroad, the number in the billing d |
-| 81 | 8:37.0 | 0/7 | 1.9 s **FAIL** |  | Every line like this is a trade. |
-| 82 | 8:39.6 | 0/9 | 2.7 s **FAIL** |  | Set it too low, and trains stop for nothing. |
-| 83 | 8:42.9 | 0/10 | 3.2 s **FAIL** |  | Set it too high, and a failing bearing keeps rolling. |
-| 84 | 8:47.0 | 0/21 | 9.0 s **FAIL** |  | In the N - T - S - B's words, railroads choose their thresholds by bal |
-| 85 | 8:56.9 | 0/8 | 2.8 s **FAIL** |  | No investigator links what follows to this bearing. |
-| 86 | 9:00.4 | 0/9 | 2.2 s **FAIL** |  | But it is how the railroad was being run. |
-| 87 | 9:03.5 | 0/10 | 4.3 s **FAIL** | February twenty nineteen, | In February twenty nineteen, Norfolk Southern told investors its plan. |
-| 88 | 9:08.5 | 0/3 | 1.9 s **FAIL** |  | Precision scheduled railroading. |
-| 89 | 9:11.1 | 0/22 | 8.5 s **FAIL** | sixty percent twenty twenty-one,; sixty-five four. | An operating ratio, the share of revenue spent running the railroad, o |
-| 90 | 9:20.4 | 0/10 | 4.6 s **FAIL** |  | Continued share buybacks, using free cash flow and borrowing capacity. |
-| 91 | 9:25.8 | 0/6 | 3.2 s **FAIL** | five | Its five principles included working safely. |
-| 92 | 9:29.7 | 0/5 | 1.6 s **FAIL** |  | The filings show what followed. |
-| 93 | 9:32.1 | 0/31 | 13.2 s **FAIL** | twenty-six thousand, six hundred sixty-two twenty eighteen,; eighteen thousand, nine hundred twenty twenty-two:; twenty-nine percent. | Average employees fell from twenty-six thousand, six hundred and sixty |
-| 94 | 9:46.1 | 0/17 | 6.5 s **FAIL** | twenty nineteen twenty twenty-two,; ten billion | From twenty nineteen to twenty twenty-two, the company spent ten billi |
-| 95 | 9:53.1 | 0/5 | 1.7 s **FAIL** |  | Did that cause this derailment? |
-| 96 | 9:55.4 | 0/6 | 1.7 s **FAIL** |  | Here is where the record stops. |
-| 97 | 9:57.6 | 0/7 | 2.6 s **FAIL** | twenty-third | The twenty-third car was not Norfolk Southern's. |
-| 98 | 10:00.7 | 0/13 | 3.9 s **FAIL** |  | It belonged to G - A - T - X, and was leased to Braskem America. |
-| 99 | 10:05.6 | 0/23 | 8.6 s **FAIL** |  | It joined the train at a yard in Illinois run by a terminal railroad,  |
-| 100 | 10:15.1 | 0/5 | 2.0 s **FAIL** |  | That railroad's inspectors checked it. |
-| 101 | 10:17.6 | 0/5 | 2.1 s **FAIL** |  | Norfolk Southern's inspectors did not. |
-| 102 | 10:20.3 | 0/10 | 4.2 s **FAIL** |  | Whether that inspection missed anything, the investigators could not d |
-| 103 | 10:25.0 | 0/30 | 9.6 s **FAIL** |  | After the derailment, the N - T - S - B checked the cars that stayed o |
-| 104 | 10:35.3 | 0/23 | 8.7 s **FAIL** | ninety-second | It obtained a Norfolk Southern foreman's email that appeared to set a  |
-| 105 | 10:44.7 | 0/5 | 2.4 s **FAIL** | twenty-three | Car twenty-three was inspected elsewhere. |
-| 106 | 10:47.8 | 0/16 | 5.7 s **FAIL** |  | And it could not determine whether inspection time goals contributed t |
-| 107 | 10:54.6 | 0/18 | 7.4 s **FAIL** | March twenty twenty-three, | In March twenty twenty-three, the N - T - S - B opened a special inves |
-| 108 | 11:02.8 | 0/15 | 4.8 s **FAIL** |  | That is our reading of the record: no investigator links the plan to t |
-| 109 | 11:08.4 | 0/30 | 9.6 s **FAIL** |  | What the record does show is where the stop line was drawn: at a numbe |
-| 110 | 11:18.7 | 0/13 | 4.6 s **FAIL** |  | A claim you will find in many comment sections: cost cutting caused th |
-| 111 | 11:23.8 | 0/4 | 1.3 s ok |  | The record can't say. |
+| 67 | 5:36.0 | 3/7 | 0.9 s ok |  | The answer is in the industry's rulebook. |
+| 68 | 5:38.8 | 13/25 | 1.4 s ok |  | The A - A - R, the Association of American Railroads, defines an overh |
+| 69 | 5:48.5 | 6/21 | 1.4 s ok |  | The N - T - S - B found that this definition is based on what makes a  |
+| 70 | 5:55.2 | 6/13 | 1.5 s ok |  | It relates, the board wrote, to billing for repairs, not directly to s |
+| 71 | 6:01.3 | 12/29 | 1.3 s ok |  | In June twenty twenty-three, at a public hearing in East Palestine, th |
+| 72 | 7:03.6 | 10/22 | 0.9 s ok |  | Then a member of the N - T - S - B's technical panel asked whether the |
+| 73 | 7:49.3 | 2/3 | 0.5 s ok |  | A billing standard. |
+| 74 | 7:51.2 | 5/13 | 1.4 s ok |  | And, in the same breath, the industry's point: no railroad wants a der |
+| 75 | 7:57.8 | 12/28 | 1.5 s ok |  | The witness went on to explain that the association can set standards  |
+| 76 | 8:07.4 | 6/17 | 1.2 s ok |  | Norfolk Southern testified that it based its own thresholds on its exp |
+| 77 | 8:14.3 | 4/9 | 1.5 s ok |  | Its critical alarm, before the accident, was two hundred. |
+| 78 | 8:18.2 | 2/6 | 1.5 s ok |  | After it, one hundred and seventy. |
+| 79 | 8:21.1 | 8/20 | 1.4 s ok |  | At the same hearing, the industry's witness said the railroads were no |
+| 80 | 8:28.1 | 10/24 | 1.4 s ok |  | So after East Palestine, on this railroad, the number in the billing d |
+| 81 | 8:37.0 | 2/7 | 1.5 s ok |  | Every line like this is a trade. |
+| 82 | 8:39.6 | 4/9 | 0.9 s ok |  | Set it too low, and trains stop for nothing. |
+| 83 | 8:42.9 | 5/10 | 0.9 s ok |  | Set it too high, and a failing bearing keeps rolling. |
+| 84 | 8:47.0 | 10/21 | 1.2 s ok |  | In the N - T - S - B's words, railroads choose their thresholds by bal |
+| 85 | 8:56.9 | 3/8 | 1.3 s ok |  | No investigator links what follows to this bearing. |
+| 86 | 9:00.4 | 2/9 | 1.5 s ok |  | But it is how the railroad was being run. |
+| 87 | 9:03.5 | 5/10 | 1.1 s ok |  | In February twenty nineteen, Norfolk Southern told investors its plan. |
+| 88 | 9:08.5 | 3/3 | 0.7 s ok |  | Precision scheduled railroading. |
+| 89 | 9:11.1 | 10/22 | 1.4 s ok |  | An operating ratio, the share of revenue spent running the railroad, o |
+| 90 | 9:20.4 | 6/10 | 1.2 s ok |  | Continued share buybacks, using free cash flow and borrowing capacity. |
+| 91 | 9:25.8 | 5/6 | 0.9 s ok |  | Its five principles included working safely. |
+| 92 | 9:29.7 | 2/5 | 1.1 s ok |  | The filings show what followed. |
+| 93 | 9:32.1 | 15/31 | 1.4 s ok |  | Average employees fell from twenty-six thousand, six hundred and sixty |
+| 94 | 9:46.1 | 11/17 | 1.1 s ok |  | From twenty nineteen to twenty twenty-two, the company spent ten billi |
+| 95 | 9:53.1 | 2/5 | 0.6 s ok |  | Did that cause this derailment? |
+| 96 | 9:55.4 | 3/6 | 0.7 s ok |  | Here is where the record stops. |
+| 97 | 9:57.6 | 2/7 | 1.2 s ok |  | The twenty-third car was not Norfolk Southern's. |
+| 98 | 10:00.7 | 8/13 | 0.8 s ok |  | It belonged to G - A - T - X, and was leased to Braskem America. |
+| 99 | 10:05.6 | 9/23 | 1.4 s ok |  | It joined the train at a yard in Illinois run by a terminal railroad,  |
+| 100 | 10:15.1 | 3/5 | 0.7 s ok |  | That railroad's inspectors checked it. |
+| 101 | 10:17.6 | 4/5 | 0.9 s ok |  | Norfolk Southern's inspectors did not. |
+| 102 | 10:20.3 | 5/10 | 1.2 s ok |  | Whether that inspection missed anything, the investigators could not d |
+| 103 | 10:25.0 | 12/30 | 1.3 s ok |  | After the derailment, the N - T - S - B checked the cars that stayed o |
+| 104 | 10:35.3 | 9/23 | 1.4 s ok |  | It obtained a Norfolk Southern foreman's email that appeared to set a  |
+| 105 | 10:44.7 | 4/5 | 0.9 s ok |  | Car twenty-three was inspected elsewhere. |
+| 106 | 10:47.8 | 7/16 | 1.5 s ok |  | And it could not determine whether inspection time goals contributed t |
+| 107 | 10:54.6 | 8/18 | 1.3 s ok |  | In March twenty twenty-three, the N - T - S - B opened a special inves |
+| 108 | 11:02.8 | 5/15 | 1.3 s ok |  | That is our reading of the record: no investigator links the plan to t |
+| 109 | 11:08.4 | 9/30 | 1.4 s ok |  | What the record does show is where the stop line was drawn: at a numbe |
+| 110 | 11:18.7 | 6/13 | 1.5 s ok |  | A claim you will find in many comment sections: cost cutting caused th |
+| 111 | 11:23.8 | 2/4 | 0.8 s ok |  | The record can't say. |
 | 112 | 11:29.2 | 0/4 | 0.9 s ok |  | Back to the bearing. |
 | 113 | 11:30.7 | 0/11 | 3.4 s **FAIL** |  | As it fails, the rollers and the cup grind and heat. |
 | 114 | 11:34.6 | 0/3 | 1.0 s ok |  | The grease burns. |

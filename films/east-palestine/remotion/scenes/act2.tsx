@@ -229,10 +229,10 @@ const Findings: React.FC = () => {
 		<>
 			<RecordPage set="rir" start={sf(47) - 12} end={ef(47) + 24} label="NTSB FINDING 4" hl={[{key: 'C17', at: wf(47, 'reflect'), ats: [wf(47, 'reflect'), wf(47, 'true')]}]} pushTo={wf(47, 'found')} />
 			<RecordPage set="rir" start={ef(47) + 8} end={sf(49) + 14} label="NTSB RIR-24-05" title="FAILURE SCENARIOS" hl={[{key: 'C119', at: wf(48, 'go'), ats: [wf(48, 'go'), wf(48, 'seized'), wf(48, 'minute')]}]} pushTo={wf(48, 'report')} />
-			<Pop f={f} fps={fps} on={wf(47, 'b')} style={{position: 'absolute', left: 1160, top: 810}}>
+			<Pop f={f} fps={fps} on={wf(47, 'b')} off={ef(47) + 8} style={{position: 'absolute', left: 1160, top: 810}}>
 				<div style={T(36, {fontWeight: 700, color: colors.void, background: colors.cyan, padding: '4px 14px'})}>NTSB FINDING 4</div>
 			</Pop>
-			<Pop f={f} fps={fps} on={wf(47, 'salem')} style={{position: 'absolute', left: 1160, top: 880}}>
+			<Pop f={f} fps={fps} on={wf(47, 'salem')} off={ef(47) + 8} style={{position: 'absolute', left: 1160, top: 880}}>
 				<div style={T(36, {fontWeight: 700, color: colors.void, background: colors.amber, padding: '4px 14px'})}>THE SALEM READING</div>
 			</Pop>
 			<Pop f={f} fps={fps} on={wf(48, 'failing')} style={{position: 'absolute', left: 1060, top: 740}}>

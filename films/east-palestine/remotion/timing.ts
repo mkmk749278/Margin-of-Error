@@ -44,3 +44,12 @@ export const wef = (id: number, word: string, nth = 0): number => {
 export const sentenceText = (id: number): string => sentences[id].text;
 export const s2f = (s: number): number => Math.round(s * FPS);
 export const OPEN_LOOP = timing.openLoop;
+
+type Hold = {after: number; s: number; filmStartFrame: number};
+const holds: Hold[] = timing.holds;
+/** The edit hold after sentence `id`: its first frame and its length in frames (PLAYBOOK §10.4). */
+export const hold = (id: number): {from: number; frames: number} => {
+	const h = holds.find((x) => x.after === id);
+	if (!h) throw new Error(`timing: no hold after sentence ${id}`);
+	return {from: h.filmStartFrame, frames: Math.round(h.s * FPS)};
+};

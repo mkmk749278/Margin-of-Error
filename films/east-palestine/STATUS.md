@@ -32,4 +32,7 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   Composition `EastPalestine` (src/Root.tsx); stills: `node scripts/stills.mjs EastPalestine <out> <frames> --scale 0.5`.
 - **Act II done (2026-11-06):** `remotion/scenes/act2.tsx` (9 scenes, s32–66), handoff `scenes/act2.md`, index
   `scenes/choreography/act2.md`. Acts I–II: 67/67 sentences pass. Film.tsx now dissolves every scene into the next (no empty frame).
-- **Next:** Act III (s67 on, F20166), then IV–V; then the 720p render.
+- **Act III done (2026-11-06):** `remotion/scenes/act3.tsx` (12 scenes, s67–111, both hearing clips), handoff `scenes/act3.md`.
+  Acts I–III: 112/112 sentences pass. **Mix note:** the clips play muted in Remotion; the mix lays their sound at F22329
+  and F25882.
+- **Next:** Act IV (s112 on, F41352), then V; then the 720p render.
