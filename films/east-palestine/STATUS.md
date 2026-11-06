@@ -35,4 +35,6 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - **Act III done (2026-11-06):** `remotion/scenes/act3.tsx` (12 scenes, s67–111, both hearing clips), handoff `scenes/act3.md`.
   Acts I–III: 112/112 sentences pass. **Mix note:** the clips play muted in Remotion; the mix lays their sound at F22329
   and F25882.
-- **Next:** Act IV (s112 on, F41352), then V; then the 720p render.
+- **Act IV done (2026-11-06):** `remotion/scenes/act4.tsx` (10 scenes, s112–175, both signature beats), handoff `scenes/act4.md`.
+  Acts I–IV: 176/176 sentences pass.
+- **Next:** Act V (s176 on, F63342) and the outro; then the 720p render.
