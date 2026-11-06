@@ -61,9 +61,13 @@ first**: case, angle, narration and story building carry the film; everything el
   descriptions or comments names the owner, any other channel, or any other repo, and nothing is cross-promoted.
   Engineering lessons from earlier work are written here as our own lessons, without naming where they came from.
 - Stay inside the domain: corporate, regulatory and mechanical failures in the US, UK, Canada, Australia and Europe.
+  **Software and configuration failures qualify (owner, 2026-11-06) only when the digital failure cascades into the
+  physical world, the economy or public infrastructure** (grounded aircraft, 911/000 emergency-call outages, halted
+  surgeries); never pure web or app downtime.
   No geopolitics from other regions, no physics-trivia detours. Currency in `$` with millions/billions; units as the
   record states them (feet, knots, psi, °F) with SI beside them on screen.
-- No AI disclosure in public descriptions; the owner sets YouTube Studio's "Altered or synthetic content" at upload.
+- **The voice note, in every description, word for word** (owner, 2026-11-06): "Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity." No other AI wording
+  in public text; the owner still sets YouTube Studio's "Altered or synthetic content" at upload.
   On-screen honesty labels (RECONSTRUCTION, ILLUSTRATION) are about evidence, not AI, and always stay.
 
 ## Owner and workflow
