@@ -2,3 +2,4 @@
 # curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- east-palestine --list films/east-palestine/scenes/owner_fetch.txt
 # Files already in the phone's folder are skipped, so only new names are fetched.
 clip04 https://www.youtube.com/watch?v=x-QON0Tel1Q@01:20:20-01:21:30  # CLIP 2 again: clip01's video track stopped at 01:20:58.9 (audio ran on), so "Correct." had no picture
+ntsb_broll_20230206 https://www.youtube.com/watch?v=7AyXTVkVBT4  # NTSB's own B-roll of the derailment (06 FEB 2023, 3:10), US government work, public domain: the real-footage rebuild (2026-11-06)
