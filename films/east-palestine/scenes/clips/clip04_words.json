@@ -1,0 +1,700 @@
+{
+ "clip": "assets/footage/clip04.mp4",
+ "from": 8.0,
+ "to": 56.0,
+ "words": [
+  {
+   "w": "Thank",
+   "speaker": "MR. ARONIAN",
+   "start": 13.002,
+   "end": 13.202,
+   "score": 0.455
+  },
+  {
+   "w": "you.",
+   "speaker": "MR. ARONIAN",
+   "start": 13.222,
+   "end": 13.282,
+   "score": 0.094
+  },
+  {
+   "w": "So",
+   "speaker": "MR. ARONIAN",
+   "start": 14.923,
+   "end": 15.043,
+   "score": 0.925
+  },
+  {
+   "w": "these",
+   "speaker": "MR. ARONIAN",
+   "start": 15.143,
+   "end": 15.463,
+   "score": 0.764
+  },
+  {
+   "w": "overheated",
+   "speaker": "MR. ARONIAN",
+   "start": 16.103,
+   "end": 16.524,
+   "score": 0.776
+  },
+  {
+   "w": "bearing",
+   "speaker": "MR. ARONIAN",
+   "start": 16.584,
+   "end": 16.864,
+   "score": 0.93
+  },
+  {
+   "w": "temperature",
+   "speaker": "MR. ARONIAN",
+   "start": 16.904,
+   "end": 17.424,
+   "score": 0.947
+  },
+  {
+   "w": "thresholds",
+   "speaker": "MR. ARONIAN",
+   "start": 17.504,
+   "end": 18.124,
+   "score": 0.962
+  },
+  {
+   "w": "established",
+   "speaker": "MR. ARONIAN",
+   "start": 19.285,
+   "end": 19.945,
+   "score": 0.982
+  },
+  {
+   "w": "in",
+   "speaker": "MR. ARONIAN",
+   "start": 20.045,
+   "end": 20.125,
+   "score": 0.982
+  },
+  {
+   "w": "the",
+   "speaker": "MR. ARONIAN",
+   "start": 20.165,
+   "end": 20.245,
+   "score": 0.961
+  },
+  {
+   "w": "rule,",
+   "speaker": "MR. ARONIAN",
+   "start": 20.305,
+   "end": 20.545,
+   "score": 0.913
+  },
+  {
+   "w": "then,",
+   "speaker": "MR. ARONIAN",
+   "start": 20.565,
+   "end": 20.765,
+   "score": 0.716
+  },
+  {
+   "w": "are",
+   "speaker": "MR. ARONIAN",
+   "start": 22.066,
+   "end": 22.186,
+   "score": 0.961
+  },
+  {
+   "w": "not",
+   "speaker": "MR. ARONIAN",
+   "start": 22.226,
+   "end": 22.426,
+   "score": 0.917
+  },
+  {
+   "w": "absolute",
+   "speaker": "MR. ARONIAN",
+   "start": 23.186,
+   "end": 23.667,
+   "score": 0.992
+  },
+  {
+   "w": "limits",
+   "speaker": "MR. ARONIAN",
+   "start": 23.707,
+   "end": 24.047,
+   "score": 0.993
+  },
+  {
+   "w": "for",
+   "speaker": "MR. ARONIAN",
+   "start": 24.127,
+   "end": 24.307,
+   "score": 0.962
+  },
+  {
+   "w": "safe",
+   "speaker": "MR. ARONIAN",
+   "start": 24.807,
+   "end": 25.127,
+   "score": 0.978
+  },
+  {
+   "w": "operating",
+   "speaker": "MR. ARONIAN",
+   "start": 25.247,
+   "end": 25.727,
+   "score": 0.972
+  },
+  {
+   "w": "temperatures",
+   "speaker": "MR. ARONIAN",
+   "start": 25.787,
+   "end": 26.368,
+   "score": 0.944
+  },
+  {
+   "w": "of",
+   "speaker": "MR. ARONIAN",
+   "start": 26.428,
+   "end": 26.488,
+   "score": 0.923
+  },
+  {
+   "w": "bearings?",
+   "speaker": "MR. ARONIAN",
+   "start": 26.548,
+   "end": 27.048,
+   "score": 0.908
+  },
+  {
+   "w": "If",
+   "speaker": "MR. ARONIAN",
+   "start": 28.228,
+   "end": 28.328,
+   "score": 0.971
+  },
+  {
+   "w": "I",
+   "speaker": "MR. ARONIAN",
+   "start": 28.449,
+   "end": 28.469,
+   "score": 0.99
+  },
+  {
+   "w": "understand",
+   "speaker": "MR. ARONIAN",
+   "start": 28.509,
+   "end": 28.949,
+   "score": 0.953
+  },
+  {
+   "w": "properly",
+   "speaker": "MR. ARONIAN",
+   "start": 29.009,
+   "end": 29.429,
+   "score": 0.987
+  },
+  {
+   "w": "what",
+   "speaker": "MR. ARONIAN",
+   "start": 30.209,
+   "end": 30.349,
+   "score": 0.954
+  },
+  {
+   "w": "you",
+   "speaker": "MR. ARONIAN",
+   "start": 30.389,
+   "end": 30.469,
+   "score": 0.691
+  },
+  {
+   "w": "just",
+   "speaker": "MR. ARONIAN",
+   "start": 30.489,
+   "end": 30.709,
+   "score": 0.336
+  },
+  {
+   "w": "described,",
+   "speaker": "MR. ARONIAN",
+   "start": 30.729,
+   "end": 31.31,
+   "score": 0.846
+  },
+  {
+   "w": "they",
+   "speaker": "MR. ARONIAN",
+   "start": 31.95,
+   "end": 32.11,
+   "score": 0.895
+  },
+  {
+   "w": "are",
+   "speaker": "MR. ARONIAN",
+   "start": 32.19,
+   "end": 32.33,
+   "score": 0.746
+  },
+  {
+   "w": "a",
+   "speaker": "MR. ARONIAN",
+   "start": 32.37,
+   "end": 32.39,
+   "score": 0.346
+  },
+  {
+   "w": "standard",
+   "speaker": "MR. ARONIAN",
+   "start": 32.47,
+   "end": 32.91,
+   "score": 0.983
+  },
+  {
+   "w": "at",
+   "speaker": "MR. ARONIAN",
+   "start": 32.99,
+   "end": 33.05,
+   "score": 0.446
+  },
+  {
+   "w": "which",
+   "speaker": "MR. ARONIAN",
+   "start": 33.11,
+   "end": 33.311,
+   "score": 0.954
+  },
+  {
+   "w": "bearings",
+   "speaker": "MR. ARONIAN",
+   "start": 33.371,
+   "end": 33.791,
+   "score": 0.958
+  },
+  {
+   "w": "can",
+   "speaker": "MR. ARONIAN",
+   "start": 33.851,
+   "end": 34.011,
+   "score": 0.991
+  },
+  {
+   "w": "be",
+   "speaker": "MR. ARONIAN",
+   "start": 34.091,
+   "end": 34.171,
+   "score": 0.976
+  },
+  {
+   "w": "removed",
+   "speaker": "MR. ARONIAN",
+   "start": 34.371,
+   "end": 34.851,
+   "score": 0.988
+  },
+  {
+   "w": "from",
+   "speaker": "MR. ARONIAN",
+   "start": 35.511,
+   "end": 35.672,
+   "score": 0.986
+  },
+  {
+   "w": "service",
+   "speaker": "MR. ARONIAN",
+   "start": 35.752,
+   "end": 36.172,
+   "score": 0.991
+  },
+  {
+   "w": "and",
+   "speaker": "MR. ARONIAN",
+   "start": 36.252,
+   "end": 36.392,
+   "score": 0.898
+  },
+  {
+   "w": "billing",
+   "speaker": "MR. ARONIAN",
+   "start": 36.472,
+   "end": 36.872,
+   "score": 0.792
+  },
+  {
+   "w": "and",
+   "speaker": "MR. ARONIAN",
+   "start": 37.132,
+   "end": 37.272,
+   "score": 0.954
+  },
+  {
+   "w": "the",
+   "speaker": "MR. ARONIAN",
+   "start": 37.652,
+   "end": 37.732,
+   "score": 0.92
+  },
+  {
+   "w": "car",
+   "speaker": "MR. ARONIAN",
+   "start": 37.772,
+   "end": 37.992,
+   "score": 0.86
+  },
+  {
+   "w": "owners",
+   "speaker": "MR. ARONIAN",
+   "start": 38.033,
+   "end": 38.313,
+   "score": 0.639
+  },
+  {
+   "w": "could",
+   "speaker": "MR. ARONIAN",
+   "start": 38.353,
+   "end": 38.513,
+   "score": 0.202
+  },
+  {
+   "w": "be",
+   "speaker": "MR. ARONIAN",
+   "start": 38.533,
+   "end": 38.593,
+   "score": 0.935
+  },
+  {
+   "w": "billed",
+   "speaker": "MR. ARONIAN",
+   "start": 38.673,
+   "end": 38.913,
+   "score": 0.536
+  },
+  {
+   "w": "for",
+   "speaker": "MR. ARONIAN",
+   "start": 38.953,
+   "end": 39.133,
+   "score": 0.893
+  },
+  {
+   "w": "it?",
+   "speaker": "MR. ARONIAN",
+   "start": 39.313,
+   "end": 39.373,
+   "score": 0.0
+  },
+  {
+   "w": "Correct.",
+   "speaker": "MR. RUSH",
+   "start": 40.093,
+   "end": 40.574,
+   "score": 0.839
+  },
+  {
+   "w": "Now,",
+   "speaker": "MR. RUSH",
+   "start": 40.854,
+   "end": 40.994,
+   "score": 0.953
+  },
+  {
+   "w": "keep",
+   "speaker": "MR. RUSH",
+   "start": 41.074,
+   "end": 41.274,
+   "score": 0.961
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 41.334,
+   "end": 41.414,
+   "score": 0.981
+  },
+  {
+   "w": "mind",
+   "speaker": "MR. RUSH",
+   "start": 41.474,
+   "end": 41.994,
+   "score": 0.938
+  },
+  {
+   "w": "it’s",
+   "speaker": "MR. RUSH",
+   "start": 43.115,
+   "end": 43.295,
+   "score": 0.667
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 43.395,
+   "end": 43.475,
+   "score": 0.98
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 43.535,
+   "end": 43.635,
+   "score": 0.95
+  },
+  {
+   "w": "interest",
+   "speaker": "MR. RUSH",
+   "start": 43.815,
+   "end": 44.215,
+   "score": 0.99
+  },
+  {
+   "w": "of",
+   "speaker": "MR. RUSH",
+   "start": 44.255,
+   "end": 44.315,
+   "score": 0.994
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 44.355,
+   "end": 44.415,
+   "score": 0.97
+  },
+  {
+   "w": "operating",
+   "speaker": "MR. RUSH",
+   "start": 44.555,
+   "end": 44.995,
+   "score": 0.885
+  },
+  {
+   "w": "railroad",
+   "speaker": "MR. RUSH",
+   "start": 45.055,
+   "end": 45.596,
+   "score": 0.966
+  },
+  {
+   "w": "not",
+   "speaker": "MR. RUSH",
+   "start": 46.216,
+   "end": 46.416,
+   "score": 0.954
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 46.456,
+   "end": 46.516,
+   "score": 0.988
+  },
+  {
+   "w": "have",
+   "speaker": "MR. RUSH",
+   "start": 46.596,
+   "end": 46.816,
+   "score": 0.922
+  },
+  {
+   "w": "derailments",
+   "speaker": "MR. RUSH",
+   "start": 46.836,
+   "end": 47.456,
+   "score": 0.844
+  },
+  {
+   "w": "attributable",
+   "speaker": "MR. RUSH",
+   "start": 47.617,
+   "end": 48.217,
+   "score": 0.988
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 48.257,
+   "end": 48.297,
+   "score": 0.98
+  },
+  {
+   "w": "hot",
+   "speaker": "MR. RUSH",
+   "start": 48.377,
+   "end": 48.557,
+   "score": 0.885
+  },
+  {
+   "w": "bearings",
+   "speaker": "MR. RUSH",
+   "start": 48.617,
+   "end": 49.037,
+   "score": 0.832
+  },
+  {
+   "w": "but",
+   "speaker": "MR. RUSH",
+   "start": 49.477,
+   "end": 49.617,
+   "score": 0.975
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 49.657,
+   "end": 49.737,
+   "score": 0.67
+  },
+  {
+   "w": "structure,",
+   "speaker": "MR. RUSH",
+   "start": 49.957,
+   "end": 50.578,
+   "score": 0.987
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 51.378,
+   "end": 51.458,
+   "score": 0.957
+  },
+  {
+   "w": "way",
+   "speaker": "MR. RUSH",
+   "start": 51.558,
+   "end": 51.738,
+   "score": 0.993
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 51.858,
+   "end": 51.958,
+   "score": 0.988
+  },
+  {
+   "w": "which",
+   "speaker": "MR. RUSH",
+   "start": 52.078,
+   "end": 52.358,
+   "score": 0.984
+  },
+  {
+   "w": "AR",
+   "speaker": "MR. RUSH",
+   "start": 52.459,
+   "end": 52.759,
+   "score": 0.0
+  },
+  {
+   "w": "standards",
+   "speaker": "MR. RUSH",
+   "start": 52.759,
+   "end": 53.039,
+   "score": 0.0
+  },
+  {
+   "w": "work",
+   "speaker": "MR. RUSH",
+   "start": 53.059,
+   "end": 53.239,
+   "score": 0.0
+  },
+  {
+   "w": "is",
+   "speaker": "MR. RUSH",
+   "start": 53.299,
+   "end": 53.359,
+   "score": 0.0
+  },
+  {
+   "w": "our",
+   "speaker": "MR. RUSH",
+   "start": 53.359,
+   "end": 53.459,
+   "score": 0.0
+  },
+  {
+   "w": "ability",
+   "speaker": "MR. RUSH",
+   "start": 53.459,
+   "end": 53.639,
+   "score": 0.101
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 53.639,
+   "end": 53.699,
+   "score": 0.0
+  },
+  {
+   "w": "impose",
+   "speaker": "MR. RUSH",
+   "start": 53.699,
+   "end": 53.959,
+   "score": 0.164
+  },
+  {
+   "w": "standards",
+   "speaker": "MR. RUSH",
+   "start": 54.039,
+   "end": 54.559,
+   "score": 0.886
+  },
+  {
+   "w": "is",
+   "speaker": "MR. RUSH",
+   "start": 54.559,
+   "end": 54.599,
+   "score": 0.488
+  },
+  {
+   "w": "through",
+   "speaker": "MR. RUSH",
+   "start": 54.699,
+   "end": 55.18,
+   "score": 0.142
+  },
+  {
+   "w": "what",
+   "speaker": "MR. RUSH",
+   "start": 55.2,
+   "end": 55.28,
+   "score": 0.003
+  },
+  {
+   "w": "we",
+   "speaker": "MR. RUSH",
+   "start": 55.28,
+   "end": 55.32,
+   "score": 0.002
+  },
+  {
+   "w": "call",
+   "speaker": "MR. RUSH",
+   "start": 55.32,
+   "end": 55.42,
+   "score": 0.003
+  },
+  {
+   "w": "our",
+   "speaker": "MR. RUSH",
+   "start": 55.42,
+   "end": 55.5,
+   "score": 0.003
+  },
+  {
+   "w": "interchange",
+   "speaker": "MR. RUSH",
+   "start": 55.52,
+   "end": 55.76,
+   "score": 0.004
+  },
+  {
+   "w": "agreement.",
+   "speaker": "MR. RUSH",
+   "start": 55.76,
+   "end": 55.96,
+   "score": 0.011
+  }
+ ]
+}
