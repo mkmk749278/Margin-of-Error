@@ -1,0 +1,1262 @@
+{
+ "_doc": "Captions for the two NTSB hearing clips: the official transcript's words (docket DCA23HR001, day 2), timed on the clip audio by scripts/clip_align.py; times in seconds from the clip in-point. Never the live (CART) captions, which are cropped (y > 860 of 1080).",
+ "clips": {
+  "clip1": {
+   "src": "clip01.mp4",
+   "in": 3.4,
+   "out": 54.15,
+   "hearing_in": "01:18:43.40",
+   "transcript": "NTSB investigative hearing, day 2, 23 JUN 2023, transcript pp. 215 (Free State Reporting), docket item 3",
+   "dur": 50.75,
+   "cues": [
+    {
+     "speaker": "MR. RUSH",
+     "text": "Now, going to the issue of how we arrived",
+     "start": 0.28,
+     "end": 1.08,
+     "words": [
+      {
+       "w": "Now,",
+       "t": 0.28,
+       "score": 0.0
+      },
+      {
+       "w": "going",
+       "t": 0.34,
+       "score": 0.0
+      },
+      {
+       "w": "to",
+       "t": 0.44,
+       "score": 0.0
+      },
+      {
+       "w": "the",
+       "t": 0.48,
+       "score": 0.45
+      },
+      {
+       "w": "issue",
+       "t": 0.62,
+       "score": 0.133
+      },
+      {
+       "w": "of",
+       "t": 0.74,
+       "score": 0.0
+      },
+      {
+       "w": "how",
+       "t": 0.78,
+       "score": 0.183
+      },
+      {
+       "w": "we",
+       "t": 0.88,
+       "score": 0.0
+      },
+      {
+       "w": "arrived",
+       "t": 0.92,
+       "score": 0.0
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "at those thresholds.",
+     "start": 1.1,
+     "end": 1.48,
+     "words": [
+      {
+       "w": "at",
+       "t": 1.1,
+       "score": 0.002
+      },
+      {
+       "w": "those",
+       "t": 1.16,
+       "score": 0.199
+      },
+      {
+       "w": "thresholds.",
+       "t": 1.28,
+       "score": 0.098
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "So let’s talk, first of all,",
+     "start": 1.5,
+     "end": 2.36,
+     "words": [
+      {
+       "w": "So",
+       "t": 1.5,
+       "score": 0.0
+      },
+      {
+       "w": "let’s",
+       "t": 1.54,
+       "score": 0.0
+      },
+      {
+       "w": "talk,",
+       "t": 1.64,
+       "score": 0.685
+      },
+      {
+       "w": "first",
+       "t": 1.94,
+       "score": 0.461
+      },
+      {
+       "w": "of",
+       "t": 2.16,
+       "score": 0.011
+      },
+      {
+       "w": "all,",
+       "t": 2.26,
+       "score": 0.48
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "what those thresholds represent.",
+     "start": 2.42,
+     "end": 3.8,
+     "words": [
+      {
+       "w": "what",
+       "t": 2.42,
+       "score": 0.888
+      },
+      {
+       "w": "those",
+       "t": 2.58,
+       "score": 0.974
+      },
+      {
+       "w": "thresholds",
+       "t": 2.82,
+       "score": 0.986
+      },
+      {
+       "w": "represent.",
+       "t": 3.32,
+       "score": 0.977
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "Those are thresholds in AAR’s car repair",
+     "start": 3.84,
+     "end": 6.84,
+     "words": [
+      {
+       "w": "Those",
+       "t": 3.84,
+       "score": 0.983
+      },
+      {
+       "w": "are",
+       "t": 4.02,
+       "score": 0.749
+      },
+      {
+       "w": "thresholds",
+       "t": 4.14,
+       "score": 0.957
+      },
+      {
+       "w": "in",
+       "t": 5.38,
+       "score": 0.982
+      },
+      {
+       "w": "AAR’s",
+       "t": 5.54,
+       "score": 0.581
+      },
+      {
+       "w": "car",
+       "t": 6.28,
+       "score": 0.764
+      },
+      {
+       "w": "repair",
+       "t": 6.54,
+       "score": 0.755
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "billing rules which authorize the ability",
+     "start": 6.94,
+     "end": 12.7,
+     "words": [
+      {
+       "w": "billing",
+       "t": 6.94,
+       "score": 0.788
+      },
+      {
+       "w": "rules",
+       "t": 7.28,
+       "score": 0.961
+      },
+      {
+       "w": "which",
+       "t": 8.14,
+       "score": 0.381
+      },
+      {
+       "w": "authorize",
+       "t": 8.72,
+       "score": 0.869
+      },
+      {
+       "w": "the",
+       "t": 10.0,
+       "score": 0.204
+      },
+      {
+       "w": "ability",
+       "t": 12.22,
+       "score": 0.992
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "of a railroad to take a car out of",
+     "start": 13.38,
+     "end": 16.98,
+     "words": [
+      {
+       "w": "of",
+       "t": 13.38,
+       "score": 0.87
+      },
+      {
+       "w": "a",
+       "t": 13.9,
+       "score": 0.512
+      },
+      {
+       "w": "railroad",
+       "t": 14.18,
+       "score": 0.889
+      },
+      {
+       "w": "to",
+       "t": 15.26,
+       "score": 0.646
+      },
+      {
+       "w": "take",
+       "t": 16.26,
+       "score": 0.971
+      },
+      {
+       "w": "a",
+       "t": 16.44,
+       "score": 0.949
+      },
+      {
+       "w": "car",
+       "t": 16.52,
+       "score": 0.988
+      },
+      {
+       "w": "out",
+       "t": 16.82,
+       "score": 0.724
+      },
+      {
+       "w": "of",
+       "t": 16.92,
+       "score": 0.942
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "service, make the repairs that are",
+     "start": 17.06,
+     "end": 19.34,
+     "words": [
+      {
+       "w": "service,",
+       "t": 17.06,
+       "score": 0.97
+      },
+      {
+       "w": "make",
+       "t": 17.68,
+       "score": 0.957
+      },
+      {
+       "w": "the",
+       "t": 17.86,
+       "score": 0.609
+      },
+      {
+       "w": "repairs",
+       "t": 17.98,
+       "score": 0.722
+      },
+      {
+       "w": "that",
+       "t": 19.1,
+       "score": 0.892
+      },
+      {
+       "w": "are",
+       "t": 19.24,
+       "score": 0.97
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "necessary.",
+     "start": 19.38,
+     "end": 19.96,
+     "words": [
+      {
+       "w": "necessary.",
+       "t": 19.38,
+       "score": 0.969
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "Those threshold -- the way in which the",
+     "start": 22.7,
+     "end": 24.46,
+     "words": [
+      {
+       "w": "Those",
+       "t": 22.7,
+       "score": 0.738
+      },
+      {
+       "w": "threshold",
+       "t": 23.04,
+       "score": 0.223
+      },
+      {
+       "w": "--",
+       "t": 23.52,
+       "score": 1.0
+      },
+      {
+       "w": "the",
+       "t": 23.72,
+       "score": 0.769
+      },
+      {
+       "w": "way",
+       "t": 23.84,
+       "score": 0.986
+      },
+      {
+       "w": "in",
+       "t": 24.06,
+       "score": 0.994
+      },
+      {
+       "w": "which",
+       "t": 24.16,
+       "score": 0.996
+      },
+      {
+       "w": "the",
+       "t": 24.38,
+       "score": 0.97
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "thresholds are developed really is a",
+     "start": 24.52,
+     "end": 27.6,
+     "words": [
+      {
+       "w": "thresholds",
+       "t": 24.52,
+       "score": 0.945
+      },
+      {
+       "w": "are",
+       "t": 25.94,
+       "score": 0.947
+      },
+      {
+       "w": "developed",
+       "t": 26.1,
+       "score": 0.987
+      },
+      {
+       "w": "really",
+       "t": 26.96,
+       "score": 0.94
+      },
+      {
+       "w": "is",
+       "t": 27.44,
+       "score": 0.971
+      },
+      {
+       "w": "a",
+       "t": 27.58,
+       "score": 0.969
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "function of experience, and you’re",
+     "start": 27.72,
+     "end": 29.44,
+     "words": [
+      {
+       "w": "function",
+       "t": 27.72,
+       "score": 0.996
+      },
+      {
+       "w": "of",
+       "t": 28.22,
+       "score": 0.983
+      },
+      {
+       "w": "experience,",
+       "t": 28.34,
+       "score": 0.982
+      },
+      {
+       "w": "and",
+       "t": 29.14,
+       "score": 0.948
+      },
+      {
+       "w": "you’re",
+       "t": 29.28,
+       "score": 0.636
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "balancing a couple of considerations.",
+     "start": 29.52,
+     "end": 32.84,
+     "words": [
+      {
+       "w": "balancing",
+       "t": 29.52,
+       "score": 0.866
+      },
+      {
+       "w": "a",
+       "t": 31.18,
+       "score": 0.084
+      },
+      {
+       "w": "couple",
+       "t": 31.79,
+       "score": 0.925
+      },
+      {
+       "w": "of",
+       "t": 32.02,
+       "score": 0.933
+      },
+      {
+       "w": "considerations.",
+       "t": 32.11,
+       "score": 0.819
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "One of those considerations is,",
+     "start": 33.73,
+     "end": 35.07,
+     "words": [
+      {
+       "w": "One",
+       "t": 33.73,
+       "score": 0.899
+      },
+      {
+       "w": "of",
+       "t": 33.87,
+       "score": 0.966
+      },
+      {
+       "w": "those",
+       "t": 33.97,
+       "score": 0.965
+      },
+      {
+       "w": "considerations",
+       "t": 34.2,
+       "score": 0.98
+      },
+      {
+       "w": "is,",
+       "t": 34.98,
+       "score": 0.985
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "of course, the detection of issues with",
+     "start": 35.11,
+     "end": 40.65,
+     "words": [
+      {
+       "w": "of",
+       "t": 35.11,
+       "score": 0.979
+      },
+      {
+       "w": "course,",
+       "t": 35.27,
+       "score": 0.638
+      },
+      {
+       "w": "the",
+       "t": 35.75,
+       "score": 0.826
+      },
+      {
+       "w": "detection",
+       "t": 35.88,
+       "score": 0.941
+      },
+      {
+       "w": "of",
+       "t": 37.16,
+       "score": 0.301
+      },
+      {
+       "w": "issues",
+       "t": 38.83,
+       "score": 0.914
+      },
+      {
+       "w": "with",
+       "t": 40.53,
+       "score": 0.875
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "the bearings.",
+     "start": 40.67,
+     "end": 41.23,
+     "words": [
+      {
+       "w": "the",
+       "t": 40.67,
+       "score": 0.786
+      },
+      {
+       "w": "bearings.",
+       "t": 40.75,
+       "score": 0.859
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "The other issue, as it was talked about",
+     "start": 41.79,
+     "end": 43.53,
+     "words": [
+      {
+       "w": "The",
+       "t": 41.79,
+       "score": 0.954
+      },
+      {
+       "w": "other",
+       "t": 41.99,
+       "score": 0.987
+      },
+      {
+       "w": "issue,",
+       "t": 42.25,
+       "score": 0.94
+      },
+      {
+       "w": "as",
+       "t": 42.55,
+       "score": 0.866
+      },
+      {
+       "w": "it",
+       "t": 42.67,
+       "score": 0.013
+      },
+      {
+       "w": "was",
+       "t": 42.71,
+       "score": 0.424
+      },
+      {
+       "w": "talked",
+       "t": 42.89,
+       "score": 0.971
+      },
+      {
+       "w": "about",
+       "t": 43.21,
+       "score": 0.944
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "earlier, is -- you know, if you put the",
+     "start": 43.69,
+     "end": 46.45,
+     "words": [
+      {
+       "w": "earlier,",
+       "t": 43.69,
+       "score": 0.945
+      },
+      {
+       "w": "is",
+       "t": 44.57,
+       "score": 0.683
+      },
+      {
+       "w": "--",
+       "t": 44.85,
+       "score": 1.0
+      },
+      {
+       "w": "you",
+       "t": 45.45,
+       "score": 0.143
+      },
+      {
+       "w": "know,",
+       "t": 45.51,
+       "score": 0.203
+      },
+      {
+       "w": "if",
+       "t": 46.07,
+       "score": 0.84
+      },
+      {
+       "w": "you",
+       "t": 46.15,
+       "score": 0.628
+      },
+      {
+       "w": "put",
+       "t": 46.23,
+       "score": 0.972
+      },
+      {
+       "w": "the",
+       "t": 46.39,
+       "score": 0.96
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "thresholds too low, you’re going to have a",
+     "start": 46.49,
+     "end": 48.91,
+     "words": [
+      {
+       "w": "thresholds",
+       "t": 46.49,
+       "score": 0.979
+      },
+      {
+       "w": "too",
+       "t": 47.11,
+       "score": 0.788
+      },
+      {
+       "w": "low,",
+       "t": 47.41,
+       "score": 0.919
+      },
+      {
+       "w": "you’re",
+       "t": 48.51,
+       "score": 0.263
+      },
+      {
+       "w": "going",
+       "t": 48.63,
+       "score": 0.353
+      },
+      {
+       "w": "to",
+       "t": 48.73,
+       "score": 0.001
+      },
+      {
+       "w": "have",
+       "t": 48.77,
+       "score": 0.489
+      },
+      {
+       "w": "a",
+       "t": 48.89,
+       "score": 0.975
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "lot of false stops",
+     "start": 48.99,
+     "end": 50.37,
+     "words": [
+      {
+       "w": "lot",
+       "t": 48.99,
+       "score": 0.989
+      },
+      {
+       "w": "of",
+       "t": 49.23,
+       "score": 0.96
+      },
+      {
+       "w": "false",
+       "t": 49.47,
+       "score": 0.823
+      },
+      {
+       "w": "stops",
+       "t": 49.89,
+       "score": 0.978
+      }
+     ]
+    }
+   ]
+  },
+  "clip2": {
+   "src": "clip01.mp4",
+   "in": 112.0,
+   "out": 149.35,
+   "hearing_in": "01:20:32.00",
+   "transcript": "transcript p. 216",
+   "dur": 37.35,
+   "cues": [
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "Thank you.",
+     "start": 1.03,
+     "end": 1.3,
+     "words": [
+      {
+       "w": "Thank",
+       "t": 1.03,
+       "score": 0.059
+      },
+      {
+       "w": "you.",
+       "t": 1.23,
+       "score": 0.01
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "So these overheated bearing temperature",
+     "start": 2.95,
+     "end": 5.44,
+     "words": [
+      {
+       "w": "So",
+       "t": 2.95,
+       "score": 0.088
+      },
+      {
+       "w": "these",
+       "t": 3.16,
+       "score": 0.01
+      },
+      {
+       "w": "overheated",
+       "t": 4.11,
+       "score": 0.029
+      },
+      {
+       "w": "bearing",
+       "t": 4.59,
+       "score": 0.048
+      },
+      {
+       "w": "temperature",
+       "t": 4.92,
+       "score": 0.025
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "thresholds established in the rule,",
+     "start": 5.52,
+     "end": 8.54,
+     "words": [
+      {
+       "w": "thresholds",
+       "t": 5.52,
+       "score": 0.062
+      },
+      {
+       "w": "established",
+       "t": 7.3,
+       "score": 0.592
+      },
+      {
+       "w": "in",
+       "t": 8.06,
+       "score": 0.859
+      },
+      {
+       "w": "the",
+       "t": 8.18,
+       "score": 0.796
+      },
+      {
+       "w": "rule,",
+       "t": 8.32,
+       "score": 0.855
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "then, are not absolute limits for safe",
+     "start": 8.58,
+     "end": 13.14,
+     "words": [
+      {
+       "w": "then,",
+       "t": 8.58,
+       "score": 0.617
+      },
+      {
+       "w": "are",
+       "t": 10.08,
+       "score": 0.541
+      },
+      {
+       "w": "not",
+       "t": 10.26,
+       "score": 0.537
+      },
+      {
+       "w": "absolute",
+       "t": 11.2,
+       "score": 0.801
+      },
+      {
+       "w": "limits",
+       "t": 11.72,
+       "score": 0.886
+      },
+      {
+       "w": "for",
+       "t": 12.14,
+       "score": 0.556
+      },
+      {
+       "w": "safe",
+       "t": 12.82,
+       "score": 0.667
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "operating temperatures of bearings?",
+     "start": 13.26,
+     "end": 15.06,
+     "words": [
+      {
+       "w": "operating",
+       "t": 13.26,
+       "score": 0.344
+      },
+      {
+       "w": "temperatures",
+       "t": 13.8,
+       "score": 0.402
+      },
+      {
+       "w": "of",
+       "t": 14.44,
+       "score": 0.21
+      },
+      {
+       "w": "bearings?",
+       "t": 14.58,
+       "score": 0.111
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "If I understand properly what you just",
+     "start": 16.24,
+     "end": 18.76,
+     "words": [
+      {
+       "w": "If",
+       "t": 16.24,
+       "score": 0.444
+      },
+      {
+       "w": "I",
+       "t": 16.44,
+       "score": 0.599
+      },
+      {
+       "w": "understand",
+       "t": 16.52,
+       "score": 0.465
+      },
+      {
+       "w": "properly",
+       "t": 17.02,
+       "score": 0.259
+      },
+      {
+       "w": "what",
+       "t": 18.22,
+       "score": 0.153
+      },
+      {
+       "w": "you",
+       "t": 18.4,
+       "score": 0.147
+      },
+      {
+       "w": "just",
+       "t": 18.5,
+       "score": 0.049
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "described, they are a standard at which",
+     "start": 18.76,
+     "end": 21.32,
+     "words": [
+      {
+       "w": "described,",
+       "t": 18.76,
+       "score": 0.247
+      },
+      {
+       "w": "they",
+       "t": 19.98,
+       "score": 0.119
+      },
+      {
+       "w": "are",
+       "t": 20.2,
+       "score": 0.079
+      },
+      {
+       "w": "a",
+       "t": 20.38,
+       "score": 0.007
+      },
+      {
+       "w": "standard",
+       "t": 20.48,
+       "score": 0.181
+      },
+      {
+       "w": "at",
+       "t": 20.98,
+       "score": 0.016
+      },
+      {
+       "w": "which",
+       "t": 21.14,
+       "score": 0.348
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "bearings can be removed from service and",
+     "start": 21.38,
+     "end": 24.4,
+     "words": [
+      {
+       "w": "bearings",
+       "t": 21.38,
+       "score": 0.541
+      },
+      {
+       "w": "can",
+       "t": 21.86,
+       "score": 0.584
+      },
+      {
+       "w": "be",
+       "t": 22.1,
+       "score": 0.495
+      },
+      {
+       "w": "removed",
+       "t": 22.38,
+       "score": 0.658
+      },
+      {
+       "w": "from",
+       "t": 23.52,
+       "score": 0.458
+      },
+      {
+       "w": "service",
+       "t": 23.76,
+       "score": 0.058
+      },
+      {
+       "w": "and",
+       "t": 24.26,
+       "score": 0.068
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "billing and the car owners could be billed",
+     "start": 24.48,
+     "end": 26.92,
+     "words": [
+      {
+       "w": "billing",
+       "t": 24.48,
+       "score": 0.032
+      },
+      {
+       "w": "and",
+       "t": 25.14,
+       "score": 0.019
+      },
+      {
+       "w": "the",
+       "t": 25.66,
+       "score": 0.065
+      },
+      {
+       "w": "car",
+       "t": 25.78,
+       "score": 0.038
+      },
+      {
+       "w": "owners",
+       "t": 26.06,
+       "score": 0.069
+      },
+      {
+       "w": "could",
+       "t": 26.38,
+       "score": 0.023
+      },
+      {
+       "w": "be",
+       "t": 26.54,
+       "score": 0.134
+      },
+      {
+       "w": "billed",
+       "t": 26.68,
+       "score": 0.133
+      }
+     ]
+    },
+    {
+     "speaker": "MR. ARONIAN",
+     "text": "for it?",
+     "start": 26.96,
+     "end": 27.18,
+     "words": [
+      {
+       "w": "for",
+       "t": 26.96,
+       "score": 0.119
+      },
+      {
+       "w": "it?",
+       "t": 27.14,
+       "score": 0.0
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "Correct.",
+     "start": 28.1,
+     "end": 28.6,
+     "words": [
+      {
+       "w": "Correct.",
+       "t": 28.1,
+       "score": 0.582
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "Now, keep in mind it’s in the interest of",
+     "start": 28.88,
+     "end": 32.32,
+     "words": [
+      {
+       "w": "Now,",
+       "t": 28.88,
+       "score": 0.533
+      },
+      {
+       "w": "keep",
+       "t": 29.08,
+       "score": 0.718
+      },
+      {
+       "w": "in",
+       "t": 29.34,
+       "score": 0.894
+      },
+      {
+       "w": "mind",
+       "t": 29.48,
+       "score": 0.871
+      },
+      {
+       "w": "it’s",
+       "t": 31.12,
+       "score": 0.286
+      },
+      {
+       "w": "in",
+       "t": 31.4,
+       "score": 0.797
+      },
+      {
+       "w": "the",
+       "t": 31.54,
+       "score": 0.754
+      },
+      {
+       "w": "interest",
+       "t": 31.84,
+       "score": 0.991
+      },
+      {
+       "w": "of",
+       "t": 32.26,
+       "score": 0.981
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "the operating railroad not to have",
+     "start": 32.36,
+     "end": 34.82,
+     "words": [
+      {
+       "w": "the",
+       "t": 32.36,
+       "score": 0.93
+      },
+      {
+       "w": "operating",
+       "t": 32.56,
+       "score": 0.847
+      },
+      {
+       "w": "railroad",
+       "t": 33.06,
+       "score": 0.96
+      },
+      {
+       "w": "not",
+       "t": 34.24,
+       "score": 0.962
+      },
+      {
+       "w": "to",
+       "t": 34.48,
+       "score": 0.965
+      },
+      {
+       "w": "have",
+       "t": 34.6,
+       "score": 0.859
+      }
+     ]
+    },
+    {
+     "speaker": "MR. RUSH",
+     "text": "derailments attributable to hot bearings",
+     "start": 34.84,
+     "end": 37.04,
+     "words": [
+      {
+       "w": "derailments",
+       "t": 34.84,
+       "score": 0.841
+      },
+      {
+       "w": "attributable",
+       "t": 35.62,
+       "score": 0.932
+      },
+      {
+       "w": "to",
+       "t": 36.26,
+       "score": 0.916
+      },
+      {
+       "w": "hot",
+       "t": 36.4,
+       "score": 0.9
+      },
+      {
+       "w": "bearings",
+       "t": 36.62,
+       "score": 0.866
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

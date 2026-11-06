@@ -21,6 +21,12 @@ for (const [key, s] of Object.entries(spec)) {
 		st.textContent = 'body{background:#fff !important; margin:40px 48px !important;} img,svg,nav,header,footer{display:none !important;}' + (css || '');
 		document.head.appendChild(st);
 	}, s.css ?? '');
+	// non-breaking spaces (iXBRL filings put one between a number and "million") defeat window.find; they render the
+	// same as a space, so the words shown are unchanged
+	await page.evaluate(() => {
+		const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+		for (let n = w.nextNode(); n; n = w.nextNode()) if (n.nodeValue.includes('\u00a0')) n.nodeValue = n.nodeValue.replace(/\u00a0/g, ' ');
+	});
 	const rects = [];
 	for (const phrase of s.phrases) {
 		const r = await page.evaluate((p) => {

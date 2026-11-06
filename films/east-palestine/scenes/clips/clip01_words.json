@@ -1,0 +1,2646 @@
+{
+ "clip": "assets/footage/clip01.mp4",
+ "from": 0.0,
+ "to": 155.0,
+ "words": [
+  {
+   "w": "during",
+   "speaker": "",
+   "start": 0.0,
+   "end": 0.12,
+   "score": 0.004
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 0.12,
+   "end": 0.14,
+   "score": 0.001
+  },
+  {
+   "w": "shift",
+   "speaker": "",
+   "start": 0.14,
+   "end": 0.24,
+   "score": 0.001
+  },
+  {
+   "w": "they",
+   "speaker": "",
+   "start": 0.26,
+   "end": 0.34,
+   "score": 0.0
+  },
+  {
+   "w": "have",
+   "speaker": "",
+   "start": 0.34,
+   "end": 0.48,
+   "score": 0.0
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 0.48,
+   "end": 0.54,
+   "score": 0.0
+  },
+  {
+   "w": "analyze",
+   "speaker": "",
+   "start": 0.54,
+   "end": 0.68,
+   "score": 0.0
+  },
+  {
+   "w": "these",
+   "speaker": "",
+   "start": 0.68,
+   "end": 0.9,
+   "score": 0.0
+  },
+  {
+   "w": "reports",
+   "speaker": "",
+   "start": 0.92,
+   "end": 1.16,
+   "score": 0.0
+  },
+  {
+   "w": "from",
+   "speaker": "",
+   "start": 1.18,
+   "end": 1.28,
+   "score": 0.0
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 1.28,
+   "end": 1.36,
+   "score": 0.0
+  },
+  {
+   "w": "wayside",
+   "speaker": "",
+   "start": 1.36,
+   "end": 1.5,
+   "score": 0.0
+  },
+  {
+   "w": "detectors",
+   "speaker": "",
+   "start": 1.5,
+   "end": 1.7,
+   "score": 0.001
+  },
+  {
+   "w": "is",
+   "speaker": "",
+   "start": 1.7,
+   "end": 1.74,
+   "score": 0.0
+  },
+  {
+   "w": "two",
+   "speaker": "",
+   "start": 1.74,
+   "end": 1.8,
+   "score": 0.164
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 1.8,
+   "end": 1.84,
+   "score": 0.001
+  },
+  {
+   "w": "three",
+   "speaker": "",
+   "start": 1.84,
+   "end": 1.96,
+   "score": 0.073
+  },
+  {
+   "w": "times",
+   "speaker": "",
+   "start": 1.96,
+   "end": 2.16,
+   "score": 0.0
+  },
+  {
+   "w": "per",
+   "speaker": "",
+   "start": 2.16,
+   "end": 2.24,
+   "score": 0.06
+  },
+  {
+   "w": "shift",
+   "speaker": "",
+   "start": 2.3,
+   "end": 2.66,
+   "score": 0.074
+  },
+  {
+   "w": "just",
+   "speaker": "",
+   "start": 2.7,
+   "end": 2.78,
+   "score": 0.057
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 2.82,
+   "end": 2.9,
+   "score": 0.118
+  },
+  {
+   "w": "make",
+   "speaker": "",
+   "start": 2.9,
+   "end": 3.04,
+   "score": 0.0
+  },
+  {
+   "w": "some",
+   "speaker": "",
+   "start": 3.04,
+   "end": 3.12,
+   "score": 0.095
+  },
+  {
+   "w": "context",
+   "speaker": "",
+   "start": 3.12,
+   "end": 3.26,
+   "score": 0.0
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 3.26,
+   "end": 3.3,
+   "score": 0.0
+  },
+  {
+   "w": "terms",
+   "speaker": "",
+   "start": 3.3,
+   "end": 3.44,
+   "score": 0.0
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 3.44,
+   "end": 3.48,
+   "score": 0.0
+  },
+  {
+   "w": "workload.",
+   "speaker": "",
+   "start": 3.5,
+   "end": 3.68,
+   "score": 0.0
+  },
+  {
+   "w": "Now,",
+   "speaker": "",
+   "start": 3.68,
+   "end": 3.74,
+   "score": 0.0
+  },
+  {
+   "w": "going",
+   "speaker": "",
+   "start": 3.74,
+   "end": 3.84,
+   "score": 0.0
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 3.84,
+   "end": 3.881,
+   "score": 0.0
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 3.881,
+   "end": 4.021,
+   "score": 0.45
+  },
+  {
+   "w": "issue",
+   "speaker": "",
+   "start": 4.021,
+   "end": 4.141,
+   "score": 0.133
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 4.141,
+   "end": 4.181,
+   "score": 0.0
+  },
+  {
+   "w": "how",
+   "speaker": "",
+   "start": 4.181,
+   "end": 4.241,
+   "score": 0.183
+  },
+  {
+   "w": "we",
+   "speaker": "",
+   "start": 4.281,
+   "end": 4.321,
+   "score": 0.0
+  },
+  {
+   "w": "arrived",
+   "speaker": "",
+   "start": 4.321,
+   "end": 4.481,
+   "score": 0.0
+  },
+  {
+   "w": "at",
+   "speaker": "",
+   "start": 4.501,
+   "end": 4.541,
+   "score": 0.002
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 4.561,
+   "end": 4.681,
+   "score": 0.199
+  },
+  {
+   "w": "thresholds.",
+   "speaker": "",
+   "start": 4.681,
+   "end": 4.881,
+   "score": 0.098
+  },
+  {
+   "w": "So",
+   "speaker": "",
+   "start": 4.901,
+   "end": 4.941,
+   "score": 0.0
+  },
+  {
+   "w": "let’s",
+   "speaker": "",
+   "start": 4.941,
+   "end": 5.041,
+   "score": 0.0
+  },
+  {
+   "w": "talk,",
+   "speaker": "",
+   "start": 5.041,
+   "end": 5.201,
+   "score": 0.685
+  },
+  {
+   "w": "first",
+   "speaker": "",
+   "start": 5.341,
+   "end": 5.561,
+   "score": 0.461
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 5.561,
+   "end": 5.641,
+   "score": 0.011
+  },
+  {
+   "w": "all,",
+   "speaker": "",
+   "start": 5.661,
+   "end": 5.761,
+   "score": 0.48
+  },
+  {
+   "w": "what",
+   "speaker": "",
+   "start": 5.821,
+   "end": 5.961,
+   "score": 0.888
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 5.981,
+   "end": 6.181,
+   "score": 0.974
+  },
+  {
+   "w": "thresholds",
+   "speaker": "",
+   "start": 6.221,
+   "end": 6.681,
+   "score": 0.986
+  },
+  {
+   "w": "represent.",
+   "speaker": "",
+   "start": 6.721,
+   "end": 7.201,
+   "score": 0.977
+  },
+  {
+   "w": "Those",
+   "speaker": "",
+   "start": 7.241,
+   "end": 7.401,
+   "score": 0.983
+  },
+  {
+   "w": "are",
+   "speaker": "",
+   "start": 7.421,
+   "end": 7.521,
+   "score": 0.749
+  },
+  {
+   "w": "thresholds",
+   "speaker": "",
+   "start": 7.541,
+   "end": 8.241,
+   "score": 0.957
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 8.781,
+   "end": 8.861,
+   "score": 0.982
+  },
+  {
+   "w": "AAR’s",
+   "speaker": "",
+   "start": 8.941,
+   "end": 9.601,
+   "score": 0.581
+  },
+  {
+   "w": "car",
+   "speaker": "",
+   "start": 9.681,
+   "end": 9.881,
+   "score": 0.764
+  },
+  {
+   "w": "repair",
+   "speaker": "",
+   "start": 9.941,
+   "end": 10.241,
+   "score": 0.755
+  },
+  {
+   "w": "billing",
+   "speaker": "",
+   "start": 10.341,
+   "end": 10.621,
+   "score": 0.788
+  },
+  {
+   "w": "rules",
+   "speaker": "",
+   "start": 10.681,
+   "end": 11.061,
+   "score": 0.961
+  },
+  {
+   "w": "which",
+   "speaker": "",
+   "start": 11.541,
+   "end": 11.702,
+   "score": 0.381
+  },
+  {
+   "w": "authorize",
+   "speaker": "",
+   "start": 12.122,
+   "end": 12.942,
+   "score": 0.869
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 13.402,
+   "end": 13.522,
+   "score": 0.204
+  },
+  {
+   "w": "ability",
+   "speaker": "",
+   "start": 15.622,
+   "end": 16.102,
+   "score": 0.992
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 16.782,
+   "end": 16.982,
+   "score": 0.87
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 17.302,
+   "end": 17.322,
+   "score": 0.512
+  },
+  {
+   "w": "railroad",
+   "speaker": "",
+   "start": 17.582,
+   "end": 18.162,
+   "score": 0.889
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 18.662,
+   "end": 18.802,
+   "score": 0.646
+  },
+  {
+   "w": "take",
+   "speaker": "",
+   "start": 19.663,
+   "end": 19.823,
+   "score": 0.971
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 19.843,
+   "end": 19.863,
+   "score": 0.949
+  },
+  {
+   "w": "car",
+   "speaker": "",
+   "start": 19.923,
+   "end": 20.143,
+   "score": 0.988
+  },
+  {
+   "w": "out",
+   "speaker": "",
+   "start": 20.223,
+   "end": 20.323,
+   "score": 0.724
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 20.323,
+   "end": 20.383,
+   "score": 0.942
+  },
+  {
+   "w": "service,",
+   "speaker": "",
+   "start": 20.463,
+   "end": 20.923,
+   "score": 0.97
+  },
+  {
+   "w": "make",
+   "speaker": "",
+   "start": 21.083,
+   "end": 21.243,
+   "score": 0.957
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 21.263,
+   "end": 21.343,
+   "score": 0.609
+  },
+  {
+   "w": "repairs",
+   "speaker": "",
+   "start": 21.383,
+   "end": 21.983,
+   "score": 0.722
+  },
+  {
+   "w": "that",
+   "speaker": "",
+   "start": 22.503,
+   "end": 22.623,
+   "score": 0.892
+  },
+  {
+   "w": "are",
+   "speaker": "",
+   "start": 22.643,
+   "end": 22.743,
+   "score": 0.97
+  },
+  {
+   "w": "necessary.",
+   "speaker": "",
+   "start": 22.783,
+   "end": 23.363,
+   "score": 0.969
+  },
+  {
+   "w": "Those",
+   "speaker": "",
+   "start": 26.103,
+   "end": 26.363,
+   "score": 0.738
+  },
+  {
+   "w": "threshold",
+   "speaker": "",
+   "start": 26.443,
+   "end": 26.923,
+   "score": 0.223
+  },
+  {
+   "w": "--",
+   "speaker": "",
+   "start": 26.923,
+   "end": 26.923,
+   "score": 1.0
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 27.123,
+   "end": 27.204,
+   "score": 0.769
+  },
+  {
+   "w": "way",
+   "speaker": "",
+   "start": 27.244,
+   "end": 27.404,
+   "score": 0.986
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 27.464,
+   "end": 27.524,
+   "score": 0.994
+  },
+  {
+   "w": "which",
+   "speaker": "",
+   "start": 27.564,
+   "end": 27.724,
+   "score": 0.996
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 27.784,
+   "end": 27.864,
+   "score": 0.97
+  },
+  {
+   "w": "thresholds",
+   "speaker": "",
+   "start": 27.924,
+   "end": 28.764,
+   "score": 0.945
+  },
+  {
+   "w": "are",
+   "speaker": "",
+   "start": 29.344,
+   "end": 29.484,
+   "score": 0.947
+  },
+  {
+   "w": "developed",
+   "speaker": "",
+   "start": 29.504,
+   "end": 30.064,
+   "score": 0.987
+  },
+  {
+   "w": "really",
+   "speaker": "",
+   "start": 30.364,
+   "end": 30.704,
+   "score": 0.94
+  },
+  {
+   "w": "is",
+   "speaker": "",
+   "start": 30.844,
+   "end": 30.944,
+   "score": 0.971
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 30.984,
+   "end": 31.004,
+   "score": 0.969
+  },
+  {
+   "w": "function",
+   "speaker": "",
+   "start": 31.124,
+   "end": 31.544,
+   "score": 0.996
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 31.624,
+   "end": 31.704,
+   "score": 0.983
+  },
+  {
+   "w": "experience,",
+   "speaker": "",
+   "start": 31.744,
+   "end": 32.444,
+   "score": 0.982
+  },
+  {
+   "w": "and",
+   "speaker": "",
+   "start": 32.544,
+   "end": 32.644,
+   "score": 0.948
+  },
+  {
+   "w": "you’re",
+   "speaker": "",
+   "start": 32.684,
+   "end": 32.844,
+   "score": 0.636
+  },
+  {
+   "w": "balancing",
+   "speaker": "",
+   "start": 32.924,
+   "end": 33.764,
+   "score": 0.866
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 34.584,
+   "end": 34.604,
+   "score": 0.084
+  },
+  {
+   "w": "couple",
+   "speaker": "",
+   "start": 35.185,
+   "end": 35.425,
+   "score": 0.925
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 35.425,
+   "end": 35.485,
+   "score": 0.933
+  },
+  {
+   "w": "considerations.",
+   "speaker": "",
+   "start": 35.505,
+   "end": 36.245,
+   "score": 0.819
+  },
+  {
+   "w": "One",
+   "speaker": "",
+   "start": 37.125,
+   "end": 37.225,
+   "score": 0.899
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 37.265,
+   "end": 37.325,
+   "score": 0.966
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 37.365,
+   "end": 37.585,
+   "score": 0.965
+  },
+  {
+   "w": "considerations",
+   "speaker": "",
+   "start": 37.605,
+   "end": 38.325,
+   "score": 0.98
+  },
+  {
+   "w": "is,",
+   "speaker": "",
+   "start": 38.385,
+   "end": 38.465,
+   "score": 0.985
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 38.505,
+   "end": 38.565,
+   "score": 0.979
+  },
+  {
+   "w": "course,",
+   "speaker": "",
+   "start": 38.665,
+   "end": 39.065,
+   "score": 0.638
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 39.145,
+   "end": 39.225,
+   "score": 0.826
+  },
+  {
+   "w": "detection",
+   "speaker": "",
+   "start": 39.285,
+   "end": 39.905,
+   "score": 0.941
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 40.565,
+   "end": 40.885,
+   "score": 0.301
+  },
+  {
+   "w": "issues",
+   "speaker": "",
+   "start": 42.225,
+   "end": 42.626,
+   "score": 0.914
+  },
+  {
+   "w": "with",
+   "speaker": "",
+   "start": 43.926,
+   "end": 44.046,
+   "score": 0.875
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 44.066,
+   "end": 44.126,
+   "score": 0.786
+  },
+  {
+   "w": "bearings.",
+   "speaker": "",
+   "start": 44.146,
+   "end": 44.626,
+   "score": 0.859
+  },
+  {
+   "w": "The",
+   "speaker": "",
+   "start": 45.186,
+   "end": 45.266,
+   "score": 0.954
+  },
+  {
+   "w": "other",
+   "speaker": "",
+   "start": 45.386,
+   "end": 45.566,
+   "score": 0.987
+  },
+  {
+   "w": "issue,",
+   "speaker": "",
+   "start": 45.646,
+   "end": 45.886,
+   "score": 0.94
+  },
+  {
+   "w": "as",
+   "speaker": "",
+   "start": 45.946,
+   "end": 46.046,
+   "score": 0.866
+  },
+  {
+   "w": "it",
+   "speaker": "",
+   "start": 46.066,
+   "end": 46.106,
+   "score": 0.013
+  },
+  {
+   "w": "was",
+   "speaker": "",
+   "start": 46.106,
+   "end": 46.226,
+   "score": 0.424
+  },
+  {
+   "w": "talked",
+   "speaker": "",
+   "start": 46.286,
+   "end": 46.566,
+   "score": 0.971
+  },
+  {
+   "w": "about",
+   "speaker": "",
+   "start": 46.606,
+   "end": 46.926,
+   "score": 0.944
+  },
+  {
+   "w": "earlier,",
+   "speaker": "",
+   "start": 47.086,
+   "end": 47.566,
+   "score": 0.945
+  },
+  {
+   "w": "is",
+   "speaker": "",
+   "start": 47.966,
+   "end": 48.246,
+   "score": 0.683
+  },
+  {
+   "w": "--",
+   "speaker": "",
+   "start": 48.246,
+   "end": 48.246,
+   "score": 1.0
+  },
+  {
+   "w": "you",
+   "speaker": "",
+   "start": 48.846,
+   "end": 48.906,
+   "score": 0.143
+  },
+  {
+   "w": "know,",
+   "speaker": "",
+   "start": 48.906,
+   "end": 49.006,
+   "score": 0.203
+  },
+  {
+   "w": "if",
+   "speaker": "",
+   "start": 49.466,
+   "end": 49.526,
+   "score": 0.84
+  },
+  {
+   "w": "you",
+   "speaker": "",
+   "start": 49.546,
+   "end": 49.606,
+   "score": 0.628
+  },
+  {
+   "w": "put",
+   "speaker": "",
+   "start": 49.626,
+   "end": 49.746,
+   "score": 0.972
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 49.786,
+   "end": 49.846,
+   "score": 0.96
+  },
+  {
+   "w": "thresholds",
+   "speaker": "",
+   "start": 49.886,
+   "end": 50.427,
+   "score": 0.979
+  },
+  {
+   "w": "too",
+   "speaker": "",
+   "start": 50.507,
+   "end": 50.687,
+   "score": 0.788
+  },
+  {
+   "w": "low,",
+   "speaker": "",
+   "start": 50.807,
+   "end": 51.167,
+   "score": 0.919
+  },
+  {
+   "w": "you’re",
+   "speaker": "",
+   "start": 51.907,
+   "end": 52.027,
+   "score": 0.263
+  },
+  {
+   "w": "going",
+   "speaker": "",
+   "start": 52.027,
+   "end": 52.127,
+   "score": 0.353
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 52.127,
+   "end": 52.167,
+   "score": 0.001
+  },
+  {
+   "w": "have",
+   "speaker": "",
+   "start": 52.167,
+   "end": 52.247,
+   "score": 0.489
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 52.287,
+   "end": 52.307,
+   "score": 0.975
+  },
+  {
+   "w": "lot",
+   "speaker": "",
+   "start": 52.387,
+   "end": 52.607,
+   "score": 0.989
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 52.627,
+   "end": 52.707,
+   "score": 0.96
+  },
+  {
+   "w": "false",
+   "speaker": "",
+   "start": 52.867,
+   "end": 53.247,
+   "score": 0.823
+  },
+  {
+   "w": "stops",
+   "speaker": "",
+   "start": 53.287,
+   "end": 53.767,
+   "score": 0.978
+  },
+  {
+   "w": "and",
+   "speaker": "",
+   "start": 54.407,
+   "end": 54.507,
+   "score": 0.925
+  },
+  {
+   "w": "you’re",
+   "speaker": "",
+   "start": 54.527,
+   "end": 54.667,
+   "score": 0.433
+  },
+  {
+   "w": "really",
+   "speaker": "",
+   "start": 54.667,
+   "end": 54.867,
+   "score": 0.979
+  },
+  {
+   "w": "going",
+   "speaker": "",
+   "start": 54.907,
+   "end": 55.027,
+   "score": 0.454
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 55.027,
+   "end": 55.067,
+   "score": 0.082
+  },
+  {
+   "w": "bollocks",
+   "speaker": "",
+   "start": 55.127,
+   "end": 55.467,
+   "score": 0.347
+  },
+  {
+   "w": "up",
+   "speaker": "",
+   "start": 55.507,
+   "end": 55.587,
+   "score": 0.004
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 55.607,
+   "end": 55.687,
+   "score": 0.928
+  },
+  {
+   "w": "railroad",
+   "speaker": "",
+   "start": 55.727,
+   "end": 56.047,
+   "score": 0.8
+  },
+  {
+   "w": "system.",
+   "speaker": "",
+   "start": 56.127,
+   "end": 56.527,
+   "score": 0.993
+  },
+  {
+   "w": "You’re",
+   "speaker": "",
+   "start": 57.007,
+   "end": 57.127,
+   "score": 0.498
+  },
+  {
+   "w": "going",
+   "speaker": "",
+   "start": 57.127,
+   "end": 57.227,
+   "score": 0.308
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 57.227,
+   "end": 57.267,
+   "score": 0.001
+  },
+  {
+   "w": "cause",
+   "speaker": "",
+   "start": 57.267,
+   "end": 57.507,
+   "score": 0.578
+  },
+  {
+   "w": "issues",
+   "speaker": "",
+   "start": 57.627,
+   "end": 57.927,
+   "score": 0.994
+  },
+  {
+   "w": "with",
+   "speaker": "",
+   "start": 57.967,
+   "end": 58.087,
+   "score": 0.989
+  },
+  {
+   "w": "respect",
+   "speaker": "",
+   "start": 58.107,
+   "end": 58.448,
+   "score": 0.943
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 58.468,
+   "end": 58.528,
+   "score": 0.73
+  },
+  {
+   "w": "customer",
+   "speaker": "",
+   "start": 58.568,
+   "end": 58.928,
+   "score": 0.901
+  },
+  {
+   "w": "service,",
+   "speaker": "",
+   "start": 58.988,
+   "end": 59.388,
+   "score": 0.991
+  },
+  {
+   "w": "and",
+   "speaker": "",
+   "start": 59.548,
+   "end": 59.628,
+   "score": 0.937
+  },
+  {
+   "w": "you’re",
+   "speaker": "",
+   "start": 59.648,
+   "end": 59.788,
+   "score": 0.505
+  },
+  {
+   "w": "eventually",
+   "speaker": "",
+   "start": 59.808,
+   "end": 60.228,
+   "score": 0.981
+  },
+  {
+   "w": "going",
+   "speaker": "",
+   "start": 60.248,
+   "end": 60.408,
+   "score": 0.558
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 60.448,
+   "end": 60.528,
+   "score": 0.159
+  },
+  {
+   "w": "lead",
+   "speaker": "",
+   "start": 60.588,
+   "end": 60.828,
+   "score": 0.987
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 60.908,
+   "end": 61.008,
+   "score": 0.974
+  },
+  {
+   "w": "shippers",
+   "speaker": "",
+   "start": 61.448,
+   "end": 61.808,
+   "score": 0.97
+  },
+  {
+   "w": "choosing",
+   "speaker": "",
+   "start": 61.888,
+   "end": 62.208,
+   "score": 0.713
+  },
+  {
+   "w": "other",
+   "speaker": "",
+   "start": 62.248,
+   "end": 62.408,
+   "score": 0.989
+  },
+  {
+   "w": "modes",
+   "speaker": "",
+   "start": 62.448,
+   "end": 62.688,
+   "score": 0.934
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 62.688,
+   "end": 62.748,
+   "score": 0.993
+  },
+  {
+   "w": "transportation,",
+   "speaker": "",
+   "start": 62.788,
+   "end": 63.528,
+   "score": 0.977
+  },
+  {
+   "w": "which",
+   "speaker": "",
+   "start": 63.948,
+   "end": 64.108,
+   "score": 0.981
+  },
+  {
+   "w": "really",
+   "speaker": "",
+   "start": 64.148,
+   "end": 64.368,
+   "score": 0.932
+  },
+  {
+   "w": "is",
+   "speaker": "",
+   "start": 64.388,
+   "end": 64.468,
+   "score": 0.874
+  },
+  {
+   "w": "not",
+   "speaker": "",
+   "start": 64.528,
+   "end": 64.688,
+   "score": 0.898
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 64.788,
+   "end": 64.848,
+   "score": 0.793
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 64.888,
+   "end": 64.948,
+   "score": 0.779
+  },
+  {
+   "w": "interest.",
+   "speaker": "",
+   "start": 65.008,
+   "end": 65.448,
+   "score": 0.952
+  },
+  {
+   "w": "It’s",
+   "speaker": "",
+   "start": 66.109,
+   "end": 66.249,
+   "score": 0.634
+  },
+  {
+   "w": "really",
+   "speaker": "",
+   "start": 66.329,
+   "end": 66.629,
+   "score": 0.854
+  },
+  {
+   "w": "an",
+   "speaker": "",
+   "start": 66.829,
+   "end": 66.929,
+   "score": 0.751
+  },
+  {
+   "w": "experience",
+   "speaker": "",
+   "start": 66.989,
+   "end": 67.909,
+   "score": 0.572
+  },
+  {
+   "w": "issue",
+   "speaker": "",
+   "start": 68.769,
+   "end": 69.129,
+   "score": 0.293
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 69.489,
+   "end": 69.549,
+   "score": 0.512
+  },
+  {
+   "w": "terms",
+   "speaker": "",
+   "start": 69.609,
+   "end": 69.949,
+   "score": 0.937
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 70.009,
+   "end": 70.149,
+   "score": 0.874
+  },
+  {
+   "w": "where",
+   "speaker": "",
+   "start": 70.569,
+   "end": 70.809,
+   "score": 0.647
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 70.889,
+   "end": 71.029,
+   "score": 0.612
+  },
+  {
+   "w": "establish",
+   "speaker": "",
+   "start": 71.689,
+   "end": 72.169,
+   "score": 0.872
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 72.209,
+   "end": 72.389,
+   "score": 0.439
+  },
+  {
+   "w": "thresholds.",
+   "speaker": "",
+   "start": 72.429,
+   "end": 72.989,
+   "score": 0.312
+  },
+  {
+   "w": "Having",
+   "speaker": "",
+   "start": 74.43,
+   "end": 74.85,
+   "score": 0.728
+  },
+  {
+   "w": "said",
+   "speaker": "",
+   "start": 75.01,
+   "end": 75.23,
+   "score": 0.902
+  },
+  {
+   "w": "that,",
+   "speaker": "",
+   "start": 75.33,
+   "end": 75.75,
+   "score": 0.828
+  },
+  {
+   "w": "as",
+   "speaker": "",
+   "start": 76.51,
+   "end": 76.67,
+   "score": 0.84
+  },
+  {
+   "w": "I",
+   "speaker": "",
+   "start": 76.79,
+   "end": 76.81,
+   "score": 0.927
+  },
+  {
+   "w": "think",
+   "speaker": "",
+   "start": 76.85,
+   "end": 77.07,
+   "score": 0.935
+  },
+  {
+   "w": "some",
+   "speaker": "",
+   "start": 77.63,
+   "end": 77.79,
+   "score": 0.933
+  },
+  {
+   "w": "people",
+   "speaker": "",
+   "start": 77.79,
+   "end": 77.99,
+   "score": 0.952
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 78.01,
+   "end": 78.05,
+   "score": 0.929
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 78.05,
+   "end": 78.11,
+   "score": 0.578
+  },
+  {
+   "w": "room",
+   "speaker": "",
+   "start": 78.15,
+   "end": 78.29,
+   "score": 0.951
+  },
+  {
+   "w": "are",
+   "speaker": "",
+   "start": 78.31,
+   "end": 78.39,
+   "score": 0.331
+  },
+  {
+   "w": "aware,",
+   "speaker": "",
+   "start": 78.43,
+   "end": 78.81,
+   "score": 0.893
+  },
+  {
+   "w": "we",
+   "speaker": "",
+   "start": 79.03,
+   "end": 79.15,
+   "score": 0.985
+  },
+  {
+   "w": "have",
+   "speaker": "",
+   "start": 79.61,
+   "end": 79.87,
+   "score": 0.984
+  },
+  {
+   "w": "been",
+   "speaker": "",
+   "start": 79.89,
+   "end": 80.05,
+   "score": 0.979
+  },
+  {
+   "w": "taking",
+   "speaker": "",
+   "start": 80.11,
+   "end": 80.51,
+   "score": 0.956
+  },
+  {
+   "w": "a",
+   "speaker": "",
+   "start": 80.99,
+   "end": 81.01,
+   "score": 0.86
+  },
+  {
+   "w": "look",
+   "speaker": "",
+   "start": 81.17,
+   "end": 81.37,
+   "score": 0.992
+  },
+  {
+   "w": "at",
+   "speaker": "",
+   "start": 81.411,
+   "end": 81.491,
+   "score": 0.973
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 81.551,
+   "end": 81.831,
+   "score": 0.965
+  },
+  {
+   "w": "thresholds",
+   "speaker": "",
+   "start": 81.911,
+   "end": 82.571,
+   "score": 0.803
+  },
+  {
+   "w": "and",
+   "speaker": "",
+   "start": 84.291,
+   "end": 84.551,
+   "score": 0.783
+  },
+  {
+   "w": "will",
+   "speaker": "",
+   "start": 85.191,
+   "end": 85.331,
+   "score": 0.957
+  },
+  {
+   "w": "continue",
+   "speaker": "",
+   "start": 85.351,
+   "end": 85.731,
+   "score": 0.961
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 85.751,
+   "end": 85.811,
+   "score": 0.963
+  },
+  {
+   "w": "look",
+   "speaker": "",
+   "start": 85.911,
+   "end": 86.051,
+   "score": 0.995
+  },
+  {
+   "w": "at",
+   "speaker": "",
+   "start": 86.071,
+   "end": 86.131,
+   "score": 0.982
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 86.151,
+   "end": 86.311,
+   "score": 0.95
+  },
+  {
+   "w": "thresholds.",
+   "speaker": "",
+   "start": 86.331,
+   "end": 86.931,
+   "score": 0.96
+  },
+  {
+   "w": "It’s",
+   "speaker": "",
+   "start": 88.491,
+   "end": 88.631,
+   "score": 0.459
+  },
+  {
+   "w": "an",
+   "speaker": "",
+   "start": 88.651,
+   "end": 88.751,
+   "score": 0.379
+  },
+  {
+   "w": "ongoing",
+   "speaker": "",
+   "start": 89.272,
+   "end": 89.812,
+   "score": 0.795
+  },
+  {
+   "w": "exercise",
+   "speaker": "",
+   "start": 90.432,
+   "end": 91.012,
+   "score": 0.872
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 91.052,
+   "end": 91.112,
+   "score": 0.966
+  },
+  {
+   "w": "terms",
+   "speaker": "",
+   "start": 91.172,
+   "end": 91.452,
+   "score": 0.959
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 91.492,
+   "end": 91.572,
+   "score": 0.93
+  },
+  {
+   "w": "taking",
+   "speaker": "",
+   "start": 91.632,
+   "end": 91.912,
+   "score": 0.966
+  },
+  {
+   "w": "experience",
+   "speaker": "",
+   "start": 91.952,
+   "end": 92.512,
+   "score": 0.972
+  },
+  {
+   "w": "into",
+   "speaker": "",
+   "start": 92.612,
+   "end": 92.812,
+   "score": 0.953
+  },
+  {
+   "w": "account.",
+   "speaker": "",
+   "start": 92.872,
+   "end": 93.312,
+   "score": 0.992
+  },
+  {
+   "w": "But",
+   "speaker": "",
+   "start": 93.912,
+   "end": 94.052,
+   "score": 0.978
+  },
+  {
+   "w": "really,",
+   "speaker": "",
+   "start": 94.212,
+   "end": 94.492,
+   "score": 0.981
+  },
+  {
+   "w": "that’s",
+   "speaker": "",
+   "start": 94.692,
+   "end": 94.972,
+   "score": 0.81
+  },
+  {
+   "w": "what",
+   "speaker": "",
+   "start": 95.012,
+   "end": 95.132,
+   "score": 0.976
+  },
+  {
+   "w": "it",
+   "speaker": "",
+   "start": 95.152,
+   "end": 95.212,
+   "score": 0.712
+  },
+  {
+   "w": "comes",
+   "speaker": "",
+   "start": 95.232,
+   "end": 95.452,
+   "score": 0.985
+  },
+  {
+   "w": "down",
+   "speaker": "",
+   "start": 95.492,
+   "end": 95.712,
+   "score": 0.977
+  },
+  {
+   "w": "to",
+   "speaker": "",
+   "start": 95.792,
+   "end": 95.892,
+   "score": 0.937
+  },
+  {
+   "w": "is",
+   "speaker": "",
+   "start": 96.092,
+   "end": 96.292,
+   "score": 0.72
+  },
+  {
+   "w": "taking",
+   "speaker": "",
+   "start": 97.233,
+   "end": 97.533,
+   "score": 0.94
+  },
+  {
+   "w": "your",
+   "speaker": "",
+   "start": 97.533,
+   "end": 97.653,
+   "score": 0.917
+  },
+  {
+   "w": "experience",
+   "speaker": "",
+   "start": 97.673,
+   "end": 98.213,
+   "score": 0.97
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 98.253,
+   "end": 98.313,
+   "score": 0.976
+  },
+  {
+   "w": "terms",
+   "speaker": "",
+   "start": 98.373,
+   "end": 98.673,
+   "score": 0.974
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 98.713,
+   "end": 98.773,
+   "score": 0.947
+  },
+  {
+   "w": "what",
+   "speaker": "",
+   "start": 98.893,
+   "end": 99.033,
+   "score": 0.949
+  },
+  {
+   "w": "threshold’s",
+   "speaker": "",
+   "start": 99.113,
+   "end": 99.633,
+   "score": 0.882
+  },
+  {
+   "w": "appropriate",
+   "speaker": "",
+   "start": 99.673,
+   "end": 100.333,
+   "score": 0.921
+  },
+  {
+   "w": "in",
+   "speaker": "",
+   "start": 100.813,
+   "end": 100.873,
+   "score": 0.839
+  },
+  {
+   "w": "terms",
+   "speaker": "",
+   "start": 100.953,
+   "end": 101.433,
+   "score": 0.579
+  },
+  {
+   "w": "of",
+   "speaker": "",
+   "start": 101.633,
+   "end": 101.913,
+   "score": 0.422
+  },
+  {
+   "w": "getting",
+   "speaker": "",
+   "start": 102.533,
+   "end": 102.853,
+   "score": 0.806
+  },
+  {
+   "w": "those",
+   "speaker": "",
+   "start": 102.873,
+   "end": 103.273,
+   "score": 0.37
+  },
+  {
+   "w": "defective",
+   "speaker": "",
+   "start": 104.413,
+   "end": 104.854,
+   "score": 0.928
+  },
+  {
+   "w": "bearings",
+   "speaker": "",
+   "start": 104.874,
+   "end": 105.234,
+   "score": 0.893
+  },
+  {
+   "w": "off",
+   "speaker": "",
+   "start": 105.334,
+   "end": 105.434,
+   "score": 0.83
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 105.494,
+   "end": 105.574,
+   "score": 0.941
+  },
+  {
+   "w": "system",
+   "speaker": "",
+   "start": 105.634,
+   "end": 106.034,
+   "score": 0.989
+  },
+  {
+   "w": "but",
+   "speaker": "",
+   "start": 106.434,
+   "end": 106.534,
+   "score": 0.985
+  },
+  {
+   "w": "at",
+   "speaker": "",
+   "start": 106.554,
+   "end": 106.614,
+   "score": 0.927
+  },
+  {
+   "w": "the",
+   "speaker": "",
+   "start": 106.634,
+   "end": 106.714,
+   "score": 0.8
+  },
+  {
+   "w": "same",
+   "speaker": "",
+   "start": 106.794,
+   "end": 107.054,
+   "score": 0.963
+  },
+  {
+   "w": "time",
+   "speaker": "",
+   "start": 107.114,
+   "end": 107.514,
+   "score": 0.929
+  },
+  {
+   "w": "not",
+   "speaker": "",
+   "start": 107.914,
+   "end": 108.094,
+   "score": 0.942
+  },
+  {
+   "w": "constantly",
+   "speaker": "",
+   "start": 108.154,
+   "end": 108.674,
+   "score": 0.94
+  },
+  {
+   "w": "stopping",
+   "speaker": "",
+   "start": 108.734,
+   "end": 109.114,
+   "score": 0.866
+  },
+  {
+   "w": "trains.",
+   "speaker": "",
+   "start": 109.154,
+   "end": 109.514,
+   "score": 0.93
+  },
+  {
+   "w": "Thank",
+   "speaker": "MR. ARONIAN",
+   "start": 113.035,
+   "end": 113.215,
+   "score": 0.059
+  },
+  {
+   "w": "you.",
+   "speaker": "MR. ARONIAN",
+   "start": 113.235,
+   "end": 113.295,
+   "score": 0.01
+  },
+  {
+   "w": "So",
+   "speaker": "MR. ARONIAN",
+   "start": 114.955,
+   "end": 115.055,
+   "score": 0.088
+  },
+  {
+   "w": "these",
+   "speaker": "MR. ARONIAN",
+   "start": 115.155,
+   "end": 115.455,
+   "score": 0.01
+  },
+  {
+   "w": "overheated",
+   "speaker": "MR. ARONIAN",
+   "start": 116.115,
+   "end": 116.555,
+   "score": 0.029
+  },
+  {
+   "w": "bearing",
+   "speaker": "MR. ARONIAN",
+   "start": 116.595,
+   "end": 116.875,
+   "score": 0.048
+  },
+  {
+   "w": "temperature",
+   "speaker": "MR. ARONIAN",
+   "start": 116.915,
+   "end": 117.435,
+   "score": 0.025
+  },
+  {
+   "w": "thresholds",
+   "speaker": "MR. ARONIAN",
+   "start": 117.515,
+   "end": 118.135,
+   "score": 0.062
+  },
+  {
+   "w": "established",
+   "speaker": "MR. ARONIAN",
+   "start": 119.295,
+   "end": 119.955,
+   "score": 0.592
+  },
+  {
+   "w": "in",
+   "speaker": "MR. ARONIAN",
+   "start": 120.055,
+   "end": 120.136,
+   "score": 0.859
+  },
+  {
+   "w": "the",
+   "speaker": "MR. ARONIAN",
+   "start": 120.176,
+   "end": 120.256,
+   "score": 0.796
+  },
+  {
+   "w": "rule,",
+   "speaker": "MR. ARONIAN",
+   "start": 120.316,
+   "end": 120.536,
+   "score": 0.855
+  },
+  {
+   "w": "then,",
+   "speaker": "MR. ARONIAN",
+   "start": 120.576,
+   "end": 120.776,
+   "score": 0.617
+  },
+  {
+   "w": "are",
+   "speaker": "MR. ARONIAN",
+   "start": 122.076,
+   "end": 122.196,
+   "score": 0.541
+  },
+  {
+   "w": "not",
+   "speaker": "MR. ARONIAN",
+   "start": 122.256,
+   "end": 122.436,
+   "score": 0.537
+  },
+  {
+   "w": "absolute",
+   "speaker": "MR. ARONIAN",
+   "start": 123.196,
+   "end": 123.676,
+   "score": 0.801
+  },
+  {
+   "w": "limits",
+   "speaker": "MR. ARONIAN",
+   "start": 123.716,
+   "end": 124.056,
+   "score": 0.886
+  },
+  {
+   "w": "for",
+   "speaker": "MR. ARONIAN",
+   "start": 124.136,
+   "end": 124.336,
+   "score": 0.556
+  },
+  {
+   "w": "safe",
+   "speaker": "MR. ARONIAN",
+   "start": 124.816,
+   "end": 125.136,
+   "score": 0.667
+  },
+  {
+   "w": "operating",
+   "speaker": "MR. ARONIAN",
+   "start": 125.256,
+   "end": 125.736,
+   "score": 0.344
+  },
+  {
+   "w": "temperatures",
+   "speaker": "MR. ARONIAN",
+   "start": 125.796,
+   "end": 126.376,
+   "score": 0.402
+  },
+  {
+   "w": "of",
+   "speaker": "MR. ARONIAN",
+   "start": 126.436,
+   "end": 126.496,
+   "score": 0.21
+  },
+  {
+   "w": "bearings?",
+   "speaker": "MR. ARONIAN",
+   "start": 126.576,
+   "end": 127.056,
+   "score": 0.111
+  },
+  {
+   "w": "If",
+   "speaker": "MR. ARONIAN",
+   "start": 128.237,
+   "end": 128.337,
+   "score": 0.444
+  },
+  {
+   "w": "I",
+   "speaker": "MR. ARONIAN",
+   "start": 128.437,
+   "end": 128.457,
+   "score": 0.599
+  },
+  {
+   "w": "understand",
+   "speaker": "MR. ARONIAN",
+   "start": 128.517,
+   "end": 128.957,
+   "score": 0.465
+  },
+  {
+   "w": "properly",
+   "speaker": "MR. ARONIAN",
+   "start": 129.017,
+   "end": 129.437,
+   "score": 0.259
+  },
+  {
+   "w": "what",
+   "speaker": "MR. ARONIAN",
+   "start": 130.217,
+   "end": 130.357,
+   "score": 0.153
+  },
+  {
+   "w": "you",
+   "speaker": "MR. ARONIAN",
+   "start": 130.397,
+   "end": 130.477,
+   "score": 0.147
+  },
+  {
+   "w": "just",
+   "speaker": "MR. ARONIAN",
+   "start": 130.497,
+   "end": 130.757,
+   "score": 0.049
+  },
+  {
+   "w": "described,",
+   "speaker": "MR. ARONIAN",
+   "start": 130.757,
+   "end": 131.317,
+   "score": 0.247
+  },
+  {
+   "w": "they",
+   "speaker": "MR. ARONIAN",
+   "start": 131.977,
+   "end": 132.117,
+   "score": 0.119
+  },
+  {
+   "w": "are",
+   "speaker": "MR. ARONIAN",
+   "start": 132.197,
+   "end": 132.377,
+   "score": 0.079
+  },
+  {
+   "w": "a",
+   "speaker": "MR. ARONIAN",
+   "start": 132.377,
+   "end": 132.397,
+   "score": 0.007
+  },
+  {
+   "w": "standard",
+   "speaker": "MR. ARONIAN",
+   "start": 132.477,
+   "end": 132.917,
+   "score": 0.181
+  },
+  {
+   "w": "at",
+   "speaker": "MR. ARONIAN",
+   "start": 132.977,
+   "end": 133.057,
+   "score": 0.016
+  },
+  {
+   "w": "which",
+   "speaker": "MR. ARONIAN",
+   "start": 133.137,
+   "end": 133.317,
+   "score": 0.348
+  },
+  {
+   "w": "bearings",
+   "speaker": "MR. ARONIAN",
+   "start": 133.377,
+   "end": 133.777,
+   "score": 0.541
+  },
+  {
+   "w": "can",
+   "speaker": "MR. ARONIAN",
+   "start": 133.857,
+   "end": 134.017,
+   "score": 0.584
+  },
+  {
+   "w": "be",
+   "speaker": "MR. ARONIAN",
+   "start": 134.097,
+   "end": 134.177,
+   "score": 0.495
+  },
+  {
+   "w": "removed",
+   "speaker": "MR. ARONIAN",
+   "start": 134.377,
+   "end": 134.857,
+   "score": 0.658
+  },
+  {
+   "w": "from",
+   "speaker": "MR. ARONIAN",
+   "start": 135.517,
+   "end": 135.678,
+   "score": 0.458
+  },
+  {
+   "w": "service",
+   "speaker": "MR. ARONIAN",
+   "start": 135.758,
+   "end": 136.158,
+   "score": 0.058
+  },
+  {
+   "w": "and",
+   "speaker": "MR. ARONIAN",
+   "start": 136.258,
+   "end": 136.398,
+   "score": 0.068
+  },
+  {
+   "w": "billing",
+   "speaker": "MR. ARONIAN",
+   "start": 136.478,
+   "end": 136.858,
+   "score": 0.032
+  },
+  {
+   "w": "and",
+   "speaker": "MR. ARONIAN",
+   "start": 137.138,
+   "end": 137.278,
+   "score": 0.019
+  },
+  {
+   "w": "the",
+   "speaker": "MR. ARONIAN",
+   "start": 137.658,
+   "end": 137.738,
+   "score": 0.065
+  },
+  {
+   "w": "car",
+   "speaker": "MR. ARONIAN",
+   "start": 137.778,
+   "end": 137.978,
+   "score": 0.038
+  },
+  {
+   "w": "owners",
+   "speaker": "MR. ARONIAN",
+   "start": 138.058,
+   "end": 138.318,
+   "score": 0.069
+  },
+  {
+   "w": "could",
+   "speaker": "MR. ARONIAN",
+   "start": 138.378,
+   "end": 138.518,
+   "score": 0.023
+  },
+  {
+   "w": "be",
+   "speaker": "MR. ARONIAN",
+   "start": 138.538,
+   "end": 138.598,
+   "score": 0.134
+  },
+  {
+   "w": "billed",
+   "speaker": "MR. ARONIAN",
+   "start": 138.678,
+   "end": 138.918,
+   "score": 0.133
+  },
+  {
+   "w": "for",
+   "speaker": "MR. ARONIAN",
+   "start": 138.958,
+   "end": 139.138,
+   "score": 0.119
+  },
+  {
+   "w": "it?",
+   "speaker": "MR. ARONIAN",
+   "start": 139.138,
+   "end": 139.178,
+   "score": 0.0
+  },
+  {
+   "w": "Correct.",
+   "speaker": "MR. RUSH",
+   "start": 140.098,
+   "end": 140.598,
+   "score": 0.582
+  },
+  {
+   "w": "Now,",
+   "speaker": "MR. RUSH",
+   "start": 140.878,
+   "end": 140.998,
+   "score": 0.533
+  },
+  {
+   "w": "keep",
+   "speaker": "MR. RUSH",
+   "start": 141.078,
+   "end": 141.278,
+   "score": 0.718
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 141.338,
+   "end": 141.418,
+   "score": 0.894
+  },
+  {
+   "w": "mind",
+   "speaker": "MR. RUSH",
+   "start": 141.478,
+   "end": 141.998,
+   "score": 0.871
+  },
+  {
+   "w": "it’s",
+   "speaker": "MR. RUSH",
+   "start": 143.118,
+   "end": 143.278,
+   "score": 0.286
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 143.399,
+   "end": 143.479,
+   "score": 0.797
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 143.539,
+   "end": 143.639,
+   "score": 0.754
+  },
+  {
+   "w": "interest",
+   "speaker": "MR. RUSH",
+   "start": 143.839,
+   "end": 144.219,
+   "score": 0.991
+  },
+  {
+   "w": "of",
+   "speaker": "MR. RUSH",
+   "start": 144.259,
+   "end": 144.319,
+   "score": 0.981
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 144.359,
+   "end": 144.419,
+   "score": 0.93
+  },
+  {
+   "w": "operating",
+   "speaker": "MR. RUSH",
+   "start": 144.559,
+   "end": 144.999,
+   "score": 0.847
+  },
+  {
+   "w": "railroad",
+   "speaker": "MR. RUSH",
+   "start": 145.059,
+   "end": 145.599,
+   "score": 0.96
+  },
+  {
+   "w": "not",
+   "speaker": "MR. RUSH",
+   "start": 146.239,
+   "end": 146.419,
+   "score": 0.962
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 146.479,
+   "end": 146.519,
+   "score": 0.965
+  },
+  {
+   "w": "have",
+   "speaker": "MR. RUSH",
+   "start": 146.599,
+   "end": 146.819,
+   "score": 0.859
+  },
+  {
+   "w": "derailments",
+   "speaker": "MR. RUSH",
+   "start": 146.839,
+   "end": 147.459,
+   "score": 0.841
+  },
+  {
+   "w": "attributable",
+   "speaker": "MR. RUSH",
+   "start": 147.619,
+   "end": 148.199,
+   "score": 0.932
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 148.259,
+   "end": 148.319,
+   "score": 0.916
+  },
+  {
+   "w": "hot",
+   "speaker": "MR. RUSH",
+   "start": 148.399,
+   "end": 148.559,
+   "score": 0.9
+  },
+  {
+   "w": "bearings",
+   "speaker": "MR. RUSH",
+   "start": 148.619,
+   "end": 149.039,
+   "score": 0.866
+  },
+  {
+   "w": "but",
+   "speaker": "MR. RUSH",
+   "start": 149.499,
+   "end": 149.619,
+   "score": 0.715
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 149.659,
+   "end": 149.739,
+   "score": 0.35
+  },
+  {
+   "w": "structure,",
+   "speaker": "MR. RUSH",
+   "start": 149.939,
+   "end": 150.579,
+   "score": 0.719
+  },
+  {
+   "w": "the",
+   "speaker": "MR. RUSH",
+   "start": 151.38,
+   "end": 151.46,
+   "score": 0.568
+  },
+  {
+   "w": "way",
+   "speaker": "MR. RUSH",
+   "start": 151.56,
+   "end": 151.74,
+   "score": 0.897
+  },
+  {
+   "w": "in",
+   "speaker": "MR. RUSH",
+   "start": 151.86,
+   "end": 151.96,
+   "score": 0.798
+  },
+  {
+   "w": "which",
+   "speaker": "MR. RUSH",
+   "start": 152.08,
+   "end": 152.36,
+   "score": 0.838
+  },
+  {
+   "w": "AR",
+   "speaker": "MR. RUSH",
+   "start": 152.36,
+   "end": 152.4,
+   "score": 0.0
+  },
+  {
+   "w": "standards",
+   "speaker": "MR. RUSH",
+   "start": 152.4,
+   "end": 152.64,
+   "score": 0.0
+  },
+  {
+   "w": "work",
+   "speaker": "MR. RUSH",
+   "start": 152.64,
+   "end": 152.72,
+   "score": 0.0
+  },
+  {
+   "w": "is",
+   "speaker": "MR. RUSH",
+   "start": 152.72,
+   "end": 152.78,
+   "score": 0.0
+  },
+  {
+   "w": "our",
+   "speaker": "MR. RUSH",
+   "start": 152.78,
+   "end": 152.86,
+   "score": 0.0
+  },
+  {
+   "w": "ability",
+   "speaker": "MR. RUSH",
+   "start": 152.88,
+   "end": 153.2,
+   "score": 0.0
+  },
+  {
+   "w": "to",
+   "speaker": "MR. RUSH",
+   "start": 153.2,
+   "end": 153.24,
+   "score": 0.0
+  },
+  {
+   "w": "impose",
+   "speaker": "MR. RUSH",
+   "start": 153.24,
+   "end": 153.36,
+   "score": 0.0
+  },
+  {
+   "w": "standards",
+   "speaker": "MR. RUSH",
+   "start": 153.36,
+   "end": 153.56,
+   "score": 0.084
+  },
+  {
+   "w": "is",
+   "speaker": "MR. RUSH",
+   "start": 153.56,
+   "end": 153.6,
+   "score": 0.008
+  },
+  {
+   "w": "through",
+   "speaker": "MR. RUSH",
+   "start": 153.6,
+   "end": 153.74,
+   "score": 0.005
+  },
+  {
+   "w": "what",
+   "speaker": "MR. RUSH",
+   "start": 153.74,
+   "end": 153.84,
+   "score": 0.135
+  },
+  {
+   "w": "we",
+   "speaker": "MR. RUSH",
+   "start": 153.84,
+   "end": 153.9,
+   "score": 0.001
+  },
+  {
+   "w": "call",
+   "speaker": "MR. RUSH",
+   "start": 153.9,
+   "end": 154.02,
+   "score": 0.001
+  },
+  {
+   "w": "our",
+   "speaker": "MR. RUSH",
+   "start": 154.02,
+   "end": 154.14,
+   "score": 0.0
+  },
+  {
+   "w": "interchange",
+   "speaker": "MR. RUSH",
+   "start": 154.2,
+   "end": 154.62,
+   "score": 0.18
+  },
+  {
+   "w": "agreement.",
+   "speaker": "MR. RUSH",
+   "start": 154.62,
+   "end": 154.98,
+   "score": 0.002
+  }
+ ]
+}
