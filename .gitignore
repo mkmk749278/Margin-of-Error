@@ -10,3 +10,7 @@ out/
 films/*/assets/
 public/films/
 __pycache__/
+
+# fetched source media (stays out of git; re-fetch per media_manifest.csv)
+assets/ntsb_report/
+assets/ntsb_flickr/
