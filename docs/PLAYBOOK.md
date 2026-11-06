@@ -712,9 +712,11 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   repo uses **at most 6 runners at once** (the workflow's default). Before a big render, check what is already running
   on the account (GitHub MCP `actions_list`); use more only when nothing else is running, fewer when something is.
   Never re-render a shard that already passed (`join_from`).
-- **ffmpeg on the runners (2026-11-06):** installed with `--no-install-recommends` and apt retries. *Why:* a slow
-  package mirror kept one join job 47 minutes on `apt-get install ffmpeg` (with recommends, about 200 packages)
-  while the film itself joined in 73 s.
+- **ffmpeg on the runners (2026-11-06): no apt.** The workflow puts Remotion's own `ffmpeg`/`ffprobe` (in
+  `node_modules/@remotion/compositor-linux-x64-gnu`, installed by `npm ci` in seconds) on the PATH. That build has no
+  `signalstats` and no `rawvideo` muxer, so `render_shards.mjs`'s flash check reads raw 64×36 greyscale frames through
+  `-c:v rawvideo -f image2pipe` (identical values to the system build, tested). *Why:* a slow package mirror kept
+  joins 47 and 30+ minutes on `apt-get install ffmpeg`, with and without recommends, while the film joined in 73 s.
 - **One block failed? Re-render only it (2026-11-06):** trigger the workflow again with the same `runners` (so the plan
   names the same blocks), `blocks` = the failed block(s) (e.g. `25200-36000`) and `reuse_from` = the earlier run's id:
   the join takes the earlier run's shards, lays this run's over them, and checks the whole film. A plain "re-run

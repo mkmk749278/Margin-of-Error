@@ -56,11 +56,16 @@ console.log(`${comp}: ${total} frames, ${shards.length} shards of ${per}, scale 
 
 /** Frames (0-based in `file`) darker than 45 % of both neighbours, on 64×36 mean luma (the picture-gate test). */
 const flashes = (file) => {
-	const y = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-an', '-vf', 'scale=64:36,signalstats,metadata=print:key=lavfi.signalstats.YAVG:file=-', '-f', 'null', '-'], {maxBuffer: 1 << 28})
-		.toString()
-		.split('\n')
-		.filter((l) => l.includes('YAVG'))
-		.map((l) => Number(l.split('=')[1]));
+	// raw 64×36 greyscale frames, averaged here: needs only the scale filter, so Remotion's own bundled ffmpeg (which
+	// has no signalstats) can run it and the runners need no apt install (2026-11-06)
+	const W = 64 * 36;
+	const raw = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-an', '-vf', 'scale=64:36', '-pix_fmt', 'gray', '-c:v', 'rawvideo', '-f', 'image2pipe', '-'], {maxBuffer: 1 << 30});
+	const y = [];
+	for (let o = 0; o + W <= raw.length; o += W) {
+		let sum = 0;
+		for (let k = o; k < o + W; k++) sum += raw[k];
+		y.push(sum / W);
+	}
 	const dark = (v, a, b) => a > 12 && b > 12 && v < 0.45 * a && v < 0.45 * b;
 	const bad = [];
 	for (let i = 1; i < y.length - 1; i++) {
