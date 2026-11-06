@@ -13,6 +13,7 @@ Exit status 0 always (an audit, not a gate); the summary line says how many sent
 """
 import argparse
 import json
+import sys
 import re
 from pathlib import Path
 
@@ -43,12 +44,18 @@ def main() -> None:
     for w in t["words"]:
         by_s.setdefault(w["s"], []).append(w)
     cued: dict[int, set[int]] = {}
+    unresolved: list[str] = []
     for src in sorted((a.film / "remotion").rglob("*.ts*")):
         for m in CUE.finditer(src.read_text()):
             sid, word, nth = int(m.group(1)), clean(m.group(2) or m.group(3)), int(m.group(4) or 0)
             hits = [k for k, w in enumerate(by_s.get(sid, [])) if clean(w["w"]) == word]
             if len(hits) > nth:
                 cued.setdefault(sid, set()).add(hits[nth])
+            else:
+                # a cue whose word is not in its sentence throws in timing.ts at render time (a runner failed on
+                # wf(74, 'industry') for "industry's", 2026-11-06): fail the gate here instead
+                line = src.read_text().count("\n", 0, m.start()) + 1
+                unresolved.append(f"{src.relative_to(a.film)}:{line} wf({sid}, '{word}', {nth}) not in: {' '.join(w['w'] for w in by_s.get(sid, []))}")
     rows, fails, tot_gap = [], 0, 0.0
     for s in t["sentences"]:
         ws = by_s.get(s["id"], [])
@@ -81,6 +88,10 @@ def main() -> None:
             mm = f"{int(s['start'] // 60)}:{s['start'] % 60:04.1f}"
             out.append(f"| {s['id']} | {mm} | {nc}/{nw} | {gap:.1f} s {mark} | {'; '.join(missed)} | {s['text'][:70]} |")
         a.md.write_text("\n".join(out) + "\n")
+    if unresolved:
+        print(f"{len(unresolved)} word cue(s) name a word that is not in their sentence (the render would throw):")
+        print("\n".join("  " + u for u in unresolved))
+        sys.exit(1)
 
 
 if __name__ == "__main__":
