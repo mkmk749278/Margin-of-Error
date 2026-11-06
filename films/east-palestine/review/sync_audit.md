@@ -1,6 +1,6 @@
 # Sync audit: east-palestine
 
-198 sentences · 1006 word cues on 2706 words · 21 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+198 sentences · 1173 word cues on 2706 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -180,25 +180,25 @@
 | 173 | 17:15.2 | 2/6 | 0.5 s ok |  | That is not in the record. |
 | 174 | 17:17.4 | 9/21 | 1.3 s ok |  | What is in the record is the urgency, the information the incident com |
 | 175 | 17:25.7 | 6/19 | 1.3 s ok |  | The N - T - S - B itself could not determine the main reason for the c |
-| 176 | 17:35.7 | 0/13 | 4.9 s **FAIL** | June twenty twenty-four, | In June twenty twenty-four, the N - T - S - B adopted its final report |
-| 177 | 17:41.5 | 0/20 | 8.0 s **FAIL** | twenty-third | The probable cause: the failure of the bearing on the twenty-third car |
-| 178 | 17:50.1 | 0/32 | 13.1 s **FAIL** | one one billion; twenty twenty-three, three hundred twenty-five million twenty twenty-four. | Norfolk Southern's annual reports put its net cost from the derailment |
-| 179 | 18:04.1 | 0/18 | 7.6 s **FAIL** | twenty twenty-five,; two hundred fifty-four million. | In twenty twenty-five, insurance and other recoveries were larger than |
-| 180 | 18:12.7 | 0/15 | 5.8 s **FAIL** | six hundred million | A class action settlement created a six hundred million dollar fund fo |
-| 181 | 18:19.5 | 0/7 | 2.4 s **FAIL** |  | The appeals against the settlement were dismissed. |
-| 182 | 18:22.6 | 0/14 | 6.2 s **FAIL** | October twenty twenty-six. | An appeal over residents' personal injury releases was still pending i |
-| 183 | 18:29.7 | 0/15 | 5.0 s **FAIL** |  | A separate settlement with the federal government still awaited the co |
-| 184 | 18:35.6 | 0/25 | 10.7 s **FAIL** | March twenty twenty-six, | In March twenty twenty-six, letting residents join that case, the judg |
-| 185 | 18:47.2 | 0/4 | 0.9 s ok |  | Could it happen again? |
-| 186 | 18:49.1 | 0/25 | 8.8 s **FAIL** | July twenty twenty-six, | As of July twenty twenty-six, federal rules did not require trackside  |
-| 187 | 18:58.8 | 0/27 | 11.0 s **FAIL** |  | The N - T - S - B has recommended that the F - R - A, the federal rail |
-| 188 | 19:10.8 | 0/29 | 10.4 s **FAIL** | twenty twenty-four; one hundred eighty-seven; twelve | Norfolk Southern said in twenty twenty-four that it was installing one |
-| 189 | 19:22.5 | 0/25 | 9.5 s **FAIL** | first May, twenty twenty-nine. | And the kind of tank car the investigators found likely started the fi |
-| 190 | 19:33.0 | 0/16 | 8.2 s **FAIL** |  | Retiring them sooner, the investigators found, is feasible, but unlike |
-| 191 | 19:42.1 | 0/3 | 1.4 s **FAIL** | Two | Two last claims. |
-| 192 | 19:44.3 | 0/21 | 7.0 s **FAIL** | twenty eighteen: | The brake rule repealed in twenty eighteen: it applied to a different  |
-| 193 | 19:52.1 | 0/10 | 3.1 s **FAIL** | three | Too few crew: there were three people in the cab. |
-| 194 | 19:56.2 | 0/17 | 5.7 s **FAIL** | July twenty twenty-six, | As of July twenty twenty-six, no federal rule sets the temperature at  |
-| 195 | 20:02.7 | 0/9 | 2.0 s **FAIL** | one. | The N - T - S - B has asked for one. |
-| 196 | 20:05.7 | 0/12 | 4.4 s **FAIL** | thirty | From below the alert line to a broken axle: about thirty miles. |
-| 197 | 20:10.7 | 0/8 | 3.0 s **FAIL** | two; nineteen | The last two detectors were nineteen miles apart. |
+| 176 | 17:35.7 | 6/13 | 1.3 s ok |  | In June twenty twenty-four, the N - T - S - B adopted its final report |
+| 177 | 17:41.5 | 10/20 | 1.3 s ok |  | The probable cause: the failure of the bearing on the twenty-third car |
+| 178 | 17:50.1 | 14/32 | 1.3 s ok |  | Norfolk Southern's annual reports put its net cost from the derailment |
+| 179 | 18:04.1 | 9/18 | 1.2 s ok |  | In twenty twenty-five, insurance and other recoveries were larger than |
+| 180 | 18:12.7 | 7/15 | 1.4 s ok |  | A class action settlement created a six hundred million dollar fund fo |
+| 181 | 18:19.5 | 3/7 | 1.0 s ok |  | The appeals against the settlement were dismissed. |
+| 182 | 18:22.6 | 7/14 | 1.3 s ok |  | An appeal over residents' personal injury releases was still pending i |
+| 183 | 18:29.7 | 6/15 | 1.1 s ok |  | A separate settlement with the federal government still awaited the co |
+| 184 | 18:35.6 | 15/25 | 1.2 s ok |  | In March twenty twenty-six, letting residents join that case, the judg |
+| 185 | 18:47.2 | 2/4 | 0.6 s ok |  | Could it happen again? |
+| 186 | 18:49.1 | 10/25 | 1.2 s ok |  | As of July twenty twenty-six, federal rules did not require trackside  |
+| 187 | 18:58.8 | 12/27 | 1.4 s ok |  | The N - T - S - B has recommended that the F - R - A, the federal rail |
+| 188 | 19:10.8 | 11/29 | 1.5 s ok |  | Norfolk Southern said in twenty twenty-four that it was installing one |
+| 189 | 19:22.5 | 10/25 | 1.5 s ok |  | And the kind of tank car the investigators found likely started the fi |
+| 190 | 19:33.0 | 9/16 | 1.4 s ok |  | Retiring them sooner, the investigators found, is feasible, but unlike |
+| 191 | 19:42.1 | 3/3 | 0.5 s ok |  | Two last claims. |
+| 192 | 19:44.3 | 8/21 | 1.2 s ok |  | The brake rule repealed in twenty eighteen: it applied to a different  |
+| 193 | 19:52.1 | 5/10 | 1.3 s ok |  | Too few crew: there were three people in the cab. |
+| 194 | 19:56.2 | 7/17 | 1.2 s ok |  | As of July twenty twenty-six, no federal rule sets the temperature at  |
+| 195 | 20:02.7 | 3/9 | 1.0 s ok |  | The N - T - S - B has asked for one. |
+| 196 | 20:05.7 | 5/12 | 1.5 s ok |  | From below the alert line to a broken axle: about thirty miles. |
+| 197 | 20:10.7 | 5/8 | 1.0 s ok |  | The last two detectors were nineteen miles apart. |

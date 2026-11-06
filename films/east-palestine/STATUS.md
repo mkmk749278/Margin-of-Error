@@ -37,4 +37,9 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   and F25882.
 - **Act IV done (2026-11-06):** `remotion/scenes/act4.tsx` (10 scenes, s112–175, both signature beats), handoff `scenes/act4.md`.
   Acts I–IV: 176/176 sentences pass.
-- **Next:** Act V (s176 on, F63342) and the outro; then the 720p render.
+- **Act V done (2026-11-06):** `remotion/scenes/act5.tsx` (report, who paid, courts, could it happen again, verdict 5,
+  sign-off on the dark route line, outro). **Whole film: 198/198 sentences pass the sync audit.**
+- **Next session, first:** look at the Act V stills sweep (rendered, not yet reviewed: `node scripts/stills.mjs
+  EastPalestine <out> <frames 63400–73662 every 240> --scale 0.5`) and fix any overlaps; write `scenes/act5.md`.
+  Then step 9: the 720p render on GitHub (`/parallel-render`), then sound (mix must lay the two hearing clips at F22329
+  and F25882).
