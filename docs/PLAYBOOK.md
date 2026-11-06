@@ -797,6 +797,17 @@ archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real p
   (`npx esbuild films/<slug>/remotion/cues_export.ts --bundle --platform=node --format=esm --loader:.json=json --outfile=/tmp/cues.mjs && node /tmp/cues.mjs > films/<slug>/sound/cues.json`),
   move the music slots in `sound/mix.json` to the new seconds, run `scripts/mix_film.py`, and put `assets/mix/mix.wav`
   in Drive `<slug>/mix/` (keep the previous one beside it, renamed) before a render.
+- **A cue on every visual event, derived (2026-11-06):** hand-placing cues left Film 2 with 151 cues in 20 minutes
+  (14 in Act V's three minutes). `scripts/cues_auto.py films/<slug>` reads the act files and writes
+  `remotion/cues_auto.ts` with the routine cues, each on the event's own frame expression: an exhibit lands
+  (`RecordPage`/`RecordDoc` start → paper slide), a highlight stroke (15 frames before its word), a chip (`Pop`, soft
+  click), a date roll, a card laid down (`Card o={onW(…)}`), a caption panel (`Beat`). `allCues()` merges them under
+  the hand-placed cues (an auto cue within 10 frames of a hand cue, or 12 of the same sound, is dropped). Result:
+  306 cues, no gap over 15 s outside the hearing clips. Re-run it after any scene edit, before exporting the cues.
+- **Released recordings in the mix:** `sound/mix.json` `clips` lays each excerpt's own sound on the frame the picture
+  plays it (read the frame from the scene code, not from notes: STATUS had both clips one frame early), at a set
+  loudness in the voice stem, with the music ducked `clip_duck_db` (14 dB) under it. `mix_film.py` needs `scipy`
+  (`pip install scipy==1.16.2`; not in the base image).
 - **Only effects moved?** When `sound/cues.json` changes but `vo/timing.json`, the voice and the music slots don't,
   patch instead of rebuilding: `python3 scripts/patch_mix_sfx.py films/<slug> OLD_CUES.json` (old mix − the removed
   cues + the added cues, the same limiter; it prints the changed span and both measurements). *Why (2026-11-04):*
@@ -859,6 +870,15 @@ made once and kept in Drive never has to be made again (§16, the music that liv
   ending), and the owner listens for voices on the phone before a take enters the library (the Gemini listening
   check needs `GEMINI_API_KEY`). **Before first use, `terms.txt` must show commercial use is allowed** (§11 licences);
   if it doesn't, the takes are not used.
+- **Checking a Flow Music take (2026-11-06, East Palestine):** the instrumental switch does not stop voices: 3 of
+  the first 4 takes had "ooh/aah" choir or vocal-synth lines. The free check is the owner's Gemini app, run like this:
+  (1) a new chat per batch, every file named in its answer block and a "COULD NOT HEAR" escape, never one merged answer;
+  (2) **the app hears only about the first 1:30** of a 3-minute file (it reported 1:24–2:00 for files of 2:52–2:59), so
+  the session cuts each candidate's back half from 1:20 and the owner checks it too; (3) a cut must be **re-encoded**
+  (`-c:a libmp3lame`), because a stream-copied MP3 cut was read by the app as an image. *Also measured:* a spectrogram
+  (`showspectrumpic`, log scale) showed the voices before any listener did, as wavering formant-like bands at 1–3 kHz;
+  a drone take that passed the app's first half had them from 0:30 on, and its back half failed. Kept takes go to
+  `forensic/` with a sidecar; the others to `flow/rejected/` (never deleted).
 - **Film 1** (`four-missing-bolts`) keeps the ElevenLabs cues it was mixed with; a re-mix with library beds is the
   owner's call.
 

@@ -12,6 +12,8 @@ import {act5} from './scenes/act5';
 import {SceneDef} from './scenes/types';
 import timing from '../vo/timing.json';
 import {FILM_FRAMES, s2f} from './timing';
+import {autoCues} from './cues_auto';
+import {SfxCue} from '../../../lib/remotion/sfx';
 
 // EAST PALESTINE: the whole film on one clock (vo/timing.json). Each scene mounts on absolute frames; scenes fade
 // themselves, and neighbours overlap so a cut is always a dissolve on the desk.
@@ -74,4 +76,17 @@ export const EastPalestine: React.FC = () => (
 	</AbsoluteFill>
 );
 
-export const allCues = () => scenes.flatMap((s) => s.cues ?? []).sort((a, b) => a.frame - b.frame);
+/** Every sound cue: each scene's hand-placed cues, plus the routine cues derived from the scene code
+ * (remotion/cues_auto.ts, scripts/cues_auto.py). An auto cue within 10 frames of a hand-placed cue, or within 12 frames
+ * of an earlier auto cue of the same sound, is dropped: the scene's own sound design wins and nothing machine-guns. */
+export const allCues = (): SfxCue[] => {
+	const hand = scenes.flatMap((s) => s.cues ?? []);
+	const kept: SfxCue[] = [];
+	for (const c of autoCues().sort((a, b) => a.frame - b.frame)) {
+		if (c.frame < 0 || c.frame >= FILM_FRAMES) continue;
+		if (hand.some((h) => Math.abs(h.frame - c.frame) <= 10)) continue;
+		if (kept.some((k) => k.sfx === c.sfx && Math.abs(k.frame - c.frame) <= 12)) continue;
+		kept.push(c);
+	}
+	return [...hand, ...kept].sort((a, b) => a.frame - b.frame);
+};

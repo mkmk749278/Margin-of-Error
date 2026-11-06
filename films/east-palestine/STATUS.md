@@ -33,8 +33,8 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - **Act II done (2026-11-06):** `remotion/scenes/act2.tsx` (9 scenes, s32–66), handoff `scenes/act2.md`, index
   `scenes/choreography/act2.md`. Acts I–II: 67/67 sentences pass. Film.tsx now dissolves every scene into the next (no empty frame).
 - **Act III done (2026-11-06):** `remotion/scenes/act3.tsx` (12 scenes, s67–111, both hearing clips), handoff `scenes/act3.md`.
-  Acts I–III: 112/112 sentences pass. **Mix note:** the clips play muted in Remotion; the mix lays their sound at F22329
-  and F25882.
+  Acts I–III: 112/112 sentences pass. **Mix note:** the clips play muted in Remotion; the mix lays their sound at F22330
+  and F25883 (act3.tsx C1/C2; an earlier note said 22329/25882, one frame early).
 - **Act IV done (2026-11-06):** `remotion/scenes/act4.tsx` (10 scenes, s112–175, both signature beats), handoff `scenes/act4.md`.
   Acts I–IV: 176/176 sentences pass.
 - **Act V done (2026-11-06):** `remotion/scenes/act5.tsx` (report, who paid, courts, could it happen again, verdict 5,
@@ -43,7 +43,17 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   1500 px (they ran off the left edge), the cover's date pill made a solid JUN 2024 chip, the 2029 pill given a void
   background, no "−$0M" before the 2025 roll. Gates: tsc, text floor 0, sync 198/198, claims pass.
 
+## Step 10, sound (2026-11-06)
+- **Music:** Act I fx08, Act II fx02, Act III fx07 + fx03, Act IV fx04 + fx09, Act V **fx05_verdict** (new: Google Flow
+  Music, checked clean of voices in both halves in the Gemini app; in the library with its sidecar). fx01 (2 takes)
+  and fx06 (1 take) failed for voices; kept in Drive `Music-Library/forensic/flow/rejected/`.
+- **Cues:** 306 (`scripts/cues_auto.py` → `remotion/cues_auto.ts`, merged under the hand cues; four hand cues added in
+  s108–110 and s152–154); `sound/cues.json` exported.
+- **Mix:** `sound/mix.json` (10 slots, continuous; both hearing clips at their own sound, music −14 dB under them),
+  `scripts/mix_film.py`: master −14.00 LUFS, −1.40 dBTP, voice peaks −2.3 dBTP, no digital silence; clips 1.3 dB
+  under the narration. In Drive `east-palestine/mix/mix.wav`. `film_vo.wav` rebuilt from Drive
+  `vo/east-palestine_narration_v1_full.mp3` + the holds in `vo/timing.json` (speech onsets 18–100 ms after each
+  measured start, no drift).
+
 ## Next
-- **Step 10 before step 9:** the render workflow lays Drive `east-palestine/mix/mix.wav` under the picture, and no mix
-  exists yet. Build the mix first (voice from Drive `vo/`, the two hearing clips' sound at F22329 and F25882, the
-  forensic music bed, SFX on every cue), put it in Drive `mix/`, then the 720p render (`/parallel-render`).
+- Step 9: the 720p review cut on GitHub (`/parallel-render`, 6 runners), then `/review-cut`.
