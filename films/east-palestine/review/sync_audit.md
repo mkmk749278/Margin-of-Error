@@ -1,6 +1,6 @@
 # Sync audit: east-palestine
 
-198 sentences · 159 word cues on 2706 words · 152 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+198 sentences · 356 word cues on 2706 words · 119 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -36,41 +36,41 @@
 | 29 | 2:06.5 | 3/14 | 1.3 s ok |  | The investigators could not find it in the written guidance used at th |
 | 30 | 2:11.1 | 8/12 | 1.0 s ok |  | Two numbers: one on the first night, one on the fourth day. |
 | 31 | 2:15.5 | 3/9 | 0.8 s ok |  | So where did the margin of error run out? |
-| 32 | 2:22.0 | 0/18 | 6.2 s **FAIL** |  | Each end of each axle on a railcar turns inside a roller bearing, seal |
-| 33 | 2:28.9 | 0/10 | 3.4 s **FAIL** |  | When a bearing starts to fail, friction turns into heat. |
-| 34 | 2:32.9 | 0/26 | 7.4 s **FAIL** |  | So railroads line their tracks with detectors that look up at each bea |
-| 35 | 2:41.7 | 0/9 | 3.8 s **FAIL** | three | On Norfolk Southern, three lines decided what happened next. |
-| 36 | 2:46.6 | 0/16 | 5.5 s **FAIL** | Ninety | Ninety degrees above the air: an alert to the help desk, which watches |
-| 37 | 2:53.1 | 0/18 | 6.2 s **FAIL** | One hundred seventy: | One hundred and seventy: a message to the crew, who must slow down, an |
-| 38 | 3:00.1 | 0/12 | 3.5 s **FAIL** |  | And a critical alarm, for which the crew must stop at once. |
-| 39 | 3:04.7 | 0/13 | 5.0 s **FAIL** | two hundred | Before this accident, Norfolk Southern set that critical line at two h |
-| 40 | 3:10.5 | 0/9 | 2.8 s **FAIL** | one hundred three. | At Salem the reading was one hundred and three. |
-| 41 | 3:14.2 | 0/4 | 1.2 s **FAIL** | first | Above the first line. |
-| 42 | 3:15.9 | 0/3 | 1.0 s **FAIL** | second. | Below the second. |
-| 43 | 3:17.8 | 0/5 | 1.5 s **FAIL** |  | But the camera showed fire. |
-| 44 | 3:20.2 | 0/7 | 1.9 s **FAIL** |  | How could the bearing read so low? |
-| 45 | 3:23.2 | 0/26 | 7.9 s **FAIL** |  | The detector is a pair of infrared sensors looking up from the track,  |
-| 46 | 3:32.1 | 0/12 | 4.5 s **FAIL** |  | A failing bearing heats from the inside, and the outside lags behind. |
-| 47 | 3:37.7 | 0/17 | 6.0 s **FAIL** |  | The N - T - S - B found that the Salem reading did not reflect the bea |
-| 48 | 3:44.7 | 0/24 | 7.7 s **FAIL** |  | And once a bearing is failing, the report notes, it can go from below  |
-| 49 | 3:53.4 | 0/12 | 3.1 s **FAIL** |  | The analyst on the help desk did not see the Salem alert. |
-| 50 | 3:57.2 | 0/7 | 2.9 s **FAIL** |  | He was working on other, higher-priority alerts. |
-| 51 | 4:01.0 | 0/20 | 7.1 s **FAIL** |  | The investigators found it would not have changed the outcome: the tra |
-| 52 | 4:09.3 | 0/22 | 7.8 s **FAIL** | may | If you have read about this derailment, you may have heard a simple an |
-| 53 | 4:18.0 | 0/3 | 0.8 s ok |  | Hold that thought. |
-| 54 | 4:19.4 | 0/5 | 1.5 s ok |  | The record can't confirm it. |
-| 55 | 4:21.7 | 0/12 | 4.0 s **FAIL** |  | What it does show is stranger: where the warning line came from. |
-| 56 | 4:26.5 | 0/6 | 2.5 s **FAIL** |  | The detectors themselves were miles apart. |
-| 57 | 4:29.7 | 0/8 | 3.5 s **FAIL** | nineteen | From Salem to East Palestine, about nineteen miles. |
-| 58 | 4:34.0 | 0/14 | 5.4 s **FAIL** | thirteen nine. | Norfolk Southern testified that its average spacing on key routes was  |
-| 59 | 4:40.3 | 0/11 | 4.4 s **FAIL** | forty | The spacing met the industry's recommended practice, forty miles or le |
-| 60 | 4:45.6 | 0/21 | 8.8 s **FAIL** | eleven; thirty-eight | At the detector before Salem, in Sebring, about eleven miles back, the |
-| 61 | 4:55.3 | 0/9 | 3.4 s **FAIL** | thirty | From there to a broken axle: about thirty miles. |
-| 62 | 4:59.5 | 0/19 | 5.9 s **FAIL** |  | Both can be true at once: a slow build over many miles, then a failure |
-| 63 | 5:06.4 | 0/15 | 4.5 s **FAIL** |  | At Salem the reading was over the help desk line and under the crew li |
-| 64 | 5:11.7 | 0/12 | 3.2 s **FAIL** |  | Had the crew line been lower, the crew would have been told. |
-| 65 | 5:15.8 | 0/37 | 12.4 s **FAIL** |  | Whether that would have stopped this train in time, the N - T - S - B  |
-| 66 | 5:29.0 | 0/10 | 3.5 s **FAIL** | one hundred seventy | Either way: where did one hundred and seventy come from? |
+| 32 | 2:22.0 | 9/18 | 1.1 s ok |  | Each end of each axle on a railcar turns inside a roller bearing, seal |
+| 33 | 2:28.9 | 4/10 | 1.1 s ok |  | When a bearing starts to fail, friction turns into heat. |
+| 34 | 2:32.9 | 10/26 | 1.1 s ok |  | So railroads line their tracks with detectors that look up at each bea |
+| 35 | 2:41.7 | 6/9 | 1.2 s ok |  | On Norfolk Southern, three lines decided what happened next. |
+| 36 | 2:46.6 | 5/16 | 1.4 s ok |  | Ninety degrees above the air: an alert to the help desk, which watches |
+| 37 | 2:53.1 | 6/18 | 1.4 s ok |  | One hundred and seventy: a message to the crew, who must slow down, an |
+| 38 | 3:00.1 | 4/12 | 1.3 s ok |  | And a critical alarm, for which the crew must stop at once. |
+| 39 | 3:04.7 | 7/13 | 1.4 s ok |  | Before this accident, Norfolk Southern set that critical line at two h |
+| 40 | 3:10.5 | 4/9 | 0.9 s ok |  | At Salem the reading was one hundred and three. |
+| 41 | 3:14.2 | 2/4 | 0.7 s ok |  | Above the first line. |
+| 42 | 3:15.9 | 2/3 | 0.5 s ok |  | Below the second. |
+| 43 | 3:17.8 | 3/5 | 0.5 s ok |  | But the camera showed fire. |
+| 44 | 3:20.2 | 3/7 | 1.0 s ok |  | How could the bearing read so low? |
+| 45 | 3:23.2 | 10/26 | 1.5 s ok |  | The detector is a pair of infrared sensors looking up from the track,  |
+| 46 | 3:32.1 | 7/12 | 1.3 s ok |  | A failing bearing heats from the inside, and the outside lags behind. |
+| 47 | 3:37.7 | 5/17 | 1.4 s ok |  | The N - T - S - B found that the Salem reading did not reflect the bea |
+| 48 | 3:44.7 | 9/24 | 1.4 s ok |  | And once a bearing is failing, the report notes, it can go from below  |
+| 49 | 3:53.4 | 5/12 | 1.1 s ok |  | The analyst on the help desk did not see the Salem alert. |
+| 50 | 3:57.2 | 4/7 | 0.9 s ok |  | He was working on other, higher-priority alerts. |
+| 51 | 4:01.0 | 9/20 | 1.3 s ok |  | The investigators found it would not have changed the outcome: the tra |
+| 52 | 4:09.3 | 10/22 | 1.4 s ok |  | If you have read about this derailment, you may have heard a simple an |
+| 53 | 4:18.0 | 2/3 | 0.5 s ok |  | Hold that thought. |
+| 54 | 4:19.4 | 1/5 | 0.9 s ok |  | The record can't confirm it. |
+| 55 | 4:21.7 | 6/12 | 1.3 s ok |  | What it does show is stranger: where the warning line came from. |
+| 56 | 4:26.5 | 3/6 | 1.4 s ok |  | The detectors themselves were miles apart. |
+| 57 | 4:29.7 | 4/8 | 1.3 s ok |  | From Salem to East Palestine, about nineteen miles. |
+| 58 | 4:34.0 | 6/14 | 1.4 s ok |  | Norfolk Southern testified that its average spacing on key routes was  |
+| 59 | 4:40.3 | 5/11 | 1.3 s ok |  | The spacing met the industry's recommended practice, forty miles or le |
+| 60 | 4:45.6 | 9/21 | 1.2 s ok |  | At the detector before Salem, in Sebring, about eleven miles back, the |
+| 61 | 4:55.3 | 4/9 | 1.2 s ok |  | From there to a broken axle: about thirty miles. |
+| 62 | 4:59.5 | 6/19 | 1.5 s ok |  | Both can be true at once: a slow build over many miles, then a failure |
+| 63 | 5:06.4 | 7/15 | 1.4 s ok |  | At Salem the reading was over the help desk line and under the crew li |
+| 64 | 5:11.7 | 4/12 | 0.9 s ok |  | Had the crew line been lower, the crew would have been told. |
+| 65 | 5:15.8 | 11/37 | 1.4 s ok |  | Whether that would have stopped this train in time, the N - T - S - B  |
+| 66 | 5:29.0 | 5/10 | 1.3 s ok |  | Either way: where did one hundred and seventy come from? |
 | 67 | 5:36.0 | 0/7 | 2.3 s **FAIL** |  | The answer is in the industry's rulebook. |
 | 68 | 5:38.8 | 0/25 | 8.9 s **FAIL** | one; one hundred seventy | The A - A - R, the Association of American Railroads, defines an overh |
 | 69 | 5:48.5 | 0/21 | 6.1 s **FAIL** |  | The N - T - S - B found that this definition is based on what makes a  |

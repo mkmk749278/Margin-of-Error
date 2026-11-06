@@ -54,7 +54,7 @@ out=[('# Choreography index: Acts II–V (sentences 23–176)' if DEFAULT else f
  'any edit) so it cannot drift from it. One row per word-locked event: the spoken trigger, its measured frame (60 fps) and offset',
  'from the sentence start, the scene component, and what changes (the on-screen text that arrives, or the driving line of',
  'code). Kit: `lib/remotion/Kinetic.tsx` and `remotion/beats.tsx` (`KeyLine` parts land on their words, `ChunkQuote` reveals a',
- 'record quote chunk by chunk, `WordLine` builds a title word by word). Hand-written tables: `act1.md`, `journey.md`.',
+ 'record quote chunk by chunk, `WordLine` builds a title word by word).' + (' Hand-written tables: `act1.md`, `journey.md`.' if DEFAULT else ' Kit for this film: `remotion/parts*.tsx`.'),
  ('Sync audit: 177/177 sentences pass (`review/sync_audit.md`).' if DEFAULT else 'Sync audit: `review/sync_audit.md`.'),'']
 for s in sorted(cues):
     if DEFAULT and s<23: continue

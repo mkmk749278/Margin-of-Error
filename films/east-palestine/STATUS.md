@@ -30,4 +30,6 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - **Act I done (2026-11-06):** `remotion/scenes/act1.tsx` (11 scenes, sentences 0–31), handoff `scenes/act1.md`, table
   `scenes/choreography/act1.md` (`python3 scenes/choreography/act1_table.py`). Act I: 32/32 sentences pass the sync audit.
   Composition `EastPalestine` (src/Root.tsx); stills: `node scripts/stills.mjs EastPalestine <out> <frames> --scale 0.5`.
-- **Next:** Act II (s32 on, F8521), then III–V, each with its handoff, table, stills and audit; then the 720p render.
+- **Act II done (2026-11-06):** `remotion/scenes/act2.tsx` (9 scenes, s32–66), handoff `scenes/act2.md`, index
+  `scenes/choreography/act2.md`. Acts I–II: 67/67 sentences pass. Film.tsx now dissolves every scene into the next (no empty frame).
+- **Next:** Act III (s67 on, F20166), then IV–V; then the 720p render.
