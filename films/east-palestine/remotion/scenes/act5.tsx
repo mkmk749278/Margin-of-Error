@@ -94,12 +94,14 @@ const Courts: React.FC = () => {
 				</div>
 			</Pop>
 			{dismissed > 0 ? (
-				<AbsoluteFill style={{opacity: dismissed, alignItems: 'center', justifyContent: 'center', background: colors.void}}>
+				<AbsoluteFill style={{opacity: dismissed, alignItems: 'center', justifyContent: 'center'}}>
+					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', background: colors.card, border: `1px solid ${colors.border}`, borderLeft: `4px solid ${colors.amber}`, padding: '56px 90px', boxShadow: '0 40px 90px rgba(0,0,0,0.55)'}}>
 					<div style={T(44, {color: colors.ink, opacity: onW(f, wf(181, 'appeals'), 6)})}>
 						THE APPEALS <span style={{opacity: onW(f, wf(181, 'settlement'), 6)}}>AGAINST THE SETTLEMENT</span>
 					</div>
 					<div style={T(96, {fontWeight: 700, color: colors.ink, marginTop: 20, opacity: onW(f, wf(181, 'dismissed'), 6), transform: `scale(${bump(f, fps, wf(181, 'dismissed') + LAND).toFixed(4)})`})}>DISMISSED</div>
 					<div style={T(30, {color: colors.ink, marginTop: 20, opacity: onW(f, wf(181, 'dismissed'), 6)})}>SIXTH CIRCUIT · 05 NOV 2025 · SUPREME COURT DENIED REVIEW 02 MAR 2026 · DOC. 1053</div>
+					</div>
 				</AbsoluteFill>
 			) : null}
 			<RecordDoc doc="ns_10q26_appeal" start={sf(182) - 10} end={sf(183) + 14} at={[wf(182, 'pending')]} label="NS 10-Q · 22 OCT 2026" source="NORFOLK SOUTHERN QUARTERLY REPORT · SEC EDGAR" pushTo={wf(182, 'appeal')} />
@@ -138,9 +140,11 @@ const Again: React.FC = () => {
 	return (
 		<>
 			{qO > 0 ? (
-				<AbsoluteFill style={{opacity: qO, alignItems: 'center', justifyContent: 'center', background: colors.void}}>
+				<AbsoluteFill style={{opacity: qO, alignItems: 'center', justifyContent: 'center'}}>
+					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', background: colors.card, border: `1px solid ${colors.border}`, borderLeft: `4px solid ${colors.amber}`, padding: '56px 90px', boxShadow: '0 40px 90px rgba(0,0,0,0.55)'}}>
 					<div style={T(96, {fontWeight: 700, color: colors.ink, opacity: onW(f, wf(185, 'could'), 6)})}>
 						COULD IT <span style={{opacity: onW(f, wf(185, 'happen'), 6), color: colors.amber}}>HAPPEN AGAIN?</span>
+					</div>
 					</div>
 				</AbsoluteFill>
 			) : null}
