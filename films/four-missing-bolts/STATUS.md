@@ -15,7 +15,8 @@
   picture gate (`review/picture_gate_marcus_r1.md`).
 - **Package updated:** chapters, the photograph timecode (5:56) and the end screen remapped; the voice note in the
   description; SRT rebuilt (223 cues).
-- **Next:** the owner approves the cut → 4K master → upload.
+- **Owner gate passed (2026-11-06):** the owner approved the Marcus cut ("Film 1 approved").
+- **Next:** 4K master (scale 2) → the package → upload.
 
 
 Read this first in a new session, then `CLAUDE.md` and the playbook parts it names.
