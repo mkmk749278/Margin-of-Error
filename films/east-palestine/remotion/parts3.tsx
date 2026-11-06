@@ -1,5 +1,5 @@
 import React from 'react';
-import {OffthreadVideo, Sequence, useVideoConfig} from 'remotion';
+import {Img, OffthreadVideo, Sequence, useVideoConfig} from 'remotion';
 import {colors} from '../../../lib/remotion/brand';
 import {bump, flash, LAND, lead} from '../../../lib/remotion/Kinetic';
 import {media} from './kit';
@@ -134,3 +134,48 @@ export const YearBars: React.FC<{f: number; x: number; y: number; h: number; bar
 		})}
 	</div>
 );
+
+/**
+ * Real federal footage or a real federal photograph of the event (PLAYBOOK §9.5): unaltered (crop and slow push
+ * only), credited on a strip with its own date, never relabelled as a moment it does not show. `push` is the slow
+ * camera move (scale from 1 to 1 + push over the span) toward `focus` (0–1 of the frame).
+ */
+export const RealFootage: React.FC<{
+	f: number;
+	start: number;
+	end: number;
+	src: string;
+	video?: boolean;
+	from?: number;
+	date: string;
+	what: string;
+	source: string;
+	push?: number;
+	focus?: [number, number];
+	box?: {x: number; y: number; w: number; h: number};
+}> = ({f, start, end, src, video = false, from = 0, date, what, source, push = 0.08, focus = [0.5, 0.5], box = {x: 0, y: 0, w: 1920, h: 1080}}) => {
+	const {fps} = useVideoConfig();
+	const o = Math.min(lead(f, start, 12), 1 - lead(f, end - 14, 14));
+	if (o <= 0) return null;
+	const k = Math.min(1, Math.max(0, (f - start) / Math.max(1, end - start)));
+	const s = 1 + push * (k * k * (3 - 2 * k));
+	const STRIP_H = 58;
+	const media_ = video ? (
+		<Sequence from={start} durationInFrames={end - start + 2} layout="none">
+			<OffthreadVideo src={media(src)} muted startFrom={Math.round(from * fps)} style={{width: box.w, height: box.h, objectFit: 'cover'}} />
+		</Sequence>
+	) : (
+		<Img src={media(src)} style={{width: box.w, height: box.h, objectFit: 'cover'}} />
+	);
+	return (
+		<div style={{position: 'absolute', left: box.x, top: box.y, width: box.w, height: box.h, overflow: 'hidden', opacity: o, background: colors.void}}>
+			<div style={{position: 'absolute', inset: 0, transform: `scale(${s.toFixed(4)})`, transformOrigin: `${(focus[0] * 100).toFixed(1)}% ${(focus[1] * 100).toFixed(1)}%`}}>{media_}</div>
+			<div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 220, background: 'linear-gradient(to top, rgba(10,13,18,0.92), rgba(10,13,18,0))'}} />
+			<div style={{position: 'absolute', left: Math.min(96, box.w * 0.05), right: Math.min(96, box.w * 0.05), bottom: Math.min(54, box.h * 0.05), height: STRIP_H, display: 'flex', alignItems: 'center', gap: 16, fontFamily: mono, fontSize: 26, letterSpacing: 1.5, color: colors.ink, whiteSpace: 'nowrap'}}>
+				<span style={{color: colors.amber, fontWeight: 700}}>{date}</span>
+				<span>· {what}</span>
+				<span style={{marginLeft: 'auto', color: colors.ink, opacity: 0.85}}>{source}</span>
+			</div>
+		</div>
+	);
+};

@@ -10,6 +10,7 @@ import {Card, Dateline, Gauge, Honesty, Hopper, lit, mono, offW, onW, Pop, ROUTE
 import {ef, sf, wf} from '../timing';
 import er from '../data/er_ns4178.json';
 import {SceneDef} from './types';
+import {RealFootage} from '../parts3';
 
 // ACT I · THE INCIDENT (sentences 0–31). Choreography table: scenes/choreography/act1.md. Every cue is a literal
 // wf(sentence, 'word') on the measured narration (vo/timing.json, scripts/word_align.py).
@@ -44,8 +45,12 @@ const Salem: React.FC = () => {
 	const n23 = Math.round(rollTo(f, [{frame: wf(4, 'twenty-third') - 16, value: 1}, {frame: wf(4, 'twenty-third') + LAND, value: 23}]));
 	const cars = [-3, -2, -1, 0, 1, 2, 3];
 	const diagO = Math.min(lead(f, wf(3, 'freight') + 4, 18), 1);
+	// the cold open: the real wreck first (NTSB drone, two days later, labelled), then the night it began at Salem
+	const openEnd = wf(3, 'freight') + 10;
 	return (
 		<>
+			<RealFootage f={f} start={0} end={openEnd} src="footage/ntsb_drone_wreck_fire.mp4" video date="05 FEB 2023" what="EAST PALESTINE · THE WRECK, TWO DAYS LATER" source="NTSB DRONE VIDEO · PUBLIC DOMAIN" push={0.1} focus={[0.45, 0.55]} />
+			{f < openEnd ? <div style={{position: 'absolute', left: 0, top: 0, width: 1100, height: 520, opacity: Math.min(1, 1 - lead(f, openEnd - 14, 14)), background: 'radial-gradient(ellipse at 0% 0%, rgba(10,13,18,0.88) 0%, rgba(10,13,18,0.6) 45%, rgba(10,13,18,0) 75%)'}} /> : null}
 			<Dateline f={f} fps={fps} day={wf(0, 'third')} month={wf(0, 'february')} yearA={wf(0, 'twenty')} year={wf(0, 'twenty-three')} clock={wf(1, 'eight')} clockMin={wf(1, 'thirteen')} place={wf(2, 'salem')} state={wf(2, 'ohio')} o={dateO} />
 			{diagO > 0 ? (
 				<AbsoluteFill style={{opacity: diagO}}>
@@ -484,6 +489,8 @@ const Derail: React.FC = () => {
 	const ring = lead(f, wf(25, 'leave'), 30);
 	const fire = Math.max(0.35 * lead(f, wf(24, 'wreckage'), 12), lead(f, wf(24, 'fire'), 14));
 	// the head end stops east of the pileup; cars 23 onward (38 of them) leave the track
+	const real0 = wf(24, 'thirty-eight') - 24;
+	const reconO = 1 - lead(f, real0 + 4, 12);
 	const headX = cx + 22 * carPx + 120;
 	const carX = (i: number): number => headX - 3 * 10 - i * carPx;
 	return (
@@ -513,7 +520,10 @@ const Derail: React.FC = () => {
 				{ring > 0 ? <circle cx={carX(40)} cy={cy} r={MI} fill="none" stroke={colors.amber} strokeWidth={4} strokeDasharray={2 * Math.PI * MI} strokeDashoffset={2 * Math.PI * MI * (1 - ring)} /> : null}
 				{ring > 0 ? <line x1={carX(40)} y1={cy} x2={carX(40) + MI * ring} y2={cy - 1} stroke={colors.amber} strokeWidth={2} strokeDasharray="8 6" /> : null}
 			</svg>
-			<div style={{position: 'absolute', left: 150, top: 180}}>
+			{/* the real wreck under "thirty-eight cars … fire" and the village under "two thousand people" (federal, labelled) */}
+			<RealFootage f={f} start={real0} end={wf(25, 'about') + 8} src="footage/ntsb_drone_pileup_overhead.mp4" video date="05 FEB 2023" what="THE PILEUP FROM ABOVE" source="NTSB DRONE VIDEO · PUBLIC DOMAIN" push={0.07} focus={[0.4, 0.4]} />
+			<RealFootage f={f} start={wf(25, 'about') - 8} end={ef(25) + 44} src="img/ntsb_aerial_20230205.jpg" date="05 FEB 2023" what="THE WRECK BESIDE THE VILLAGE" source="NTSB AERIAL PHOTO · PUBLIC DOMAIN" push={0.09} focus={[0.5, 0.5]} />
+			<div style={{position: 'absolute', left: 130, top: 160, padding: '14px 24px', background: 'rgba(18,24,36,0.9)', border: `1px solid ${colors.border}`, opacity: onW(f, wf(23, 'minute') - 6, 8)}}>
 				<div style={{display: 'flex', gap: 18}}>
 					<Pop f={f} fps={fps} on={wf(23, 'minute')}>
 						<div style={T(44, {fontWeight: 700, color: colors.ink})}>&lt; 1 MINUTE</div>
@@ -526,18 +536,18 @@ const Derail: React.FC = () => {
 					<div style={T(36, {color: colors.red, marginTop: 10})}>THE AXLE SEPARATES · NTSB P. 106</div>
 				</Pop>
 			</div>
-			<div style={{position: 'absolute', left: 150, top: 650, opacity: onW(f, wf(24, 'thirty-eight') - 10, 10)}}>
+			<div style={{position: 'absolute', left: 130, top: 620, padding: '14px 24px', background: 'rgba(18,24,36,0.9)', border: `1px solid ${colors.border}`, opacity: onW(f, wf(24, 'thirty-eight') - 10, 10)}}>
 				<div style={T(96, {fontWeight: 700, color: colors.amber, transform: `scale(${bump(f, fps, wf(24, 'thirty-eight') + LAND).toFixed(4)})`, transformOrigin: '0 60%'})}>{nDer}</div>
 				<div style={T(36, {color: colors.ink})}>CARS DERAILED · NTSB P. X</div>
 				<div style={T(36, {color: colors.red, marginTop: 6, opacity: onW(f, wf(24, 'track'), 8)})}>OFF THE TRACK</div>
 			</div>
-			<div style={{position: 'absolute', left: 1330, top: 180, opacity: onW(f, wf(25, 'about'), 10), textAlign: 'right', width: 450}}>
+			<div style={{position: 'absolute', left: 1290, top: 160, padding: '14px 24px', background: 'rgba(18,24,36,0.9)', border: `1px solid ${colors.border}`, opacity: onW(f, wf(25, 'about'), 10), textAlign: 'right', width: 500}}>
 				<div style={T(72, {fontWeight: 700, color: colors.ink, transform: `scale(${bump(f, fps, wf(25, 'thousand') + LAND).toFixed(4)})`, transformOrigin: '100% 60%'})}>~{people.toLocaleString('en-US')}</div>
 				<div style={T(36, {color: colors.ink})}>RESIDENTS</div>
 				<div style={T(36, {color: colors.amber, marginTop: 6, opacity: onW(f, wf(25, 'leave'), 10)})}>1-MILE EVACUATION ZONE</div>
 			</div>
-			<Honesty text="RECONSTRUCTION" x={1784} y={870} anchor="right" />
-			<div style={{position: 'absolute', left: 150, top: 880, ...T(26, {color: colors.sub})}}>TRAIN AND ZONE TO ONE SCALE · PILEUP ARRANGEMENT ILLUSTRATIVE</div>
+			<Honesty text="RECONSTRUCTION" x={1784} y={870} anchor="right" o={reconO} />
+			<div style={{position: 'absolute', left: 150, top: 880, opacity: reconO, ...T(26, {color: colors.sub})}}>TRAIN AND ZONE TO ONE SCALE · PILEUP ARRANGEMENT ILLUSTRATIVE</div>
 		</>
 	);
 };
