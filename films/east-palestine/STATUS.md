@@ -70,4 +70,5 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - **Owner gate passed (2026-11-06):** the owner approved the Marcus audio ("audio approved").
 
 ## Next
-- The 720p review cut on GitHub, then `/review-cut`.
+- **720p review cut r2 passes** (`review/picture_gate_r1.md`; Drive `renders/east-palestine_review_r2_720p.mp4`).
+  The owner approves the cut → 4K master → YouTube package (with the voice note).
