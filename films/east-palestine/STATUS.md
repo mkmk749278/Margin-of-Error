@@ -1,4 +1,4 @@
-# East Palestine: status and handoff (2026-11-06)
+# East Palestine: status and handoff (2026-11-07)
 
 Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playbook parts it names.
 
@@ -79,3 +79,12 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 ## Next
 - **720p review cut r2 passes** (`review/picture_gate_r1.md`; Drive `renders/east-palestine_review_r2_720p.mp4`).
   The owner approves the cut → 4K master → YouTube package (with the voice note).
+
+## 4K master and YouTube package (2026-11-07)
+- **Owner approved the r3 cut** and asked for the 4K master. Rendered on GitHub (run 42348084191, 19 runners, scale 2):
+  Drive `renders/east-palestine_master_4k.mp4` + `east-palestine_master_1080p.mp4`. Checked frame by frame against r3:
+  `review/master_4k_check.md` (passes).
+- **YouTube package:** `youtube/package.md` (three title-and-thumbnail pairs from 32 titles, description with
+  chapters and sources, tags, pinned comment, Studio checklist), thumbnails A–C on the NTSB drone frame
+  (`make_thumbnails.py`), English SRT with the hearing clips captioned (`make_srt.py`, 301 cues).
+- **Next:** the owner uploads (Unlisted ≥ 3 h, then public in the Thursday window); the 24 h / 7 d / 28 d reads.

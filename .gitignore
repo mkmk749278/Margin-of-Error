@@ -10,3 +10,4 @@ out/
 films/*/assets/
 public/films/
 __pycache__/
+films/*/youtube/*_168.png

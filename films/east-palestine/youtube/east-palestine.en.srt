@@ -1,0 +1,1393 @@
+1
+00:00:00,060 --> 00:00:02,696
+The third of February, 2023.
+
+2
+00:00:03,057 --> 00:00:04,796
+8:13 in the evening.
+
+3
+00:00:04,998 --> 00:00:06,308
+Salem, Ohio.
+
+4
+00:00:06,827 --> 00:00:11,245
+A freight train is passing a factory,
+and a surveillance camera records a fire
+
+5
+00:00:11,285 --> 00:00:12,690
+under one of its cars.
+
+6
+00:00:12,883 --> 00:00:15,523
+The 23rd car, a covered hopper.
+
+7
+00:00:15,843 --> 00:00:19,494
+The fire is at a wheel, at the
+bearing on its leading axle.
+
+8
+00:00:19,814 --> 00:00:24,371
+Moments later the train crosses a hot
+bearing detector, an infrared sensor
+
+9
+00:00:24,411 --> 00:00:25,534
+beside the track.
+
+10
+00:00:25,739 --> 00:00:30,482
+It reads that bearing at 103 degrees
+Fahrenheit above the air temperature.
+
+11
+00:00:30,595 --> 00:00:35,262
+The line at which the crew would be
+told to slow down and stop is 170.
+
+12
+00:00:35,496 --> 00:00:37,429
+So the detector sends an alert.
+
+13
+00:00:37,566 --> 00:00:40,014
+Not to the train, but to a help desk.
+
+14
+00:00:40,184 --> 00:00:41,842
+In the cab, nothing.
+
+15
+00:00:42,076 --> 00:00:44,383
+The train is Norfolk Southern 32N.
+
+16
+00:00:44,423 --> 00:00:49,859
+149 cars, 9,309 feet long.
+
+17
+00:00:50,008 --> 00:00:54,864
+Why that line sat at 170 is on the
+record, in the railroad industry's own
+
+18
+00:00:54,904 --> 00:00:56,830
+words, at a federal hearing.
+
+19
+00:00:56,922 --> 00:00:58,752
+We will hear them later in this film.
+
+20
+00:00:59,070 --> 00:01:04,463
+39 minutes after Salem, the train crosses
+the next detector, in East Palestine.
+
+21
+00:01:04,626 --> 00:01:08,625
+This time the reading is
+253 degrees above the air.
+
+22
+00:01:08,810 --> 00:01:11,828
+That is the highest number
+this kind of detector can show.
+
+23
+00:01:12,006 --> 00:01:13,955
+The real temperature may have been higher.
+
+24
+00:01:14,199 --> 00:01:16,473
+In the cab, the speakers announce it.
+
+25
+00:01:16,523 --> 00:01:20,270
+Critical alarm, critical
+alarm, critical alarm.
+
+26
+00:01:20,458 --> 00:01:22,772
+The engineer begins to slow the train.
+
+27
+00:01:22,963 --> 00:01:27,994
+The NTSB, America's accident investigator,
+would find that the crew handled
+
+28
+00:01:28,034 --> 00:01:31,400
+the train properly and responded
+to the alarm as they should.
+
+29
+00:01:31,554 --> 00:01:34,955
+Less than a minute after the
+alarm, the axle came apart.
+
+30
+00:01:35,094 --> 00:01:38,546
+38 cars left the track, and
+the wreckage caught fire.
+
+31
+00:01:38,684 --> 00:01:41,764
+About 2,000 people were
+told to leave their homes.
+
+32
+00:01:41,932 --> 00:01:45,667
+This film follows the warning system
+and the decisions that followed.
+
+33
+00:01:45,733 --> 00:01:48,892
+The health and environmental
+effects are a separate story.
+
+34
+00:01:49,129 --> 00:01:53,434
+Three days later, a second number would
+decide what happened to five tank cars
+
+35
+00:01:53,474 --> 00:01:54,815
+of vinyl chloride.
+
+36
+00:01:54,890 --> 00:01:58,832
+The investigators could not find it in
+the written guidance used at the scene.
+
+37
+00:01:58,929 --> 00:02:02,843
+Two numbers: one on the first
+night, one on the fourth day.
+
+38
+00:02:03,037 --> 00:02:05,375
+So where did the margin of error run out?
+
+39
+00:02:08,915 --> 00:02:13,690
+Each end of each axle on a railcar turns
+inside a roller bearing, sealed and
+
+40
+00:02:13,730 --> 00:02:14,993
+packed with grease.
+
+41
+00:02:15,089 --> 00:02:18,487
+When a bearing starts to fail,
+friction turns into heat.
+
+42
+00:02:18,610 --> 00:02:22,493
+So railroads line their tracks with
+detectors that look up at each bearing as
+
+43
+00:02:22,533 --> 00:02:25,795
+it passes, and measure how
+much hotter it is than the air.
+
+44
+00:02:26,344 --> 00:02:30,385
+On Norfolk Southern, three lines
+decided what happened next.
+
+45
+00:02:30,800 --> 00:02:35,193
+90 degrees above the air: an alert
+to the help desk, which watches the
+
+46
+00:02:35,233 --> 00:02:36,295
+next readings.
+
+47
+00:02:36,564 --> 00:02:42,803
+170: a message to the crew, who must
+slow down, and then stop to inspect.
+
+48
+00:02:42,924 --> 00:02:46,911
+And a critical alarm, for which
+the crew must stop at once.
+
+49
+00:02:47,140 --> 00:02:52,251
+Before this accident, Norfolk Southern
+set that critical line at 200 degrees.
+
+50
+00:02:52,461 --> 00:02:55,538
+At Salem the reading was 103.
+
+51
+00:02:55,844 --> 00:02:57,294
+Above the first line.
+
+52
+00:02:57,413 --> 00:02:58,681
+Below the second.
+
+53
+00:02:58,762 --> 00:03:00,675
+But the camera showed fire.
+
+54
+00:03:00,835 --> 00:03:02,760
+How could the bearing read so low?
+
+55
+00:03:03,063 --> 00:03:07,436
+The detector is a pair of infrared
+sensors looking up from the track, and at
+
+56
+00:03:07,476 --> 00:03:10,785
+Salem they read the inner edge
+of the bearing's outer cup.
+
+57
+00:03:10,952 --> 00:03:15,342
+A failing bearing heats from the
+inside, and the outside lags behind.
+
+58
+00:03:15,489 --> 00:03:19,975
+The NTSB found that the Salem
+reading did not reflect the bearing's
+
+59
+00:03:20,015 --> 00:03:21,156
+true temperature.
+
+60
+00:03:21,257 --> 00:03:25,601
+And once a bearing is failing, the report
+notes, it can go from below an alarm
+
+61
+00:03:25,641 --> 00:03:28,623
+temperature to seized
+in less than a minute.
+
+62
+00:03:28,766 --> 00:03:31,983
+The analyst on the help desk
+did not see the Salem alert.
+
+63
+00:03:32,023 --> 00:03:34,999
+He was working on other,
+higher-priority alerts.
+
+64
+00:03:35,140 --> 00:03:38,086
+The investigators found it would
+not have changed the outcome:
+
+65
+00:03:38,127 --> 00:03:41,594
+the train derailed before the
+procedures required him to act.
+
+66
+00:03:41,760 --> 00:03:45,449
+If you have read about this derailment,
+you may have heard a simple answer:
+
+67
+00:03:45,590 --> 00:03:48,497
+a skipped repair, a
+bearing with no grease.
+
+68
+00:03:48,685 --> 00:03:49,665
+Hold that thought.
+
+69
+00:03:49,705 --> 00:03:51,410
+The record can't confirm it.
+
+70
+00:03:51,493 --> 00:03:55,708
+What it does show is stranger:
+where the warning line came from.
+
+71
+00:03:55,861 --> 00:03:58,526
+The detectors themselves were miles apart.
+
+72
+00:03:58,593 --> 00:04:02,271
+From Salem to East
+Palestine, about 19 miles.
+
+73
+00:04:02,335 --> 00:04:07,478
+Norfolk Southern testified that its
+average spacing on key routes was 13.9.
+
+74
+00:04:07,541 --> 00:04:11,893
+The spacing met the industry's
+recommended practice, 40 miles or less.
+
+75
+00:04:12,109 --> 00:04:16,760
+At the detector before Salem, in
+Sebring, about 11 miles back, the same
+
+76
+00:04:16,800 --> 00:04:20,347
+bearing read 38 degrees,
+below the alert line.
+
+77
+00:04:20,467 --> 00:04:23,858
+From there to a broken
+axle: about 30 miles.
+
+78
+00:04:24,059 --> 00:04:28,964
+Both can be true at once: a slow build
+over many miles, then a failure in
+
+79
+00:04:29,004 --> 00:04:30,004
+under a minute.
+
+80
+00:04:30,098 --> 00:04:34,508
+At Salem the reading was over the help
+desk line and under the crew line.
+
+81
+00:04:34,615 --> 00:04:37,793
+Had the crew line been lower,
+the crew would have been told.
+
+82
+00:04:37,860 --> 00:04:42,503
+Whether that would have stopped this
+train in time, the NTSB did not decide:
+
+83
+00:04:42,543 --> 00:04:45,986
+it found that research is needed to
+tell whether lower alert and alarm
+
+84
+00:04:46,026 --> 00:04:49,008
+thresholds would make a
+significant safety improvement.
+
+85
+00:04:49,126 --> 00:04:52,571
+Either way: where did 170 come from?
+
+86
+00:04:55,865 --> 00:04:58,495
+The answer is in the industry's rulebook.
+
+87
+00:04:58,709 --> 00:05:04,163
+The AAR, the Association of American
+Railroads, defines an overheated bearing
+
+88
+00:05:04,203 --> 00:05:08,033
+as one at least 170 degrees above the air.
+
+89
+00:05:08,275 --> 00:05:13,187
+The NTSB found that this definition is
+based on what makes a repair billable
+
+90
+00:05:13,227 --> 00:05:14,690
+to the railcar's owner.
+
+91
+00:05:14,821 --> 00:05:19,948
+It relates, the board wrote, to billing
+for repairs, not directly to safety.
+
+92
+00:05:20,281 --> 00:05:25,189
+In June 2023, at a public hearing in
+East Palestine, the board's technical
+
+93
+00:05:25,229 --> 00:05:30,196
+panel put that to the AAR's senior vice
+president for safety and operations.
+
+94
+00:05:30,613 --> 00:05:31,793
+[AAR witness] Now, going to the issue
+of how we arrived at those thresholds.
+
+95
+00:05:31,833 --> 00:05:34,133
+So let's talk, first of all,
+what those thresholds represent.
+
+96
+00:05:34,173 --> 00:05:37,233
+Those are thresholds in AAR's car repair
+
+97
+00:05:37,273 --> 00:05:43,333
+billing rules which authorize the ability
+
+98
+00:05:43,713 --> 00:05:49,673
+of a railroad to take a car out of
+service, make the repairs that are
+
+99
+00:05:49,713 --> 00:05:54,813
+necessary. Those threshold
+— the way in which the
+
+100
+00:05:54,853 --> 00:05:59,813
+thresholds are developed really is
+a function of experience, and you're
+
+101
+00:05:59,853 --> 00:06:05,403
+balancing a couple of considerations.
+One of those considerations is,
+
+102
+00:06:05,443 --> 00:06:11,863
+of course, the detection of
+issues with the bearings.
+
+103
+00:06:12,123 --> 00:06:16,783
+The other issue, as it was talked about
+earlier, is — you know, if you put the
+
+104
+00:06:16,823 --> 00:06:21,003
+thresholds too low, you're going
+to have a lot of false stops
+
+105
+00:06:21,605 --> 00:06:26,369
+Then a member of the NTSB's technical
+panel asked whether these thresholds are
+
+106
+00:06:26,409 --> 00:06:28,571
+limits for safe operation at all.
+
+107
+00:06:29,863 --> 00:06:34,313
+[NTSB panel] Thank you. So these
+overheated bearing temperature
+
+108
+00:06:34,353 --> 00:06:37,373
+thresholds established in the rule,
+
+109
+00:06:37,413 --> 00:06:44,193
+then, are not absolute limits for safe
+operating temperatures of bearings?
+
+110
+00:06:45,073 --> 00:06:50,173
+If I understand properly what you just
+described, they are a standard at which
+
+111
+00:06:50,213 --> 00:06:53,273
+bearings can be removed from service and
+
+112
+00:06:53,313 --> 00:06:56,313
+billing and the car owners
+could be billed for it?
+
+113
+00:06:56,933 --> 00:07:01,153
+[AAR witness] Correct. Now, keep
+in mind it's in the interest of
+
+114
+00:07:01,193 --> 00:07:06,173
+the operating railroad not to have
+derailments attributable to hot bearings
+
+115
+00:07:06,726 --> 00:07:08,151
+A billing standard.
+
+116
+00:07:08,448 --> 00:07:11,418
+And, in the same breath,
+the industry's point:
+
+117
+00:07:11,641 --> 00:07:13,708
+no railroad wants a derailment.
+
+118
+00:07:13,882 --> 00:07:18,064
+The witness went on to explain that the
+association can set standards only for
+
+119
+00:07:18,104 --> 00:07:22,947
+cars passed between railroads, not for
+what a railroad does on its own track.
+
+120
+00:07:23,128 --> 00:07:27,460
+Norfolk Southern testified that it based
+its own thresholds on its experience
+
+121
+00:07:27,500 --> 00:07:29,324
+and on the industry's standards.
+
+122
+00:07:29,437 --> 00:07:33,015
+Its critical alarm, before
+the accident, was 200.
+
+123
+00:07:33,209 --> 00:07:35,295
+After it, 170.
+
+124
+00:07:35,502 --> 00:07:39,252
+At the same hearing, the industry's
+witness said the railroads were now all
+
+125
+00:07:39,292 --> 00:07:41,657
+committed to using 170.
+
+126
+00:07:41,916 --> 00:07:45,984
+So after East Palestine, on this
+railroad, the number in the billing
+
+127
+00:07:46,024 --> 00:07:50,112
+definition became the line at
+which a train must stop at once.
+
+128
+00:07:50,339 --> 00:07:52,514
+Every line like this is a trade.
+
+129
+00:07:52,653 --> 00:07:55,452
+Set it too low, and
+trains stop for nothing.
+
+130
+00:07:55,545 --> 00:07:59,003
+Set it too high, and a
+failing bearing keeps rolling.
+
+131
+00:07:59,092 --> 00:08:03,782
+In the NTSB's words, railroads choose
+their thresholds by balancing between
+
+132
+00:08:03,822 --> 00:08:07,709
+preventing bearing failures
+and avoiding unnecessary stops.
+
+133
+00:08:07,941 --> 00:08:10,972
+No investigator links what
+follows to this bearing.
+
+134
+00:08:11,069 --> 00:08:13,522
+But it is how the railroad was being run.
+
+135
+00:08:13,776 --> 00:08:18,163
+In February 2019, Norfolk
+Southern told investors its plan.
+
+136
+00:08:18,305 --> 00:08:20,454
+Precision scheduled railroading.
+
+137
+00:08:20,574 --> 00:08:24,663
+An operating ratio, the share of
+revenue spent running the railroad, of
+
+138
+00:08:24,703 --> 00:08:29,011
+60 percent by 2021, down from 65.4.
+
+139
+00:08:29,169 --> 00:08:33,626
+Continued share buybacks, using free
+cash flow and borrowing capacity.
+
+140
+00:08:33,819 --> 00:08:37,164
+Its five principles
+included working safely.
+
+141
+00:08:37,377 --> 00:08:39,332
+The filings show what followed.
+
+142
+00:08:39,467 --> 00:08:45,996
+Average employees fell from 26,662
+in 2018, the year before the plan,
+
+143
+00:08:46,036 --> 00:08:51,964
+to 18,900 in 2022: by our
+calculation, 29 percent.
+
+144
+00:08:52,119 --> 00:08:58,530
+From 2019 to 2022, the company spent
+$10 billion buying back its own shares.
+
+145
+00:08:59,032 --> 00:09:01,009
+Did that cause this derailment?
+
+146
+00:09:01,591 --> 00:09:03,457
+Here is where the record stops.
+
+147
+00:09:03,796 --> 00:09:06,877
+The 23rd car was not Norfolk Southern's.
+
+148
+00:09:07,025 --> 00:09:11,497
+It belonged to GATX, and was
+leased to Braskem America.
+
+149
+00:09:11,828 --> 00:09:15,898
+It joined the train at a yard in
+Illinois run by a terminal railroad,
+
+150
+00:09:15,938 --> 00:09:20,067
+part-owned by several large railroads,
+Norfolk Southern among them.
+
+151
+00:09:20,306 --> 00:09:22,607
+That railroad's inspectors checked it.
+
+152
+00:09:22,730 --> 00:09:25,162
+Norfolk Southern's inspectors did not.
+
+153
+00:09:25,318 --> 00:09:29,529
+Whether that inspection missed anything,
+the investigators could not determine.
+
+154
+00:09:29,755 --> 00:09:34,484
+After the derailment, the NTSB checked
+the cars that stayed on the rails, and
+
+155
+00:09:34,524 --> 00:09:38,611
+found reportable defects on about a
+quarter of them, most of them minor.
+
+156
+00:09:38,792 --> 00:09:42,422
+It obtained a Norfolk Southern
+foreman's email that appeared to set a
+
+157
+00:09:42,462 --> 00:09:47,355
+90-second target for each car's inspection
+in Norfolk Southern's own yards.
+
+158
+00:09:47,467 --> 00:09:50,161
+Car 23 was inspected elsewhere.
+
+159
+00:09:50,308 --> 00:09:53,883
+And it could not determine whether
+inspection time goals contributed to the
+
+160
+00:09:53,923 --> 00:09:55,809
+defects that went unreported.
+
+161
+00:09:56,010 --> 00:10:01,649
+In March 2023, the NTSB opened a special
+investigation into Norfolk Southern's
+
+162
+00:10:01,689 --> 00:10:02,772
+safety culture.
+
+163
+00:10:02,980 --> 00:10:05,088
+That is our reading of the record:
+
+164
+00:10:05,229 --> 00:10:08,120
+no investigator links
+the plan to this bearing.
+
+165
+00:10:08,300 --> 00:10:11,746
+What the record does show is
+where the stop line was drawn:
+
+166
+00:10:11,827 --> 00:10:15,614
+at a number the industry wrote for
+billing, which Norfolk Southern says it
+
+167
+00:10:15,654 --> 00:10:17,718
+combined with its own experience.
+
+168
+00:10:17,861 --> 00:10:20,628
+A claim you will find in
+many comment sections:
+
+169
+00:10:20,729 --> 00:10:22,333
+cost cutting caused this.
+
+170
+00:10:22,552 --> 00:10:24,105
+The record can't say.
+
+171
+00:10:27,850 --> 00:10:28,974
+Back to the bearing.
+
+172
+00:10:29,144 --> 00:10:32,753
+As it fails, the rollers
+and the cup grind and heat.
+
+173
+00:10:32,848 --> 00:10:34,111
+The grease burns.
+
+174
+00:10:34,151 --> 00:10:35,182
+The seals go.
+
+175
+00:10:35,470 --> 00:10:40,350
+Then the end of the axle, the journal,
+breaks away, and the wheelset drops.
+
+176
+00:10:40,525 --> 00:10:42,538
+Watch the last 19 miles.
+
+177
+00:10:42,796 --> 00:10:47,919
+From Salem, the train runs east,
+at between 19 and 45 miles an hour.
+
+178
+00:10:48,016 --> 00:10:51,001
+Between the detectors,
+nothing measures the bearing.
+
+179
+00:10:51,098 --> 00:10:54,146
+19 miles of track, and nothing reads it.
+
+180
+00:10:57,280 --> 00:10:59,731
+Milepost 49.81.
+
+181
+00:10:59,791 --> 00:11:03,120
+253 degrees, the top of the scale.
+
+182
+00:11:03,160 --> 00:11:04,408
+Critical alarm.
+
+183
+00:11:04,513 --> 00:11:06,614
+The crew begins to slow the train.
+
+184
+00:11:06,745 --> 00:11:10,399
+Less than a minute later, the axle
+separates, and the brakes go into
+
+185
+00:11:10,439 --> 00:11:11,904
+emergency on their own.
+
+186
+00:11:12,063 --> 00:11:18,179
+From the emergency, the lead locomotives
+travel another 1,160 feet, and stop
+
+187
+00:11:18,219 --> 00:11:19,682
+38 seconds later.
+
+188
+00:11:21,652 --> 00:11:23,021
+So was it the grease?
+
+189
+00:11:23,327 --> 00:11:24,745
+The record can't say.
+
+190
+00:11:25,025 --> 00:11:28,540
+The investigators found that the
+root cause of the bearing's failure
+
+191
+00:11:28,580 --> 00:11:29,884
+remains unclear.
+
+192
+00:11:30,186 --> 00:11:35,825
+Whatever started it, fatigue, a loss of
+lubrication, water, was erased by the
+
+193
+00:11:35,865 --> 00:11:37,530
+heat of its own failure.
+
+194
+00:11:37,726 --> 00:11:40,728
+And the NTSB noted that this is a pattern:
+
+195
+00:11:40,948 --> 00:11:45,311
+a bearing that fails badly enough to
+derail a train tends to destroy the
+
+196
+00:11:45,351 --> 00:11:46,612
+evidence of why.
+
+197
+00:11:47,009 --> 00:11:51,718
+Another claim: the burn, three days
+later, destroyed that evidence.
+
+198
+00:11:51,859 --> 00:11:53,629
+That is not in the record.
+
+199
+00:11:53,807 --> 00:11:58,082
+Investigators recovered the bearing's
+pieces on the fifth of February, west of
+
+200
+00:11:58,122 --> 00:12:00,910
+the wreck, where they had
+fallen in the first moments.
+
+201
+00:12:01,047 --> 00:12:04,482
+The burn was on the
+sixth, on five other cars.
+
+202
+00:12:04,730 --> 00:12:08,980
+The fire, the NTSB found,
+likely began with a tank car.
+
+203
+00:12:09,168 --> 00:12:14,172
+In the derailment, a DOT-111 tank
+car carrying a flammable liquid was
+
+204
+00:12:14,212 --> 00:12:16,894
+punctured, and its contents fed the fire.
+
+205
+00:12:17,042 --> 00:12:21,205
+In the same pile lay five pressure
+tank cars of vinyl chloride.
+
+206
+00:12:21,245 --> 00:12:25,270
+Heat from the fire set off the relief
+valves on four of them, the valves that
+
+207
+00:12:25,310 --> 00:12:28,253
+open when the pressure
+inside a tank gets too high.
+
+208
+00:12:28,333 --> 00:12:31,262
+The responders did not yet
+know what was on the train.
+
+209
+00:12:31,413 --> 00:12:36,103
+The NTSB found that Norfolk Southern's
+delay in sending the list of cars kept
+
+210
+00:12:36,143 --> 00:12:39,890
+responders near the fire longer than
+they needed to be, and delayed the
+
+211
+00:12:39,930 --> 00:12:41,232
+evacuation order.
+
+212
+00:12:41,407 --> 00:12:45,763
+Vinyl chloride is the raw
+material of PVC, a plastic.
+
+213
+00:12:45,812 --> 00:12:50,410
+Its molecules can join into long chains,
+and that reaction gives off heat.
+
+214
+00:12:50,530 --> 00:12:55,428
+In a closed tank, a runaway reaction
+could build pressure until the tank fails.
+
+215
+00:12:55,543 --> 00:12:56,656
+That was the fear.
+
+216
+00:12:56,922 --> 00:12:58,228
+Now the second number.
+
+217
+00:12:58,353 --> 00:13:02,262
+On the evening of the fourth of February,
+the shipper of the vinyl chloride,
+
+218
+00:13:02,302 --> 00:13:07,172
+Oxy Vinyls, told Norfolk Southern and
+its contractors it saw a low probability
+
+219
+00:13:07,212 --> 00:13:08,354
+of that reaction.
+
+220
+00:13:08,533 --> 00:13:12,547
+The hottest car's temperature, measured
+by those contractors, peaked at about
+
+221
+00:13:12,587 --> 00:13:14,975
+138 degrees Fahrenheit.
+
+222
+00:13:15,121 --> 00:13:18,966
+This time that is the actual
+temperature, not a number above the air.
+
+223
+00:13:19,142 --> 00:13:23,437
+By the afternoon of the sixth,
+it had fallen to about 126.
+
+224
+00:13:23,683 --> 00:13:27,511
+That afternoon the incident commander,
+the village's fire chief, met the
+
+225
+00:13:27,551 --> 00:13:31,478
+governors of Ohio and Pennsylvania
+and dozens of other officials.
+
+226
+00:13:31,606 --> 00:13:35,924
+Oxy Vinyls was not invited, the
+incident commander told investigators.
+
+227
+00:13:36,055 --> 00:13:40,445
+The NTSB found no evidence that anyone
+outside Norfolk Southern and its
+
+228
+00:13:40,485 --> 00:13:43,010
+contractors knew the shipper disagreed.
+
+229
+00:13:43,475 --> 00:13:45,271
+Then came a smaller meeting.
+
+230
+00:13:45,623 --> 00:13:52,135
+Two contractor firms told him that
+if a car reached 153 to 158 degrees,
+
+231
+00:13:52,275 --> 00:13:54,479
+the reaction would run out of control.
+
+232
+00:13:54,918 --> 00:13:58,943
+The investigators did not find that range
+in the written guidance consulted at
+
+233
+00:13:58,983 --> 00:14:01,485
+the scene, or in the shipper's messages.
+
+234
+00:14:01,898 --> 00:14:05,877
+The incident commander said he
+was given 13 minutes to decide.
+
+235
+00:14:06,123 --> 00:14:10,729
+The burn, they told him, had to start
+before three in the afternoon, to finish
+
+236
+00:14:10,769 --> 00:14:15,054
+in daylight and avoid a temperature
+inversion, a layer of air that would keep
+
+237
+00:14:15,094 --> 00:14:17,016
+the vapor cloud from dispersing.
+
+238
+00:14:17,312 --> 00:14:19,384
+The incident commander consented.
+
+239
+00:14:19,637 --> 00:14:22,362
+The charges went off at 4:37.
+
+240
+00:14:26,779 --> 00:14:31,331
+Three in the afternoon, the NTSB
+noted, was not a hard deadline.
+
+241
+00:14:31,602 --> 00:14:34,059
+Two numbers decided this town's week.
+
+242
+00:14:34,349 --> 00:14:36,785
+One matched a definition
+written for billing.
+
+243
+00:14:36,887 --> 00:14:41,067
+The other, investigators could not
+find in the guidance used at the scene.
+
+244
+00:14:42,838 --> 00:14:48,015
+The NTSB's finding: the temperatures on
+scene did not show that reaction, and
+
+245
+00:14:48,055 --> 00:14:50,462
+examinations afterwards confirmed it.
+
+246
+00:14:50,665 --> 00:14:53,296
+The vent and burn was not necessary.
+
+247
+00:14:53,696 --> 00:14:57,566
+Norfolk Southern and its contractors,
+the board found, compromised the
+
+248
+00:14:57,606 --> 00:15:01,456
+integrity of the decision by
+creating unwarranted urgency.
+
+249
+00:15:01,791 --> 00:15:06,257
+The board also found that one industry
+guide consulted at the scene overstated
+
+250
+00:15:06,297 --> 00:15:07,879
+the risk of that reaction.
+
+251
+00:15:08,259 --> 00:15:12,203
+Norfolk Southern's answer: the only
+motivation of the company and its
+
+252
+00:15:12,243 --> 00:15:15,747
+contractors was the health and
+safety of the community and the first
+
+253
+00:15:15,787 --> 00:15:20,032
+responders, and the incident command had
+been told about 20 hours ahead that a
+
+254
+00:15:20,072 --> 00:15:21,373
+burn might be needed.
+
+255
+00:15:21,606 --> 00:15:24,998
+The company does not agree that
+it withheld the shipper's views.
+
+256
+00:15:25,211 --> 00:15:29,508
+The incident commander told investigators
+that he bore the responsibility.
+
+257
+00:15:29,884 --> 00:15:31,750
+One more claim you will often see:
+
+258
+00:15:31,992 --> 00:15:34,561
+they burned it because it
+was the cheapest option.
+
+259
+00:15:34,830 --> 00:15:36,641
+That is not in the record.
+
+260
+00:15:36,886 --> 00:15:41,156
+What is in the record is the urgency,
+the information the incident commander
+
+261
+00:15:41,196 --> 00:15:44,303
+was given, and the reason
+Norfolk Southern gives.
+
+262
+00:15:44,493 --> 00:15:48,391
+The NTSB itself could not determine
+the main reason for the company's
+
+263
+00:15:48,431 --> 00:15:49,796
+preference for the burn.
+
+264
+00:15:53,555 --> 00:15:58,056
+In June 2024, the NTSB
+adopted its final report.
+
+265
+00:15:58,310 --> 00:16:02,814
+The probable cause: the failure of
+the bearing on the 23rd car, which
+
+266
+00:16:02,854 --> 00:16:05,696
+overheated and caused
+the axle to separate.
+
+267
+00:16:06,118 --> 00:16:10,682
+Norfolk Southern's annual reports put
+its net cost from the derailment, after
+
+268
+00:16:10,722 --> 00:16:15,526
+insurance, at about
+$1.1 billion in 2023, and
+
+269
+00:16:15,566 --> 00:16:18,668
+$325 million in 2024.
+
+270
+00:16:19,233 --> 00:16:24,206
+In 2025, insurance and other
+recoveries were larger than new costs,
+
+271
+00:16:24,246 --> 00:16:26,471
+by $254 million.
+
+272
+00:16:26,935 --> 00:16:31,365
+A class action settlement created
+a $600 million fund for residents
+
+273
+00:16:31,405 --> 00:16:32,405
+and businesses.
+
+274
+00:16:32,808 --> 00:16:35,508
+The appeals against the
+settlement were dismissed.
+
+275
+00:16:36,114 --> 00:16:40,100
+An appeal over residents' personal
+injury releases was still pending
+
+276
+00:16:40,140 --> 00:16:41,963
+in October 2026.
+
+277
+00:16:42,611 --> 00:16:45,957
+A separate settlement with the federal
+government still awaited the court's
+
+278
+00:16:45,997 --> 00:16:47,479
+approval at that date.
+
+279
+00:16:47,984 --> 00:16:53,277
+In March 2026, letting residents join
+that case, the judge's order repeated
+
+280
+00:16:53,317 --> 00:16:57,887
+words from an earlier hearing:
+this is not a rubber stamp court.
+
+281
+00:16:58,266 --> 00:16:59,492
+Could it happen again?
+
+282
+00:17:00,066 --> 00:17:05,837
+As of July 2026, federal rules did not
+require trackside detectors at all, or
+
+283
+00:17:05,877 --> 00:17:08,481
+set the temperature at
+which a car must be stopped.
+
+284
+00:17:08,886 --> 00:17:14,195
+The NTSB has recommended that the FRA,
+the federal railroad regulator, set
+
+285
+00:17:14,235 --> 00:17:18,001
+minimum requirements, including
+alarm thresholds and the distance
+
+286
+00:17:18,041 --> 00:17:19,283
+between detectors.
+
+287
+00:17:19,604 --> 00:17:25,530
+Norfolk Southern said in 2024 that it
+was installing 187 more detectors, to
+
+288
+00:17:25,570 --> 00:17:29,374
+bring the average spacing on its
+core network to about 12 miles.
+
+289
+00:17:29,879 --> 00:17:34,263
+And the kind of tank car the investigators
+found likely started the fire stays
+
+290
+00:17:34,303 --> 00:17:38,307
+legal in flammable service
+until the first of May, 2029.
+
+291
+00:17:38,734 --> 00:17:43,461
+Retiring them sooner, the investigators
+found, is feasible, but unlikely,
+
+292
+00:17:43,522 --> 00:17:46,286
+because of economic and
+business disincentives.
+
+293
+00:17:46,652 --> 00:17:48,062
+Two last claims.
+
+294
+00:17:48,404 --> 00:17:50,892
+The brake rule repealed in 2018:
+
+295
+00:17:51,174 --> 00:17:55,407
+it applied to a different kind of
+train, and this train did not qualify.
+
+296
+00:17:55,770 --> 00:17:59,090
+Too few crew: there were
+three people in the cab.
+
+297
+00:17:59,474 --> 00:18:05,147
+As of July 2026, no federal rule sets the
+temperature at which a train must stop.
+
+298
+00:18:05,364 --> 00:18:07,550
+The NTSB has asked for one.
+
+299
+00:18:07,924 --> 00:18:10,652
+From below the alert
+line to a broken axle:
+
+300
+00:18:10,774 --> 00:18:12,178
+about 30 miles.
+
+301
+00:18:12,314 --> 00:18:15,316
+The last two detectors
+were 19 miles apart.
