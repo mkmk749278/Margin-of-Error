@@ -26,7 +26,7 @@ const lathe = (pts: [number, number][], phiStart: number, phiLength: number) =>
 const PHI0 = Math.PI * 0.5;
 const PHIL = Math.PI * 1.5;
 
-const Bearing: React.FC = () => {
+export const Bearing: React.FC<{wheel?: boolean}> = ({wheel = false}) => {
 	const steel = useMemo(() => new THREE.MeshStandardMaterial({color: '#8b95a5', metalness: 0.85, roughness: 0.32, side: THREE.DoubleSide}), []);
 	const darkSteel = useMemo(() => new THREE.MeshStandardMaterial({color: '#4b5563', metalness: 0.8, roughness: 0.4, side: THREE.DoubleSide}), []);
 	const hotSteel = useMemo(
@@ -64,6 +64,19 @@ const Bearing: React.FC = () => {
 	const bolt = useMemo(() => new THREE.CylinderGeometry(0.16, 0.16, 0.18, 6), []);
 	const sealRing = useMemo(() => lathe([[0.82, 0], [1.55, 0], [1.55, 0.22], [0.82, 0.22]], PHI0, PHIL), []);
 	const rollerGeo = useMemo(() => new THREE.CylinderGeometry(0.15, 0.2, 1.3, 32), []);
+	// a freight-car wheel, inboard of the bearing on the axle (profile: hub, plate, rim with flange), cut away like the rest
+	const wheelGeo = useMemo(
+		() =>
+			lathe(
+				[
+					[1.05, -0.9], [1.9, -0.9], [2.1, -0.45], [4.6, -0.3], [4.85, -0.75], [5.0, -0.75], [5.45, -0.55],
+					[5.5, -0.35], [5.0, 0.0], [5.0, 0.55], [4.6, 0.55], [4.4, 0.25], [2.1, 0.3], [1.9, 0.9], [1.05, 0.9],
+				],
+				PHI0,
+				PHIL,
+			),
+		[],
+	);
 
 	// rollers: two rows of 16, sitting between cone and cup, tilted to the raceway taper
 	const rollers: {pos: [number, number, number]; rot: [number, number, number]}[] = [];
@@ -83,6 +96,7 @@ const Bearing: React.FC = () => {
 			<group rotation={[0, -Math.PI / 2, 0]}>
 			{/* axle body (inboard, left after the turn) and the journal through the bearing */}
 			<mesh geometry={axle} material={darkSteel} position={[0, -4.4, 0]} />
+			{wheel ? <mesh geometry={wheelGeo} material={darkSteel} position={[0, -4.6, 0]} /> : null}
 			<mesh geometry={journal} material={steel} position={[0, -0.2, 0]} />
 			<mesh geometry={cup} material={hotSteel} />
 			{cones.map((g, i) => (
