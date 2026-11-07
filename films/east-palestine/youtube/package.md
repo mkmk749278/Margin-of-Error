@@ -67,6 +67,29 @@ browse size; `make_thumbnails.py` writes the `*_168.png` check, not committed). 
 Rebuild: `ffmpeg -ss 5 -i public/films/east-palestine/footage/ntsb_drone_wreck_fire.mp4 -frames:v 1 OUT/drone.png`, then
 `python3 films/east-palestine/youtube/make_thumbnails.py OUT/drone.png films/east-palestine/youtube`.
 
+### Thumbnails D–F: the bearing set (owner's brief, 07 NOV 2026)
+The owner's architecture: slate blueprint grid `#0D1117`; on the right a 3D cut-away of the tapered roller bearing on
+the axle journal, rollers glowing thermal orange `#FF7A00`; a three-line readout; at most three words on the left.
+Built in Remotion with three.js (`remotion/thumb/ThumbBearing.tsx`, compositions `EPThumbD/E/F`), labelled
+**ILLUSTRATION** (a generic tapered roller bearing, not car 23's; the film's own bearing is after NTSB pp. 46–48).
+
+| File | Headline | Readout (degrees above ambient, NTSB RIR-24-05) |
+|---|---|---|
+| `thumb_d_bearing_billing_rule.jpg` (**recommended of the three**, pairs with title 1) | EAST PALESTINE · **A BILLING RULE** | `103°F // DETECTED` (Salem, C05) · `170°F // BILLING RULE` (AAR Rule 36, C25–C26) · `253°F // CRITICAL ALARM` (East Palestine) |
+| `thumb_e_bearing_written_for_billing.jpg` | **WRITTEN FOR BILLING** (the narration's words, s163) | same |
+| `thumb_f_bearing_crew_not_told.jpg` | **CREW NOT TOLD** (C07: below the crew line, the crew did not know) | same |
+
+Changed from the brief, because the record does not carry them: "170° WAS WRONG" (the NTSB found research is needed
+to tell whether lower thresholds help; our verdict, not the record's); "NOT PHYSICS." (NS testified it based its lines
+on its own experience as well as the industry's standards, C73); "253°F // FAILURE" (253° was the East Palestine
+reading, the top of the scale; the axle separated after it); the title "The $40 Billing Rule That Caused East
+Palestine" (no record gives $40; the NTSB's probable cause is the bearing's failure, and the film says no
+investigator links the billing line to the cause). The paired title stays "East Palestine's Alarm Line Came From a
+Billing Rule".
+Note: the brief's exhibit is a drawing that first appears at 2:08 (as the film's flat schematic), not in 0:00–0:07
+(§ Format: the thumbnail's exhibit by 0:07); the readings 103° and 170° are on screen and said by 0:35.
+Rebuild: `node scripts/stills.mjs EPThumbD OUT 0 --scale 1` (and E, F), then resize 1920×1080 → 1280×720 (LANCZOS).
+
 ## Description
 
 ```
@@ -139,7 +162,7 @@ Rebuild: `python3 films/east-palestine/youtube/make_srt.py`.
 - [ ] Altered or synthetic content: the owner's setting (the narration voice is synthetic).
 - [ ] Category: Science & Technology (or Education). Made for kids: **No**. Language: English.
 - [ ] Captions: upload the SRT. Chapters: from the description (first line 0:00).
-- [ ] Test & Compare: thumbnails A, B, C with title 1 (Studio tests thumbnails under one title; titles 2 and 3 are
+- [ ] Test & Compare: thumbnails D, A, B with title 1 (or A, B, C; D–F are the bearing set) (Studio tests thumbnails under one title; titles 2 and 3 are
       the follow-up tests if A–C settle low).
 - [ ] End screen: the outro card (18:15–18:29): a subscribe element, plus *The Four Missing Bolts* as the next video.
 - [ ] Public in the default window: **Thursday 14:00–16:00 US Eastern (19:00–21:00 UK)** (§13.6).

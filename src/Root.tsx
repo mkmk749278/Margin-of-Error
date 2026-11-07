@@ -8,6 +8,7 @@ import {FourMissingBolts} from '../films/four-missing-bolts/remotion/Film';
 import {FILM_FRAMES} from '../films/four-missing-bolts/remotion/timing';
 import {EastPalestine} from '../films/east-palestine/remotion/Film';
 import {FILM_FRAMES as EP_FRAMES} from '../films/east-palestine/remotion/timing';
+import {ThumbBearing} from '../films/east-palestine/remotion/thumb/ThumbBearing';
 
 loadBrandFonts();
 
@@ -19,6 +20,10 @@ export const Root: React.FC = () => (
 		</Folder>
 		<Folder name="EastPalestine">
 			<Composition id="EastPalestine" component={EastPalestine} durationInFrames={EP_FRAMES} fps={video.fps} width={video.width} height={video.height} />
+			{/* thumbnails D-F (owner's brief 07 NOV 2026): one still each, 1920x1080, downscaled to 1280x720 */}
+			<Composition id="EPThumbD" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['A BILLING', 'RULE'], accent: 'amber' as const}} />
+			<Composition id="EPThumbE" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['WRITTEN', 'FOR', 'BILLING'], accent: 'amber' as const}} />
+			<Composition id="EPThumbF" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['CREW', 'NOT', 'TOLD'], accent: 'red' as const}} />
 		</Folder>
 		<Folder name="Dev">
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />
