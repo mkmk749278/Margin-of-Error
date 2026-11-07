@@ -90,6 +90,18 @@ Note: the brief's exhibit is a drawing that first appears at 2:08 (as the film's
 (§ Format: the thumbnail's exhibit by 0:07); the readings 103° and 170° are on screen and said by 0:35.
 Rebuild: `node scripts/stills.mjs EPThumbD OUT 0 --scale 1` (and E, F), then resize 1920×1080 → 1280×720 (LANCZOS).
 
+### Thumbnail G: the poster (owner's mock-up, 07 NOV 2026, rebuilt in our engine) — **recommended**
+`thumb_g_not_a_safety_limit.jpg` (`remotion/thumb/ThumbPoster.tsx`, composition `EPThumbG`): **170°** huge, **NOT A
+SAFETY LIMIT** in thermal orange, **THE BILLING RULE**; on the right a freight-car wheel and, outboard of it on the
+journal, the cut-away bearing glowing, sparks, leader lines to `103°F · SALEM DETECTED`, `170°F · BILLING RULE`,
+`253°F · CRITICAL ALARM` (above ambient, NTSB RIR-24-05); bottom line `EAST PALESTINE · AAR WITNESS AT THE NTSB
+HEARING: "CORRECT."`; labelled `ILLUSTRATION · NOT TO SCALE`. Pairs with title 1.
+The words stand on C28: asked whether the rule's thresholds "are not absolute limits for safe operating temperatures
+of bearings", the AAR witness answered "Correct." (the film plays it at 6:57, with his next sentence, C29).
+The owner's AI-generated mock-up was not used and its watermark not removed: it carries the generator's visible AI
+mark, its headline "170° WAS WRONG" and label "253°F - FAILURE" are not in the record, the bearing sits inside the
+wheel hub (a freight-car bearing is on the journal outboard of the wheel), and its dimension figures are invented.
+
 ## Description
 
 ```
@@ -162,7 +174,7 @@ Rebuild: `python3 films/east-palestine/youtube/make_srt.py`.
 - [ ] Altered or synthetic content: the owner's setting (the narration voice is synthetic).
 - [ ] Category: Science & Technology (or Education). Made for kids: **No**. Language: English.
 - [ ] Captions: upload the SRT. Chapters: from the description (first line 0:00).
-- [ ] Test & Compare: thumbnails D, A, B with title 1 (or A, B, C; D–F are the bearing set) (Studio tests thumbnails under one title; titles 2 and 3 are
+- [ ] Test & Compare: thumbnails G, A, D with title 1 (G recommended) (Studio tests thumbnails under one title; titles 2 and 3 are
       the follow-up tests if A–C settle low).
 - [ ] End screen: the outro card (18:15–18:29): a subscribe element, plus *The Four Missing Bolts* as the next video.
 - [ ] Public in the default window: **Thursday 14:00–16:00 US Eastern (19:00–21:00 UK)** (§13.6).
