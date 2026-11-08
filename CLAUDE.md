@@ -87,8 +87,9 @@ first**: case, angle, narration and story building carry the film; everything el
   paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 - Build in phases; at the end of each, stop and report what was built, what was checked and what is left.
 - Once the owner approves a cut, stop editing it.
-- **Package first:** title, thumbnail concept and search terms in the film's `brief.md` before the script; 30+ title
-  variants, cut to three title-and-thumbnail pairs for Test & Compare (PLAYBOOK §13.2). Concrete titles that state
+- **Package first, locked (owner, 2026-11-08):** title, thumbnail concept and search terms in the film's `brief.md`
+  before the script; 30+ title variants, cut to three title-and-thumbnail pairs for Test & Compare (PLAYBOOK §13.2),
+  and **one promise locked** across all three (the case, the exhibit, the core fact; see "Promise first" below). Concrete titles that state
   the case and the decision; an investigator's own verdict word ("preventable") is allowed when attributed, our own
   adjectives and question bait never. The case name the viewer types is in the title, thumbnail, description line 1
   and the spoken first minute (a new channel is matched on topic).
@@ -100,27 +101,41 @@ first**: case, angle, narration and story building carry the film; everything el
 - **An outside review is a list of leads (§14.3):** check each point in the code, `vo/timing.json` and a rendered still,
   write `review/<name>_check.md` (CONFIRMED / PARTLY / NOT CONFIRMED), then fix in the next round.
 
+## Promise first (owner, 2026-11-08; PLAYBOOK §3a, §5.1, §13.2)
+The same order on all three channels, so the film keeps what the package promises:
+1. **Lock the title and thumbnail concept first** (brief, then locked with the treatment): the promise in one
+   sentence (the case, the exhibit, the core fact), the main title-and-thumbnail pair and its two challengers.
+   Challengers vary the angle's words and the composition, never the promise.
+2. **Write the opening (0:00–0:45) first.** Sentence 1 confirms the thumbnail's promise on the record (the exhibit
+   or number the thumbnail shows); it passes the promise check (PLAYBOOK §5.1) before the rest is written.
+3. **Then the full narration and beat sheet**, every act moving toward that promise, Act IV and V paying it in full.
+4. **Audio only after the opening is verified** and the owner has approved the narration.
+5. **Picture and sound built to the locked narration.**
+A changed promise reopens the opening; a changed opening re-runs the promise check.
+
 ## How we make a film (PLAYBOOK §3a; adopted 2026-11-05)
 **Creativity in every step** (each step has a creative question; the obvious answer is the floor) and **decide early,
-build once** (direction is cheap on paper, expensive after the voice is cued). Owner gates are in **bold**.
+build once** (direction is cheap on paper, expensive after the voice is cued). **Promise first** (above). Owner gates
+are in **bold**.
 1. **Case** → `brief.md`: the case sheet and the package first.
 2. **Research** → `research/landscape.md`: what everyone says (news, statements, the 3–5 strongest films and their
    comments) vs what the record says (draft `claims.csv`), **our edge in one sentence**, what exhibits exist. No edge
    or no dated decision: the case waits.
 3. **Treatment** → `treatment.md`: angles, cold opens, sign-offs, the viewers' real questions, a beat sheet (time,
    question, turn, exhibit and record id, sound, bed), signature moments, hero builds, fairness flags, what was cut.
-   Independent treatment review (§14.5). **The owner approves the treatment.**
+   Independent treatment review (§14.5). **The owner approves the treatment, and with it the locked title-and-thumbnail
+   promise.**
 4. **Facts** at `max` in a fresh context; `claims_check.py` passes before the narration is final.
-5. **Narration**: creative pass, lean-in test, `vo_lint.py`, fairness pass, audience review → `script/narration.md`.
+5. **Narration**: **the opening (0:00–0:45) first, through the promise check**, then the rest; creative pass, lean-in test, `vo_lint.py`, fairness pass, audience review → `script/narration.md`.
    **The owner approves the narration.** From treatment approval, in parallel: exhibits, owner fetches, hero builds.
-6. **Audio** with the channel voice (Marcus), block 1 measured first; timing chain to measured words. **The owner approves the audio.**
+6. **Audio** with the channel voice (Marcus), never before the opening is verified and the narration approved, block 1 measured first; timing chain to measured words. **The owner approves the audio.**
 7. **Exhibits and footage**, the record first; every file looked at and logged.
 8. **Word-level choreography** (the major part): every word cued, and each sentence's cues say the whole sentence.
 9. **Render on GitHub**, at most 6 runners at once (the account's 20 are shared).
 10. **Music and sound** from the library; a cue on every visual event; dips, never dropouts.
 11. **720p review cut** after our own measured review (§14.2), until a round finds nothing.
 12. **Independent viewer review and forensic review**, each point checked (§14.3). **The owner approves the cut.**
-13. **4K master** once. 14. **YouTube package** (§13.7). 15. **Release**, the 24 h / 7 d / 28 d reads, lessons.
+13. **4K master** once. 14. **YouTube package** (§13.7), built from the locked promise. 15. **Release**, the 24 h / 7 d / 28 d reads, lessons.
 `/new-film` walks the whole path and stops at each gate.
 
 ## Format: the five-act forensic investigation (owner's spec §3)
@@ -139,7 +154,8 @@ build once** (direction is cheap on paper, expensive after the voice is cued). O
 - **Act IV, The Cascade:** the physical consequence, down to the crack, the bearing, the missing bolt.
 - **Act V, The Verdict:** findings, litigation, regulation; the same failure mode still in service
   (sourced); an understated sign-off. Channel name only in the outro.
-- **Fixed times, because the evidence supports them:** the thumbnail's exhibit is on screen by 0:07; the open loop
+- **Fixed times, because the evidence supports them:** sentence 1 confirms the thumbnail's promise and the
+  thumbnail's exhibit is on screen by 0:07; the open loop
   (a new hook the thumbnail didn't promise) by about 0:30; the open question by 2:30; re-hooks near minutes 3 and 6.
 - **A human through-line from the record:** one person in a public role (the inspector, the engineer who testified,
   the crew) whose documented words carry the film; never victims' faces, never more than the record shows.
