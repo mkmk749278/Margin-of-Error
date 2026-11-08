@@ -11,8 +11,9 @@ Rules: `CLAUDE.md`; PLAYBOOK §1 (delivery), §13 (package, launch, comments), �
    and stop). Review cuts at 720p; the final as the 4K master plus a 1080p copy. Links private.
 2. **Files with SendUserFile:** the contact sheet, the round's `_check.md` or picture gate, the SRT.
 3. **YouTube package (final films)** in `films/<slug>/youtube/`:
-   - three titles, one per angle, each word on a confirmed `claims.csv` row, plus a search-safe fallback (§13.2);
-   - three 1280×720 thumbnails, one per title, on the real exhibit, gated at 168 px wide (§13.3);
+   - the three locked titles, one per angle and one shared promise (re-run the promise check, §5.1), each word on a
+     confirmed `claims.csv` row, plus a search-safe fallback (§13.2);
+   - three 1280×720 thumbnails, one per title, built from the locked concepts on the real exhibit, gated at 168 px wide (§13.3);
    - the description: 2–3 plain lines with the searched names, chapters from `0:00` taken from the exact uploaded
      file, the sources with record ids (§13.4); no AI line, no cross-promotion;
    - the English SRT from the locked script and timing; the pinned opening comment (§13.8);

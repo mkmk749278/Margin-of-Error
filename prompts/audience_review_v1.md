@@ -27,7 +27,8 @@ is one beat.
 --- NARRATION END ---
 
 For each viewer, answer briefly and honestly:
-a) After the first 30 seconds: what is the case and the stakes, and would you keep watching?
+a) After the first sentence: is this what the title and thumbnail promised you? After the first 30 seconds: what is
+   the case and the stakes, and would you keep watching?
 b) A lean-in map: go through the film in order and mark each part LEANING IN, NEUTRAL or DRIFTING (quote its first
    words). Mark the exact line where you would leave, if any.
 c) Explain back, in your own words, (1) the physical failure and (2) the decision the film links it to.

@@ -84,6 +84,12 @@ the owner decides. Two principles run through every step:
   recorded and the picture is cued to it. So the owner approves the treatment before the narration is written and the
   narration before any audio. The slow work (collecting exhibits, owner fetches, building the hero mechanism) starts
   the day the treatment is approved, beside the writing.
+- **Promise first (owner, 2026-11-08; the same order on all three channels).** The title and thumbnail concept are
+  drafted in the brief (step 1) and locked with the treatment (step 3); the opening (0:00–0:45) is written first and
+  verified against them (step 5, §5.1); the rest of the narration and the beat sheet are built to pay that promise
+  off; audio only after the opening is verified (step 6); the picture is built to the locked narration (steps 7–10).
+  *Why:* the first minute is where viewers leave (§5.1), and they leave fastest when the opening doesn't match what
+  they clicked. An opening written before the package was locked was written for a promise nobody had made yet.
 
 **Owner gates: the treatment (3), the narration (5), the audio (6), the cut (12).** At each one the owner gets a
 finished, phone-readable piece and a short report (§1), never a draft. Between gates, Claude decides and says what it
@@ -111,6 +117,11 @@ decided.
 **3. The treatment → `treatment.md`** (the plan; the most important step). Everything is decided here, on paper:
 - the items in §2.1 (logline, the margin in one line, 3+ angles, the evidence spine, signature moments, sound palette,
   package) and 3+ cold opens and 3+ sign-offs, each with the chosen one and why;
+- **the locked promise (owner, 2026-11-08), at the top:** the promise in one sentence (the case, the exhibit, the core
+  fact the viewer will see explained), the main title-and-thumbnail pair and its two challengers (§13.2–13.3). The
+  challengers vary the angle's words and the composition, never the promise, because one opening must confirm all
+  three. The thumbnail is a written concept (which exhibit, which crop, the 2–3 words), built at step 14. The cold
+  opens are judged by how well they deliver it;
 - **the questions viewers actually ask** (from search, comments and the research), and the minute each is answered;
 - **the beat sheet:** every beat with its time, act, the viewer's question (the Q column, §7.4), its turn, its picture
   (which exhibit and record id, or which reconstruction), its sound and its music bed;
@@ -119,8 +130,9 @@ decided.
 - **the hero builds** (the 3D part, the mechanism, the trace replay) named with their camera moves, so they start early;
 - **the fairness flags:** every beat that names a company or person, marked for the §9.6 pass;
 - **what was cut:** every beat the viewer doesn't need to follow the margin, however interesting.
-Then an **independent treatment review** (§14.5) against the strongest existing films; fixes applied. The owner gets
-a short phone-readable summary. **Owner approves the treatment.**
+Then an **independent treatment review** (§14.5) against the strongest existing films, including whether the locked
+package would win the click and the beat sheet pays it off; fixes applied. The owner gets a short phone-readable
+summary. **Owner approves the treatment, and with it the title and thumbnail concept.**
 *Creative question:* what will an engineer tell a colleague about this film the next morning?
 
 ### Phase C: words (and, in parallel, the pictures start)
@@ -130,18 +142,21 @@ not write it (a subagent or a review session), before the narration is final (§
 every number and date, our own calculations and on-screen values. A fact that falls changes the treatment now, not the
 edit later.
 
-**5. Narration → `script/vo.txt`, `script/screenplay.md`.** Written from the beat sheet, then:
+**5. Narration → `script/vo.txt`, `script/screenplay.md`.** **The opening first (0:00–0:45):** written from the chosen
+cold open and run through the promise check (§5.1) before a line of the rest is written; a failing opening is
+rewritten now, while it costs nothing. Then the rest, from the beat sheet, each act moving toward the promise; then:
 - a **creative pass:** sharpen the cold open and every act's first line, plant and pay off the open loop, cut every
   line the picture already says (§7.2);
 - the checks: the lean-in test, `vo_lint.py`, the fairness pass (§9.6), the independent audience review (§7.8).
-Output: **`script/narration.md`** sent with SendUserFile: the full narration as it will be voiced, what changed after
+Output: **`script/narration.md`** sent with SendUserFile: the locked title and thumbnail concept and the promise
+check at the top (so the owner hears sentence 1 against the package), then the full narration as it will be voiced, what changed after
 review, and what to listen for (acronyms, names, numbers). **Owner approves the narration.**
 
 *In parallel, from treatment approval:* exhibits are collected and rendered (report pages, docket files, filing shots,
 §11), owner fetch requests go out (step 7), reference sheets are made, and the hero builds are coded and checked in
 stills. Their lengths are trimmed to the audio later. The owner's fetching time and the build time become no waiting.
 
-**6. Audio.** Only after the narration is approved: `scripts/tts_elevenlabs.py` (§7.5), block 1 first and measured,
+**6. Audio.** Only after the opening has passed the promise check and the narration is approved: `scripts/tts_elevenlabs.py` (§7.5), block 1 first and measured,
 then the rest; every take through `vo_review.py` and listened to; a flagged block regenerated. Then the timing chain
 (`vo_timing.py` → `film_timing.py` → `word_align.py`, §10.4). The joined VO to Drive `<slug>/vo/`, sent to the owner.
 **Owner approves the audio.** After that, a changed word is one regenerated sentence cut in at its pauses (§10.4).
@@ -171,8 +186,10 @@ the `_check.md` with its outcomes sent to the owner. **Owner approves the cut,**
 
 **13. The 4K master,** rendered once, to Drive (§10.5).
 
-**14. The YouTube package** (§13.7): three thumbnails, title, description, chapters from the exact uploaded file, SRT.
-Thumbnail candidates are noted while building, so the best frames are ready.
+**14. The YouTube package** (§13.7): three thumbnails built from the locked concept, the locked titles, description,
+chapters from the exact uploaded file, SRT. Thumbnail candidates are noted while building, so the best frames are
+ready. If the film changed the promise (a fact fell, a better exhibit came), the package changes only together with
+the opening, and the promise check runs again.
 
 **15. Release and the first 28 days** (§13.6), then the lessons: each into the rule it belongs to, with its reason
 (§16).
@@ -332,6 +349,9 @@ the length; some films run shorter, some longer). The act times below are Film 1
   narrative transportation (van Laer et al., meta-analysis of 132 effects).
 
 ### 5.1 Act I: the incident (about the first 10–15%; the question by 2:30)
+- **Sentence 1 confirms the thumbnail's promise (owner, 2026-11-08):** it states, on the record, the exhibit or the
+  number the thumbnail shows (thumbnail `154 / FLIGHTS / NO BOLTS` → sentence 1 is about that door plug and those
+  flights). Confirm, never answer: the viewer knows they clicked the right film, and the question is still open.
 - **Confirm the click in 7 seconds:** the exhibit the thumbnail promised is on screen by 0:07, and a new hook the
   thumbnail did not promise lands by about 0:30; US/UK glosses come after the hook. *Why:* practitioner data on
   first-minute loss (Galloway 2025; the leaked MrBeast guide: 21M of 60M viewers lost in the first minute).
@@ -345,6 +365,15 @@ the length; some films run shorter, some longer). The act times below are Film 1
 - **The first 45 s in three beats (reports review 2026-11-06):** 0:00–0:10 the anomaly on the record (the exhibit,
   never a greeting); 0:10–0:25 the stakes beyond this one failure; 0:25–0:45 the method, which records we read, so
   the viewer knows what the film will audit. The treatment's beat sheet marks all three.
+- **The promise check** (the opening is written first and passes this before the rest of the narration, §3a step 5):
+  1. Read only the locked title, the thumbnail concept and sentence 1: does a stranger know they clicked the right
+     film? Is the thumbnail's exhibit or number in sentence 1, said the way the thumbnail says it?
+  2. Is sentence 1 on the record (a time, a reading, a document line), not a topic statement?
+  3. Is the thumbnail's exhibit on screen by 0:07, the new hook by about 0:30, the method by 0:45?
+  4. Does the opening confirm without answering? Is every word of it on a confirmed `claims.csv` row?
+  5. Does it match both challenger pairs too?
+  The result goes at the top of `script/narration.md`. A failure is fixed in the opening, or, if the opening is right
+  and the package is wrong, in the package (with the owner, who approved it with the treatment).
 - **Act turns in three steps:** close the act on its finding; show the contradiction that finding exposes; turn it
   into the next act's question. *Why:* a resolved act with no new question is where viewers leave.
 - **Name the open loop by about 0:30, at the latest 60 s** (what we will find), and end the act on the question
@@ -994,7 +1023,9 @@ true. No question-mark bait, no "EXPOSED", no all-caps, no tabloid words ("shock
 - **Rejected forms:** a false absolute ("Nobody knows who…" when the record says the interviews identified no one);
   an implied motive or knowledge ("Boeing knew"); a question mark.
 - **Write 30+ title variants** across the three angles (2026-11-06; Galloway writes 30–40), then cut to three, each
-  paired with its own thumbnail. Concrete summary titles beat questions and curiosity bait (Scacco and Muddiman: 6,701
+  paired with its own thumbnail. **The three pairs share one locked promise** (owner, 2026-11-08: the case, the exhibit,
+  the core fact) and differ in the angle's words and the composition, so sentence 1 confirms every one. Locked with the
+  treatment (§3a step 3); changed later only together with the opening (§5.1). Concrete summary titles beat questions and curiosity bait (Scacco and Muddiman: 6,701
   vs 5,324 views across 5,288 headlines). **In this niche the titles that win state a verdict on the decision for one
   named case;** a verdict word is allowed only when the investigator said it and the film attributes it
   ("preventable": the USCG board on Titan, Ofgem on North Hyde), never our own adjective. The literal "what the report

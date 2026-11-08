@@ -12,7 +12,7 @@ Only finished work goes to the owner. At session start: unmerged branches check 
 **Phase A: find the case**
 1. **Case** → `films/<slug>/brief.md`: the case sheet (decision · failure mode · smoking-gun document · target
    length, argued from the story: §5) and the package first (30+ title variants, thumbnail concepts, the search
-   phrase the viewer types). The slate's fact flags: §17.3; the 2026 candidates and the final-report kit: §17.4.
+   phrase the viewer types; the promise in one sentence). The slate's fact flags: §17.3; the 2026 candidates and the final-report kit: §17.4.
 2. **Research** → `research/landscape.md`: what everyone says (news, statements, regulator releases, the 3–5
    strongest films and what their comments say they missed), what the record says (draft `claims.csv` as you go),
    **our edge in one sentence**, what exhibits exist and their licence, and the human through-line the record offers
@@ -23,16 +23,18 @@ Only finished work goes to the owner. At session start: unmerged branches check 
    real questions, the beat sheet (time · act · Q · turn · exhibit + record id · sound · bed; the 0:07 confirm, the
    0:30 hook, the 2:30 question, the minute-3 and minute-6 re-hooks marked; each beat earns its minutes, so the run
    time is argued here), 2–3 signature moments
-   in full, hero builds, fairness flags, what was cut. Independent treatment review (§14.5, new session, no repo) →
+   in full, hero builds, fairness flags, what was cut; **the locked promise at the top** (main title-and-thumbnail
+   pair + 2 challengers sharing one promise, §3a step 3). Independent treatment review (§14.5, new session, no repo) →
    `review/treatment_review_vN.md` → fixes. **[owner approves the treatment]**
 
 **Phase C: words; pictures start in parallel**
 4. **Facts:** `/fact-check` on everything the treatment claims.
-5. **Narration** → `script/vo.txt`, `script/screenplay.md` (TIME | AUDIO | VISUAL | Q): creative pass, lean-in test,
+5. **Narration** → `script/vo.txt`, `script/screenplay.md` (TIME | AUDIO | VISUAL | Q): **the opening (0:00–0:45)
+   first, through the promise check** (§5.1: sentence 1 confirms the thumbnail), then the rest; creative pass, lean-in test,
    `vo_lint.py`, `/fairness-pass`, audience review (§7.8) → `script/narration.md` with SendUserFile and the recording
    blocks in the chat. **[owner approves the narration]**
    In parallel from treatment approval: `/source-exhibits`, owner fetch requests, reference sheets, hero builds in stills.
-6. **Audio:** `vo_blocks.py` → `tts_elevenlabs.py --dry-run` → `--blocks 1` → `vo_review.py` and listen → all
+6. **Audio** (never before the opening is verified and the narration approved): `vo_blocks.py` → `tts_elevenlabs.py --dry-run` → `--blocks 1` → `vo_review.py` and listen → all
    blocks → Drive `<slug>/vo/`. Then `vo_timing.py` → `film_timing.py` → `word_align.py`. **[owner approves the audio]**
 
 **Phase D: the picture**
@@ -48,5 +50,5 @@ Before release: the catalogue distinctness audit (§14.2a) and the method statem
     every point checked (§14.3) → fixes → `_check.md` with outcomes to the owner. **[owner approves the cut]**
     Then nobody edits it.
 13. **4K master** once (`/parallel-render`, scale 2).
-14. **Package and release** (`/deliver`).
+14. **Package and release** (`/deliver`), built from the locked promise.
 After the film: each lesson into the rule it belongs to, with its reason (§16).
