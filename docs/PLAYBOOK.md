@@ -1508,6 +1508,17 @@ only against our own rules hides what the competing films already do better.
    *Why:* film 1 is public, and a new channel's second film does best when it reaches the first film's viewers
    (suggested traffic) with the same kind of film: a transport failure told from an NTSB docket. East Palestine fits
    all five acts; the transformer case still lacks a single incident for Act I and a dated decision for Act III.
+10. **2026-11-09: two tracks, eight films a month; film 3 is Baltimore Key Bridge** (owner, after the dossier review,
+   `docs/research/2026-11-09_forensic_dossier_review.md`). **Track A, the forensic autopsy** (the five-act film from an
+   NTSB/CSB/MAIB/AAIB/TSB record) and **Track B, "The Invisible Moats"**: a physical limit or single point of supply
+   that the economy or infrastructure rests on (EUV optics, large power transformers and GOES, coupler limits, marine
+   P&I reinsurance). The owner chose this over our recommendation (moats as act material only; release when finished).
+   *How it holds the hard lines:* Track B keeps every fact from primary records, standards bodies or peer-reviewed work
+   (the dossier's blog-sourced figures are leads only); its Act III still needs a dated, documented decision or
+   concentration (a filing, a regulator's study, a procurement record), never an invented motive; no national-rivalry
+   framing ("no country can copy"); the owner gates and reviews stay. At this pace each film's length and polish still
+   come first: if a slot can't pass the gates, it slips, and the owner hears it with the reason. Film 3 is Track A,
+   MV *Dali* / Key Bridge, from the NTSB final report and docket.
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
