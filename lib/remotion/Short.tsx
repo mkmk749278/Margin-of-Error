@@ -26,7 +26,7 @@ const PIC_Y = 700;
 const PIC_H = (SHORT_W * 1080) / 1920; // 607.5
 const CAP_Y = 1350;
 const COVER = 18; // frames 0-17 (0.3 s, before the first word) hold the cover exhibit
-const TAIL = 66; // 1.1 s after the clip: its last frame held, sound out, the end card up
+const TAIL = 66; // 1.1 s after the clip: the cover exhibit held (it loops back to frame 0), sound out, the end card up
 
 export const calcShortMetadata: CalculateMetadataFunction<ShortProps> = ({props}) => ({
 	durationInFrames: Math.round(props.duration * 60) + TAIL,
@@ -175,7 +175,7 @@ export const Short: React.FC<ShortProps> = ({clip, chip, hook, words: rawWords, 
 					</Freeze>
 				) : null}
 				{frame >= clipFrames ? (
-					<Freeze frame={clipFrames - 2}>
+					<Freeze frame={Math.round(cover * fps)}>
 						<OffthreadVideo
 							src={staticFile(clip)}
 							muted
