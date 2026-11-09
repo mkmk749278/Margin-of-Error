@@ -3,7 +3,8 @@
 Each Short is the film's own picture and final mix, cut on whole sentences (`scripts/shorts_build.py`), laid out
 1080×1920 with the hook above, the measured words as captions below (`lib/remotion/Short.tsx`). **Frame 0 is the
 cover:** the strongest exhibit of the clip, held for 0.3 s before the first word, with the hook and a punch line, so the
-frame YouTube shows in the feed is the best one. Files: Drive `Margin-of-Error/shorts/`.
+frame YouTube shows in the feed is the best one. Files: Drive `Margin-of-Error/shorts/` (rendered and checked
+09 NOV 2026: −13.3 to −14.3 LUFS, peaks −1.2 to −1.5 dBFS; the tail holds the cover exhibit).
 
 **For each upload (Studio app):** upload the file → title and description below → **Related video: the full film**
 (the field under the description in the Shorts upload screen) → Public. One Short a day, never two in an hour.
@@ -14,7 +15,7 @@ The voice note line is required in every description (owner's rule, word for wor
 
 ---
 
-## EP1 · `ep_s1_crew_not_told.mp4` (39 s)
+## EP1 · `ep_s1_crew_not_told.mp4` (39 s) · [Drive](https://drive.google.com/file/d/1Gj0BUw5D54DYxA-l9ixpPjPtDb3amXHR/view)
 ```
 East Palestine: The Detector Read 103°F Above the Air. The Crew Wasn't Told.
 ```
@@ -27,7 +28,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 #EastPalestine #NTSB #NorfolkSouthern
 ```
 
-## EP2 · `ep_s2_where_170.mp4` (31 s)
+## EP2 · `ep_s2_where_170.mp4` (31 s) · [Drive](https://drive.google.com/file/d/1hHTmaWehgjnFpgaZ4fuLzpr5uJ2hL_qS/view)
 ```
 East Palestine: Where the 170° Alarm Line Came From
 ```
@@ -40,7 +41,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 #EastPalestine #NTSB #Railroad
 ```
 
-## EP3 · `ep_s3_19_miles.mp4` (32 s)
+## EP3 · `ep_s3_19_miles.mp4` (32 s) · [Drive](https://drive.google.com/file/d/1Oo8SPrW5qDAqh50wrz9-EogMNCvcXkRN/view)
 ```
 East Palestine: 19 Miles With Nothing Reading the Bearing
 ```
@@ -53,7 +54,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 #EastPalestine #NTSB #TrainDerailment
 ```
 
-## FMB1 · `fmb_s1_the_photo.mp4` (28 s)
+## FMB1 · `fmb_s1_the_photo.mp4` (28 s) · [Drive](https://drive.google.com/file/d/1c8e2OftDLp5h9EakiA8-g2hwaCvqTBNb/view)
 ```
 Alaska 1282: The Photo Taken 108 Days Before the Door Plug Blew Out
 ```
@@ -66,7 +67,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 #Alaska1282 #Boeing #NTSB
 ```
 
-## FMB2 · `fmb_s2_four_bolts.mp4` (27 s)
+## FMB2 · `fmb_s2_four_bolts.mp4` (27 s) · [Drive](https://drive.google.com/file/d/1zh-3mif8xuHR7nKhaWSbZq-d7Ej3ezD3/view)
 ```
 Alaska 1282: Four Bolts Where One Would Have Done
 ```
@@ -79,7 +80,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 #Alaska1282 #Boeing #Aviation
 ```
 
-## FMB3 · `fmb_s3_154_flights.mp4` (46 s)
+## FMB3 · `fmb_s3_154_flights.mp4` (46 s) · [Drive](https://drive.google.com/file/d/1T4Lcil3_PvjnAYtPYtOd1f9HY4I6SDbq/view)
 ```
 Alaska 1282: The Door Plug That Walked Itself Up for 154 Flights
 ```
