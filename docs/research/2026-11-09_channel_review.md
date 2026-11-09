@@ -57,3 +57,16 @@ rolling year** as the floor.
 
 **Us:** Shorts from both live films (three each, 9:16, linked to the film); the case order re-ranked by search demand;
 Key Bridge (Tuesday) and transformers (Friday) into treatment.
+
+## Studio read, 09 NOV 2026 evening (owner's screenshots)
+- **East Palestine (live 1 day 23 h):** 6 impressions, CTR 33.3%, 6 views, 0.6 watch hours, so **about 6 minutes a
+  view** (about a third of 18:30). Channel, 28 days: 24 views, 2.9 hours; the other 18 views and 2.3 hours came from
+  the first Boeing upload before it was removed (about 7.7 minutes a view).
+- **Diagnosis:** the people who click stay; **YouTube is barely showing the film at all** (6 impressions in two days).
+  A channel with no subscribers and no history gets almost no browse tests, so the first viewers have to come from
+  search, from our own other videos (suggested), from Shorts, and from links shared where the interested people are.
+- **The live package is not the one that passed the checks:** title "The $40 Billing Rule That Caused East Palestine"
+  and thumbnail "170° WAS WRONG" with "253°F - FAILURE" (both rejected on the record: no $40, the NTSB's cause is the
+  bearing, "wrong" is our verdict, 253° was the alarm reading). The thumbnail's bearing art is a generated image, which
+  the audience research says US and UK viewers distrust.
+- **Search fit:** viewers type "East Palestine train derailment"; the title has neither "train" nor "derailment".
