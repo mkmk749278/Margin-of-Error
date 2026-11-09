@@ -1519,6 +1519,10 @@ only against our own rules hides what the competing films already do better.
    framing ("no country can copy"); the owner gates and reviews stay. At this pace each film's length and polish still
    come first: if a slot can't pass the gates, it slips, and the owner hears it with the reason. Film 3 is Track A,
    MV *Dali* / Key Bridge, from the NTSB final report and docket.
+11. **2026-11-09: the two-a-week plan** (`docs/research/2026-11-09_two_a_week_plan.md`): cases from every investigating
+   body and fifty years of records (classics for evergreen search, new reports for news spikes), a reusable scene kit,
+   Track B at 12–16 min, research four weeks ahead, two to three Shorts per film, series playlists. **Four owner gates
+   stay**; the first moats film is transformers.
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
