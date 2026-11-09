@@ -31,6 +31,12 @@ first**: case, angle, narration and story building carry the film; everything el
 - **Ask the owner with choices** (AskUserQuestion, recommended option first, one-line reason each) when a decision is
   theirs. Never ask what a sensible default or the repo answers.
 
+## Start every session as the channel's owner (owner, 2026-11-09)
+Run `python3 scripts/channel_stats.py` (this channel's token only) and read the numbers before any work: what is
+working, what is going wrong, what to change. **The goal until monetisation: watch hours and subscribers** (1,000
+subscribers and 4,000 public watch hours; 8,000 for applications from 01 FEB 2027). Long-form earns the hours, Shorts
+earn the subscribers, case choice and packaging earn both. Current read: `docs/research/2026-11-09_channel_review.md`.
+
 ## What matters most
 1. **The record, not the rumour.** Every finding comes from an official record (NTSB, FAA, CSB, FERC/NERC, DOE, SEC
    filings, court records, standards bodies such as ASME and IEEE) or peer-reviewed work, and is attributed to who found
