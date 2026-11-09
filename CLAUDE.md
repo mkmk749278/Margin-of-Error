@@ -64,6 +64,8 @@ first**: case, angle, narration and story building carry the film; everything el
   **Software and configuration failures qualify (owner, 2026-11-06) only when the digital failure cascades into the
   physical world, the economy or public infrastructure** (grounded aircraft, 911/000 emergency-call outages, halted
   surgeries); never pure web or app downtime.
+  **Two tracks (owner, 2026-11-09; PLAYBOOK §17.1 item 10):** Track A, forensic autopsies; Track B, "The Invisible
+  Moats": a physical limit or single supply point the economy rests on, held to the same sourcing and fairness rules.
   No geopolitics from other regions, no physics-trivia detours. Currency in `$` with millions/billions; units as the
   record states them (feet, knots, psi, °F) with SI beside them on screen.
 - **The voice note, in every description, word for word** (owner, 2026-11-06): "Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity." No other AI wording
