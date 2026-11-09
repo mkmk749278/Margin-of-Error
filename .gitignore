@@ -9,5 +9,6 @@ out/
 *.mp3
 films/*/assets/
 public/films/
+public/shorts/
 __pycache__/
 films/*/youtube/*_168.png

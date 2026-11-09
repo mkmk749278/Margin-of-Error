@@ -10,6 +10,11 @@ import {EastPalestine} from '../films/east-palestine/remotion/Film';
 import {FILM_FRAMES as EP_FRAMES} from '../films/east-palestine/remotion/timing';
 import {ThumbBearing} from '../films/east-palestine/remotion/thumb/ThumbBearing';
 import {ThumbPoster} from '../films/east-palestine/remotion/thumb/ThumbPoster';
+import {Short, calcShortMetadata, SHORT_W, SHORT_H} from '../lib/remotion/Short';
+import type {ShortProps} from '../lib/remotion/Short';
+
+// Shorts render with --props films/<slug>/shorts/<id>.props.json (scripts/shorts_build.py writes them).
+const shortDefaults: ShortProps = {id: 'none', clip: 'shorts/none.mp4', duration: 1, chip: '', hook: [], words: [], sentences: [], cover: 0};
 
 loadBrandFonts();
 
@@ -26,6 +31,9 @@ export const Root: React.FC = () => (
 			<Composition id="EPThumbE" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['WRITTEN', 'FOR', 'BILLING'], accent: 'amber' as const}} />
 			<Composition id="EPThumbG" component={ThumbPoster} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="EPThumbF" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['CREW', 'NOT', 'TOLD'], accent: 'red' as const}} />
+		</Folder>
+		<Folder name="Shorts">
+			<Composition id="Short" component={Short} durationInFrames={60} fps={video.fps} width={SHORT_W} height={SHORT_H} defaultProps={shortDefaults} calculateMetadata={calcShortMetadata} />
 		</Folder>
 		<Folder name="Dev">
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />

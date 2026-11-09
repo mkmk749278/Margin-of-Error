@@ -1,0 +1,89 @@
+{
+ "film": "east-palestine",
+ "master": "assets/shorts_src/east-palestine_master_1080p.mp4",
+ "shorts": [
+  {
+   "id": "ep_s1_crew_not_told",
+   "from": 1,
+   "to": 11,
+   "chip": "EAST PALESTINE, OHIO · 03 FEB 2023",
+   "hook": [
+    [
+     "SALEM DETECTOR"
+    ],
+    [
+     "+103°F",
+     "amber"
+    ],
+    [
+     "THE CREW WAS"
+    ],
+    [
+     "NOT TOLD",
+     "red"
+    ]
+   ],
+   "record": "C03-C08, C11 (NTSB RIR-24-05)",
+   "cover": 37.5,
+   "coverLine": [
+    "THE ALERT WENT TO A DESK",
+    "amber"
+   ]
+  },
+  {
+   "id": "ep_s2_where_170",
+   "from": 66,
+   "to": 70,
+   "chip": "EAST PALESTINE · NTSB RIR-24-05",
+   "hook": [
+    [
+     "WHERE THE"
+    ],
+    [
+     "170°",
+     "amber"
+    ],
+    [
+     "ALARM LINE"
+    ],
+    [
+     "CAME FROM"
+    ]
+   ],
+   "record": "C23, C25, C26, C69-C70",
+   "cover": 18.0,
+   "coverLine": [
+    "AT LEAST 170°F",
+    "amber"
+   ]
+  },
+  {
+   "id": "ep_s3_19_miles",
+   "from": 117,
+   "to": 125,
+   "chip": "NORFOLK SOUTHERN 32N · 03 FEB 2023",
+   "hook": [
+    [
+     "19 MILES",
+     "amber"
+    ],
+    [
+     "WITH NOTHING"
+    ],
+    [
+     "READING THE"
+    ],
+    [
+     "BEARING",
+     "red"
+    ]
+   ],
+   "record": "C13, C111, C114, C11, C14",
+   "cover": 30.0,
+   "coverLine": [
+    "+253°F · CRITICAL ALARM",
+    "red"
+   ]
+  }
+ ]
+}

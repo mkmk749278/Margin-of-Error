@@ -1079,6 +1079,15 @@ stays the owner's. No hashtag spam, no cross-promotion.
 related-video link to the film; none is fine when no beat qualifies (2026-11-06: the lift from Shorts to long-form is
 correlational). Same fairness and fact rules.
 
+**How we make them (2026-11-09, the monetisation sprint):** two or three per film, cut from the approved master on
+whole sentences (`scripts/shorts_build.py films/<slug>`, spans in `films/<slug>/shorts/shorts.json`; never the first
+syllable of the next sentence), laid out by `lib/remotion/Short.tsx` (composition `Short`, `--props` the generated
+`<id>.props.json`): the hook above, the film's own picture and mix in the middle, the measured words as captions
+below, everything clear of the Shorts UI (bottom ~420 px, right ~140 px). **Frame 0 is the cover** (owner,
+2026-11-09: a Short can't take a custom thumbnail): the clip's strongest exhibit frozen for the 0.3 s before the first
+word, the hook and a punch line on screen from frame 0, no fade-ins. The last 1.1 s holds the last frame with the end
+card "FULL INVESTIGATION · LINKED BELOW". Upload sheet: `films/shorts_upload.md`.
+
 ### 13.6 Launch
 **Each film goes up when it is finished** (owner, 2026-11-02), in slate order (§17.4); each end screen points to the
 next published case only. Default upload window: Thursday 14:00–16:00 US Eastern (19:00–21:00 UK), until Studio data
