@@ -1,0 +1,85 @@
+{
+ "film": "four-missing-bolts",
+ "master": "assets/shorts_src/four-missing-bolts_master_4k_marcus.mp4",
+ "shorts": [
+  {
+   "id": "fmb_s1_the_photo",
+   "from": 80,
+   "to": 89,
+   "chip": "ALASKA 1282 · BOEING RENTON · 19 SEP 2023",
+   "hook": [
+    [
+     "THE PHOTO"
+    ],
+    [
+     "108 DAYS",
+     "amber"
+    ],
+    [
+     "BEFORE THE"
+    ],
+    [
+     "BLOWOUT"
+    ]
+   ],
+   "record": "C35, C69 (NTSB AIR-25-04)",
+   "cover": 24.0,
+   "coverLine": [
+    "NO BOLTS.",
+    "red"
+   ]
+  },
+  {
+   "id": "fmb_s2_four_bolts",
+   "from": 37,
+   "to": 43,
+   "chip": "ALASKA 1282 · 737-9 DOOR PLUG",
+   "hook": [
+    [
+     "4 BOLTS",
+     "amber"
+    ],
+    [
+     "WHERE"
+    ],
+    [
+     "1 WOULD",
+     "amber"
+    ],
+    [
+     "HAVE DONE"
+    ]
+   ],
+   "record": "C12, C14, C15 (NTSB AIR-25-04)",
+   "cover": 22.5,
+   "coverLine": [
+    "A MARGIN BUILT IN STEEL",
+    "amber"
+   ]
+  },
+  {
+   "id": "fmb_s3_154_flights",
+   "from": 140,
+   "to": 150,
+   "chip": "ALASKA 1282 · 05 JAN 2024",
+   "hook": [
+    [
+     "IT WALKED"
+    ],
+    [
+     "ITSELF UP FOR"
+    ],
+    [
+     "154 FLIGHTS",
+     "red"
+    ]
+   ],
+   "record": "C19-C22, C76 (NTSB AIR-25-04)",
+   "cover": 7.6,
+   "coverLine": [
+    "FRACTIONS OF AN INCH",
+    "amber"
+   ]
+  }
+ ]
+}
