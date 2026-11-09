@@ -1280,6 +1280,15 @@ only against our own rules hides what the competing films already do better.
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
 
+**Outside research documents (2026-11-09).**
+- *A confident dossier can be wrong exactly where the story wants it.* A 17-page research dossier on East Palestine
+  set against our 182 checked rows failed in 20 places: an NTSB-"confirmed" fatigue cause the NTSB says is unknowable,
+  a motive for the alarm threshold, a year-by-year inspection-time series with no source, a radio quote that was never
+  said, a title claiming three ignored alarms when there was one. **Rule:** an outside research document is a list of
+  leads like an outside review (§14.3): every number and quote goes through `claims.csv` from the primary record before
+  it reaches a brief; its title and thumbnail ideas go through the fairness pass. *Why:* the errors were all plausible
+  and all in the direction of a stronger story. Review: `docs/research/2026-11-09_forensic_dossier_review.md`.
+
 **Film 2 narration takes (2026-11-05).**
 - *The full-block speech-to-text pass drops and doubles words that are there.* On East Palestine, `vo_review.py`'s
   small model flagged "9,309" as "9,300", a doubled "train", and a missing "settlement"; two fresh takes showed the
