@@ -1161,6 +1161,10 @@ the upload window (§13.6). **The pinned opening comment** at launch is **conver
 plain sentences that open a conversation, best a question to the people who know the work (crews, inspectors,
 engineers) or who live with the case; no sources, no record ids, no findings recap, no link, no subscribe request.
 *Why:* the description carries the record; the pinned comment's job is replies, and replies are a signal viewers act on.
+**Video location (owner, 2026-11-10):** every film and Short carries the case's place (`yt_upload.py --location`,
+e.g. "Portland, Oregon"), the place the record names. YouTube documents it for search by place, not as a ranking
+signal, so it is cheap help, not a lever. A private or scheduled video may not keep it through the API: re-apply
+and read it back once the video is public.
 
 ## 14. Review gates
 

@@ -42,6 +42,7 @@ def main() -> int:
     ap.add_argument("--title"); ap.add_argument("--description-file")
     ap.add_argument("--publish-at", help="RFC3339 UTC, e.g. 2026-11-10T17:00:00Z (uploads private, then publishes)")
     ap.add_argument("--thumbnail")
+    ap.add_argument("--location", help='"East Palestine, Ohio,40.8339,-80.5409": the case\'s place (search by place)')
     a = ap.parse_args()
     if a.sheet:
         title, desc = from_sheet(a.sheet, a.key)
@@ -58,10 +59,14 @@ def main() -> int:
         status["publishAt"] = a.publish_at
     body = {"snippet": {"title": title, "description": desc, "tags": tags, "categoryId": "28",
                         "defaultLanguage": "en", "defaultAudioLanguage": "en"}, "status": status}
+    if a.location:
+        name, lat, lon = a.location.rsplit(",", 2)
+        body["recordingDetails"] = {"locationDescription": name.strip(),
+                                    "location": {"latitude": float(lat), "longitude": float(lon), "altitude": 0}}
     hdr = {"Authorization": "Bearer " + token()}
     size = os.path.getsize(a.file)
     init = urllib.request.Request(
-        "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
+        "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status,recordingDetails",
         data=json.dumps(body).encode(), method="POST",
         headers={**hdr, "Content-Type": "application/json; charset=UTF-8",
                  "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)})
