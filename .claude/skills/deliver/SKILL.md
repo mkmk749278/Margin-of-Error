@@ -19,7 +19,7 @@ Rules: `CLAUDE.md`; PLAYBOOK §1 (delivery), §13 (package, launch, comments), �
    - the English SRT from the locked script and timing; the pinned opening comment (§13.8);
    - title and description also in the chat as click-to-copy blocks.
 4. **Release plan in the reply** (§13.6): Unlisted at least 3 hours ahead, the window, Studio's "Altered or synthetic
-   content" setting for the owner, Test & Compare with the three thumbnails, the pinned comment within 60 s, no
+   content" No (owner, 10 NOV 2026), Test & Compare with the three thumbnails, the pinned comment within 60 s, no
    self-views, the 24 h / 7 d / 28 d reads and the challenger rule.
 5. **Report in plain words:** what changed since the last cut, what is reconstructed or illustrative, rights risks
    (docket items with owners' marks, third-party clips), what you need from the owner.

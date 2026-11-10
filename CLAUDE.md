@@ -75,7 +75,7 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
   No geopolitics from other regions, no physics-trivia detours. Currency in `$` with millions/billions; units as the
   record states them (feet, knots, psi, °F) with SI beside them on screen.
 - **The voice note, in every description, word for word** (owner, 2026-11-06): "Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity." No other AI wording
-  in public text; the owner still sets YouTube Studio's "Altered or synthetic content" at upload.
+  in public text; YouTube's "Altered or synthetic content" setting is **No** (owner, 2026-11-10).
   On-screen honesty labels (RECONSTRUCTION, ILLUSTRATION) are about evidence, not AI, and always stay.
 
 ## Owner and workflow

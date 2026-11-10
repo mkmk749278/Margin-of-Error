@@ -8,7 +8,7 @@ Uses only YT_CLIENT_ID, YT_CLIENT_SECRET and YT_REFRESH_TOKEN_MARGINOFERROR (sco
   python3 scripts/yt_upload.py FILE --title T --description-file D [--publish-at …] [--thumbnail JPG]
 
 Without --publish-at the video goes up public at once. Always: category Science & Technology (28), English, not made
-for kids, "altered or synthetic content" declared (the narration voice is synthetic; owner's setting).
+for kids, "altered or synthetic content" No (owner, 10 NOV 2026).
 The Shorts "Related video" field is not in the API: the film link in the description carries it.
 """
 import argparse, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
@@ -53,7 +53,7 @@ def main() -> int:
         raise SystemExit("description lacks the voice note (CLAUDE.md, word for word)")
     tags = re.findall(r"#(\w+)", desc)
     status = {"privacyStatus": "private" if a.publish_at else "public", "selfDeclaredMadeForKids": False,
-              "containsSyntheticMedia": True, "embeddable": True}
+              "containsSyntheticMedia": False, "embeddable": True}
     if a.publish_at:
         status["publishAt"] = a.publish_at
     body = {"snippet": {"title": title, "description": desc, "tags": tags, "categoryId": "28",
