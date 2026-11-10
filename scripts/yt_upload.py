@@ -69,9 +69,10 @@ def main() -> int:
     for attempt in range(5):
         try:
             with open(a.file, "rb") as fh:
-                put = urllib.request.Request(url, data=fh.read(), method="PUT",
-                                             headers={**hdr, "Content-Type": "video/mp4"})
-                vid = json.load(urllib.request.urlopen(put, timeout=900))
+                # streamed from disk (a 4K master is gigabytes); a retry restarts the whole file
+                put = urllib.request.Request(url, data=fh, method="PUT",
+                                             headers={**hdr, "Content-Type": "video/mp4", "Content-Length": str(size)})
+                vid = json.load(urllib.request.urlopen(put, timeout=3600))
             break
         except (urllib.error.URLError, TimeoutError) as e:
             if attempt == 4:
