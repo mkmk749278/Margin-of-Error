@@ -1532,6 +1532,15 @@ only against our own rules hides what the competing films already do better.
    body and fifty years of records (classics for evergreen search, new reports for news spikes), a reusable scene kit,
    Track B at 12–16 min, research four weeks ahead, two to three Shorts per film, series playlists. **Four owner gates
    stay**; the first moats film is transformers.
+12. **2026-11-10: demand first until monetised; three Track A films to one Track B** (owner). Reason: a channel with
+   no subscribers gets almost no Browse impressions (East Palestine: 6 in two days), so the first viewers come from
+   search, Suggested beside big videos on the same case, Shorts and news spikes; aviation, the famous evergreen cases
+   and fresh final reports carry that demand, the moats films carry little. The bar moves to 8,000 public long-form
+   hours in 365 days for applications from 01 FEB 2027 (secondary reports of YouTube's August 2026 announcement;
+   transition rules for pending applications unpublished), so: apply the day Studio shows eligibility; plan on 8,000;
+   three Shorts per film, one a day; series playlists and end screens; a re-edited long compilation once five films
+   are live (new linking narration, never a plain re-upload). Next Track A: Key Bridge. Plan:
+   `docs/research/2026-11-09_channel_review.md` (10 NOV section).
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the

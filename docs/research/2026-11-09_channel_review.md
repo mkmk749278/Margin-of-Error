@@ -70,3 +70,26 @@ Key Bridge (Tuesday) and transformers (Friday) into treatment.
   bearing, "wrong" is our verdict, 253° was the alarm reading). The thumbnail's bearing art is a generated image, which
   the audience research says US and UK viewers distrust.
 - **Search fit:** viewers type "East Palestine train derailment"; the title has neither "train" nor "derailment".
+
+## Read of 10 NOV 2026, and the owner's decision
+`channel_stats.py`: 0 subscribers, 7 views, 1 public film (East Palestine, title now fixed). *The Four Missing Bolts*
+and the six finished Shorts are not uploaded yet.
+
+**The rule (secondary reports: vidIQ 10 AUG 2026, TechTimes 11 AUG 2026, SocialDay 14 OCT 2026; YouTube's own
+announcement not read by us):** from 01 FEB 2027 new applicants need 1,000 subscribers plus 8,000 public long-form
+hours in 365 days, or 20M Shorts views in 90 days; existing partners keep their status; YouTube has published no rule
+for applications still pending on 01 FEB. **So:** apply the day Studio shows eligibility; treat 4,000 by 31 JAN as a
+stretch (about 40,000 long-form views at 6 minutes each, only with a breakout film); plan on 8,000 (about 70,000 views
+at 7 minutes), mid-to-late 2027 at two films a week, sooner with a breakout.
+
+**What reaches a zero-subscriber channel:** Shorts (the only feed that tests us with strangers from day one, so the
+subscriber engine), search (the case name first), Suggested beside the big videos on the same case, and news spikes on
+new final reports. Browse opens only after retention and returning viewers show.
+
+**Owner's decision (10 NOV):** demand first until monetised, **three Track A films to one Track B**; next Track A is
+Key Bridge. Order of Track A: fresh final reports and the famous evergreen cases, aviation weighted. 15–22 minutes,
+every minute earning its place; three Shorts per film, one a day; series playlists by type; a re-edited compilation
+once five films are live. The hard lines and the gates do not change.
+
+**Owner, this week:** upload *The Four Missing Bolts*; post the six Shorts one a day (`films/shorts_upload.md`);
+re-authorise the token with `yt-analytics.readonly` (or send Studio screenshots weekly).
