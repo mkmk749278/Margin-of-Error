@@ -100,6 +100,12 @@ The factory photograph at 5:56 is shown redrawn: the original is a Boeing photog
 `four-missing-bolts.en.srt` (223 cues; rebuilt 2026-11-04: NTSB/FAA/MAX written as text, no one-word tails, from the measured word times; acronyms and the common figures written as
 text). Upload as English, "Upload file → With timing". Rebuild: `python3 films/four-missing-bolts/youtube/make_srt.py`.
 
+## Uploaded (10 NOV 2026, by API: `scripts/yt_upload.py`)
+https://youtu.be/2IEMyDxu4yU, title 1, thumbnail G, description above, tags, English SRT (serving), Science &
+Technology, English, not made for kids, synthetic content declared. Private, **public 12 NOV 2026 19:00 UTC**
+(Thursday 14:00 ET, the default window). Left for Studio (not in the API): Test & Compare (G, F, D with titles 1–3),
+end screen, check the synthetic-content box, pin the opening comment once public.
+
 ## Studio checklist (the owner)
 - [ ] Upload **Unlisted** first; wait **at least 3 hours** (4K processing, copyright checks, captions indexed).
 - [ ] Altered or synthetic content: the owner's setting (the narration voice is synthetic).
