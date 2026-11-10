@@ -67,6 +67,8 @@ browse size; `make_thumbnails.py` writes the `*_168.png` check, not committed). 
 Rebuild: `ffmpeg -ss 5 -i public/films/east-palestine/footage/ntsb_drone_wreck_fire.mp4 -frames:v 1 OUT/drone.png`, then
 `python3 films/east-palestine/youtube/make_thumbnails.py OUT/drone.png films/east-palestine/youtube`.
 
+**Live thumbnail (10 NOV 2026, set by API on the owner's yes):** D, replacing the rejected "170° WAS WRONG".
+
 ### Thumbnails D–F: the bearing set (owner's brief, 07 NOV 2026)
 The owner's architecture: slate blueprint grid `#0D1117`; on the right a 3D cut-away of the tapered roller bearing on
 the axle journal, rollers glowing thermal orange `#FF7A00`; a three-line readout; at most three words on the left.
