@@ -159,7 +159,7 @@ East Palestine derailment, Norfolk Southern derailment, East Palestine NTSB repo
 ## Pinned opening comment (§13.8)
 
 ```
-The 170° line sits in the industry's car repair billing rules; the NTSB found it relates to billing, not directly to safety, and asked the FRA to set minimum requirements, alarm thresholds and detector spacing included. For those who work with wayside detectors: what should decide when a train stops, the reading, the rise between two detectors, or the distance between them?
+If you've worked on the railroad: when a trackside detector flags a bearing, what actually happens next on your railroad? And if you live along a line, had you ever noticed those detectors before? We'd like to hear from you.
 ```
 
 ## Captions
@@ -171,7 +171,7 @@ Rebuild: `python3 films/east-palestine/youtube/make_srt.py`.
 
 ## Studio checklist (the owner)
 - [ ] Upload **Unlisted** first; wait **at least 3 hours** (4K processing, copyright checks, captions indexed).
-- [ ] Altered or synthetic content: the owner's setting (the narration voice is synthetic).
+- [ ] Altered or synthetic content: No (owner, 10 NOV 2026; set by the API).
 - [ ] Category: Science & Technology (or Education). Made for kids: **No**. Language: English.
 - [ ] Captions: upload the SRT. Chapters: from the description (first line 0:00).
 - [ ] Test & Compare: thumbnails G, A, D with title 1 (G recommended) (Studio tests thumbnails under one title; titles 2 and 3 are

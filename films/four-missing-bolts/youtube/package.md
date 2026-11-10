@@ -91,9 +91,7 @@ Boeing door plug, Alaska Airlines door plug blowout, Alaska Airlines 1282, 737 M
 ## Pinned opening comment (§13.8)
 
 ```
-Four bolts held the plug down; one lower bolt alone would have done. The NTSB named Boeing's parts-removal process and the FAA's oversight. Which layer, in your view, should have caught it first: the instruction, the inspection, or the audit?
-
-The factory photograph at 5:56 is shown redrawn: the original is a Boeing photograph, Figure 18 on page 51 of the NTSB report (link in the description).
+If you've worked on a production line or in aircraft maintenance: when a part is opened and closed again, how does anyone know it happened where you work? We'd like to hear how it's done in practice.
 ```
 
 ## Captions
@@ -102,13 +100,13 @@ text). Upload as English, "Upload file → With timing". Rebuild: `python3 films
 
 ## Uploaded (10 NOV 2026, by API: `scripts/yt_upload.py`)
 https://youtu.be/2IEMyDxu4yU, title 1, thumbnail G, description above, tags, English SRT (serving), Science &
-Technology, English, not made for kids, synthetic content declared. Private, **public 12 NOV 2026 19:00 UTC**
+Technology, English, not made for kids, altered or synthetic content No. Private, **public 12 NOV 2026 19:00 UTC**
 (Thursday 14:00 ET, the default window). Left for Studio (not in the API): Test & Compare (G, F, D with titles 1–3),
 end screen, check the synthetic-content box, pin the opening comment once public.
 
 ## Studio checklist (the owner)
 - [ ] Upload **Unlisted** first; wait **at least 3 hours** (4K processing, copyright checks, captions indexed).
-- [ ] Altered or synthetic content: the owner's setting (the narration voice is synthetic).
+- [ ] Altered or synthetic content: No (owner, 10 NOV 2026; set by the API).
 - [ ] Category: Science & Technology (or Education). Made for kids: **No**. Language: English.
 - [ ] Captions: upload the SRT. Chapters: from the description (first line 0:00).
 - [ ] Test & Compare: thumbnails D, B, C (A stays on file).
