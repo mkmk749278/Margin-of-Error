@@ -60,39 +60,42 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## FMB1 · `fmb_s1_the_photo.mp4` (28 s) · [Drive](https://drive.google.com/file/d/1c8e2OftDLp5h9EakiA8-g2hwaCvqTBNb/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/RWQs7D81QWQ, public 13 NOV 17:00 UTC.
 ```
 Alaska 1282: The Photo Taken 108 Days Before the Door Plug Blew Out
 ```
 ```
 19 SEP 2023, Boeing's Renton factory. A text message carried a photo of the closed door plug: in the three bolt positions in view, no bolts, no washers, no nuts, no pins. 108 days later the plug left the airplane. From NTSB report AIR-25-04.
 
-Full investigation: <the Four Missing Bolts link, once public>
+Full investigation: https://youtu.be/2IEMyDxu4yU
 
 Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB
 ```
 
 ## FMB2 · `fmb_s2_four_bolts.mp4` (27 s) · [Drive](https://drive.google.com/file/d/1zh-3mif8xuHR7nKhaWSbZq-d7Ej3ezD3/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/qU3EYwXXBFw, public 14 NOV 17:00 UTC.
 ```
 Alaska 1282: Four Bolts Where One Would Have Done
 ```
 ```
 After the accident, Boeing's engineers found one lower bolt alone would have held the 737-9 door plug down. There were four. On this airplane all four were missing. From NTSB report AIR-25-04.
 
-Full investigation: <the Four Missing Bolts link, once public>
+Full investigation: https://youtu.be/2IEMyDxu4yU
 
 Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #Aviation
 ```
 
 ## FMB3 · `fmb_s3_154_flights.mp4` (46 s) · [Drive](https://drive.google.com/file/d/1T4Lcil3_PvjnAYtPYtOd1f9HY4I6SDbq/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/piTKKDyJgMc, public 15 NOV 17:00 UTC.
 ```
 Alaska 1282: The Door Plug That Walked Itself Up for 154 Flights
 ```
 ```
 With no bolts, the NTSB found, vibration and flexing in normal flight likely let the plug rise fractions of an inch at a time, across 154 flights, until it reached the top of its stops on 05 JAN 2024. From NTSB report AIR-25-04.
 
-Full investigation: <the Four Missing Bolts link, once public>
+Full investigation: https://youtu.be/2IEMyDxu4yU
 
 Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB
