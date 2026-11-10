@@ -6,6 +6,8 @@ cover:** the strongest exhibit of the clip, held for 0.3 s before the first word
 frame YouTube shows in the feed is the best one. Files: Drive `Margin-of-Error/shorts/` (rendered and checked
 09 NOV 2026: −13.3 to −14.3 LUFS, peaks −1.2 to −1.5 dBFS; the tail holds the cover exhibit).
 
+**By API (10 NOV 2026 on):** `python3 scripts/yt_upload.py FILE --sheet films/shorts_upload.md --key EP1 --publish-at <UTC>` (scheduled 17:00 UTC = noon ET, 5 p.m. UK). The Related video field is not in the API; set it in Studio if wanted.
+
 **For each upload (Studio app):** upload the file → title and description below → **Related video: the full film**
 (the field under the description in the Shorts upload screen) → Public. One Short a day, never two in an hour.
 Order: alternate the two films (EP1, FMB1, EP3, FMB2, EP2, FMB3). The Four Missing Bolts Shorts go up after that
@@ -16,6 +18,7 @@ The voice note line is required in every description (owner's rule, word for wor
 ---
 
 ## EP1 · `ep_s1_crew_not_told.mp4` (39 s) · [Drive](https://drive.google.com/file/d/1Gj0BUw5D54DYxA-l9ixpPjPtDb3amXHR/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/qDlZ4kiBNSE, public 10 NOV 17:00 UTC.
 ```
 East Palestine: The Detector Read 103°F Above the Air. The Crew Wasn't Told.
 ```
@@ -29,6 +32,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## EP2 · `ep_s2_where_170.mp4` (31 s) · [Drive](https://drive.google.com/file/d/1hHTmaWehgjnFpgaZ4fuLzpr5uJ2hL_qS/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/UyGFzaWK0ec, public 12 NOV 17:00 UTC.
 ```
 East Palestine: Where the 170° Alarm Line Came From
 ```
@@ -42,6 +46,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## EP3 · `ep_s3_19_miles.mp4` (32 s) · [Drive](https://drive.google.com/file/d/1Oo8SPrW5qDAqh50wrz9-EogMNCvcXkRN/view)
+**Uploaded by API 10 NOV 2026:** https://youtu.be/s6xBCvxqJjI, public 11 NOV 17:00 UTC.
 ```
 East Palestine: 19 Miles With Nothing Reading the Bearing
 ```
