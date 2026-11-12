@@ -1088,6 +1088,12 @@ below, everything clear of the Shorts UI (bottom ~420 px, right ~140 px). **Fram
 word, the hook and a punch line on screen from frame 0, no fade-ins. The last 1.1 s holds the last frame with the end
 card "FULL INVESTIGATION · LINKED BELOW". Upload sheet: `films/shorts_upload.md`.
 
+**Owner, 12 NOV 2026: Shorts follow the reel approach too (§13.5a).** A Short is no longer only a cut of the film:
+write it its own short script that sets up the case and keeps back the film's answer ("remember it? what you heard
+isn't what the report says; here's the report; watch the film"), voiced with Marcus and built with `ReelMyths` /
+`Reel`. The same file serves Instagram and Shorts (the end card says FULL INVESTIGATION ON YOUTUBE, which reads on
+both). First one: EP4, https://youtu.be/4igl4ERkZBk, public 12 NOV 2026.
+
 ### 13.5a Instagram reels (owner, 2026-11-12)
 A reel is **its own script**, not a cut of a Short: Instagram has no related-video link, so the reel's whole job is
 to make the viewer go and search for the film. **Set up the case, keep back the answer** (owner, 12 NOV: "make it
