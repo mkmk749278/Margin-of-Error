@@ -100,3 +100,19 @@ Full investigation: https://youtu.be/2IEMyDxu4yU
 Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB
 ```
+
+## EP4 · `east-palestine_reel2_instagram.mp4` (25 s) · [Drive](https://drive.google.com/file/d/1FKZi94PLUVkLA01fcQxb8ryXi2IQW0Zy/view)
+The Instagram reel 2 form (`films/east-palestine/reel2/`), posted as a Short on the owner's word (12 NOV 2026: "upload
+this to YouTube Shorts, make it public now"; and "follow this kind of approach for YouTube Shorts too").
+**Uploaded by API 12 NOV 2026:** https://youtu.be/4igl4ERkZBk, public at once.
+```
+East Palestine Derailment: What the NTSB's Final Report Doesn't Confirm
+```
+```
+Remember the East Palestine derailment? Three explanations you may have heard: a skipped repair, a bearing with no grease, cost cutting. The NTSB's final report (RIR-24-05, adopted 25 JUN 2024) doesn't confirm any of them. What it does show is where the warning line came from.
+
+Full investigation: https://youtu.be/PzY0teB3Pdc
+
+Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
+#EastPalestine #NTSB #TrainDerailment #Shorts
+```
