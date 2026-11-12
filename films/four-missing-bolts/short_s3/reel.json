@@ -1,0 +1,148 @@
+{
+ "_doc": "Short S3 for The Four Missing Bolts (owner, 12 NOV 2026): 154 flights.",
+ "name": "fmb_s3",
+ "music": "assets/music/fx04_cascade.wav",
+ "master": "assets/reel_src/four-missing-bolts_master_4k_marcus.mp4",
+ "thumb": "reel/fmb_thumb_live.jpg",
+ "thumb_src": "films/four-missing-bolts/youtube/thumb_g_154_flights_broadcast.jpg",
+ "end": 27.4,
+ "segments": [
+  {
+   "t": 0.0,
+   "still": "public/films/four-missing-bolts/img/flickr_53450558949.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    50,
+    1260
+   ],
+   "label": "NTSB PHOTO · 07 JAN 2024"
+  },
+  {
+   "t": 5.0,
+   "m": 588.0,
+   "c0": [
+    400,
+    0,
+    1422
+   ],
+   "c1": [
+    450,
+    40,
+    1350
+   ],
+   "label": "ILLUSTRATION · AFTER NTSB AIR-25-04"
+  },
+  {
+   "t": 7.8,
+   "m": 607.8,
+   "c0": [
+    480,
+    0,
+    1422
+   ],
+   "c1": [
+    498,
+    40,
+    1350
+   ],
+   "label": "ILLUSTRATION · AFTER NTSB AIR-25-04"
+  },
+  {
+   "t": 15.2,
+   "m": 624.0,
+   "c0": [
+    0,
+    0,
+    1422
+   ],
+   "c1": [
+    498,
+    40,
+    1422
+   ],
+   "label": "NTSB FIG. 14 · EXEMPLAR PLUG"
+  },
+  {
+   "t": 20.9,
+   "still": "public/films/four-missing-bolts/img/flickr_53450558959.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    50,
+    1260
+   ],
+   "label": "NTSB PHOTO · 07 JAN 2024"
+  },
+  {
+   "t": 24.1,
+   "image": "reel/fmb_thumb_live.jpg",
+   "c0": [
+    0,
+    0,
+    1920
+   ],
+   "c1": [
+    120,
+    60,
+    1680
+   ],
+   "label": "THE FULL FILM · ON YOUTUBE"
+  }
+ ],
+ "myths": {
+  "cover": [
+   "Alaska 1282",
+   "05 JAN 2024 · OVER PORTLAND"
+  ],
+  "headers": [
+   {
+    "at": null,
+    "text": "THE NTSB RECORD"
+   }
+  ],
+  "cards": [
+   {
+    "text": "154 FLIGHTS",
+    "at": {
+     "s": 2,
+     "w": "^154"
+    },
+    "tone": "amber"
+   },
+   {
+    "text": "ABOUT HALF AN INCH",
+    "at": {
+     "s": 3,
+     "w": "^half"
+    },
+    "tone": "amber"
+   },
+   {
+    "text": "TOO SMALL FOR A WALK-AROUND",
+    "at": {
+     "s": 3,
+     "w": "^walk-around"
+    },
+    "tone": "red"
+   }
+  ],
+  "stamp": null,
+  "listOut": {
+   "s": 4,
+   "w": "^How"
+  },
+  "cta": {
+   "s": 4,
+   "w": "^full"
+  }
+ }
+}

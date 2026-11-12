@@ -1,0 +1,142 @@
+{
+ "_doc": "Short S2 for The Four Missing Bolts (owner, 12 NOV 2026): the photo. The photo itself is Boeing's (reference only): shown as the film's labelled reconstruction.",
+ "name": "fmb_s2",
+ "music": "../../east-palestine/reel/assets/music/fx08_countdown.wav",
+ "master": "assets/reel_src/four-missing-bolts_master_4k_marcus.mp4",
+ "thumb": "reel/fmb_thumb_live.jpg",
+ "thumb_src": "films/four-missing-bolts/youtube/thumb_g_154_flights_broadcast.jpg",
+ "end": 23.6,
+ "segments": [
+  {
+   "t": 0.0,
+   "still": "public/films/four-missing-bolts/img/fig01_interior_hole_row26.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    50,
+    1260
+   ],
+   "label": "NTSB FIG. 1 · 05 JAN 2024"
+  },
+  {
+   "t": 5.3,
+   "m": 346.6,
+   "c0": [
+    450,
+    0,
+    1300
+   ],
+   "c1": [
+    500,
+    40,
+    1150
+   ],
+   "label": "RECONSTRUCTION · NTSB AIR-25-04"
+  },
+  {
+   "t": 11.5,
+   "m": 363.56,
+   "c0": [
+    380,
+    0,
+    1422
+   ],
+   "c1": [
+    420,
+    30,
+    1350
+   ],
+   "label": "RECONSTRUCTION · AFTER NTSB FIG. 18"
+  },
+  {
+   "t": 17.9,
+   "still": "public/films/four-missing-bolts/pages/p067_qa_signoff.jpg",
+   "c0": [
+    540,
+    40,
+    850
+   ],
+   "c1": [
+    560,
+    80,
+    780
+   ],
+   "label": "NTSB AIR-25-04 · P. 67"
+  },
+  {
+   "t": 21.2,
+   "image": "reel/fmb_thumb_live.jpg",
+   "c0": [
+    0,
+    0,
+    1920
+   ],
+   "c1": [
+    120,
+    60,
+    1680
+   ],
+   "label": "THE FULL FILM · ON YOUTUBE"
+  }
+ ],
+ "myths": {
+  "cover": [
+   "Alaska 1282",
+   "THE PHOTO · 19 SEP 2023"
+  ],
+  "headers": [
+   {
+    "at": null,
+    "text": "THE 3 BOLT POSITIONS IN VIEW"
+   }
+  ],
+  "cards": [
+   {
+    "text": "NO BOLTS",
+    "at": {
+     "s": 3,
+     "w": "^bolts"
+    },
+    "tone": "red"
+   },
+   {
+    "text": "NO WASHERS",
+    "at": {
+     "s": 4,
+     "w": "^washers"
+    },
+    "tone": "red"
+   },
+   {
+    "text": "NO NUTS",
+    "at": {
+     "s": 5,
+     "w": "^nuts"
+    },
+    "tone": "red"
+   },
+   {
+    "text": "NO PINS",
+    "at": {
+     "s": 6,
+     "w": "^pins"
+    },
+    "tone": "red"
+   }
+  ],
+  "cols": 2,
+  "stamp": null,
+  "listOut": {
+   "s": 7,
+   "w": "^Why"
+  },
+  "cta": {
+   "s": 7,
+   "w": "^full"
+  }
+ }
+}
