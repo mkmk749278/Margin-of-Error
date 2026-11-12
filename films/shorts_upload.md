@@ -60,7 +60,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## FMB1 · `fmb_s1_the_photo.mp4` (28 s) · [Drive](https://drive.google.com/file/d/1c8e2OftDLp5h9EakiA8-g2hwaCvqTBNb/view)
-**Uploaded by API 10 NOV 2026:** https://youtu.be/RWQs7D81QWQ, public 13 NOV 17:00 UTC.
+**Uploaded by API 10 NOV 2026:** https://youtu.be/RWQs7D81QWQ (**deleted 12 NOV 2026**, owner: replaced by FMB4).
 ```
 Alaska 1282: The Photo Taken 108 Days Before the Door Plug Blew Out
 ```
@@ -74,7 +74,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## FMB2 · `fmb_s2_four_bolts.mp4` (27 s) · [Drive](https://drive.google.com/file/d/1zh-3mif8xuHR7nKhaWSbZq-d7Ej3ezD3/view)
-**Uploaded by API 10 NOV 2026:** https://youtu.be/qU3EYwXXBFw, public 14 NOV 17:00 UTC.
+**Uploaded by API 10 NOV 2026:** https://youtu.be/qU3EYwXXBFw (**deleted 12 NOV 2026**, owner: replaced by FMB5).
 ```
 Alaska 1282: Four Bolts Where One Would Have Done
 ```
@@ -88,7 +88,7 @@ Narrated using the studio's calibrated synthetic voice model (Marcus) for forens
 ```
 
 ## FMB3 · `fmb_s3_154_flights.mp4` (46 s) · [Drive](https://drive.google.com/file/d/1T4Lcil3_PvjnAYtPYtOd1f9HY4I6SDbq/view)
-**Uploaded by API 10 NOV 2026:** https://youtu.be/piTKKDyJgMc, public 15 NOV 17:00 UTC.
+**Uploaded by API 10 NOV 2026:** https://youtu.be/piTKKDyJgMc (**deleted 12 NOV 2026**, owner: replaced by FMB6).
 ```
 Alaska 1282: The Door Plug That Walked Itself Up for 154 Flights
 ```
@@ -115,4 +115,46 @@ Full investigation: https://youtu.be/PzY0teB3Pdc
 
 Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #EastPalestine #NTSB #TrainDerailment #Shorts
+```
+
+## FMB4 · `fmb_short_s1.mp4` (24 s) · replaces FMB1 (owner, 12 NOV 2026: re-made in the reel form, the old three deleted)
+`films/four-missing-bolts/short_s1/`. **Uploaded by API 12 NOV 2026:** https://youtu.be/wAqQ46A5VMU, public 13 NOV 17:00 UTC. [Drive](https://drive.google.com/file/d/1LoyT-sZ33dA0wUth1ME4aBFkQ4mF9tbG/view)
+```
+Alaska 1282: The Door Plug Had Four Bolts. One Would Have Held It.
+```
+```
+Remember Alaska Airlines flight 1282? You may have heard the door plug was a design flaw. The design had four bolts, where one lower bolt would have held it. On this airplane, the NTSB found, all four were missing. From NTSB report AIR-25-04.
+
+Full investigation: https://youtu.be/2IEMyDxu4yU
+
+Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
+#Alaska1282 #Boeing #NTSB #Shorts
+```
+
+## FMB5 · `fmb_short_s2.mp4` (24 s) · replaces FMB2
+`films/four-missing-bolts/short_s2/`. **Uploaded by API 12 NOV 2026:** https://youtu.be/dlogilXaxnc, public 14 NOV 17:00 UTC. [Drive](https://drive.google.com/file/d/1daKZ4LY743gyoUs9H__31p6YacoLCj_T/view) The photo is Boeing's: shown as the film's labelled reconstruction.
+```
+Alaska 1282: The Photo Boeing Workers Texted 108 Days Before the Blowout
+```
+```
+19 SEP 2023, Boeing's Renton factory. Workers texted each other a photo of the closed door plug. In the three bolt positions in view: no bolts, no washers, no nuts, no pins. 108 days later the plug left the airplane over Portland. From NTSB report AIR-25-04.
+
+Full investigation: https://youtu.be/2IEMyDxu4yU
+
+Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
+#Alaska1282 #Boeing #NTSB #Shorts
+```
+
+## FMB6 · `fmb_short_s3.mp4` (27 s) · replaces FMB3
+`films/four-missing-bolts/short_s3/`. **Uploaded by API 12 NOV 2026:** https://youtu.be/WWA2GlRqnkA, public 15 NOV 17:00 UTC. [Drive](https://drive.google.com/file/d/1N2Y7_jyt1bbPZ4l60gVZVaibBENqfwPs/view)
+```
+Alaska 1282: How a Door Plug With No Bolts Lasted 154 Flights
+```
+```
+The failure didn't start on 05 JAN 2024. The NTSB found the door plug likely walked itself upward over 154 flights. From outside, the change was about half an inch, too small to catch on a walk-around. From NTSB report AIR-25-04.
+
+Full investigation: https://youtu.be/2IEMyDxu4yU
+
+Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
+#Alaska1282 #Boeing #NTSB #Shorts
 ```

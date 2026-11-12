@@ -1,0 +1,683 @@
+{
+ "fps": 60,
+ "sentences": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 4.25531914893617,
+   "text": "Remember the door plug that blew out over Portland in January twenty twenty-four?"
+  },
+  {
+   "id": 1,
+   "start": 5.106382978723404,
+   "end": 7.25531914893617,
+   "text": "The failure didn't start on that flight."
+  },
+  {
+   "id": 2,
+   "start": 7.872340425531915,
+   "end": 14.659574468085106,
+   "text": "The N - T - S - B found the plug likely walked itself upward over one hundred and fifty-four flights."
+  },
+  {
+   "id": 3,
+   "start": 15.297872340425533,
+   "end": 20.29787234042553,
+   "text": "From outside, the change was about half an inch, too small to catch on a walk-around."
+  },
+  {
+   "id": 4,
+   "start": 20.914893617021278,
+   "end": 24.085106382978722,
+   "text": "How it stayed in that long is in the full investigation."
+  },
+  {
+   "id": 5,
+   "start": 25.085106382978722,
+   "end": 25.872340425531913,
+   "text": "Margin of Error."
+  }
+ ],
+ "words": [
+  {
+   "s": 0,
+   "w": "Remember",
+   "start": 0.08,
+   "end": 0.421,
+   "startFrame": 5,
+   "endFrame": 25,
+   "score": 0.968
+  },
+  {
+   "s": 0,
+   "w": "the",
+   "start": 0.502,
+   "end": 0.582,
+   "startFrame": 30,
+   "endFrame": 35,
+   "score": 0.999
+  },
+  {
+   "s": 0,
+   "w": "door",
+   "start": 0.662,
+   "end": 0.883,
+   "startFrame": 40,
+   "endFrame": 53,
+   "score": 0.98
+  },
+  {
+   "s": 0,
+   "w": "plug",
+   "start": 0.963,
+   "end": 1.184,
+   "startFrame": 58,
+   "endFrame": 71,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "that",
+   "start": 1.284,
+   "end": 1.385,
+   "startFrame": 77,
+   "endFrame": 83,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "blew",
+   "start": 1.465,
+   "end": 1.666,
+   "startFrame": 88,
+   "endFrame": 100,
+   "score": 0.994
+  },
+  {
+   "s": 0,
+   "w": "out",
+   "start": 1.766,
+   "end": 1.867,
+   "startFrame": 106,
+   "endFrame": 112,
+   "score": 0.999
+  },
+  {
+   "s": 0,
+   "w": "over",
+   "start": 1.987,
+   "end": 2.148,
+   "startFrame": 119,
+   "endFrame": 129,
+   "score": 0.995
+  },
+  {
+   "s": 0,
+   "w": "Portland",
+   "start": 2.268,
+   "end": 2.77,
+   "startFrame": 136,
+   "endFrame": 166,
+   "score": 0.878
+  },
+  {
+   "s": 0,
+   "w": "in",
+   "start": 2.81,
+   "end": 2.85,
+   "startFrame": 169,
+   "endFrame": 171,
+   "score": 0.991
+  },
+  {
+   "s": 0,
+   "w": "January",
+   "start": 2.97,
+   "end": 3.512,
+   "startFrame": 178,
+   "endFrame": 211,
+   "score": 0.892
+  },
+  {
+   "s": 0,
+   "w": "twenty",
+   "start": 3.552,
+   "end": 3.793,
+   "startFrame": 213,
+   "endFrame": 228,
+   "score": 0.985
+  },
+  {
+   "s": 0,
+   "w": "twenty-four?",
+   "start": 3.853,
+   "end": 4.335,
+   "startFrame": 231,
+   "endFrame": 260,
+   "score": 0.953
+  },
+  {
+   "s": 1,
+   "w": "The",
+   "start": 5.107,
+   "end": 5.187,
+   "startFrame": 306,
+   "endFrame": 311,
+   "score": 0.999
+  },
+  {
+   "s": 1,
+   "w": "failure",
+   "start": 5.308,
+   "end": 5.689,
+   "startFrame": 318,
+   "endFrame": 341,
+   "score": 0.999
+  },
+  {
+   "s": 1,
+   "w": "didn't",
+   "start": 5.85,
+   "end": 6.131,
+   "startFrame": 351,
+   "endFrame": 368,
+   "score": 0.964
+  },
+  {
+   "s": 1,
+   "w": "start",
+   "start": 6.231,
+   "end": 6.472,
+   "startFrame": 374,
+   "endFrame": 388,
+   "score": 0.989
+  },
+  {
+   "s": 1,
+   "w": "on",
+   "start": 6.572,
+   "end": 6.612,
+   "startFrame": 394,
+   "endFrame": 397,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "that",
+   "start": 6.673,
+   "end": 6.833,
+   "startFrame": 400,
+   "endFrame": 410,
+   "score": 0.989
+  },
+  {
+   "s": 1,
+   "w": "flight.",
+   "start": 6.934,
+   "end": 7.215,
+   "startFrame": 416,
+   "endFrame": 433,
+   "score": 0.945
+  },
+  {
+   "s": 2,
+   "w": "The",
+   "start": 7.812,
+   "end": 7.913,
+   "startFrame": 469,
+   "endFrame": 475,
+   "score": 0.968
+  },
+  {
+   "s": 2,
+   "w": "N",
+   "start": 8.153,
+   "end": 8.193,
+   "startFrame": 489,
+   "endFrame": 492,
+   "score": 0.812
+  },
+  {
+   "s": 2,
+   "w": "-",
+   "start": 8.193,
+   "end": 8.193,
+   "startFrame": 492,
+   "endFrame": 492,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "T",
+   "start": 8.353,
+   "end": 8.373,
+   "startFrame": 501,
+   "endFrame": 502,
+   "score": 0.996
+  },
+  {
+   "s": 2,
+   "w": "-",
+   "start": 8.373,
+   "end": 8.373,
+   "startFrame": 502,
+   "endFrame": 502,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "S",
+   "start": 8.793,
+   "end": 8.813,
+   "startFrame": 528,
+   "endFrame": 529,
+   "score": 0.999
+  },
+  {
+   "s": 2,
+   "w": "-",
+   "start": 8.813,
+   "end": 8.813,
+   "startFrame": 529,
+   "endFrame": 529,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "B",
+   "start": 8.994,
+   "end": 9.014,
+   "startFrame": 540,
+   "endFrame": 541,
+   "score": 0.988
+  },
+  {
+   "s": 2,
+   "w": "found",
+   "start": 9.434,
+   "end": 9.694,
+   "startFrame": 566,
+   "endFrame": 582,
+   "score": 0.929
+  },
+  {
+   "s": 2,
+   "w": "the",
+   "start": 9.754,
+   "end": 9.834,
+   "startFrame": 585,
+   "endFrame": 590,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "plug",
+   "start": 9.895,
+   "end": 10.135,
+   "startFrame": 594,
+   "endFrame": 608,
+   "score": 0.995
+  },
+  {
+   "s": 2,
+   "w": "likely",
+   "start": 10.315,
+   "end": 10.655,
+   "startFrame": 619,
+   "endFrame": 639,
+   "score": 0.998
+  },
+  {
+   "s": 2,
+   "w": "walked",
+   "start": 10.816,
+   "end": 11.156,
+   "startFrame": 649,
+   "endFrame": 669,
+   "score": 0.996
+  },
+  {
+   "s": 2,
+   "w": "itself",
+   "start": 11.236,
+   "end": 11.536,
+   "startFrame": 674,
+   "endFrame": 692,
+   "score": 0.977
+  },
+  {
+   "s": 2,
+   "w": "upward",
+   "start": 11.817,
+   "end": 12.237,
+   "startFrame": 709,
+   "endFrame": 734,
+   "score": 0.863
+  },
+  {
+   "s": 2,
+   "w": "over",
+   "start": 12.317,
+   "end": 12.557,
+   "startFrame": 739,
+   "endFrame": 753,
+   "score": 0.839
+  },
+  {
+   "s": 2,
+   "w": "one",
+   "start": 12.717,
+   "end": 12.878,
+   "startFrame": 763,
+   "endFrame": 773,
+   "score": 0.802
+  },
+  {
+   "s": 2,
+   "w": "hundred",
+   "start": 12.918,
+   "end": 13.198,
+   "startFrame": 775,
+   "endFrame": 792,
+   "score": 0.939
+  },
+  {
+   "s": 2,
+   "w": "and",
+   "start": 13.258,
+   "end": 13.378,
+   "startFrame": 795,
+   "endFrame": 803,
+   "score": 0.83
+  },
+  {
+   "s": 2,
+   "w": "fifty-four",
+   "start": 13.478,
+   "end": 14.099,
+   "startFrame": 809,
+   "endFrame": 846,
+   "score": 0.995
+  },
+  {
+   "s": 2,
+   "w": "flights.",
+   "start": 14.219,
+   "end": 14.599,
+   "startFrame": 853,
+   "endFrame": 876,
+   "score": 0.987
+  },
+  {
+   "s": 3,
+   "w": "From",
+   "start": 15.318,
+   "end": 15.439,
+   "startFrame": 919,
+   "endFrame": 926,
+   "score": 0.999
+  },
+  {
+   "s": 3,
+   "w": "outside,",
+   "start": 15.519,
+   "end": 16.021,
+   "startFrame": 931,
+   "endFrame": 961,
+   "score": 0.976
+  },
+  {
+   "s": 3,
+   "w": "the",
+   "start": 16.041,
+   "end": 16.463,
+   "startFrame": 962,
+   "endFrame": 988,
+   "score": 0.666
+  },
+  {
+   "s": 3,
+   "w": "change",
+   "start": 16.523,
+   "end": 16.844,
+   "startFrame": 991,
+   "endFrame": 1011,
+   "score": 0.926
+  },
+  {
+   "s": 3,
+   "w": "was",
+   "start": 16.904,
+   "end": 16.985,
+   "startFrame": 1014,
+   "endFrame": 1019,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "about",
+   "start": 17.065,
+   "end": 17.266,
+   "startFrame": 1024,
+   "endFrame": 1036,
+   "score": 0.973
+  },
+  {
+   "s": 3,
+   "w": "half",
+   "start": 17.386,
+   "end": 17.587,
+   "startFrame": 1043,
+   "endFrame": 1055,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "an",
+   "start": 17.687,
+   "end": 17.788,
+   "startFrame": 1061,
+   "endFrame": 1067,
+   "score": 0.622
+  },
+  {
+   "s": 3,
+   "w": "inch,",
+   "start": 17.808,
+   "end": 17.989,
+   "startFrame": 1068,
+   "endFrame": 1079,
+   "score": 0.999
+  },
+  {
+   "s": 3,
+   "w": "too",
+   "start": 18.591,
+   "end": 18.752,
+   "startFrame": 1115,
+   "endFrame": 1125,
+   "score": 0.986
+  },
+  {
+   "s": 3,
+   "w": "small",
+   "start": 18.832,
+   "end": 19.093,
+   "startFrame": 1130,
+   "endFrame": 1146,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "to",
+   "start": 19.113,
+   "end": 19.213,
+   "startFrame": 1147,
+   "endFrame": 1153,
+   "score": 0.701
+  },
+  {
+   "s": 3,
+   "w": "catch",
+   "start": 19.274,
+   "end": 19.494,
+   "startFrame": 1156,
+   "endFrame": 1170,
+   "score": 0.996
+  },
+  {
+   "s": 3,
+   "w": "on",
+   "start": 19.575,
+   "end": 19.615,
+   "startFrame": 1174,
+   "endFrame": 1177,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "a",
+   "start": 19.695,
+   "end": 19.715,
+   "startFrame": 1182,
+   "endFrame": 1183,
+   "score": 0.968
+  },
+  {
+   "s": 3,
+   "w": "walk-around.",
+   "start": 19.775,
+   "end": 20.338,
+   "startFrame": 1187,
+   "endFrame": 1220,
+   "score": 0.975
+  },
+  {
+   "s": 4,
+   "w": "How",
+   "start": 20.935,
+   "end": 21.036,
+   "startFrame": 1256,
+   "endFrame": 1262,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "it",
+   "start": 21.136,
+   "end": 21.176,
+   "startFrame": 1268,
+   "endFrame": 1271,
+   "score": 0.999
+  },
+  {
+   "s": 4,
+   "w": "stayed",
+   "start": 21.256,
+   "end": 21.537,
+   "startFrame": 1275,
+   "endFrame": 1292,
+   "score": 0.964
+  },
+  {
+   "s": 4,
+   "w": "in",
+   "start": 21.597,
+   "end": 21.637,
+   "startFrame": 1296,
+   "endFrame": 1298,
+   "score": 0.994
+  },
+  {
+   "s": 4,
+   "w": "that",
+   "start": 21.798,
+   "end": 21.998,
+   "startFrame": 1308,
+   "endFrame": 1320,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "long",
+   "start": 22.119,
+   "end": 22.44,
+   "startFrame": 1327,
+   "endFrame": 1346,
+   "score": 0.948
+  },
+  {
+   "s": 4,
+   "w": "is",
+   "start": 22.681,
+   "end": 22.741,
+   "startFrame": 1361,
+   "endFrame": 1364,
+   "score": 0.934
+  },
+  {
+   "s": 4,
+   "w": "in",
+   "start": 22.821,
+   "end": 22.861,
+   "startFrame": 1369,
+   "endFrame": 1372,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "the",
+   "start": 22.921,
+   "end": 23.001,
+   "startFrame": 1375,
+   "endFrame": 1380,
+   "score": 0.826
+  },
+  {
+   "s": 4,
+   "w": "full",
+   "start": 23.062,
+   "end": 23.242,
+   "startFrame": 1384,
+   "endFrame": 1395,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "investigation.",
+   "start": 23.322,
+   "end": 24.125,
+   "startFrame": 1399,
+   "endFrame": 1447,
+   "score": 0.929
+  },
+  {
+   "s": 5,
+   "w": "Margin",
+   "start": 25.026,
+   "end": 25.368,
+   "startFrame": 1502,
+   "endFrame": 1522,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "of",
+   "start": 25.449,
+   "end": 25.549,
+   "startFrame": 1527,
+   "endFrame": 1533,
+   "score": 0.625
+  },
+  {
+   "s": 5,
+   "w": "Error.",
+   "start": 25.65,
+   "end": 25.912,
+   "startFrame": 1539,
+   "endFrame": 1555,
+   "score": 0.607
+  }
+ ],
+ "words_source": "measured: CTC forced alignment (torchaudio 2.8.0 WAV2VEC2_ASR_BASE_960H) on assets/vo/film_vo.wav, scripts/word_align.py"
+}
