@@ -1,0 +1,148 @@
+{
+ "_doc": "Instagram reel 2 for East Palestine (owner, 12 NOV 2026): 'remember it / what you heard / the report doesn't confirm it / here's the report / watch the film'. Real NTSB photos and drone video (public domain); the popular explanations as plain cards, no outlet names. Built by scripts/reel_build.py films/east-palestine/reel2, composition ReelMyths.",
+ "name": "ep_reel2",
+ "music": "../reel/assets/music/fx07_evidence.wav",
+ "thumb": "reel/ep_thumb_live.jpg",
+ "thumb_src": "films/east-palestine/youtube/thumb_d_bearing_billing_rule.jpg",
+ "master": "assets/reel_src/east-palestine_master_4k.mp4",
+ "end": 25.4,
+ "segments": [
+  {
+   "t": 0.0,
+   "video": "public/films/east-palestine/footage/ntsb_drone_wreck_fire.mp4",
+   "from": 2.0,
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    400,
+    80,
+    1250
+   ],
+   "label": "NTSB DRONE VIDEO · 05 FEB 2023"
+  },
+  {
+   "t": 3.4,
+   "video": "public/films/east-palestine/footage/ntsb_drone_pileup_overhead.mp4",
+   "from": 2.0,
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    350,
+    60,
+    1250
+   ],
+   "label": "NTSB DRONE VIDEO · 05 FEB 2023"
+  },
+  {
+   "t": 7.2,
+   "still": "public/films/east-palestine/fig/fig18_bearing_cup.png",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    360,
+    60,
+    1250
+   ],
+   "label": "NTSB PHOTO · THE RECOVERED BEARING"
+  },
+  {
+   "t": 9.1,
+   "still": "public/films/east-palestine/img/ntsb_aerial_20230205.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    40,
+    1300
+   ],
+   "label": "NTSB AERIAL · 05 FEB 2023"
+  },
+  {
+   "t": 10.35,
+   "m": 955.0,
+   "c0": [
+    150,
+    0,
+    1422
+   ],
+   "c1": [
+    230,
+    60,
+    1250
+   ],
+   "label": "NTSB FINAL REPORT · 25 JUN 2024"
+  },
+  {
+   "t": 12.4,
+   "m": 959.0,
+   "c0": [
+    450,
+    120,
+    1422
+   ],
+   "c1": [
+    520,
+    200,
+    1300
+   ],
+   "label": "NTSB RIR-24-05 · PROBABLE CAUSE"
+  },
+  {
+   "t": 14.6,
+   "m": 155.0,
+   "c0": [
+    40,
+    60,
+    1389
+   ],
+   "c1": [
+    80,
+    100,
+    1300
+   ],
+   "label": "NS THRESHOLDS · NTSB RIR-24-05"
+  },
+  {
+   "t": 19.0,
+   "m": 313.6,
+   "c0": [
+    200,
+    40,
+    1420
+   ],
+   "c1": [
+    220,
+    150,
+    1400
+   ],
+   "label": "NTSB RIR-24-05 · P. 106"
+  },
+  {
+   "t": 21.7,
+   "image": "reel/ep_thumb_live.jpg",
+   "c0": [
+    0,
+    0,
+    1920
+   ],
+   "c1": [
+    120,
+    60,
+    1680
+   ],
+   "label": "THE FULL FILM · ON YOUTUBE"
+  }
+ ]
+}

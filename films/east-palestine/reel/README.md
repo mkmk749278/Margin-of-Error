@@ -21,7 +21,7 @@ the hearing, what was decided on the second number, and the NTSB's verdict on it
 - **Sound:** narration over the library bed `fx08_countdown` (−19 dB, up 6 dB after the last word, 1.2 s fade);
   −14.2 LUFS, −1.5 dBTP. No effects layer.
 - **Layout:** 1080×1920, 60 fps, H.264 + AAC. Clear of Instagram's UI: nothing below y = 1500, nothing in the top 160 px.
-- **Build:** `python3 films/east-palestine/reel/build_reel.py` (needs the master in `assets/reel_src/`), then
+- **Build:** `python3 scripts/reel_build.py films/east-palestine/reel` (needs the master in `assets/reel_src/`), then
   `npx remotion render src/index.ts Reel out/east-palestine_reel_instagram.mp4 --props=films/east-palestine/reel/reel.props.json`
   (with `--browser-executable` in the session, PLAYBOOK §10.5). Composition `Reel` in `lib/remotion/Reel.tsx`.
 

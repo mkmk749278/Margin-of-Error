@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Build the East Palestine Instagram reel's media and props (owner, 12 NOV 2026).
+"""Build an Instagram reel's media and props (PLAYBOOK §13.5a; first used 12 NOV 2026).
 
-Reads reel.json (segments of the approved master, in reel time) and vo/timing.json (the reel's own narration, words
-measured), and writes:
-  public/reel/ep_reel_pic.mp4   the master's segments butted on the reel timeline, 2560x1440, 60 fps, no sound
-  public/reel/ep_reel_mix.wav   the narration over the library bed, -14 LUFS, true peak under -1.5 dBTP
-  public/reel/ep_thumb_live.jpg the film's live YouTube thumbnail (D), for the end card
-  films/east-palestine/reel/reel.props.json   props for the `Reel` composition
+Reads <reel>/reel.json (picture segments in reel time: `m` = seconds into the film's approved master, `video` +
+`from` = a public-domain clip, `still` = a public-domain photo, `image` = the end card drawn by the composition) and
+<reel>/vo/timing.json (the reel's own narration, words measured), and writes:
+  public/reel/<name>_pic.mp4   the segments butted on the reel timeline, 2560x1440, 60 fps, no sound
+  public/reel/<name>_mix.wav   the narration over the library bed, -14 LUFS, true peak under -1.5 dBTP
+  public/reel/<thumb file>     the film's live YouTube thumbnail, for the end card
+  <reel>/reel.props.json       props for the `Reel` / `ReelMyths` composition
 
-Usage: python3 films/east-palestine/reel/build_reel.py [--props-only]
+Usage: python3 scripts/reel_build.py films/<slug>/<reel dir> [--props-only]
 """
 import json
 import re
@@ -17,10 +18,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
+ROOT = Path(__file__).resolve().parents[1]
+HERE = (ROOT / sys.argv[1]).resolve() if len(sys.argv) > 1 and not sys.argv[1].startswith("-") else ROOT / "films/east-palestine/reel"
 OUT = ROOT / "public/reel"
-MUSIC = HERE / "assets/music/fx08_countdown.wav"
 MUSIC_GAIN_DB = -19.0  # the bed under the voice
 VO_END_LIFT_DB = 6.0  # the bed comes up after the last word
 
@@ -30,20 +30,27 @@ def run(cmd: list[str]) -> str:
 
 
 def picture(cfg: dict) -> None:
-    segs = [s for s in cfg["segments"] if "m" in s]
-    ends = [s["t"] for s in cfg["segments"][1:]]
+    segs = [s for s in cfg["segments"] if "image" not in s]
+    ends = [s["t"] for s in cfg["segments"][1:]] + [cfg["end"]]
     parts = []
+    fit = "scale=2560:1440:force_original_aspect_ratio=decrease:flags=lanczos,pad=2560:1440:(ow-iw)/2:(oh-ih)/2:color=0x0a0d12,setsar=1,fps=60"
     for i, s in enumerate(segs):
         dur = ends[i] - s["t"]
         p = OUT / f"_seg{i:02d}.mp4"
-        run(["ffmpeg", "-y", "-v", "error", "-ss", f"{s['m']:.3f}", "-i", str(ROOT / cfg["master"]), "-t", f"{dur:.3f}",
-             "-an", "-vf", "scale=2560:1440:flags=lanczos,fps=60", "-c:v", "libx264", "-preset", "medium", "-crf", "16",
+        if "m" in s:
+            src = ["-ss", f"{s['m']:.3f}", "-i", str(ROOT / cfg["master"])]
+        elif "video" in s:
+            src = ["-ss", f"{s.get('from', 0):.3f}", "-i", str(ROOT / s["video"])]
+        else:
+            src = ["-loop", "1", "-framerate", "60", "-i", str(ROOT / s["still"])]
+        run(["ffmpeg", "-y", "-v", "error", *src, "-t", f"{dur:.3f}",
+             "-an", "-vf", fit, "-c:v", "libx264", "-preset", "medium", "-crf", "16",
              "-maxrate", "30M", "-bufsize", "60M", "-pix_fmt", "yuv420p", str(p)])
         parts.append(p)
     lst = OUT / "_segs.txt"
     lst.write_text("".join(f"file '{p.name}'\n" for p in parts))
     run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
-         str(OUT / "ep_reel_pic.mp4")])
+         str(OUT / f"{cfg['name']}_pic.mp4")])
     for p in parts:
         p.unlink()
     lst.unlink()
@@ -51,6 +58,7 @@ def picture(cfg: dict) -> None:
 
 def mix(cfg: dict, vo_end: float) -> None:
     end = cfg["end"]
+    MUSIC = HERE / cfg["music"]
     vo = HERE / "assets/vo/film_vo.wav"
     lift = f"if(lt(t,{vo_end:.2f}),1,1+({10 ** (VO_END_LIFT_DB / 20) - 1:.4f})*min(1,(t-{vo_end:.2f})/0.6))"
     graph = (f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{end},volume={MUSIC_GAIN_DB}dB,"
@@ -65,7 +73,7 @@ def mix(cfg: dict, vo_end: float) -> None:
     m = json.loads(meas[meas.rindex("{"):meas.rindex("}") + 1])
     ln = (f"loudnorm=I=-14:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
           f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
-    run(["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-af", ln, "-ar", "48000", str(OUT / "ep_reel_mix.wav")])
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-af", ln, "-ar", "48000", str(OUT / f"{cfg['name']}_mix.wav")])
     raw.unlink()
 
 
@@ -75,9 +83,11 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     vo_end = max(w["end"] for w in t["words"])
     if "--props-only" not in sys.argv:
+        for f in OUT.glob("_*"):
+            f.unlink()
         picture(cfg)
         mix(cfg, vo_end)
-        shutil.copy(HERE.parent / "youtube/thumb_d_bearing_billing_rule.jpg", OUT / "ep_thumb_live.jpg")
+        shutil.copy(ROOT / cfg["thumb_src"], OUT / Path(cfg["thumb"]).name)
     # words for captions: spelled acronyms ("N - T - S - B") joined back; dashes dropped
     words, acr = [], []
     for w in t["words"]:
@@ -112,7 +122,7 @@ def main() -> int:
     for i, s in enumerate(cfg["segments"]):
         nxt = cfg["segments"][i + 1]["t"] if i + 1 < len(cfg["segments"]) else cfg["end"]
         segs.append({k: s[k] for k in ("t", "c0", "c1", "label")} | {"t1": nxt, "image": s.get("image")})
-    props = {"duration": cfg["end"], "pic": "reel/ep_reel_pic.mp4", "mix": "reel/ep_reel_mix.wav", "segments": segs,
+    props = {"duration": cfg["end"], "pic": f"reel/{cfg['name']}_pic.mp4", "mix": f"reel/{cfg['name']}_mix.wav", "segments": segs,
              "words": [{k: v for k, v in w.items() if k != "acr"} for w in words],
              "sentences": [s["text"] for s in t["sentences"]], "voEnd": vo_end}
     (HERE / "reel.props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False))

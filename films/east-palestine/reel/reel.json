@@ -1,5 +1,9 @@
 {
- "_doc": "Instagram reel for East Palestine (owner, 12 NOV 2026): its own narration (script/vo.txt, owner-approved), the film's own picture. Each segment: reel start (s), master start (s), crop at start and end [x, y, width] in 1920x1080 master space (height follows the picture window), the honesty or source label shown in the window. Built by films/east-palestine/reel/build_reel.py.",
+ "_doc": "Instagram reel for East Palestine (owner, 12 NOV 2026): its own narration (script/vo.txt, owner-approved), the film's own picture. Each segment: reel start (s), master start (s), crop at start and end [x, y, width] in 1920x1080 master space (height follows the picture window), the honesty or source label shown in the window. Built by scripts/reel_build.py films/east-palestine/reel.",
+ "name": "ep_reel",
+ "music": "assets/music/fx08_countdown.wav",
+ "thumb": "reel/ep_thumb_live.jpg",
+ "thumb_src": "films/east-palestine/youtube/thumb_d_bearing_billing_rule.jpg",
  "master": "assets/reel_src/east-palestine_master_4k.mp4",
  "end": 66.3,
  "segments": [
