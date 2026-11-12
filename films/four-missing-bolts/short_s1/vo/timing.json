@@ -1,0 +1,635 @@
+{
+ "fps": 60,
+ "sentences": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 5.23404255319149,
+   "text": "Remember Alaska Airlines flight twelve eighty-two, the door plug that blew out over Portland?"
+  },
+  {
+   "id": 1,
+   "start": 5.999999999999999,
+   "end": 7.9787234042553195,
+   "text": "You may have heard it was a design flaw."
+  },
+  {
+   "id": 2,
+   "start": 8.51063829787234,
+   "end": 12.297872340425533,
+   "text": "The design had four bolts, where one lower bolt would have held it."
+  },
+  {
+   "id": 3,
+   "start": 12.808510638297872,
+   "end": 15.25531914893617,
+   "text": "On this airplane, all four were missing."
+  },
+  {
+   "id": 4,
+   "start": 15.851063829787234,
+   "end": 18.106382978723403,
+   "text": "Here's the N - T - S - B's report."
+  },
+  {
+   "id": 5,
+   "start": 18.680851063829785,
+   "end": 20.978723404255316,
+   "text": "Why they were missing is in the full investigation."
+  },
+  {
+   "id": 6,
+   "start": 21.93617021276596,
+   "end": 22.680851063829788,
+   "text": "Margin of Error."
+  }
+ ],
+ "words": [
+  {
+   "s": 0,
+   "w": "Remember",
+   "start": 0.12,
+   "end": 0.481,
+   "startFrame": 7,
+   "endFrame": 29,
+   "score": 0.974
+  },
+  {
+   "s": 0,
+   "w": "Alaska",
+   "start": 0.642,
+   "end": 1.043,
+   "startFrame": 39,
+   "endFrame": 63,
+   "score": 0.976
+  },
+  {
+   "s": 0,
+   "w": "Airlines",
+   "start": 1.163,
+   "end": 1.564,
+   "startFrame": 70,
+   "endFrame": 94,
+   "score": 0.915
+  },
+  {
+   "s": 0,
+   "w": "flight",
+   "start": 1.644,
+   "end": 1.865,
+   "startFrame": 99,
+   "endFrame": 112,
+   "score": 0.989
+  },
+  {
+   "s": 0,
+   "w": "twelve",
+   "start": 1.965,
+   "end": 2.266,
+   "startFrame": 118,
+   "endFrame": 136,
+   "score": 0.993
+  },
+  {
+   "s": 0,
+   "w": "eighty-two,",
+   "start": 2.326,
+   "end": 2.867,
+   "startFrame": 140,
+   "endFrame": 172,
+   "score": 0.877
+  },
+  {
+   "s": 0,
+   "w": "the",
+   "start": 3.289,
+   "end": 3.369,
+   "startFrame": 197,
+   "endFrame": 202,
+   "score": 0.999
+  },
+  {
+   "s": 0,
+   "w": "door",
+   "start": 3.409,
+   "end": 3.609,
+   "startFrame": 205,
+   "endFrame": 217,
+   "score": 0.965
+  },
+  {
+   "s": 0,
+   "w": "plug",
+   "start": 3.67,
+   "end": 3.87,
+   "startFrame": 220,
+   "endFrame": 232,
+   "score": 0.995
+  },
+  {
+   "s": 0,
+   "w": "that",
+   "start": 3.97,
+   "end": 4.091,
+   "startFrame": 238,
+   "endFrame": 245,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "blew",
+   "start": 4.171,
+   "end": 4.351,
+   "startFrame": 250,
+   "endFrame": 261,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "out",
+   "start": 4.452,
+   "end": 4.552,
+   "startFrame": 267,
+   "endFrame": 273,
+   "score": 0.972
+  },
+  {
+   "s": 0,
+   "w": "over",
+   "start": 4.612,
+   "end": 4.772,
+   "startFrame": 277,
+   "endFrame": 286,
+   "score": 0.987
+  },
+  {
+   "s": 0,
+   "w": "Portland?",
+   "start": 4.873,
+   "end": 5.274,
+   "startFrame": 292,
+   "endFrame": 316,
+   "score": 0.986
+  },
+  {
+   "s": 1,
+   "w": "You",
+   "start": 6.062,
+   "end": 6.122,
+   "startFrame": 364,
+   "endFrame": 367,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "may",
+   "start": 6.183,
+   "end": 6.263,
+   "startFrame": 371,
+   "endFrame": 376,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "have",
+   "start": 6.344,
+   "end": 6.445,
+   "startFrame": 381,
+   "endFrame": 387,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "heard",
+   "start": 6.525,
+   "end": 6.707,
+   "startFrame": 392,
+   "endFrame": 402,
+   "score": 0.953
+  },
+  {
+   "s": 1,
+   "w": "it",
+   "start": 6.788,
+   "end": 6.828,
+   "startFrame": 407,
+   "endFrame": 410,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "was",
+   "start": 6.889,
+   "end": 6.969,
+   "startFrame": 413,
+   "endFrame": 418,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "a",
+   "start": 7.07,
+   "end": 7.09,
+   "startFrame": 424,
+   "endFrame": 425,
+   "score": 0.995
+  },
+  {
+   "s": 1,
+   "w": "design",
+   "start": 7.151,
+   "end": 7.554,
+   "startFrame": 429,
+   "endFrame": 453,
+   "score": 0.961
+  },
+  {
+   "s": 1,
+   "w": "flaw.",
+   "start": 7.675,
+   "end": 7.978,
+   "startFrame": 461,
+   "endFrame": 479,
+   "score": 0.969
+  },
+  {
+   "s": 2,
+   "w": "The",
+   "start": 8.491,
+   "end": 8.571,
+   "startFrame": 509,
+   "endFrame": 514,
+   "score": 0.975
+  },
+  {
+   "s": 2,
+   "w": "design",
+   "start": 8.631,
+   "end": 8.972,
+   "startFrame": 518,
+   "endFrame": 538,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "had",
+   "start": 9.072,
+   "end": 9.172,
+   "startFrame": 544,
+   "endFrame": 550,
+   "score": 0.999
+  },
+  {
+   "s": 2,
+   "w": "four",
+   "start": 9.352,
+   "end": 9.613,
+   "startFrame": 561,
+   "endFrame": 577,
+   "score": 0.953
+  },
+  {
+   "s": 2,
+   "w": "bolts,",
+   "start": 9.693,
+   "end": 10.034,
+   "startFrame": 582,
+   "endFrame": 602,
+   "score": 0.988
+  },
+  {
+   "s": 2,
+   "w": "where",
+   "start": 10.334,
+   "end": 10.514,
+   "startFrame": 620,
+   "endFrame": 631,
+   "score": 0.956
+  },
+  {
+   "s": 2,
+   "w": "one",
+   "start": 10.695,
+   "end": 10.855,
+   "startFrame": 642,
+   "endFrame": 651,
+   "score": 0.8
+  },
+  {
+   "s": 2,
+   "w": "lower",
+   "start": 10.895,
+   "end": 11.176,
+   "startFrame": 654,
+   "endFrame": 671,
+   "score": 0.998
+  },
+  {
+   "s": 2,
+   "w": "bolt",
+   "start": 11.256,
+   "end": 11.476,
+   "startFrame": 675,
+   "endFrame": 689,
+   "score": 0.998
+  },
+  {
+   "s": 2,
+   "w": "would",
+   "start": 11.536,
+   "end": 11.656,
+   "startFrame": 692,
+   "endFrame": 699,
+   "score": 0.98
+  },
+  {
+   "s": 2,
+   "w": "have",
+   "start": 11.677,
+   "end": 11.797,
+   "startFrame": 701,
+   "endFrame": 708,
+   "score": 0.895
+  },
+  {
+   "s": 2,
+   "w": "held",
+   "start": 11.837,
+   "end": 12.057,
+   "startFrame": 710,
+   "endFrame": 723,
+   "score": 0.989
+  },
+  {
+   "s": 2,
+   "w": "it.",
+   "start": 12.177,
+   "end": 12.238,
+   "startFrame": 731,
+   "endFrame": 734,
+   "score": 0.749
+  },
+  {
+   "s": 3,
+   "w": "On",
+   "start": 12.869,
+   "end": 12.909,
+   "startFrame": 772,
+   "endFrame": 775,
+   "score": 0.999
+  },
+  {
+   "s": 3,
+   "w": "this",
+   "start": 12.969,
+   "end": 13.15,
+   "startFrame": 778,
+   "endFrame": 789,
+   "score": 0.867
+  },
+  {
+   "s": 3,
+   "w": "airplane,",
+   "start": 13.19,
+   "end": 13.651,
+   "startFrame": 791,
+   "endFrame": 819,
+   "score": 0.876
+  },
+  {
+   "s": 3,
+   "w": "all",
+   "start": 13.691,
+   "end": 14.192,
+   "startFrame": 821,
+   "endFrame": 852,
+   "score": 0.604
+  },
+  {
+   "s": 3,
+   "w": "four",
+   "start": 14.373,
+   "end": 14.653,
+   "startFrame": 862,
+   "endFrame": 879,
+   "score": 0.929
+  },
+  {
+   "s": 3,
+   "w": "were",
+   "start": 14.754,
+   "end": 14.894,
+   "startFrame": 885,
+   "endFrame": 894,
+   "score": 0.995
+  },
+  {
+   "s": 3,
+   "w": "missing.",
+   "start": 14.954,
+   "end": 15.275,
+   "startFrame": 897,
+   "endFrame": 917,
+   "score": 0.999
+  },
+  {
+   "s": 4,
+   "w": "Here's",
+   "start": 15.812,
+   "end": 16.053,
+   "startFrame": 949,
+   "endFrame": 963,
+   "score": 0.953
+  },
+  {
+   "s": 4,
+   "w": "the",
+   "start": 16.113,
+   "end": 16.214,
+   "startFrame": 967,
+   "endFrame": 973,
+   "score": 0.991
+  },
+  {
+   "s": 4,
+   "w": "N",
+   "start": 16.456,
+   "end": 16.496,
+   "startFrame": 987,
+   "endFrame": 990,
+   "score": 0.986
+  },
+  {
+   "s": 4,
+   "w": "-",
+   "start": 16.496,
+   "end": 16.496,
+   "startFrame": 990,
+   "endFrame": 990,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "T",
+   "start": 16.697,
+   "end": 16.737,
+   "startFrame": 1002,
+   "endFrame": 1004,
+   "score": 0.99
+  },
+  {
+   "s": 4,
+   "w": "-",
+   "start": 16.737,
+   "end": 16.737,
+   "startFrame": 1004,
+   "endFrame": 1004,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "S",
+   "start": 17.2,
+   "end": 17.22,
+   "startFrame": 1032,
+   "endFrame": 1033,
+   "score": 0.995
+  },
+  {
+   "s": 4,
+   "w": "-",
+   "start": 17.22,
+   "end": 17.22,
+   "startFrame": 1033,
+   "endFrame": 1033,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "B's",
+   "start": 17.361,
+   "end": 17.623,
+   "startFrame": 1042,
+   "endFrame": 1057,
+   "score": 0.97
+  },
+  {
+   "s": 4,
+   "w": "report.",
+   "start": 17.723,
+   "end": 18.106,
+   "startFrame": 1063,
+   "endFrame": 1086,
+   "score": 0.982
+  },
+  {
+   "s": 5,
+   "w": "Why",
+   "start": 18.722,
+   "end": 18.883,
+   "startFrame": 1123,
+   "endFrame": 1133,
+   "score": 0.999
+  },
+  {
+   "s": 5,
+   "w": "they",
+   "start": 18.923,
+   "end": 19.064,
+   "startFrame": 1135,
+   "endFrame": 1144,
+   "score": 0.833
+  },
+  {
+   "s": 5,
+   "w": "were",
+   "start": 19.125,
+   "end": 19.246,
+   "startFrame": 1147,
+   "endFrame": 1155,
+   "score": 0.955
+  },
+  {
+   "s": 5,
+   "w": "missing",
+   "start": 19.286,
+   "end": 19.588,
+   "startFrame": 1157,
+   "endFrame": 1175,
+   "score": 0.973
+  },
+  {
+   "s": 5,
+   "w": "is",
+   "start": 19.669,
+   "end": 19.729,
+   "startFrame": 1180,
+   "endFrame": 1184,
+   "score": 0.993
+  },
+  {
+   "s": 5,
+   "w": "in",
+   "start": 19.81,
+   "end": 19.85,
+   "startFrame": 1189,
+   "endFrame": 1191,
+   "score": 0.999
+  },
+  {
+   "s": 5,
+   "w": "the",
+   "start": 19.91,
+   "end": 19.991,
+   "startFrame": 1195,
+   "endFrame": 1199,
+   "score": 0.828
+  },
+  {
+   "s": 5,
+   "w": "full",
+   "start": 20.031,
+   "end": 20.192,
+   "startFrame": 1202,
+   "endFrame": 1212,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "investigation.",
+   "start": 20.253,
+   "end": 21.038,
+   "startFrame": 1215,
+   "endFrame": 1262,
+   "score": 0.953
+  },
+  {
+   "s": 6,
+   "w": "Margin",
+   "start": 21.878,
+   "end": 22.226,
+   "startFrame": 1313,
+   "endFrame": 1334,
+   "score": 0.992
+  },
+  {
+   "s": 6,
+   "w": "of",
+   "start": 22.288,
+   "end": 22.391,
+   "startFrame": 1337,
+   "endFrame": 1343,
+   "score": 0.454
+  },
+  {
+   "s": 6,
+   "w": "Error.",
+   "start": 22.493,
+   "end": 22.719,
+   "startFrame": 1350,
+   "endFrame": 1363,
+   "score": 0.419
+  }
+ ],
+ "words_source": "measured: CTC forced alignment (torchaudio 2.8.0 WAV2VEC2_ASR_BASE_960H) on assets/vo/film_vo.wav, scripts/word_align.py"
+}

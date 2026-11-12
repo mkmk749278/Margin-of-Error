@@ -102,7 +102,9 @@ def main() -> int:
                       "acr": bool(re.fullmatch(r"[A-Z]", w["w"]))})
     # captions show numbers as figures (the voice says them as words)
     nums = [("one hundred and seventy", "170"), ("one hundred and three", "103"), ("twenty twenty-three", "2023"),
-            ("forty", "40"), ("thirteen", "13")]
+            ("forty", "40"), ("thirteen", "13"), ("one hundred and fifty-four", "154"),
+            ("one hundred and eight", "108"), ("twelve eighty-two", "1282"), ("seven thirty-seven nine", "737-9"),
+            ("twenty twenty-four", "2024")]
     i, merged = 0, []
     while i < len(words):
         for phrase, fig in nums:
@@ -125,6 +127,8 @@ def main() -> int:
     props = {"duration": cfg["end"], "pic": f"reel/{cfg['name']}_pic.mp4", "mix": f"reel/{cfg['name']}_mix.wav", "segments": segs,
              "words": [{k: v for k, v in w.items() if k != "acr"} for w in words],
              "sentences": [s["text"] for s in t["sentences"]], "voEnd": vo_end}
+    if "myths" in cfg:
+        props["myths"] = cfg["myths"]
     (HERE / "reel.props.json").write_text(json.dumps(props, indent=1, ensure_ascii=False))
     print(f"{len(segs)} segments, {len(words)} caption words, VO ends {vo_end:.2f} s, reel {cfg['end']} s")
     return 0

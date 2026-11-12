@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {colors, fonts} from './brand';
 import {Grid, REEL_W, chunk, clamp, cropAt, cueOf} from './Reel';
-import type {ReelProps} from './Reel';
+import type {Cue, MythsConfig, ReelProps} from './Reel';
 
 // An Instagram reel in the "what you heard vs the report" form (owner, 12 NOV 2026): the real NTSB photos and drone
 // video in the window; below it the popular explanations as plain cards (no outlet names: they are our summary of
@@ -18,24 +18,40 @@ const CARD_GAP = 12;
 const SRC_W = 1920;
 const SRC_H = 1080;
 
-const CLAIMS: {text: string; s: number; re: RegExp}[] = [
-	{text: 'A SKIPPED REPAIR', s: 2, re: /^skipped/},
-	{text: 'A BEARING WITH NO GREASE', s: 3, re: /^bearing/},
-	{text: 'COST CUTTING', s: 4, re: /^Cost/},
-];
+// the first reel's set (East Palestine, 12 NOV 2026), used when the props carry no `myths`
+const EP_MYTHS: MythsConfig = {
+	cover: ['East Palestine', '03 FEB 2023 · THE DERAILMENT'],
+	headers: [{at: null, text: 'WHAT CIRCULATED'}],
+	cards: [
+		{text: 'A SKIPPED REPAIR', at: {s: 2, w: '^skipped'}},
+		{text: 'A BEARING WITH NO GREASE', at: {s: 3, w: '^bearing'}},
+		{text: 'COST CUTTING', at: {s: 4, w: '^Cost'}},
+	],
+	stamp: {at: {s: 5, w: '^confirm'}, lines: ['NOT CONFIRMED', 'BY THE REPORT']},
+	listOut: {s: 7, w: '^Here'},
+	cta: {s: 8, w: '^full'},
+};
 
-export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd}) => {
+const TONE = {ink: colors.ink, amber: colors.amber, red: colors.red, sub: colors.sub} as const;
+
+export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd, myths}) => {
+	const M = myths ?? EP_MYTHS;
+	const cue = (c: Cue): number => cueOf(words, c.s, new RegExp(c.w));
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const t = frame / fps;
 	const chunks = React.useMemo(() => chunk(words), [words]);
 	const pop = (at: number, stiff = 220) => (t >= at ? spring({frame: frame - Math.round(at * fps), fps, config: {damping: 15, stiffness: stiff, mass: 0.6}}) : 0);
 
-	const claimAt = CLAIMS.map((c) => cueOf(words, c.s, c.re) - 0.12);
-	const confirm = cueOf(words, 5, /^confirm/);
-	const stampAt = CLAIMS.map((_, i) => confirm - 0.1 + i * 0.16);
-	const listOut = cueOf(words, 7, /^Here/) - 0.1;
-	const ctaAt = cueOf(words, 8, /^full/) - 0.15;
+	const claimAt = M.cards.map((c) => cue(c.at) - 0.12);
+	const stampCue = M.stamp ? cue(M.stamp.at) : Infinity;
+	const stampAt = M.cards.map((_, i) => stampCue - 0.1 + i * 0.16);
+	const listOut = cue(M.listOut) - 0.1;
+	const ctaAt = cue(M.cta) - 0.15;
+	const header = [...M.headers].reverse().find((h) => h.at === null || t >= cue(h.at) - 0.12)?.text ?? '';
+	const cols = M.cols ?? 1;
+	const cardW = cols === 2 ? (984 - CARD_GAP) / 2 : 984;
+	const cardH = cols === 2 ? 110 : CARD_H;
 	const listOpacity = interpolate(t, [listOut, listOut + 0.3], [1, 0], clamp);
 
 	const idx = chunks.findIndex((c, i) => t >= c.t0 - 0.05 && t < (chunks[i + 1]?.t0 ?? Infinity) - 0.05 && t <= c.t1 + 0.5);
@@ -143,17 +159,18 @@ export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd
 				</div>
 			) : null}
 			{/* the cover and the first seconds: the case the viewer types */}
-			{t < claimAt[0] ? (
+			{t < claimAt[0] && t < ctaAt ? (
 				<div style={{position: 'absolute', left: 48, right: 48, top: LIST_Y + 20, opacity: 1 - pop(claimAt[0] - 0.2)}}>
-					<div style={{fontFamily: fonts.display, fontWeight: 700, fontSize: 88, lineHeight: 1.0, color: colors.ink, textTransform: 'uppercase'}}>East Palestine</div>
-					<div style={{fontFamily: fonts.mono, fontWeight: 700, fontSize: 40, marginTop: 14, color: colors.amber, letterSpacing: 2}}>03 FEB 2023 · THE DERAILMENT</div>
+					<div style={{fontFamily: fonts.display, fontWeight: 700, fontSize: 88, lineHeight: 1.0, color: colors.ink, textTransform: 'uppercase'}}>{M.cover[0]}</div>
+					<div style={{fontFamily: fonts.mono, fontWeight: 700, fontSize: 40, marginTop: 14, color: colors.amber, letterSpacing: 2}}>{M.cover[1]}</div>
 				</div>
 			) : null}
 			{/* what circulated, and the report's answer */}
 			{t >= claimAt[0] - 0.2 && listOpacity > 0 ? (
 				<div style={{position: 'absolute', left: 48, right: 48, top: LIST_Y, opacity: listOpacity}}>
-					<div style={{fontFamily: fonts.mono, fontWeight: 700, fontSize: 28, letterSpacing: 3, color: colors.sub, height: 40}}>WHAT CIRCULATED</div>
-					{CLAIMS.map((cl, i) => {
+					<div style={{fontFamily: fonts.mono, fontWeight: 700, fontSize: 28, letterSpacing: 3, color: colors.sub, height: 40}}>{header}</div>
+					<div style={{display: 'flex', flexWrap: 'wrap', columnGap: CARD_GAP}}>
+					{M.cards.map((cl, i) => {
 						const on = pop(claimAt[i]);
 						const st = pop(stampAt[i], 320);
 						return (
@@ -161,11 +178,13 @@ export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd
 								key={cl.text}
 								style={{
 									position: 'relative',
-									height: CARD_H,
+									height: cardH,
+									width: cardW,
+									boxSizing: 'border-box',
 									marginBottom: CARD_GAP,
 									backgroundColor: colors.card,
 									border: `1px solid ${colors.border}`,
-									borderLeft: `6px solid ${st > 0.01 ? colors.red : colors.amber}`,
+									borderLeft: `6px solid ${st > 0.01 ? colors.red : TONE[cl.tone ?? 'amber']}`,
 									display: 'flex',
 									alignItems: 'center',
 									paddingLeft: 26,
@@ -173,7 +192,7 @@ export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd
 									transform: `translateX(${(1 - on) * -40}px)`,
 								}}
 							>
-								<span style={{fontFamily: fonts.display, fontWeight: 700, fontSize: 42, color: st > 0.5 ? colors.sub : colors.ink, letterSpacing: 0.5}}>{cl.text}</span>
+								<span style={{fontFamily: fonts.display, fontWeight: 700, fontSize: cols === 2 ? 52 : 42, color: st > 0.5 ? colors.sub : cl.tone === 'red' ? colors.red : colors.ink, letterSpacing: 0.5}}>{cl.text}</span>
 								{st > 0.01 ? (
 									<div
 										style={{
@@ -193,14 +212,15 @@ export const ReelMyths: React.FC<ReelProps> = ({pic, mix, segments, words, voEnd
 											opacity: Math.min(1, st * 1.5),
 										}}
 									>
-										NOT CONFIRMED
-										<br />
-										BY THE REPORT
+										{(M.stamp?.lines ?? []).map((l, j) => (
+											<div key={j}>{l}</div>
+										))}
 									</div>
 								) : null}
 							</div>
 						);
 					})}
+					</div>
 				</div>
 			) : null}
 			{/* where the rest of the case is */}

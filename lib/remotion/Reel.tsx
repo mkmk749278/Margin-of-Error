@@ -19,6 +19,19 @@ export type ReelProps = {
 	words: ReelWord[];
 	sentences: string[];
 	voEnd: number;
+	myths?: MythsConfig; // ReelMyths only; without it, the first reel's East Palestine set
+};
+
+/** a cue: the first word in sentence `s` matching the regex source `w` */
+export type Cue = {s: number; w: string};
+export type MythsConfig = {
+	cover: [string, string]; // the case the viewer types, and its date line
+	headers: {at: Cue | null; text: string}[]; // the label over the cards, changing on its cue
+	cards: {text: string; at: Cue; tone?: 'ink' | 'amber' | 'red' | 'sub'}[];
+	cols?: number; // 1 (stacked) or 2 (a 2x2 grid)
+	stamp?: {at: Cue; lines: string[]} | null; // stamped on every card in turn from its cue
+	listOut: Cue; // the cards leave
+	cta: Cue; // FULL INVESTIGATION ON YOUTUBE comes up
 };
 
 export const REEL_W = 1080;

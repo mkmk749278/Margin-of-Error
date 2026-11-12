@@ -1,0 +1,185 @@
+{
+ "_doc": "Short S1 for The Four Missing Bolts (owner, 12 NOV 2026): the myth form. Built by scripts/reel_build.py, composition ReelMyths.",
+ "name": "fmb_s1",
+ "music": "../../east-palestine/reel/assets/music/fx07_evidence.wav",
+ "master": "assets/reel_src/four-missing-bolts_master_4k_marcus.mp4",
+ "thumb": "reel/fmb_thumb_live.jpg",
+ "thumb_src": "films/four-missing-bolts/youtube/thumb_g_154_flights_broadcast.jpg",
+ "end": 24.2,
+ "segments": [
+  {
+   "t": 0.0,
+   "still": "public/films/four-missing-bolts/img/flickr_53449315887.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    50,
+    1260
+   ],
+   "label": "NTSB PHOTO · N704AL · 07 JAN 2024"
+  },
+  {
+   "t": 5.6,
+   "still": "public/films/four-missing-bolts/img/fig02_med_plug_locations.jpg",
+   "c0": [
+    300,
+    0,
+    1422
+   ],
+   "c1": [
+    420,
+    80,
+    1200
+   ],
+   "label": "NTSB FIG. 2 · THE DOOR PLUGS"
+  },
+  {
+   "t": 8.3,
+   "m": 130.6,
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    300,
+    40,
+    1300
+   ],
+   "label": "ILLUSTRATION · AFTER NTSB AIR-25-04"
+  },
+  {
+   "t": 10.3,
+   "m": 151.2,
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    350,
+    40,
+    1300
+   ],
+   "label": "ILLUSTRATION · AFTER NTSB AIR-25-04"
+  },
+  {
+   "t": 12.6,
+   "still": "public/films/four-missing-bolts/img/fig13_arrestor_bolt_holes.jpg",
+   "c0": [
+    250,
+    0,
+    1422
+   ],
+   "c1": [
+    330,
+    60,
+    1250
+   ],
+   "label": "NTSB FIG. 13 · THE BOLT HOLES"
+  },
+  {
+   "t": 15.7,
+   "still": "public/films/four-missing-bolts/pages/p001_title.jpg",
+   "c0": [
+    540,
+    0,
+    850
+   ],
+   "c1": [
+    560,
+    30,
+    800
+   ],
+   "label": "NTSB AIR-25-04 · 24 JUN 2025"
+  },
+  {
+   "t": 18.5,
+   "still": "public/films/four-missing-bolts/pages/p136_probable_cause.jpg",
+   "c0": [
+    550,
+    420,
+    820
+   ],
+   "c1": [
+    560,
+    450,
+    780
+   ],
+   "label": "NTSB AIR-25-04 · PROBABLE CAUSE"
+  },
+  {
+   "t": 21.6,
+   "image": "reel/fmb_thumb_live.jpg",
+   "c0": [
+    0,
+    0,
+    1920
+   ],
+   "c1": [
+    120,
+    60,
+    1680
+   ],
+   "label": "THE FULL FILM · ON YOUTUBE"
+  }
+ ],
+ "myths": {
+  "cover": [
+   "Alaska 1282",
+   "05 JAN 2024 · THE DOOR PLUG"
+  ],
+  "headers": [
+   {
+    "at": null,
+    "text": "WHAT YOU MAY HAVE HEARD"
+   },
+   {
+    "at": {
+     "s": 2,
+     "w": "^lower"
+    },
+    "text": "THE NTSB RECORD"
+   }
+  ],
+  "cards": [
+   {
+    "text": "HEARD: A DESIGN FLAW",
+    "at": {
+     "s": 1,
+     "w": "^design"
+    },
+    "tone": "sub"
+   },
+   {
+    "text": "4 BOLTS · 1 WOULD HOLD IT",
+    "at": {
+     "s": 2,
+     "w": "^lower"
+    },
+    "tone": "amber"
+   },
+   {
+    "text": "ON THIS PLANE: ALL 4 MISSING",
+    "at": {
+     "s": 3,
+     "w": "^missing"
+    },
+    "tone": "red"
+   }
+  ],
+  "stamp": null,
+  "listOut": {
+   "s": 4,
+   "w": "^Here"
+  },
+  "cta": {
+   "s": 5,
+   "w": "^full"
+  }
+ }
+}
