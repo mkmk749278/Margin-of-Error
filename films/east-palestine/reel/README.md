@@ -25,6 +25,9 @@ the hearing, what was decided on the second number, and the NTSB's verdict on it
   `npx remotion render src/index.ts Reel out/east-palestine_reel_instagram.mp4 --props=films/east-palestine/reel/reel.props.json`
   (with `--browser-executable` in the session, PLAYBOOK §10.5). Composition `Reel` in `lib/remotion/Reel.tsx`.
 
+**File:** Drive `east-palestine/reel/east-palestine_reel_instagram.mp4` ([open](https://drive.google.com/file/d/1zYb8J_llAK39VoMrAokKMb5QV6Xg4Ll0/view)):
+1080×1920, 60 fps, 66.3 s, 6.9 Mb/s, −14.2 LUFS, −1.4 dBTP; no black or frozen frames; frames checked at every cut.
+
 ## Every spoken fact, on the film's `claims.csv`
 | Line | Rows |
 |---|---|
