@@ -36,18 +36,18 @@ export const calcReelMetadata: CalculateMetadataFunction<ReelProps> = ({props}) 
 	height: REEL_H,
 });
 
-const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
+export const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
 /** the time of the first word matching `re` in sentence `s` (the cue for a ledger change) */
-const cueOf = (words: ReelWord[], s: number, re: RegExp, which: 't0' | 't1' = 't0'): number => {
+export const cueOf = (words: ReelWord[], s: number, re: RegExp, which: 't0' | 't1' = 't0'): number => {
 	const w = words.find((x) => x.s === s && re.test(x.w));
 	return w ? w[which] : Infinity;
 };
 
-type Chunk = {words: ReelWord[]; t0: number; t1: number};
+export type Chunk = {words: ReelWord[]; t0: number; t1: number};
 
 /** caption chunks: never across a sentence, at most 3 words or 18 letters */
-const chunk = (words: ReelWord[]): Chunk[] => {
+export const chunk = (words: ReelWord[]): Chunk[] => {
 	const out: Chunk[] = [];
 	let cur: ReelWord[] = [];
 	const flush = () => {
@@ -63,7 +63,7 @@ const chunk = (words: ReelWord[]): Chunk[] => {
 	return out;
 };
 
-const Grid: React.FC = () => (
+export const Grid: React.FC = () => (
 	<svg width={REEL_W} height={REEL_H} style={{position: 'absolute', inset: 0}}>
 		{Array.from({length: 28}, (_, i) => (
 			<line key={`h${i}`} x1={0} x2={REEL_W} y1={i * 72} y2={i * 72} stroke={colors.grid} strokeOpacity={0.05} />
@@ -75,7 +75,7 @@ const Grid: React.FC = () => (
 );
 
 /** the crop at time t inside a segment, eased, kept inside the source frame */
-const cropAt = (seg: ReelSegment, t: number): {x: number; y: number; w: number} => {
+export const cropAt = (seg: ReelSegment, t: number): {x: number; y: number; w: number} => {
 	const p = interpolate(t, [seg.t, seg.t1], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
 	const w = seg.c0[2] + (seg.c1[2] - seg.c0[2]) * p;
 	const h = (w * PIC_H) / REEL_W;

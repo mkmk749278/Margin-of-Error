@@ -1096,10 +1096,10 @@ hearing, the decision, the investigator's verdict), and end on the open question
 on YouTube. Margin of Error." Every spoken fact still on a `claims.csv` row and the other side's response where an
 NTSB finding touches them. Same gates: the owner approves the narration before the voice is made.
 How: `films/<slug>/reel/` (script, `reel.json` segments of the approved master with a crop per shot,
-`build_reel.py`), composition `Reel` (`lib/remotion/Reel.tsx`): a ledger above the picture that fills in on the
+`scripts/reel_build.py`), composition `Reel` (`lib/remotion/Reel.tsx`) or `ReelMyths` (`lib/remotion/ReelMyths.tsx`, the "what you heard vs the report" form, 12 NOV): a ledger above the picture that fills in on the
 words, the master's shots cropped to the line the narration points to, measured captions below (numbers as figures),
 the film's live thumbnail as the end card; nothing below y = 1500 or in the top 160 px (Instagram's UI). 60 s or
-so is the ceiling: the first draft at 90 s was cut. Caption in `reel/README.md` with the voice note and "link in bio".
+so is the ceiling: the first draft at 90 s was cut, and the owner then asked for a shorter, sharper form (12 NOV): "remember it? what you heard isn't what the report says; here's the report; watch the film", about 25 s (`ReelMyths`). Real record pictures only (NTSB drone video and photos are public domain). News clips: never fake ones (fabricated evidence), and real ones are copyrighted and not licensed for us; show what circulated as plain cards with no outlet name, labelled WHAT CIRCULATED, and say only what the report supports ("doesn't confirm", not "wrong"). Caption in `reel/README.md` with the voice note and "link in bio".
 
 ### 13.6 Launch
 **Each film goes up when it is finished** (owner, 2026-11-02), in slate order (§17.4); each end screen points to the

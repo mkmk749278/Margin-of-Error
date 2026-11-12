@@ -1,0 +1,635 @@
+{
+ "fps": 60,
+ "sentences": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 2.86,
+   "text": "Remember the train derailment in East Palestine, Ohio?"
+  },
+  {
+   "id": 1,
+   "start": 3.5,
+   "end": 5.28,
+   "text": "You've probably heard why it happened."
+  },
+  {
+   "id": 2,
+   "start": 5.78,
+   "end": 6.72,
+   "text": "A skipped repair."
+  },
+  {
+   "id": 3,
+   "start": 7.26,
+   "end": 8.58,
+   "text": "A bearing with no grease."
+  },
+  {
+   "id": 4,
+   "start": 9.22,
+   "end": 9.76,
+   "text": "Cost cutting."
+  },
+  {
+   "id": 5,
+   "start": 10.42,
+   "end": 14.2,
+   "text": "The N - T - S - B's final report doesn't confirm any of them."
+  },
+  {
+   "id": 6,
+   "start": 14.66,
+   "end": 18.54,
+   "text": "What it does show is stranger: where the warning line came from."
+  },
+  {
+   "id": 7,
+   "start": 19.04,
+   "end": 19.78,
+   "text": "Here's the report."
+  },
+  {
+   "id": 8,
+   "start": 20.28,
+   "end": 22.18,
+   "text": "The full investigation is on YouTube."
+  },
+  {
+   "id": 9,
+   "start": 22.94,
+   "end": 23.88,
+   "text": "Margin of Error."
+  }
+ ],
+ "words": [
+  {
+   "s": 0,
+   "w": "Remember",
+   "start": 0.081,
+   "end": 0.403,
+   "startFrame": 5,
+   "endFrame": 24,
+   "score": 0.997
+  },
+  {
+   "s": 0,
+   "w": "the",
+   "start": 0.483,
+   "end": 0.584,
+   "startFrame": 29,
+   "endFrame": 35,
+   "score": 0.948
+  },
+  {
+   "s": 0,
+   "w": "train",
+   "start": 0.664,
+   "end": 0.906,
+   "startFrame": 40,
+   "endFrame": 54,
+   "score": 0.952
+  },
+  {
+   "s": 0,
+   "w": "derailment",
+   "start": 0.966,
+   "end": 1.49,
+   "startFrame": 58,
+   "endFrame": 89,
+   "score": 0.833
+  },
+  {
+   "s": 0,
+   "w": "in",
+   "start": 1.571,
+   "end": 1.611,
+   "startFrame": 94,
+   "endFrame": 97,
+   "score": 0.915
+  },
+  {
+   "s": 0,
+   "w": "East",
+   "start": 1.752,
+   "end": 1.893,
+   "startFrame": 105,
+   "endFrame": 114,
+   "score": 0.923
+  },
+  {
+   "s": 0,
+   "w": "Palestine,",
+   "start": 1.953,
+   "end": 2.477,
+   "startFrame": 117,
+   "endFrame": 149,
+   "score": 0.924
+  },
+  {
+   "s": 0,
+   "w": "Ohio?",
+   "start": 2.557,
+   "end": 2.899,
+   "startFrame": 153,
+   "endFrame": 174,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "You've",
+   "start": 3.521,
+   "end": 3.703,
+   "startFrame": 211,
+   "endFrame": 222,
+   "score": 0.931
+  },
+  {
+   "s": 1,
+   "w": "probably",
+   "start": 3.824,
+   "end": 4.269,
+   "startFrame": 229,
+   "endFrame": 256,
+   "score": 0.931
+  },
+  {
+   "s": 1,
+   "w": "heard",
+   "start": 4.309,
+   "end": 4.471,
+   "startFrame": 259,
+   "endFrame": 268,
+   "score": 1.0
+  },
+  {
+   "s": 1,
+   "w": "why",
+   "start": 4.531,
+   "end": 4.653,
+   "startFrame": 272,
+   "endFrame": 279,
+   "score": 0.989
+  },
+  {
+   "s": 1,
+   "w": "it",
+   "start": 4.754,
+   "end": 4.794,
+   "startFrame": 285,
+   "endFrame": 288,
+   "score": 0.993
+  },
+  {
+   "s": 1,
+   "w": "happened.",
+   "start": 4.875,
+   "end": 5.259,
+   "startFrame": 292,
+   "endFrame": 316,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "A",
+   "start": 5.823,
+   "end": 5.843,
+   "startFrame": 349,
+   "endFrame": 351,
+   "score": 0.669
+  },
+  {
+   "s": 2,
+   "w": "skipped",
+   "start": 5.924,
+   "end": 6.23,
+   "startFrame": 355,
+   "endFrame": 374,
+   "score": 0.999
+  },
+  {
+   "s": 2,
+   "w": "repair.",
+   "start": 6.311,
+   "end": 6.677,
+   "startFrame": 379,
+   "endFrame": 401,
+   "score": 0.956
+  },
+  {
+   "s": 3,
+   "w": "A",
+   "start": 7.282,
+   "end": 7.302,
+   "startFrame": 437,
+   "endFrame": 438,
+   "score": 0.998
+  },
+  {
+   "s": 3,
+   "w": "bearing",
+   "start": 7.383,
+   "end": 7.748,
+   "startFrame": 443,
+   "endFrame": 465,
+   "score": 0.994
+  },
+  {
+   "s": 3,
+   "w": "with",
+   "start": 7.809,
+   "end": 7.95,
+   "startFrame": 469,
+   "endFrame": 477,
+   "score": 0.963
+  },
+  {
+   "s": 3,
+   "w": "no",
+   "start": 8.011,
+   "end": 8.112,
+   "startFrame": 481,
+   "endFrame": 487,
+   "score": 0.983
+  },
+  {
+   "s": 3,
+   "w": "grease.",
+   "start": 8.234,
+   "end": 8.538,
+   "startFrame": 494,
+   "endFrame": 512,
+   "score": 0.75
+  },
+  {
+   "s": 4,
+   "w": "Cost",
+   "start": 9.162,
+   "end": 9.449,
+   "startFrame": 550,
+   "endFrame": 567,
+   "score": 0.949
+  },
+  {
+   "s": 4,
+   "w": "cutting.",
+   "start": 9.49,
+   "end": 9.798,
+   "startFrame": 569,
+   "endFrame": 588,
+   "score": 0.413
+  },
+  {
+   "s": 5,
+   "w": "The",
+   "start": 10.38,
+   "end": 10.481,
+   "startFrame": 623,
+   "endFrame": 629,
+   "score": 0.972
+  },
+  {
+   "s": 5,
+   "w": "N",
+   "start": 10.722,
+   "end": 10.762,
+   "startFrame": 643,
+   "endFrame": 646,
+   "score": 0.996
+  },
+  {
+   "s": 5,
+   "w": "-",
+   "start": 10.762,
+   "end": 10.762,
+   "startFrame": 646,
+   "endFrame": 646,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "T",
+   "start": 10.883,
+   "end": 10.923,
+   "startFrame": 653,
+   "endFrame": 655,
+   "score": 0.984
+  },
+  {
+   "s": 5,
+   "w": "-",
+   "start": 10.923,
+   "end": 10.923,
+   "startFrame": 655,
+   "endFrame": 655,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "S",
+   "start": 11.225,
+   "end": 11.245,
+   "startFrame": 673,
+   "endFrame": 675,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "-",
+   "start": 11.245,
+   "end": 11.245,
+   "startFrame": 675,
+   "endFrame": 675,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "B's",
+   "start": 11.345,
+   "end": 11.606,
+   "startFrame": 681,
+   "endFrame": 696,
+   "score": 0.981
+  },
+  {
+   "s": 5,
+   "w": "final",
+   "start": 11.727,
+   "end": 12.008,
+   "startFrame": 704,
+   "endFrame": 721,
+   "score": 0.971
+  },
+  {
+   "s": 5,
+   "w": "report",
+   "start": 12.089,
+   "end": 12.431,
+   "startFrame": 725,
+   "endFrame": 746,
+   "score": 0.991
+  },
+  {
+   "s": 5,
+   "w": "doesn't",
+   "start": 12.571,
+   "end": 12.893,
+   "startFrame": 754,
+   "endFrame": 774,
+   "score": 0.899
+  },
+  {
+   "s": 5,
+   "w": "confirm",
+   "start": 12.933,
+   "end": 13.315,
+   "startFrame": 776,
+   "endFrame": 799,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "any",
+   "start": 13.355,
+   "end": 13.777,
+   "startFrame": 801,
+   "endFrame": 827,
+   "score": 0.631
+  },
+  {
+   "s": 5,
+   "w": "of",
+   "start": 13.858,
+   "end": 13.898,
+   "startFrame": 831,
+   "endFrame": 834,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "them.",
+   "start": 13.978,
+   "end": 14.099,
+   "startFrame": 839,
+   "endFrame": 846,
+   "score": 0.933
+  },
+  {
+   "s": 6,
+   "w": "What",
+   "start": 14.661,
+   "end": 14.761,
+   "startFrame": 880,
+   "endFrame": 886,
+   "score": 0.998
+  },
+  {
+   "s": 6,
+   "w": "it",
+   "start": 14.821,
+   "end": 14.922,
+   "startFrame": 889,
+   "endFrame": 895,
+   "score": 0.765
+  },
+  {
+   "s": 6,
+   "w": "does",
+   "start": 14.982,
+   "end": 15.243,
+   "startFrame": 899,
+   "endFrame": 915,
+   "score": 0.849
+  },
+  {
+   "s": 6,
+   "w": "show",
+   "start": 15.304,
+   "end": 15.485,
+   "startFrame": 918,
+   "endFrame": 929,
+   "score": 0.958
+  },
+  {
+   "s": 6,
+   "w": "is",
+   "start": 15.525,
+   "end": 15.726,
+   "startFrame": 931,
+   "endFrame": 944,
+   "score": 0.115
+  },
+  {
+   "s": 6,
+   "w": "stranger:",
+   "start": 15.746,
+   "end": 16.329,
+   "startFrame": 945,
+   "endFrame": 980,
+   "score": 0.91
+  },
+  {
+   "s": 6,
+   "w": "where",
+   "start": 16.851,
+   "end": 17.052,
+   "startFrame": 1011,
+   "endFrame": 1023,
+   "score": 0.961
+  },
+  {
+   "s": 6,
+   "w": "the",
+   "start": 17.092,
+   "end": 17.213,
+   "startFrame": 1026,
+   "endFrame": 1033,
+   "score": 0.791
+  },
+  {
+   "s": 6,
+   "w": "warning",
+   "start": 17.313,
+   "end": 17.655,
+   "startFrame": 1039,
+   "endFrame": 1059,
+   "score": 0.997
+  },
+  {
+   "s": 6,
+   "w": "line",
+   "start": 17.736,
+   "end": 17.936,
+   "startFrame": 1064,
+   "endFrame": 1076,
+   "score": 0.998
+  },
+  {
+   "s": 6,
+   "w": "came",
+   "start": 18.017,
+   "end": 18.198,
+   "startFrame": 1081,
+   "endFrame": 1092,
+   "score": 1.0
+  },
+  {
+   "s": 6,
+   "w": "from.",
+   "start": 18.278,
+   "end": 18.499,
+   "startFrame": 1097,
+   "endFrame": 1110,
+   "score": 0.754
+  },
+  {
+   "s": 7,
+   "w": "Here's",
+   "start": 19.043,
+   "end": 19.247,
+   "startFrame": 1143,
+   "endFrame": 1155,
+   "score": 0.966
+  },
+  {
+   "s": 7,
+   "w": "the",
+   "start": 19.267,
+   "end": 19.41,
+   "startFrame": 1156,
+   "endFrame": 1165,
+   "score": 0.611
+  },
+  {
+   "s": 7,
+   "w": "report.",
+   "start": 19.43,
+   "end": 19.757,
+   "startFrame": 1166,
+   "endFrame": 1185,
+   "score": 0.993
+  },
+  {
+   "s": 8,
+   "w": "The",
+   "start": 20.261,
+   "end": 20.322,
+   "startFrame": 1216,
+   "endFrame": 1219,
+   "score": 0.998
+  },
+  {
+   "s": 8,
+   "w": "full",
+   "start": 20.402,
+   "end": 20.564,
+   "startFrame": 1224,
+   "endFrame": 1234,
+   "score": 1.0
+  },
+  {
+   "s": 8,
+   "w": "investigation",
+   "start": 20.624,
+   "end": 21.331,
+   "startFrame": 1237,
+   "endFrame": 1280,
+   "score": 0.951
+  },
+  {
+   "s": 8,
+   "w": "is",
+   "start": 21.371,
+   "end": 21.553,
+   "startFrame": 1282,
+   "endFrame": 1293,
+   "score": 0.5
+  },
+  {
+   "s": 8,
+   "w": "on",
+   "start": 21.654,
+   "end": 21.694,
+   "startFrame": 1299,
+   "endFrame": 1302,
+   "score": 1.0
+  },
+  {
+   "s": 8,
+   "w": "YouTube.",
+   "start": 21.775,
+   "end": 22.219,
+   "startFrame": 1307,
+   "endFrame": 1333,
+   "score": 0.664
+  },
+  {
+   "s": 9,
+   "w": "Margin",
+   "start": 22.901,
+   "end": 23.288,
+   "startFrame": 1374,
+   "endFrame": 1397,
+   "score": 0.979
+  },
+  {
+   "s": 9,
+   "w": "of",
+   "start": 23.288,
+   "end": 23.532,
+   "startFrame": 1397,
+   "endFrame": 1412,
+   "score": 0.014
+  },
+  {
+   "s": 9,
+   "w": "Error.",
+   "start": 23.695,
+   "end": 23.898,
+   "startFrame": 1422,
+   "endFrame": 1434,
+   "score": 0.79
+  }
+ ],
+ "words_source": "measured: CTC forced alignment (torchaudio 2.8.0 WAV2VEC2_ASR_BASE_960H) on assets/vo/film_vo.wav, scripts/word_align.py"
+}

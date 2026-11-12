@@ -14,6 +14,7 @@ import {Short, calcShortMetadata, SHORT_W, SHORT_H} from '../lib/remotion/Short'
 import type {ShortProps} from '../lib/remotion/Short';
 import {Reel, calcReelMetadata, REEL_W, REEL_H} from '../lib/remotion/Reel';
 import type {ReelProps} from '../lib/remotion/Reel';
+import {ReelMyths} from '../lib/remotion/ReelMyths';
 
 // Shorts render with --props films/<slug>/shorts/<id>.props.json (scripts/shorts_build.py writes them).
 const shortDefaults: ShortProps = {id: 'none', clip: 'shorts/none.mp4', duration: 1, chip: '', hook: [], words: [], sentences: [], cover: 0};
@@ -42,6 +43,7 @@ export const Root: React.FC = () => (
 		</Folder>
 		<Folder name="Reels">
 			<Composition id="Reel" component={Reel} durationInFrames={60} fps={video.fps} width={REEL_W} height={REEL_H} defaultProps={reelDefaults} calculateMetadata={calcReelMetadata} />
+			<Composition id="ReelMyths" component={ReelMyths} durationInFrames={60} fps={video.fps} width={REEL_W} height={REEL_H} defaultProps={reelDefaults} calculateMetadata={calcReelMetadata} />
 		</Folder>
 		<Folder name="Dev">
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />
