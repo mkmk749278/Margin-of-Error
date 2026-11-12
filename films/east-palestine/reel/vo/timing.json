@@ -1,0 +1,1678 @@
+{
+ "fps": 60,
+ "duration": 65.23,
+ "durationInFrames": 3914,
+ "sentences": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 2.2,
+   "text": "Two numbers decided this town's week."
+  },
+  {
+   "id": 1,
+   "start": 2.92,
+   "end": 6.24,
+   "text": "East Palestine, Ohio, February twenty twenty-three."
+  },
+  {
+   "id": 2,
+   "start": 7.24,
+   "end": 9.18,
+   "text": "The first: one hundred and seventy."
+  },
+  {
+   "id": 3,
+   "start": 10.06,
+   "end": 15.46,
+   "text": "A detector beside the track read a bearing on fire at one hundred and three degrees above the air."
+  },
+  {
+   "id": 4,
+   "start": 15.84,
+   "end": 18.44,
+   "text": "The crew would only be told at one hundred and seventy."
+  },
+  {
+   "id": 5,
+   "start": 19.18,
+   "end": 21.16,
+   "text": "So in the cab: nothing."
+  },
+  {
+   "id": 6,
+   "start": 21.66,
+   "end": 23.08,
+   "text": "Where did that line come from?"
+  },
+  {
+   "id": 7,
+   "start": 23.38,
+   "end": 29.62,
+   "text": "It matches an industry definition that, the N - T - S - B found, relates to billing for repairs."
+  },
+  {
+   "id": 8,
+   "start": 30.34,
+   "end": 33.2,
+   "text": "Norfolk Southern says it also drew on its own experience."
+  },
+  {
+   "id": 9,
+   "start": 33.9,
+   "end": 36.66,
+   "text": "About forty minutes later, the axle came apart."
+  },
+  {
+   "id": 10,
+   "start": 37.58,
+   "end": 40.46,
+   "text": "Three days later came the second number: a temperature."
+  },
+  {
+   "id": 11,
+   "start": 41.08,
+   "end": 47.56,
+   "text": "Contractors told the incident commander that if a vinyl chloride tank car reached it, the reaction would run out of control."
+  },
+  {
+   "id": 12,
+   "start": 48.1,
+   "end": 50.58,
+   "text": "He said he was given thirteen minutes to decide."
+  },
+  {
+   "id": 13,
+   "start": 51.28,
+   "end": 53.8,
+   "text": "One number matched a definition written for billing."
+  },
+  {
+   "id": 14,
+   "start": 54.2,
+   "end": 58.28,
+   "text": "The other, the investigators could not find in the guidance used at the scene."
+  },
+  {
+   "id": 15,
+   "start": 58.76,
+   "end": 61.96,
+   "text": "What was decided on that number is in the full investigation."
+  },
+  {
+   "id": 16,
+   "start": 63.02,
+   "end": 64.8,
+   "text": "Margin of Error, on YouTube."
+  }
+ ],
+ "words": [
+  {
+   "s": 0,
+   "w": "Two",
+   "start": 0.081,
+   "end": 0.222,
+   "startFrame": 5,
+   "endFrame": 13,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "numbers",
+   "start": 0.343,
+   "end": 0.666,
+   "startFrame": 21,
+   "endFrame": 40,
+   "score": 1.0
+  },
+  {
+   "s": 0,
+   "w": "decided",
+   "start": 0.767,
+   "end": 1.21,
+   "startFrame": 46,
+   "endFrame": 73,
+   "score": 0.993
+  },
+  {
+   "s": 0,
+   "w": "this",
+   "start": 1.311,
+   "end": 1.453,
+   "startFrame": 79,
+   "endFrame": 87,
+   "score": 0.953
+  },
+  {
+   "s": 0,
+   "w": "town's",
+   "start": 1.513,
+   "end": 1.856,
+   "startFrame": 91,
+   "endFrame": 111,
+   "score": 0.982
+  },
+  {
+   "s": 0,
+   "w": "week.",
+   "start": 1.937,
+   "end": 2.138,
+   "startFrame": 116,
+   "endFrame": 128,
+   "score": 0.966
+  },
+  {
+   "s": 1,
+   "w": "East",
+   "start": 2.86,
+   "end": 3.021,
+   "startFrame": 172,
+   "endFrame": 181,
+   "score": 0.96
+  },
+  {
+   "s": 1,
+   "w": "Palestine,",
+   "start": 3.142,
+   "end": 3.765,
+   "startFrame": 189,
+   "endFrame": 226,
+   "score": 0.923
+  },
+  {
+   "s": 1,
+   "w": "Ohio,",
+   "start": 4.007,
+   "end": 4.389,
+   "startFrame": 240,
+   "endFrame": 263,
+   "score": 0.994
+  },
+  {
+   "s": 1,
+   "w": "February",
+   "start": 4.892,
+   "end": 5.395,
+   "startFrame": 294,
+   "endFrame": 324,
+   "score": 0.907
+  },
+  {
+   "s": 1,
+   "w": "twenty",
+   "start": 5.435,
+   "end": 5.676,
+   "startFrame": 326,
+   "endFrame": 341,
+   "score": 0.996
+  },
+  {
+   "s": 1,
+   "w": "twenty-three.",
+   "start": 5.736,
+   "end": 6.3,
+   "startFrame": 344,
+   "endFrame": 378,
+   "score": 0.936
+  },
+  {
+   "s": 2,
+   "w": "The",
+   "start": 7.201,
+   "end": 7.281,
+   "startFrame": 432,
+   "endFrame": 437,
+   "score": 0.984
+  },
+  {
+   "s": 2,
+   "w": "first:",
+   "start": 7.342,
+   "end": 7.645,
+   "startFrame": 441,
+   "endFrame": 459,
+   "score": 1.0
+  },
+  {
+   "s": 2,
+   "w": "one",
+   "start": 8.392,
+   "end": 8.533,
+   "startFrame": 503,
+   "endFrame": 512,
+   "score": 0.805
+  },
+  {
+   "s": 2,
+   "w": "hundred",
+   "start": 8.573,
+   "end": 8.836,
+   "startFrame": 514,
+   "endFrame": 530,
+   "score": 0.974
+  },
+  {
+   "s": 2,
+   "w": "and",
+   "start": 8.916,
+   "end": 9.017,
+   "startFrame": 535,
+   "endFrame": 541,
+   "score": 0.78
+  },
+  {
+   "s": 2,
+   "w": "seventy.",
+   "start": 9.058,
+   "end": 9.3,
+   "startFrame": 543,
+   "endFrame": 558,
+   "score": 0.428
+  },
+  {
+   "s": 3,
+   "w": "A",
+   "start": 10.101,
+   "end": 10.121,
+   "startFrame": 606,
+   "endFrame": 607,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "detector",
+   "start": 10.181,
+   "end": 10.622,
+   "startFrame": 611,
+   "endFrame": 637,
+   "score": 0.706
+  },
+  {
+   "s": 3,
+   "w": "beside",
+   "start": 10.703,
+   "end": 11.024,
+   "startFrame": 642,
+   "endFrame": 661,
+   "score": 0.99
+  },
+  {
+   "s": 3,
+   "w": "the",
+   "start": 11.044,
+   "end": 11.164,
+   "startFrame": 663,
+   "endFrame": 670,
+   "score": 0.776
+  },
+  {
+   "s": 3,
+   "w": "track",
+   "start": 11.245,
+   "end": 11.526,
+   "startFrame": 675,
+   "endFrame": 692,
+   "score": 1.0
+  },
+  {
+   "s": 3,
+   "w": "read",
+   "start": 11.666,
+   "end": 11.787,
+   "startFrame": 700,
+   "endFrame": 707,
+   "score": 0.999
+  },
+  {
+   "s": 3,
+   "w": "a",
+   "start": 11.847,
+   "end": 11.887,
+   "startFrame": 711,
+   "endFrame": 713,
+   "score": 0.5
+  },
+  {
+   "s": 3,
+   "w": "bearing",
+   "start": 11.927,
+   "end": 12.248,
+   "startFrame": 716,
+   "endFrame": 735,
+   "score": 0.997
+  },
+  {
+   "s": 3,
+   "w": "on",
+   "start": 12.349,
+   "end": 12.409,
+   "startFrame": 741,
+   "endFrame": 745,
+   "score": 0.985
+  },
+  {
+   "s": 3,
+   "w": "fire",
+   "start": 12.549,
+   "end": 12.87,
+   "startFrame": 753,
+   "endFrame": 772,
+   "score": 0.979
+  },
+  {
+   "s": 3,
+   "w": "at",
+   "start": 13.031,
+   "end": 13.131,
+   "startFrame": 782,
+   "endFrame": 788,
+   "score": 0.625
+  },
+  {
+   "s": 3,
+   "w": "one",
+   "start": 13.292,
+   "end": 13.432,
+   "startFrame": 798,
+   "endFrame": 806,
+   "score": 0.828
+  },
+  {
+   "s": 3,
+   "w": "hundred",
+   "start": 13.473,
+   "end": 13.713,
+   "startFrame": 808,
+   "endFrame": 823,
+   "score": 0.976
+  },
+  {
+   "s": 3,
+   "w": "and",
+   "start": 13.754,
+   "end": 13.854,
+   "startFrame": 825,
+   "endFrame": 831,
+   "score": 0.772
+  },
+  {
+   "s": 3,
+   "w": "three",
+   "start": 13.934,
+   "end": 14.155,
+   "startFrame": 836,
+   "endFrame": 849,
+   "score": 0.999
+  },
+  {
+   "s": 3,
+   "w": "degrees",
+   "start": 14.195,
+   "end": 14.657,
+   "startFrame": 852,
+   "endFrame": 879,
+   "score": 0.882
+  },
+  {
+   "s": 3,
+   "w": "above",
+   "start": 14.737,
+   "end": 14.958,
+   "startFrame": 884,
+   "endFrame": 897,
+   "score": 0.981
+  },
+  {
+   "s": 3,
+   "w": "the",
+   "start": 14.978,
+   "end": 15.159,
+   "startFrame": 899,
+   "endFrame": 910,
+   "score": 0.645
+  },
+  {
+   "s": 3,
+   "w": "air.",
+   "start": 15.259,
+   "end": 15.379,
+   "startFrame": 916,
+   "endFrame": 923,
+   "score": 0.951
+  },
+  {
+   "s": 4,
+   "w": "The",
+   "start": 15.921,
+   "end": 16.002,
+   "startFrame": 955,
+   "endFrame": 960,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "crew",
+   "start": 16.083,
+   "end": 16.304,
+   "startFrame": 965,
+   "endFrame": 978,
+   "score": 1.0
+  },
+  {
+   "s": 4,
+   "w": "would",
+   "start": 16.385,
+   "end": 16.586,
+   "startFrame": 983,
+   "endFrame": 995,
+   "score": 0.841
+  },
+  {
+   "s": 4,
+   "w": "only",
+   "start": 16.707,
+   "end": 16.929,
+   "startFrame": 1002,
+   "endFrame": 1016,
+   "score": 0.875
+  },
+  {
+   "s": 4,
+   "w": "be",
+   "start": 16.949,
+   "end": 17.029,
+   "startFrame": 1017,
+   "endFrame": 1022,
+   "score": 0.894
+  },
+  {
+   "s": 4,
+   "w": "told",
+   "start": 17.11,
+   "end": 17.412,
+   "startFrame": 1027,
+   "endFrame": 1045,
+   "score": 0.868
+  },
+  {
+   "s": 4,
+   "w": "at",
+   "start": 17.472,
+   "end": 17.593,
+   "startFrame": 1048,
+   "endFrame": 1056,
+   "score": 0.609
+  },
+  {
+   "s": 4,
+   "w": "one",
+   "start": 17.674,
+   "end": 17.774,
+   "startFrame": 1060,
+   "endFrame": 1066,
+   "score": 0.994
+  },
+  {
+   "s": 4,
+   "w": "hundred",
+   "start": 17.835,
+   "end": 18.077,
+   "startFrame": 1070,
+   "endFrame": 1085,
+   "score": 0.977
+  },
+  {
+   "s": 4,
+   "w": "and",
+   "start": 18.157,
+   "end": 18.238,
+   "startFrame": 1089,
+   "endFrame": 1094,
+   "score": 0.786
+  },
+  {
+   "s": 4,
+   "w": "seventy.",
+   "start": 18.298,
+   "end": 18.56,
+   "startFrame": 1098,
+   "endFrame": 1114,
+   "score": 0.429
+  },
+  {
+   "s": 5,
+   "w": "So",
+   "start": 19.302,
+   "end": 19.443,
+   "startFrame": 1158,
+   "endFrame": 1167,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "in",
+   "start": 19.766,
+   "end": 19.807,
+   "startFrame": 1186,
+   "endFrame": 1188,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "the",
+   "start": 19.867,
+   "end": 19.968,
+   "startFrame": 1192,
+   "endFrame": 1198,
+   "score": 0.885
+  },
+  {
+   "s": 5,
+   "w": "cab:",
+   "start": 19.988,
+   "end": 20.251,
+   "startFrame": 1199,
+   "endFrame": 1215,
+   "score": 1.0
+  },
+  {
+   "s": 5,
+   "w": "nothing.",
+   "start": 20.897,
+   "end": 21.219,
+   "startFrame": 1254,
+   "endFrame": 1273,
+   "score": 0.97
+  },
+  {
+   "s": 6,
+   "w": "Where",
+   "start": 21.742,
+   "end": 21.884,
+   "startFrame": 1305,
+   "endFrame": 1313,
+   "score": 0.961
+  },
+  {
+   "s": 6,
+   "w": "did",
+   "start": 21.904,
+   "end": 21.985,
+   "startFrame": 1314,
+   "endFrame": 1319,
+   "score": 0.998
+  },
+  {
+   "s": 6,
+   "w": "that",
+   "start": 22.046,
+   "end": 22.208,
+   "startFrame": 1323,
+   "endFrame": 1332,
+   "score": 0.806
+  },
+  {
+   "s": 6,
+   "w": "line",
+   "start": 22.228,
+   "end": 22.471,
+   "startFrame": 1334,
+   "endFrame": 1348,
+   "score": 0.979
+  },
+  {
+   "s": 6,
+   "w": "come",
+   "start": 22.552,
+   "end": 22.714,
+   "startFrame": 1353,
+   "endFrame": 1363,
+   "score": 0.921
+  },
+  {
+   "s": 6,
+   "w": "from?",
+   "start": 22.775,
+   "end": 23.038,
+   "startFrame": 1366,
+   "endFrame": 1382,
+   "score": 0.791
+  },
+  {
+   "s": 7,
+   "w": "It",
+   "start": 23.501,
+   "end": 23.561,
+   "startFrame": 1410,
+   "endFrame": 1414,
+   "score": 0.985
+  },
+  {
+   "s": 7,
+   "w": "matches",
+   "start": 23.661,
+   "end": 23.982,
+   "startFrame": 1420,
+   "endFrame": 1439,
+   "score": 0.97
+  },
+  {
+   "s": 7,
+   "w": "an",
+   "start": 24.062,
+   "end": 24.103,
+   "startFrame": 1444,
+   "endFrame": 1446,
+   "score": 0.997
+  },
+  {
+   "s": 7,
+   "w": "industry",
+   "start": 24.243,
+   "end": 24.624,
+   "startFrame": 1455,
+   "endFrame": 1477,
+   "score": 0.991
+  },
+  {
+   "s": 7,
+   "w": "definition",
+   "start": 24.704,
+   "end": 25.246,
+   "startFrame": 1482,
+   "endFrame": 1515,
+   "score": 0.987
+  },
+  {
+   "s": 7,
+   "w": "that,",
+   "start": 25.387,
+   "end": 25.567,
+   "startFrame": 1523,
+   "endFrame": 1534,
+   "score": 0.985
+  },
+  {
+   "s": 7,
+   "w": "the",
+   "start": 25.788,
+   "end": 25.908,
+   "startFrame": 1547,
+   "endFrame": 1554,
+   "score": 0.95
+  },
+  {
+   "s": 7,
+   "w": "N",
+   "start": 26.149,
+   "end": 26.189,
+   "startFrame": 1569,
+   "endFrame": 1571,
+   "score": 0.999
+  },
+  {
+   "s": 7,
+   "w": "-",
+   "start": 26.189,
+   "end": 26.189,
+   "startFrame": 1571,
+   "endFrame": 1571,
+   "score": 1.0
+  },
+  {
+   "s": 7,
+   "w": "T",
+   "start": 26.33,
+   "end": 26.37,
+   "startFrame": 1580,
+   "endFrame": 1582,
+   "score": 0.932
+  },
+  {
+   "s": 7,
+   "w": "-",
+   "start": 26.37,
+   "end": 26.37,
+   "startFrame": 1582,
+   "endFrame": 1582,
+   "score": 1.0
+  },
+  {
+   "s": 7,
+   "w": "S",
+   "start": 26.751,
+   "end": 26.791,
+   "startFrame": 1605,
+   "endFrame": 1607,
+   "score": 0.93
+  },
+  {
+   "s": 7,
+   "w": "-",
+   "start": 26.791,
+   "end": 26.791,
+   "startFrame": 1607,
+   "endFrame": 1607,
+   "score": 1.0
+  },
+  {
+   "s": 7,
+   "w": "B",
+   "start": 26.911,
+   "end": 26.931,
+   "startFrame": 1615,
+   "endFrame": 1616,
+   "score": 1.0
+  },
+  {
+   "s": 7,
+   "w": "found,",
+   "start": 27.192,
+   "end": 27.493,
+   "startFrame": 1632,
+   "endFrame": 1650,
+   "score": 0.967
+  },
+  {
+   "s": 7,
+   "w": "relates",
+   "start": 27.894,
+   "end": 28.215,
+   "startFrame": 1674,
+   "endFrame": 1693,
+   "score": 0.986
+  },
+  {
+   "s": 7,
+   "w": "to",
+   "start": 28.296,
+   "end": 28.436,
+   "startFrame": 1698,
+   "endFrame": 1706,
+   "score": 0.625
+  },
+  {
+   "s": 7,
+   "w": "billing",
+   "start": 28.476,
+   "end": 28.777,
+   "startFrame": 1709,
+   "endFrame": 1727,
+   "score": 0.999
+  },
+  {
+   "s": 7,
+   "w": "for",
+   "start": 28.857,
+   "end": 28.958,
+   "startFrame": 1731,
+   "endFrame": 1737,
+   "score": 1.0
+  },
+  {
+   "s": 7,
+   "w": "repairs.",
+   "start": 29.038,
+   "end": 29.58,
+   "startFrame": 1742,
+   "endFrame": 1775,
+   "score": 0.995
+  },
+  {
+   "s": 8,
+   "w": "Norfolk",
+   "start": 30.22,
+   "end": 30.502,
+   "startFrame": 1813,
+   "endFrame": 1830,
+   "score": 0.709
+  },
+  {
+   "s": 8,
+   "w": "Southern",
+   "start": 30.623,
+   "end": 30.965,
+   "startFrame": 1837,
+   "endFrame": 1858,
+   "score": 0.998
+  },
+  {
+   "s": 8,
+   "w": "says",
+   "start": 31.086,
+   "end": 31.247,
+   "startFrame": 1865,
+   "endFrame": 1875,
+   "score": 0.993
+  },
+  {
+   "s": 8,
+   "w": "it",
+   "start": 31.347,
+   "end": 31.428,
+   "startFrame": 1881,
+   "endFrame": 1886,
+   "score": 0.666
+  },
+  {
+   "s": 8,
+   "w": "also",
+   "start": 31.508,
+   "end": 31.75,
+   "startFrame": 1890,
+   "endFrame": 1905,
+   "score": 0.983
+  },
+  {
+   "s": 8,
+   "w": "drew",
+   "start": 31.83,
+   "end": 32.012,
+   "startFrame": 1910,
+   "endFrame": 1921,
+   "score": 0.977
+  },
+  {
+   "s": 8,
+   "w": "on",
+   "start": 32.112,
+   "end": 32.152,
+   "startFrame": 1927,
+   "endFrame": 1929,
+   "score": 0.999
+  },
+  {
+   "s": 8,
+   "w": "its",
+   "start": 32.213,
+   "end": 32.334,
+   "startFrame": 1933,
+   "endFrame": 1940,
+   "score": 0.835
+  },
+  {
+   "s": 8,
+   "w": "own",
+   "start": 32.434,
+   "end": 32.535,
+   "startFrame": 1946,
+   "endFrame": 1952,
+   "score": 0.942
+  },
+  {
+   "s": 8,
+   "w": "experience.",
+   "start": 32.615,
+   "end": 33.199,
+   "startFrame": 1957,
+   "endFrame": 1992,
+   "score": 0.981
+  },
+  {
+   "s": 9,
+   "w": "About",
+   "start": 33.881,
+   "end": 34.062,
+   "startFrame": 2033,
+   "endFrame": 2044,
+   "score": 1.0
+  },
+  {
+   "s": 9,
+   "w": "forty",
+   "start": 34.203,
+   "end": 34.444,
+   "startFrame": 2052,
+   "endFrame": 2067,
+   "score": 0.956
+  },
+  {
+   "s": 9,
+   "w": "minutes",
+   "start": 34.505,
+   "end": 34.767,
+   "startFrame": 2070,
+   "endFrame": 2086,
+   "score": 0.92
+  },
+  {
+   "s": 9,
+   "w": "later,",
+   "start": 34.807,
+   "end": 35.149,
+   "startFrame": 2088,
+   "endFrame": 2109,
+   "score": 0.775
+  },
+  {
+   "s": 9,
+   "w": "the",
+   "start": 35.451,
+   "end": 35.572,
+   "startFrame": 2127,
+   "endFrame": 2134,
+   "score": 0.808
+  },
+  {
+   "s": 9,
+   "w": "axle",
+   "start": 35.713,
+   "end": 35.954,
+   "startFrame": 2143,
+   "endFrame": 2157,
+   "score": 0.772
+  },
+  {
+   "s": 9,
+   "w": "came",
+   "start": 36.035,
+   "end": 36.216,
+   "startFrame": 2162,
+   "endFrame": 2173,
+   "score": 0.916
+  },
+  {
+   "s": 9,
+   "w": "apart.",
+   "start": 36.277,
+   "end": 36.558,
+   "startFrame": 2177,
+   "endFrame": 2194,
+   "score": 1.0
+  },
+  {
+   "s": 10,
+   "w": "Three",
+   "start": 37.5,
+   "end": 37.722,
+   "startFrame": 2250,
+   "endFrame": 2263,
+   "score": 0.95
+  },
+  {
+   "s": 10,
+   "w": "days",
+   "start": 37.762,
+   "end": 37.943,
+   "startFrame": 2266,
+   "endFrame": 2277,
+   "score": 0.988
+  },
+  {
+   "s": 10,
+   "w": "later",
+   "start": 38.024,
+   "end": 38.346,
+   "startFrame": 2281,
+   "endFrame": 2301,
+   "score": 0.81
+  },
+  {
+   "s": 10,
+   "w": "came",
+   "start": 38.406,
+   "end": 38.627,
+   "startFrame": 2304,
+   "endFrame": 2318,
+   "score": 0.863
+  },
+  {
+   "s": 10,
+   "w": "the",
+   "start": 38.648,
+   "end": 38.728,
+   "startFrame": 2319,
+   "endFrame": 2324,
+   "score": 1.0
+  },
+  {
+   "s": 10,
+   "w": "second",
+   "start": 38.809,
+   "end": 39.111,
+   "startFrame": 2329,
+   "endFrame": 2347,
+   "score": 0.948
+  },
+  {
+   "s": 10,
+   "w": "number:",
+   "start": 39.171,
+   "end": 39.433,
+   "startFrame": 2350,
+   "endFrame": 2366,
+   "score": 0.995
+  },
+  {
+   "s": 10,
+   "w": "a",
+   "start": 39.936,
+   "end": 39.956,
+   "startFrame": 2396,
+   "endFrame": 2397,
+   "score": 0.999
+  },
+  {
+   "s": 10,
+   "w": "temperature.",
+   "start": 40.037,
+   "end": 40.56,
+   "startFrame": 2402,
+   "endFrame": 2434,
+   "score": 0.932
+  },
+  {
+   "s": 11,
+   "w": "Contractors",
+   "start": 41.02,
+   "end": 41.642,
+   "startFrame": 2461,
+   "endFrame": 2499,
+   "score": 0.957
+  },
+  {
+   "s": 11,
+   "w": "told",
+   "start": 41.702,
+   "end": 41.903,
+   "startFrame": 2502,
+   "endFrame": 2514,
+   "score": 0.94
+  },
+  {
+   "s": 11,
+   "w": "the",
+   "start": 41.903,
+   "end": 42.043,
+   "startFrame": 2514,
+   "endFrame": 2523,
+   "score": 0.611
+  },
+  {
+   "s": 11,
+   "w": "incident",
+   "start": 42.103,
+   "end": 42.464,
+   "startFrame": 2526,
+   "endFrame": 2548,
+   "score": 0.991
+  },
+  {
+   "s": 11,
+   "w": "commander",
+   "start": 42.505,
+   "end": 42.946,
+   "startFrame": 2550,
+   "endFrame": 2577,
+   "score": 0.997
+  },
+  {
+   "s": 11,
+   "w": "that",
+   "start": 43.026,
+   "end": 43.147,
+   "startFrame": 2582,
+   "endFrame": 2589,
+   "score": 1.0
+  },
+  {
+   "s": 11,
+   "w": "if",
+   "start": 43.207,
+   "end": 43.247,
+   "startFrame": 2592,
+   "endFrame": 2595,
+   "score": 1.0
+  },
+  {
+   "s": 11,
+   "w": "a",
+   "start": 43.347,
+   "end": 43.367,
+   "startFrame": 2601,
+   "endFrame": 2602,
+   "score": 0.999
+  },
+  {
+   "s": 11,
+   "w": "vinyl",
+   "start": 43.447,
+   "end": 43.748,
+   "startFrame": 2607,
+   "endFrame": 2625,
+   "score": 0.799
+  },
+  {
+   "s": 11,
+   "w": "chloride",
+   "start": 43.849,
+   "end": 44.27,
+   "startFrame": 2631,
+   "endFrame": 2656,
+   "score": 0.948
+  },
+  {
+   "s": 11,
+   "w": "tank",
+   "start": 44.35,
+   "end": 44.571,
+   "startFrame": 2661,
+   "endFrame": 2674,
+   "score": 1.0
+  },
+  {
+   "s": 11,
+   "w": "car",
+   "start": 44.671,
+   "end": 44.832,
+   "startFrame": 2680,
+   "endFrame": 2690,
+   "score": 0.98
+  },
+  {
+   "s": 11,
+   "w": "reached",
+   "start": 44.972,
+   "end": 45.253,
+   "startFrame": 2698,
+   "endFrame": 2715,
+   "score": 0.968
+  },
+  {
+   "s": 11,
+   "w": "it,",
+   "start": 45.353,
+   "end": 45.433,
+   "startFrame": 2721,
+   "endFrame": 2726,
+   "score": 0.667
+  },
+  {
+   "s": 11,
+   "w": "the",
+   "start": 45.734,
+   "end": 45.814,
+   "startFrame": 2744,
+   "endFrame": 2749,
+   "score": 1.0
+  },
+  {
+   "s": 11,
+   "w": "reaction",
+   "start": 45.875,
+   "end": 46.356,
+   "startFrame": 2752,
+   "endFrame": 2781,
+   "score": 0.986
+  },
+  {
+   "s": 11,
+   "w": "would",
+   "start": 46.456,
+   "end": 46.657,
+   "startFrame": 2787,
+   "endFrame": 2799,
+   "score": 0.847
+  },
+  {
+   "s": 11,
+   "w": "run",
+   "start": 46.717,
+   "end": 46.858,
+   "startFrame": 2803,
+   "endFrame": 2811,
+   "score": 1.0
+  },
+  {
+   "s": 11,
+   "w": "out",
+   "start": 46.938,
+   "end": 47.038,
+   "startFrame": 2816,
+   "endFrame": 2822,
+   "score": 0.999
+  },
+  {
+   "s": 11,
+   "w": "of",
+   "start": 47.078,
+   "end": 47.158,
+   "startFrame": 2825,
+   "endFrame": 2830,
+   "score": 0.667
+  },
+  {
+   "s": 11,
+   "w": "control.",
+   "start": 47.199,
+   "end": 47.6,
+   "startFrame": 2832,
+   "endFrame": 2856,
+   "score": 0.925
+  },
+  {
+   "s": 12,
+   "w": "He",
+   "start": 48.101,
+   "end": 48.161,
+   "startFrame": 2886,
+   "endFrame": 2890,
+   "score": 1.0
+  },
+  {
+   "s": 12,
+   "w": "said",
+   "start": 48.242,
+   "end": 48.383,
+   "startFrame": 2895,
+   "endFrame": 2903,
+   "score": 1.0
+  },
+  {
+   "s": 12,
+   "w": "he",
+   "start": 48.443,
+   "end": 48.504,
+   "startFrame": 2907,
+   "endFrame": 2910,
+   "score": 0.994
+  },
+  {
+   "s": 12,
+   "w": "was",
+   "start": 48.564,
+   "end": 48.665,
+   "startFrame": 2914,
+   "endFrame": 2920,
+   "score": 1.0
+  },
+  {
+   "s": 12,
+   "w": "given",
+   "start": 48.705,
+   "end": 48.907,
+   "startFrame": 2922,
+   "endFrame": 2934,
+   "score": 0.976
+  },
+  {
+   "s": 12,
+   "w": "thirteen",
+   "start": 48.947,
+   "end": 49.531,
+   "startFrame": 2937,
+   "endFrame": 2972,
+   "score": 0.84
+  },
+  {
+   "s": 12,
+   "w": "minutes",
+   "start": 49.652,
+   "end": 49.954,
+   "startFrame": 2979,
+   "endFrame": 2997,
+   "score": 0.969
+  },
+  {
+   "s": 12,
+   "w": "to",
+   "start": 50.055,
+   "end": 50.136,
+   "startFrame": 3003,
+   "endFrame": 3008,
+   "score": 1.0
+  },
+  {
+   "s": 12,
+   "w": "decide.",
+   "start": 50.196,
+   "end": 50.619,
+   "startFrame": 3012,
+   "endFrame": 3037,
+   "score": 1.0
+  },
+  {
+   "s": 13,
+   "w": "One",
+   "start": 51.382,
+   "end": 51.543,
+   "startFrame": 3083,
+   "endFrame": 3093,
+   "score": 0.788
+  },
+  {
+   "s": 13,
+   "w": "number",
+   "start": 51.583,
+   "end": 51.845,
+   "startFrame": 3095,
+   "endFrame": 3111,
+   "score": 0.981
+  },
+  {
+   "s": 13,
+   "w": "matched",
+   "start": 51.966,
+   "end": 52.268,
+   "startFrame": 3118,
+   "endFrame": 3136,
+   "score": 0.976
+  },
+  {
+   "s": 13,
+   "w": "a",
+   "start": 52.328,
+   "end": 52.349,
+   "startFrame": 3140,
+   "endFrame": 3141,
+   "score": 1.0
+  },
+  {
+   "s": 13,
+   "w": "definition",
+   "start": 52.409,
+   "end": 52.933,
+   "startFrame": 3145,
+   "endFrame": 3176,
+   "score": 0.981
+  },
+  {
+   "s": 13,
+   "w": "written",
+   "start": 53.034,
+   "end": 53.255,
+   "startFrame": 3182,
+   "endFrame": 3195,
+   "score": 0.999
+  },
+  {
+   "s": 13,
+   "w": "for",
+   "start": 53.316,
+   "end": 53.416,
+   "startFrame": 3199,
+   "endFrame": 3205,
+   "score": 1.0
+  },
+  {
+   "s": 13,
+   "w": "billing.",
+   "start": 53.497,
+   "end": 53.819,
+   "startFrame": 3210,
+   "endFrame": 3229,
+   "score": 0.971
+  },
+  {
+   "s": 14,
+   "w": "The",
+   "start": 54.261,
+   "end": 54.341,
+   "startFrame": 3256,
+   "endFrame": 3260,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "other,",
+   "start": 54.442,
+   "end": 54.602,
+   "startFrame": 3267,
+   "endFrame": 3276,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "the",
+   "start": 54.964,
+   "end": 55.044,
+   "startFrame": 3298,
+   "endFrame": 3303,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "investigators",
+   "start": 55.105,
+   "end": 55.828,
+   "startFrame": 3306,
+   "endFrame": 3350,
+   "score": 0.945
+  },
+  {
+   "s": 14,
+   "w": "could",
+   "start": 55.888,
+   "end": 56.029,
+   "startFrame": 3353,
+   "endFrame": 3362,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "not",
+   "start": 56.109,
+   "end": 56.29,
+   "startFrame": 3367,
+   "endFrame": 3377,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "find",
+   "start": 56.431,
+   "end": 56.712,
+   "startFrame": 3386,
+   "endFrame": 3403,
+   "score": 0.986
+  },
+  {
+   "s": 14,
+   "w": "in",
+   "start": 56.793,
+   "end": 56.833,
+   "startFrame": 3408,
+   "endFrame": 3410,
+   "score": 0.996
+  },
+  {
+   "s": 14,
+   "w": "the",
+   "start": 56.893,
+   "end": 56.953,
+   "startFrame": 3414,
+   "endFrame": 3417,
+   "score": 0.997
+  },
+  {
+   "s": 14,
+   "w": "guidance",
+   "start": 56.993,
+   "end": 57.395,
+   "startFrame": 3420,
+   "endFrame": 3444,
+   "score": 0.987
+  },
+  {
+   "s": 14,
+   "w": "used",
+   "start": 57.536,
+   "end": 57.677,
+   "startFrame": 3452,
+   "endFrame": 3461,
+   "score": 1.0
+  },
+  {
+   "s": 14,
+   "w": "at",
+   "start": 57.737,
+   "end": 57.777,
+   "startFrame": 3464,
+   "endFrame": 3467,
+   "score": 0.927
+  },
+  {
+   "s": 14,
+   "w": "the",
+   "start": 57.797,
+   "end": 57.918,
+   "startFrame": 3468,
+   "endFrame": 3475,
+   "score": 0.739
+  },
+  {
+   "s": 14,
+   "w": "scene.",
+   "start": 57.978,
+   "end": 58.3,
+   "startFrame": 3479,
+   "endFrame": 3498,
+   "score": 0.845
+  },
+  {
+   "s": 15,
+   "w": "What",
+   "start": 58.72,
+   "end": 58.841,
+   "startFrame": 3523,
+   "endFrame": 3530,
+   "score": 0.997
+  },
+  {
+   "s": 15,
+   "w": "was",
+   "start": 58.881,
+   "end": 58.982,
+   "startFrame": 3533,
+   "endFrame": 3539,
+   "score": 1.0
+  },
+  {
+   "s": 15,
+   "w": "decided",
+   "start": 59.062,
+   "end": 59.505,
+   "startFrame": 3544,
+   "endFrame": 3570,
+   "score": 0.975
+  },
+  {
+   "s": 15,
+   "w": "on",
+   "start": 59.585,
+   "end": 59.626,
+   "startFrame": 3575,
+   "endFrame": 3578,
+   "score": 1.0
+  },
+  {
+   "s": 15,
+   "w": "that",
+   "start": 59.767,
+   "end": 59.948,
+   "startFrame": 3586,
+   "endFrame": 3597,
+   "score": 1.0
+  },
+  {
+   "s": 15,
+   "w": "number",
+   "start": 60.068,
+   "end": 60.33,
+   "startFrame": 3604,
+   "endFrame": 3620,
+   "score": 0.994
+  },
+  {
+   "s": 15,
+   "w": "is",
+   "start": 60.632,
+   "end": 60.692,
+   "startFrame": 3638,
+   "endFrame": 3642,
+   "score": 0.988
+  },
+  {
+   "s": 15,
+   "w": "in",
+   "start": 60.772,
+   "end": 60.813,
+   "startFrame": 3646,
+   "endFrame": 3649,
+   "score": 1.0
+  },
+  {
+   "s": 15,
+   "w": "the",
+   "start": 60.873,
+   "end": 60.953,
+   "startFrame": 3652,
+   "endFrame": 3657,
+   "score": 0.83
+  },
+  {
+   "s": 15,
+   "w": "full",
+   "start": 61.014,
+   "end": 61.195,
+   "startFrame": 3661,
+   "endFrame": 3672,
+   "score": 0.997
+  },
+  {
+   "s": 15,
+   "w": "investigation.",
+   "start": 61.255,
+   "end": 61.979,
+   "startFrame": 3675,
+   "endFrame": 3719,
+   "score": 0.948
+  },
+  {
+   "s": 16,
+   "w": "Margin",
+   "start": 63.001,
+   "end": 63.365,
+   "startFrame": 3780,
+   "endFrame": 3802,
+   "score": 0.988
+  },
+  {
+   "s": 16,
+   "w": "of",
+   "start": 63.445,
+   "end": 63.567,
+   "startFrame": 3807,
+   "endFrame": 3814,
+   "score": 0.6
+  },
+  {
+   "s": 16,
+   "w": "Error,",
+   "start": 63.668,
+   "end": 63.91,
+   "startFrame": 3820,
+   "endFrame": 3835,
+   "score": 0.861
+  },
+  {
+   "s": 16,
+   "w": "on",
+   "start": 64.375,
+   "end": 64.415,
+   "startFrame": 3862,
+   "endFrame": 3865,
+   "score": 0.999
+  },
+  {
+   "s": 16,
+   "w": "YouTube.",
+   "start": 64.496,
+   "end": 64.9,
+   "startFrame": 3870,
+   "endFrame": 3894,
+   "score": 0.532
+  }
+ ],
+ "words_source": "measured: CTC forced alignment (torchaudio 2.8.0 WAV2VEC2_ASR_BASE_960H) on assets/vo/film_vo.wav, scripts/word_align.py"
+}
