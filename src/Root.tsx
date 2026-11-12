@@ -12,9 +12,14 @@ import {ThumbBearing} from '../films/east-palestine/remotion/thumb/ThumbBearing'
 import {ThumbPoster} from '../films/east-palestine/remotion/thumb/ThumbPoster';
 import {Short, calcShortMetadata, SHORT_W, SHORT_H} from '../lib/remotion/Short';
 import type {ShortProps} from '../lib/remotion/Short';
+import {Reel, calcReelMetadata, REEL_W, REEL_H} from '../lib/remotion/Reel';
+import type {ReelProps} from '../lib/remotion/Reel';
 
 // Shorts render with --props films/<slug>/shorts/<id>.props.json (scripts/shorts_build.py writes them).
 const shortDefaults: ShortProps = {id: 'none', clip: 'shorts/none.mp4', duration: 1, chip: '', hook: [], words: [], sentences: [], cover: 0};
+
+// Reels render with --props films/<slug>/reel/reel.props.json (films/<slug>/reel/build_reel.py writes it).
+const reelDefaults: ReelProps = {duration: 1, pic: 'reel/none.mp4', mix: 'reel/none.wav', segments: [], words: [], sentences: [], voEnd: 0};
 
 loadBrandFonts();
 
@@ -34,6 +39,9 @@ export const Root: React.FC = () => (
 		</Folder>
 		<Folder name="Shorts">
 			<Composition id="Short" component={Short} durationInFrames={60} fps={video.fps} width={SHORT_W} height={SHORT_H} defaultProps={shortDefaults} calculateMetadata={calcShortMetadata} />
+		</Folder>
+		<Folder name="Reels">
+			<Composition id="Reel" component={Reel} durationInFrames={60} fps={video.fps} width={REEL_W} height={REEL_H} defaultProps={reelDefaults} calculateMetadata={calcReelMetadata} />
 		</Folder>
 		<Folder name="Dev">
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />

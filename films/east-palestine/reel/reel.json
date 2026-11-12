@@ -1,0 +1,232 @@
+{
+ "_doc": "Instagram reel for East Palestine (owner, 12 NOV 2026): its own narration (script/vo.txt, owner-approved), the film's own picture. Each segment: reel start (s), master start (s), crop at start and end [x, y, width] in 1920x1080 master space (height follows the picture window), the honesty or source label shown in the window. Built by films/east-palestine/reel/build_reel.py.",
+ "master": "assets/reel_src/east-palestine_master_4k.mp4",
+ "end": 66.3,
+ "segments": [
+  {
+   "t": 0.0,
+   "m": 0.5,
+   "c0": [
+    80,
+    0,
+    1389
+   ],
+   "c1": [
+    220,
+    60,
+    1150
+   ],
+   "label": "NTSB DRONE VIDEO · 05 FEB 2023"
+  },
+  {
+   "t": 6.6,
+   "m": 154.8,
+   "c0": [
+    40,
+    60,
+    1389
+   ],
+   "c1": [
+    80,
+    100,
+    1300
+   ],
+   "label": "NS THRESHOLDS · NTSB RIR-24-05"
+  },
+  {
+   "t": 9.8,
+   "m": 23.4,
+   "c0": [
+    480,
+    0,
+    1389
+   ],
+   "c1": [
+    780,
+    100,
+    1100
+   ],
+   "label": "ILLUSTRATION · NTSB RIR-24-05 P. 6"
+  },
+  {
+   "t": 15.6,
+   "m": 33.6,
+   "c0": [
+    560,
+    40,
+    1340
+   ],
+   "c1": [
+    720,
+    60,
+    1160
+   ],
+   "label": "ILLUSTRATION · NTSB RIR-24-05 P. 6"
+  },
+  {
+   "t": 18.8,
+   "m": 38.4,
+   "c0": [
+    30,
+    40,
+    1389
+   ],
+   "c1": [
+    60,
+    90,
+    1250
+   ],
+   "label": "ILLUSTRATION · NTSB RIR-24-05 P. 7"
+  },
+  {
+   "t": 21.5,
+   "m": 298.8,
+   "c0": [
+    250,
+    0,
+    1389
+   ],
+   "c1": [
+    300,
+    40,
+    1300
+   ],
+   "label": ""
+  },
+  {
+   "t": 23.3,
+   "m": 313.2,
+   "c0": [
+    200,
+    40,
+    1420
+   ],
+   "c1": [
+    220,
+    150,
+    1400
+   ],
+   "label": "NTSB RIR-24-05 · P. 106-107"
+  },
+  {
+   "t": 29.9,
+   "m": 445.6,
+   "c0": [
+    120,
+    60,
+    1250
+   ],
+   "c1": [
+    180,
+    140,
+    1060
+   ],
+   "label": "NTSB RIR-24-05 · P. 106"
+  },
+  {
+   "t": 33.6,
+   "m": 666.0,
+   "c0": [
+    30,
+    0,
+    1389
+   ],
+   "c1": [
+    60,
+    40,
+    1250
+   ],
+   "label": "RECONSTRUCTION · NTSB EVENT RECORDER"
+  },
+  {
+   "t": 37.3,
+   "m": 825.6,
+   "c0": [
+    20,
+    0,
+    1389
+   ],
+   "c1": [
+    40,
+    30,
+    1250
+   ],
+   "label": "RECONSTRUCTION · NTSB TABLE 3"
+  },
+  {
+   "t": 40.8,
+   "m": 829.1,
+   "c0": [
+    20,
+    40,
+    1389
+   ],
+   "c1": [
+    100,
+    100,
+    1200
+   ],
+   "label": "RECONSTRUCTION · NTSB TABLE 3"
+  },
+  {
+   "t": 47.8,
+   "m": 843.0,
+   "c0": [
+    20,
+    80,
+    1300
+   ],
+   "c1": [
+    60,
+    140,
+    1100
+   ],
+   "label": "NTSB RIR-24-05 · P. 28"
+  },
+  {
+   "t": 51.0,
+   "m": 873.8,
+   "c0": [
+    60,
+    40,
+    1389
+   ],
+   "c1": [
+    100,
+    60,
+    1300
+   ],
+   "label": ""
+  },
+  {
+   "t": 54.0,
+   "m": 876.6,
+   "c0": [
+    60,
+    60,
+    1389
+   ],
+   "c1": [
+    531,
+    80,
+    1389
+   ],
+   "label": ""
+  },
+  {
+   "t": 58.5,
+   "image": "reel/ep_thumb_live.jpg",
+   "c0": [
+    0,
+    0,
+    1920
+   ],
+   "c1": [
+    120,
+    60,
+    1680
+   ],
+   "label": "THE FULL FILM · ON YOUTUBE"
+  }
+ ]
+}

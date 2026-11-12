@@ -1,0 +1,797 @@
+[
+{
+"w": "Two",
+"start": 0.0,
+"end": 0.26
+},
+{
+"w": "numbers",
+"start": 0.26,
+"end": 0.66
+},
+{
+"w": "decided",
+"start": 0.66,
+"end": 1.2
+},
+{
+"w": "this",
+"start": 1.2,
+"end": 1.46
+},
+{
+"w": "town's",
+"start": 1.46,
+"end": 1.98
+},
+{
+"w": "week.",
+"start": 1.98,
+"end": 2.2
+},
+{
+"w": "East",
+"start": 2.92,
+"end": 3.04
+},
+{
+"w": "Palestine,",
+"start": 3.04,
+"end": 3.66
+},
+{
+"w": "Ohio,",
+"start": 4.0,
+"end": 4.38
+},
+{
+"w": "February",
+"start": 4.9,
+"end": 5.3
+},
+{
+"w": "2023.",
+"start": 5.3,
+"end": 6.24
+},
+{
+"w": "The",
+"start": 7.24,
+"end": 7.32
+},
+{
+"w": "first,",
+"start": 7.32,
+"end": 7.68
+},
+{
+"w": "170.",
+"start": 8.36,
+"end": 9.18
+},
+{
+"w": "A",
+"start": 10.06,
+"end": 10.18
+},
+{
+"w": "detector",
+"start": 10.18,
+"end": 10.6
+},
+{
+"w": "beside",
+"start": 10.6,
+"end": 10.98
+},
+{
+"w": "the",
+"start": 10.98,
+"end": 11.24
+},
+{
+"w": "track",
+"start": 11.24,
+"end": 11.56
+},
+{
+"w": "read",
+"start": 11.56,
+"end": 11.76
+},
+{
+"w": "a",
+"start": 11.76,
+"end": 11.98
+},
+{
+"w": "bearing",
+"start": 11.98,
+"end": 12.22
+},
+{
+"w": "on",
+"start": 12.22,
+"end": 12.44
+},
+{
+"w": "fire",
+"start": 12.44,
+"end": 12.86
+},
+{
+"w": "at",
+"start": 12.86,
+"end": 13.16
+},
+{
+"w": "103",
+"start": 13.16,
+"end": 14.08
+},
+{
+"w": "degrees",
+"start": 14.08,
+"end": 14.58
+},
+{
+"w": "above",
+"start": 14.58,
+"end": 14.9
+},
+{
+"w": "the",
+"start": 14.9,
+"end": 15.18
+},
+{
+"w": "air.",
+"start": 15.18,
+"end": 15.46
+},
+{
+"w": "The",
+"start": 15.84,
+"end": 16.06
+},
+{
+"w": "crew",
+"start": 16.06,
+"end": 16.32
+},
+{
+"w": "would",
+"start": 16.32,
+"end": 16.52
+},
+{
+"w": "only",
+"start": 16.52,
+"end": 16.88
+},
+{
+"w": "be",
+"start": 16.88,
+"end": 17.14
+},
+{
+"w": "told",
+"start": 17.14,
+"end": 17.34
+},
+{
+"w": "at",
+"start": 17.34,
+"end": 17.6
+},
+{
+"w": "170.",
+"start": 17.6,
+"end": 18.44
+},
+{
+"w": "So",
+"start": 19.18,
+"end": 19.52
+},
+{
+"w": "in",
+"start": 19.52,
+"end": 19.84
+},
+{
+"w": "the",
+"start": 19.84,
+"end": 20.06
+},
+{
+"w": "cab,",
+"start": 20.06,
+"end": 20.26
+},
+{
+"w": "nothing.",
+"start": 20.92,
+"end": 21.16
+},
+{
+"w": "Where",
+"start": 21.66,
+"end": 21.88
+},
+{
+"w": "did",
+"start": 21.88,
+"end": 22.02
+},
+{
+"w": "that",
+"start": 22.02,
+"end": 22.2
+},
+{
+"w": "line",
+"start": 22.2,
+"end": 22.42
+},
+{
+"w": "come",
+"start": 22.42,
+"end": 22.68
+},
+{
+"w": "from?",
+"start": 22.68,
+"end": 23.08
+},
+{
+"w": "It",
+"start": 23.38,
+"end": 23.62
+},
+{
+"w": "matches",
+"start": 23.62,
+"end": 23.92
+},
+{
+"w": "an",
+"start": 23.92,
+"end": 24.2
+},
+{
+"w": "industry",
+"start": 24.2,
+"end": 24.64
+},
+{
+"w": "history",
+"start": 24.64,
+"end": 24.64
+},
+{
+"w": "definition",
+"start": 24.64,
+"end": 25.28
+},
+{
+"w": "that",
+"start": 25.28,
+"end": 25.66
+},
+{
+"w": "the",
+"start": 25.66,
+"end": 25.94
+},
+{
+"w": "NTSB",
+"start": 25.94,
+"end": 27.14
+},
+{
+"w": "found",
+"start": 27.14,
+"end": 27.520000000000003
+},
+{
+"w": "relates",
+"start": 27.520000000000003,
+"end": 28.18
+},
+{
+"w": "to",
+"start": 28.18,
+"end": 28.48
+},
+{
+"w": "billing",
+"start": 28.44,
+"end": 28.72
+},
+{
+"w": "for",
+"start": 28.72,
+"end": 29.02
+},
+{
+"w": "repairs.",
+"start": 29.02,
+"end": 29.62
+},
+{
+"w": "Norfolk",
+"start": 30.34,
+"end": 30.42
+},
+{
+"w": "Southern",
+"start": 30.42,
+"end": 30.9
+},
+{
+"w": "says",
+"start": 30.9,
+"end": 31.22
+},
+{
+"w": "it",
+"start": 31.22,
+"end": 31.4
+},
+{
+"w": "also",
+"start": 31.4,
+"end": 31.74
+},
+{
+"w": "drew",
+"start": 31.74,
+"end": 32.0
+},
+{
+"w": "on",
+"start": 32.0,
+"end": 32.18
+},
+{
+"w": "its",
+"start": 32.18,
+"end": 32.32
+},
+{
+"w": "own",
+"start": 32.32,
+"end": 32.56
+},
+{
+"w": "experience.",
+"start": 32.56,
+"end": 33.2
+},
+{
+"w": "About",
+"start": 33.9,
+"end": 34.06
+},
+{
+"w": "40",
+"start": 34.06,
+"end": 34.44
+},
+{
+"w": "minutes",
+"start": 34.44,
+"end": 34.66
+},
+{
+"w": "later,",
+"start": 34.66,
+"end": 35.14
+},
+{
+"w": "the",
+"start": 35.48,
+"end": 35.58
+},
+{
+"w": "axle",
+"start": 35.58,
+"end": 35.92
+},
+{
+"w": "came",
+"start": 35.92,
+"end": 36.18
+},
+{
+"w": "apart.",
+"start": 36.18,
+"end": 36.66
+},
+{
+"w": "Three",
+"start": 37.58,
+"end": 37.7
+},
+{
+"w": "days",
+"start": 37.7,
+"end": 37.94
+},
+{
+"w": "later",
+"start": 37.94,
+"end": 38.28
+},
+{
+"w": "came",
+"start": 38.28,
+"end": 38.58
+},
+{
+"w": "the",
+"start": 38.58,
+"end": 38.74
+},
+{
+"w": "second",
+"start": 38.74,
+"end": 39.08
+},
+{
+"w": "number,",
+"start": 39.08,
+"end": 39.46
+},
+{
+"w": "a",
+"start": 39.84,
+"end": 40.06
+},
+{
+"w": "temperature.",
+"start": 40.06,
+"end": 40.46
+},
+{
+"w": "Contractors",
+"start": 41.08,
+"end": 41.64
+},
+{
+"w": "told",
+"start": 41.64,
+"end": 41.88
+},
+{
+"w": "the",
+"start": 41.88,
+"end": 42.08
+},
+{
+"w": "incident",
+"start": 42.08,
+"end": 42.44
+},
+{
+"w": "commander",
+"start": 42.44,
+"end": 42.92
+},
+{
+"w": "that",
+"start": 42.92,
+"end": 43.14
+},
+{
+"w": "if",
+"start": 43.14,
+"end": 43.26
+},
+{
+"w": "a",
+"start": 43.26,
+"end": 43.5
+},
+{
+"w": "vinyl",
+"start": 43.5,
+"end": 43.76
+},
+{
+"w": "chloride",
+"start": 43.76,
+"end": 44.2
+},
+{
+"w": "tank",
+"start": 44.2,
+"end": 44.58
+},
+{
+"w": "car",
+"start": 44.58,
+"end": 44.86
+},
+{
+"w": "reached",
+"start": 44.86,
+"end": 45.2
+},
+{
+"w": "it,",
+"start": 45.2,
+"end": 45.5
+},
+{
+"w": "the",
+"start": 45.74,
+"end": 45.84
+},
+{
+"w": "reaction",
+"start": 45.84,
+"end": 46.3
+},
+{
+"w": "would",
+"start": 46.3,
+"end": 46.58
+},
+{
+"w": "run",
+"start": 46.58,
+"end": 46.84
+},
+{
+"w": "out",
+"start": 46.84,
+"end": 47.04
+},
+{
+"w": "of",
+"start": 47.04,
+"end": 47.22
+},
+{
+"w": "control.",
+"start": 47.22,
+"end": 47.56
+},
+{
+"w": "He",
+"start": 48.1,
+"end": 48.2
+},
+{
+"w": "said",
+"start": 48.2,
+"end": 48.4
+},
+{
+"w": "he",
+"start": 48.4,
+"end": 48.54
+},
+{
+"w": "was",
+"start": 48.54,
+"end": 48.72
+},
+{
+"w": "given",
+"start": 48.72,
+"end": 48.92
+},
+{
+"w": "13",
+"start": 48.92,
+"end": 49.5
+},
+{
+"w": "minutes",
+"start": 49.5,
+"end": 49.88
+},
+{
+"w": "to",
+"start": 49.88,
+"end": 50.18
+},
+{
+"w": "decide.",
+"start": 50.18,
+"end": 50.58
+},
+{
+"w": "One",
+"start": 51.28,
+"end": 51.5
+},
+{
+"w": "number",
+"start": 51.5,
+"end": 51.86
+},
+{
+"w": "matched",
+"start": 51.86,
+"end": 52.22
+},
+{
+"w": "a",
+"start": 52.22,
+"end": 52.42
+},
+{
+"w": "definition",
+"start": 52.42,
+"end": 52.88
+},
+{
+"w": "written",
+"start": 52.88,
+"end": 53.18
+},
+{
+"w": "for",
+"start": 53.18,
+"end": 53.48
+},
+{
+"w": "billing.",
+"start": 53.48,
+"end": 53.8
+},
+{
+"w": "The",
+"start": 54.2,
+"end": 54.36
+},
+{
+"w": "other,",
+"start": 54.36,
+"end": 54.62
+},
+{
+"w": "the",
+"start": 55.02,
+"end": 55.1
+},
+{
+"w": "investigators",
+"start": 55.1,
+"end": 55.72
+},
+{
+"w": "could",
+"start": 55.72,
+"end": 56.0
+},
+{
+"w": "not",
+"start": 56.0,
+"end": 56.28
+},
+{
+"w": "find",
+"start": 56.28,
+"end": 56.7
+},
+{
+"w": "in",
+"start": 56.7,
+"end": 56.86
+},
+{
+"w": "the",
+"start": 56.86,
+"end": 57.02
+},
+{
+"w": "guidance",
+"start": 57.02,
+"end": 57.3
+},
+{
+"w": "used",
+"start": 57.3,
+"end": 57.66
+},
+{
+"w": "at",
+"start": 57.66,
+"end": 57.82
+},
+{
+"w": "the",
+"start": 57.82,
+"end": 57.94
+},
+{
+"w": "scene.",
+"start": 57.94,
+"end": 58.28
+},
+{
+"w": "What",
+"start": 58.76,
+"end": 58.84
+},
+{
+"w": "was",
+"start": 58.84,
+"end": 59.02
+},
+{
+"w": "decided",
+"start": 59.02,
+"end": 59.46
+},
+{
+"w": "on",
+"start": 59.46,
+"end": 59.68
+},
+{
+"w": "that",
+"start": 59.68,
+"end": 59.98
+},
+{
+"w": "number",
+"start": 59.98,
+"end": 60.36
+},
+{
+"w": "is",
+"start": 60.36,
+"end": 60.7
+},
+{
+"w": "in",
+"start": 60.7,
+"end": 60.86
+},
+{
+"w": "the",
+"start": 60.86,
+"end": 60.98
+},
+{
+"w": "full",
+"start": 60.98,
+"end": 61.2
+},
+{
+"w": "investigation.",
+"start": 61.2,
+"end": 61.96
+},
+{
+"w": "Margin",
+"start": 63.02,
+"end": 63.4
+},
+{
+"w": "of",
+"start": 63.4,
+"end": 63.58
+},
+{
+"w": "error",
+"start": 63.58,
+"end": 63.86
+},
+{
+"w": "on",
+"start": 63.86,
+"end": 64.44
+},
+{
+"w": "YouTube.",
+"start": 64.44,
+"end": 64.8
+}
+]
