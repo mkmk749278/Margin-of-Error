@@ -89,9 +89,10 @@ labelled ILLUSTRATION or a licensed photo.
 4,200 m test against the 3,840 m wreck; (3) the $1,750 cover and the winter outdoors.
 
 ## Records to collect next (PLAYBOOK §9.2)
-1. **The official USCG file** (`SUBMERSIBLE TITAN MBI REPORT (04AUG2025).PDF` from news.uscg.mil, blocked here: 403):
-   Cowork fetch, then compare with our reading copy (sha256 `8198a232…46f1b`, 335 pp, PDF metadata: USCG author,
-   created 05 AUG 2025).
+1. **Done 13 NOV 2026:** the official USCG file is on Drive (`titan/records/`, fetched by the owner through Cowork);
+   its text matches our reading copy on all 335 pages. Also on Drive: CG-082 pre-hearing interviews (1,430 pp), CG-100
+   (the Director of Marine Operations' meeting with the CEO, a 119-page scan: OCR before use), CG-108, CG-115, CG-064.
+   Still needed: the **September 2024 public hearing transcripts**, the likely source of "Let's dive again" (C13).
 2. NTSB docket DCA23FM036: the Materials Laboratory Factual Report (the strain plots in full), RTM data files, photos.
 3. USCG MBI exhibits and hearing transcripts (Sept 2024) for the Director of Engineering and Director of Marine
    Operations testimony, verbatim; MBI exhibit CG-052 (dive list).
