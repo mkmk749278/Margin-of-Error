@@ -1,4 +1,4 @@
-# Titan: treatment (v2, 2026-11-13)
+# Titan: treatment (v2, 2026-11-13) · **APPROVED by the owner 13 NOV 2026; promise locked**
 
 Records: NTSB MIR-25-36 (02 OCT 2025) and its docket DCA23FM036 (Materials Laboratory report 24-012; exhibits CG-052,
 CG-098); USCG Marine Board of Investigation, Report of Investigation (04 AUG 2025, official file verified); USCG hearing

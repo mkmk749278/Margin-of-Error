@@ -1,0 +1,9 @@
+The fifteenth of July, twenty twenty-two. On its eightieth dive, the Titan submersible's hull monitor recorded a burst of sound, and a sudden shift in strain.
+
+Eleven months later, on the way down to the Titanic, the hull failed. Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and Hamish Harding died.
+
+Instead of inspecting the hull, OceanGate relied on this monitor to warn it when the hull was weakening.
+
+It is often said the warning worked, and was ignored. The record is more exact. Three of the eight acoustic sensors were dead. Its alert criteria had been set on hulls built a different way. And the strain was read against time.
+
+After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth. We will draw that chart with them, from the reports and the sworn testimony.

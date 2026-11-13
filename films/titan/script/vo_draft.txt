@@ -1,0 +1,185 @@
+The fifteenth of July, twenty twenty-two. On its eightieth dive, the Titan submersible's hull monitor recorded a burst of sound, and a sudden shift in strain.
+
+Eleven months later, on the way down to the Titanic, the hull failed. Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and Hamish Harding died.
+
+Instead of inspecting the hull, OceanGate relied on this monitor to warn it when the hull was weakening.
+
+It is often said the warning worked, and was ignored. The record is more exact. Three of the eight acoustic sensors were dead. Its alert criteria had been set on hulls built a different way. And the strain was read against time.
+
+After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth. We will draw that chart with them, from the reports and the sworn testimony.
+
+
+The eighteenth of June, twenty twenty-three. At about nine in the morning, Titan was released from its launch platform. It was the first dive of that year's expedition to go deeper than ten metres.
+
+At ten forty-seven, at about three thousand three hundred and fifty metres, Titan sent a routine message: it was dropping two weights, a standard step at that depth to slow the descent. The support ship replied. Titan never answered.
+
+Four days later, a remotely operated vehicle found the tail cone and both titanium domes on the sea floor, about five hundred metres from the Titanic's bow.
+
+Titan had reached the depth of the wreck, three thousand eight hundred and forty metres, thirteen times. On its last dive, it failed about five hundred metres shallower.
+
+So where did the margin of error run out? And when did the hull start to go?
+
+
+At three thousand eight hundred and forty metres, the ocean presses on every surface with about three hundred and eighty times the pressure at the surface.
+
+Titan was not built the way deep submersibles usually are.
+
+Its pressure hull was a cylinder of carbon fibre, five layers, each about an inch thick, bonded one onto the next. Titanium rings were glued to each end, and titanium domes were bolted to the rings.
+
+According to a former director of marine operations, the company's chief executive chose carbon fibre because he believed it was better in compression than in tension. It was also lighter, which meant less buoyancy, smaller support ships, and more seats.
+
+How strong was it? The company's original goal was a hull rated to six thousand metres, with a safety factor of two point two five.
+
+The analysis for this hull said the carbon cylinder would hold to about seven thousand five hundred metres. But that analysis assumed perfect geometry and perfect fibres.
+
+Scale models built with the new materials imploded, or nearly imploded, shallower than three thousand metres.
+
+The method used for the final hull, bonding the layers one onto the next, was never tested on a model. The only one ever built was the hull that carried people.
+
+In March twenty twenty-one, that hull was held at the pressure of four thousand two hundred metres, for twenty minutes. The limit was set by a titanium dome, not by the carbon. Then it was held at three thousand eight hundred and forty, for four hours, twice.
+
+It was never tested to failure. The N - T - S - B found it unlikely that the hull ever had the strength the analysis predicted.
+
+So nobody knew where the margin was.
+
+
+Then how would anyone know if it was failing?
+
+OceanGate's answer was to listen to it. Eight acoustic sensors and sixteen strain gauges, bonded to the hull. A carbon hull, the theory went, would crackle as it weakened, and the company would retire it in time.
+
+The system had limits. Its data were downloaded only after each dive. Acoustic data were analysed only from the dive itself, so damage at the surface, or in storage, could not raise an alert.
+
+In twenty twenty-two, three of the eight acoustic channels recorded nothing all season.
+
+And the alert criteria had been set on the sounds of earlier hulls and scale models, built a different way.
+
+The safeguard had a threshold. Nobody had tested it on this hull.
+
+
+Had anyone warned about this?
+
+The eighteenth of January, twenty eighteen. The company's director of marine operations filed an inspection report on Titan's first hull. It listed twenty-six items needing action.
+
+On the hull, he wrote that the cut-off ends of the cylinder showed very visible signs of delamination, and he warned of potential inter-laminar fatigue due to pressure cycling.
+
+That was the first hull, not the one lost in twenty twenty-three. But the failure mode he named is the one the investigators would find.
+
+In twenty nineteen, the first hull was damaged. Its director of engineering refused to sign it off for the season. He testified that he was then fired. A second hull was built.
+
+
+Now, dive eighty.
+
+On the fifteenth of July, twenty twenty-two, Titan reached the Titanic and came back up. Near the surface, the people inside heard a loud bang. So did the crew of a small boat above. The records differ on exactly where it happened, but all place it near the surface.
+
+On channel two, the acoustic sensor peaked above twenty-five thousand millivolts. At the same moment, the strain gauges beside it jumped.
+
+OceanGate's explanation was that the hull had shifted in its frame. A contractor testified that the chief executive said it was probably the sled banging against the frame.
+
+The hull was checked from the outside. The insert lining the inside was never removed to look at the inner layer of carbon.
+
+Phil Brooks had become OceanGate's engineering director the year before. Under oath, he described what they looked at: the strain data. A shift in level, on two of the sixteen strain channels. To him, at the time, it looked fairly minor.
+
+He was asked who made the decision to resume diving.
+
+Definitely Stockton, he said.
+
+And he described the plan, in his words: I think the plan was at that time to, well, let's dive again and see what happens.
+
+
+Was the damage in the data?
+
+This is how OceanGate looked at it: strain against time. Every dive has its own shape, its own pace, its own stops. Laid side by side, the dives are hard to compare.
+
+The N - T - S - B said a more appropriate way was to plot strain against depth, because depth is the pressure.
+
+So here is the same data, against depth.
+
+Dive seventy-five, a straight line. Dive eighty, the same straight line, until the event at its very end.
+
+Dive eighty-one. Dive eighty-two. Dive eighty-three. In the first five hundred metres, every one of them bends away.
+
+The N - T - S - B measured it. Over the first hundred and fifty metres, the slope before the event was five point zero zero, and four point seven four. After it: eight point seven six, eight point zero nine, eight point seven seven.
+
+Same sensors, same hull, same sea. A different response.
+
+Could OceanGate have seen this at the time? This is our reading of the record.
+
+Dive eighty itself shows nothing until its last minutes. The bend first appears in dive eighty-one, on the nineteenth of July. That data was on the company's computer after that dive. Plotted against depth, it would have shown the bend before dive eighty-two, three days later, and before dive eighty-three.
+
+And it was not a faulty gauge. Deeper down, the curves still match, which the N - T - S - B said shows the gauges had not changed. The hull had.
+
+
+Why would a damaged hull bend only near the surface?
+
+The N - T - S - B found long voids in the bond between the first and second layers, and between the third and fourth. Where a layer separates at the end of the cylinder, it can move on its own under light pressure. Deeper down, the pressure presses the layers together, and the hull responds as if it were whole.
+
+That is why Titan could still reach the Titanic twice more. A delamination is not a crack through the wall. But the wall was no longer what it had been.
+
+The N - T - S - B's finding: because its analysis was flawed, OceanGate was unaware that the Titan was damaged, and needed to be immediately removed from service after dive eighty.
+
+Titan made three more dives that July.
+
+
+Then it had to spend the winter somewhere.
+
+On the twenty-sixth of July, Titan was set down in a parking lot at a marine base in Saint John's, Newfoundland. Uncovered.
+
+Two days later, the base quoted one thousand seven hundred and fifty dollars for a protective cover. According to the Coast Guard board, the company did not respond.
+
+In September, the base wrote again: Titan still had not been covered.
+
+It stayed outside until the sixth of February, through temperatures from one point four to eighty-four point two degrees Fahrenheit, through freezing rain, sleet and snow.
+
+
+Was money behind these decisions? The Coast Guard board looked at the company's finances.
+
+From June twenty twenty-two to May twenty twenty-three, the chief executive advanced the company one point eight five million dollars. Employees were asked to go without their salaries for a time.
+
+Early in twenty twenty-three, Phil Brooks left. Under oath, he said the safety was being compromised way too much. At least for myself.
+
+The board found that the director of engineering post was then left vacant. Its own words were that this was done to ensure the twenty twenty-three expedition proceeded unhindered.
+
+The ship that had carried Titan was unavailable for twenty twenty-three. Titan was towed behind a smaller ship on its launch platform, and the platform tipped over more than once on the way.
+
+
+How was a hull like this allowed to carry passengers?
+
+The Coast Guard board found that OceanGate described its paying passengers as mission specialists, with mandatory duties, to conceal that they were paying passengers.
+
+And the N - T - S - B found that voluntary guidance and the rules for small passenger vessels were insufficient to make OceanGate follow the industry's established standards.
+
+
+In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
+
+At some point after dive eighty-two, the hull was damaged again. The N - T - S - B calls that damage of unknown origin. The Coast Guard board says the outdoor storage likely accelerated the hull's degradation. That is the one question the record leaves open.
+
+Did every dive weaken it? The record does not say that. It dates two events: dive eighty, and something after dive eighty-two.
+
+On the eighteenth of June, Titan made its first deep dive in eleven months.
+
+The N - T - S - B found that the existing delaminations and the later damage led to a local buckling failure. The damage reached the forward end of the cylinder.
+
+Here is the whole dive record, from dive seventy-five to eighty-eight, with every decision beside the dive it followed.
+
+Thirteen times at three thousand eight hundred and forty metres. Then one line that stops, about five hundred metres short.
+
+
+The N - T - S - B's probable cause was OceanGate's inadequate engineering process, which failed to establish the actual strength and durability of the Titan pressure vessel.
+
+Contributing were the guidance and the rules that did not make OceanGate meet the industry's standards, and the company's flawed analysis of its own monitoring data.
+
+The Coast Guard's Marine Board called it a preventable tragedy.
+
+It also wrote this. Had OceanGate's chief executive and chief pilot survived the incident, the board would have recommended that the matter be referred to the Department of Justice. And, in its words, the determination of whether any crime was committed would be made by the Department of Justice following its own investigation and analysis, which will not occur in this instance due to the death of Mr. Rush.
+
+
+Two things often said about Titan. Its game controller: on dive eighty-one, the thruster controls were found to be mapped in reverse, and the pilot turned the controller around. Neither report names the controller as a cause. Its window: the Coast Guard board criticised it as untested and uncertified, but the failure began in the carbon.
+
+What now? The N - T - S - B asked the U - S Coast Guard to push the International Maritime Organization to make its guidance for submersibles mandatory, to study crewed pressure vessels with outside experts, and to write rules for them.
+
+
+On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own sensors recorded it.
+
+Eleven months later, on its first deep dive since, five people were aboard.
+
+Stockton Rush. Paul-Henri Nargeolet. Shahzada Dawood. Suleman Dawood. Hamish Harding.
