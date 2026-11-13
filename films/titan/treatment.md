@@ -93,7 +93,10 @@ visual event.
    (source strip on screen). First against time: six differently shaped humps, no obvious story. The x-axis label
    rotates and morphs from `TIME` to `DEPTH (M)`; each trace re-flows into strain-vs-depth. Dives 75 and 80 settle on
    one straight cyan line. 81, 82, 83 land a beat later and, in the shallowest 500 m, bend away in red. One sentence
-   over it, no music: "Against depth, the hull is no longer the same hull after dive eighty." Then the NTSB's own line.
+   over it, no music: "Against depth, the hull is no longer the same hull after dive eighty." Then the number, said and
+   shown as each slope lands: the NTSB's fitted slope for the first 150 metres, `5.00` and `4.74 M/MV` before,
+   `8.76 · 8.09 · 8.77 M/MV` after (C41). Then the NTSB's own line. Source: NTSB Materials Laboratory Factual Report
+   24-012, figs. 28-31 (docket DCA23FM036).
    *Build depends on the docket's data files or the report figures' digitised values; if only the figures exist,
    values are digitised and the screen says `DIGITISED FROM NTSB FIGURES · RECONSTRUCTION`.*
 3. **"Definitely Stockton." (12:30).** The transcript page in desk pose, the question highlighted as it is read, the
@@ -161,7 +164,8 @@ visual event.
 3. The $1,750 cover and the winter.
 
 ## To confirm at the fact-check (`/fact-check`, max, fresh context)
-- The NTSB Materials Laboratory report and RTM data in docket DCA23FM036 (Signature 2 depends on it).
+- Done: NTSB Materials Laboratory report 24-012 has figs. 28-31 and the slopes (C41); no raw RTM data files in the docket, so the curves are digitised from the figures and labelled so.
+- The bang's timing differs across three records (C42): say "near the surface".
 - Rights for every figure credited to OceanGate, DOTF, A Harvey or third parties.
 - Status of the NTSB's four recommendations (M-25-?) and the Commandant's Final Action Memorandum.
 - The CEO's stated reasons (NTSB p. 25) verbatim; the 2019 first-hull sign-off testimony verbatim (CG 112).
