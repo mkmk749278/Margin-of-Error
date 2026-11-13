@@ -26,7 +26,7 @@ FORBIDDEN_CHARS = {
     "...": "no ellipses: use a dash or a colon (owner, 2026-11-03)", "…": "no ellipses: use a dash or a colon",
     "°": "say 'degrees'", "×": "say 'times'", "±": "say 'plus or minus'", "~": "say 'about'",
 }
-FLUFF = ["in today's video", "in this video", "welcome back", "welcome to", "imagine if", "hey guys", "let's dive",
+FLUFF = ["in today's video", "in this video", "welcome back", "welcome to", "imagine if", "hey guys", "let's dive in", "let's dive into",
          "let us dive", "smash that", "hit the bell", "don't forget to subscribe", "buckle up", "you won't believe",
          "shocking", "mind-blowing", "insane", "jaw-dropping", "in conclusion", "delve", "testament to", "unprecedented",
          "game-changer", "game changer", "little did they know"]
