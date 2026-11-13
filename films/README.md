@@ -12,5 +12,7 @@ One folder per film, `films/<slug>/` (PLAYBOOK §5.6; `_voice/` holds the voice 
 | 1 | `four-missing-bolts` | The Four Missing Bolts | Alaska Airlines 1282, 737-9 door plug |
 | 2 | `transformer-waiting-list` | AI Wants the Power. The Grid Can't Get Transformers. | US large power transformers and GOES, through AI data-centre demand |
 | 3 | `east-palestine` | (title to check: §17.3) | Norfolk Southern 32N, East Palestine, Ohio |
+| 3 | `titan` | (package in `brief.md`) | OceanGate Titan, from the NTSB MIR-25-36 and the USCG MBI report (owner, 13 NOV 2026) |
+| 4 | `key-bridge` | (research paused) | MV *Dali* / Francis Scott Key Bridge, NTSB MIR-25-40 |
 | 4–5 | — | one UK case | Grenfell cladding chain or Post Office Horizon |
 | slot | — | "final report" films | a case whose final investigation report has just published |
