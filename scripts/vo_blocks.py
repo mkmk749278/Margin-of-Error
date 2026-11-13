@@ -3,7 +3,7 @@
 then one fenced block per take (under --max characters, split only at paragraph breaks), each headed with the voice,
 model, settings and the file name to save.
 
-  python3 scripts/vo_blocks.py films/<slug> [--max 2500] [--title "The Four Missing Bolts"]
+  python3 scripts/vo_blocks.py films/<slug> [--max 9500] [--title "The Four Missing Bolts"]
 """
 import argparse
 from pathlib import Path
@@ -27,7 +27,7 @@ VOICE = (f'Voice: "{_V["voice_name"]}" (custom ElevenLabs voice) · Model: {_V["
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("film")
-    ap.add_argument("--max", type=int, default=2500)
+    ap.add_argument("--max", type=int, default=9500)  # owner 2026-11-13: ElevenLabs app limit 10,000 per generation
     ap.add_argument("--title", default="")
     a = ap.parse_args()
     film = Path(a.film)

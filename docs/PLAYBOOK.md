@@ -559,7 +559,13 @@ rewrite.
   predictability for range, every v4 take is measured (`vo_review.py`: word diff, pace, flat windows) and listened
   to before use, and a block that skips, repeats or drifts is regenerated.
   No voice id is stored in this public repo: the script looks the voice up by name.
-- **Generation in the session (owner, 2026-11-03):** `scripts/tts_elevenlabs.py films/<slug>` reads
+- **Owner-generated audio (owner, 2026-11-13):** while the API plan has no credits, the owner generates the audio
+  in the ElevenLabs app (Marcus, the settings in `config/voice.yaml`) and sends the MP3s. We give the recording blocks
+  at **at most 10,000 characters each** (the app's limit per generation; we cut at 9,500 so the app's own count never
+  trips it), split only at paragraph breaks: `scripts/vo_blocks.py films/<slug> --max 9500`. Block 1 is still
+  measured first (`vo_review.py`) before the owner records the rest. The timing chain (`vo_timing.py` →
+  `word_align.py`) runs on the owner's files unchanged.
+- **Generation in the session (owner, 2026-11-03; paused 2026-11-13 for lack of API credits):** `scripts/tts_elevenlabs.py films/<slug>` reads
   `ELEVENLABS_API_KEY` from the environment and writes one MP3 per recording block (`vo/<slug>_vo_bNN.mp3`, the same
   blocks as `vo_blocks.md`), with neighbouring text sent for continuity. Order: `--dry-run` (characters and quota) →
   `--blocks 1` → measure (`scripts/vo_review.py`) and listen for the letters in `N - T - S - B`, the dashes and
@@ -1577,6 +1583,8 @@ only against our own rules hides what the competing films already do better.
    the four gates and the fact and fairness passes unchanged. Rejected: 24/7 streams, re-uploads, reaction formats or a
    genre change (reused or inauthentic content puts the whole channel's monetisation at risk). Key Bridge research
    started (NTSB MIR-25-40 and MIR-25-10 read; notes in `films/key-bridge/research/notes.md`).
+14. **2026-11-13: the owner generates the narration audio** in the ElevenLabs app while the API has no credits;
+   recording blocks at most 10,000 characters each (§7.5). Nothing else in the audio gate changes.
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
