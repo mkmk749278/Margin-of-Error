@@ -190,7 +190,7 @@ are in **bold**.
 ## Narration (owner's spec §5; PLAYBOOK §7)
 - **Voice: "Marcus - Baritone(Stoic)"** (owner, 2026-11-06), a professional ElevenLabs Voice Library voice on the
   owner's account; it replaces the custom voice "1" (which replaced George). Settings in `config/voice.yaml`
-  (**Eleven v4, stability Natural** (0.5), similarity 0.80). The session generates the narration itself with
+  (**Eleven v4, stability Natural** (0.5), similarity 0.80). Until the API has credits again, the owner generates the audio in the ElevenLabs app from our recording blocks (each at most 10,000 characters, `vo_blocks.py --max 9500`; owner, 2026-11-13); otherwise the session generates the narration itself with
   `scripts/tts_elevenlabs.py` (needs `ELEVENLABS_API_KEY` in the environment; never print it); first one block,
   measured, then the rest; every take through `vo_review.py --model medium.en` (every spoken number checked). Never
   synthesise or clone a real person's voice; a library voice its owner licenses for use is not that.
