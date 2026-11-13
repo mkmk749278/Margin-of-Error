@@ -5,13 +5,11 @@ demand: the largest pool in our scan (top Titan video 15.9M; 1–3M-view Titan f
 NTSB **MIR-25-36** (adopted 02 OCT 2025) and the USCG Marine Board of Investigation **Report of Investigation**
 (04 AUG 2025, released 05 AUG 2025, 335 pp). Research: `research/landscape.md`; draft claims: `claims.csv`.
 
-## The promise (one sentence; to lock with the treatment)
-**Titan's own hull monitor recorded the damage on dive 80, on 15 JUL 2022, eleven months before the implosion; OceanGate
-read the data against time, the NTSB re-read it against depth and the change is there; and Titan kept diving.** Case: Titan / OceanGate. Exhibit: the dive 80 acoustic and strain record (OceanGate data, in
-the NTSB and USCG reports). Core fact: the NTSB's finding that the hull "likely sustained damage after it surfaced at
-the end of dive 80" and that the company's flawed analysis left it "unaware that the Titan was damaged and needed to be
-immediately removed from service after dive 80" (C10, C12), with strain read "against time" where "a more appropriate
-means ... would have been to evaluate it against depth" (C30), and an acoustic alert tuned on earlier hulls (C31).
+## The promise
+**Superseded 13 NOV 2026 by `treatment.md` v2 (after the independent review):** main title "The NTSB Graph That Shows
+Titan Was Damaged 11 Months Before It Imploded", thumbnail A "SAME DATA"; challengers "Titan's Own Sensors Recorded the
+Damage. OceanGate Sent It Back Down." and "Same Data, Different Axis: The Titan Damage OceanGate Missed". The margin
+line is now "never measured" (C45–C47), not a 1.09 ratio. The list below is the original package work.
 
 ## Case sheet (PLAYBOOK §4.3)
 | | |
