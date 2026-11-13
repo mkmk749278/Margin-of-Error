@@ -1566,6 +1566,17 @@ only against our own rules hides what the competing films already do better.
    three Shorts per film, one a day; series playlists and end screens; a re-edited long compilation once five films
    are live (new linking narration, never a plain re-upload). Next Track A: Key Bridge. Plan:
    `docs/research/2026-11-09_channel_review.md` (10 NOV section).
+13. **2026-11-13: Titan next, Key Bridge after; four watch-hour boosters** (owner, after the 13 NOV read: 2
+   subscribers, 1,357 views, almost all from Shorts; the two long films 14 views together). Reason: the genre is
+   recommended (top videos per search in our 02 NOV scan: Titan 15.8M, 737 MAX 12.3M, Deepwater Horizon 5.8M, Surfside
+   5.3M, Key Bridge about 0.5M); a new channel is not, so case demand is the biggest lever. 4,000 hours by 31 JAN 2027
+   is about 500 long-form views a day at 6 minutes, reachable only with a breakout; 8,000 in the rolling year stays the
+   floor. **Boosters:** (1) longer films where the story carries them (a big case may run 30–40 min, every minute still
+   earning its place, §5); (2) the re-edited compilation once **three** films are live, not five; (3) every Short
+   carries the related-video link to its film and a pinned comment; (4) a faster cadence toward two long films a week,
+   the four gates and the fact and fairness passes unchanged. Rejected: 24/7 streams, re-uploads, reaction formats or a
+   genre change (reused or inauthentic content puts the whole channel's monetisation at risk). Key Bridge research
+   started (NTSB MIR-25-40 and MIR-25-10 read; notes in `films/key-bridge/research/notes.md`).
 
 ### 17.2 Open (to settle before or during Film 1)
 1. **Handle (settled 2026-11-05):** `@marginoferrorfilmstv`, channel id `UCkkDvg90jWSMBRVLZrfNmHw`, read from the
