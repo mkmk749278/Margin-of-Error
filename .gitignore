@@ -14,3 +14,5 @@ public/shorts/
 public/reel/
 __pycache__/
 films/*/youtube/*_168.png
+# per-film source records (large PDFs; kept local / on Drive)
+assets/*/records/
