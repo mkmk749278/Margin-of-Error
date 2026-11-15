@@ -82,7 +82,10 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
 - The owner works **only from an Android phone** (GitHub app, Claude app, Termux, SSH to a VPS). Everything
   runs in cloud sessions, GitHub Actions or the VPS; results must open on a phone. For sources blocked from the cloud,
   the owner runs **Cowork** (Claude desktop app) on a home laptop from the phone: give one click-to-copy request
-  (PLAYBOOK §11.1), and one click-to-copy Termux line for YouTube clips.
+  (PLAYBOOK §11.1), and one click-to-copy Termux line for YouTube clips. Licence-clean YouTube footage is found
+  the same way: a Termux block searches with YouTube's Creative Commons filter and reads each video's licence with
+  yt-dlp; the licence is checked again in each clip's `.info.json` before use (owner, 2026-11-15, PLAYBOOK §11.1).
+- **Real footage carries the story; made pictures carry the mechanism** (owner, 2026-11-15, PLAYBOOK §11).
 - **Google Drive:** channel folder **`Margin-of-Error`** at the top of My Drive (id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`),
   one folder per film, `<slug>/`. Videos: `scripts/upload_gdrive.sh --sub <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`);
   small text files through the Google Drive connector. Music lives in `Music-Library/forensic/` (below). Never write

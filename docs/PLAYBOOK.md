@@ -842,7 +842,33 @@ licence-clean stock and archive (Pixabay API, Wikimedia Commons, Openverse with 
 archive.org) → our own drawing, labelled (§9.4). Never AI imagery of a real place, person, aircraft or vehicle (§6.5).
 **Look in the film's Drive `footage/` folder before searching outside:** the owner may already have dropped it there.
 
+**Real footage carries the story; made pictures carry the mechanism** (owner, 2026-11-15, after the Telugu channel's
+Medigadda cut, which led with 3D: "visuals are artificial, no satisfaction"). Every beat about the place, the event,
+the machine working, the people, the money or today is real moving footage (water through gates, a flood, a rig, a
+crew, a hangar, a line of traffic); a reconstruction or schematic appears only while the voice explains how the
+failure happened, and the film returns to real footage when the explanation ends. Footage need not be the exact
+site, but it must match what the voice says, and it is labelled when a viewer could take it for the site (§9.4).
+
 ### 11.1 When the cloud can't fetch it: the owner's two one-tap routes
+- **Finding licence-clean YouTube footage (adopted 2026-11-15, proven on the Telugu channel):** YouTube's
+  "Creative Commons Attribution licence (reuse allowed)" (CC BY) allows commercial reuse with credit, and many
+  contractors, agencies and departments mark their own project videos with it (for Telangana's Kaleshwaram project,
+  the contractor MEIL had 43). Chatbots cannot verify it: they cannot open the description box (Gemini found none it
+  could confirm). yt-dlp reads the licence YouTube itself reports, so the search runs in Termux too:
+  1. The session writes one Termux block (model: `mkmk749278/Telugu`
+     `projects/medigadda/tools/termux_footage_search.sh`): per shot of the film, two or three queries searched with
+     the Creative Commons filter (`&sp=EgIwAQ%253D%253D` on the results URL), each result's `license`, channel, length
+     and date read with yt-dlp, kept only if the licence says Creative Commons and the channel is not news or a party,
+     thumbnails saved, `footage/candidates/` uploaded to Drive. About 15–20 minutes for 30 queries.
+  2. The session reads the list and thumbnails, drops what slipped through (news channels with unusual names,
+     re-uploaders, "no copyright" compilations), and shortlists.
+  3. The shortlist is fetched with the route below, **with `--write-info-json`**; before a clip is used, the session
+     checks the licence line in its `.info.json` again and logs the video URL, channel, licence and range in
+     `media_manifest.csv`. The credit on screen names the channel and licence ("MEIL / YouTube · CC BY").
+  **Never, even when marked Creative Commons:** TV news channels (their CC mark does not cover the agency footage
+  inside), party or politicians' channels, re-uploads, film or music clips, AI-generated video.
+  *Note:* the yt-dlp warning "No supported JavaScript runtime" is harmless for the search (metadata only).
+
 - **YouTube clips: one Termux line** on the owner's phone (mobile IP), written out complete by the session:
   ```bash
   curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- \
