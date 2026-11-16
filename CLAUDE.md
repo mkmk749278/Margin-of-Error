@@ -107,8 +107,9 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
 - **Every final film ends with a YouTube package and a merged PR** (PLAYBOOK §13.7): 3 thumbnails, the title and the
   description in click-to-copy blocks, chapters, English SRT, saved in `films/<slug>/youtube/`.
 - **Reviews and comments live in this repo (owner, 2026-11-03).** The independent forensic review runs in a new
-  session from `prompts/forensic_review_v1.md` (§14.4). Comment replies follow §13.8: the owner approves every reply
-  before it is posted; facts only from the film's `claims.csv`; never a new allegation; no viewer profiles in git.
+  session from `prompts/forensic_review_v1.md` (§14.4). Comment replies follow §13.8: since 2026-11-16 the session posts
+  checked replies without waiting for approval (owner), in a native US/UK voice matched to the viewer's country where
+  known; the hide list stays the owner's call; facts only from the film's `claims.csv`; never a new allegation; no viewer profiles in git.
 - **An outside review is a list of leads (§14.3):** check each point in the code, `vo/timing.json` and a rendered still,
   write `review/<name>_check.md` (CONFIRMED / PARTLY / NOT CONFIRMED), then fix in the next round.
 
