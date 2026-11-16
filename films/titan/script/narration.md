@@ -267,7 +267,7 @@ One more finding concerns the eighteenth of June itself. The board found that th
 OceanGate suspended its operations in July twenty twenty-three. When the Coast Guard report came out, a company spokesperson said OceanGate had been wound down, was fully cooperating with the investigation, and offered condolences to the families.
 
 
-What now? The N - T - S - B made four recommendations to the U - S Coast Guard. One: propose that the International Maritime Organization make its guidance for submersibles mandatory. Two: study crewed pressure vessels. Three: write rules for them. Four: bring its nineteen ninety-three guidance up to date with the law passed that same year. The Coast Guard agreed to update its guidance, and partly agreed with the rest. As of October twenty twenty-six, all four recommendations remain open.
+What now? The N - T - S - B made four recommendations to the U - S Coast Guard. One: propose that the International Maritime Organization make its guidance for submersibles mandatory. Two: study pressure vessels that carry people. Three: write rules for them. Four: bring its nineteen ninety-three guidance up to date with the law passed that same year. The Coast Guard agreed to update its guidance, and partly agreed with the rest. As of October twenty twenty-six, all four recommendations remain open.
 
 
 On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own sensors recorded it.
