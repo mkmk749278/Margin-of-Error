@@ -1,0 +1,97 @@
+{
+ "_doc": "Edit holds (PLAYBOOK §10.4, §12): seconds of picture time after a sentence, matched by its words. Holds over 0.8 s only at act turns and signature beats. The Gemini review (checked 16 NOV 2026) asked for beats after the names and after 'Definitely Stockton'. tail = the outro. No hearing clip yet: when the 23 SEP 2024 hearing ranges are fetched, clips are added here as holds.",
+ "holds": [
+  {
+   "after": "Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and",
+   "s": 1.0,
+   "why": "the five names, said once; dark frame holds (Gemini check #3: 0.70 s was too brisk)"
+  },
+  {
+   "after": "So where did the margin of error run out?",
+   "s": 0.4,
+   "why": "the open question"
+  },
+  {
+   "after": "And when did the hull start to go?",
+   "s": 2.0,
+   "why": "act I to II turn; bed out on the question"
+  },
+  {
+   "after": "It was never tested to failure.",
+   "s": 1.2,
+   "why": "signature 1 lands: the cylinder's own line never draws"
+  },
+  {
+   "after": "No model had ever been built this hull's way,",
+   "s": 2.0,
+   "why": "act II to III turn; new exhibit, hard cut"
+  },
+  {
+   "after": "Its dives were numbered fifty to eighty-eight.",
+   "s": 1.5,
+   "why": "the ledger opens on hull 2; 'Now, dive eighty.'"
+  },
+  {
+   "after": "Definitely Stockton, he said.",
+   "s": 1.0,
+   "why": "signature: the two words held on the page (treatment signature 3; Gemini check #5)"
+  },
+  {
+   "after": "So here is the same data, against depth.",
+   "s": 1.5,
+   "why": "signature 2: the axis turns TIME to DEPTH, no narration over the turn"
+  },
+  {
+   "after": "Same gauge, same hull, same sea.",
+   "s": 0.8,
+   "why": "the slopes land"
+  },
+  {
+   "after": "The N - T - S - B's finding: because its analysis was flawed,",
+   "s": 1.5,
+   "why": "finding 6 on the page; the winter follows"
+  },
+  {
+   "after": "The N - T - S - B found that voluntary guidance and the rules",
+   "s": 2.5,
+   "why": "act III to IV turn; mid-roll pause"
+  },
+  {
+   "after": "Then one line that stops, about five hundred metres short.",
+   "s": 2.0,
+   "why": "signature 3: the ledger line ends; room tone"
+  },
+  {
+   "after": "Eleven months later, on its first deep dive since, five people were aboard.",
+   "s": 1.0,
+   "why": "before the names"
+  },
+  {
+   "after": "Stockton Rush.",
+   "s": 0.4,
+   "why": "closing names, unhurried (Gemini check #4: 0.4-0.5 s gaps)"
+  },
+  {
+   "after": "Paul-Henri Nargeolet.",
+   "s": 0.4,
+   "why": "closing names"
+  },
+  {
+   "after": "Shahzada Dawood.",
+   "s": 0.4,
+   "why": "closing names"
+  },
+  {
+   "after": "Suleman Dawood.",
+   "s": 0.4,
+   "why": "closing names"
+  }
+ ],
+ "tail": 8.0,
+ "open_loop": {
+  "promise": "After the implosion, the N - T - S - B, America's accident investigator,",
+  "reveal": "So here is the same data, against depth.",
+  "min": 300,
+  "max": 900
+ }
+}

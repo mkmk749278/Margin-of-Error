@@ -1,0 +1,72 @@
+[
+{
+"w": "He",
+"start": 0.0,
+"end": 0.2
+},
+{
+"w": "was",
+"start": 0.2,
+"end": 0.4
+},
+{
+"w": "asked",
+"start": 0.4,
+"end": 0.76
+},
+{
+"w": "who",
+"start": 0.76,
+"end": 1.06
+},
+{
+"w": "made",
+"start": 1.06,
+"end": 1.28
+},
+{
+"w": "the",
+"start": 1.28,
+"end": 1.46
+},
+{
+"w": "decision",
+"start": 1.46,
+"end": 1.86
+},
+{
+"w": "to",
+"start": 1.86,
+"end": 2.12
+},
+{
+"w": "resume",
+"start": 2.12,
+"end": 2.42
+},
+{
+"w": "diving.",
+"start": 2.42,
+"end": 2.9
+},
+{
+"w": "Definitely",
+"start": 3.6400000000000006,
+"end": 4.24
+},
+{
+"w": "Stockton,",
+"start": 4.24,
+"end": 4.84
+},
+{
+"w": "he",
+"start": 5.1,
+"end": 5.2
+},
+{
+"w": "said.",
+"start": 5.2,
+"end": 5.5
+}
+]

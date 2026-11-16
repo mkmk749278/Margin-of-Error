@@ -1,0 +1,2207 @@
+[
+{
+"w": "Two",
+"start": 0.0,
+"end": 0.22
+},
+{
+"w": "things",
+"start": 0.22,
+"end": 0.56
+},
+{
+"w": "often",
+"start": 0.56,
+"end": 0.94
+},
+{
+"w": "said",
+"start": 0.94,
+"end": 1.24
+},
+{
+"w": "about",
+"start": 1.24,
+"end": 1.56
+},
+{
+"w": "Titan.",
+"start": 1.56,
+"end": 1.9
+},
+{
+"w": "Its",
+"start": 2.56,
+"end": 2.7
+},
+{
+"w": "controller.",
+"start": 2.7,
+"end": 3.24
+},
+{
+"w": "On",
+"start": 3.92,
+"end": 4.02
+},
+{
+"w": "dive",
+"start": 4.02,
+"end": 4.28
+},
+{
+"w": "81,",
+"start": 4.28,
+"end": 4.88
+},
+{
+"w": "the",
+"start": 5.34,
+"end": 5.42
+},
+{
+"w": "thruster",
+"start": 5.42,
+"end": 5.74
+},
+{
+"w": "controls",
+"start": 5.74,
+"end": 6.24
+},
+{
+"w": "were",
+"start": 6.24,
+"end": 6.5
+},
+{
+"w": "found",
+"start": 6.5,
+"end": 6.7
+},
+{
+"w": "to",
+"start": 6.7,
+"end": 6.86
+},
+{
+"w": "be",
+"start": 6.86,
+"end": 7.06
+},
+{
+"w": "mapped",
+"start": 7.06,
+"end": 7.24
+},
+{
+"w": "in",
+"start": 7.24,
+"end": 7.48
+},
+{
+"w": "reverse,",
+"start": 7.48,
+"end": 7.86
+},
+{
+"w": "and",
+"start": 8.4,
+"end": 8.5
+},
+{
+"w": "the",
+"start": 8.5,
+"end": 8.72
+},
+{
+"w": "pilot",
+"start": 8.72,
+"end": 8.96
+},
+{
+"w": "turned",
+"start": 8.96,
+"end": 9.32
+},
+{
+"w": "the",
+"start": 9.32,
+"end": 9.5
+},
+{
+"w": "controller",
+"start": 9.5,
+"end": 9.9
+},
+{
+"w": "around.",
+"start": 9.9,
+"end": 10.44
+},
+{
+"w": "None",
+"start": 11.24,
+"end": 11.38
+},
+{
+"w": "of",
+"start": 11.38,
+"end": 11.56
+},
+{
+"w": "the",
+"start": 11.56,
+"end": 11.74
+},
+{
+"w": "three",
+"start": 11.74,
+"end": 11.88
+},
+{
+"w": "reports",
+"start": 11.88,
+"end": 12.44
+},
+{
+"w": "names",
+"start": 12.44,
+"end": 12.76
+},
+{
+"w": "the",
+"start": 12.76,
+"end": 13.0
+},
+{
+"w": "controller",
+"start": 13.0,
+"end": 13.54
+},
+{
+"w": "as",
+"start": 13.54,
+"end": 13.8
+},
+{
+"w": "a",
+"start": 13.8,
+"end": 14.04
+},
+{
+"w": "cause.",
+"start": 14.04,
+"end": 14.3
+},
+{
+"w": "Its",
+"start": 15.14,
+"end": 15.3
+},
+{
+"w": "window.",
+"start": 15.3,
+"end": 15.72
+},
+{
+"w": "The",
+"start": 16.3,
+"end": 16.42
+},
+{
+"w": "Coast",
+"start": 16.42,
+"end": 16.7
+},
+{
+"w": "Guard",
+"start": 16.7,
+"end": 16.88
+},
+{
+"w": "board",
+"start": 16.88,
+"end": 17.22
+},
+{
+"w": "criticized",
+"start": 17.22,
+"end": 17.72
+},
+{
+"w": "it",
+"start": 17.72,
+"end": 18.12
+},
+{
+"w": "as",
+"start": 18.12,
+"end": 18.28
+},
+{
+"w": "untested",
+"start": 18.28,
+"end": 18.96
+},
+{
+"w": "and",
+"start": 18.96,
+"end": 19.26
+},
+{
+"w": "uncertified,",
+"start": 19.26,
+"end": 20.14
+},
+{
+"w": "but",
+"start": 20.38,
+"end": 20.62
+},
+{
+"w": "found",
+"start": 20.62,
+"end": 20.84
+},
+{
+"w": "it",
+"start": 20.84,
+"end": 21.04
+},
+{
+"w": "unlikely",
+"start": 21.04,
+"end": 21.58
+},
+{
+"w": "that",
+"start": 21.58,
+"end": 21.86
+},
+{
+"w": "the",
+"start": 21.86,
+"end": 22.06
+},
+{
+"w": "window",
+"start": 22.06,
+"end": 22.34
+},
+{
+"w": "caused",
+"start": 22.34,
+"end": 22.74
+},
+{
+"w": "the",
+"start": 22.74,
+"end": 22.92
+},
+{
+"w": "implosion.",
+"start": 22.92,
+"end": 23.44
+},
+{
+"w": "All",
+"start": 24.02,
+"end": 24.24
+},
+{
+"w": "three",
+"start": 24.24,
+"end": 24.5
+},
+{
+"w": "reports",
+"start": 24.5,
+"end": 25.0
+},
+{
+"w": "place",
+"start": 25.0,
+"end": 25.3
+},
+{
+"w": "the",
+"start": 25.3,
+"end": 25.54
+},
+{
+"w": "failure",
+"start": 25.54,
+"end": 25.84
+},
+{
+"w": "in",
+"start": 25.84,
+"end": 26.1
+},
+{
+"w": "the",
+"start": 26.1,
+"end": 26.32
+},
+{
+"w": "hull.",
+"start": 26.32,
+"end": 26.48
+},
+{
+"w": "The",
+"start": 27.0,
+"end": 27.36
+},
+{
+"w": "NTSB's",
+"start": 27.36,
+"end": 28.34
+},
+{
+"w": "probable",
+"start": 28.34,
+"end": 28.64
+},
+{
+"w": "cause",
+"start": 28.64,
+"end": 29.18
+},
+{
+"w": "was",
+"start": 29.18,
+"end": 29.48
+},
+{
+"w": "Oceangate's",
+"start": 29.48,
+"end": 30.26
+},
+{
+"w": "inadequate",
+"start": 30.26,
+"end": 30.76
+},
+{
+"w": "engineering",
+"start": 30.76,
+"end": 31.32
+},
+{
+"w": "process,",
+"start": 31.32,
+"end": 32.0
+},
+{
+"w": "which",
+"start": 32.14,
+"end": 32.46
+},
+{
+"w": "failed",
+"start": 32.46,
+"end": 32.76
+},
+{
+"w": "to",
+"start": 32.76,
+"end": 33.0
+},
+{
+"w": "establish",
+"start": 33.0,
+"end": 33.44
+},
+{
+"w": "the",
+"start": 33.44,
+"end": 33.72
+},
+{
+"w": "actual",
+"start": 33.72,
+"end": 34.14
+},
+{
+"w": "strength",
+"start": 34.14,
+"end": 34.6
+},
+{
+"w": "and",
+"start": 34.6,
+"end": 34.88
+},
+{
+"w": "durability",
+"start": 34.88,
+"end": 35.4
+},
+{
+"w": "of",
+"start": 35.4,
+"end": 35.78
+},
+{
+"w": "the",
+"start": 35.78,
+"end": 36.0
+},
+{
+"w": "Titan",
+"start": 36.0,
+"end": 36.22
+},
+{
+"w": "pressure",
+"start": 36.22,
+"end": 36.6
+},
+{
+"w": "vessel.",
+"start": 36.6,
+"end": 37.04
+},
+{
+"w": "Contributing",
+"start": 37.5,
+"end": 38.22
+},
+{
+"w": "were",
+"start": 38.22,
+"end": 38.36
+},
+{
+"w": "the",
+"start": 38.36,
+"end": 38.52
+},
+{
+"w": "guidance",
+"start": 38.52,
+"end": 38.88
+},
+{
+"w": "and",
+"start": 38.88,
+"end": 39.16
+},
+{
+"w": "the",
+"start": 39.16,
+"end": 39.34
+},
+{
+"w": "rules",
+"start": 39.34,
+"end": 39.6
+},
+{
+"w": "that",
+"start": 39.6,
+"end": 39.86
+},
+{
+"w": "did",
+"start": 39.86,
+"end": 40.0
+},
+{
+"w": "not",
+"start": 40.0,
+"end": 40.28
+},
+{
+"w": "make",
+"start": 40.28,
+"end": 40.52
+},
+{
+"w": "Oceangate",
+"start": 40.52,
+"end": 41.1
+},
+{
+"w": "meet",
+"start": 41.1,
+"end": 41.4
+},
+{
+"w": "the",
+"start": 41.4,
+"end": 41.64
+},
+{
+"w": "industry's",
+"start": 41.64,
+"end": 42.16
+},
+{
+"w": "standards",
+"start": 42.16,
+"end": 42.56
+},
+{
+"w": "and",
+"start": 42.56,
+"end": 43.14
+},
+{
+"w": "the",
+"start": 43.14,
+"end": 43.32
+},
+{
+"w": "company's",
+"start": 43.32,
+"end": 43.9
+},
+{
+"w": "flawed",
+"start": 43.9,
+"end": 44.1
+},
+{
+"w": "analysis",
+"start": 44.1,
+"end": 44.6
+},
+{
+"w": "of",
+"start": 44.6,
+"end": 44.9
+},
+{
+"w": "its",
+"start": 44.9,
+"end": 45.04
+},
+{
+"w": "own",
+"start": 45.04,
+"end": 45.36
+},
+{
+"w": "monitoring",
+"start": 45.36,
+"end": 45.88
+},
+{
+"w": "data.",
+"start": 45.88,
+"end": 46.36
+},
+{
+"w": "The",
+"start": 46.84,
+"end": 47.0
+},
+{
+"w": "Coast",
+"start": 47.0,
+"end": 47.26
+},
+{
+"w": "Guard's",
+"start": 47.26,
+"end": 47.6
+},
+{
+"w": "marine",
+"start": 47.6,
+"end": 47.88
+},
+{
+"w": "board",
+"start": 47.88,
+"end": 48.24
+},
+{
+"w": "called",
+"start": 48.24,
+"end": 48.62
+},
+{
+"w": "it",
+"start": 48.62,
+"end": 48.82
+},
+{
+"w": "a",
+"start": 48.82,
+"end": 49.06
+},
+{
+"w": "preventable",
+"start": 49.06,
+"end": 49.74
+},
+{
+"w": "tragedy.",
+"start": 49.74,
+"end": 50.22
+},
+{
+"w": "Canada's",
+"start": 50.92,
+"end": 51.44
+},
+{
+"w": "Transportation",
+"start": 51.44,
+"end": 52.06
+},
+{
+"w": "Safety",
+"start": 52.06,
+"end": 52.58
+},
+{
+"w": "Board",
+"start": 52.58,
+"end": 52.92
+},
+{
+"w": "found",
+"start": 52.92,
+"end": 53.28
+},
+{
+"w": "that",
+"start": 53.28,
+"end": 53.5
+},
+{
+"w": "Titan",
+"start": 53.5,
+"end": 53.82
+},
+{
+"w": "received",
+"start": 53.82,
+"end": 54.24
+},
+{
+"w": "no",
+"start": 54.24,
+"end": 54.64
+},
+{
+"w": "oversight",
+"start": 54.64,
+"end": 55.16
+},
+{
+"w": "from",
+"start": 55.16,
+"end": 55.48
+},
+{
+"w": "Transport",
+"start": 55.48,
+"end": 55.88
+},
+{
+"w": "Canada,",
+"start": 55.88,
+"end": 56.36
+},
+{
+"w": "though",
+"start": 56.68,
+"end": 56.86
+},
+{
+"w": "it",
+"start": 56.86,
+"end": 57.08
+},
+{
+"w": "sailed",
+"start": 57.08,
+"end": 57.3
+},
+{
+"w": "from",
+"start": 57.3,
+"end": 57.6
+},
+{
+"w": "St.",
+"start": 57.6,
+"end": 57.84
+},
+{
+"w": "John's",
+"start": 57.96,
+"end": 58.28
+},
+{
+"w": "with",
+"start": 58.28,
+"end": 58.42
+},
+{
+"w": "Canadian",
+"start": 58.42,
+"end": 58.88
+},
+{
+"w": "ships.",
+"start": 58.88,
+"end": 59.42
+},
+{
+"w": "The",
+"start": 59.94,
+"end": 60.06
+},
+{
+"w": "Coast",
+"start": 60.06,
+"end": 60.34
+},
+{
+"w": "Guard",
+"start": 60.34,
+"end": 60.52
+},
+{
+"w": "board",
+"start": 60.52,
+"end": 60.84
+},
+{
+"w": "also",
+"start": 60.84,
+"end": 61.28
+},
+{
+"w": "wrote",
+"start": 61.28,
+"end": 61.52
+},
+{
+"w": "this",
+"start": 61.52,
+"end": 61.96
+},
+{
+"w": "about",
+"start": 61.96,
+"end": 62.4
+},
+{
+"w": "Mr.",
+"start": 62.4,
+"end": 62.78
+},
+{
+"w": "Rush,",
+"start": 62.86,
+"end": 63.04
+},
+{
+"w": "who",
+"start": 63.4,
+"end": 63.54
+},
+{
+"w": "was",
+"start": 63.54,
+"end": 63.66
+},
+{
+"w": "both",
+"start": 63.66,
+"end": 63.88
+},
+{
+"w": "the",
+"start": 63.88,
+"end": 64.1
+},
+{
+"w": "company's",
+"start": 64.1,
+"end": 64.6
+},
+{
+"w": "chief",
+"start": 64.6,
+"end": 64.72
+},
+{
+"w": "executive",
+"start": 64.72,
+"end": 65.34
+},
+{
+"w": "and",
+"start": 65.34,
+"end": 65.84
+},
+{
+"w": "its",
+"start": 65.84,
+"end": 66.04
+},
+{
+"w": "pilot.",
+"start": 66.04,
+"end": 66.52
+},
+{
+"w": "Had",
+"start": 67.14,
+"end": 67.28
+},
+{
+"w": "he",
+"start": 67.28,
+"end": 67.46
+},
+{
+"w": "survived",
+"start": 67.46,
+"end": 67.94
+},
+{
+"w": "the",
+"start": 67.94,
+"end": 68.12
+},
+{
+"w": "incident,",
+"start": 68.12,
+"end": 68.56
+},
+{
+"w": "the",
+"start": 68.92,
+"end": 68.98
+},
+{
+"w": "board",
+"start": 68.98,
+"end": 69.2
+},
+{
+"w": "would",
+"start": 69.2,
+"end": 69.38
+},
+{
+"w": "have",
+"start": 69.38,
+"end": 69.52
+},
+{
+"w": "recommended",
+"start": 69.52,
+"end": 70.02
+},
+{
+"w": "that",
+"start": 70.02,
+"end": 70.28
+},
+{
+"w": "the",
+"start": 70.28,
+"end": 70.54
+},
+{
+"w": "commandant",
+"start": 70.54,
+"end": 71.02
+},
+{
+"w": "refer",
+"start": 71.02,
+"end": 71.32
+},
+{
+"w": "the",
+"start": 71.32,
+"end": 71.58
+},
+{
+"w": "matter",
+"start": 71.58,
+"end": 71.82
+},
+{
+"w": "to",
+"start": 71.82,
+"end": 72.04
+},
+{
+"w": "the",
+"start": 72.04,
+"end": 72.26
+},
+{
+"w": "Department",
+"start": 72.26,
+"end": 72.6
+},
+{
+"w": "of",
+"start": 72.6,
+"end": 72.86
+},
+{
+"w": "Justice",
+"start": 72.86,
+"end": 73.3
+},
+{
+"w": "for",
+"start": 73.3,
+"end": 73.82
+},
+{
+"w": "its",
+"start": 73.82,
+"end": 74.02
+},
+{
+"w": "consideration",
+"start": 74.02,
+"end": 74.68
+},
+{
+"w": "on",
+"start": 74.68,
+"end": 75.0
+},
+{
+"w": "whether",
+"start": 75.0,
+"end": 75.24
+},
+{
+"w": "to",
+"start": 75.24,
+"end": 75.46
+},
+{
+"w": "pursue",
+"start": 75.46,
+"end": 75.76
+},
+{
+"w": "a",
+"start": 75.76,
+"end": 76.12
+},
+{
+"w": "separate",
+"start": 76.12,
+"end": 76.46
+},
+{
+"w": "criminal",
+"start": 76.46,
+"end": 76.92
+},
+{
+"w": "investigation.",
+"start": 76.92,
+"end": 77.66
+},
+{
+"w": "That",
+"start": 78.26,
+"end": 78.48
+},
+{
+"w": "investigation,",
+"start": 78.48,
+"end": 79.22
+},
+{
+"w": "the",
+"start": 79.4,
+"end": 79.6
+},
+{
+"w": "board",
+"start": 79.6,
+"end": 79.76
+},
+{
+"w": "noted,",
+"start": 79.76,
+"end": 80.2
+},
+{
+"w": "will",
+"start": 80.52,
+"end": 80.66
+},
+{
+"w": "not",
+"start": 80.66,
+"end": 80.96
+},
+{
+"w": "occur,",
+"start": 80.96,
+"end": 81.36
+},
+{
+"w": "because",
+"start": 81.72,
+"end": 82.04
+},
+{
+"w": "Mr.",
+"start": 82.04,
+"end": 82.46
+},
+{
+"w": "Rush",
+"start": 82.46,
+"end": 82.66
+},
+{
+"w": "died.",
+"start": 82.66,
+"end": 83.16
+},
+{
+"w": "One",
+"start": 83.86000000000001,
+"end": 84.18
+},
+{
+"w": "more",
+"start": 84.18,
+"end": 84.44
+},
+{
+"w": "finding",
+"start": 84.44,
+"end": 84.82
+},
+{
+"w": "concerns",
+"start": 84.82,
+"end": 85.36
+},
+{
+"w": "the",
+"start": 85.36,
+"end": 85.56
+},
+{
+"w": "18th",
+"start": 85.56,
+"end": 86.14
+},
+{
+"w": "of",
+"start": 86.14,
+"end": 86.16
+},
+{
+"w": "June",
+"start": 86.16,
+"end": 86.34
+},
+{
+"w": "itself.",
+"start": 86.34,
+"end": 86.98
+},
+{
+"w": "The",
+"start": 87.52,
+"end": 87.66
+},
+{
+"w": "board",
+"start": 87.66,
+"end": 87.86
+},
+{
+"w": "found",
+"start": 87.86,
+"end": 88.22
+},
+{
+"w": "that",
+"start": 88.22,
+"end": 88.42
+},
+{
+"w": "the",
+"start": 88.42,
+"end": 88.58
+},
+{
+"w": "company's",
+"start": 88.58,
+"end": 89.08
+},
+{
+"w": "own",
+"start": 89.08,
+"end": 89.26
+},
+{
+"w": "communications",
+"start": 89.26,
+"end": 90.0
+},
+{
+"w": "plan",
+"start": 90.0,
+"end": 90.46
+},
+{
+"w": "delayed",
+"start": 90.46,
+"end": 90.9
+},
+{
+"w": "the",
+"start": 90.9,
+"end": 91.18
+},
+{
+"w": "first",
+"start": 91.18,
+"end": 91.44
+},
+{
+"w": "call",
+"start": 91.44,
+"end": 91.66
+},
+{
+"w": "to",
+"start": 91.66,
+"end": 91.9
+},
+{
+"w": "rescuers",
+"start": 91.9,
+"end": 92.34
+},
+{
+"w": "by",
+"start": 92.34,
+"end": 92.62
+},
+{
+"w": "more",
+"start": 92.62,
+"end": 92.82
+},
+{
+"w": "than",
+"start": 92.82,
+"end": 93.04
+},
+{
+"w": "seven",
+"start": 93.04,
+"end": 93.38
+},
+{
+"w": "hours,",
+"start": 93.38,
+"end": 93.9
+},
+{
+"w": "and",
+"start": 94.32,
+"end": 94.48
+},
+{
+"w": "that",
+"start": 94.48,
+"end": 94.6
+},
+{
+"w": "no",
+"start": 94.6,
+"end": 94.9
+},
+{
+"w": "deepwater",
+"start": 94.9,
+"end": 95.46
+},
+{
+"w": "rescue",
+"start": 95.46,
+"end": 95.88
+},
+{
+"w": "vehicle",
+"start": 95.88,
+"end": 96.26
+},
+{
+"w": "was",
+"start": 96.26,
+"end": 96.48
+},
+{
+"w": "standing",
+"start": 96.48,
+"end": 96.84
+},
+{
+"w": "by.",
+"start": 96.84,
+"end": 97.34
+},
+{
+"w": "It",
+"start": 97.78,
+"end": 97.92
+},
+{
+"w": "also",
+"start": 97.92,
+"end": 98.26
+},
+{
+"w": "found",
+"start": 98.26,
+"end": 98.64
+},
+{
+"w": "that",
+"start": 98.64,
+"end": 98.82
+},
+{
+"w": "the",
+"start": 98.82,
+"end": 98.98
+},
+{
+"w": "implosion",
+"start": 98.98,
+"end": 99.5
+},
+{
+"w": "caused",
+"start": 99.5,
+"end": 99.88
+},
+{
+"w": "the",
+"start": 99.88,
+"end": 100.1
+},
+{
+"w": "immediate",
+"start": 100.1,
+"end": 100.54
+},
+{
+"w": "loss",
+"start": 100.54,
+"end": 100.86
+},
+{
+"w": "of",
+"start": 100.86,
+"end": 101.12
+},
+{
+"w": "all",
+"start": 101.12,
+"end": 101.44
+},
+{
+"w": "lives",
+"start": 101.44,
+"end": 101.8
+},
+{
+"w": "on",
+"start": 101.8,
+"end": 102.04
+},
+{
+"w": "board,",
+"start": 102.04,
+"end": 102.38
+},
+{
+"w": "before",
+"start": 102.54,
+"end": 103.0
+},
+{
+"w": "any",
+"start": 103.0,
+"end": 103.42
+},
+{
+"w": "distress",
+"start": 103.42,
+"end": 103.8
+},
+{
+"w": "call.",
+"start": 103.8,
+"end": 104.2
+},
+{
+"w": "The",
+"start": 104.74,
+"end": 104.88
+},
+{
+"w": "NTSB",
+"start": 104.88,
+"end": 105.58
+},
+{
+"w": "found",
+"start": 105.58,
+"end": 105.92
+},
+{
+"w": "that",
+"start": 105.92,
+"end": 106.2
+},
+{
+"w": "search",
+"start": 106.2,
+"end": 106.4
+},
+{
+"w": "and",
+"start": 106.4,
+"end": 106.62
+},
+{
+"w": "rescue",
+"start": 106.62,
+"end": 106.94
+},
+{
+"w": "could",
+"start": 106.94,
+"end": 107.24
+},
+{
+"w": "not",
+"start": 107.24,
+"end": 107.56
+},
+{
+"w": "have",
+"start": 107.56,
+"end": 107.82
+},
+{
+"w": "saved",
+"start": 107.82,
+"end": 108.1
+},
+{
+"w": "them.",
+"start": 108.1,
+"end": 108.38
+},
+{
+"w": "With",
+"start": 108.56,
+"end": 108.92
+},
+{
+"w": "assets",
+"start": 108.92,
+"end": 109.32
+},
+{
+"w": "ready,",
+"start": 109.32,
+"end": 109.76
+},
+{
+"w": "it",
+"start": 110.02,
+"end": 110.06
+},
+{
+"w": "found,",
+"start": 110.06,
+"end": 110.46
+},
+{
+"w": "Titan",
+"start": 110.96,
+"end": 111.14
+},
+{
+"w": "would",
+"start": 111.14,
+"end": 111.44
+},
+{
+"w": "likely",
+"start": 111.44,
+"end": 111.84
+},
+{
+"w": "have",
+"start": 111.84,
+"end": 112.04
+},
+{
+"w": "been",
+"start": 112.04,
+"end": 112.26
+},
+{
+"w": "found",
+"start": 112.26,
+"end": 112.54
+},
+{
+"w": "sooner.",
+"start": 112.54,
+"end": 113.04
+},
+{
+"w": "Oceangate",
+"start": 113.92,
+"end": 114.26
+},
+{
+"w": "suspended",
+"start": 114.26,
+"end": 114.86
+},
+{
+"w": "its",
+"start": 114.86,
+"end": 115.1
+},
+{
+"w": "operations",
+"start": 115.1,
+"end": 115.64
+},
+{
+"w": "in",
+"start": 115.64,
+"end": 116.0
+},
+{
+"w": "July",
+"start": 116.0,
+"end": 116.36
+},
+{
+"w": "2023.",
+"start": 116.36,
+"end": 117.4
+},
+{
+"w": "When",
+"start": 118.08,
+"end": 118.18
+},
+{
+"w": "the",
+"start": 118.18,
+"end": 118.38
+},
+{
+"w": "Coast",
+"start": 118.38,
+"end": 118.6
+},
+{
+"w": "Guard",
+"start": 118.6,
+"end": 118.74
+},
+{
+"w": "report",
+"start": 118.74,
+"end": 119.1
+},
+{
+"w": "came",
+"start": 119.1,
+"end": 119.38
+},
+{
+"w": "out,",
+"start": 119.38,
+"end": 119.74
+},
+{
+"w": "a",
+"start": 119.96,
+"end": 120.04
+},
+{
+"w": "company",
+"start": 120.04,
+"end": 120.36
+},
+{
+"w": "spokesperson",
+"start": 120.36,
+"end": 120.82
+},
+{
+"w": "said",
+"start": 120.82,
+"end": 121.36
+},
+{
+"w": "Oceangate",
+"start": 121.36,
+"end": 121.98
+},
+{
+"w": "had",
+"start": 121.98,
+"end": 122.2
+},
+{
+"w": "been",
+"start": 122.2,
+"end": 122.36
+},
+{
+"w": "wound",
+"start": 122.36,
+"end": 122.66
+},
+{
+"w": "down,",
+"start": 122.66,
+"end": 123.14
+},
+{
+"w": "was",
+"start": 123.5,
+"end": 123.66
+},
+{
+"w": "fully",
+"start": 123.66,
+"end": 123.94
+},
+{
+"w": "cooperating",
+"start": 123.94,
+"end": 124.38
+},
+{
+"w": "with",
+"start": 124.38,
+"end": 124.74
+},
+{
+"w": "the",
+"start": 124.74,
+"end": 124.88
+},
+{
+"w": "investigation,",
+"start": 124.88,
+"end": 125.52
+},
+{
+"w": "and",
+"start": 126.0,
+"end": 126.14
+},
+{
+"w": "offered",
+"start": 126.14,
+"end": 126.36
+},
+{
+"w": "condolences",
+"start": 126.36,
+"end": 126.98
+},
+{
+"w": "to",
+"start": 126.98,
+"end": 127.36
+},
+{
+"w": "the",
+"start": 127.36,
+"end": 127.54
+},
+{
+"w": "families.",
+"start": 127.54,
+"end": 127.96
+},
+{
+"w": "What",
+"start": 128.8,
+"end": 128.96
+},
+{
+"w": "now?",
+"start": 128.96,
+"end": 129.3
+},
+{
+"w": "The",
+"start": 130.0,
+"end": 130.16
+},
+{
+"w": "NTSB",
+"start": 130.16,
+"end": 130.86
+},
+{
+"w": "made",
+"start": 130.86,
+"end": 131.12
+},
+{
+"w": "four",
+"start": 131.12,
+"end": 131.52
+},
+{
+"w": "recommendations",
+"start": 131.52,
+"end": 132.06
+},
+{
+"w": "to",
+"start": 132.06,
+"end": 132.66
+},
+{
+"w": "the",
+"start": 132.66,
+"end": 132.82
+},
+{
+"w": "US",
+"start": 132.82,
+"end": 133.14
+},
+{
+"w": "Coast",
+"start": 133.14,
+"end": 133.44
+},
+{
+"w": "Guard.",
+"start": 133.44,
+"end": 133.8
+},
+{
+"w": "One,",
+"start": 133.8,
+"end": 134.52
+},
+{
+"w": "propose",
+"start": 135.04,
+"end": 135.42
+},
+{
+"w": "that",
+"start": 135.42,
+"end": 135.72
+},
+{
+"w": "the",
+"start": 135.72,
+"end": 135.86
+},
+{
+"w": "International",
+"start": 135.86,
+"end": 136.54
+},
+{
+"w": "Maritime",
+"start": 136.54,
+"end": 136.98
+},
+{
+"w": "Organization",
+"start": 136.98,
+"end": 137.72
+},
+{
+"w": "make",
+"start": 137.72,
+"end": 138.12
+},
+{
+"w": "its",
+"start": 138.12,
+"end": 138.32
+},
+{
+"w": "guidance",
+"start": 138.32,
+"end": 138.68
+},
+{
+"w": "for",
+"start": 138.68,
+"end": 138.96
+},
+{
+"w": "submersibles",
+"start": 138.96,
+"end": 139.64
+},
+{
+"w": "mandatory.",
+"start": 139.64,
+"end": 140.28
+},
+{
+"w": "Two,",
+"start": 141.02,
+"end": 141.14
+},
+{
+"w": "study",
+"start": 141.7,
+"end": 142.0
+},
+{
+"w": "crude",
+"start": 142.0,
+"end": 142.46
+},
+{
+"w": "pressure",
+"start": 142.46,
+"end": 142.88
+},
+{
+"w": "vessels.",
+"start": 142.88,
+"end": 143.38
+},
+{
+"w": "Three,",
+"start": 143.68,
+"end": 144.14
+},
+{
+"w": "write",
+"start": 144.68,
+"end": 144.84
+},
+{
+"w": "rules",
+"start": 144.84,
+"end": 145.22
+},
+{
+"w": "for",
+"start": 145.22,
+"end": 145.54
+},
+{
+"w": "them.",
+"start": 145.54,
+"end": 145.82
+},
+{
+"w": "Four,",
+"start": 146.0,
+"end": 146.44
+},
+{
+"w": "bring",
+"start": 146.92,
+"end": 147.06
+},
+{
+"w": "its",
+"start": 147.06,
+"end": 147.26
+},
+{
+"w": "1993",
+"start": 147.26,
+"end": 148.18
+},
+{
+"w": "guidance",
+"start": 148.18,
+"end": 148.74
+},
+{
+"w": "up",
+"start": 148.74,
+"end": 149.06
+},
+{
+"w": "to",
+"start": 149.06,
+"end": 149.26
+},
+{
+"w": "date",
+"start": 149.26,
+"end": 149.48
+},
+{
+"w": "with",
+"start": 149.48,
+"end": 149.7
+},
+{
+"w": "the",
+"start": 149.7,
+"end": 149.88
+},
+{
+"w": "law",
+"start": 149.88,
+"end": 150.04
+},
+{
+"w": "passed",
+"start": 150.04,
+"end": 150.44
+},
+{
+"w": "that",
+"start": 150.44,
+"end": 150.7
+},
+{
+"w": "same",
+"start": 150.7,
+"end": 151.06
+},
+{
+"w": "year.",
+"start": 151.06,
+"end": 151.42
+},
+{
+"w": "The",
+"start": 151.72,
+"end": 151.86
+},
+{
+"w": "Coast",
+"start": 151.86,
+"end": 152.18
+},
+{
+"w": "Guard",
+"start": 152.18,
+"end": 152.4
+},
+{
+"w": "agreed",
+"start": 152.4,
+"end": 152.78
+},
+{
+"w": "to",
+"start": 152.78,
+"end": 153.06
+},
+{
+"w": "update",
+"start": 153.06,
+"end": 153.4
+},
+{
+"w": "its",
+"start": 153.4,
+"end": 153.64
+},
+{
+"w": "guidance,",
+"start": 153.64,
+"end": 154.08
+},
+{
+"w": "and",
+"start": 154.36,
+"end": 154.76
+},
+{
+"w": "partly",
+"start": 154.76,
+"end": 155.14
+},
+{
+"w": "agreed",
+"start": 155.14,
+"end": 155.5
+},
+{
+"w": "with",
+"start": 155.5,
+"end": 155.7
+},
+{
+"w": "the",
+"start": 155.7,
+"end": 155.84
+},
+{
+"w": "rest.",
+"start": 155.84,
+"end": 156.24
+},
+{
+"w": "As",
+"start": 156.8,
+"end": 157.04
+},
+{
+"w": "of",
+"start": 157.04,
+"end": 157.2
+},
+{
+"w": "October",
+"start": 157.2,
+"end": 157.62
+},
+{
+"w": "2026,",
+"start": 157.62,
+"end": 158.66
+},
+{
+"w": "all",
+"start": 159.24,
+"end": 159.42
+},
+{
+"w": "four",
+"start": 159.42,
+"end": 159.76
+},
+{
+"w": "recommendations",
+"start": 159.76,
+"end": 160.5
+},
+{
+"w": "remain",
+"start": 160.5,
+"end": 161.0
+},
+{
+"w": "open.",
+"start": 161.0,
+"end": 161.52
+},
+{
+"w": "On",
+"start": 162.12,
+"end": 162.54
+},
+{
+"w": "15",
+"start": 162.54,
+"end": 163.0
+},
+{
+"w": "July",
+"start": 163.0,
+"end": 163.58
+},
+{
+"w": "2022,",
+"start": 163.58,
+"end": 164.7
+},
+{
+"w": "Titan's",
+"start": 165.34,
+"end": 165.88
+},
+{
+"w": "hull",
+"start": 165.88,
+"end": 166.04
+},
+{
+"w": "changed",
+"start": 166.04,
+"end": 166.72
+},
+{
+"w": "and",
+"start": 166.72,
+"end": 167.12
+},
+{
+"w": "its",
+"start": 167.12,
+"end": 167.26
+},
+{
+"w": "own",
+"start": 167.26,
+"end": 167.56
+},
+{
+"w": "sensors",
+"start": 167.56,
+"end": 167.96
+},
+{
+"w": "recorded",
+"start": 167.96,
+"end": 168.5
+},
+{
+"w": "it.",
+"start": 168.5,
+"end": 169.24
+},
+{
+"w": "Eleven",
+"start": 169.44,
+"end": 169.74
+},
+{
+"w": "months",
+"start": 169.74,
+"end": 170.06
+},
+{
+"w": "later,",
+"start": 170.06,
+"end": 170.5
+},
+{
+"w": "on",
+"start": 170.78,
+"end": 170.9
+},
+{
+"w": "its",
+"start": 170.9,
+"end": 171.06
+},
+{
+"w": "first",
+"start": 171.06,
+"end": 171.42
+},
+{
+"w": "deep",
+"start": 171.42,
+"end": 171.72
+},
+{
+"w": "dive",
+"start": 171.72,
+"end": 171.98
+},
+{
+"w": "since,",
+"start": 171.98,
+"end": 172.48
+},
+{
+"w": "five",
+"start": 173.04,
+"end": 173.2
+},
+{
+"w": "people",
+"start": 173.2,
+"end": 173.6
+},
+{
+"w": "were",
+"start": 173.6,
+"end": 173.82
+},
+{
+"w": "aboard.",
+"start": 173.82,
+"end": 174.26
+},
+{
+"w": "Stockton",
+"start": 175.0,
+"end": 175.4
+},
+{
+"w": "Rush,",
+"start": 175.4,
+"end": 175.76
+},
+{
+"w": "Paul",
+"start": 176.4,
+"end": 176.64
+},
+{
+"w": "-Henri",
+"start": 176.64,
+"end": 177.06
+},
+{
+"w": "Narg\u00e9let,",
+"start": 177.06,
+"end": 177.8
+},
+{
+"w": "Shahzada",
+"start": 178.32,
+"end": 178.76
+},
+{
+"w": "Dawood,",
+"start": 178.76,
+"end": 179.3
+},
+{
+"w": "Suleiman",
+"start": 179.84,
+"end": 180.26
+},
+{
+"w": "Dawood,",
+"start": 180.26,
+"end": 181.0
+},
+{
+"w": "Hamish",
+"start": 181.3,
+"end": 181.58
+},
+{
+"w": "Harding.",
+"start": 181.58,
+"end": 182.0
+}
+]
