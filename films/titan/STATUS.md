@@ -1,4 +1,4 @@
-# Titan: status (16 NOV 2026, second session)
+# Titan: status (16 NOV 2026, second session, end)
 
 ## Done
 - **Narration v4 APPROVED by the owner (16 NOV 2026)** (`script/narration.md`, `script/vo.txt`, 3,567 words), after an
@@ -24,19 +24,30 @@ pauses, his lead-ins stay. Same for the NTSB materials witness ("perhaps always 
 Quote times found in the auto-captions (`scripts/vtt_words.py`); list `scenes/hearing_fetch.txt`. The answer to the
 decision question (6:49:08-6:49:12) is a caption gap: confirm "Definitely Stockton" by ear before use.
 
-## Received (16 NOV 2026)
-- Hearing captions for all four days (Drive `titan/captions/`).
-- CC clips: all 20 downloaded on the phone, but the Drive upload stopped partway: 9 arrived as raw streams
-  (`.fNNN.mp4` + `.m4a`, usable), 11 only as `.info.json`. Re-running the same Termux command finishes the upload.
+## Done this session
+- **Hearing clips in the timeline.** Nine ranges fetched (Drive `titan/footage/h_*.mp4`). Seven trimmed by Whisper
+  word times at the quietest point of each gap, each trim re-transcribed (exact words, no stray syllable), joins
+  re-transcribed in place. "Definitely Stockton" confirmed by ear (Whisper: "Uh, definitely Stockton."). They replace
+  nine narrated sentences (`script/holds.json` `clips`; list in `script/narration.md`). Captions: CG 112 verbatim,
+  pages from the PDF (printed = PDF − 1). Lower thirds and credits in each clip entry. New claim C130 (Kramer, NTSB);
+  gate passes (130).
+- **Timeline: film 23:05** (1,385.3 s; the old "23:36" was a display bug: it was 22:36). Acts I 0:00 · II 1:57.8 ·
+  III 5:41.1 · IV 18:18.1 · V 20:18.0. Words measured again (3,530; 201 low-score, all numbers as before).
+- Clip loudness −31 to −33 LUFS against Marcus −24.9: the mix's `clips` entries set each clip's `lufs` (§12).
+- Unused but fetched: `h_brooks_oath` (Brooks standing to be sworn: silent picture under ¶ "Phil Brooks was the
+  director of engineering"), `h_brooks_shift` (Marcus keeps that line).
+- **The NTSB hearing slide** "Dive 80 Depth-based Plot of Strain — Linear Relationship" is on screen in `h_kramer_time`
+  (NTSB, public domain): a candidate exhibit for the re-plot's first state.
+- CC clips: all 20 now on Drive as merged MP4s. `termux_fetch_to_drive.sh` now repairs a broken ffmpeg.
+- PLAYBOOK §11.1 no longer names another channel or repo (channel separation). Older git history still does.
 
-## Waiting on the owner (Termux)
-1. Hearing clips: `curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- titan --list films/titan/scenes/hearing_fetch.txt`
-2. Finish the CC upload (downloads are skipped): `curl -sL https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main/scripts/termux_fetch_to_drive.sh | bash -s -- titan --list films/titan/scenes/owner_fetch.txt`
+## Waiting on the owner
+Nothing for the clips. The next owner gate is the 720p review cut.
 
 ## Next session
-1. Pull the hearing clips; listen and trim each to the spoken words; cut the matching Marcus quote sentences at their
-   pauses; add each clip to `holds.json` and re-run `film_timing.py` → `word_align.py`; fact-check the captions
-   against CG 112.
+1. Session setup: `scripts/gdrive_pull.sh titan/vo films/titan/assets/vo/drive`, copy `*_spliced.mp3` to
+   `assets/vo/takes/bNN.mp3`, pull `titan/footage` to `assets/titan/footage`, then `vo_timing.py` → `film_timing.py`
+   → `word_align.py` (rebuilds `assets/clips/` too).
 2. Hero builds: the re-plot (digitise NTSB Materials 24-012 figs. 28–31, five dives), the hull wall (Three.js,
    realistic PBR, ILLUSTRATION), the gauge, the ledger (dives 75–88, `13 IN ALL · 2021–22`).
 3. Screenplay renumbered to v4 paragraphs; choreography tables per scene (`/choreograph`); renders on GitHub.

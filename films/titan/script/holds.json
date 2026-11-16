@@ -1,5 +1,5 @@
 {
- "_doc": "Edit holds (PLAYBOOK §10.4, §12): seconds of picture time after a sentence, matched by its words. Holds over 0.8 s only at act turns and signature beats. The Gemini review (checked 16 NOV 2026) asked for beats after the names and after 'Definitely Stockton'. tail = the outro. No hearing clip yet: when the 23 SEP 2024 hearing ranges are fetched, clips are added here as holds.",
+ "_doc": "Edit holds (PLAYBOOK §10.4, §12): seconds of picture time after a sentence, matched by its words. Holds over 0.8 s only at act turns and signature beats. The Gemini review (checked 16 NOV 2026) asked for beats after the names and after 'Definitely Stockton'. tail = the outro. Clips (owner, 16 NOV 2026): the witness's own voice from the USCG hearing video replaces our reading of the same quote; in/out found by Whisper word times and cut at the quietest 10 ms in the gap, each trim re-transcribed (assets/titan/hearing/cuts.json); captions are the official transcript CG 112 verbatim, never the auto-captions.",
  "holds": [
   {
    "after": "Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and",
@@ -30,11 +30,6 @@
    "after": "Its dives were numbered fifty to eighty-eight.",
    "s": 1.5,
    "why": "the ledger opens on hull 2; 'Now, dive eighty.'"
-  },
-  {
-   "after": "Definitely Stockton, he said.",
-   "s": 1.0,
-   "why": "signature: the two words held on the page (treatment signature 3; Gemini check #5)"
   },
   {
    "after": "So here is the same data, against depth.",
@@ -93,5 +88,160 @@
   "reveal": "So here is the same data, against depth.",
   "min": 300,
   "max": 900
- }
+ },
+ "clips_dir": "assets/titan/footage",
+ "clips": [
+  {
+   "clip": "h_brooks_flashlight",
+   "in": 55.485,
+   "out": 59.335,
+   "replace": [
+    "In his words: it's not a great test."
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "But it's not — you know, it's not a great test"
+   ],
+   "source": "CG 112, printed p. 766 of 1651, l. 19 (C63)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "his own verdict on the inspection"
+  },
+  {
+   "clip": "h_brooks_decision",
+   "in": 2.315,
+   "out": 11.855,
+   "replace": [
+    "He was asked who made the decision",
+    "Definitely Stockton, he said."
+   ],
+   "pre": 0.4,
+   "post": 1.4,
+   "caption": [
+    "Q. So who made the decision to continue to resume diving operations after the report of the loud bang?",
+    "A. Definitely Stockton."
+   ],
+   "source": "CG 112, printed p. 766 of 1651, ll. 2–4 (C33)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "signature: the question and the two words in the room; the transcript page holds 1 s after (was the hold after our line)"
+  },
+  {
+   "clip": "h_brooks_diveagain",
+   "in": 2.405,
+   "out": 16.635,
+   "replace": [
+    "And he described the plan, in his words"
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "I know I discussed it with Stockton and he — you know, he wanted to continue on,",
+    "that I think the plan was at that time to \"well, let's dive again and see what happens\" on 81, on the next dives"
+   ],
+   "source": "CG 112, printed p. 765 of 1651, ll. 18–21 (C13)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "the plan, in his voice"
+  },
+  {
+   "clip": "h_brooks_linearity",
+   "in": 6.025,
+   "out": 19.795,
+   "replace": [
+    "Brooks testified that what he looked for in the strain was linearity"
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "So what I looked for in strain data was the linearity with depth,",
+    "that if it went nonlinear with the depth profile, that that was something to be concerned about."
+   ],
+   "source": "CG 112, printed p. 768 of 1651, ll. 15–17 (C111)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "the payoff's set-up: the right test, named by the man who read the data"
+  },
+  {
+   "clip": "h_kramer_time",
+   "in": 10.385,
+   "out": 16.535,
+   "replace": [
+    "But OceanGate's plots put strain and depth side by side"
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "OceanGate's strain data was typically and perhaps always plotted as a function of time."
+   ],
+   "source": "CG 112, printed p. 953 of 1651, ll. 10–11 (C112, C130)",
+   "lower_third": {
+    "name": "DR. DONALD KRAMER",
+    "role": "SENIOR MATERIALS ENGINEER · NTSB",
+    "when": "25 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 25 SEP 2024",
+   "why": "the N-T-S-B's own witness says how OceanGate plotted it; the depth re-plot follows as the NTSB's method"
+  },
+  {
+   "clip": "h_brooks_cost",
+   "in": 10.015,
+   "out": 17.955,
+   "replace": [
+    "They were told the cost of shipping it back was prohibitive."
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "And we were told it was a cost issue, you know, that the cost of shipping it back was prohibitive"
+   ],
+   "source": "CG 112, printed p. 769 of 1651, ll. 12–13 (C113)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "ends before \"they were low on money\" (his characterisation; the NTSB makes no finding on money)"
+  },
+  {
+   "clip": "h_brooks_safety",
+   "in": 14.495,
+   "out": 22.205,
+   "replace": [
+    "In his words: I felt that the safety",
+    "At least for myself."
+   ],
+   "pre": 0.4,
+   "post": 0.4,
+   "caption": [
+    "I felt that the safety was just being compromised way too much. At least for myself."
+   ],
+   "source": "CG 112, printed p. 779 of 1651, ll. 24–25 (C114)",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "why he left, in his voice"
+  }
+ ]
 }
