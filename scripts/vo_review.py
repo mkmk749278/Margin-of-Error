@@ -163,7 +163,12 @@ def transcribe(path: str, m) -> list[dict]:
 
 
 def transcribe_once(path: str, m) -> list[dict]:
-    segs, _ = m.transcribe(path, language="en", word_timestamps=True, vad_filter=False, beam_size=5)
+    # Decode with ffmpeg rather than faster-whisper's PyAV path: PyAV 19 dropped the `metadata_errors` argument that
+    # faster-whisper 1.2 passes (seen 2026-11-16), and an ffmpeg decode works with any PyAV version.
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    audio = np.frombuffer(raw, np.float32)
+    segs, _ = m.transcribe(audio, language="en", word_timestamps=True, vad_filter=False, beam_size=5)
     words = []
     for s in segs:
         for w in s.words or []:
