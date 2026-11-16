@@ -16,3 +16,5 @@ __pycache__/
 films/*/youtube/*_168.png
 # per-film source records (large PDFs; kept local / on Drive)
 assets/*/records/
+assets/*/
+# large media and fetched records stay on Drive (CLAUDE.md "Large media stays out of git")
