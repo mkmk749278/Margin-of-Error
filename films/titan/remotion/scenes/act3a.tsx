@@ -15,8 +15,8 @@ import {SceneDef} from './types';
 /** A note bar under an exhibit: the narration's key words arrive on their words (the page stays the base picture). */
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
-		<div style={{position: 'absolute', left: 96, right: 96, top: y, opacity: o, display: 'flex', justifyContent: 'center'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), whiteSpace: 'nowrap'}}>{children}</div>
+		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
