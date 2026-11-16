@@ -19,7 +19,7 @@
 set -uo pipefail
 SLUG="${1:?usage: termux_fetch_to_drive.sh <slug> [--list repo/path.txt] [URL[@START-END] ...]}"; shift
 MOE_FOLDER_ID=1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn   # the owner's Drive "Margin-of-Error" folder (created 2026-11-02)
-RAW=https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/main
+RAW=https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/${MOE_BRANCH:-main}   # MOE_BRANCH=<branch> to read a list not yet on main
 OUT="$HOME/moe_fetch/$SLUG"
 mkdir -p "$OUT" && cd "$OUT" || exit 1
 
@@ -53,7 +53,7 @@ for e in "${entries[@]}"; do
   n=$((n + 1)); name="${e%% *}"; entry="${e#* }"; url="${entry%@*}"; sec=""
   [[ "$entry" == *@*:*-* ]] && sec="${entry##*@}"
   echo "== $n/${#entries[@]} $name $entry"
-  done_file=$(ls "$name".* 2>/dev/null | grep -v -E '\.(part|ytdl)$|\.f[0-9]+\.' | head -1)
+  done_file=$(ls "$name".* 2>/dev/null | grep -v -E '\.(part|ytdl)$|\.f[0-9]+\.|\.info\.json$' | head -1)
   if [[ -n "$done_file" ]]; then echo "   already here ($done_file), skipped"; ok=$((ok + 1)); continue; fi
   if [[ "$url" =~ \.(jpe?g|png|tiff?|webp|pdf|mp3|wav|flac|m4a|mp4|mov|webm)(\?.*)?$ ]]; then
     ext="${BASH_REMATCH[1]}"
@@ -66,7 +66,7 @@ for e in "${entries[@]}"; do
   fi
   args=(--js-runtimes node --no-playlist --restrict-filenames --no-progress -q --no-warnings
         -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080]/b" --merge-output-format mp4
-        --print-to-file "%(title)s|%(uploader)s|%(duration)s" meta.txt -o "$name.%(ext)s")
+        --write-info-json --print-to-file "%(title)s|%(uploader)s|%(duration)s" meta.txt -o "$name.%(ext)s")   # .info.json carries the licence (PLAYBOOK §11.1)
   [[ -n "$sec" ]] && args+=(--download-sections "*$sec" --force-keyframes-at-cuts)
   rm -f meta.txt
   if yt-dlp "${args[@]}" "$url"; then

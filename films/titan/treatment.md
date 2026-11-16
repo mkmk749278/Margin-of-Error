@@ -1,4 +1,4 @@
-# Titan: treatment (v2, 2026-11-13) · **APPROVED by the owner 13 NOV 2026; promise locked**
+# Titan: treatment (v2, 2026-11-13; screen text corrected 16 NOV 2026 after fact-check v2 and fairness v2) · **APPROVED by the owner 13 NOV 2026; promise locked**
 
 Records: NTSB MIR-25-36 (02 OCT 2025) and its docket DCA23FM036 (Materials Laboratory report 24-012; exhibits CG-052,
 CG-098); USCG Marine Board of Investigation, Report of Investigation (04 AUG 2025, official file verified); USCG hearing
@@ -70,7 +70,7 @@ length is the one the material holds.)
 | 9:45 | III | **Was the damage in the data?** | **Signature 2, the re-plot** (the 0:28 promise paid): strain against time, dive by dive, each a different shape (OceanGate's way, C54); the axis turns to depth; dives 75 and 80 on one straight line; 81, 82, 83 bend away in the shallowest 500 m (C11). The number: the NTSB's fitted slope, 5.00 and 4.74 before; 8.76, 8.09, 8.77 after (C41). | Hero 1; source strip NTSB Materials report 24-012 figs. 28-31 | No music under the turn |
 | 10:45 | III | Could they have seen it then? | **The hindsight test, on screen (our reading, said as ours):** dive 80's own curve is straight until the event at its end; the bend appears in dive 81's data, downloaded after that dive (USCG 5.7). So before dive 81 the evidence was the bang and the jump; after it, a depth plot of the data already on OceanGate's computer would have shown the bend, before dives 82 and 83. And not a sensor fault: deep down the curves still match, "the gages themselves had not changed" (C48). | The ledger with dates 19, 22, 23 JUL | |
 | 11:45 | III | Why does it bend only near the surface? | The mechanism, credited to the NTSB (p. 59): voids in the bond between layers 1–2 and 3–4; a separation at the end of the cylinder responds differently at shallow depth and behaves like an intact hull deeper down. Why it still reached 3,840 m twice (C15): a delamination, not a through-crack. The NTSB: OceanGate "was unaware that the Titan was damaged and needed to be immediately removed from service" (C12). | Hero 2, the wall in section; NTSB photo of the first-layer piece with wear debris (rights) | Bed D |
-| 13:15 | III | Where did it spend the winter? | 26 JUL 2022 into a parking lot, uncovered; 28 JUL a $1,750 cover quote, reportedly unanswered (C18); 1.4°F to 84.2°F (−17°C to 29°C) until 06 FEB 2023 (C19). | NTSB fig. 9 (rights) | Wind bed, sparse |
+| 13:15 | III | Where did it spend the winter? | 26 JUL 2022 into a parking lot, uncovered; 28 JUL a CA$1,750 cover quote, reportedly unanswered (C18, C89); on screen `CA$1,750`; 1.4°F to 84.2°F (−17°C to 29°C) until 06 FEB 2023 (C19). | NTSB fig. 9 (rights) | Wind bed, sparse |
 | 14:30 | III | Was money the reason? | The board's findings, attributed: $1.85M advanced by the CEO (C24); staff asked to forgo salaries; Brooks leaves, "being compromised way too much. At least for myself" (C35); the post left vacant: the board's sentence quoted with its page (C21); *Horizon Arctic* unavailable, Titan towed behind *Polar Prince*, upsets on the way (C29, C43). | ROI pages, page numbers on screen | |
 | 15:45 | III | How was it allowed to carry people? | The board: paying passengers called "mission specialists" (C53); the NTSB's contributing factor: guidance and small-passenger-vessel rules "insufficient" (exec summary). Close of Act III. | Pages | Mid-roll pause |
 | 16:30 | IV | What happened in 2023? | The ledger resumes: four dives to 8–10 m (C17); after dive 82 more damage: "of unknown origin" (NTSB) beside "likely accelerated" by storage (USCG) (C20), the one point the record leaves open. Did every dive weaken it? The record dates two events, not every dive. | Split document | Bed D |
@@ -85,11 +85,11 @@ length is the one the material holds.)
 ## Signature moments in full
 1. **The unmeasured margin (3:45).** A vertical depth gauge, metres with feet and psi beside. On their words:
    `6,000 M × 2.25 · DESIGN GOAL` (dashed); `≈7,500 M · ANALYSIS, PERFECT GEOMETRY` (dashed, fades);
-   `< 3,000 M · SCALE MODELS, SAME METHOD: IMPLODED` (red tick); `4,200 M · PROOF HOLD 20 MIN · 01 MAR 2021 · DOME LIMIT`;
+   `< 3,000 M · SCALE MODELS, NEW MATERIAL: IMPLODED OR NEARLY` (red tick); `4,200 M · TEST HOLD 20 MIN · 01 MAR 2021 · DOME LIMIT · OCEANGATE'S ANALYSIS` (psi shown only for the record's three depths: 6,154 · 5,862 · 5,627);
    `3,840 M · WORKING DEPTH · 240-MIN HOLDS`. The cylinder's own strength line never draws: a bracket labelled
    `NEVER TESTED TO FAILURE · NTSB` where it should be.
-2. **The re-plot and the hindsight test (9:45–11:45).** Six dives' group-4 hoop traces digitised from the NTSB Materials
-   report figs. 28–31 (`DIGITISED FROM NTSB FIGURES · RECONSTRUCTION`). Against time: six humps. The axis label morphs
+2. **The re-plot and the hindsight test (9:45–11:45).** Five dives' group-4 hoop traces (75, 80, 81, 82, 83; 76 and 79 are not in the NTSB figures) digitised from the NTSB Materials
+   report figs. 28–31 (`DIGITISED FROM NTSB FIGURES · RECONSTRUCTION`). Against time: five humps. The axis label morphs
    `TIME` → `DEPTH (M)`; each trace re-flows. 75 and 80 settle on one line; 81, 82, 83 land a beat later and bend in
    the top 500 m. The slopes land one by one as said. Then the ledger dates slide in under the plot (`19 JUL · 22 JUL ·
    23 JUL`), and the narration runs the hindsight test, labelled `OUR READING`.
@@ -119,7 +119,7 @@ MAIB; the search noises (no line unless sourced).
 - **Living staff**: role only; the board's "reportedly" kept.
 - **The five**: named at the open and the close (C52); never pictured; no animation of the collapse with people
   aboard; no "they chose the risk" framing.
-- **Disputed rows never on screen as fact:** C16 (dive 83's date), C42 (the bang's exact depth), C50 (dive 88's start and
+- **Disputed rows never on screen as fact:** C38 (the debris field's distance from the bow), C42 (the bang's exact depth), C50 (dive 88's start and
   last depth: "about 3,350 m").
 
 ## What was cut (and why)
@@ -143,3 +143,19 @@ probable-cause reading.
 Who was aboard dives 81 and 82; Canada's TSB and the UK MAIB roles; the status of the NTSB's four recommendations and
 the Commandant's Final Action Memorandum; rights for every figure credited to OceanGate, DOTF, A Harvey or third
 parties; NTSB p. 25 verbatim; CG 112 testimony on the 2019 sign-off refusal; OceanGate's status and any pending suits.
+
+## Screen-text corrections, 16 NOV 2026 (fact-check v2 #26–#34, fairness v2 M16–M17)
+Applied above: the gauge's scale-model label; `TEST HOLD` (not "proof"); five dives in the re-plot; `CA$1,750`; dive
+83's date (23 JUL) may now go on screen, the bow distance may not. Still to carry into the build:
+- **Signature 3, the ledger:** dives 75–88 hold six dives to 3,840 m; the VO now says "Six of these dives ... Thirteen
+  did, in all" (C106). The thirteen ticks become a small `13 IN ALL · 2021–2022` tally beside the ledger.
+- **16:30 split document:** show the board's whole clause, "likely accelerated material degradation, including
+  potential weakening of the hull and other critical components" (ROI 5.20), beside the NTSB's "of unknown origin".
+- **23:00 myths:** the window card carries the board's own conclusion (unlikely to have caused the implosion, C94).
+- **24:00 recommendations:** status chips `OPEN · ACCEPTABLE RESPONSE · NTSB 22 OCT 2026`, re-checked on upload day
+  (C96); the Commandant's Final Action Memorandum "not published as of 22 OCT 2026" (C97).
+- **0:50 log:** one record per readout, credited (C50, C73); the 10:47:08 automatic ping may show as the last signal.
+- **Canada's TSB report (M23A0169, 17 JUN 2026):** a third official report. Not used until its primary is read
+  (Cowork, requested 16 NOV 2026); the VO leaves the every-dive question out until then (C98).
+- **Run time, honest:** narration v3 is 3,331 words, about 21 minutes of voice at Marcus's measured 160 wpm; with the
+  exhibit holds, about 23 minutes (the beat times above are v2's 27-minute plan and are re-timed on the audio).

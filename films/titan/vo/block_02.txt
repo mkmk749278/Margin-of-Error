@@ -1,0 +1,91 @@
+Titan dived again on the nineteenth of July. Brooks testified that after that dive, they didn't see any further shifts in strain data. No loud bangs. Nothing in the acoustics that seemed out of the ordinary.
+
+One acoustic sensor, he testified, did show activity on the dives that followed that they had not seen in twenty twenty-one, the kind of thing they wanted to be concerned about. He raised it with the chief executive. It stayed under the threshold they had set, he said, or maybe just barely over it, and it never got worse, so he did not think it was a concern. The N - T - S - B found the sensors never produced the kind of signal that would have triggered an alert.
+
+So, was the damage in the data?
+
+Brooks testified that what he looked for in the strain was linearity with depth. But OceanGate's plots put strain and depth side by side, each against time. Every dive has its own shape, its own pace, its own stops. Laid side by side, the dives are hard to compare.
+
+The N - T - S - B said a more appropriate way was to plot strain against depth directly, because depth sets the pressure.
+
+So here is the same data, against depth.
+
+Dive seventy-five, a straight line. Dive eighty, the same straight line, until the event at its very end.
+
+Dive eighty-one. Dive eighty-two. Dive eighty-three. In the first five hundred metres, every one of them bends away.
+
+To put a number on it, the N - T - S - B fitted a line to the shallowest stretch, from fifteen to a hundred and fifty metres: metres of depth for each millivolt from the gauge. Before the event: five point zero zero, and four point seven four. After it: eight point seven six, eight point zero nine, eight point seven seven.
+
+Same gauge, same hull, same sea. A response that had changed by about three quarters.
+
+Could OceanGate have seen this at the time? The Coast Guard board found that OceanGate had all the data it needed to show the hull's behaviour had changed, and that analysing strain against elapsed time failed to reveal it. The timing that follows is our own reading of the record, not a finding of any report.
+
+Brooks was right that there was no new jump. What changed was the slope, and against time a change in slope is hard to see.
+
+Dive eighty itself shows nothing until its last minutes. The bend first appears in dive eighty-one. That data was on the company's computer after that dive. Plotted against depth, it would have shown the bend before dive eighty-two, three days later, and before dive eighty-three.
+
+And it was not a faulty gauge. Deeper down, the curves still match, which the N - T - S - B said shows the gauges had not changed. The hull had.
+
+Canada's investigators later ran the same test on their own. They found the slope near the surface on the nineteenth of July nearly double the slope for the whole dive. They also found a smaller bend a year earlier, in August twenty twenty-one, and could not determine whether the bang caused the change.
+
+Why would a damaged hull bend only near the surface?
+
+The N - T - S - B found long voids in the bond between the first and second layers, and between the third and fourth. Where a layer separates at the end of the cylinder, it can move on its own under light pressure. Deeper down, it found, the layers respond like the intact hull.
+
+Titan made three more dives that July. Two of them, eighty-one and eighty-two, still reached the Titanic, which the N - T - S - B said showed the first damage was not enough to make it implode. A delamination is not a crack through the wall. But the wall was no longer what it had been.
+
+The N - T - S - B's finding: because its analysis was flawed, OceanGate was unable to identify that the Titan was damaged after dive eighty, and that it needed to be immediately removed from service.
+
+Then it had to spend the winter somewhere.
+
+On the twenty-sixth of July, Titan was set down in a parking lot at a marine base in Saint John's, Newfoundland. Uncovered.
+
+Two days later, the base passed on a quote for a protective cover: one thousand seven hundred and fifty Canadian dollars. The base told the Coast Guard board that OceanGate never answered that email.
+
+In September, the base wrote again: Titan still had not been covered. OceanGate's logistics director said it would be discussed. The board found no action followed.
+
+It stayed outside until the sixth of February, through temperatures from one point four to eighty-four point two degrees Fahrenheit, about minus seventeen to twenty-nine Celsius, through freezing rain, sleet and snow.
+
+Brooks testified that what they really wanted was to bring Titan back to Everett, pull the insert, and look inside the hull for cracks. They were told the cost of shipping it back was prohibitive.
+
+Was money behind these decisions? The Coast Guard board says it was: in its words, a troubling prioritization of cost and time-saving measures over safety. The N - T - S - B's findings do not address money.
+
+From June twenty twenty-two to May twenty twenty-three, the board found, the chief executive advanced the company one point eight five million dollars. The board found that employees were asked to temporarily forgo their salaries, with a promise of back pay.
+
+The ship that had carried Titan was unavailable for twenty twenty-three, the board found. Titan would be towed to the site on its launch platform, behind a smaller ship.
+
+Early in twenty twenty-three, Brooks left. Under oath, he said his main reason was that plan to tow Titan, which meant working on its platform in open seas, and that the reasons for it were economic. In his words: I felt that the safety was just being compromised way too much. At least for myself. He said he suggested they not go, and was told that wasn't possible: they had people that paid.
+
+The board found that the chief executive then left the director of engineering post vacant, in its words, to ensure the twenty twenty-three expedition proceeded unhindered.
+
+And the board drew the line back to twenty nineteen, when, by his own testimony, the first director of engineering had kept a damaged hull from an expedition. Leaving the post empty, it wrote, removed the possibility of a replacement director blocking the expedition.
+
+That spring, at sea and in port, the platform tipped more than once. Once, in May, its bow went partly under water, and Titan's tail cone was lost.
+
+How was a hull like this allowed to carry passengers?
+
+By the Coast Guard's reading of the law, it was not. Under U - S law, the N - T - S - B notes, a submersible carrying even one passenger for hire is a small passenger vessel, and must be inspected by the Coast Guard. OceanGate never registered Titan, and never arranged an inspection.
+
+The Coast Guard board found that OceanGate described its paying passengers as mission specialists, with mandatory duties, to conceal that they were paying passengers.
+
+The regulator's own guidance gets the same scrutiny. The Coast Guard's voluntary guidance for passenger submersibles was published in July nineteen ninety-three. That December, a new law changed the definition, to cover any submersible with one passenger for hire.
+
+As of its report in October twenty twenty-five, the N - T - S - B found, the guidance had never been updated to match. The Coast Guard, it found, had no specific inspection standards for how a submersible is designed or built.
+
+That guidance also recommended that a submersible dive no deeper than its rescue could reach. The N - T - S - B found that Titan regularly dived to the Titanic with no rescue standing by that could reach it.
+
+The N - T - S - B found that voluntary guidance and the rules for small passenger vessels were insufficient to make OceanGate follow the industry's established standards.
+
+In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
+
+At some point after dive eighty-two, the hull was damaged again. The N - T - S - B calls that damage of unknown origin. The Coast Guard board says the damage from dive eighty was likely made worse by the winter outdoors, and points to the towing as well.
+
+Did every dive weaken it? Here the investigators differ. The N - T - S - B dates two events: dive eighty, and something after dive eighty-two. Canada's Transportation Safety Board found the cylinder likely failed progressively, with damage accumulating during each dive.
+
+On the eighteenth of June, Titan made its first deep dive in eleven months.
+
+The N - T - S - B found that the existing delaminations and the later damage likely led to a local buckling failure. A delamination splits one thick layer into two thinner ones, and thinner layers buckle more easily. In a local buckle, one part of the wall changes shape, and gives way. The damage from dive eighty, it found, had reached the forward end of the cylinder: that is where the gauge that showed the change sat.
+
+Here is the dive record, from dive seventy-five to eighty-eight, with each dated decision beside the dive it followed.
+
+Six of these dives reached three thousand eight hundred and forty metres. Thirteen did, in all. Then one line that stops, about five hundred metres short.

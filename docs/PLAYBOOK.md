@@ -565,6 +565,18 @@ rewrite.
   trips it), split only at paragraph breaks: `scripts/vo_blocks.py films/<slug> --max 9500`. Block 1 is still
   measured first (`vo_review.py`) before the owner records the rest. The timing chain (`vo_timing.py` →
   `word_align.py`) runs on the owner's files unchanged.
+- **Gemini listening review (owner, 2026-11-16):** once all blocks are generated, the owner shares the MP3s and
+  `script/narration.md` with Gemini (it can listen) using `prompts/gemini_audio_review_v1.md`, and saves the answer to
+  Drive `<slug>/review/gemini_audio_review.md`. It is a list of leads (§14.3): each point is checked against
+  `vo_review.py` and the word timings in `review/gemini_audio_review_check.md` before any sentence is re-taken.
+  *Why:* free-tier generation means re-takes cost the owner time; a listener's pass catches tone and pronunciation
+  faults that speech-to-text cannot.
+  *Measured on Titan (16 NOV 2026):* Gemini reported a 21:59 file as 26:59 and the script as 3,703 words (3,567), so
+  its timestamps drifted past the end of the audio and it placed lines in the wrong block. Its findings were useful
+  (the names too brisk, the join levels, "crewed" heard as "crude") but each one was confirmed by measurement before a
+  re-take: join levels with RMS per 30 s (it was right on level, wrong on brightness), pauses with `silencedetect`,
+  words by re-transcribing a 4 s window where the full-file pass dropped a word. Re-takes are cut in with the
+  original pause's room sound, never digital silence.
 - **Generation in the session (owner, 2026-11-03; paused 2026-11-13 for lack of API credits):** `scripts/tts_elevenlabs.py films/<slug>` reads
   `ELEVENLABS_API_KEY` from the environment and writes one MP3 per recording block (`vo/<slug>_vo_bNN.mp3`, the same
   blocks as `vo_blocks.md`), with neighbouring text sent for continuity. Order: `--dry-run` (characters and quota) →

@@ -1,0 +1,22 @@
+# Titan: clip list for scripts/termux_fetch_to_drive.sh (NAME URL[@MM:SS-MM:SS]  # note). Licence re-checked in each
+# .info.json before use; credits "<channel> / YouTube · CC BY". Chosen from the CC search, 16 NOV 2026.
+cc_stjohns_harbour   https://www.youtube.com/watch?v=TImOrzteBRI          # Meandering Newfoundlander · St John's Harbour
+cc_stjohns_packice   https://www.youtube.com/watch?v=hICCfrzDkp0          # Alick Tsui · pack ice in the harbour
+cc_stjohns_cruisein  https://www.youtube.com/watch?v=qLGOkaCZalA          # Alick Tsui · entering the Narrows
+cc_stjohns_2014a     https://www.youtube.com/watch?v=7DDWxxlY5y8          # Christopher Rowley · harbour
+cc_stjohns_2014b     https://www.youtube.com/watch?v=4RU3zdGhBEk          # Christopher Rowley · harbour
+cc_stjohns_snow      https://www.youtube.com/watch?v=B8d5jmw0Ezs          # Alick Tsui · after major snowfall
+cc_stjohns_iceberg   https://www.youtube.com/watch?v=qo-tDQGHQD4          # Alick Tsui · iceberg outside the harbour
+cc_atl_heavy         https://www.youtube.com/watch?v=5GivgpNfUvg          # Saga47swan · Azores to Newfoundland
+cc_atl_passage       https://www.youtube.com/watch?v=xgyUMrtV6hI          # Real Navigation · North Atlantic passage
+cc_atl_rough         https://www.youtube.com/watch?v=mdtsHFMjdsw          # Ships and port · rough sea
+cc_research_ship     https://www.youtube.com/watch?v=d_7ApJVoJsI          # National Oceanography Centre · RRS Discovery
+cc_tape_slitting     https://www.youtube.com/watch?v=Q5PT536COcc          # Kopy Pack · tape slitting and spool winding
+cc_afp_tecnalia      https://www.youtube.com/watch?v=u8xX04ZPJWQ          # TECNALIA · automated placement
+cc_ndt_canister1     https://www.youtube.com/watch?v=OgV0LwZZ3qw          # filament-wound canister screening
+cc_ndt_canister2     https://www.youtube.com/watch?v=KbVqK26Wo4w          # filament-wound canister screening
+cc_ndt_robot         https://www.youtube.com/watch?v=PDgJTQowF-0          # Technovotum · composite NDT
+cc_tube_compression  https://www.youtube.com/watch?v=tIBGjN-DmQA          # PSAS · axial compression test
+cc_bend_closeup      https://www.youtube.com/watch?v=gFfmvlRXJdI          # 4-point bending close-up
+gov_navy_curv        https://www.youtube.com/watch?v=hvi6Go8jg4c          # U.S. Navy · CURV deep recovery ROV
+gov_noaa_titanic     https://www.youtube.com/watch?v=6Z7REEnwKOQ          # NOAA Ocean Exploration · Titanic 2004
