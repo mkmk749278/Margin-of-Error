@@ -1,0 +1,14 @@
+# Titan: hearing clips for scripts/termux_fetch_to_drive.sh (NAME URL@HH:MM:SS-HH:MM:SS  # what is said).
+# Official U.S. Coast Guard MBI hearing videos (US federal work, public domain). Credit on screen:
+# "U.S. COAST GUARD · MARINE BOARD HEARING · <DATE>". Ranges padded about 2 s each side; found in the auto-captions
+# with scripts/vtt_words.py (16 NOV 2026), trimmed to the spoken words after listening. Quotes as on air come from the
+# official transcript CG 112, never from the auto-captions.
+h_brooks_oath        https://www.youtube.com/watch?v=Xw0rnBv-Pa8@5:19:44-5:20:18  # 23 SEP 2024: the oath; "I do"
+h_brooks_shift       https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:47:26-6:48:20  # "a sudden shift in level ... something to be concerned about, for sure" (C63)
+h_brooks_diveagain   https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:48:21-6:48:53  # "let's dive again and see what happens, on 81" (C13, C64)
+h_brooks_decision    https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:48:59-6:49:15  # Q: who made the decision ... A: "Definitely Stockton." (C33)
+h_brooks_flashlight  https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:49:19-6:50:20  # insert never removed; flashlight; "not a great test" (C63)
+h_brooks_linearity   https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:53:40-6:54:08  # "linearity with depth" (C111)
+h_brooks_cost        https://www.youtube.com/watch?v=Xw0rnBv-Pa8@6:55:15-6:55:42  # "the cost of shipping it back was prohibitive" (C113)
+h_brooks_safety      https://www.youtube.com/watch?v=Xw0rnBv-Pa8@7:22:46-7:23:46  # "safety was just being compromised way too much"; "people that paid" (C114)
+h_kramer_time        https://www.youtube.com/watch?v=YupblW5tgiM@1:03:48-1:04:22  # 25 SEP 2024, NTSB materials: "typically and perhaps always plotted as a function of time" (C112)
