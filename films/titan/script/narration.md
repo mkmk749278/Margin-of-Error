@@ -258,7 +258,7 @@ The Coast Guard's Marine Board called it a preventable tragedy.
 
 Canada's Transportation Safety Board found that Titan received no oversight from Transport Canada, though it sailed from Saint John's with Canadian ships.
 
-It also wrote this, about Mr. Rush, who was both the company's chief executive and its pilot. Had he survived the incident, the board would have recommended that the Commandant refer the matter to the Department of Justice, for its consideration on whether to pursue a separate criminal investigation.
+The Coast Guard board also wrote this, about Mr. Rush, who was both the company's chief executive and its pilot. Had he survived the incident, the board would have recommended that the Commandant refer the matter to the Department of Justice, for its consideration on whether to pursue a separate criminal investigation.
 
 That investigation, the board noted, will not occur, because Mr. Rush died.
 
