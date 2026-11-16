@@ -9,7 +9,7 @@
 | DOD_109716145 / 718406 / 721208 / 724174 / 728593 | USCG press briefings, 19–25 JUN 2023 | Act I search beat (a few seconds, no quotes needed) |
 | DOD_109719049 | RCC Boston watchstanders, 20 JUN 2023 | Act I search beat: real coordination footage |
 | DOD_110564587 | The MBI's own animation of the final dive with text messages | **Not used**: built on Google Earth imagery; we draw our own log |
-| DOD_110804017 | MBI exhibit CG-140: NOAA/NPS recording and spectrogram of the implosion | **Owner's call** (respect): a real record of the deaths. Recommended: not used |
+| DOD_110804017 | MBI exhibit CG-140: NOAA/NPS recording and spectrogram of the implosion | **Not used (owner, 16 NOV 2026):** no engineering value; breaches editorial dignity |
 | DOD_111016570 | MBI exhibit CG-141: Polar Prince chartroom at the moment of the sound (staff faces) | **Not used** (living staff at the moment of the deaths) |
 | DOD_110745570 | Post-hearing Zoom interview of two mission specialists | Not needed |
 | 99 images | Hearing witnesses (23–27 SEP 2024), the 2019 hull in storage, carbon-fibre debris, recovery | Hearing stills behind the transcript cards; `9057367` (the hull in storage, 2019) and `9057369` (carbon-fibre debris) for Acts III–IV |

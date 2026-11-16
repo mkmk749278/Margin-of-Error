@@ -1,4 +1,4 @@
-# Titan: narration for approval (v4, 16 NOV 2026)
+# Titan: narration v4 (16 NOV 2026) · **APPROVED by the owner 16 NOV 2026, as written**
 
 **What this is:** the full narration as Marcus will read it (3,703 words; about 22 minutes of voice at Marcus's
 measured pace, about 24 minutes with the exhibit holds). The approved treatment estimated 27 minutes; this is what the
