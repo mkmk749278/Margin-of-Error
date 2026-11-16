@@ -1,0 +1,40 @@
+# Titan: footage queries for scripts/termux_footage_search.sh (SHOT|MODE|query). Real footage carries the story;
+# 3D carries the mechanism (owner, 2026-11-15). Never: news channels, re-uploads, AI video, the five who died.
+# --- official US federal (public domain): the hearing, the search, the investigators
+HEARING|gov|Titan Marine Board of Investigation hearing
+HEARING|gov|Coast Guard Titan submersible hearing September 2024
+HEARING|gov|Titan hearing Phil Brooks testimony
+HEARING|gov|Titan Marine Board of Investigation report release August 2025
+SEARCH|gov|Coast Guard Titan submersible search June 2023
+SEARCH|gov|Coast Guard C-130 search Titan submersible
+SEARCH|gov|Coast Guard press conference Titan submersible debris
+ROV|gov|Titan submersible ROV seafloor debris video Coast Guard
+NTSB|gov|NTSB Titan submersible
+NTSB|gov|NTSB materials laboratory carbon fiber examination
+TITANIC|gov|NOAA Titanic wreck footage
+TITANIC|gov|NOAA Titanic expedition 2004
+DEEP|gov|NOAA Okeanos Explorer ROV descent deep sea
+DEEP|gov|NOAA Ocean Exploration dive descent dark water
+# --- Creative Commons (CC BY), checked per video
+STJOHNS|cc|St. John's Newfoundland harbour
+STJOHNS|cc|St. John's Newfoundland winter snow
+STJOHNS|cc|Newfoundland freezing rain
+ATLANTIC|cc|North Atlantic ship rough sea
+ATLANTIC|cc|research vessel North Atlantic deck
+POLARPRINCE|cc|Polar Prince ship
+POLARPRINCE|cc|Canadian icebreaker Polar Prince
+CARBON|cc|carbon fiber filament winding
+CARBON|cc|automated fiber placement machine
+CARBON|cc|carbon fiber prepreg tape layup
+CARBON|cc|composite autoclave curing
+PRESSURE|cc|hyperbaric pressure chamber test
+PRESSURE|cc|pressure vessel hydrostatic test
+PRESSURE|cc|deep sea pressure test chamber
+NDT|cc|ultrasonic inspection carbon fiber composite
+NDT|cc|acoustic emission testing composite
+NDT|cc|strain gauge installation
+DELAM|cc|composite delamination test
+DELAM|cc|carbon fiber tube compression failure test
+SUB|cc|submersible launch and recovery
+SUB|cc|deep sea submersible dive
+TITANIUM|cc|titanium machining CNC dome
