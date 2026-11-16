@@ -11,6 +11,13 @@ type Sentence = {id: number; text: string; startFrame: number; endFrame: number}
 type Word = {s: number; w: string; startFrame: number; endFrame: number};
 
 const sentences: Sentence[] = timing.sentences;
+// sentences replaced by a hearing clip are absent from the list, so a sentence is found by its id, never by position
+const byId = new Map<number, Sentence>(sentences.map((x) => [x.id, x]));
+const sentence = (id: number): Sentence => {
+	const x = byId.get(id);
+	if (!x) throw new Error(`timing: no sentence ${id} (replaced by a clip?)`);
+	return x;
+};
 const words: Word[] = timing.words;
 
 const bySentence = new Map<number, Word[]>();
@@ -26,13 +33,13 @@ for (const w of words) {
 const clean = (w: string): string => w.toLowerCase().replace(/[^a-z0-9']/g, '');
 
 /** Sentence start frame. */
-export const sf = (id: number): number => sentences[id].startFrame;
+export const sf = (id: number): number => sentence(id).startFrame;
 /** Sentence end frame. */
-export const ef = (id: number): number => sentences[id].endFrame;
+export const ef = (id: number): number => sentence(id).endFrame;
 /** Frame of the n-th occurrence (0-based) of `word` in sentence `id`. Throws if absent: a cue never drifts silently. */
 export const wf = (id: number, word: string, nth = 0): number => {
 	const hits = (bySentence.get(id) ?? []).filter((x) => clean(x.w) === clean(word));
-	if (!hits[nth]) throw new Error(`timing: word "${word}" #${nth} not in sentence ${id}: ${sentences[id]?.text}`);
+	if (!hits[nth]) throw new Error(`timing: word "${word}" #${nth} not in sentence ${id}: ${byId.get(id)?.text}`);
 	return hits[nth].startFrame;
 };
 /** End frame of a word. */
@@ -41,7 +48,7 @@ export const wef = (id: number, word: string, nth = 0): number => {
 	if (!hits[nth]) throw new Error(`timing: word "${word}" #${nth} not in sentence ${id}`);
 	return hits[nth].endFrame;
 };
-export const sentenceText = (id: number): string => sentences[id].text;
+export const sentenceText = (id: number): string => sentence(id).text;
 export const s2f = (s: number): number => Math.round(s * FPS);
 export const OPEN_LOOP = timing.openLoop;
 

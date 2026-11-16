@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 420 word cues on 3530 words · 172 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+244 sentences · 756 word cues on 3530 words · 120 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -62,62 +62,62 @@
 | 55 | 5:13.3 | 12/25 | 1.1 s ok |  | After each dive, the engineering director looked at the data first, an |
 | 56 | 5:22.8 | 11/20 | 1.0 s ok |  | And the alert criteria had been set on the sounds of earlier hulls and |
 | 57 | 5:28.6 | 13/29 | 1.5 s ok |  | No model had ever been built this hull's way, so, the N - T - S - B fo |
-| 58 | 5:41.1 | 0/5 | 1.4 s ok |  | Had anyone warned about this? |
-| 59 | 5:43.5 | 0/6 | 2.2 s **FAIL** | January, twenty eighteen. | The eighteenth of January, twenty eighteen. |
-| 60 | 5:46.2 | 0/14 | 5.1 s **FAIL** | first | The company's director of marine operations filed an inspection report |
-| 61 | 5:51.7 | 0/6 | 2.5 s **FAIL** | twenty-six | It listed twenty-six items needing action. |
-| 62 | 5:54.7 | 0/29 | 9.6 s **FAIL** |  | On the hull, he wrote that the cut-off ends of the cylinder showed ver |
-| 63 | 6:04.9 | 0/16 | 4.2 s **FAIL** |  | The next day, he met the chief executive and argued for more testing o |
-| 64 | 6:09.5 | 0/6 | 1.9 s **FAIL** |  | The chief executive recorded the meeting. |
-| 65 | 6:11.9 | 0/28 | 8.4 s **FAIL** |  | On that recording, he answered that the cut-off ends were scrap, cut a |
-| 66 | 6:20.9 | 0/7 | 2.3 s **FAIL** | Four | Four days later, the director was fired. |
-| 67 | 6:23.6 | 0/15 | 3.5 s **FAIL** | two | The termination letter said the two of them were at an impasse over th |
-| 68 | 6:27.7 | 0/25 | 9.3 s **FAIL** | March,; twenty; first, | In March, more than twenty submersible professionals signed a letter u |
-| 69 | 6:37.5 | 0/5 | 1.3 s ok |  | It was never sent formally. |
-| 70 | 6:39.3 | 0/19 | 5.2 s **FAIL** |  | He received it, called the head of the industry committee behind it, a |
-| 71 | 6:45.3 | 0/5 | 1.2 s **FAIL** | first | That was the first hull. |
-| 72 | 6:47.0 | 0/18 | 5.8 s **FAIL** | second. | But the failure mode named in that report, delamination, is what the i |
-| 73 | 6:53.3 | 0/7 | 2.5 s **FAIL** | twenty nineteen, first | In twenty nineteen, the first hull cracked. |
-| 74 | 6:56.3 | 0/24 | 7.4 s **FAIL** | first | The company's first director of engineering testified that he refused  |
-| 75 | 7:04.2 | 0/12 | 3.0 s **FAIL** |  | He said it angered the chief executive, and led to his firing. |
-| 76 | 7:07.7 | 0/9 | 2.9 s **FAIL** |  | The company's letter to him cited the cancelled expedition. |
-| 77 | 7:11.2 | 0/11 | 3.4 s **FAIL** | second; one; twenty twenty-three. | A second hull was built: the one lost in twenty twenty-three. |
-| 78 | 7:15.1 | 0/7 | 2.4 s **FAIL** | fifty eighty-eight. | Its dives were numbered fifty to eighty-eight. |
-| 79 | 7:19.6 | 0/3 | 1.4 s **FAIL** | eighty. | Now, dive eighty. |
-| 80 | 7:21.7 | 0/15 | 4.9 s **FAIL** | July, twenty twenty-two, | On the fifteenth of July, twenty twenty-two, Titan reached the Titanic |
-| 81 | 7:27.2 | 0/10 | 3.1 s **FAIL** |  | Near the surface, the people inside heard a loud bang. |
-| 82 | 7:30.9 | 0/9 | 1.9 s **FAIL** |  | So did the crew of a small boat above. |
-| 83 | 7:33.3 | 0/15 | 4.0 s **FAIL** |  | The records differ on exactly where it happened, but all place it near |
-| 84 | 7:37.9 | 0/11 | 4.6 s **FAIL** | two,; twenty-five thousand | On channel two, the acoustic sensor peaked above twenty-five thousand  |
-| 85 | 7:43.0 | 0/10 | 3.0 s **FAIL** |  | At the same moment, the strain gauges beside it jumped. |
-| 86 | 7:46.3 | 0/16 | 5.4 s **FAIL** |  | Phil Brooks was the director of engineering by then, promoted from sof |
-| 87 | 7:52.4 | 0/27 | 9.4 s **FAIL** |  | He testified that he had no background in mechanical engineering or ma |
-| 88 | 8:02.6 | 0/10 | 3.0 s **FAIL** |  | Under oath, he described what they did after the bang. |
-| 89 | 8:06.3 | 0/8 | 2.0 s **FAIL** |  | They inspected the hull as best they could. |
-| 90 | 8:08.8 | 0/13 | 3.6 s **FAIL** |  | But the inside was lined by an insert, and the outside was covered. |
-| 91 | 8:12.9 | 0/19 | 4.8 s **FAIL** |  | You can take a flashlight, he said, and look down a small gap between  |
-| 93 | 8:22.9 | 0/7 | 2.3 s **FAIL** |  | The insert, he said, was never removed. |
-| 94 | 8:25.5 | 0/4 | 0.9 s ok |  | That was never done. |
-| 95 | 8:26.9 | 0/7 | 1.6 s **FAIL** |  | So the main check was the data. |
-| 96 | 8:29.1 | 0/13 | 3.7 s **FAIL** | two; sixteen | The strain showed a shift in level, on two of the sixteen channels. |
-| 97 | 8:33.4 | 0/13 | 3.7 s **FAIL** |  | A sudden shift, he said, is something to be concerned about, for sure. |
-| 98 | 8:37.7 | 0/16 | 3.9 s **FAIL** | one | He added that he was not a strain expert, and that this one looked fai |
-| 102 | 9:08.7 | 0/7 | 1.6 s **FAIL** |  | What did they think the bang was? |
-| 103 | 9:10.9 | 0/10 | 3.5 s **FAIL** |  | Brooks testified that the chief executive's theory was the frame. |
-| 104 | 9:15.0 | 0/31 | 8.4 s **FAIL** | may | The hull compresses slightly on the way down and the frame bolted to i |
-| 105 | 9:23.9 | 0/16 | 4.9 s **FAIL** |  | Brooks said that, without being a qualified mechanical engineer, he fo |
-| 106 | 9:29.6 | 0/16 | 5.1 s **FAIL** |  | A contractor on that expedition testified that she asked him whether t |
-| 107 | 9:35.2 | 0/27 | 7.1 s **FAIL** | two | In her account, he said it was only a few microns, and that the next t |
-| 108 | 9:42.9 | 0/20 | 7.0 s **FAIL** |  | Brooks himself testified that they had converted the shift into a phys |
-| 109 | 9:50.4 | 0/8 | 2.7 s **FAIL** | July. | Titan dived again on the nineteenth of July. |
-| 110 | 9:53.8 | 0/15 | 5.3 s **FAIL** |  | Brooks testified that after that dive, they didn't see any further shi |
-| 111 | 9:59.5 | 0/3 | 1.0 s ok |  | No loud bangs. |
-| 112 | 10:00.8 | 0/10 | 2.5 s **FAIL** |  | Nothing in the acoustics that seemed out of the ordinary. |
-| 113 | 10:04.2 | 0/31 | 9.6 s **FAIL** | One; twenty twenty-one, | One acoustic sensor, he testified, did show activity on the dives that |
-| 114 | 10:14.4 | 0/7 | 1.6 s **FAIL** |  | He raised it with the chief executive. |
-| 115 | 10:16.6 | 0/30 | 8.1 s **FAIL** |  | It stayed under the threshold they had set, he said, or maybe just bar |
-| 116 | 10:25.3 | 0/20 | 5.0 s **FAIL** |  | The N - T - S - B found the sensors never produced the kind of signal  |
-| 117 | 10:30.9 | 0/7 | 1.9 s **FAIL** |  | So, was the damage in the data? |
+| 58 | 5:41.1 | 3/5 | 0.6 s ok |  | Had anyone warned about this? |
+| 59 | 5:43.5 | 3/6 | 1.1 s ok |  | The eighteenth of January, twenty eighteen. |
+| 60 | 5:46.2 | 6/14 | 1.2 s ok |  | The company's director of marine operations filed an inspection report |
+| 61 | 5:51.7 | 3/6 | 0.9 s ok |  | It listed twenty-six items needing action. |
+| 62 | 5:54.7 | 12/29 | 1.4 s ok |  | On the hull, he wrote that the cut-off ends of the cylinder showed ver |
+| 63 | 6:04.9 | 8/16 | 0.9 s ok |  | The next day, he met the chief executive and argued for more testing o |
+| 64 | 6:09.5 | 3/6 | 0.8 s ok |  | The chief executive recorded the meeting. |
+| 65 | 6:11.9 | 10/28 | 1.5 s ok |  | On that recording, he answered that the cut-off ends were scrap, cut a |
+| 66 | 6:20.9 | 4/7 | 0.7 s ok |  | Four days later, the director was fired. |
+| 67 | 6:23.6 | 7/15 | 1.0 s ok |  | The termination letter said the two of them were at an impasse over th |
+| 68 | 6:27.7 | 13/25 | 1.5 s ok |  | In March, more than twenty submersible professionals signed a letter u |
+| 69 | 6:37.5 | 2/5 | 0.6 s ok |  | It was never sent formally. |
+| 70 | 6:39.3 | 6/19 | 1.3 s ok |  | He received it, called the head of the industry committee behind it, a |
+| 71 | 6:45.3 | 2/5 | 0.7 s ok |  | That was the first hull. |
+| 72 | 6:47.0 | 9/18 | 1.3 s ok |  | But the failure mode named in that report, delamination, is what the i |
+| 73 | 6:53.3 | 5/7 | 0.9 s ok |  | In twenty nineteen, the first hull cracked. |
+| 74 | 6:56.3 | 12/24 | 1.0 s ok |  | The company's first director of engineering testified that he refused  |
+| 75 | 7:04.2 | 5/12 | 0.9 s ok |  | He said it angered the chief executive, and led to his firing. |
+| 76 | 7:07.7 | 5/9 | 0.9 s ok |  | The company's letter to him cited the cancelled expedition. |
+| 77 | 7:11.2 | 6/11 | 0.8 s ok |  | A second hull was built: the one lost in twenty twenty-three. |
+| 78 | 7:15.1 | 5/7 | 0.6 s ok |  | Its dives were numbered fifty to eighty-eight. |
+| 79 | 7:19.6 | 1/3 | 1.2 s ok |  | Now, dive eighty. |
+| 80 | 7:21.7 | 7/15 | 1.4 s ok |  | On the fifteenth of July, twenty twenty-two, Titan reached the Titanic |
+| 81 | 7:27.2 | 6/10 | 0.9 s ok |  | Near the surface, the people inside heard a loud bang. |
+| 82 | 7:30.9 | 2/9 | 0.8 s ok |  | So did the crew of a small boat above. |
+| 83 | 7:33.3 | 8/15 | 1.2 s ok |  | The records differ on exactly where it happened, but all place it near |
+| 84 | 7:37.9 | 9/11 | 0.8 s ok |  | On channel two, the acoustic sensor peaked above twenty-five thousand  |
+| 85 | 7:43.0 | 6/10 | 0.7 s ok |  | At the same moment, the strain gauges beside it jumped. |
+| 86 | 7:46.3 | 9/16 | 1.3 s ok |  | Phil Brooks was the director of engineering by then, promoted from sof |
+| 87 | 7:52.4 | 12/27 | 1.4 s ok |  | He testified that he had no background in mechanical engineering or ma |
+| 88 | 8:02.6 | 4/10 | 1.3 s ok |  | Under oath, he described what they did after the bang. |
+| 89 | 8:06.3 | 2/8 | 0.8 s ok |  | They inspected the hull as best they could. |
+| 90 | 8:08.8 | 4/13 | 1.4 s ok |  | But the inside was lined by an insert, and the outside was covered. |
+| 91 | 8:12.9 | 9/19 | 1.4 s ok |  | You can take a flashlight, he said, and look down a small gap between  |
+| 93 | 8:22.9 | 3/7 | 1.4 s ok |  | The insert, he said, was never removed. |
+| 94 | 8:25.5 | 2/4 | 0.3 s ok |  | That was never done. |
+| 95 | 8:26.9 | 2/7 | 1.0 s ok |  | So the main check was the data. |
+| 96 | 8:29.1 | 5/13 | 1.1 s ok |  | The strain showed a shift in level, on two of the sixteen channels. |
+| 97 | 8:33.4 | 6/13 | 1.1 s ok |  | A sudden shift, he said, is something to be concerned about, for sure. |
+| 98 | 8:37.7 | 7/16 | 0.9 s ok |  | He added that he was not a strain expert, and that this one looked fai |
+| 102 | 9:08.7 | 2/7 | 0.9 s ok |  | What did they think the bang was? |
+| 103 | 9:10.9 | 6/10 | 1.0 s ok |  | Brooks testified that the chief executive's theory was the frame. |
+| 104 | 9:15.0 | 11/31 | 1.5 s ok |  | The hull compresses slightly on the way down and the frame bolted to i |
+| 105 | 9:23.9 | 8/16 | 0.9 s ok |  | Brooks said that, without being a qualified mechanical engineer, he fo |
+| 106 | 9:29.6 | 7/16 | 0.9 s ok |  | A contractor on that expedition testified that she asked him whether t |
+| 107 | 9:35.2 | 9/27 | 1.3 s ok |  | In her account, he said it was only a few microns, and that the next t |
+| 108 | 9:42.9 | 8/20 | 1.0 s ok |  | Brooks himself testified that they had converted the shift into a phys |
+| 109 | 9:50.4 | 4/8 | 0.7 s ok |  | Titan dived again on the nineteenth of July. |
+| 110 | 9:53.8 | 8/15 | 1.0 s ok |  | Brooks testified that after that dive, they didn't see any further shi |
+| 111 | 9:59.5 | 2/3 | 0.5 s ok |  | No loud bangs. |
+| 112 | 10:00.8 | 5/10 | 0.9 s ok |  | Nothing in the acoustics that seemed out of the ordinary. |
+| 113 | 10:04.2 | 12/31 | 1.4 s ok |  | One acoustic sensor, he testified, did show activity on the dives that |
+| 114 | 10:14.4 | 2/7 | 0.9 s ok |  | He raised it with the chief executive. |
+| 115 | 10:16.6 | 9/30 | 1.5 s ok |  | It stayed under the threshold they had set, he said, or maybe just bar |
+| 116 | 10:25.3 | 6/20 | 1.2 s ok |  | The N - T - S - B found the sensors never produced the kind of signal  |
+| 117 | 10:30.9 | 4/7 | 0.6 s ok |  | So, was the damage in the data? |
 | 120 | 10:54.9 | 0/12 | 3.8 s **FAIL** |  | Every dive has its own shape, its own pace, its own stops. |
 | 121 | 10:59.2 | 0/10 | 2.8 s **FAIL** |  | Laid side by side, the dives are hard to compare. |
 | 122 | 11:02.7 | 0/22 | 6.9 s **FAIL** |  | The N - T - S - B said a more appropriate way was to plot strain again |

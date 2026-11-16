@@ -1,0 +1,26 @@
+{
+ "appropriate": {
+  "page": 64,
+  "phrase": "A more appropriate means of evaluating strain data would have been to evaluate it against depth"
+ },
+ "unable": {
+  "page": 65,
+  "phrase": "the company was unable to identify that the pressure vessel was damaged after dive 80"
+ },
+ "removed": {
+  "page": 65,
+  "phrase": "needed to be immediately removed from service"
+ },
+ "gages": {
+  "page": 59,
+  "phrase": "the gages themselves had not changed, but rather the pressure hull itself had changed"
+ },
+ "insufficient": {
+  "page": 74,
+  "phrase": "voluntary guidance and US small passenger vessel regulations that were insufficient"
+ },
+ "voidsfig": {
+  "page": 44,
+  "phrase": "Voids in the adhesive between layers 1 and 2"
+ }
+}

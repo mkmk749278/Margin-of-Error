@@ -59,7 +59,7 @@ const ColdOpen: React.FC = () => {
 			</AbsoluteFill>
 			<div style={{position: 'absolute', left: 140, top: 86, display: 'flex', gap: 16, alignItems: 'center'}}>
 				{f < wf(2, 'later') - 6 ? (
-					<DatePill f={f} fps={fps} day={15} month={7} year={2022} dayWord={wf(0, 'fifteenth')} monthWord={wf(0, 'july')} yearWord={wf(0, 'twenty-two')} fromYear={2021} fromDay={1} size={36} />
+					<DatePill f={f} fps={fps} day={15} month={7} year={2022} dayWord={wf(0, 'fifteenth')} monthWord={wf(0, 'july')} yearWord={wf(0, 'twenty-two')} fromYear={2022} fromDay={1} size={36} />
 				) : (
 					<StatusFlip f={f} fps={fps} word={wf(2, 'later')} from="15 JUL 2022" to="18 JUN 2023" toneFrom="amber" toneTo="amber" size={36} />
 				)}
@@ -291,7 +291,7 @@ const LastDive: React.FC = () => {
 		<>
 			{/* s10: the date, alone */}
 			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: vis(f, sf(10) - 20, wf(11, 'at') + 6)}}>
-				<DatePill f={f} fps={fps} day={18} month={6} year={2023} dayWord={wf(10, 'eighteenth')} monthWord={wf(10, 'june')} yearWord={wf(10, 'twenty-three')} fromYear={2022} fromDay={1} size={64} />
+				<DatePill f={f} fps={fps} day={18} month={6} year={2023} dayWord={wf(10, 'eighteenth')} monthWord={wf(10, 'june')} yearWord={wf(10, 'twenty-three')} fromYear={2023} fromDay={1} size={64} />
 			</AbsoluteFill>
 			{sea > 0 ? (
 				<AbsoluteFill style={{opacity: sea}}>
