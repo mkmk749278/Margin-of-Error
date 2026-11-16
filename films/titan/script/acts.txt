@@ -1,0 +1,6 @@
+# Act starts for vo_timing.py: "Title | the first words of the act's first paragraph" (vo.txt keeps no headers).
+I · The Incident | The fifteenth of July, twenty twenty-two.
+II · The Mechanism | At three thousand eight hundred and forty metres, the ocean presses
+III · The Boardroom | Had anyone warned about this?
+IV · The Cascade | In twenty twenty-three, Titan's first four dives
+V · The Verdict | The N - T - S - B's probable cause was
