@@ -233,3 +233,8 @@ export const Ledger: React.FC<{f: number; fps: number; rows: LedgerRow[]; x: num
 		</div>
 	);
 };
+
+/** A word on screen that arrives and takes the light on its spoken word (`at`); `lightAt` lights it later if given. */
+export const Wd: React.FC<{f: number; at: number; tone?: string; base?: string; lightAt?: number; bold?: boolean; children: React.ReactNode; style?: React.CSSProperties}> = ({f, at, tone = colors.ink, base = colors.sub, lightAt, bold, children, style}) => (
+	<span style={{opacity: lead(f, at, 8), ...lit(f, lightAt ?? at, tone, base), fontWeight: bold ? 700 : undefined, ...style}}>{children}</span>
+);

@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 119 word cues on 3530 words · 206 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+244 sentences · 420 word cues on 3530 words · 172 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -26,42 +26,42 @@
 | 19 | 1:44.6 | 4/11 | 1.1 s ok |  | On its last dive, it failed about five hundred metres shallower. |
 | 20 | 1:48.9 | 1/9 | 1.3 s ok |  | So where did the margin of error run out? |
 | 21 | 1:51.9 | 2/8 | 1.0 s ok |  | And when did the hull start to go? |
-| 22 | 1:57.8 | 0/26 | 7.8 s **FAIL** | three thousand eight hundred forty; three hundred eighty | At three thousand eight hundred and forty metres, the ocean presses on |
-| 23 | 2:06.3 | 0/10 | 3.0 s **FAIL** |  | Titan was not built the way deep submersibles usually are. |
-| 24 | 2:09.8 | 0/21 | 7.0 s **FAIL** | five; one | Its pressure hull was a cylinder of carbon fibre, five layers, each ab |
-| 25 | 2:17.3 | 0/15 | 5.0 s **FAIL** |  | Titanium rings were bonded to each end, and titanium domes were bolted |
-| 26 | 2:22.9 | 0/26 | 8.6 s **FAIL** |  | According to a former director of marine operations, the company's chi |
-| 27 | 2:32.2 | 0/32 | 9.1 s **FAIL** | one, | He also believed that, because it was lighter, it would need less buoy |
-| 28 | 2:41.6 | 0/4 | 1.1 s ok |  | How strong was it? |
-| 29 | 2:43.2 | 0/35 | 11.2 s **FAIL** | six thousand; two two five:; thirteen; half thousand | The company's original goal was a hull rated to six thousand metres, w |
-| 30 | 2:55.1 | 0/17 | 6.7 s **FAIL** | one two five. | Canada's Transportation Safety Board found that OceanGate later change |
-| 31 | 3:02.5 | 0/25 | 8.6 s **FAIL** | seven thousand five hundred six thousand, one two five. | The analysis for this hull said the carbon cylinder would hold to abou |
-| 32 | 3:11.7 | 0/8 | 2.3 s **FAIL** |  | Less than twice the depth of the Titanic. |
-| 33 | 3:14.4 | 0/23 | 8.7 s **FAIL** |  | And, the N - T - S - B noted, that analysis assumed perfect geometry a |
-| 34 | 3:23.7 | 0/16 | 6.5 s **FAIL** | three thousand | Scale models built with the new materials imploded, or nearly imploded |
-| 35 | 3:30.8 | 0/16 | 5.0 s **FAIL** |  | OceanGate traced those failures to wrinkles in the carbon, and changed |
-| 36 | 3:36.3 | 0/16 | 4.9 s **FAIL** | one | That new method, bonding the layers one onto the next, was never teste |
-| 37 | 3:41.6 | 0/21 | 6.8 s **FAIL** |  | Canada's investigators found that a scale model built that way was dis |
-| 38 | 3:48.9 | 0/11 | 3.1 s **FAIL** | one | The only one ever built was the hull that carried people. |
-| 39 | 3:52.5 | 0/14 | 4.5 s **FAIL** | twenty twenty-one, | In early twenty twenty-one, that hull went to a pressure test facility |
-| 40 | 3:57.5 | 0/21 | 5.4 s **FAIL** | four thousand two hundred; three; four | The test plan had it going to the pressure of four thousand two hundre |
-| 41 | 4:03.3 | 0/9 | 3.1 s **FAIL** |  | The facility's logbook shows it reached that pressure once. |
-| 42 | 4:06.8 | 0/7 | 2.2 s **FAIL** | first March, twenty | The first of March, for twenty minutes. |
-| 43 | 4:09.6 | 0/20 | 6.3 s **FAIL** |  | According to analysis done for the company, the test depth was limited |
-| 44 | 4:16.5 | 0/25 | 8.0 s **FAIL** | four thousand; three thousand eight hundred forty, four | On the other days, the hull was held near four thousand metres, and th |
-| 45 | 4:25.0 | 0/6 | 1.7 s **FAIL** |  | It was never tested to failure. |
-| 46 | 4:28.4 | 0/28 | 7.9 s **FAIL** |  | The N - T - S - B found it unlikely that the hull ever had the strengt |
-| 47 | 4:36.8 | 0/9 | 2.0 s **FAIL** |  | Then how would anyone know if it was failing? |
-| 48 | 4:39.4 | 0/7 | 2.3 s **FAIL** |  | OceanGate's answer was to listen to it. |
-| 49 | 4:42.2 | 0/11 | 4.6 s **FAIL** | Eight; sixteen | Eight acoustic sensors and sixteen strain gauges, fixed inside the hul |
-| 50 | 4:47.3 | 0/19 | 5.6 s **FAIL** |  | A carbon hull, the theory went, would crackle as it weakened, and the  |
-| 51 | 4:53.3 | 0/4 | 1.3 s ok |  | The system had limits. |
-| 52 | 4:55.1 | 0/15 | 4.8 s **FAIL** |  | The pilot saw live readings, but the full data were downloaded only af |
-| 53 | 5:00.5 | 0/22 | 7.3 s **FAIL** |  | Acoustic data were analysed only from the dive itself, so damage at th |
-| 54 | 5:08.2 | 0/15 | 5.0 s **FAIL** | twenty twenty-two, three; eight | In twenty twenty-two, three of the eight acoustic channels registered  |
-| 55 | 5:13.3 | 0/25 | 9.0 s **FAIL** | first,; eight ten | After each dive, the engineering director looked at the data first, an |
-| 56 | 5:22.8 | 0/20 | 5.4 s **FAIL** |  | And the alert criteria had been set on the sounds of earlier hulls and |
-| 57 | 5:28.6 | 0/29 | 8.6 s **FAIL** | one | No model had ever been built this hull's way, so, the N - T - S - B fo |
+| 22 | 1:57.8 | 13/26 | 1.2 s ok |  | At three thousand eight hundred and forty metres, the ocean presses on |
+| 23 | 2:06.3 | 4/10 | 1.0 s ok |  | Titan was not built the way deep submersibles usually are. |
+| 24 | 2:09.8 | 8/21 | 1.3 s ok |  | Its pressure hull was a cylinder of carbon fibre, five layers, each ab |
+| 25 | 2:17.3 | 5/15 | 1.2 s ok |  | Titanium rings were bonded to each end, and titanium domes were bolted |
+| 26 | 2:22.9 | 11/26 | 1.2 s ok |  | According to a former director of marine operations, the company's chi |
+| 27 | 2:32.2 | 10/32 | 1.4 s ok |  | He also believed that, because it was lighter, it would need less buoy |
+| 28 | 2:41.6 | 2/4 | 0.9 s ok |  | How strong was it? |
+| 29 | 2:43.2 | 21/35 | 1.2 s ok |  | The company's original goal was a hull rated to six thousand metres, w |
+| 30 | 2:55.1 | 13/17 | 1.1 s ok |  | Canada's Transportation Safety Board found that OceanGate later change |
+| 31 | 3:02.5 | 15/25 | 1.4 s ok |  | The analysis for this hull said the carbon cylinder would hold to abou |
+| 32 | 3:11.7 | 4/8 | 0.6 s ok |  | Less than twice the depth of the Titanic. |
+| 33 | 3:14.4 | 11/23 | 1.5 s ok |  | And, the N - T - S - B noted, that analysis assumed perfect geometry a |
+| 34 | 3:23.7 | 10/16 | 1.3 s ok |  | Scale models built with the new materials imploded, or nearly imploded |
+| 35 | 3:30.8 | 7/16 | 1.0 s ok |  | OceanGate traced those failures to wrinkles in the carbon, and changed |
+| 36 | 3:36.3 | 8/16 | 0.9 s ok |  | That new method, bonding the layers one onto the next, was never teste |
+| 37 | 3:41.6 | 10/21 | 1.4 s ok |  | Canada's investigators found that a scale model built that way was dis |
+| 38 | 3:48.9 | 6/11 | 0.9 s ok |  | The only one ever built was the hull that carried people. |
+| 39 | 3:52.5 | 8/14 | 1.2 s ok |  | In early twenty twenty-one, that hull went to a pressure test facility |
+| 40 | 3:57.5 | 10/21 | 1.1 s ok |  | The test plan had it going to the pressure of four thousand two hundre |
+| 41 | 4:03.3 | 5/9 | 0.7 s ok |  | The facility's logbook shows it reached that pressure once. |
+| 42 | 4:06.8 | 4/7 | 0.8 s ok |  | The first of March, for twenty minutes. |
+| 43 | 4:09.6 | 8/20 | 1.2 s ok |  | According to analysis done for the company, the test depth was limited |
+| 44 | 4:16.5 | 16/25 | 1.3 s ok |  | On the other days, the hull was held near four thousand metres, and th |
+| 45 | 4:25.0 | 3/6 | 0.6 s ok |  | It was never tested to failure. |
+| 46 | 4:28.4 | 10/28 | 1.2 s ok |  | The N - T - S - B found it unlikely that the hull ever had the strengt |
+| 47 | 4:36.8 | 3/9 | 0.8 s ok |  | Then how would anyone know if it was failing? |
+| 48 | 4:39.4 | 3/7 | 1.0 s ok |  | OceanGate's answer was to listen to it. |
+| 49 | 4:42.2 | 6/11 | 1.1 s ok |  | Eight acoustic sensors and sixteen strain gauges, fixed inside the hul |
+| 50 | 4:47.3 | 6/19 | 1.1 s ok |  | A carbon hull, the theory went, would crackle as it weakened, and the  |
+| 51 | 4:53.3 | 2/4 | 0.7 s ok |  | The system had limits. |
+| 52 | 4:55.1 | 7/15 | 1.3 s ok |  | The pilot saw live readings, but the full data were downloaded only af |
+| 53 | 5:00.5 | 8/22 | 1.4 s ok |  | Acoustic data were analysed only from the dive itself, so damage at th |
+| 54 | 5:08.2 | 8/15 | 1.2 s ok |  | In twenty twenty-two, three of the eight acoustic channels registered  |
+| 55 | 5:13.3 | 12/25 | 1.1 s ok |  | After each dive, the engineering director looked at the data first, an |
+| 56 | 5:22.8 | 11/20 | 1.0 s ok |  | And the alert criteria had been set on the sounds of earlier hulls and |
+| 57 | 5:28.6 | 13/29 | 1.5 s ok |  | No model had ever been built this hull's way, so, the N - T - S - B fo |
 | 58 | 5:41.1 | 0/5 | 1.4 s ok |  | Had anyone warned about this? |
 | 59 | 5:43.5 | 0/6 | 2.2 s **FAIL** | January, twenty eighteen. | The eighteenth of January, twenty eighteen. |
 | 60 | 5:46.2 | 0/14 | 5.1 s **FAIL** | first | The company's director of marine operations filed an inspection report |
