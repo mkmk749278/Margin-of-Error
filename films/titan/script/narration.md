@@ -4,6 +4,15 @@
 measured pace, about 24 minutes with the exhibit holds). The approved treatment estimated 27 minutes; this is what the
 record carries without padding. No audio is made until you approve it.
 
+**Hearing clips (owner, 16 NOV 2026):** nine sentences below are now said by the witnesses themselves, from the USCG
+hearing video; Marcus's lead-ins stay. Replaced lines and their clips (`script/holds.json` `clips`, captions verbatim
+from CG 112): "In his words: it's not a great test." → Brooks · "He was asked who made the decision to resume diving. /
+Definitely Stockton, he said." → the board's question and Brooks's answer · "And he described the plan, in his words:
+…" → Brooks · "Brooks testified that what he looked for in the strain was linearity with depth." → Brooks · "But
+OceanGate's plots put strain and depth side by side, each against time." → Dr. Donald Kramer, NTSB · "They were told
+the cost of shipping it back was prohibitive." → Brooks · "In his words: I felt that the safety … / At least for
+myself." → Brooks. The recorded takes are unchanged; the cut is made in the timeline.
+
 **Locked promise:** *The NTSB Graph That Shows Titan Was Damaged 11 Months Before It Imploded*. Sentence 1 states it on
 the record; the depth chart pays it at about 11:30.
 
