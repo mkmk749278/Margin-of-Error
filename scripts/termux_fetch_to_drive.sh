@@ -38,8 +38,15 @@ while [[ $# -gt 0 ]]; do
 done
 [[ ${#entries[@]} -ge 1 ]] || { echo "give at least one URL or --list" >&2; exit 2; }
 
-command -v rclone >/dev/null && command -v ffmpeg >/dev/null && command -v node >/dev/null && command -v python3 >/dev/null \
+command -v rclone >/dev/null && command -v node >/dev/null && command -v python3 >/dev/null \
   || { pkg update -y && pkg install -y python ffmpeg nodejs rclone; }
+# ffmpeg must actually run, not just exist: a stale Termux library set leaves a binary yt-dlp cannot use, and then
+# ranges fail ("ffmpeg is not installed") and full videos arrive as unmerged .fNNN streams (16 NOV 2026).
+if ! ffmpeg -hide_banner -version >/dev/null 2>&1; then
+  echo "ffmpeg does not run; repairing it (pkg upgrade + reinstall)"
+  pkg update -y && yes | pkg upgrade -y && pkg reinstall -y ffmpeg
+  ffmpeg -hide_banner -version >/dev/null 2>&1 || { echo "ffmpeg still does not run: send Claude the output of: ffmpeg -version" >&2; exit 4; }
+fi
 python3 -m pip show yt-dlp 2>/dev/null | grep -q "^Version: 2026.8.19" || python3 -m pip install -q "yt-dlp==2026.8.19"
 
 if ! rclone listremotes | grep -q "^moe:$"; then
