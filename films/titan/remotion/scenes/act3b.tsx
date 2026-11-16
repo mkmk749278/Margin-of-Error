@@ -76,7 +76,7 @@ const RePlot: React.FC = () => {
 					<br />
 					<br />
 					<Wd f={f} at={wf(121, 'laid')} lightAt={wf(121, 'side')}>SIDE BY SIDE: </Wd>
-					<Wd f={f} at={wf(121, 'hard')} lightAt={wf(121, 'compare')} tone={colors.red}>HARD TO COMPARE</Wd>
+					<Wd f={f} at={wf(121, 'dives')}>THE DIVES: </Wd><Wd f={f} at={wf(121, 'hard')} lightAt={wf(121, 'compare')} tone={colors.red}>HARD TO COMPARE</Wd>
 				</div>
 				<div style={{position: 'absolute', top: 0, opacity: vis(f, wf(122, 'n'), wf(124, 'dive') - 6), ...T(30, {}), lineHeight: 1.55}}>
 					<Chip text="THE N-T-S-B" tone={colors.cyan} size={30} />
