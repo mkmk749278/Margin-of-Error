@@ -1186,6 +1186,22 @@ the film's own `claims.csv` and research → send the batch to the owner in the 
 plus the heart / pin / hide list for Studio, which the API cannot do) → **post only what the owner approved, exactly
 as approved** ("approve 1,3" means 1 and 3 only) → log every decision in `comments/handled.csv` (comment id, video,
 type, action, claim ids, date). **No viewer profiles in git:** the repo is public.
+**Posting without approval, and writing for the top-tier audience (owner, 2026-11-16).** On the first reply (a Short,
+"Half an inch is a finger width."), the owner said: "I no need to approve but remember that is top tier countries
+channel. So our sentence formation, talking etc should match them; if we can fetch the user country, reply
+accordingly." So:
+- The session posts this channel's replies once they are drafted and checked (facts from `claims.csv`, timestamps
+  from the published cut's SRT, the voice below), and reports what it posted. The hide list stays the owner's call.
+- **Sound like a native US/UK speaker,** not translated English: their idioms ("a finger's width", "that was all it
+  took", "crept up"), contractions, dry understatement. When the viewer's country is known, match it: US spelling and
+  idiom for the US (the channel default), British idiom for a UK, Australian or Irish viewer (spelling stays American,
+  as on screen). Units as the viewer used them.
+- **Finding the country:** `channels.list?part=snippet&id=<authorChannelId>` gives `snippet.country`, but most viewers
+  leave it blank (the first commenter did). Then read the clues in the comment itself (spelling such as "colour",
+  "aluminium", words such as "mate", "lorry"); with no clue, write plain American English.
+- **On a Short, point to the full film** with one or two exact timestamps that answer what the viewer noticed (checked
+  in the SRT), and no link: YouTube holds replies with links for review. The Short's Related video in Studio carries
+  the tap.
 **Tooling (to build when the first film is public):** a fetch/post script using this channel's own OAuth token from
 an environment secret (never in git, chat or a reply), with offline tests. Ask the owner before connecting the channel.
 
