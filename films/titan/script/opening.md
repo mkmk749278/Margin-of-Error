@@ -6,10 +6,10 @@ VO text: `opening_vo.txt` (vo_lint passes; 139 words, about 55 s at 150 wpm; tim
 
 | ~Time | VO | Picture | Claims |
 |---|---|---|---|
-| 0:00 | The fifteenth of July, twenty twenty-two. On its eightieth dive, the Titan submersible's hull monitor recorded a burst of sound, and a sudden shift in strain. | `15 JUL 2022 · DIVE 80`; the grey strain trace draws against a clock; "burst of sound" lights the acoustic channel; "sudden shift" is the jump. **By 0:07 the jumped trace is on screen** | C08, C10, C36 |
+| 0:00 | The fifteenth of July, twenty twenty-two. On dive eighty, the Titan submersible's hull monitor recorded a burst of sound, and a sudden shift in strain. | `15 JUL 2022 · DIVE 80`; the grey strain trace draws against a clock; "burst of sound" lights the acoustic channel; "sudden shift" is the jump. **By 0:07 the jumped trace is on screen** | C08, C10, C36 |
 | 0:10 | Eleven months later, on the way down to the Titanic, the hull failed. Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and Hamish Harding died. | Dark frame; `18 JUN 2023`; the five names in type, one per name as said; nothing else | C01, C37, C52 |
 | 0:20 | Titan's hull was hard to inspect, so OceanGate relied on this monitor to warn it when the hull was weakening. | Back to the trace; the sensor map on a line drawing of the hull | C55 |
-| 0:27 | It is often said the warning worked, and was ignored. The record is more exact. Three of its eight acoustic sensors recorded nothing all season. Its alert criteria had been set on hulls built a different way. And the strain was read against time. | **The new hook (~0:30):** channels 1, 3, 5 go dark on their word; a `HULL 1 · SCALE MODELS` tag on "other hulls"; the x-axis label `TIME` brackets on "time" | C09, C31, C30, C54 |
+| 0:27 | It is often said the warning worked, and was ignored. The record is more exact. Three of its eight acoustic sensors registered no acoustic events all season. Its alert criteria had been set on hulls built a different way. And the strain was read against time. | **The new hook (~0:30):** channels 1, 3, 5 go dark on their word; a `HULL 1 · SCALE MODELS` tag on "other hulls"; the x-axis label `TIME` brackets on "time" | C09, C31, C30, C54 |
 | 0:42 | After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth. We will draw that chart with them, from the reports and the sworn testimony. | **Method (starts by 0:45):** the three record ids stack in desk pose: `NTSB MIR-25-36 · DOCKET DCA23FM036`, `USCG MBI · 04 AUG 2025`, `HEARING TRANSCRIPTS · SEPT 2024`; the `TIME` label flickers toward `DEPTH` and stops (the loop stays open) | C30, C41 |
 
 ## Promise check (§5.1)
@@ -36,3 +36,11 @@ VO text: `opening_vo.txt` (vo_lint passes; 139 words, about 55 s at 150 wpm; tim
   was "impractical or impossible", C55). "Instead of inspecting" implied a choice the record describes as a constraint.
 - 0:27 now says three sensors **recorded nothing all season** (C09's own words) instead of "were dead".
 - Sentence 1 and the thumbnail exhibit are unchanged, so the promise check above still passes on all four points.
+
+## Re-check, 16 NOV 2026, after fact-check v2 and fairness v2
+- Sentence 1 now says **"On dive eighty"**: dive numbers are labels across two hulls (dives 1–49 were the first hull),
+  so "its eightieth dive" was a count the record doesn't support (C77). Same date, same exhibit, same reading.
+- The sensors line now uses the NTSB's words, **"registered no acoustic events"** (C09; the board measured those
+  channels below 250 mV, so "recorded nothing" overstated).
+- **Promise check re-run:** the title's case (Titan), exhibit (the dive 80 strain data) and fact are all in sentence 1;
+  the jumped trace is still on screen by 0:07; the new hook and the method keep their places. **Pass.**

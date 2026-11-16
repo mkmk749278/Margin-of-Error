@@ -1,15 +1,13 @@
-# Titan: status (13 NOV 2026, end of session)
+# Titan: status (16 NOV 2026)
 
-- **Done:** brief, landscape, treatment v2 **approved and promise locked** (owner, 13 NOV); independent treatment review +
-  check; opening 0:00-0:45 written first, promise check passed (`script/opening.md`, `script/opening_vo.txt`);
-  narration first draft `script/vo_draft.txt` (internal, about 2,160 words: about 15 min of voice).
-- **In flight when the session ended:** a max-effort fact-check (fresh context) of the treatment was running; if
-  `review/factcheck_treatment_v2.md` is absent, re-run `/fact-check` on `treatment.md` and `script/vo_draft.txt`.
-- **Next:** add claim C55 (NTSB PDF p. 64, "Instead, OceanGate monitored the Titan pressure vessel's integrity using its
-  RTM system"); expand the narration only with new record material (Brooks testimony, the 2018 MTS letter CG-068, the
-  DOTF logbook, NVIC 05-93 and the 1993 passenger-vessel law, the 7-hour notification delay), then state the honest run
-  time; creative pass, lean-in test, `vo_lint.py`, `/fairness-pass`, audience review (`prompts/audience_review_v1.md`);
-  then the narration to the owner with recording blocks at most 10,000 characters (`vo_blocks.py --max 9500`).
-- **Records:** Drive `titan/records/` (official USCG report, CG 112 hearing transcripts, CG-082, CG-100 scan); NTSB
-  docket items download from data.ntsb.gov with ID + FileName (see `research/landscape.md`). Local copies in
-  `assets/titan/records/` do not survive the session.
+- **Done:** treatment v2 approved, promise locked (owner, 13 NOV). Narration **v3** (`script/vo.txt`, 3,331 words,
+  about 21 min of voice, about 23 min with holds) after an independent **fact-check v2** (`review/factcheck_v2.md`) and
+  **fairness pass v2** (`review/fairness_v2.md`), both at max effort in fresh contexts; every must-fix applied; claims
+  C01–C120, gate passes. Opening re-checked (`script/opening.md`). Treatment screen text corrected.
+- **In flight:** the independent audience review (new session, no repo; prompt `review/audience_review_v1_prompt.txt`).
+- **Waiting on the owner:** Cowork fetch of Canada's TSB report M23A0169 (17 JUN 2026) to `titan/records/tsb/`;
+  until it is read, the VO leaves out "did every dive weaken it?" (C98). Footage: the Termux search
+  (`scripts/termux_footage_search.sh`, queries in `scenes/footage_queries.txt`) and the DVIDS Cowork request.
+- **Next:** fold in the audience review (each point checked, `review/audience_review_v1_check.md`), screenplay with
+  the Q column, then `script/narration.md` and recording blocks (`vo_blocks.py --max 9500`) to the owner for approval.
+- **Records:** Drive `titan/records/`; local copies in `assets/titan/records/` (gone with the session).
