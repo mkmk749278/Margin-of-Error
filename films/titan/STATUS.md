@@ -19,7 +19,6 @@
   from the viewers (each needs a source first): the 2023 search noises, OceanGate's view on jurisdiction, who the
   five were, ticket price. Structure note: Act III runs 12.5 min (the viewers suggested splitting it).
 - Open: the SRT (American spelling) is package-step work. `media_manifest.csv` done.
-  (American spelling) and `media_manifest.csv` rows are package-step work.
 
 ## Done this session: the picture, all five acts (Remotion, `films/titan/remotion/`)
 - **Acts I–V coded on the measured words** (`scenes/act1.tsx`, `act2`, `act3a`, `act3b`, `act3c`, `act45`):
