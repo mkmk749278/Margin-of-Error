@@ -8,6 +8,8 @@ import {FourMissingBolts} from '../films/four-missing-bolts/remotion/Film';
 import {FILM_FRAMES} from '../films/four-missing-bolts/remotion/timing';
 import {EastPalestine} from '../films/east-palestine/remotion/Film';
 import {FILM_FRAMES as EP_FRAMES} from '../films/east-palestine/remotion/timing';
+import {Titan} from '../films/titan/remotion/Film';
+import {FILM_FRAMES as TITAN_FRAMES} from '../films/titan/remotion/timing';
 import {ThumbBearing} from '../films/east-palestine/remotion/thumb/ThumbBearing';
 import {ThumbPoster} from '../films/east-palestine/remotion/thumb/ThumbPoster';
 import {Short, calcShortMetadata, SHORT_W, SHORT_H} from '../lib/remotion/Short';
@@ -29,6 +31,9 @@ export const Root: React.FC = () => (
 	<>
 		<Folder name="FourMissingBolts">
 			<Composition id="FourMissingBolts" component={FourMissingBolts} durationInFrames={FILM_FRAMES} fps={video.fps} width={video.width} height={video.height} />
+		</Folder>
+		<Folder name="Titan">
+			<Composition id="Titan" component={Titan} durationInFrames={TITAN_FRAMES} fps={video.fps} width={video.width} height={video.height} />
 		</Folder>
 		<Folder name="EastPalestine">
 			<Composition id="EastPalestine" component={EastPalestine} durationInFrames={EP_FRAMES} fps={video.fps} width={video.width} height={video.height} />
