@@ -52,8 +52,6 @@ The second, 153–158°F, the investigators could not find in the guidance used 
 What was decided on it is in the full investigation on YouTube: Margin of Error (link in bio).
 From NTSB report RIR-24-05.
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
-
 #EastPalestine #NTSB #TrainDerailment #Railroad #Engineering #Investigation
 ```
 Link in bio: https://youtu.be/PzY0teB3Pdc

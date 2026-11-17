@@ -74,8 +74,8 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
   Moats": a physical limit or single supply point the economy rests on, held to the same sourcing and fairness rules.
   No geopolitics from other regions, no physics-trivia detours. Currency in `$` with millions/billions; units as the
   record states them (feet, knots, psi, °F) with SI beside them on screen.
-- **The voice note, in every description, word for word** (owner, 2026-11-06): "Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity." No other AI wording
-  in public text; YouTube's "Altered or synthetic content" setting is **No** (owner, 2026-11-10).
+- **No AI wording in any public text** (owner, 2026-11-17: the voice note is dropped from every description and
+  package); YouTube's "Altered or synthetic content" setting is **No** (owner, 2026-11-10).
   On-screen honesty labels (RECONSTRUCTION, ILLUSTRATION) are about evidence, not AI, and always stay.
 
 ## Owner and workflow

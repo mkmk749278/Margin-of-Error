@@ -36,8 +36,6 @@ You've probably heard why it happened: a skipped repair, a bearing with no greas
 What it does show is where the warning line came from. The full investigation is on YouTube: Margin of Error (link in bio).
 From NTSB report RIR-24-05.
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
-
 #EastPalestine #NTSB #TrainDerailment #Railroad #Investigation
 ```
 Link in bio: https://youtu.be/PzY0teB3Pdc

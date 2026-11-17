@@ -149,7 +149,6 @@ US District Court, N.D. Ohio, 4:23-cv-00242 (class settlement): https://www.govi
 US District Court, N.D. Ohio, 4:23-cv-00517 (the federal settlement and consent decree): https://www.govinfo.gov/content/pkg/USCOURTS-ohnd-4_23-cv-00517/pdf/USCOURTS-ohnd-4_23-cv-00517-4.pdf
 
 Reconstructions and illustrations are labelled on screen; values not from a record are marked ILLUSTRATIVE.
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 ```
 
 ## Tags (Studio "Tags" field)

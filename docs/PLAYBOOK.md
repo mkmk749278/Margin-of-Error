@@ -1013,8 +1013,8 @@ made once and kept in Drive never has to be made again (§16, the music that liv
   place them as slots in `sound/mix.json` (continuous, overlapping crossfades; a long act reuses a bed with a `from`
   offset), run `scripts/mix_film.py`, and log each in the film's `media_manifest.csv`: source
   `Music-Library/forensic/<id>.wav`, licence "Generated with Google Lyria 3.5 (Gemini API, Paid Tier); Google claims
-  no ownership of output; SynthID watermark". The only AI wording in public text is the voice note (§13.4); the
-  owner sets Studio's synthetic-content flag at upload.
+  no ownership of output; SynthID watermark". No AI wording in public text (§13.4); Studio's synthetic-content flag
+  is No (owner, 2026-11-10).
 - **Level:** tracks arrive mastered loud (about −11 to −13 LUFS, peaks near 0 dBFS); `mix.json` sets each slot by RMS
   (−23 to −24 dB under the §12 duck). Never use a track at its delivered level.
 - **A new track:** add an entry to `config/music_library.json` (id `fx<NN>_<name>`, a prompt with tempo, key,
@@ -1130,9 +1130,9 @@ on, with links): for a forensic channel the source list is part of the trust. **
 About page and every description say which records the film uses, how claims are checked, and the corrections
 policy; a correction is pinned the day we learn of it. *Why:* YouTube's channel-level review reads the About page and
 metadata, and viewers in this niche reward visible care ("thank you for taking your time to get all the facts"). Name the institutions and record ids
-(NTSB DCA24MA063, SEC Form 10-K, FRA, FAA): they are what the film is about, and search reads them. **The voice note** (owner,
-2026-11-06), word for word, in every description, after the sources: "Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity." No other AI wording; the Studio setting
-stays the owner's. No hashtag spam, no cross-promotion.
+(NTSB DCA24MA063, SEC Form 10-K, FRA, FAA): they are what the film is about, and search reads them. **No AI wording**
+in any description (owner, 2026-11-17: the voice note of 2026-11-06 is dropped); Studio's "Altered or synthetic
+content" is No (owner, 2026-11-10). No hashtag spam, no cross-promotion.
 
 ### 13.5 Shorts
 **Only where a beat works alone in 20–30 s** (one exhibit line, one threshold crossing, one mechanism), always with the
@@ -1595,8 +1595,8 @@ only against our own rules hides what the competing films already do better.
    **2026-11-06: the narrator is "Marcus - Baritone(Stoic)"** (ElevenLabs Voice Library), Eleven v4, stability
    Natural 0.5 (§7.5); Film 2 re-voiced with it. The owner approved Film 2's Marcus audio the same day.
    **2026-11-06 (later): software/config cases qualify** only when the failure cascades into physical, economic or public
-   infrastructure (§4.3); **every description carries the voice note** word for word (§13.4). This overrides the
-   spec's "No AI disclosure in public descriptions" (Part G §7.3, kept verbatim).
+   infrastructure (§4.3); every description carried a voice note (§13.4).
+   **2026-11-17: the voice note is dropped**; no AI wording in public descriptions, as the spec's Part G §7.3 says.
    **2026-11-03 (later): Eleven v4 with stability "Creative"** replaces Multilingual v2 at 0.62 (§7.5); this overrides
    the model and stability lines of the spec's §5 (Part G, kept verbatim).
 3. **2026-11-02: the slate changes from the landscape research are approved** (§17.4): Episode 1 unchanged; Episode 2

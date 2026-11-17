@@ -50,8 +50,8 @@ def main() -> int:
         title, desc = a.title, open(a.description_file, encoding="utf-8").read().strip()
     if len(title) > 100:
         raise SystemExit(f"title is {len(title)} characters (limit 100)")
-    if "calibrated synthetic voice model (Marcus)" not in desc:
-        raise SystemExit("description lacks the voice note (CLAUDE.md, word for word)")
+    if re.search(r"synthetic voice|\bAI\b|artificial intelligence", desc, re.I):
+        raise SystemExit("description carries AI wording (CLAUDE.md: none in public text, owner 2026-11-17)")
     tags = re.findall(r"#(\w+)", desc)
     status = {"privacyStatus": "private" if a.publish_at else "public", "selfDeclaredMadeForKids": False,
               "containsSyntheticMedia": False, "embeddable": True}
