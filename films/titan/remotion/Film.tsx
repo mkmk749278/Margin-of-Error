@@ -10,6 +10,7 @@ import {act2} from './scenes/act2';
 import {act3a} from './scenes/act3a';
 import {act3b} from './scenes/act3b';
 import {act3c} from './scenes/act3c';
+import {act45} from './scenes/act45';
 import {SceneDef} from './scenes/types';
 import timing from '../vo/timing.json';
 import {FILM_FRAMES, s2f} from './timing';
@@ -17,7 +18,7 @@ import {FILM_FRAMES, s2f} from './timing';
 // TITAN: the whole film on one clock (vo/timing.json). Each scene mounts on absolute frames; scenes fade
 // themselves, and neighbours overlap so a cut is always a dissolve on the desk.
 
-export const scenes: SceneDef[] = [...act1, ...act2, ...act3a, ...act3b, ...act3c];
+export const scenes: SceneDef[] = [...act1, ...act2, ...act3a, ...act3b, ...act3c, ...act45];
 
 const chapters = timing.chapters.map((c, i, all) => ({title: c.title, from: s2f(c.start), to: i + 1 < all.length ? s2f(all[i + 1].start) : FILM_FRAMES}));
 

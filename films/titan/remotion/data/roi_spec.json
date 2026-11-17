@@ -58,5 +58,25 @@
  "uncovered": {
   "page": 322,
   "phrase": "uncovered and exposed to the elements"
+ },
+ "preventable": {
+  "page": 5,
+  "phrase": "is considered to be a preventable tragedy"
+ },
+ "survived": {
+  "page": 330,
+  "phrase": "Had OceanGate's CEO and chief pilot survived the incident"
+ },
+ "willnot": {
+  "page": 330,
+  "phrase": "which will not occur in this instance"
+ },
+ "sevenhour": {
+  "page": 324,
+  "phrase": "seven-hour initial notification delay dictated by OceanGate's communications plan"
+ },
+ "immediate": {
+  "page": 6,
+  "phrase": "resulting in the immediate loss of all lives on board"
  }
 }

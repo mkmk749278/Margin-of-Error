@@ -22,5 +22,17 @@
  "voidsfig": {
   "page": 44,
   "phrase": "Voids in the adhesive between layers 1 and 2"
+ },
+ "probable": {
+  "page": 74,
+  "phrase": "inadequate engineering process, which failed to establish the actual strength and durability"
+ },
+ "flawedanalysis": {
+  "page": 74,
+  "phrase": "flawed analysis of their pressure vessel monitoring system data"
+ },
+ "couldnotsave": {
+  "page": 66,
+  "phrase": "search and rescue efforts could not have saved lives"
  }
 }

@@ -40,3 +40,4 @@ enc stj_narrows cc_stjohns_cruisein.mp4 6 14
 enc stj_aerial cc_stjohns_harbour.mp4 92 14
 enc stj_snow cc_stjohns_snow.mp4 63 14
 enc stj_ice cc_stjohns_packice.mp4 69 14
+enc rov_debris cowork/DOD_110571004.mp4 22 14
