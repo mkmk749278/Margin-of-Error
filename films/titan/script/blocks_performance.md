@@ -107,7 +107,7 @@ One acoustic sensor, he testified, did show activity on the dives that followed 
 
 So, was the damage in the data?
 
-Brooks testified that what he looked for in the strain was linearity with depth. But OceanGate's plots put strain and depth side by side, each against time. Every dive has its own shape, its own pace, its own stops. Laid side by side, the dives are hard to compare.
+Brooks testified that what he looked for in the strain was linearity with depth. The depth was there, but on its own chart beside the strain, and both ran against the clock. Every dive has its own shape, its own pace, its own stops. Laid side by side, the dives are hard to compare.
 
 The N - T - S - B said a more appropriate way was to plot strain against depth directly, because depth sets the pressure.
 
@@ -129,7 +129,7 @@ Dive eighty itself shows nothing until its last minutes. In the N - T - S - B's 
 
 And it was not a faulty gauge. Deeper down, the curves still match, which the N - T - S - B said shows the gauges had not changed. The hull had.
 
-Canada's investigators later ran the same test on their own. They found the slope near the surface on the nineteenth of July nearly double the slope for the whole dive. They also found a smaller bend a year earlier, in August twenty twenty-one, and could not determine whether the bang caused the change.
+Canada's investigators later measured the strain by depth their own way: each dive against itself, not dive against dive. On the nineteenth of July, the slope from ten to three hundred metres was nearly double the slope for the whole dive. They also found a smaller bend a year earlier, in August twenty twenty-one, and could not determine whether the bang caused the change.
 
 Why would a damaged hull bend only near the surface?
 
