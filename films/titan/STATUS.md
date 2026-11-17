@@ -17,8 +17,11 @@
     period), spliced into `assets/vo/takes/b02.mp3` (original in `takes_pre_retake5/`; Drive `titan/vo/titan_vo_b02_r5.mp3`).
   - Film now **23:26.9**; timing, words, cues, choreography, mix rebuilt (−14.0 LUFS / −1.4 dBTP; voice stem −2.8).
     Sync audit 0 of 245; text floor 0; claims gate passes (131).
-- **Next:** when v6 has finished joining, put the new mix on Drive `titan/mix/mix.wav` (old one kept as
-  `mix_v6.wav`), render **cut v7**, measure it (`picture_gate_r6.md`), then it goes to the owner.
+- **Cut v7 reviewed** (`review/picture_gate_r6.md`, run 44086845969): 23:26.9, −14.0 LUFS / −1.3 dBTP, no black,
+  0 still runs, every round-6 change checked on the decoded cut. **No open blocker: v7 is with the owner for review**
+  (Drive `titan/renders/titan_review_v7_720p.mp4`). New mix on Drive `titan/mix/mix.wav` (previous: `mix_v6.wav`).
+- **Next:** the owner's notes on v7; then the independent viewer and forensic reviews of v7 if the owner wants another
+  round, the owner's approval of the cut, the 4K master, the YouTube package (SRT in American spelling).
 - Open: C130 (Kramer quote) not re-matched this round (uscg.mil refuses the container); viewer research leads
   (2023 search noises, jurisdiction, the five, ticket price) and the Act III length note remain as below.
 
