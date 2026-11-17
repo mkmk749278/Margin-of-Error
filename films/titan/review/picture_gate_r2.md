@@ -8,7 +8,7 @@ the timeline exactly.
 |---|---|---|
 | Loudness | −14.0 LUFS, peak −1.3 dB | −14.0 LUFS, peak −1.3 dB |
 | Black frames (0.1 s) | none | none |
-| Stillness audit (3 s) | 0 | 0 |
+| Stillness audit (3 s) | 0 | 0 (measured on v2) |
 | Freezes ≥ 1.5 s (480p) | 6 | 3: 9:43.4 (2.1 s, the theory question card), 22:00.7 (1.7 s, "What now?"), 22:48.2 (1.8 s, the five names: intended) |
 
 ## Round-1 fixes, checked frame by frame (1 fps sheets with the words heard)
