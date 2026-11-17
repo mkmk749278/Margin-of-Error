@@ -34,5 +34,25 @@
  "couldnotsave": {
   "page": 66,
   "phrase": "search and rescue efforts could not have saved lives"
+ },
+ "buckling": {
+  "page": 61,
+  "phrase": "Delaminations are a known cause of local buckling failures"
+ },
+ "insufficient_es": {
+  "page": 8,
+  "phrase": "voluntary guidance and US small passenger vessel regulations that were insufficient"
+ },
+ "pvsa": {
+  "page": 68,
+  "phrase": "the definition of a small passenger vessel changed to include any submersible carrying at least one passenger for hire"
+ },
+ "noregister": {
+  "page": 68,
+  "phrase": "OceanGate did not register or document the Titan in the United States, nor did they arrange to have it inspected by the US Coast Guard"
+ },
+ "sooner": {
+  "page": 66,
+  "phrase": "the Titan likely would have been found sooner"
  }
 }

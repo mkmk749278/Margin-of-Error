@@ -78,5 +78,37 @@
  "immediate": {
   "page": 6,
   "phrase": "resulting in the immediate loss of all lives on board"
+ },
+ "c53": {
+  "page": 317,
+  "phrase": "misrepresented by OceanGate as mandatory duties to conceal that their mission specialists were actually paying passengers"
+ },
+ "doj": {
+  "page": 330,
+  "phrase": "the determination of whether any crime was committed would be made by the DoJ"
+ },
+ "mapping": {
+  "page": 235,
+  "phrase": "The thruster control mapping was found to be incorrect"
+ },
+ "turned": {
+  "page": 235,
+  "phrase": "The pilot overcame the malfunctioning thrusters by turning the controller around and operating the controls in reverse"
+ },
+ "notcert": {
+  "page": 280,
+  "phrase": "meant it could not be officially certified for use in deep-sea submersibles"
+ },
+ "windowok": {
+  "page": 280,
+  "phrase": "it is unlikely that the acrylic window itself caused the implosion"
+ },
+ "logmax": {
+  "page": 185,
+  "phrase": "indicate the maximum pressure reached (6,154 psi) during the second DOTF test"
+ },
+ "dotfphoto": {
+  "page": 184,
+  "phrase": "Final TITAN hull at the DOTF in Bethesda, Maryland on February 25, 2021"
  }
 }

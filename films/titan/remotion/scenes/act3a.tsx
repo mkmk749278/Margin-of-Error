@@ -16,7 +16,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -135,13 +135,13 @@ const Fired: React.FC = () => {
 			</Note>
 			{letter > 0 ? (
 				<AbsoluteFill style={{opacity: letter}}>
-					<Card x={300} y={190} w={1320} o={1} accent={colors.cyan} style={{padding: '30px 40px'}}>
+					<Card x={300} y={190} w={1320} o={lead(f, wf(68, 'march') - 8, 10)} accent={colors.cyan} style={{padding: '30px 40px'}}>
 						<div style={{display: 'flex', gap: 18, alignItems: 'center'}}>
 							<Wd f={f} at={wf(68, 'march')} tone={colors.amber} bold style={T(34, {})}>MARCH 2018</Wd>
 							<Wd f={f} at={wf(68, 'signed')} lightAt={wf(68, 'letter')} style={T(30, {})}>A LETTER TO THE CEO</Wd>
 						</div>
 						<div style={{display: 'flex', alignItems: 'baseline', gap: 16, marginTop: 18}}>
-							<span style={{...T(80, {color: colors.ink, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(68, 'twenty') + LAND).toFixed(4)})`}}>
+							<span style={{...T(80, {color: f >= wf(68, 'twenty') + LAND ? colors.ink : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(68, 'twenty') + LAND).toFixed(4)})`}}>
 								{f >= wf(68, 'twenty') - 14 ? `${Math.round(rollTo(f, [{frame: wf(68, 'twenty') - 14, value: 1}, {frame: wf(68, 'twenty') + LAND, value: 20}]))}+` : ''}
 							</span>
 							<Wd f={f} at={wf(68, 'submersible')} lightAt={wf(68, 'professionals')} style={T(32, {})}>SUBMERSIBLE PROFESSIONALS SIGNED</Wd>
@@ -194,12 +194,12 @@ const FirstHull: React.FC = () => {
 					</g>
 					<text x={150 + cx * 0.42} y={230 + (cy + r + 90) * 0.42} textAnchor="middle" style={T(34, lit(f, wf(71, 'hull'), colors.ink))}>HULL 1</text>
 					<text x={1010 + cx * 0.42} y={230 + (cy + r + 90) * 0.42} textAnchor="middle" style={T(34, lit(f, wf(72, 'second'), colors.ink))} opacity={0.4 + 0.6 * two}>HULL 2</text>
-					<text x={interpolate(word, [0, 1], [150 + cx * 0.42, 1010 + cx * 0.42])} y={760} textAnchor="middle" style={T(44, {fill: colors.red, fontWeight: 700})} opacity={lead(f, wf(72, 'delamination'), 10)}>
+					<text x={interpolate(word, [0, 1], [150 + cx * 0.42, 1010 + cx * 0.42])} y={680} textAnchor="middle" style={T(44, {fill: colors.red, fontWeight: 700})} opacity={lead(f, wf(72, 'delamination'), 10)}>
 						DELAMINATION
 					</text>
 				</svg>
 				<div style={{position: 'absolute', left: 0, right: 0, top: 200, textAlign: 'center', ...T(30, lit(f, wf(72, 'mode'), colors.amber)), opacity: lead(f, wf(72, 'failure'), 8)}}>THE FAILURE MODE</div>
-				<div style={{position: 'absolute', left: 0, right: 0, top: 800, textAlign: 'center', ...T(30, {})}}>
+				<div style={{position: 'absolute', left: 0, right: 0, top: 736, textAlign: 'center', ...T(30, {})}}>
 					<Wd f={f} at={wf(72, 'named')} lightAt={wf(72, 'report')}>NAMED IN THE 2018 REPORT · </Wd>
 					<Wd f={f} at={wf(72, 'what')} lightAt={wf(72, 'investigators')}>WHAT THE INVESTIGATORS </Wd>
 					<Wd f={f} at={wf(72, 'find')} lightAt={wf(72, 'second')} tone={colors.red}>FOUND IN HULL 2</Wd>
@@ -211,10 +211,10 @@ const FirstHull: React.FC = () => {
 					<div style={{position: 'absolute', left: 920, top: 120, width: 900}}>
 						<div style={{display: 'flex', gap: 16, alignItems: 'center'}}>
 							<Wd f={f} at={wf(73, 'twenty')} lightAt={wf(73, 'nineteen')} tone={colors.amber} bold style={T(40, {})}>2019</Wd>
-							<Wd f={f} at={wf(73, 'first')} lightAt={wf(73, 'hull')} style={T(34, {})}>THE FIRST HULL</Wd>
-							<span style={{opacity: lead(f, wf(73, 'cracked'), 8), transform: `scale(${bump(f, fps, wf(73, 'cracked') + LAND).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text="CRACKED" tone={colors.red} size={34} />
+							<span style={{opacity: lead(f, wf(73, 'crack'), 8), transform: `scale(${bump(f, fps, wf(73, 'found') + LAND).toFixed(4)})`, display: 'inline-block'}}>
+								<Chip text="CRACK FOUND" tone={colors.red} size={34} />
 							</span>
+							<Wd f={f} at={wf(73, 'first')} lightAt={wf(73, 'hull')} style={T(34, {})}>IN THE FIRST HULL</Wd>
 						</div>
 						<Card x={0} y={90} w={900} o={lead(f, wf(74, "company's"), 10)} accent={colors.cyan} style={{padding: '20px 26px'}}>
 							<div style={T(26, {})}><Wd f={f} at={wf(74, 'first')} lightAt={wf(74, 'engineering')} tone={colors.cyan}>THE FIRST DIRECTOR OF ENGINEERING · </Wd><Wd f={f} at={wf(74, 'testified')} tone={colors.cyan}>TESTIMONY</Wd></div>
@@ -262,6 +262,7 @@ const Hull2: React.FC = () => {
 				<Wd f={f} at={wf(78, 'fifty')} tone={colors.cyan} bold>50</Wd>
 				<Wd f={f} at={wf(78, 'to')}> → </Wd>
 				<Wd f={f} at={wf(78, 'eighty-eight')} tone={colors.cyan} bold>88</Wd>
+				<Wd f={f} at={wf(78, 'eighty-eight') + 10} tone={colors.ink} style={T(30, {})}>  · SHOWN HERE: 75 → 80, TO THE WRECK</Wd>
 			</div>
 			<Ledger
 				f={f}
@@ -527,18 +528,13 @@ const Theory: React.FC = () => {
 				<Wd f={f} at={wf(107, 'next')} lightAt={wf(107, 'ahead')}>NEXT TWO DIVES AHEAD · </Wd>
 				<Wd f={f} at={wf(107, 'visual')} lightAt={wf(107, 'seattle')}>LOOK IN SEATTLE</Wd>
 			</Note>
-			<Card x={360} y={300} w={1200} o={vis(f, sf(108) - 10, ef(108) + 24)} accent={colors.amber} style={{padding: '30px 40px'}}>
-				<div style={T(28, lit(f, wf(108, 'testified'), colors.amber))}>BROOKS TESTIFIED</div>
-				<div style={{marginTop: 18, display: 'flex', alignItems: 'center', gap: 26, ...T(40, {}), fontWeight: 700}}>
-					<Wd f={f} at={wf(108, 'shift')} tone={colors.amber} bold>THE SHIFT</Wd>
-					<span style={{opacity: lead(f, wf(108, 'converted'), 8), color: colors.ink}}>→</span>
-					<Wd f={f} at={wf(108, 'physical')} lightAt={wf(108, 'distance')} tone={colors.cyan} bold>A DISTANCE</Wd>
-				</div>
-				<div style={{marginTop: 22, ...T(36, {})}}>
-					<Wd f={f} at={wf(108, 'judged')}>JUDGED: </Wd>
-					<Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors.ink} bold>"A RELATIVELY SMALL MOVEMENT"</Wd>
-				</div>
-			</Card>
+			{/* his own words on the transcript page (CG 112 p. 768): the conversion and the judgement, highlighted as said */}
+			<RecordPage set="cg112" start={sf(108) - 14} end={ef(108) + 24} hl={[{key: 'physical', at: wf(108, 'physical')}, {key: 'smallmove', at: wf(108, 'relatively')}]} label="EXHIBIT" title="BROOKS" pushTo={wf(108, 'converted')} />
+			<Note o={vis(f, sf(108) + 8, ef(108) + 16)}>
+				<Wd f={f} at={wf(108, 'brooks')} lightAt={wf(108, 'testified')} tone={colors.cyan}>BROOKS TESTIFIED: </Wd>
+				<Wd f={f} at={wf(108, 'shift')} tone={colors.amber} bold>THE SHIFT </Wd><Wd f={f} at={wf(108, 'converted')}>→ </Wd><Wd f={f} at={wf(108, 'physical')} lightAt={wf(108, 'distance')} tone={colors.amber} bold>A PHYSICAL DISTANCE · </Wd>
+				<Wd f={f} at={wf(108, 'judged')}>JUDGED </Wd><Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors.ink} bold>"RELATIVELY SMALL MOVEMENT"</Wd>
+			</Note>
 		</>
 	);
 };
@@ -626,7 +622,12 @@ const InTheData: React.FC = () => {
 				</div>
 			</AbsoluteFill>
 			<HearingClip f={f} id="h_brooks_linearity" />
-			<HearingClip f={f} id="h_kramer_time" />
+			<HearingClip
+				f={f}
+				id="h_kramer_time"
+				credit="VOICE: USCG HEARING, 25 SEP 2024 · PICTURE: NTSB 24-012 FIG. 26, TRACED"
+				picture={<div style={{position: 'absolute', inset: 0, background: colors.card}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={0} /></div>}
+			/>
 		</>
 	);
 };
@@ -676,7 +677,7 @@ export const act3a: SceneDef[] = [
 		C: FirstHull,
 		cues: [
 			{frame: wf(72, 'second'), sfx: 'relay_click', gainDb: -22},
-			{frame: wf(73, 'cracked'), sfx: 'metal_snap_sub', gainDb: -26},
+			{frame: wf(73, 'crack'), sfx: 'metal_snap_sub', gainDb: -26},
 			{frame: wf(74, 'refused'), sfx: 'stamp', gainDb: -26},
 		],
 	},
@@ -713,6 +714,9 @@ export const act3a: SceneDef[] = [
 		cues: [
 			{frame: wf(104, 'sprung'), sfx: 'metal_snap_sub', gainDb: -28},
 			{frame: wf(107, 'microns') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: sf(108) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(108, 'physical') - 15, sfx: 'highlighter', gainDb: -24},
+			{frame: wf(108, 'relatively') - 15, sfx: 'highlighter', gainDb: -22},
 		],
 	},
 	{

@@ -4,6 +4,7 @@ import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, flash, LAND, lead, rollTo, StatusFlip} from '../../../../lib/remotion/Kinetic';
 import {ease} from '../../../../lib/remotion/motion';
 import {ActTitle, Mount, useFilmFrame} from '../kit';
+import {RecordPage} from '../docs';
 import {AE_POS, Card, Chip, clamp, HULL, HullLines, lit, Pop, RealFootage, sans, SG_POS, span, T, vis, Wd} from '../parts';
 import {ef, hold, sf, wf} from '../timing';
 import {SceneDef} from './types';
@@ -12,6 +13,13 @@ import {SceneDef} from './types';
 // Real footage carries the place and the machine; drawings carry the mechanism, labelled.
 
 const fmt = (v: number): string => Math.round(v).toLocaleString('en-US');
+
+const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
+	o <= 0 ? null : (
+		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+		</div>
+	);
 
 // ── 1 · 3,840 metres: the pressure (s22) ────────────────────────────────────────────────────────────────────────
 
@@ -254,7 +262,7 @@ const Margin: React.FC = () => {
 							≈ {fmt(target)} M
 						</text>
 						<text x={G.x + 276} y={gy(target) + 44} style={T(26, {fill: colors.ink})}>
-							{f >= wf(31, 'seven') ? (ghost > 0.5 ? 'IN THEORY: PERFECT GEOMETRY' : 'THE ANALYSIS · 6,000 × 1.25') : 'SHOULD NOT FAIL ABOVE'}
+							{f >= wf(31, 'seven') ? (ghost > 0.5 ? 'IN THEORY: PERFECT GEOMETRY' : 'THE ANALYSIS · 6,000 × 1.25: OUR ARITHMETIC') : 'SHOULD NOT FAIL ABOVE'}
 						</text>
 					</g>
 				) : null}
@@ -375,6 +383,21 @@ const Margin: React.FC = () => {
 			</div>
 			{/* s39–s44: the 2021 pressure tests */}
 			<Tests f={f} fps={fps} x={P.x} y={P.y} w={P.w} />
+			{/* the record breaks the long chart twice (viewer panel v2): the hull itself in the Navy's test tank, then the
+			    facility's own logbook line for 1 MAR 2021, the board's red arrow on 6,154 psi */}
+			<RecordPage set="roi" start={sf(39) - 14} end={ef(39) + 8} page={184} hl={[{key: 'dotfphoto', at: wf(39, 'facility')}]} label="EXHIBIT" title="4.28 · FIG. 149" focus={{x: 330, y: 160, w: 1300, h: 760}} pushTo={wf(39, 'maryland')} />
+			<Note o={vis(f, sf(39) + 6, ef(39) + 2)} tone={colors.cyan}>
+				<Wd f={f} at={wf(39, 'early')} lightAt={wf(39, 'twenty-one')} tone={colors.amber} bold>EARLY 2021 · </Wd>
+				<Wd f={f} at={wf(39, 'hull')}>THE HULL → </Wd>
+				<Wd f={f} at={wf(39, 'pressure')} lightAt={wf(39, 'facility')} tone={colors.cyan}>PRESSURE TEST FACILITY, </Wd>
+				<Wd f={f} at={wf(39, 'maryland')} tone={colors.cyan}>MARYLAND</Wd>
+			</Note>
+			<RecordPage set="roi" start={sf(41) - 14} end={ef(42) + 12} page={185} hl={[{key: 'logmax', at: wf(41, 'once')}]} label="EXHIBIT" title="4.28 · FIG. 151 · DOTF LOGBOOK" focus={{x: 300, y: 110, w: 1340, h: 830}} pushTo={wf(41, 'reached')} />
+			<Note o={vis(f, sf(41) + 6, ef(42) + 6)}>
+				<Wd f={f} at={wf(41, 'logbook')} lightAt={wf(41, 'shows')}>THE LOGBOOK: </Wd>
+				<Wd f={f} at={wf(41, 'reached')} lightAt={wf(41, 'pressure')} tone={colors.amber} bold>4,200 M (6,154 PSI) </Wd><Wd f={f} at={wf(41, 'once')} tone={colors.amber} bold>REACHED ONCE · </Wd>
+				<Wd f={f} at={wf(42, 'first')} lightAt={wf(42, 'march')}>01 MAR 2021 · </Wd><Wd f={f} at={wf(42, 'twenty')} lightAt={wf(42, 'minutes')} tone={colors.amber} bold>20 MIN</Wd>
+			</Note>
 			{/* s45–s46: the verdict on its strength */}
 			<div style={{position: 'absolute', left: P.x, top: P.y, width: P.w, opacity: panelO(wf(45, 'never') - 6, ef(46) + 40)}}>
 				<div style={{...T(40, lit(f, wf(45, 'failure'), colors.red)), fontWeight: 700}}>NEVER TESTED TO FAILURE</div>
@@ -393,7 +416,7 @@ const Margin: React.FC = () => {
 };
 
 const Tests: React.FC<{f: number; fps: number; x: number; y: number; w: number}> = ({f, fps, x, y, w}) => {
-	const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 10, 12, 14);
+	const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 24, 12, 14);
 	if (o <= 0) return null;
 	// the four test days: the plan (4,200 m on days 1–3) beside what the facility's logbook shows
 	const days: {d: string; plan: boolean; log: string; logAt: number; tone: string}[] = [
@@ -486,7 +509,7 @@ const Tests: React.FC<{f: number; fps: number; x: number; y: number; w: number}>
 				</div>
 			</div>
 			<div style={{position: 'absolute', right: 0, top: 620}}>
-				<Chip text="LOGBOOK: RECONSTRUCTION" tone={colors.amber} size={26} o={logO} />
+				<Chip text="LOGBOOK: TRANSCRIPTION · USCG ROI" tone={colors.amber} size={26} o={logO} />
 			</div>
 		</div>
 	);
@@ -523,7 +546,7 @@ const Listen: React.FC = () => {
 			</AbsoluteFill>
 			{ring > 0 ? (
 				<AbsoluteFill style={{opacity: ring}}>
-					<RealFootage f={f} start={wf(48, 'listen') - 8} end={sf(49) + 34} src="footage/ndt_ring.mp4" date="" what="ACOUSTIC SENSORS ON A COMPOSITE RING · REFERENCE, NOT TITAN" source="J P / YOUTUBE · CC BY" push={0.06} />
+					<RealFootage f={f} start={wf(48, 'listen') - 8} end={sf(49) + 34} src="footage/ndt_ring.mp4" date="" what="ACOUSTIC SIGNALS FROM A COMPOSITE RING · REFERENCE, NOT TITAN" source="J P / YOUTUBE · CC BY" push={0.06} />
 					<div style={{position: 'absolute', left: 96, top: 96}}>
 						<Pop f={f} fps={fps} at={wf(48, "oceangate's")}>
 							<Chip text={f >= wf(48, 'listen') ? "OCEANGATE'S ANSWER: LISTEN TO IT" : f >= wf(48, 'answer') ? "OCEANGATE'S ANSWER" : 'OCEANGATE'} tone={colors.cyan} size={34} />
@@ -734,6 +757,9 @@ export const act2: SceneDef[] = [
 			{frame: wf(34, 'imploded'), sfx: 'metal_snap_sub', gainDb: -24},
 			{frame: wf(36, 'model'), sfx: 'stamp', gainDb: -24},
 			{frame: wf(37, 'money'), sfx: 'stamp', gainDb: -26},
+			{frame: sf(39) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: sf(41) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(41, 'once') - 15, sfx: 'highlighter', gainDb: -24},
 			{frame: wf(41, 'once'), sfx: 'stamp', gainDb: -24},
 			{frame: wf(43, 'carbon'), sfx: 'relay_click', gainDb: -24},
 			{frame: wf(45, 'failure'), sfx: 'pen_scratch', gainDb: -24},

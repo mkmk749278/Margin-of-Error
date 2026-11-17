@@ -1,5 +1,5 @@
 {
- "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK \u00a712). Times in film seconds (vo/timing.json). Music: the channel's own library (Music-Library/forensic), slots overlapping 4 s, continuous; out (room tone stays) under the re-plot's axis turn (signature 2: 'no music under the turn'), for the 2 s after the dive-88 line stops (signature 3) and under the five names. Effects: our seeded synthesised bank (scripts/sfx_synth.py), no recordings. The seven USCG hearing clips play their own sound on the picture's frames at speech level; the music ducks deeper under them. Built 17 NOV 2026.",
+ "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK §12). Times in film seconds (vo/timing.json). Music: the channel's own library (Music-Library/forensic), slots overlapping 4 s, continuous; out (room tone stays) under the re-plot's axis turn (signature 2: 'no music under the turn'), for the 2 s after the dive-88 line stops (signature 3) and under the five names. Effects: our seeded synthesised bank (scripts/sfx_synth.py), no recordings. The seven USCG hearing clips play their own sound on the picture's frames at speech level; the music ducks deeper under them. Built 17 NOV 2026.",
  "target_lufs": -14.0,
  "max_tp": -1.0,
  "voice": {
@@ -18,43 +18,43 @@
  "clips": [
   {
    "file": "assets/clips/h_brooks_flashlight.wav",
-   "frame": 29904,
+   "frame": 29958,
    "lufs": -15.5,
    "why": "h_brooks_flashlight: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_brooks_decision.wav",
-   "frame": 31340,
+   "frame": 31394,
    "lufs": -15.5,
    "why": "h_brooks_decision: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_brooks_diveagain.wav",
-   "frame": 32020,
+   "frame": 32074,
    "lufs": -15.5,
    "why": "h_brooks_diveagain: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_brooks_linearity.wav",
-   "frame": 38013,
+   "frame": 38066,
    "lufs": -15.5,
    "why": "h_brooks_linearity: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_kramer_time.wav",
-   "frame": 38887,
+   "frame": 38941,
    "lufs": -15.5,
    "why": "h_kramer_time: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_brooks_cost.wav",
-   "frame": 53850,
+   "frame": 54045,
    "lufs": -15.5,
    "why": "h_brooks_cost: USCG hearing video, unaltered"
   },
   {
    "file": "assets/clips/h_brooks_safety.wav",
-   "frame": 57529,
+   "frame": 57723,
    "lufs": -15.5,
    "why": "h_brooks_safety: USCG hearing video, unaltered"
   }
@@ -72,7 +72,7 @@
   {
    "file": "assets/music/fx02_mechanism.wav",
    "start": 117.8,
-   "end": 290,
+   "end": 290.0,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -80,8 +80,8 @@
   },
   {
    "file": "assets/music/fx07_evidence.wav",
-   "start": 286,
-   "end": 345,
+   "start": 286.0,
+   "end": 345.0,
    "rms_db": -26,
    "fade_in": 4,
    "fade_out": 4,
@@ -90,7 +90,7 @@
   {
    "file": "assets/music/fx03_boardroom.wav",
    "start": 341.1,
-   "end": 515,
+   "end": 515.9,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -98,8 +98,8 @@
   },
   {
    "file": "assets/music/fx07_evidence.wav",
-   "start": 511,
-   "end": 627,
+   "start": 511.9,
+   "end": 627.9,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -108,8 +108,8 @@
   },
   {
    "file": "assets/music/fx02_mechanism.wav",
-   "start": 623,
-   "end": 797,
+   "start": 623.9,
+   "end": 800.24,
    "rms_db": -26,
    "fade_in": 4,
    "fade_out": 4,
@@ -118,8 +118,8 @@
   },
   {
    "file": "assets/music/fx09_aftermath.wav",
-   "start": 793,
-   "end": 967,
+   "start": 796.24,
+   "end": 970.24,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -127,8 +127,8 @@
   },
   {
    "file": "assets/music/fx03_boardroom.wav",
-   "start": 963,
-   "end": 1102,
+   "start": 966.24,
+   "end": 1106.6,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -137,8 +137,8 @@
   },
   {
    "file": "assets/music/fx04_cascade.wav",
-   "start": 1098.1,
-   "end": 1222,
+   "start": 1102.7,
+   "end": 1226.6,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -146,8 +146,8 @@
   },
   {
    "file": "assets/music/fx05_verdict.wav",
-   "start": 1218.0,
-   "end": 1368.23,
+   "start": 1222.6,
+   "end": 1376.94,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -155,8 +155,8 @@
   },
   {
    "file": "assets/music/fx10_signoff.wav",
-   "start": 1379.54,
-   "end": 1385.25,
+   "start": 1388.25,
+   "end": 1393.93,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -165,18 +165,18 @@
  ],
  "silences": [
   {
-   "start": 669.16,
-   "end": 674.8,
+   "start": 670.06,
+   "end": 675.7,
    "why": "signature 2: no music under the axis turn"
   },
   {
-   "start": 1186.49,
-   "end": 1189.59,
+   "start": 1191.09,
+   "end": 1194.19,
    "why": "signature 3: the line stops; 2 s of room tone"
   },
   {
-   "start": 1366.73,
-   "end": 1380.54,
+   "start": 1375.44,
+   "end": 1389.25,
    "why": "the five names, in silence"
   }
  ],

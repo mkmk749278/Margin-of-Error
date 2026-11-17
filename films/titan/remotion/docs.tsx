@@ -20,7 +20,7 @@ const SETS = {
 	// CG 112: the printed page number is the PDF page minus one
 	cg112: {phrases: cg112 as PhraseSet, file: (p: number) => `cg112_p${String(p).padStart(4, '0')}`, source: (p: number) => `MBI EXHIBIT CG 112 · HEARING TRANSCRIPT · P. ${p - 1}`},
 	roi: {phrases: roi as PhraseSet, file: (p: number) => `roi_p${String(p).padStart(3, '0')}`, source: (p: number) => `USCG MARINE BOARD · REPORT OF INVESTIGATION · ${p > 8 ? `P. ${p - 8}` : `EXECUTIVE SUMMARY`}`},
-	mir: {phrases: mir as PhraseSet, file: (p: number) => `mir_p${String(p).padStart(3, '0')}`, source: (p: number) => `NTSB MIR-25-36 · P. ${p - 8}`},
+	mir: {phrases: mir as PhraseSet, file: (p: number) => `mir_p${String(p).padStart(3, '0')}`, source: (p: number) => `NTSB MIR-25-36 · ${p > 8 ? `P. ${p - 8}` : 'EXECUTIVE SUMMARY'}`},
 } as const;
 export type DocSet = keyof typeof SETS;
 

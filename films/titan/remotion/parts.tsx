@@ -148,7 +148,7 @@ export const RealFootage: React.FC<{
 	under?: boolean;
 }> = ({f, start, end, src, video = true, from = 0, date, what, source, push = 0.08, focus = [0.5, 0.5], box = {x: 0, y: 0, w: 1920, h: 1080}, label, rate = 1, under = false}) => {
 	const {fps} = useVideoConfig();
-	const o = Math.min(lead(f, start, 12), 1 - lead(f, end - 14, 14));
+	const o = Math.min(lead(f, start, 12), 1 - lead(f, end, 14)); // fades out on `end`, with the labels that sit on it
 	if (o <= 0) return null;
 	const k = Math.min(1, Math.max(0, (f - start) / Math.max(1, end - start)));
 	const s = 1 + push * (k * k * (3 - 2 * k));
@@ -162,7 +162,7 @@ export const RealFootage: React.FC<{
 	const strip = (
 		<div style={under ? {position: 'absolute', left: box.x, width: box.w, top: box.y + box.h, height: 58, display: 'flex', alignItems: 'center', gap: 16, padding: '0 16px', background: colors.card, border: `1px solid ${colors.border}`, fontFamily: mono, fontSize: 26, letterSpacing: 1.5, color: colors.ink, whiteSpace: 'nowrap', opacity: o} : {position: 'absolute', left: 96, right: 96, bottom: 54, height: 58, display: 'flex', alignItems: 'center', gap: 16, fontFamily: mono, fontSize: 26, letterSpacing: 1.5, color: colors.ink, whiteSpace: 'nowrap'}}>
 			{date ? <span style={{color: colors.amber, fontWeight: 700}}>{date}</span> : null}
-			<span>{date ? '· ' : ''}{what}</span>
+			<span style={/REFERENCE|RECONSTRUCTION|ILLUSTRATION/.test(what) ? {fontSize: 36, fontWeight: 700} : undefined}>{date ? '· ' : ''}{what}</span>
 			<span style={{marginLeft: 'auto', paddingLeft: 24}}>{source}</span>
 		</div>
 	);

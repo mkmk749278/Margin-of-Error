@@ -146,7 +146,11 @@ def main() -> None:
         x = x * db(c["lufs"] - measure(cw)["I"])
         x = tp_limit(x, db(vcfg["peak_dbtp"]))
         x = fades(x, 0.04, 0.08)
-        a = int(round(c["frame"] / fps * SR))
+        # the clip's frame comes from the timeline (vo/timing.json `clips`), so a re-take that moves the narration moves
+        # the recording with it; mix.json's `frame` is only the fallback for a clip the timeline doesn't list
+        tl = {k["clip"]: k for k in timing.get("clips", [])}.get(Path(c["file"]).stem)
+        frame = tl["startFrame"] if tl else c["frame"]
+        a = int(round(frame / fps * SR))
         voice[a: a + len(x)] += x[: max(0, n - a)]
         clip_spans.append((a, a + len(x)))
 

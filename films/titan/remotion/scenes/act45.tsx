@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {RecordPage} from '../docs';
@@ -16,7 +16,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -114,7 +114,8 @@ const LastDive: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const dive = vis(f, sf(208) - 10, ef(208) + 20);
-	const depth = rollTo(f, [{frame: wf(208, 'titan'), value: 0}, {frame: ef(208) + 10, value: 1200}]);
+	// the dive's depth rolls under the cut and never lands on a number no record gives (forensic 2.8)
+	const depth = rollTo(f, [{frame: wf(208, 'titan'), value: 0}, {frame: ef(208) + 200, value: 3350}]);
 	const buck = vis(f, sf(210) - 10, ef(211) + 16);
 	const split = lead(f, wf(210, 'splits'), 14);
 	const load = span(f, wf(210, 'buckle') - 6, wf(210, 'easily') + 10);
@@ -131,14 +132,14 @@ const LastDive: React.FC = () => {
 							<Wd f={f} at={wf(208, 'first')} lightAt={wf(208, 'deep')} tone={colors.amber} bold>THE FIRST DEEP DIVE </Wd>
 							<Wd f={f} at={wf(208, 'eleven')} lightAt={wf(208, 'months')} tone={colors.amber} bold>IN ELEVEN MONTHS</Wd>
 						</div>
-						<div style={{...T(72, {color: colors.ink, fontWeight: 700}), opacity: lead(f, wf(208, 'made'), 10)}}>
+						<div style={{...T(72, {color: depth >= 3350 ? colors.ink : colors.sub, fontWeight: 700}), opacity: lead(f, wf(208, 'made'), 10)}}>
 							{Math.round(depth).toLocaleString('en-US')} <span style={{fontSize: 36, color: colors.sub}}>M</span>
 						</div>
 						<div style={T(26, {color: colors.ink})}>DIVE 88 · DEPTH · TIMES: NTSB MIR-25-36</div>
 					</div>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="mir" start={sf(209) - 14} end={ef(209) + 20} page={74} hl={[{key: 'probable', at: wf(209, 'delaminations')}]} label="PROBABLE CAUSE" pushTo={wf(209, 'found')} />
+			<RecordPage set="mir" start={sf(209) - 14} end={ef(209) + 20} hl={[{key: 'buckling', at: wf(209, 'buckling')}]} label="ANALYSIS" pushTo={wf(209, 'found')} />
 			<Note o={vis(f, sf(209), ef(209) + 10)}>
 				<Wd f={f} at={wf(209, 'n')} lightAt={wf(209, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
 				<Wd f={f} at={wf(209, 'existing')} lightAt={wf(209, 'delaminations')} tone={colors.amber}>THE EXISTING DELAMINATIONS </Wd>
@@ -231,8 +232,8 @@ const ROWS: Row[] = [
 	{d: '88', m: 3363, date: '18 JUN'},
 ];
 const xOf = (i: number): number => 250 + i * 92 + (i >= 9 ? 150 : 0);
-const Y0 = 470;
-const yD = (m: number): number => Y0 + (m / 4000) * 360;
+const Y0 = 556;
+const yD = (m: number): number => Y0 + (m / 4000) * 300;
 
 const Record: React.FC = () => {
 	const f = useFilmFrame();
@@ -282,7 +283,6 @@ const Record: React.FC = () => {
 						<g key={row.d} opacity={Math.max(0.2, k)}>
 							<rect x={xOf(i) - 14} y={Y0} width={28} height={(yD(row.m) - Y0) * k + 2} fill={tone} opacity={isSix ? 0.6 + 0.4 * sixO : 0.7} />
 							<text x={xOf(i)} y={Y0 - 14} textAnchor="middle" style={T(26, {fill: colors.ink, fontWeight: 700})}>{row.d}</text>
-							<text x={xOf(i)} y={yD(3840) + 72} textAnchor="middle" style={T(26, {fill: colors.ink})} transform={`rotate(-50 ${xOf(i)} ${yD(3840) + 72})`}>{row.date}</text>
 						</g>
 					);
 				})}
@@ -290,20 +290,19 @@ const Record: React.FC = () => {
 				<g opacity={lead(f, wf(216, 'one'), 8)}>
 					<rect x={xOf(13) - 14} y={Y0} width={28} height={(yD(3363) - Y0) * d88 + 2} fill={colors.ink} />
 					<text x={xOf(13)} y={Y0 - 14} textAnchor="middle" style={T(26, {fill: colors.ink, fontWeight: 700})}>88</text>
-					<text x={xOf(13)} y={yD(3840) + 72} textAnchor="middle" style={T(26, {fill: colors.ink})} transform={`rotate(-50 ${xOf(13)} ${yD(3840) + 72})`}>18 JUN</text>
 				</g>
 				{gap > 0 ? (
 					<g opacity={gap}>
-						<line x1={xOf(13) + 40} x2={xOf(13) + 40} y1={yD(3363)} y2={yD(3363) + (yD(3840) - yD(3363)) * gap} stroke={colors.amber} strokeWidth={3} />
-						<text x={xOf(13) + 56} y={yD(3600) + 10} style={T(28, lit(f, wf(216, 'hundred'), colors.amber))}>≈ 500 M SHORT</text>
+						<line x1={xOf(13) - 22} x2={xOf(13) - 22} y1={yD(3363)} y2={yD(3363) + (yD(3840) - yD(3363)) * gap} stroke={colors.amber} strokeWidth={3} />
+						<text x={xOf(13) - 30} y={yD(3600) + 10} textAnchor="end" style={T(28, lit(f, wf(216, 'hundred'), colors.amber))}>≈ 500 M SHORT</text>
 					</g>
 				) : null}
 			</svg>
 			{/* the pinned decisions, in order on "each dated decision" */}
-			<div style={{position: 'absolute', left: 200, top: 186, width: 1180, display: 'flex', flexWrap: 'wrap', gap: '8px 12px'}}>
+			<div style={{position: 'absolute', left: 200, top: 186, width: 1180, display: 'flex', flexDirection: 'column', gap: 6}}>
 				{pins.map((p, k) => (
 					<span key={k} style={{opacity: lead(f, pinAt(k), 8), transform: `scale(${bump(f, fps, pinAt(k) + LAND, 0.05).toFixed(4)})`, display: 'inline-block'}}>
-						<Chip text={`${p.i < 9 ? 'AFTER ' + ROWS[p.i].d : 'BEFORE 84'} · ${p.text}`} tone={p.tone} size={24} />
+						<Chip text={`${p.i < 9 ? 'AFTER ' + ROWS[p.i].d : 'BEFORE 84'} · ${p.text}`} tone={p.tone} size={26} style={{whiteSpace: 'nowrap', padding: '1px 10px 0'}} />
 					</span>
 				))}
 			</div>
@@ -320,9 +319,9 @@ const Record: React.FC = () => {
 const Verdict: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
-	const myths = vis(f, sf(217) - 10, ef(221) + 20);
-	const day = vis(f, sf(231) - 10, ef(235) + 20);
-	const company = vis(f, sf(236) - 10, ef(237) + 20);
+	const myths = vis(f, sf(217) - 10, ef(217) + 12);
+	const day = vis(f, sf(231) - 10, ef(232) + 14);
+	const company = vis(f, sf(236) - 10, sf(238) - 14);
 	const recs = vis(f, sf(238) - 10, ef(245) + 30);
 	const recList: [string, [string, number][], number][] = [
 		['M-25-015', [['IMO ', wf(240, 'international')], ['SUBMERSIBLE GUIDANCE ', wf(240, 'submersibles')], ['→ ', wf(240, 'make')], ['MANDATORY', wf(240, 'mandatory')]], wf(240, 'one')],
@@ -333,39 +332,46 @@ const Verdict: React.FC = () => {
 	return (
 		<>
 			{myths > 0 ? (
-				<AbsoluteFill style={{opacity: myths}}>
-					<div style={{position: 'absolute', left: 0, right: 0, top: 150, textAlign: 'center', ...T(34, {}), fontWeight: 700}}>
-						<Wd f={f} at={wf(217, 'two')} lightAt={wf(217, 'things')} tone={colors.amber} bold>TWO THINGS </Wd>
-						<Wd f={f} at={wf(217, 'often')} lightAt={wf(217, 'said')}>OFTEN SAID ABOUT TITAN</Wd>
+				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: myths}}>
+					<div style={{fontFamily: sans, fontWeight: 700, fontSize: 60, color: colors.ink}}>
+						<Wd f={f} at={wf(217, 'two')} lightAt={wf(217, 'things')} base={colors.ink} tone={colors.amber}>Two things </Wd>
+						<Wd f={f} at={wf(217, 'often')} lightAt={wf(217, 'said')} base={colors.ink}>often said about Titan</Wd>
 					</div>
-					<Card x={200} y={260} w={720} o={lead(f, wf(218, 'controller'), 10)} accent={colors.amber} style={{padding: '24px 30px', minHeight: 440}}>
-						<div style={T(30, {color: colors.amber, fontWeight: 700})}>THE CONTROLLER</div>
-						<div style={{marginTop: 14, ...T(30, {}), lineHeight: 1.5}}>
-							<Wd f={f} at={wf(218, 'dive')} lightAt={wf(218, 'eighty-one')}>DIVE 81: </Wd>
-							<Wd f={f} at={wf(218, 'thruster')} lightAt={wf(218, 'controls')}>THRUSTER CONTROLS </Wd>
-							<Wd f={f} at={wf(218, 'mapped')} lightAt={wf(218, 'reverse')} tone={colors.amber}>MAPPED IN REVERSE · </Wd>
-							<Wd f={f} at={wf(218, 'pilot')} lightAt={wf(218, 'around')}>THE PILOT TURNED IT AROUND</Wd>
-						</div>
-						<div style={{marginTop: 22, ...T(30, {}), lineHeight: 1.5}}>
-							<Wd f={f} at={wf(219, 'none')} lightAt={wf(219, 'three')} tone={colors.cyan} bold>NONE OF THE THREE </Wd><Wd f={f} at={wf(219, 'reports')} tone={colors.cyan} bold>REPORTS </Wd>
-							<Wd f={f} at={wf(219, 'names')} lightAt={wf(219, 'cause')} tone={colors.cyan}>NAMES IT AS A CAUSE</Wd>
-						</div>
-					</Card>
-					<Card x={1000} y={260} w={720} o={lead(f, wf(220, 'window'), 10)} accent={colors.amber} style={{padding: '24px 30px', minHeight: 440}}>
-						<div style={T(30, {color: colors.amber, fontWeight: 700})}>THE WINDOW</div>
-						<div style={{marginTop: 14, ...T(30, {}), lineHeight: 1.5}}>
-							<Wd f={f} at={wf(220, 'coast')} lightAt={wf(220, 'board')}>COAST GUARD BOARD: </Wd>
-							<Wd f={f} at={wf(220, 'untested')} lightAt={wf(220, 'uncertified')} tone={colors.amber}>UNTESTED, UNCERTIFIED · </Wd>
-							<Wd f={f} at={wf(220, 'found')} lightAt={wf(220, 'unlikely')} tone={colors.cyan} bold>FOUND IT UNLIKELY </Wd><Wd f={f} at={wf(220, 'window', 1)} lightAt={wf(220, 'caused')} tone={colors.cyan} bold>THE WINDOW CAUSED </Wd><Wd f={f} at={wf(220, 'implosion')} tone={colors.cyan} bold>THE IMPLOSION</Wd>
-						</div>
-					</Card>
-					<div style={{position: 'absolute', left: 0, right: 0, top: 780, textAlign: 'center', ...T(38, {}), fontWeight: 700}}>
-						<Wd f={f} at={wf(221, 'all')} lightAt={wf(221, 'three')} tone={colors.ink} bold>ALL THREE </Wd><Wd f={f} at={wf(221, 'reports')} tone={colors.ink} bold>REPORTS: </Wd>
-						<Wd f={f} at={wf(221, 'place')} lightAt={wf(221, 'hull')} tone={colors.red} bold>THE FAILURE WAS IN THE HULL</Wd>
-					</div>
-					<div style={{position: 'absolute', left: 0, right: 0, top: 850, textAlign: 'center', ...T(26, {color: colors.ink})}}>NTSB MIR-25-36 · USCG MBI REPORT · TSB M23A0169</div>
 				</AbsoluteFill>
 			) : null}
+			{/* each myth beside its page (forensic v2, idea 3): the board's own paragraph, highlighted on the words said */}
+			<RecordPage set="roi" start={sf(218) - 14} end={ef(219) + 16} page={235} hl={[{key: 'mapping', at: wf(218, 'mapped')}, {key: 'turned', at: wf(218, 'turned')}]} label="THE CONTROLLER" title="4.34.9 · DIVE 81" pushTo={wf(218, 'thruster')} />
+			<Note o={vis(f, sf(218) + 10, ef(219) + 6)} tone={colors.amber}>
+				{f < sf(219) - 4 ? (
+					<>
+						<Wd f={f} at={wf(218, 'controller')} tone={colors.amber} bold>THE CONTROLLER · </Wd><Wd f={f} at={wf(218, 'dive')} lightAt={wf(218, 'eighty-one')} tone={colors.amber}>DIVE 81: </Wd>
+						<Wd f={f} at={wf(218, 'thruster')} lightAt={wf(218, 'controls')}>THRUSTER CONTROLS </Wd>
+						<Wd f={f} at={wf(218, 'mapped')} lightAt={wf(218, 'reverse')} tone={colors.amber} bold>MAPPED IN REVERSE · </Wd>
+						<Wd f={f} at={wf(218, 'pilot')} lightAt={wf(218, 'turned')}>THE PILOT TURNED </Wd><Wd f={f} at={wf(218, 'controller', 1)} lightAt={wf(218, 'around')}>IT AROUND</Wd>
+					</>
+				) : (
+					<>
+						<Wd f={f} at={wf(219, 'none')} lightAt={wf(219, 'three')} tone={colors.cyan} bold>NONE OF THE THREE </Wd><Wd f={f} at={wf(219, 'reports')} tone={colors.cyan} bold>REPORTS </Wd>
+						<Wd f={f} at={wf(219, 'names')} lightAt={wf(219, 'controller')}>NAMES THE CONTROLLER </Wd><Wd f={f} at={wf(219, 'cause')} tone={colors.ink} bold>AS A CAUSE</Wd>
+					</>
+				)}
+			</Note>
+			<RecordPage set="roi" start={sf(220) - 14} end={ef(221) + 20} page={280} hl={[{key: 'windowok', at: wf(220, 'unlikely')}]} label="THE WINDOW" title="5.5 · THE ACRYLIC WINDOW" pushTo={wf(220, 'criticised')} />
+			<Note o={vis(f, sf(220) + 10, ef(221) + 10)} tone={colors.amber}>
+				{f < sf(221) - 4 ? (
+					<>
+						<Wd f={f} at={wf(220, 'coast')} lightAt={wf(220, 'board')} tone={colors.amber}>THE COAST GUARD BOARD: </Wd>
+						<Wd f={f} at={wf(220, 'untested')} lightAt={wf(220, 'uncertified')} tone={colors.amber} bold>UNTESTED, UNCERTIFIED · </Wd>
+						<Wd f={f} at={wf(220, 'found')} lightAt={wf(220, 'unlikely')} tone={colors.cyan} bold>UNLIKELY </Wd><Wd f={f} at={wf(220, 'window', 1)} lightAt={wf(220, 'caused')} tone={colors.cyan}>THE WINDOW CAUSED </Wd><Wd f={f} at={wf(220, 'implosion')} tone={colors.cyan}>THE IMPLOSION</Wd>
+					</>
+				) : (
+					<>
+						<Wd f={f} at={wf(221, 'all')} lightAt={wf(221, 'three')} tone={colors.ink} bold>ALL THREE </Wd><Wd f={f} at={wf(221, 'reports')} tone={colors.ink} bold>REPORTS: </Wd>
+						<Wd f={f} at={wf(221, 'place')} lightAt={wf(221, 'hull')} tone={colors.red} bold>THE FAILURE WAS IN THE HULL</Wd>
+						<span style={{...T(26, {color: colors.ink})}}> · NTSB · USCG · TSB</span>
+					</>
+				)}
+			</Note>
 			<ActTitle n="V" title="The Verdict" start={ef(221) + 24} end={sf(222) + 6} />
 			<RecordPage set="mir" start={sf(222) - 6} end={ef(223) + 20} page={74} hl={[{key: 'probable', at: wf(222, 'inadequate')}, {key: 'flawedanalysis', at: wf(223, 'flawed')}]} label="PROBABLE CAUSE" pushTo={wf(222, 'cause')} />
 			<Note o={vis(f, sf(222), ef(223) + 10)}>
@@ -403,7 +409,7 @@ const Verdict: React.FC = () => {
 					<Wd f={f} at={wf(225, 'canadian')} lightAt={wf(225, 'ships')} tone={colors.amber}>WITH CANADIAN SHIPS</Wd>
 				</div>
 			</Card>
-			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'willnot', at: wf(229, 'occur')}]} label="EXHIBIT" title="EVIDENCE OF CRIMINAL ACTS" pushTo={wf(228, 'had')} />
+			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'doj', at: wf(229, 'crime')}, {key: 'willnot', at: wf(229, 'will')}]} label="EXHIBIT" title="6.5 · THE BOARD'S REFERRAL SECTION" pushTo={wf(228, 'had')} />
 			<Note o={vis(f, sf(226), ef(230) + 10)}>
 				{f < sf(228) - 4 ? (
 					<>
@@ -421,8 +427,9 @@ const Verdict: React.FC = () => {
 					</>
 				) : (
 					<>
-						<Wd f={f} at={wf(229, 'investigation')} lightAt={wf(229, 'noted')}>THAT INVESTIGATION, THE BOARD NOTED, </Wd>
-						<Wd f={f} at={wf(229, 'will')} lightAt={wf(229, 'occur')} tone={colors.ink} bold>WILL NOT OCCUR · </Wd>
+						<Wd f={f} at={wf(229, 'whether')} lightAt={wf(229, 'committed')}>WHETHER ANY CRIME WAS COMMITTED, </Wd><Wd f={f} at={wf(229, 'board')} lightAt={wf(229, 'wrote')} tone={colors.cyan}>THE BOARD WROTE, </Wd>
+						<Wd f={f} at={wf(229, 'justice')} lightAt={wf(229, 'decide')} tone={colors.amber}>FOR THE DEPARTMENT OF JUSTICE TO DECIDE · </Wd>
+						<Wd f={f} at={wf(229, 'will')} lightAt={wf(229, 'happen')} tone={colors.ink} bold>THAT WILL NOT HAPPEN, </Wd><Wd f={f} at={wf(229, 'because')}>BECAUSE </Wd>
 						<Wd f={f} at={wf(230, 'rush')} lightAt={wf(230, 'died')}>MR. RUSH DIED</Wd>
 					</>
 				)}
@@ -447,19 +454,31 @@ const Verdict: React.FC = () => {
 						<Wd f={f} at={wf(232, 'delayed')} lightAt={wf(232, 'first')} tone={colors.amber}>DELAYED THE FIRST </Wd><Wd f={f} at={wf(232, 'call')} lightAt={wf(232, 'rescuers')} tone={colors.amber}>CALL </Wd>
 						<Wd f={f} at={wf(232, 'more')} lightAt={wf(232, 'hours')} tone={colors.amber} bold>BY MORE THAN 7 HOURS · </Wd>
 						<Wd f={f} at={wf(232, 'no')} lightAt={wf(232, 'deep-water')} tone={colors.red}>NO DEEP-WATER </Wd><Wd f={f} at={wf(232, 'rescue')} lightAt={wf(232, 'vehicle')} tone={colors.red}>RESCUE VEHICLE </Wd><Wd f={f} at={wf(232, 'standing')} lightAt={wf(232, 'by')} tone={colors.red}>STANDING BY</Wd>
-						<br />
-						<Wd f={f} at={wf(233, 'implosion')} lightAt={wf(233, 'caused')}>THE IMPLOSION CAUSED </Wd>
-						<Wd f={f} at={wf(233, 'immediate')} lightAt={wf(233, 'loss')} tone={colors.ink} bold>THE IMMEDIATE LOSS </Wd><Wd f={f} at={wf(233, 'all')} lightAt={wf(233, 'lives')} tone={colors.ink} bold>OF ALL LIVES </Wd><Wd f={f} at={wf(233, 'on')} lightAt={wf(233, 'board')} tone={colors.ink} bold>ON BOARD, </Wd>
-						<Wd f={f} at={wf(233, 'before')} lightAt={wf(233, 'call')}>BEFORE ANY DISTRESS CALL</Wd>
-						<br />
-						<Wd f={f} at={wf(234, 'n')} lightAt={wf(234, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
-						<Wd f={f} at={wf(234, 'search')} lightAt={wf(234, 'rescue')}>SEARCH AND RESCUE </Wd>
-						<Wd f={f} at={wf(234, 'not')} lightAt={wf(234, 'saved')} tone={colors.ink} bold>COULD NOT HAVE SAVED THEM · </Wd>
-						<Wd f={f} at={wf(235, 'assets')} lightAt={wf(235, 'ready')}>WITH ASSETS READY, </Wd>
-						<Wd f={f} at={wf(235, 'titan')} tone={colors.amber}>TITAN </Wd><Wd f={f} at={wf(235, 'likely')} lightAt={wf(235, 'found', 1)} tone={colors.amber}>LIKELY FOUND </Wd><Wd f={f} at={wf(235, 'sooner')} tone={colors.amber}>SOONER</Wd>
 					</div>
 				</AbsoluteFill>
 			) : null}
+			{/* the findings on their pages (forensic v2, idea 2): the board's summary, then the NTSB's conclusion */}
+			<RecordPage set="roi" start={sf(233) - 14} end={ef(233) + 16} hl={[{key: 'immediate', at: wf(233, 'immediate')}]} label="EXHIBIT" pushTo={wf(233, 'implosion')} />
+			<Note o={vis(f, sf(233) + 10, ef(233) + 6)} tone={colors.ink}>
+				<Wd f={f} at={wf(233, 'implosion')} lightAt={wf(233, 'caused')}>THE IMPLOSION CAUSED </Wd>
+				<Wd f={f} at={wf(233, 'immediate')} lightAt={wf(233, 'loss')} tone={colors.ink} bold>THE IMMEDIATE LOSS </Wd><Wd f={f} at={wf(233, 'all')} lightAt={wf(233, 'lives')} tone={colors.ink} bold>OF ALL LIVES · </Wd>
+				<Wd f={f} at={wf(233, 'before')} lightAt={wf(233, 'call')} tone={colors.amber}>BEFORE ANY DISTRESS CALL</Wd>
+			</Note>
+			<RecordPage set="mir" start={sf(234) - 14} end={ef(235) + 20} page={66} hl={[{key: 'couldnotsave', at: wf(234, 'not')}, {key: 'sooner', at: wf(235, 'likely')}]} label="EXHIBIT" title="2.5 · SEARCH AND RESCUE" pushTo={wf(234, 'search')} />
+			<Note o={vis(f, sf(234) + 10, ef(235) + 10)} tone={colors.cyan}>
+				{f < sf(235) - 4 ? (
+					<>
+						<Wd f={f} at={wf(234, 'n')} lightAt={wf(234, 'found')} tone={colors.cyan}>THE NTSB: </Wd>
+						<Wd f={f} at={wf(234, 'search')} lightAt={wf(234, 'rescue')}>SEARCH AND RESCUE </Wd>
+						<Wd f={f} at={wf(234, 'not')} lightAt={wf(234, 'saved')} tone={colors.ink} bold>COULD NOT HAVE SAVED THEM</Wd>
+					</>
+				) : (
+					<>
+						<Wd f={f} at={wf(235, 'assets')} lightAt={wf(235, 'ready')}>WITH ASSETS READY, </Wd>
+						<Wd f={f} at={wf(235, 'titan')} tone={colors.amber}>TITAN </Wd><Wd f={f} at={wf(235, 'likely')} lightAt={wf(235, 'found', 1)} tone={colors.amber}>WOULD LIKELY HAVE BEEN FOUND </Wd><Wd f={f} at={wf(235, 'sooner')} tone={colors.amber} bold>SOONER</Wd>
+					</>
+				)}
+			</Note>
 			{company > 0 ? (
 				<AbsoluteFill style={{opacity: company}}>
 					<Card x={300} y={230} w={1320} o={1} accent={colors.ink} style={{padding: '30px 40px'}}>
@@ -482,7 +501,8 @@ const Verdict: React.FC = () => {
 			) : null}
 			{recs > 0 ? (
 				<AbsoluteFill style={{opacity: recs}}>
-					<div style={{position: 'absolute', left: 0, right: 0, top: 140, textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: 56, color: colors.ink, opacity: lead(f, wf(238, 'what'), 8)}}>
+					{/* the question lands centre-screen on its word, then rises to head the four answers as they are said */}
+					<div style={{position: 'absolute', left: 0, right: 0, top: interpolate(f, [sf(239) - 6, sf(239) + 24], [470, 140], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}), textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: interpolate(f, [sf(239) - 6, sf(239) + 24], [84, 56], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}), color: colors.ink, opacity: lead(f, wf(238, 'what'), 8)}}>
 						What now?
 					</div>
 					<div style={{position: 'absolute', left: 220, top: 240, ...T(30, {})}}>
@@ -491,10 +511,11 @@ const Verdict: React.FC = () => {
 						<Wd f={f} at={wf(239, 'u')} lightAt={wf(239, 'guard')}>TO THE U.S. COAST GUARD</Wd>
 					</div>
 					{recList.map(([id, text, at], i) => (
-						<div key={id} style={{position: 'absolute', left: 220, top: 320 + i * 110, width: 1480, display: 'flex', alignItems: 'center', gap: 24, opacity: lead(f, at, 10)}}>
-							<span style={{...T(56, {color: colors.cyan, fontWeight: 700}), width: 60, display: 'inline-block', transform: `scale(${bump(f, fps, at + LAND).toFixed(4)})`}}>{i + 1}</span>
-							<span style={{...T(28, {color: colors.ink}), width: 200}}>{id}</span>
-							<span style={{...T(32, {color: colors.ink, fontWeight: 700}), flex: 1}}>{text.map(([t, ta], j) => <Wd key={j} f={f} at={ta} tone={colors.ink} bold>{t}</Wd>)}</span>
+						<div key={id} style={{position: 'absolute', left: 220, top: 320 + i * 110, width: 1480, display: 'flex', alignItems: 'center', gap: 24}}>
+							{/* four numbered slots land on "four", each fills on its own number (no still stretch before the list) */}
+							<span style={{...T(56, {color: f >= at ? colors.cyan : colors.sub, fontWeight: 700}), width: 60, display: 'inline-block', opacity: Math.max(0.45 * lead(f, wf(239, 'four') + i * 6, 8), lead(f, at, 10)), transform: `scale(${bump(f, fps, at + LAND).toFixed(4)})`}}>{i + 1}</span>
+							<span style={{...T(28, {color: colors.ink}), width: 200, opacity: lead(f, at, 10)}}>{id}</span>
+							<span style={{...T(32, {color: colors.ink, fontWeight: 700}), flex: 1, opacity: lead(f, at, 10)}}>{text.map(([t, ta], j) => <Wd key={j} f={f} at={ta} tone={colors.ink} bold>{t}</Wd>)}</span>
 							<span style={{opacity: lead(f, wf(245, 'remain'), 8)}}>
 								<Chip text={f >= wf(245, 'open') ? 'OPEN · ACCEPTABLE RESPONSE' : 'OPEN'} tone={colors.amber} size={26} />
 							</span>
@@ -613,6 +634,16 @@ export const act45: SceneDef[] = [
 		to: ef(245) + 40,
 		C: Verdict,
 		cues: [
+			{frame: sf(218) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(218, 'mapped') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: wf(218, 'turned') - 15, sfx: 'highlighter', gainDb: -24},
+			{frame: sf(220) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(220, 'unlikely') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: sf(233) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(233, 'immediate') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: sf(234) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(234, 'not') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: wf(235, 'likely') - 15, sfx: 'highlighter', gainDb: -24},
 			{frame: wf(219, 'none'), sfx: 'stamp', gainDb: -26},
 			{frame: ef(221) + 26, sfx: 'whoosh', gainDb: -26},
 			{frame: wf(222, 'inadequate') - 15, sfx: 'highlighter', gainDb: -20},

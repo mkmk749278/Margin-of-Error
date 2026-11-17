@@ -136,7 +136,9 @@ const Monitor: React.FC = () => {
 	const toTrace = span(f, wf(7, 'strain') - 10, wf(8, 'implosion') + 10);
 	const hullO = 1 - toTrace;
 	const tEnd = 17.1;
-	const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND, wf(8, 'depth') + 40, wf(8, 'depth') + 56], [0, 1, 1, 0], clamp);
+	// the axis is promised, not swapped: TIME slides left and dims, "→ DEPTH" arrives beside it and stays (viewer panel v2:
+	// a crossfade in one place garbled the two words, and flicking back read as a broken promise)
+	const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND], [0, 1], clamp);
 	const W = 1240;
 	const H = 600;
 	const tx = interpolate(toTrace, [0, 1], [1080, 340]);
@@ -208,10 +210,10 @@ const Monitor: React.FC = () => {
 			<Card x={520} y={300} w={880} o={myth * (1 - toTrace)} accent={colors.amber} style={{padding: '30px 40px 30px'}}>
 				<div style={{...T(26, {color: colors.amber, letterSpacing: 3}), opacity: lead(f, wf(5, 'often'), 8)}}>IT IS OFTEN SAID</div>
 				<div style={{fontFamily: sans, fontWeight: 700, fontSize: 54, lineHeight: 1.2, marginTop: 14, color: f >= wf(6, 'record') ? colors.sub : colors.ink}}>
-					<span style={{opacity: lead(f, wf(5, 'warning'), 8)}}>“The warning </span>
+					<span style={{opacity: lead(f, wf(5, 'warning'), 8)}}>The warning </span>
 					<span style={{opacity: lead(f, wf(5, 'worked'), 8)}}>worked, </span>
 					<br />
-					<span style={{opacity: lead(f, wf(5, 'ignored'), 8)}}>and was ignored.”</span>
+					<span style={{opacity: lead(f, wf(5, 'ignored'), 8)}}>and was ignored.</span>
 				</div>
 				<div style={{marginTop: 22, display: 'flex', gap: 14, alignItems: 'center', opacity: lead(f, wf(6, 'record'), 8)}}>
 					<Chip text="THE RECORD" tone={colors.cyan} size={30} style={{transform: `scale(${bump(f, fps, wf(6, 'record') + LAND, 0.06).toFixed(4)})`}} />
@@ -230,8 +232,8 @@ const Monitor: React.FC = () => {
 						showDepth={0}
 						axisLabel={
 							<g>
-								<text textAnchor="middle" style={T(34, {fill: colors.amber, letterSpacing: 6, fontWeight: 700})} opacity={1 - depthTease}>TIME</text>
-								<text textAnchor="middle" style={T(34, {fill: colors.cyan, letterSpacing: 6, fontWeight: 700})} opacity={depthTease}>DEPTH</text>
+								<text x={-110 * depthTease} textAnchor="middle" style={T(34, {fill: depthTease > 0.5 ? colors.sub : colors.amber, letterSpacing: 6, fontWeight: 700})}>TIME</text>
+								<text x={40 + 30 * depthTease} textAnchor="start" style={T(34, {fill: colors.cyan, letterSpacing: 6, fontWeight: 700})} opacity={depthTease}>→ DEPTH</text>
 							</g>
 						}
 					/>
@@ -270,13 +272,11 @@ const LastDive: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const sea = vis(f, wf(11, 'at') - 10, ef(12) + 20);
-	const depth = rollTo(f, [
-		{frame: wf(12, 'deeper') - 10, value: 0},
-		{frame: wf(12, 'ten') + LAND, value: 10},
-		{frame: wf(13, 'about'), value: 2900},
-		{frame: wf(13, 'thousand') + LAND, value: 3000},
-		{frame: wf(13, 'fifty') + LAND, value: 3350},
-	]);
+	// one driver for the clock and the depth (§10.3): both roll from the 09:00 release and land together on
+	// "forty-seven" (10:47, ≈3,350 m, C37/C50); the narration then confirms the depth
+	const drive = rollTo(f, [{frame: wf(13, 'at') - 16, value: 0}, {frame: wf(13, 'forty-seven') + LAND, value: 1}]);
+	const depth = 10 + 3340 * drive;
+	const clockMin = Math.round(9 * 60 + 107 * drive);
 	const log = vis(f, wf(13, 'at') - 16, ef(16) + 40);
 	const msgs: Msg[] = [
 		{t: '10:47', text: 'DROPPED TWO WTS', who: 'TITAN', at: wf(13, 'dropping'), tone: colors.ink},
@@ -296,7 +296,7 @@ const LastDive: React.FC = () => {
 			{sea > 0 ? (
 				<AbsoluteFill style={{opacity: sea}}>
 					<RealFootage f={f} start={wf(11, 'at') - 10} end={ef(12) + 30} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA47SWAN / YOUTUBE · CC BY" push={0.06} />
-					<Card x={96} y={96} w={720} o={1} style={{padding: '22px 28px'}}>
+					<Card x={96} y={96} w={720} o={lead(f, wf(11, 'nine') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{...T(26, {color: colors.amber, letterSpacing: 3})}}>18 JUN 2023 · DIVE 88</div>
 						<div style={{display: 'flex', gap: 18, marginTop: 10, alignItems: 'baseline'}}>
 							<span style={{...T(44, lit(f, wf(11, 'nine'))), fontWeight: 700, opacity: lead(f, wf(11, 'nine'), 8)}}>≈ 09:00</span>
@@ -318,11 +318,11 @@ const LastDive: React.FC = () => {
 					<Mount x={150} y={110} w={1620} h={820} start={wf(13, 'at') - 16} end={ef(16) + 40} source="DIVE 88 TEXT LOG · TIMES AND WORDING: NTSB MIR-25-36 · USCG MBI REPORT" labels={['RECONSTRUCTION']} lean={3}>
 						<div style={{position: 'absolute', left: 60, top: 50, ...T(26, {color: colors.sub, letterSpacing: 3})}}>DEPTH</div>
 						<div style={{position: 'absolute', left: 60, top: 86, ...T(84, {color: colors.ink, fontWeight: 700})}}>
-							{Math.round(depth).toLocaleString('en-US')}
+							<span style={{textShadow: `0 0 ${(18 * Math.max(flash(f, wf(13, 'ten'), 0), flash(f, wf(13, 'three'), 0), flash(f, wf(13, 'hundred'), 0), flash(f, wf(13, 'fifty'), 0))).toFixed(1)}px ${colors.cyan}`}}>{Math.round(depth).toLocaleString('en-US')}</span>
 							<span style={{fontSize: 40, color: colors.sub}}> M</span>
 						</div>
-						<div style={{position: 'absolute', left: 60, top: 196, ...T(30, {color: colors.ink}), opacity: lead(f, wf(13, 'ten'), 8)}}>
-							CLOCK <span style={{fontWeight: 700, ...lit(f, wf(15, 'later'), colors.cyan, colors.ink)}}>{f >= wf(15, 'later') ? '10:48' : '10:47'}</span>
+						<div style={{position: 'absolute', left: 60, top: 196, ...T(30, {color: colors.ink}), opacity: lead(f, wf(13, 'at') - 16, 8)}}>
+							CLOCK <span style={{fontWeight: 700, ...lit(f, wf(15, 'later'), colors.cyan, colors.ink)}}>{f >= wf(15, 'later') ? '10:48' : `${String(Math.floor(clockMin / 60)).padStart(2, '0')}:${String(clockMin % 60).padStart(2, '0')}`}</span>
 						</div>
 						<div style={{position: 'absolute', left: 60, top: 290, width: 420, ...T(28, {color: colors.ink, lineHeight: 1.45}), opacity: lead(f, wf(13, 'standard'), 8)}}>
 							<span style={lit(f, wf(13, 'standard'), colors.cyan)}>STANDARD</span> <span style={{opacity: lead(f, wf(13, 'depth'), 8), ...lit(f, wf(13, 'depth'), colors.cyan)}}>AT THAT DEPTH</span>

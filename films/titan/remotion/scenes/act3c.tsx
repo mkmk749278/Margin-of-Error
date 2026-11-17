@@ -17,7 +17,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -36,8 +36,8 @@ const Winter: React.FC = () => {
 		<>
 			{harbour > 0 ? (
 				<AbsoluteFill style={{opacity: harbour}}>
-					<RealFootage f={f} start={sf(159) - 12} end={ef(161) + 26} src="footage/stj_narrows.mp4" date="" what="ST. JOHN'S, NEWFOUNDLAND · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.06} />
-					<Card x={96} y={96} w={900} o={1} style={{padding: '22px 28px'}}>
+					<RealFootage f={f} start={sf(159) - 12} end={ef(161) + 26} src="footage/stj_narrows.mp4" date="" what="ST. JOHN'S HARBOUR · REFERENCE, NOT THE BASE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.06} />
+					<Card x={96} y={96} w={900} o={lead(f, wf(159, 'spend') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{...T(34, {}), fontWeight: 700}}>
 							<Wd f={f} at={wf(159, 'spend')} lightAt={wf(159, 'winter')} tone={colors.amber} bold>THE WINTER: </Wd>
 							<Wd f={f} at={wf(159, 'somewhere')}>SOMEWHERE</Wd>
@@ -62,7 +62,7 @@ const Winter: React.FC = () => {
 					<RecordPage set="roi" start={sf(162) - 12} end={ef(166) + 20} page={322} hl={[{key: 'cover', at: wf(162, 'quote')}, {key: 'noreply', at: wf(163, 'never')}]} label="EXHIBIT" title="STORAGE" pushTo={wf(162, 'protective')} />
 					<div style={{position: 'absolute', right: 96, top: 84, display: 'flex', gap: 14, alignItems: 'center', opacity: lead(f, wf(162, 'two'), 8)}}>
 						<DatePill f={f} fps={fps} day={28} month={7} year={2022} dayWord={wf(162, 'later')} fromDay={26} size={30} />
-						<span style={{...T(44, {color: colors.amber, fontWeight: 700}), background: colors.card, border: `1px solid ${colors.border}`, padding: '2px 12px', opacity: lead(f, wf(162, 'one'), 8), display: 'inline-block', transform: `scale(${bump(f, fps, wf(162, 'fifty') + LAND).toFixed(4)})`}}>
+						<span style={{...T(44, {color: f >= wf(162, 'fifty') + LAND ? colors.amber : colors.sub, fontWeight: 700}), background: colors.card, border: `1px solid ${colors.border}`, padding: '2px 12px', opacity: lead(f, wf(162, 'one'), 8), display: 'inline-block', transform: `scale(${bump(f, fps, wf(162, 'fifty') + LAND).toFixed(4)})`}}>
 							CA${cad.toLocaleString('en-US')}
 						</span>
 					</div>
@@ -94,16 +94,16 @@ const Winter: React.FC = () => {
 				<AbsoluteFill style={{opacity: cold}}>
 					<RealFootage f={f} start={sf(167) - 12} end={wf(167, 'freezing') + 4} src="footage/stj_ice.mp4" date="" what="ST. JOHN'S HARBOUR IN WINTER · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.05} />
 					<RealFootage f={f} start={wf(167, 'freezing') - 10} end={ef(168) + 30} src="footage/stj_snow.mp4" date="" what="ST. JOHN'S AFTER SNOWFALL · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.05} />
-					<Card x={96} y={96} w={820} o={1} style={{padding: '22px 28px'}}>
+					<Card x={96} y={96} w={820} o={lead(f, wf(167, 'stayed') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{display: 'flex', gap: 14, alignItems: 'center'}}>
 							<Wd f={f} at={wf(167, 'stayed')} lightAt={wf(167, 'outside')} tone={colors.red} bold style={T(32, {})}>OUTSIDE UNTIL </Wd>
 							<DatePill f={f} fps={fps} day={6} month={2} year={2023} dayWord={wf(167, 'sixth')} monthWord={wf(167, 'february')} size={30} />
 						</div>
 						<div style={{marginTop: 16, display: 'flex', gap: 18, alignItems: 'baseline'}}>
 							<Wd f={f} at={wf(167, 'temperatures')} style={T(28, {})}>TEMPERATURES </Wd>
-							<span style={{...T(56, {color: colors.cyan, fontWeight: 700}), opacity: lead(f, wf(167, 'one'), 8)}}>{lowF.toFixed(1)}°F</span>
+							<span style={{...T(56, {color: f >= wf(167, 'four') + LAND ? colors.cyan : colors.sub, fontWeight: 700}), opacity: lead(f, wf(167, 'one'), 8)}}>{lowF.toFixed(1)}°F</span>
 							<span style={{...T(40, {color: colors.ink}), opacity: lead(f, wf(167, 'to'), 8)}}>→</span>
-							<span style={{...T(56, {color: colors.amber, fontWeight: 700}), opacity: lead(f, wf(167, 'eighty-four'), 8), textShadow: `0 0 ${(14 * flashOn(f, wf(167, 'fahrenheit'))).toFixed(1)}px ${colors.amber}`}}>{highF.toFixed(1)}°F</span>
+							<span style={{...T(56, {color: f >= wf(167, 'two') + LAND ? colors.amber : colors.sub, fontWeight: 700}), opacity: lead(f, wf(167, 'eighty-four'), 8), textShadow: `0 0 ${(14 * flashOn(f, wf(167, 'fahrenheit'))).toFixed(1)}px ${colors.amber}`}}>{highF.toFixed(1)}°F</span>
 						</div>
 						<div style={{marginTop: 6, ...T(30, {})}}>
 							<Wd f={f} at={wf(167, 'minus')} lightAt={wf(167, 'seventeen')} tone={colors.cyan}>−17°C </Wd>
@@ -178,7 +178,8 @@ const Money: React.FC = () => {
 					<>
 						<Wd f={f} at={wf(174, 'employees')}> · EMPLOYEES </Wd>
 						<Wd f={f} at={wf(174, 'asked')} lightAt={wf(174, 'forgo')} tone={colors.red}>ASKED TO FORGO </Wd><Wd f={f} at={wf(174, 'salaries')} tone={colors.red}>SALARIES · </Wd>
-						<Wd f={f} at={wf(174, 'promise')} lightAt={wf(174, 'pay')}>BACK PAY PROMISED</Wd>
+						<Wd f={f} at={wf(174, 'promise')} lightAt={wf(174, 'pay')}>BACK PAY PROMISED · </Wd>
+						<Wd f={f} at={wf(174, 'pay')} tone={colors.ink}>BROOKS: "THEY ASKED FOR VOLUNTEERS" · CG 112 P. 779</Wd>
 					</>
 				) : null}
 			</Note>
@@ -325,7 +326,7 @@ const Law: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const q = vis(f, sf(187) - 8, ef(187) + 14);
-	const law = vis(f, sf(188) - 10, ef(190) + 20);
+	const law = vis(f, sf(188) - 10, ef(188) + 14);
 	const timeline = vis(f, sf(192) - 10, ef(196) + 20);
 	const rescue = vis(f, sf(197) - 10, ef(198) + 20);
 	const X = (y: number) => 300 + (y - 1993) * 42;
@@ -339,39 +340,43 @@ const Law: React.FC = () => {
 				</div>
 			</AbsoluteFill>
 			{law > 0 ? (
-				<AbsoluteFill style={{opacity: law}}>
-					<Card x={240} y={170} w={1440} o={1} accent={colors.cyan} style={{padding: '30px 40px'}}>
-						<div style={{...T(34, {}), fontWeight: 700}}>
-							<Wd f={f} at={wf(188, 'coast')} lightAt={wf(188, 'reading')} tone={colors.cyan}>BY THE COAST GUARD'S READING OF THE LAW: </Wd>
-							<Wd f={f} at={wf(188, 'not')} tone={colors.red} bold>IT WAS NOT</Wd>
-						</div>
-						<div style={{marginTop: 26, ...T(32, {}), lineHeight: 1.5}}>
-							<Wd f={f} at={wf(189, 'u')} lightAt={wf(189, 'law')}>U.S. LAW, </Wd>
-							<Wd f={f} at={wf(189, 'n')} lightAt={wf(189, 'notes')} tone={colors.cyan}>AS THE N-T-S-B NOTES: </Wd>
-							<br />
-							<Wd f={f} at={wf(189, 'submersible')} lightAt={wf(189, 'carrying')}>A SUBMERSIBLE CARRYING </Wd>
-							<Wd f={f} at={wf(189, 'even')} lightAt={wf(189, 'one')} tone={colors.amber} bold>EVEN ONE </Wd>
-							<Wd f={f} at={wf(189, 'passenger')} lightAt={wf(189, 'hire')} tone={colors.amber}>PASSENGER FOR HIRE</Wd>
-							<br />
-							<Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>= A SMALL PASSENGER VESSEL · </Wd>
-							<Wd f={f} at={wf(189, 'must')} lightAt={wf(189, 'inspected')} tone={colors.cyan} bold>MUST BE INSPECTED </Wd>
-							<Wd f={f} at={wf(189, 'by')} lightAt={wf(189, 'guard')} tone={colors.cyan}>BY THE COAST GUARD</Wd>
-						</div>
-						<div style={{marginTop: 30, display: 'flex', gap: 18}}>
-							<span style={{opacity: lead(f, wf(190, 'registered'), 8), transform: `scale(${bump(f, fps, wf(190, 'registered') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text="NEVER REGISTERED" tone={colors.red} size={34} />
-							</span>
-							<span style={{opacity: lead(f, wf(190, 'inspection'), 8), transform: `scale(${bump(f, fps, wf(190, 'inspection') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text={f >= wf(190, 'arranged') ? 'NO INSPECTION ARRANGED' : 'NO INSPECTION'} tone={colors.red} size={34} />
-							</span>
-						</div>
-						<div style={{marginTop: 18, ...T(28, {color: colors.ink})}}>
-							<Wd f={f} at={wf(190, 'oceangate')} lightAt={wf(190, 'titan')}>OCEANGATE · TITAN · USCG MBI REPORT; NTSB MIR-25-36</Wd>
-						</div>
-					</Card>
+				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: law}}>
+					<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, color: colors.ink, textAlign: 'center', lineHeight: 1.3}}>
+						<Wd f={f} at={wf(188, 'n')} lightAt={wf(188, 'reading')} base={colors.ink} tone={colors.cyan}>By the NTSB's reading </Wd>
+						<Wd f={f} at={wf(188, 'law')} base={colors.ink} tone={colors.cyan}>of the law,</Wd>
+						<br />
+						<Wd f={f} at={wf(188, 'not')} base={colors.ink} tone={colors.red}>it was not.</Wd>
+					</div>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="roi" start={sf(191) - 14} end={ef(191) + 20} hl={[{key: 'conceal', at: wf(191, 'conceal')}]} label="EXHIBIT" title="FINDINGS" pushTo={wf(191, 'mission')} />
+			{/* the law in the NTSB's own words (forensic v2, idea 1): the page, highlighted on the sentence that says it */}
+			<RecordPage set="mir" start={sf(189) - 14} end={ef(190) + 20} page={68} hl={[{key: 'pvsa', at: wf(189, 'submersible')}]} label="EXHIBIT" title="2.6 · OVERSIGHT" pushTo={wf(189, 'submersible')} />
+			<Note o={vis(f, sf(189) + 10, ef(190) + 10)} tone={colors.cyan}>
+				{f < sf(190) - 4 ? (
+					<>
+						<Wd f={f} at={wf(189, 'u')} lightAt={wf(189, 'law')}>U.S. LAW, </Wd><Wd f={f} at={wf(189, 'n')} lightAt={wf(189, 'notes')} tone={colors.cyan}>THE NTSB NOTES: </Wd>
+						<Wd f={f} at={wf(189, 'submersible')} lightAt={wf(189, 'carrying')}>A SUBMERSIBLE CARRYING </Wd>
+						<br />
+						<Wd f={f} at={wf(189, 'even')} lightAt={wf(189, 'one')} tone={colors.amber} bold>EVEN ONE </Wd>
+						<Wd f={f} at={wf(189, 'passenger')} lightAt={wf(189, 'hire')} tone={colors.amber}>PASSENGER FOR HIRE </Wd>
+						<Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>IS A SMALL PASSENGER VESSEL</Wd>
+						<br />
+						<Wd f={f} at={wf(189, 'must')} lightAt={wf(189, 'inspected')} tone={colors.cyan} bold>MUST BE INSPECTED </Wd>
+						<Wd f={f} at={wf(189, 'by')} lightAt={wf(189, 'guard')} tone={colors.cyan}>BY THE COAST GUARD</Wd>
+					</>
+				) : (
+					<span style={{display: 'inline-flex', gap: 18, alignItems: 'center'}}>
+						<Wd f={f} at={wf(190, 'oceangate')} lightAt={wf(190, 'titan')}>OCEANGATE · TITAN: </Wd>
+						<span style={{opacity: lead(f, wf(190, 'registered'), 8), transform: `scale(${bump(f, fps, wf(190, 'registered') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
+							<Chip text="NEVER REGISTERED" tone={colors.red} size={34} />
+						</span>
+						<span style={{opacity: lead(f, wf(190, 'inspection'), 8), transform: `scale(${bump(f, fps, wf(190, 'inspection') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
+							<Chip text={f >= wf(190, 'arranged') ? 'NO INSPECTION ARRANGED' : 'NO INSPECTION'} tone={colors.red} size={34} />
+						</span>
+					</span>
+				)}
+			</Note>
+			<RecordPage set="roi" start={sf(191) - 14} end={ef(191) + 20} hl={[{key: 'c53', at: wf(191, 'conceal')}]} label="EXHIBIT" title="SEC. 5.18" pushTo={wf(191, 'mission')} />
 			<Note o={vis(f, sf(191), ef(191) + 10)}>
 				<Wd f={f} at={wf(191, 'board')} lightAt={wf(191, 'found')}>THE BOARD FOUND: </Wd>
 				<Wd f={f} at={wf(191, 'oceangate')} lightAt={wf(191, 'described')}>OCEANGATE DESCRIBED </Wd><Wd f={f} at={wf(191, 'paying')} lightAt={wf(191, 'passengers')}>PAYING PASSENGERS AS </Wd>
@@ -439,7 +444,7 @@ const Law: React.FC = () => {
 					</div>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="mir" start={sf(199) - 14} end={hold(199).from + hold(199).frames + 10} hl={[{key: 'insufficient', at: wf(199, 'insufficient')}]} label="PROBABLE CAUSE" title="CONTRIBUTING" pushTo={wf(199, 'guidance')} />
+			<RecordPage set="mir" start={sf(199) - 14} end={hold(199).from + hold(199).frames + 10} hl={[{key: 'insufficient_es', at: wf(199, 'insufficient')}]} label="FINDING" title="CONTRIBUTING" pushTo={wf(199, 'guidance')} />
 			<Note o={vis(f, sf(199), hold(199).from + hold(199).frames)}>
 				<Wd f={f} at={wf(199, 'n')} lightAt={wf(199, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
 				<Wd f={f} at={wf(199, 'voluntary')} lightAt={wf(199, 'guidance')}>VOLUNTARY GUIDANCE </Wd>
@@ -496,6 +501,8 @@ export const act3c: SceneDef[] = [
 		C: Law,
 		cues: [
 			{frame: wf(188, 'not'), sfx: 'stamp', gainDb: -24},
+			{frame: sf(189) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(189, 'submersible') - 15, sfx: 'highlighter', gainDb: -22},
 			{frame: wf(190, 'registered'), sfx: 'stamp', gainDb: -26},
 			{frame: wf(191, 'conceal') - 15, sfx: 'highlighter', gainDb: -22},
 			{frame: wf(194, 'december'), sfx: 'quartz_tick', gainDb: -22},

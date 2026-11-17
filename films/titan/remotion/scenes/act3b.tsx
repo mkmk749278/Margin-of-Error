@@ -15,7 +15,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -123,7 +123,7 @@ const RePlot: React.FC = () => {
 					</div>
 					<div style={{marginTop: 22, display: 'flex', gap: 16, alignItems: 'baseline', opacity: lead(f, wf(134, 'response'), 8)}}>
 						<Wd f={f} at={wf(134, 'response')} lightAt={wf(134, 'changed')} style={T(28, {})}>RESPONSE CHANGED</Wd>
-						<span style={{...T(64, {color: colors.red, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(134, 'quarters') + LAND).toFixed(4)})`}}>{f >= wf(134, 'three') - 14 ? `≈ +${pct}%` : ''}</span>
+						<span style={{...T(64, {color: f >= wf(134, 'quarters') + LAND ? colors.red : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(134, 'quarters') + LAND).toFixed(4)})`}}>{f >= wf(134, 'three') - 14 ? `≈ +${pct}%` : ''}</span>
 					</div>
 				</div>
 			</div>
@@ -218,7 +218,7 @@ const Hindsight: React.FC = () => {
 						<Wd f={f} at={wf(140, 'dive')} lightAt={wf(140, 'itself')}>DIVE 80 ITSELF: </Wd>
 						<Wd f={f} at={wf(140, 'nothing')} lightAt={wf(140, 'until')} tone={colors.cyan}>NOTHING UNTIL </Wd>
 						<Wd f={f} at={wf(140, 'last')} lightAt={wf(140, 'minutes')}>ITS LAST MINUTES · </Wd>
-						<Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>THE BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} tone={colors.amber}>APPEARS IN 81</Wd>
+						<Wd f={f} at={wf(141, 'n')} lightAt={wf(141, 'plots')} tone={colors.amber}>NTSB PLOTS: </Wd><Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} lightAt={wf(141, 'eighty-one')} tone={colors.amber}>IN 81</Wd>
 						<br />
 						<Wd f={f} at={wf(142, 'data')} lightAt={wf(142, 'computer')} tone={colors.cyan}>THAT DATA: ON THE COMPANY'S COMPUTER </Wd>
 						<Wd f={f} at={wf(142, 'after')} lightAt={wf(142, 'dive')} tone={colors.cyan}>AFTER DIVE 81</Wd>
@@ -282,7 +282,7 @@ const Gauges: React.FC = () => {
 							<Wd f={f} at={wf(148, 'slope')} lightAt={wf(148, 'surface')} style={T(30, {})}>SLOPE NEAR THE SURFACE</Wd>
 						</div>
 						<div style={{marginTop: 14, display: 'flex', gap: 22, alignItems: 'baseline'}}>
-							<span style={{...T(80, {color: colors.red, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(148, 'double') + LAND).toFixed(4)})`}}>{f >= wf(148, 'nearly') - 10 ? `+${dbl}%` : ''}</span>
+							<span style={{...T(80, {color: f >= wf(148, 'double') + LAND ? colors.red : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(148, 'double') + LAND).toFixed(4)})`}}>{f >= wf(148, 'nearly') - 10 ? `+${dbl}%` : ''}</span>
 							<Wd f={f} at={wf(148, 'double')} style={T(30, {})} tone={colors.red}>NEARLY DOUBLE </Wd><Wd f={f} at={wf(148, 'whole')} lightAt={wf(148, 'dive')} style={T(30, {})} tone={colors.red}>THE WHOLE-DIVE SLOPE</Wd>
 						</div>
 						<div style={{marginTop: 26, display: 'flex', gap: 22, alignItems: 'baseline'}}>

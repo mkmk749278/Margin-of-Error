@@ -72,7 +72,7 @@ In March, more than twenty submersible professionals signed a letter urging the 
 
 That was the first hull. But the failure mode named in that report, delamination, is what the investigators would find in the second.
 
-In twenty nineteen, the first hull cracked. The company's first director of engineering testified that he refused to sign it off, and that his refusal kept it from that year's expedition. He said it angered the chief executive, and led to his firing. The company's letter to him cited the cancelled expedition.
+In twenty nineteen, a crack was found in the first hull. The company's first director of engineering testified that he refused to sign it off, and that his refusal kept it from that year's expedition. He said it angered the chief executive, and led to his firing. The company's letter to him cited the cancelled expedition.
 
 A second hull was built: the one lost in twenty twenty-three. Its dives were numbered fifty to eighty-eight.
 
@@ -126,7 +126,7 @@ Could OceanGate have seen this at the time? The Coast Guard board found that Oce
 
 Brooks was right that there was no new jump. What changed was the slope, and against time a change in slope is hard to see.
 
-Dive eighty itself shows nothing until its last minutes. The bend first appears in dive eighty-one. That data was on the company's computer after that dive. Plotted against depth, it would have shown the bend before dive eighty-two, three days later, and before dive eighty-three.
+Dive eighty itself shows nothing until its last minutes. In the N - T - S - B's plots, the bend first appears in dive eighty-one. That data was on the company's computer after that dive. Plotted against depth, it would have shown the bend before dive eighty-two, three days later, and before dive eighty-three.
 
 And it was not a faulty gauge. Deeper down, the curves still match, which the N - T - S - B said shows the gauges had not changed. The hull had.
 
@@ -172,7 +172,7 @@ That spring, at sea and in port, the platform tipped more than once. Once, in Ma
 
 How was a hull like this allowed to carry passengers?
 
-By the Coast Guard's reading of the law, it was not. Under U - S law, the N - T - S - B notes, a submersible carrying even one passenger for hire is a small passenger vessel, and must be inspected by the Coast Guard. OceanGate never registered Titan, and never arranged an inspection.
+By the N - T - S - B's reading of the law, it was not. Under U - S law, the N - T - S - B notes, a submersible carrying even one passenger for hire is a small passenger vessel, and must be inspected by the Coast Guard. OceanGate never registered Titan, and never arranged an inspection.
 
 The Coast Guard board found that OceanGate described its paying passengers as mission specialists, with mandatory duties, to conceal that they were paying passengers.
 
@@ -212,7 +212,7 @@ Canada's Transportation Safety Board found that Titan received no oversight from
 
 The Coast Guard board also wrote this, about Mr. Rush, who was both the company's chief executive and its pilot. Had he survived the incident, the board would have recommended that the Commandant refer the matter to the Department of Justice, for its consideration on whether to pursue a separate criminal investigation.
 
-That investigation, the board noted, will not occur, because Mr. Rush died.
+Whether any crime was committed, the board wrote, was for the Justice Department to decide, and that will not happen, because Mr. Rush died.
 
 One more finding concerns the eighteenth of June itself. The board found that the company's own communications plan delayed the first call to rescuers by more than seven hours, and that no deep-water rescue vehicle was standing by. It also found that the implosion caused the immediate loss of all lives on board, before any distress call. The N - T - S - B found that search and rescue could not have saved them. With assets ready, it found, Titan would likely have been found sooner.
 

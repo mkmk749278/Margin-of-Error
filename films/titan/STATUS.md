@@ -1,5 +1,31 @@
 # Titan: status (17 NOV 2026, third session)
 
+## Latest (17 NOV 2026, morning)
+- **Review cuts:** v2 and v3 on Drive `titan/renders/`; gates `review/picture_gate_r2.md`, `review/picture_gate_r3.md`.
+  Forensic review v2 checked point by point (`review/forensic_review_v2_720p_check.md`): every point fixed or closed.
+- **The four approved narration re-takes** (owner, 17 NOV 2026) recorded with the API (Marcus, Eleven v4, 3 takes
+  each, picked by Whisper and pitch against the neighbouring sentences), spliced at their pauses into
+  `assets/vo/takes/bNN.mp3` (originals in `assets/vo/takes_pre_retake4/`; Drive `titan/vo/titan_vo_bNN_r4.mp3`,
+  full track `titan_film_vo_v2.mp3`). Film now **23:14** (1,393.9 s). Timing, words, cues, choreography rebuilt;
+  sync audit 0 of 244; mix −14.0 LUFS / −1.4 dBTP (Drive `titan/mix/mix.wav`).
+- **Round 4:** the law, the two myths, the last findings and Brooks's conversion now each on their record page;
+  "What now?" no longer opens on an empty frame.
+- **Cut v4** reviewed (`review/picture_gate_r4.md`). The viewer panel's report on v2 arrived (Drive
+  `titan/review/viewer_cut_r2.md`, now `review/viewer_review_v2_720p.md`) and was checked point by point
+  (`review/viewer_review_v2_720p_check.md`); its picture points are fixed for v5.
+- **Cut v5 rendering** (`titan_review_v5_720p.mp4`): measure it, then it goes to the owner.
+- **Owner decision (17 NOV 2026): where the record has two accounts, Claude decides the wording and says what each
+  report says** (no further owner gate for these lines). Next session: write the Brooks/NTSB line (both on the
+  record: what Brooks said he looked for; how the NTSB says the plots were drawn) and the TSB +98% vs NTSB +75%
+  line (two measures), fact-check at max, re-take with the API, splice, re-time.
+- **Next session first:** pull and measure cut v5 (`titan_review_v5_720p.mp4`, run started 07:35 UTC), write
+  `picture_gate_r5.md`; then the two lines above; then Act II's "system had limits" card (open on the sensor ring).
+- **Earlier owner leads (now Claude's call):** reconcile Brooks's "linearity with depth" with the
+  NTSB's "plotted against time"; say that Canada measured the bend differently (+98% vs +75%). Research leads
+  from the viewers (each needs a source first): the 2023 search noises, OceanGate's view on jurisdiction, who the
+  five were, ticket price. Structure note: Act III runs 12.5 min (the viewers suggested splitting it).
+- Open: the SRT (American spelling) is package-step work. `media_manifest.csv` done.
+
 ## Done this session: the picture, all five acts (Remotion, `films/titan/remotion/`)
 - **Acts I–V coded on the measured words** (`scenes/act1.tsx`, `act2`, `act3a`, `act3b`, `act3c`, `act45`):
   1,662 word cues on 3,530 words; **sync audit 0 of 244 sentences fail** (`review/sync_audit.md`); text floor 0;
