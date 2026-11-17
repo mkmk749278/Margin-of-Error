@@ -1,5 +1,20 @@
 # Titan: status (17 NOV 2026, third session)
 
+## Latest (17 NOV 2026, morning)
+- **Review cuts:** v2 and v3 on Drive `titan/renders/`; gates `review/picture_gate_r2.md`, `review/picture_gate_r3.md`.
+  Forensic review v2 checked point by point (`review/forensic_review_v2_720p_check.md`): every point fixed or closed.
+- **The four approved narration re-takes** (owner, 17 NOV 2026) recorded with the API (Marcus, Eleven v4, 3 takes
+  each, picked by Whisper and pitch against the neighbouring sentences), spliced at their pauses into
+  `assets/vo/takes/bNN.mp3` (originals in `assets/vo/takes_pre_retake4/`; Drive `titan/vo/titan_vo_bNN_r4.mp3`,
+  full track `titan_film_vo_v2.mp3`). Film now **23:14** (1,393.9 s). Timing, words, cues, choreography rebuilt;
+  sync audit 0 of 244; mix −14.0 LUFS / −1.4 dBTP (Drive `titan/mix/mix.wav`).
+- **Round 4:** the law, the two myths, the last findings and Brooks's conversion now each on their record page;
+  "What now?" no longer opens on an empty frame.
+- **Cut v4 rendering** on GitHub (`titan_review_v4_720p.mp4`, 12 runners): review it with `/review-cut`
+  (`picture_gate_r4.md`), then it goes to the owner with the viewer review.
+- Open: viewer-panel review session is waiting for the owner to allow the Drive token in that session; the SRT
+  (American spelling) and `media_manifest.csv` rows are package-step work.
+
 ## Done this session: the picture, all five acts (Remotion, `films/titan/remotion/`)
 - **Acts I–V coded on the measured words** (`scenes/act1.tsx`, `act2`, `act3a`, `act3b`, `act3c`, `act45`):
   1,662 word cues on 3,530 words; **sync audit 0 of 244 sentences fail** (`review/sync_audit.md`); text floor 0;
