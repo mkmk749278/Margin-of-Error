@@ -21,11 +21,12 @@ film is public again (their related video must point to it).
 East Palestine: The Detector Read 103°F Above the Air. The Crew Wasn't Told.
 ```
 ```
-Salem, Ohio, 03 FEB 2023, 8:13 p.m. A hot bearing detector read car 23's bearing at 103°F above the air. The crew line was 170. The alert went to a help desk, not the train. From the NTSB's report RIR-24-05.
+East Palestine train derailment: at 8:13 p.m. on 3 February 2023, a hot bearing detector in Salem, Ohio, read car 23's bearing on Norfolk Southern train 32N at 103°F above the air. The line that tells the crew was 170°F. The alert went to a help desk, not the train.
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
+Source: NTSB final report RIR-24-05.
 
-#EastPalestine #NTSB #NorfolkSouthern
+#EastPalestine #NorfolkSouthern #NTSB
 ```
 
 ## EP2 · `ep_s2_where_170.mp4` (31 s) · [Drive](https://drive.google.com/file/d/1hHTmaWehgjnFpgaZ4fuLzpr5uJ2hL_qS/view)
@@ -34,11 +35,12 @@ Full investigation: https://youtu.be/PzY0teB3Pdc
 East Palestine: Where the 170° Alarm Line Came From
 ```
 ```
-The AAR defines an overheated bearing as one at least 170°F above the air. The NTSB found that definition is based on what makes a repair billable, "not directly to safety". From NTSB report RIR-24-05 and the June 2023 hearing.
+East Palestine train derailment: where the 170°F hot bearing alarm line came from. The rail industry's AAR rules define an overheated bearing as one at least 170°F above the air. The NTSB found that definition is based on what makes a repair billable, "not directly to safety".
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
+Source: NTSB final report RIR-24-05 and the NTSB hearing, June 2023.
 
-#EastPalestine #NTSB #Railroad
+#EastPalestine #NorfolkSouthern #NTSB
 ```
 
 ## EP3 · `ep_s3_19_miles.mp4` (32 s) · [Drive](https://drive.google.com/file/d/1Oo8SPrW5qDAqh50wrz9-EogMNCvcXkRN/view)
@@ -47,11 +49,12 @@ Full investigation: https://youtu.be/PzY0teB3Pdc
 East Palestine: 19 Miles With Nothing Reading the Bearing
 ```
 ```
-Between the Salem and East Palestine detectors, about 19 miles of track and no detector. At milepost 49.81 the reading hit 253°F above the air, the top of the scale. Less than a minute later the axle separated. From NTSB report RIR-24-05 and the event recorder.
+East Palestine train derailment: about 19 miles of track between the Salem and East Palestine hot bearing detectors, with nothing reading the bearing. At milepost 49.81 the reading hit 253°F above the air, the top of the scale. Less than a minute later the axle separated.
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
+Source: NTSB final report RIR-24-05 and the locomotive event recorder.
 
-#EastPalestine #NTSB #TrainDerailment
+#EastPalestine #NorfolkSouthern #NTSB
 ```
 
 ## FMB1 · `fmb_s1_the_photo.mp4` (28 s) · [Drive](https://drive.google.com/file/d/1c8e2OftDLp5h9EakiA8-g2hwaCvqTBNb/view)
@@ -98,11 +101,12 @@ this to YouTube Shorts, make it public now"; and "follow this kind of approach f
 East Palestine Derailment: What the NTSB's Final Report Doesn't Confirm
 ```
 ```
-Remember the East Palestine derailment? Three explanations you may have heard: a skipped repair, a bearing with no grease, cost cutting. The NTSB's final report (RIR-24-05, adopted 25 JUN 2024) doesn't confirm any of them. What it does show is where the warning line came from.
+East Palestine train derailment: three explanations you may have heard (a skipped repair, a bearing with no grease, cost cutting) are not confirmed by the NTSB's final report, adopted 25 June 2024. What the report does show is where the warning line came from.
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
+Source: NTSB final report RIR-24-05.
 
-#EastPalestine #NTSB #TrainDerailment #Shorts
+#EastPalestine #NorfolkSouthern #NTSB
 ```
 
 ## FMB4 · `fmb_short_s1.mp4` (24 s) · replaces FMB1 (owner, 12 NOV 2026: re-made in the reel form, the old three deleted)
@@ -111,10 +115,12 @@ Full investigation: https://youtu.be/PzY0teB3Pdc
 Alaska 1282: The Door Plug Had Four Bolts. One Would Have Held It.
 ```
 ```
-Remember Alaska Airlines flight 1282? You may have heard the door plug was a design flaw. The design had four bolts, where one lower bolt would have held it. On this airplane, the NTSB found, all four were missing. From NTSB report AIR-25-04.
+Alaska Airlines Flight 1282 door plug blowout: the Boeing 737 MAX 9 door plug was designed with four bolts, and one lower bolt would have held it. On this airplane, the NTSB found, all four were missing.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-#Alaska1282 #Boeing #NTSB #Shorts
+Source: NTSB final report AIR-25-04.
+
+#Alaska1282 #Boeing #NTSB
 ```
 
 ## FMB5 · `fmb_short_s2.mp4` (24 s) · replaces FMB2
@@ -123,10 +129,12 @@ Full investigation: https://youtu.be/2IEMyDxu4yU
 Alaska 1282: The Photo Boeing Workers Texted 108 Days Before the Blowout
 ```
 ```
-19 SEP 2023, Boeing's Renton factory. Workers texted each other a photo of the closed door plug. In the three bolt positions in view: no bolts, no washers, no nuts, no pins. 108 days later the plug left the airplane over Portland. From NTSB report AIR-25-04.
+Alaska Airlines Flight 1282: 108 days before the door plug blowout, Boeing workers in the Renton factory texted each other a photo of the closed plug. In the three bolt positions in view: no bolts, no washers, no nuts, no pins.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-#Alaska1282 #Boeing #NTSB #Shorts
+Source: NTSB final report AIR-25-04.
+
+#Alaska1282 #Boeing #NTSB
 ```
 
 ## FMB6 · `fmb_short_s3.mp4` (27 s) · replaces FMB3
@@ -135,8 +143,10 @@ Full investigation: https://youtu.be/2IEMyDxu4yU
 Alaska 1282: How a Door Plug With No Bolts Lasted 154 Flights
 ```
 ```
-The failure didn't start on 05 JAN 2024. The NTSB found the door plug likely walked itself upward over 154 flights. From outside, the change was about half an inch, too small to catch on a walk-around. From NTSB report AIR-25-04.
+Alaska Airlines Flight 1282: the NTSB found the Boeing 737 MAX 9 door plug likely walked itself upward over 154 flights before it left the airplane on 5 January 2024. From outside, the change was about half an inch, too small to catch on a walk-around.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-#Alaska1282 #Boeing #NTSB #Shorts
+Source: NTSB final report AIR-25-04.
+
+#Alaska1282 #Boeing #NTSB
 ```

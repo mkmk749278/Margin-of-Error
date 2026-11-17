@@ -51,11 +51,11 @@ D: `… make_thumbnails.py --hole <fig01_interior_hole_row26.jpg> <out>`; E and 
 ## Description
 
 ```
-A Boeing 737-9 MAX (737 MAX 9) door plug flew 154 flights with none of the four bolts meant to hold it down. On 5 January 2024, climbing out of Portland, Oregon, it left Alaska Airlines Flight 1282.
+Alaska Airlines Flight 1282 door plug blowout, from the NTSB final report (AIR-25-04): a Boeing 737 MAX 9 door plug flew 154 flights with none of the four bolts meant to hold it down. On 5 January 2024, climbing out of Portland, Oregon, it left the airplane.
 
-A photograph taken in Boeing's Renton factory 108 days earlier showed no bolts in the three positions it could see. This film reads the final report of the US National Transportation Safety Board (NTSB), record by record: how a 63-pound plug is held, why no removal record was written, why the investigation identified no one who opened or closed the plug, what the US regulator (the FAA) missed, and how the plug walked itself up off its stops. Findings are the NTSB's; our own reading is said as ours.
+A photograph taken in Boeing's Renton factory 108 days earlier showed no bolts in the three positions it could see. This film reads the US National Transportation Safety Board (NTSB) report record by record: how a 63-pound plug is held, why no removal record was written, why the investigation identified no one who opened or closed the plug, what the US regulator (the FAA) missed, and how the plug walked itself up off its stops.
 
-The photograph at 5:56 is a Boeing photograph reproduced in the NTSB report (Figure 18, page 51, linked below). We show it redrawn and labelled RECONSTRUCTION; the original is in the report.
+Findings are the NTSB's; our own reading is said as ours. The photograph at 5:56 is a Boeing photograph reproduced in the NTSB report (Figure 18, page 51); we show it redrawn and labelled RECONSTRUCTION.
 
 0:00 Alaska Airlines 1282: the incident
 1:27 How a 737-9 door plug is held
@@ -69,7 +69,7 @@ The photograph at 5:56 is a Boeing photograph reproduced in the NTSB report (Fig
 10:56 The NTSB's probable cause
 12:18 The fix, and what is still open
 
-Sources
+SOURCES
 NTSB Aviation Investigation Report AIR-25-04, In-Flight Separation of Left Mid Exit Door Plug, Alaska Airlines Flight 1282 (adopted 24 June 2025): https://www.ntsb.gov/investigations/AccidentReports/Reports/AIR2504.pdf
 NTSB public docket DCA24MA063: Structures Group factual report and flight data recorder data: https://data.ntsb.gov/Docket/Document/docBLOB?ID=17305257&FileExtension=pdf&FileName=DCA24MA063%20Structures%20Factual-Rel.pdf
 FAA news release, 24 January 2024: https://www.faa.gov/newsroom/faa-halts-boeing-max-production-expansion-improve-quality-control-also-lays-out-extensive
@@ -79,6 +79,9 @@ Boeing Form 8-K, 1 July 2024 (agreement to acquire Spirit AeroSystems): https://
 Boeing Form 8-K, 8 December 2025 (acquisition completed): https://www.sec.gov/Archives/edgar/data/12927/000162828025055825/ba-20251208.htm
 
 Reconstructions and illustrations are labelled on screen; values not from a record are marked ILLUSTRATIVE.
+Corrections are pinned in the comments the day we learn of them.
+
+#Alaska1282 #Boeing #NTSB
 ```
 
 ## Tags (Studio "Tags" field)
