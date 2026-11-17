@@ -343,7 +343,7 @@ const Law: React.FC = () => {
 				<AbsoluteFill style={{opacity: law}}>
 					<Card x={240} y={170} w={1440} o={1} accent={colors.cyan} style={{padding: '30px 40px'}}>
 						<div style={{...T(34, {}), fontWeight: 700}}>
-							<Wd f={f} at={wf(188, 'coast')} lightAt={wf(188, 'reading')} tone={colors.cyan}>BY THE COAST GUARD'S READING OF THE LAW: </Wd>
+							<Wd f={f} at={wf(188, 'n')} lightAt={wf(188, 'reading')} tone={colors.cyan}>BY THE NTSB'S READING </Wd><Wd f={f} at={wf(188, 'law')} tone={colors.cyan}>OF THE LAW: </Wd>
 							<Wd f={f} at={wf(188, 'not')} tone={colors.red} bold>IT WAS NOT</Wd>
 						</div>
 						<div style={{marginTop: 26, ...T(32, {}), lineHeight: 1.5}}>

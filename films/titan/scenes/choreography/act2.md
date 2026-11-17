@@ -254,7 +254,7 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `In` | `F13954` (+0.02 s) | Tests | const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 10, 12, 14); |
+| `In` | `F13954` (+0.02 s) | Tests | const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 24, 12, 14); |
 | `early` | `F13964` (+0.18 s) | Tests | text: EARLY 2021 |
 | `twenty-one` | `F14002` (+0.82 s) | Tests | text: EARLY 2021 |
 | `hull` | `F14073` (+2.00 s) | Tests | text: THE HULL |
@@ -335,7 +335,7 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `never` | `F15923` (+0.43 s) | Tests | const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 10, 12, 14); |
+| `never` | `F15923` (+0.43 s) | Tests | const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 24, 12, 14); |
 | `tested` | `F15943` (+0.77 s) | Margin | const neverLine = interpolate(f, [wf(45, 'tested') - 10, wf(45, 'failure') + 20, |
 | `failure` | `F15981` (+1.40 s) | (scene list) | sound effect cue |
 

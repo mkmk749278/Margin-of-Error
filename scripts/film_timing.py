@@ -71,7 +71,7 @@ def main() -> None:
         edits.append({"at": at, "c": 0.0, "s": h["s"], "after": i, "why": h.get("why", "")})
     edits.sort(key=lambda e: e["at"])
     for x, y in zip(edits, edits[1:]):
-        if x["at"] + x["c"] > y["at"]:
+        if x["at"] + x["c"] > y["at"] + 0.0015:  # back-to-back clips share a cut point (rounded to ms)
             sys.exit(f"edits overlap at {y['at']} s")
 
     def shift(x: float) -> float:

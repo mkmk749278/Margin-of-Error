@@ -68,7 +68,7 @@ Sync audit: `review/sync_audit.md`.
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
 | `often` | `F1829` (+0.20 s) | (scene list) | sound effect cue |
-| `warning` | `F1871` (+0.90 s) | Monitor | lead · <span style={{opacity: lead(f, wf(5, 'warning'), 8)}}>“The warning </s |
+| `warning` | `F1871` (+0.90 s) | Monitor | text: The warning |
 | `worked` | `F1897` (+1.33 s) | Monitor | lead · <span style={{opacity: lead(f, wf(5, 'worked'), 8)}}>worked, </span> |
 | `ignored` | `F1959` (+2.37 s) | Monitor | lead · <span style={{opacity: lead(f, wf(5, 'ignored'), 8)}}>and was ignored. |
 
@@ -145,12 +145,12 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `At` | `F4007` (+0.02 s) | LastDive | <Mount x={150} y={110} w={1620} h={820} start={wf(13, 'at') - 16} end={ef(16) +  |
-| `ten` | `F4016` (+0.17 s) | LastDive | lead · <div style={{position: 'absolute', left: 60, top: 196, ...T(30, {color |
+| `At` | `F4007` (+0.02 s) | LastDive | lead · <div style={{position: 'absolute', left: 60, top: 196, ...T(30, {color |
+| `ten` | `F4016` (+0.17 s) | LastDive | flash · <span style={{textShadow: `0 0 ${(18 * Math.max(flash(f, wf(13, 'ten') |
 | `forty-seven` | `F4030` (+0.40 s) | (scene list) | sound effect cue |
-| `about` | `F4096` (+1.50 s) | LastDive | {frame: wf(13, 'about'), value: 2900}, |
-| `thousand` | `F4131` (+2.08 s) | LastDive | {frame: wf(13, 'thousand') + LAND, value: 3000}, |
-| `fifty` | `F4203` (+3.28 s) | LastDive | {frame: wf(13, 'fifty') + LAND, value: 3350}, |
+| `three` | `F4114` (+1.80 s) | LastDive | flash · <span style={{textShadow: `0 0 ${(18 * Math.max(flash(f, wf(13, 'ten') |
+| `hundred` | `F4177` (+2.85 s) | LastDive | flash · <span style={{textShadow: `0 0 ${(18 * Math.max(flash(f, wf(13, 'ten') |
+| `fifty` | `F4203` (+3.28 s) | LastDive | flash · <span style={{textShadow: `0 0 ${(18 * Math.max(flash(f, wf(13, 'ten') |
 | `Titan` | `F4272` (+4.43 s) | LastDive | lead · const k = lead(f, i === 0 ? wf(13, 'titan') : m.at, 10); |
 | `routine` | `F4322` (+5.27 s) | LastDive | lead · {isTitan ? <span style={{opacity: lead(f, wf(13, 'routine'), 8) * (1 - |
 | `message` | `F4349` (+5.72 s) | LastDive | lead · {isTitan ? <span style={{opacity: lead(f, wf(13, 'routine'), 8) * (1 - |

@@ -218,7 +218,7 @@ const Hindsight: React.FC = () => {
 						<Wd f={f} at={wf(140, 'dive')} lightAt={wf(140, 'itself')}>DIVE 80 ITSELF: </Wd>
 						<Wd f={f} at={wf(140, 'nothing')} lightAt={wf(140, 'until')} tone={colors.cyan}>NOTHING UNTIL </Wd>
 						<Wd f={f} at={wf(140, 'last')} lightAt={wf(140, 'minutes')}>ITS LAST MINUTES · </Wd>
-						<Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>NTSB PLOTS: THE BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} tone={colors.amber}>APPEARS IN 81</Wd>
+						<Wd f={f} at={wf(141, 'n')} lightAt={wf(141, 'plots')} tone={colors.amber}>NTSB PLOTS: </Wd><Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} lightAt={wf(141, 'eighty-one')} tone={colors.amber}>IN 81</Wd>
 						<br />
 						<Wd f={f} at={wf(142, 'data')} lightAt={wf(142, 'computer')} tone={colors.cyan}>THAT DATA: ON THE COMPANY'S COMPUTER </Wd>
 						<Wd f={f} at={wf(142, 'after')} lightAt={wf(142, 'dive')} tone={colors.cyan}>AFTER DIVE 81</Wd>

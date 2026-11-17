@@ -211,10 +211,10 @@ const FirstHull: React.FC = () => {
 					<div style={{position: 'absolute', left: 920, top: 120, width: 900}}>
 						<div style={{display: 'flex', gap: 16, alignItems: 'center'}}>
 							<Wd f={f} at={wf(73, 'twenty')} lightAt={wf(73, 'nineteen')} tone={colors.amber} bold style={T(40, {})}>2019</Wd>
-							<Wd f={f} at={wf(73, 'first')} lightAt={wf(73, 'hull')} style={T(34, {})}>THE FIRST HULL</Wd>
-							<span style={{opacity: lead(f, wf(73, 'cracked'), 8), transform: `scale(${bump(f, fps, wf(73, 'cracked') + LAND).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text="CRACKED" tone={colors.red} size={34} />
+							<span style={{opacity: lead(f, wf(73, 'crack'), 8), transform: `scale(${bump(f, fps, wf(73, 'found') + LAND).toFixed(4)})`, display: 'inline-block'}}>
+								<Chip text="CRACK FOUND" tone={colors.red} size={34} />
 							</span>
+							<Wd f={f} at={wf(73, 'first')} lightAt={wf(73, 'hull')} style={T(34, {})}>IN THE FIRST HULL</Wd>
 						</div>
 						<Card x={0} y={90} w={900} o={lead(f, wf(74, "company's"), 10)} accent={colors.cyan} style={{padding: '20px 26px'}}>
 							<div style={T(26, {})}><Wd f={f} at={wf(74, 'first')} lightAt={wf(74, 'engineering')} tone={colors.cyan}>THE FIRST DIRECTOR OF ENGINEERING · </Wd><Wd f={f} at={wf(74, 'testified')} tone={colors.cyan}>TESTIMONY</Wd></div>
@@ -681,7 +681,7 @@ export const act3a: SceneDef[] = [
 		C: FirstHull,
 		cues: [
 			{frame: wf(72, 'second'), sfx: 'relay_click', gainDb: -22},
-			{frame: wf(73, 'cracked'), sfx: 'metal_snap_sub', gainDb: -26},
+			{frame: wf(73, 'crack'), sfx: 'metal_snap_sub', gainDb: -26},
 			{frame: wf(74, 'refused'), sfx: 'stamp', gainDb: -26},
 		],
 	},

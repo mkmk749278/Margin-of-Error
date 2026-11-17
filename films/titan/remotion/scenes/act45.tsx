@@ -402,7 +402,7 @@ const Verdict: React.FC = () => {
 					<Wd f={f} at={wf(225, 'canadian')} lightAt={wf(225, 'ships')} tone={colors.amber}>WITH CANADIAN SHIPS</Wd>
 				</div>
 			</Card>
-			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'doj', at: wf(229, 'investigation')}, {key: 'willnot', at: wf(229, 'occur')}]} label="EXHIBIT" title="6.5 · THE BOARD'S REFERRAL SECTION" pushTo={wf(228, 'had')} />
+			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'doj', at: wf(229, 'crime')}, {key: 'willnot', at: wf(229, 'will')}]} label="EXHIBIT" title="6.5 · THE BOARD'S REFERRAL SECTION" pushTo={wf(228, 'had')} />
 			<Note o={vis(f, sf(226), ef(230) + 10)}>
 				{f < sf(228) - 4 ? (
 					<>
@@ -420,8 +420,9 @@ const Verdict: React.FC = () => {
 					</>
 				) : (
 					<>
-						<Wd f={f} at={wf(229, 'investigation')} lightAt={wf(229, 'noted')}>THAT INVESTIGATION, THE BOARD NOTED, </Wd>
-						<Wd f={f} at={wf(229, 'will')} lightAt={wf(229, 'occur')} tone={colors.ink} bold>WILL NOT OCCUR · </Wd>
+						<Wd f={f} at={wf(229, 'whether')} lightAt={wf(229, 'committed')}>WHETHER ANY CRIME WAS COMMITTED, </Wd><Wd f={f} at={wf(229, 'board')} lightAt={wf(229, 'wrote')} tone={colors.cyan}>THE BOARD WROTE, </Wd>
+						<Wd f={f} at={wf(229, 'justice')} lightAt={wf(229, 'decide')} tone={colors.amber}>FOR THE DEPARTMENT OF JUSTICE TO DECIDE · </Wd>
+						<Wd f={f} at={wf(229, 'will')} lightAt={wf(229, 'happen')} tone={colors.ink} bold>THAT WILL NOT HAPPEN, </Wd><Wd f={f} at={wf(229, 'because')}>BECAUSE </Wd>
 						<Wd f={f} at={wf(230, 'rush')} lightAt={wf(230, 'died')}>MR. RUSH DIED</Wd>
 					</>
 				)}

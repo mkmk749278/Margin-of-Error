@@ -627,6 +627,12 @@ take is easier to redo than a long one).
 ### 7.7 Every take is checked
 After alignment, run `scripts/vo_review.py` (pace, pauses, drift, loudness) and listen to every flag. *Why:* spliced
 re-takes once shipped doubled phrases, and a trim cut the last sentence off blocks.
+A re-take changes the length of everything after it, so anything pinned to an absolute time moves wrong: after a
+splice, check `sound/mix.json` (music slots and silences are film seconds; remap them through old → new sentence
+starts) and confirm the voice stem's true peak in `mix_report.md` is back at its ceiling. `mix_film.py` now takes each
+hearing clip's frame from `vo/timing.json`. *Why:* four re-takes (Titan, 17 NOV 2026) added 8.7 s; the clips' fixed
+frames laid a witness over our own narration (voice stem peak 0.0 dBTP instead of −2.8), and the music cues sat 1–9 s
+off their turns. `film_timing.py` also allowed 1.5 ms of rounding between back-to-back clips (it had stopped on it).
 
 ### 7.8 Checks before the owner hears a narration
 1. Fact gate: every factual line maps to a confirmed or attributed `claims.csv` row.
