@@ -61,7 +61,7 @@ const Year2023: React.FC = () => {
 						<Wd f={f} at={wf(201, 'some')} lightAt={wf(201, 'point')} tone={colors.amber}>AT SOME POINT </Wd><Wd f={f} at={wf(201, 'after')} lightAt={wf(201, 'eighty-two')} tone={colors.amber}>AFTER DIVE 82: </Wd>
 						<Wd f={f} at={wf(201, 'hull')} tone={colors.red} bold>THE HULL, </Wd><Wd f={f} at={wf(201, 'damaged')} lightAt={wf(201, 'again')} tone={colors.red} bold>DAMAGED AGAIN</Wd>
 						<br />
-						<Wd f={f} at={wf(202, 'n')} lightAt={wf(202, 'calls')} tone={colors.cyan}>N-T-S-B: </Wd>
+						<Wd f={f} at={wf(202, 'n')} lightAt={wf(202, 'calls')} tone={colors.cyan}>NTSB: </Wd>
 						<Wd f={f} at={wf(202, 'unknown')} lightAt={wf(202, 'origin')} tone={colors.ink} bold>"OF UNKNOWN ORIGIN"</Wd>
 						<br />
 						<Wd f={f} at={wf(203, 'coast')} lightAt={wf(203, 'board')} tone={colors.cyan}>COAST GUARD BOARD: </Wd>
@@ -141,7 +141,7 @@ const LastDive: React.FC = () => {
 			) : null}
 			<RecordPage set="mir" start={sf(209) - 14} end={ef(209) + 20} hl={[{key: 'buckling', at: wf(209, 'buckling')}]} label="ANALYSIS" pushTo={wf(209, 'found')} />
 			<Note o={vis(f, sf(209), ef(209) + 10)}>
-				<Wd f={f} at={wf(209, 'n')} lightAt={wf(209, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+				<Wd f={f} at={wf(209, 'n')} lightAt={wf(209, 'found')} tone={colors.cyan}>NTSB: </Wd>
 				<Wd f={f} at={wf(209, 'existing')} lightAt={wf(209, 'delaminations')} tone={colors.amber}>THE EXISTING DELAMINATIONS </Wd>
 				<Wd f={f} at={wf(209, 'later')} lightAt={wf(209, 'damage')} tone={colors.amber}>AND THE LATER DAMAGE </Wd>
 				<Wd f={f} at={wf(209, 'likely')} lightAt={wf(209, 'led')}>LIKELY LED TO </Wd>
@@ -149,7 +149,7 @@ const LastDive: React.FC = () => {
 			</Note>
 			{buck > 0 ? (
 				<AbsoluteFill style={{opacity: buck}}>
-					<Mount x={140} y={130} w={1640} h={800} start={sf(210) - 10} end={ef(211) + 16} source="WHY A DELAMINATION WEAKENS A WALL · AS THE NTSB EXPLAINS IT, MIR-25-36" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
+					<Mount x={140} y={130} w={1640} h={800} start={sf(210) - 10} end={ef(211) + 16} source="WHY A DELAMINATION WEAKENS A WALL · NTSB MIR-25-36" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
 					<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 						{/* left: one thick layer; right: the same layer split in two, under the same end load */}
 						<rect x={300} y={420} width={520} height={80} fill={colors.cyan} opacity={0.3} stroke={colors.cyan} strokeWidth={2} />
@@ -258,7 +258,7 @@ const Record: React.FC = () => {
 	const gap = lead(f, wf(216, 'five'), 14);
 	return (
 		<>
-			<Mount x={120} y={100} w={1680} h={860} start={sf(213) - 12} end={hold(216).from + hold(216).frames + 20} source="DIVES 75–88: NTSB MIR-25-36, TABLES 5–6 · DECISIONS: USCG MBI REPORT, CG 112, NTSB" labels={['DEPTHS TO SCALE']} lean={3} />
+			<Mount x={120} y={100} w={1680} h={860} start={sf(213) - 12} end={hold(216).from + hold(216).frames + 20} source="DIVES 75–88: NTSB MIR-25-36, TABLES 5–6 · DECISIONS: USCG MBI, CG 112, NTSB" labels={['DEPTHS TO SCALE']} lean={3} />
 			<div style={{position: 'absolute', left: 200, top: 130, ...T(32, {}), fontWeight: 700}}>
 				<Wd f={f} at={wf(213, 'dive')} lightAt={wf(213, 'record')} tone={colors.ink} bold>THE DIVE RECORD · </Wd>
 				<Wd f={f} at={wf(213, 'seventy-five')} tone={colors.cyan} bold>75 </Wd>
@@ -506,7 +506,7 @@ const Verdict: React.FC = () => {
 						What now?
 					</div>
 					<div style={{position: 'absolute', left: 220, top: 240, ...T(30, {})}}>
-						<Wd f={f} at={wf(239, 'n')} lightAt={wf(239, 'made')} tone={colors.cyan}>THE N-T-S-B: </Wd>
+						<Wd f={f} at={wf(239, 'n')} lightAt={wf(239, 'made')} tone={colors.cyan}>THE NTSB: </Wd>
 						<Wd f={f} at={wf(239, 'four')} lightAt={wf(239, 'recommendations')} tone={colors.cyan} bold>4 RECOMMENDATIONS </Wd>
 						<Wd f={f} at={wf(239, 'u')} lightAt={wf(239, 'guard')}>TO THE U.S. COAST GUARD</Wd>
 					</div>

@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 1675 word cues on 3555 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+245 sentences · 1694 word cues on 3589 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -116,135 +116,136 @@
 | 113 | 10:05.1 | 12/31 | 1.4 s ok |  | One acoustic sensor, he testified, did show activity on the dives that |
 | 114 | 10:15.3 | 2/7 | 0.9 s ok |  | He raised it with the chief executive. |
 | 115 | 10:17.5 | 9/30 | 1.5 s ok |  | It stayed under the threshold they had set, he said, or maybe just bar |
-| 116 | 10:26.2 | 6/20 | 1.3 s ok |  | The N - T - S - B found the sensors never produced the kind of signal  |
+| 116 | 10:26.2 | 6/20 | 1.2 s ok |  | The N - T - S - B found the sensors never produced the kind of signal  |
 | 117 | 10:31.8 | 4/7 | 0.6 s ok |  | So, was the damage in the data? |
-| 120 | 10:55.8 | 4/12 | 1.4 s ok |  | Every dive has its own shape, its own pace, its own stops. |
-| 121 | 11:00.1 | 5/10 | 1.2 s ok |  | Laid side by side, the dives are hard to compare. |
-| 122 | 11:03.6 | 11/22 | 1.3 s ok |  | The N - T - S - B said a more appropriate way was to plot strain again |
-| 123 | 11:11.1 | 4/8 | 0.9 s ok |  | So here is the same data, against depth. |
-| 124 | 11:15.5 | 3/5 | 1.2 s ok |  | Dive seventy-five, a straight line. |
-| 125 | 11:18.1 | 4/13 | 1.4 s ok |  | Dive eighty, the same straight line, until the event at its very end. |
-| 126 | 11:22.7 | 1/2 | 0.6 s ok |  | Dive eighty-one. |
-| 127 | 11:24.1 | 1/2 | 0.7 s ok |  | Dive eighty-two. |
-| 128 | 11:25.4 | 1/2 | 0.7 s ok |  | Dive eighty-three. |
-| 129 | 11:26.8 | 7/12 | 1.0 s ok |  | In the first five hundred metres, every one of them bends away. |
-| 130 | 11:30.9 | 14/35 | 1.1 s ok |  | To put a number on it, the N - T - S - B fitted a line to the shallowe |
-| 131 | 11:41.0 | 9/12 | 1.2 s ok |  | Before the event: five point zero zero, and four point seven four. |
-| 132 | 11:45.6 | 13/14 | 0.8 s ok |  | After it: eight point seven six, eight point zero nine, eight point se |
-| 133 | 11:51.2 | 4/6 | 1.0 s ok |  | Same gauge, same hull, same sea. |
-| 134 | 11:55.1 | 4/9 | 0.9 s ok |  | A response that had changed by about three quarters. |
-| 135 | 11:58.4 | 2/8 | 1.1 s ok |  | Could OceanGate have seen this at the time? |
-| 136 | 12:01.2 | 15/31 | 1.3 s ok |  | The Coast Guard board found that OceanGate had all the data it needed  |
-| 137 | 12:11.2 | 7/17 | 1.2 s ok |  | The timing that follows is our own reading of the record, not a findin |
-| 138 | 12:16.3 | 4/9 | 0.8 s ok |  | Brooks was right that there was no new jump. |
-| 139 | 12:18.9 | 8/16 | 1.0 s ok |  | What changed was the slope, and against time a change in slope is hard |
-| 140 | 12:24.4 | 7/9 | 1.0 s ok |  | Dive eighty itself shows nothing until its last minutes. |
-| 141 | 12:28.0 | 6/14 | 1.1 s ok |  | In the N - T - S - B's plots, the bend first appears in dive eighty-on |
-| 142 | 12:33.4 | 4/10 | 1.1 s ok |  | That data was on the company's computer after that dive. |
-| 143 | 12:36.8 | 11/19 | 1.0 s ok |  | Plotted against depth, it would have shown the bend before dive eighty |
-| 144 | 12:44.1 | 3/7 | 0.5 s ok |  | And it was not a faulty gauge. |
-| 145 | 12:46.4 | 9/19 | 0.9 s ok |  | Deeper down, the curves still match, which the N - T - S - B said show |
-| 146 | 12:53.2 | 2/3 | 0.4 s ok |  | The hull had. |
-| 147 | 12:54.9 | 5/10 | 1.4 s ok |  | Canada's investigators later ran the same test on their own. |
-| 148 | 12:58.8 | 8/20 | 1.2 s ok |  | They found the slope near the surface on the nineteenth of July nearly |
-| 149 | 13:05.1 | 12/23 | 1.1 s ok |  | They also found a smaller bend a year earlier, in August twenty twenty |
-| 150 | 13:13.3 | 6/10 | 0.7 s ok |  | Why would a damaged hull bend only near the surface? |
-| 151 | 13:17.2 | 9/23 | 1.3 s ok |  | The N - T - S - B found long voids in the bond between the first and s |
-| 152 | 13:24.2 | 9/19 | 1.1 s ok |  | Where a layer separates at the end of the cylinder, it can move on its |
-| 153 | 13:29.6 | 6/11 | 1.1 s ok |  | Deeper down, it found, the layers respond like the intact hull. |
-| 154 | 13:34.4 | 4/7 | 0.8 s ok |  | Titan made three more dives that July. |
-| 155 | 13:37.2 | 11/28 | 1.3 s ok |  | Two of them, eighty-one and eighty-two, still reached the Titanic, whi |
-| 156 | 13:46.3 | 2/9 | 1.3 s ok |  | A delamination is not a crack through the wall. |
-| 157 | 13:49.6 | 2/10 | 1.2 s ok |  | But the wall was no longer what it had been. |
-| 158 | 13:52.6 | 14/34 | 1.4 s ok |  | The N - T - S - B's finding: because its analysis was flawed, OceanGat |
-| 159 | 14:06.8 | 3/8 | 0.9 s ok |  | Then it had to spend the winter somewhere. |
-| 160 | 14:09.3 | 10/21 | 0.7 s ok |  | On the twenty-sixth of July, Titan was set down in a parking lot at a  |
-| 161 | 14:16.0 | 1/1 | 0.6 s ok |  | Uncovered. |
-| 162 | 14:17.1 | 13/21 | 0.8 s ok |  | Two days later, the base passed on a quote for a protective cover: one |
-| 163 | 14:24.5 | 6/13 | 0.9 s ok |  | The base told the Coast Guard board that OceanGate never answered that |
-| 164 | 14:28.9 | 5/12 | 1.3 s ok |  | In September, the base wrote again: Titan still had not been covered. |
-| 165 | 14:33.6 | 3/8 | 1.3 s ok |  | OceanGate's logistics director said it would be discussed. |
-| 166 | 14:37.2 | 4/6 | 0.6 s ok |  | The board found no action followed. |
-| 167 | 14:39.6 | 19/32 | 1.2 s ok |  | It stayed outside until the sixth of February, through temperatures fr |
-| 168 | 14:52.9 | 12/24 | 1.2 s ok |  | Brooks testified that what they really wanted was to bring Titan back  |
-| 170 | 15:09.4 | 4/5 | 0.6 s ok |  | Was money behind these decisions? |
-| 171 | 15:11.6 | 11/20 | 1.4 s ok |  | The Coast Guard board says it was: in its words, a troubling prioritiz |
-| 172 | 15:19.6 | 4/10 | 0.9 s ok |  | The N - T - S - B's findings do not address money. |
-| 173 | 15:23.0 | 13/23 | 1.3 s ok |  | From June twenty twenty-two to May twenty twenty-three, the board foun |
-| 174 | 15:32.9 | 6/18 | 1.2 s ok |  | The board found that employees were asked to temporarily forgo their s |
-| 175 | 15:39.1 | 6/14 | 1.1 s ok |  | The ship that had carried Titan was unavailable for twenty twenty-thre |
-| 176 | 15:44.3 | 7/15 | 0.7 s ok |  | Titan would be towed to the site on its launch platform, behind a smal |
-| 177 | 15:48.9 | 4/6 | 1.0 s ok |  | Early in twenty twenty-three, Brooks left. |
-| 178 | 15:52.1 | 14/30 | 1.2 s ok |  | Under oath, he said his main reason was that plan to tow Titan, which  |
-| 181 | 16:10.6 | 6/18 | 1.3 s ok |  | He said he suggested they not go, and was told that wasn't possible: t |
-| 182 | 16:16.6 | 13/26 | 1.3 s ok |  | The board found that the chief executive then left the director of eng |
-| 183 | 16:26.7 | 13/28 | 1.4 s ok |  | And the board drew the line back to twenty nineteen, when, by his own  |
-| 184 | 16:36.0 | 6/16 | 1.3 s ok |  | Leaving the post empty, it wrote, removed the possibility of a replace |
-| 185 | 16:42.6 | 7/13 | 0.9 s ok |  | That spring, at sea and in port, the platform tipped more than once. |
-| 186 | 16:47.5 | 8/15 | 1.0 s ok |  | Once, in May, its bow went partly under water, and Titan's tail cone w |
-| 187 | 16:53.3 | 4/10 | 1.5 s ok |  | How was a hull like this allowed to carry passengers? |
-| 188 | 16:56.8 | 4/13 | 1.0 s ok |  | By the N - T - S - B's reading of the law, it was not. |
-| 189 | 17:01.2 | 16/31 | 1.2 s ok |  | Under U - S law, the N - T - S - B notes, a submersible carrying even  |
-| 190 | 17:11.4 | 5/9 | 1.1 s ok |  | OceanGate never registered Titan, and never arranged an inspection. |
-| 191 | 17:15.9 | 13/24 | 1.2 s ok |  | The Coast Guard board found that OceanGate described its paying passen |
-| 192 | 17:26.0 | 4/8 | 0.9 s ok |  | The regulator's own guidance gets the same scrutiny. |
-| 193 | 17:29.2 | 8/14 | 1.2 s ok |  | The Coast Guard's voluntary guidance for passenger submersibles was pu |
-| 194 | 17:35.2 | 6/17 | 1.2 s ok |  | That December, a new law changed the definition, to cover any submersi |
-| 195 | 17:41.9 | 7/22 | 1.4 s ok |  | As of its report in October twenty twenty-five, the N - T - S - B foun |
-| 196 | 17:49.2 | 9/18 | 1.1 s ok |  | The Coast Guard, it found, had no specific inspection standards for ho |
-| 197 | 17:55.5 | 7/15 | 0.9 s ok |  | That guidance also recommended that a submersible dive no deeper than  |
-| 198 | 18:01.6 | 10/22 | 1.1 s ok |  | The N - T - S - B found that Titan regularly dived to the Titanic with |
-| 199 | 18:08.9 | 13/26 | 1.4 s ok |  | The N - T - S - B found that voluntary guidance and the rules for smal |
-| 200 | 18:22.7 | 9/13 | 1.2 s ok |  | In twenty twenty-three, Titan's first four dives went no deeper than t |
-| 201 | 18:28.3 | 7/11 | 1.1 s ok |  | At some point after dive eighty-two, the hull was damaged again. |
-| 202 | 18:32.7 | 4/11 | 1.3 s ok |  | The N - T - S - B calls that damage of unknown origin. |
-| 203 | 18:36.5 | 10/25 | 1.0 s ok |  | The Coast Guard board says the damage from dive eighty was likely made |
-| 204 | 18:44.3 | 2/5 | 1.0 s ok |  | Did every dive weaken it? |
-| 205 | 18:46.3 | 2/4 | 0.9 s ok |  | Here the investigators differ. |
-| 206 | 18:48.5 | 7/15 | 1.3 s ok |  | The N - T - S - B dates two events: dive eighty, and something after d |
-| 207 | 18:54.8 | 11/16 | 1.3 s ok |  | Canada's Transportation Safety Board found the cylinder likely failed  |
-| 208 | 19:02.8 | 8/14 | 0.8 s ok |  | On the eighteenth of June, Titan made its first deep dive in eleven mo |
-| 209 | 19:07.5 | 11/21 | 1.3 s ok |  | The N - T - S - B found that the existing delaminations and the later  |
-| 210 | 19:14.7 | 10/16 | 1.0 s ok |  | A delamination splits one thick layer into two thinner ones, and thinn |
-| 211 | 19:21.4 | 8/14 | 0.7 s ok |  | In a local buckle, one part of the wall changes shape, and gives way. |
-| 212 | 19:26.0 | 10/25 | 1.5 s ok |  | The damage from dive eighty, it found, had reached the forward end of  |
-| 213 | 19:34.0 | 10/19 | 1.2 s ok |  | Here is the dive record, from dive seventy-five to eighty-eight, with  |
-| 214 | 19:41.3 | 6/12 | 1.5 s ok |  | Six of these dives reached three thousand eight hundred and forty metr |
-| 215 | 19:45.7 | 2/4 | 1.1 s ok |  | Thirteen did, in all. |
-| 216 | 19:47.4 | 5/10 | 1.1 s ok |  | Then one line that stops, about five hundred metres short. |
-| 217 | 19:53.9 | 4/6 | 0.9 s ok |  | Two things often said about Titan. |
-| 218 | 19:56.5 | 11/22 | 1.3 s ok |  | Its controller: on dive eighty-one, the thruster controls were found t |
-| 219 | 20:05.1 | 6/11 | 0.9 s ok |  | None of the three reports names the controller as a cause. |
-| 220 | 20:09.1 | 10/22 | 1.4 s ok |  | Its window: the Coast Guard board criticised it as untested and uncert |
-| 221 | 20:18.0 | 5/9 | 1.1 s ok |  | All three reports place the failure in the hull. |
-| 222 | 20:22.6 | 10/26 | 1.5 s ok |  | The N - T - S - B's probable cause was OceanGate's inadequate engineer |
-| 223 | 20:32.8 | 12/26 | 1.1 s ok |  | Contributing were the guidance and the rules that did not make OceanGa |
-| 224 | 20:42.2 | 5/10 | 1.0 s ok |  | The Coast Guard's Marine Board called it a preventable tragedy. |
-| 225 | 20:46.2 | 17/22 | 0.9 s ok |  | Canada's Transportation Safety Board found that Titan received no over |
-| 226 | 20:55.3 | 6/9 | 0.9 s ok |  | The Coast Guard board also wrote this, about Mr. |
-| 227 | 20:58.8 | 3/11 | 1.3 s ok |  | Rush, who was both the company's chief executive and its pilot. |
-| 228 | 21:02.5 | 16/32 | 1.2 s ok |  | Had he survived the incident, the board would have recommended that th |
-| 229 | 21:13.6 | 10/22 | 1.4 s ok |  | Whether any crime was committed, the board wrote, was for the Justice  |
-| 230 | 21:21.1 | 2/2 | 0.7 s ok |  | Rush died. |
-| 231 | 21:23.5 | 5/9 | 0.7 s ok |  | One more finding concerns the eighteenth of June itself. |
-| 232 | 21:27.0 | 18/29 | 1.2 s ok |  | The board found that the company's own communications plan delayed the |
-| 233 | 21:37.3 | 8/19 | 1.3 s ok |  | It also found that the implosion caused the immediate loss of all live |
-| 234 | 21:44.2 | 6/15 | 0.8 s ok |  | The N - T - S - B found that search and rescue could not have saved th |
-| 235 | 21:48.3 | 6/12 | 1.4 s ok |  | With assets ready, it found, Titan would likely have been found sooner |
-| 236 | 21:53.2 | 5/8 | 0.9 s ok |  | OceanGate suspended its operations in July twenty twenty-three. |
-| 237 | 21:57.5 | 13/28 | 1.3 s ok |  | When the Coast Guard report came out, a company spokesperson said Ocea |
-| 238 | 22:08.3 | 1/2 | 0.6 s ok |  | What now? |
-| 239 | 22:09.4 | 6/14 | 1.3 s ok |  | The N - T - S - B made four recommendations to the U - S Coast Guard. |
-| 240 | 22:14.2 | 7/13 | 1.3 s ok |  | One: propose that the International Maritime Organization make its gui |
-| 241 | 22:21.0 | 5/7 | 1.0 s ok |  | Two: study pressure vessels that carry people. |
-| 242 | 22:24.6 | 4/5 | 0.9 s ok |  | Three: write rules for them. |
-| 243 | 22:27.0 | 7/16 | 1.3 s ok |  | Four: bring its nineteen ninety-three guidance up to date with the law |
-| 244 | 22:32.8 | 5/14 | 1.1 s ok |  | The Coast Guard agreed to update its guidance, and partly agreed with  |
-| 245 | 22:37.9 | 7/10 | 1.2 s ok |  | As of October twenty twenty-six, all four recommendations remain open. |
-| 246 | 22:43.5 | 8/16 | 1.4 s ok |  | On the fifteenth of July, twenty twenty-two, Titan's hull changed, and |
-| 247 | 22:50.5 | 6/13 | 1.0 s ok |  | Eleven months later, on its first deep dive since, five people were ab |
-| 248 | 22:56.9 | 1/2 | 0.8 s ok |  | Stockton Rush. |
-| 249 | 22:58.8 | 1/2 | 1.3 s ok |  | Paul-Henri Nargeolet. |
-| 250 | 23:01.1 | 1/2 | 1.0 s ok |  | Shahzada Dawood. |
-| 251 | 23:03.0 | 1/2 | 0.9 s ok |  | Suleman Dawood. |
-| 252 | 23:04.9 | 2/2 | 0.4 s ok |  | Hamish Harding. |
+| 119 | 10:55.9 | 5/17 | 1.5 s ok |  | The depth was there, on the same chart as the strain, but both ran aga |
+| 120 | 11:01.6 | 4/12 | 1.4 s ok |  | Every dive has its own shape, its own pace, its own stops. |
+| 121 | 11:05.8 | 5/10 | 1.2 s ok |  | Laid side by side, the dives are hard to compare. |
+| 122 | 11:09.3 | 11/22 | 1.3 s ok |  | The N - T - S - B said a more appropriate way was to plot strain again |
+| 123 | 11:16.8 | 4/8 | 0.9 s ok |  | So here is the same data, against depth. |
+| 124 | 11:21.2 | 3/5 | 1.2 s ok |  | Dive seventy-five, a straight line. |
+| 125 | 11:23.9 | 4/13 | 1.4 s ok |  | Dive eighty, the same straight line, until the event at its very end. |
+| 126 | 11:28.5 | 1/2 | 0.6 s ok |  | Dive eighty-one. |
+| 127 | 11:29.8 | 1/2 | 0.7 s ok |  | Dive eighty-two. |
+| 128 | 11:31.1 | 1/2 | 0.7 s ok |  | Dive eighty-three. |
+| 129 | 11:32.6 | 7/12 | 1.0 s ok |  | In the first five hundred metres, every one of them bends away. |
+| 130 | 11:36.6 | 14/35 | 1.1 s ok |  | To put a number on it, the N - T - S - B fitted a line to the shallowe |
+| 131 | 11:46.8 | 9/12 | 1.2 s ok |  | Before the event: five point zero zero, and four point seven four. |
+| 132 | 11:51.4 | 13/14 | 0.8 s ok |  | After it: eight point seven six, eight point zero nine, eight point se |
+| 133 | 11:57.0 | 4/6 | 1.0 s ok |  | Same gauge, same hull, same sea. |
+| 134 | 12:00.9 | 4/9 | 0.9 s ok |  | A response that had changed by about three quarters. |
+| 135 | 12:04.1 | 2/8 | 1.0 s ok |  | Could OceanGate have seen this at the time? |
+| 136 | 12:06.9 | 15/31 | 1.3 s ok |  | The Coast Guard board found that OceanGate had all the data it needed  |
+| 137 | 12:17.0 | 7/17 | 1.2 s ok |  | The timing that follows is our own reading of the record, not a findin |
+| 138 | 12:22.1 | 4/9 | 0.8 s ok |  | Brooks was right that there was no new jump. |
+| 139 | 12:24.7 | 8/16 | 1.0 s ok |  | What changed was the slope, and against time a change in slope is hard |
+| 140 | 12:30.2 | 7/9 | 1.0 s ok |  | Dive eighty itself shows nothing until its last minutes. |
+| 141 | 12:33.8 | 6/14 | 1.1 s ok |  | In the N - T - S - B's plots, the bend first appears in dive eighty-on |
+| 142 | 12:39.1 | 4/10 | 1.1 s ok |  | That data was on the company's computer after that dive. |
+| 143 | 12:42.5 | 11/19 | 1.0 s ok |  | Plotted against depth, it would have shown the bend before dive eighty |
+| 144 | 12:49.8 | 3/7 | 0.5 s ok |  | And it was not a faulty gauge. |
+| 145 | 12:52.2 | 9/19 | 0.9 s ok |  | Deeper down, the curves still match, which the N - T - S - B said show |
+| 146 | 12:59.0 | 2/3 | 0.4 s ok |  | The hull had. |
+| 147 | 13:00.6 | 13/16 | 1.0 s ok |  | Canada's investigators later plotted the strain against depth their ow |
+| 148 | 13:08.3 | 14/31 | 1.2 s ok |  | On the nineteenth of July, for one gauge at the top of the hull, the s |
+| 149 | 13:18.0 | 12/23 | 1.1 s ok |  | They also found a smaller bend a year earlier, in August twenty twenty |
+| 150 | 13:26.3 | 6/10 | 0.7 s ok |  | Why would a damaged hull bend only near the surface? |
+| 151 | 13:30.2 | 9/23 | 1.3 s ok |  | The N - T - S - B found long voids in the bond between the first and s |
+| 152 | 13:37.2 | 9/19 | 1.1 s ok |  | Where a layer separates at the end of the cylinder, it can move on its |
+| 153 | 13:42.6 | 6/11 | 1.1 s ok |  | Deeper down, it found, the layers respond like the intact hull. |
+| 154 | 13:47.3 | 4/7 | 0.8 s ok |  | Titan made three more dives that July. |
+| 155 | 13:50.1 | 11/28 | 1.3 s ok |  | Two of them, eighty-one and eighty-two, still reached the Titanic, whi |
+| 156 | 13:59.3 | 2/9 | 1.3 s ok |  | A delamination is not a crack through the wall. |
+| 157 | 14:02.6 | 2/10 | 1.2 s ok |  | But the wall was no longer what it had been. |
+| 158 | 14:05.6 | 14/34 | 1.4 s ok |  | The N - T - S - B's finding: because its analysis was flawed, OceanGat |
+| 159 | 14:19.7 | 3/8 | 0.9 s ok |  | Then it had to spend the winter somewhere. |
+| 160 | 14:22.3 | 10/21 | 0.7 s ok |  | On the twenty-sixth of July, Titan was set down in a parking lot at a  |
+| 161 | 14:29.0 | 1/1 | 0.6 s ok |  | Uncovered. |
+| 162 | 14:30.1 | 13/21 | 0.8 s ok |  | Two days later, the base passed on a quote for a protective cover: one |
+| 163 | 14:37.5 | 6/13 | 0.9 s ok |  | The base told the Coast Guard board that OceanGate never answered that |
+| 164 | 14:41.8 | 5/12 | 1.3 s ok |  | In September, the base wrote again: Titan still had not been covered. |
+| 165 | 14:46.5 | 3/8 | 1.3 s ok |  | OceanGate's logistics director said it would be discussed. |
+| 166 | 14:50.2 | 4/6 | 0.6 s ok |  | The board found no action followed. |
+| 167 | 14:52.6 | 19/32 | 1.2 s ok |  | It stayed outside until the sixth of February, through temperatures fr |
+| 168 | 15:05.9 | 12/24 | 1.2 s ok |  | Brooks testified that what they really wanted was to bring Titan back  |
+| 170 | 15:22.3 | 4/5 | 0.6 s ok |  | Was money behind these decisions? |
+| 171 | 15:24.6 | 11/20 | 1.4 s ok |  | The Coast Guard board says it was: in its words, a troubling prioritiz |
+| 172 | 15:32.6 | 4/10 | 0.9 s ok |  | The N - T - S - B's findings do not address money. |
+| 173 | 15:35.9 | 13/23 | 1.3 s ok |  | From June twenty twenty-two to May twenty twenty-three, the board foun |
+| 174 | 15:45.9 | 6/18 | 1.3 s ok |  | The board found that employees were asked to temporarily forgo their s |
+| 175 | 15:52.1 | 6/14 | 1.1 s ok |  | The ship that had carried Titan was unavailable for twenty twenty-thre |
+| 176 | 15:57.3 | 7/15 | 0.7 s ok |  | Titan would be towed to the site on its launch platform, behind a smal |
+| 177 | 16:01.9 | 4/6 | 1.0 s ok |  | Early in twenty twenty-three, Brooks left. |
+| 178 | 16:05.1 | 14/30 | 1.2 s ok |  | Under oath, he said his main reason was that plan to tow Titan, which  |
+| 181 | 16:23.6 | 6/18 | 1.3 s ok |  | He said he suggested they not go, and was told that wasn't possible: t |
+| 182 | 16:29.5 | 13/26 | 1.3 s ok |  | The board found that the chief executive then left the director of eng |
+| 183 | 16:39.6 | 13/28 | 1.4 s ok |  | And the board drew the line back to twenty nineteen, when, by his own  |
+| 184 | 16:49.0 | 6/16 | 1.3 s ok |  | Leaving the post empty, it wrote, removed the possibility of a replace |
+| 185 | 16:55.6 | 7/13 | 0.9 s ok |  | That spring, at sea and in port, the platform tipped more than once. |
+| 186 | 17:00.5 | 8/15 | 1.0 s ok |  | Once, in May, its bow went partly under water, and Titan's tail cone w |
+| 187 | 17:06.2 | 4/10 | 1.5 s ok |  | How was a hull like this allowed to carry passengers? |
+| 188 | 17:09.7 | 4/13 | 1.0 s ok |  | By the N - T - S - B's reading of the law, it was not. |
+| 189 | 17:14.2 | 16/31 | 1.2 s ok |  | Under U - S law, the N - T - S - B notes, a submersible carrying even  |
+| 190 | 17:24.4 | 5/9 | 1.1 s ok |  | OceanGate never registered Titan, and never arranged an inspection. |
+| 191 | 17:28.8 | 13/24 | 1.2 s ok |  | The Coast Guard board found that OceanGate described its paying passen |
+| 192 | 17:39.0 | 4/8 | 0.9 s ok |  | The regulator's own guidance gets the same scrutiny. |
+| 193 | 17:42.1 | 8/14 | 1.2 s ok |  | The Coast Guard's voluntary guidance for passenger submersibles was pu |
+| 194 | 17:48.2 | 6/17 | 1.2 s ok |  | That December, a new law changed the definition, to cover any submersi |
+| 195 | 17:54.9 | 7/22 | 1.4 s ok |  | As of its report in October twenty twenty-five, the N - T - S - B foun |
+| 196 | 18:02.1 | 9/18 | 1.1 s ok |  | The Coast Guard, it found, had no specific inspection standards for ho |
+| 197 | 18:08.5 | 7/15 | 0.9 s ok |  | That guidance also recommended that a submersible dive no deeper than  |
+| 198 | 18:14.5 | 10/22 | 1.1 s ok |  | The N - T - S - B found that Titan regularly dived to the Titanic with |
+| 199 | 18:21.9 | 13/26 | 1.4 s ok |  | The N - T - S - B found that voluntary guidance and the rules for smal |
+| 200 | 18:35.7 | 9/13 | 1.0 s ok |  | In twenty twenty-three, Titan's first four dives went no deeper than t |
+| 201 | 18:41.3 | 7/11 | 1.1 s ok |  | At some point after dive eighty-two, the hull was damaged again. |
+| 202 | 18:45.6 | 4/11 | 1.3 s ok |  | The N - T - S - B calls that damage of unknown origin. |
+| 203 | 18:49.4 | 10/25 | 1.0 s ok |  | The Coast Guard board says the damage from dive eighty was likely made |
+| 204 | 18:57.3 | 2/5 | 1.0 s ok |  | Did every dive weaken it? |
+| 205 | 18:59.2 | 2/4 | 0.9 s ok |  | Here the investigators differ. |
+| 206 | 19:01.5 | 7/15 | 1.3 s ok |  | The N - T - S - B dates two events: dive eighty, and something after d |
+| 207 | 19:07.7 | 11/16 | 1.3 s ok |  | Canada's Transportation Safety Board found the cylinder likely failed  |
+| 208 | 19:15.7 | 8/14 | 0.8 s ok |  | On the eighteenth of June, Titan made its first deep dive in eleven mo |
+| 209 | 19:20.5 | 11/21 | 1.3 s ok |  | The N - T - S - B found that the existing delaminations and the later  |
+| 210 | 19:27.7 | 10/16 | 1.0 s ok |  | A delamination splits one thick layer into two thinner ones, and thinn |
+| 211 | 19:34.4 | 8/14 | 0.7 s ok |  | In a local buckle, one part of the wall changes shape, and gives way. |
+| 212 | 19:39.0 | 10/25 | 1.5 s ok |  | The damage from dive eighty, it found, had reached the forward end of  |
+| 213 | 19:47.0 | 10/19 | 1.2 s ok |  | Here is the dive record, from dive seventy-five to eighty-eight, with  |
+| 214 | 19:54.3 | 6/12 | 1.5 s ok |  | Six of these dives reached three thousand eight hundred and forty metr |
+| 215 | 19:58.6 | 2/4 | 1.1 s ok |  | Thirteen did, in all. |
+| 216 | 20:00.4 | 5/10 | 1.1 s ok |  | Then one line that stops, about five hundred metres short. |
+| 217 | 20:06.9 | 4/6 | 0.9 s ok |  | Two things often said about Titan. |
+| 218 | 20:09.4 | 11/22 | 1.3 s ok |  | Its controller: on dive eighty-one, the thruster controls were found t |
+| 219 | 20:18.1 | 6/11 | 1.0 s ok |  | None of the three reports names the controller as a cause. |
+| 220 | 20:22.0 | 10/22 | 1.4 s ok |  | Its window: the Coast Guard board criticised it as untested and uncert |
+| 221 | 20:31.0 | 5/9 | 1.1 s ok |  | All three reports place the failure in the hull. |
+| 222 | 20:35.6 | 10/26 | 1.5 s ok |  | The N - T - S - B's probable cause was OceanGate's inadequate engineer |
+| 223 | 20:45.8 | 12/26 | 1.1 s ok |  | Contributing were the guidance and the rules that did not make OceanGa |
+| 224 | 20:55.1 | 5/10 | 1.0 s ok |  | The Coast Guard's Marine Board called it a preventable tragedy. |
+| 225 | 20:59.2 | 17/22 | 0.9 s ok |  | Canada's Transportation Safety Board found that Titan received no over |
+| 226 | 21:08.2 | 6/9 | 0.9 s ok |  | The Coast Guard board also wrote this, about Mr. |
+| 227 | 21:11.8 | 3/11 | 1.3 s ok |  | Rush, who was both the company's chief executive and its pilot. |
+| 228 | 21:15.4 | 16/32 | 1.2 s ok |  | Had he survived the incident, the board would have recommended that th |
+| 229 | 21:26.6 | 10/22 | 1.4 s ok |  | Whether any crime was committed, the board wrote, was for the Justice  |
+| 230 | 21:34.1 | 2/2 | 0.7 s ok |  | Rush died. |
+| 231 | 21:36.4 | 5/9 | 0.7 s ok |  | One more finding concerns the eighteenth of June itself. |
+| 232 | 21:39.9 | 18/29 | 1.2 s ok |  | The board found that the company's own communications plan delayed the |
+| 233 | 21:50.2 | 8/19 | 1.4 s ok |  | It also found that the implosion caused the immediate loss of all live |
+| 234 | 21:57.2 | 6/15 | 0.8 s ok |  | The N - T - S - B found that search and rescue could not have saved th |
+| 235 | 22:01.2 | 6/12 | 1.4 s ok |  | With assets ready, it found, Titan would likely have been found sooner |
+| 236 | 22:06.2 | 5/8 | 0.9 s ok |  | OceanGate suspended its operations in July twenty twenty-three. |
+| 237 | 22:10.5 | 13/28 | 1.3 s ok |  | When the Coast Guard report came out, a company spokesperson said Ocea |
+| 238 | 22:21.3 | 1/2 | 0.5 s ok |  | What now? |
+| 239 | 22:22.4 | 6/14 | 1.3 s ok |  | The N - T - S - B made four recommendations to the U - S Coast Guard. |
+| 240 | 22:27.1 | 7/13 | 1.3 s ok |  | One: propose that the International Maritime Organization make its gui |
+| 241 | 22:34.0 | 5/7 | 1.0 s ok |  | Two: study pressure vessels that carry people. |
+| 242 | 22:37.6 | 4/5 | 0.9 s ok |  | Three: write rules for them. |
+| 243 | 22:40.0 | 7/16 | 1.3 s ok |  | Four: bring its nineteen ninety-three guidance up to date with the law |
+| 244 | 22:45.8 | 5/14 | 1.1 s ok |  | The Coast Guard agreed to update its guidance, and partly agreed with  |
+| 245 | 22:50.9 | 7/10 | 1.2 s ok |  | As of October twenty twenty-six, all four recommendations remain open. |
+| 246 | 22:56.4 | 8/16 | 1.4 s ok |  | On the fifteenth of July, twenty twenty-two, Titan's hull changed, and |
+| 247 | 23:03.5 | 6/13 | 1.0 s ok |  | Eleven months later, on its first deep dive since, five people were ab |
+| 248 | 23:09.9 | 1/2 | 0.8 s ok |  | Stockton Rush. |
+| 249 | 23:11.8 | 1/2 | 1.3 s ok |  | Paul-Henri Nargeolet. |
+| 250 | 23:14.0 | 1/2 | 1.0 s ok |  | Shahzada Dawood. |
+| 251 | 23:15.9 | 1/2 | 0.9 s ok |  | Suleman Dawood. |
+| 252 | 23:17.8 | 2/2 | 0.4 s ok |  | Hamish Harding. |

@@ -156,7 +156,7 @@ const Money: React.FC = () => {
 				<Wd f={f} at={wf(171, 'troubling')} lightAt={wf(171, 'prioritization')} tone={colors.amber}>"A TROUBLING PRIORITIZATION OF </Wd>
 				<Wd f={f} at={wf(171, 'cost')} lightAt={wf(171, 'measures')} tone={colors.amber}>COST AND TIME-SAVING MEASURES </Wd>
 				<Wd f={f} at={wf(171, 'over')} lightAt={wf(171, 'safety')} tone={colors.red}>OVER SAFETY" · </Wd>
-				<Wd f={f} at={wf(172, 'n')} lightAt={wf(172, 'findings')} tone={colors.cyan}>THE N-T-S-B'S FINDINGS: </Wd>
+				<Wd f={f} at={wf(172, 'n')} lightAt={wf(172, 'findings')} tone={colors.cyan}>THE NTSB'S FINDINGS: </Wd>
 				<Wd f={f} at={wf(172, 'not')} lightAt={wf(172, 'money')} tone={colors.cyan}>DO NOT ADDRESS MONEY</Wd>
 			</Note>
 			<RecordPage set="roi" start={sf(173) - 14} end={ef(173) + 14} hl={[{key: 'advanced', at: wf(173, 'advanced')}]} label="EXHIBIT" title="FINANCES" pushTo={wf(173, 'chief')} />
@@ -414,7 +414,7 @@ const Law: React.FC = () => {
 						</g>
 					</svg>
 					<div style={{position: 'absolute', left: 220, top: 760, width: 1480, ...T(30, {}), lineHeight: 1.5}}>
-						<Wd f={f} at={wf(195, 'n')} lightAt={wf(195, 'found')} tone={colors.cyan}>N-T-S-B · </Wd>
+						<Wd f={f} at={wf(195, 'n')} lightAt={wf(195, 'found')} tone={colors.cyan}>NTSB · </Wd>
 						<Wd f={f} at={wf(195, 'updated')} lightAt={wf(195, 'match')}>NOT UPDATED TO MATCH · </Wd>
 						<Wd f={f} at={wf(196, 'coast')} lightAt={wf(196, 'found')}>THE COAST GUARD: </Wd><Wd f={f} at={wf(196, 'no')} lightAt={wf(196, 'specific')} tone={colors.red}>NO SPECIFIC </Wd><Wd f={f} at={wf(196, 'inspection')} lightAt={wf(196, 'standards')} tone={colors.red}>INSPECTION STANDARDS </Wd><Wd f={f} at={wf(196, 'how')}>· </Wd>
 						<Wd f={f} at={wf(196, 'designed')} lightAt={wf(196, 'built')}>FOR HOW A SUBMERSIBLE IS DESIGNED OR BUILT</Wd>
@@ -437,7 +437,7 @@ const Law: React.FC = () => {
 						<text x={1540} y={340 + 480 * 0.96} textAnchor="end" style={T(30, {fill: colors.amber, fontWeight: 700})} opacity={lead(f, wf(198, 'titanic'), 8)}>3,840 M · THE TITANIC</text>
 					</svg>
 					<div style={{position: 'absolute', left: 220, top: 240, ...T(30, {})}}>
-						<Wd f={f} at={wf(198, 'n')} lightAt={wf(198, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+						<Wd f={f} at={wf(198, 'n')} lightAt={wf(198, 'found')} tone={colors.cyan}>NTSB: </Wd>
 						<Wd f={f} at={wf(198, 'titan')} lightAt={wf(198, 'dived')}>TITAN REGULARLY DIVED THERE </Wd>
 						<Wd f={f} at={wf(198, 'no')} lightAt={wf(198, 'rescue')} tone={colors.red}>WITH NO RESCUE </Wd>
 						<Wd f={f} at={wf(198, 'standing')} lightAt={wf(198, 'reach')} tone={colors.red}>STANDING BY THAT COULD REACH IT</Wd>
@@ -446,7 +446,7 @@ const Law: React.FC = () => {
 			) : null}
 			<RecordPage set="mir" start={sf(199) - 14} end={hold(199).from + hold(199).frames + 10} hl={[{key: 'insufficient_es', at: wf(199, 'insufficient')}]} label="FINDING" title="CONTRIBUTING" pushTo={wf(199, 'guidance')} />
 			<Note o={vis(f, sf(199), hold(199).from + hold(199).frames)}>
-				<Wd f={f} at={wf(199, 'n')} lightAt={wf(199, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+				<Wd f={f} at={wf(199, 'n')} lightAt={wf(199, 'found')} tone={colors.cyan}>NTSB: </Wd>
 				<Wd f={f} at={wf(199, 'voluntary')} lightAt={wf(199, 'guidance')}>VOLUNTARY GUIDANCE </Wd>
 				<Wd f={f} at={wf(199, 'rules')} lightAt={wf(199, 'vessels')}>AND SMALL-PASSENGER-VESSEL RULES </Wd>
 				<Wd f={f} at={wf(199, 'insufficient')} tone={colors.red} bold>INSUFFICIENT </Wd>

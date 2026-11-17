@@ -4,7 +4,7 @@ import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {RecordPage} from '../docs';
 import {ActTitle, Mount, useFilmFrame} from '../kit';
-import {Card, Chip, HullLines, HULL, Ledger, lit, RealFootage, sans, span, T, T_EVENT, TimeTrace, vis, Wd} from '../parts';
+import {Card, Chip, HullLines, HULL, Ledger, lit, Pop, RealFootage, sans, span, T, T_EVENT, TimeTrace, vis, Wd} from '../parts';
 import {HearingClip, clipOf} from '../parts2';
 import {ef, hold, sf, wf} from '../timing';
 import {SceneDef} from './types';
@@ -327,7 +327,7 @@ const Dive80: React.FC = () => {
 			) : null}
 			{panel > 0 ? (
 				<AbsoluteFill style={{opacity: panel}}>
-					<Mount x={160} y={150} w={W} h={H + 58} start={sf(84) - 12} end={ef(85) + 40} source="DIVE 80 · GROUP 4 STRAIN · NTSB MATERIALS LAB 24-012, FIG. 26 · ACOUSTIC PEAK: USCG MBI REPORT" labels={['TRACED']} lean={3}>
+					<Mount x={160} y={150} w={W} h={H + 58} start={sf(84) - 12} end={ef(85) + 40} source="DIVE 80 STRAIN: NTSB MATERIALS LAB 24-012, FIG. 26 · ACOUSTIC PEAK: USCG MBI" labels={['TRACED']} lean={3}>
 						<TimeTrace f={f} w={W} h={H} tEnd={tEnd} ae={ae} jump={jump} showDepth={0} />
 					</Mount>
 					<div style={{position: 'absolute', left: 660, top: 420, width: 660}}>
@@ -395,7 +395,7 @@ const Brooks: React.FC = () => {
 			{/* s90–s91: the insert inside, the cover outside, a flashlight down the gap */}
 			{gap > 0 ? (
 				<AbsoluteFill style={{opacity: gap}}>
-					<Mount x={140} y={130} w={1640} h={760} start={sf(90) - 10} end={clipOf('h_brooks_flashlight').gapStartFrame} source="THE HULL WALL, INSERT AND FAIRING · AS BROOKS DESCRIBED THEM, CG 112 P. 765–766" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
+					<Mount x={140} y={130} w={1640} h={760} start={sf(90) - 10} end={clipOf('h_brooks_flashlight').gapStartFrame} source="WALL, INSERT, FAIRING · AS BROOKS TESTIFIED, CG 112 P. 765–6" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
 					<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 						{/* outer cover (fairing) */}
 						<rect x={300} y={300} width={1320} height={60} fill={colors.sub} opacity={0.35 * lead(f, wf(90, 'covered'), 12)} />
@@ -598,7 +598,7 @@ const After80: React.FC = () => {
 			</div>
 			<Card x={120} y={954} w={1680} o={lead(f, wf(116, 'n'), 10) * (1 - 0)} accent={colors.cyan} style={{padding: '8px 18px'}}>
 				<div style={{...T(28, {}), whiteSpace: 'nowrap'}}>
-					<Wd f={f} at={wf(116, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+					<Wd f={f} at={wf(116, 'found')} tone={colors.cyan}>NTSB: </Wd>
 					<Wd f={f} at={wf(116, 'never')} lightAt={wf(116, 'signal')}>THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL </Wd>
 					<Wd f={f} at={wf(116, 'triggered')} lightAt={wf(116, 'alert')} tone={colors.red}>THAT WOULD HAVE TRIGGERED AN ALERT</Wd>
 				</div>
@@ -611,6 +611,8 @@ const After80: React.FC = () => {
 
 const InTheData: React.FC = () => {
 	const f = useFilmFrame();
+	const {fps} = useVideoConfig();
+	const s119 = vis(f, kramer.gapEndFrame - 14, ef(119) + 20);
 	return (
 		<>
 			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: vis(f, sf(117) - 8, ef(117) + 20)}}>
@@ -625,9 +627,43 @@ const InTheData: React.FC = () => {
 			<HearingClip
 				f={f}
 				id="h_kramer_time"
-				credit="VOICE: USCG HEARING, 25 SEP 2024 · PICTURE: NTSB 24-012 FIG. 26, TRACED"
-				picture={<div style={{position: 'absolute', inset: 0, background: colors.card}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={0} /></div>}
+				credit="USCG, 25 SEP 2024 · TRACED: NTSB 24-012 FIG. 26"
+				picture={<div style={{position: 'absolute', inset: 0, background: colors.card}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={1} /></div>}
 			/>
+			{s119 > 0 ? (
+				// s119 (fact-check v3): OceanGate's own dive-80 plot carried the depth on the strain chart (NTSB fig. 20);
+				// what it lacked was a depth axis: both lines ran against the clock
+				<AbsoluteFill style={{opacity: s119}}>
+					<Mount x={160} y={110} w={1600} h={800} start={kramer.gapEndFrame - 14} end={ef(119) + 20} source="OCEANGATE'S DIVE 80 PLOT · NTSB MIR-25-36 FIG. 20, 24-012 FIG. 26" labels={['TRACED']} lean={3}>
+						<div style={{position: 'absolute', left: 20, top: 30}}>
+							<TimeTrace
+								f={f}
+								w={1560}
+								h={680}
+								tEnd={17.1}
+								showDepth={1}
+								stroke={f >= wf(119, 'strain') ? colors.ink : colors.sub}
+								axisLabel={
+									<text textAnchor="middle" style={T(30, {fill: f >= wf(119, 'clock') ? colors.amber : colors.ink, letterSpacing: 4, fontWeight: f >= wf(119, 'clock') ? 700 : 400})}>
+										TIME · NEWFOUNDLAND DAYLIGHT TIME
+									</text>
+								}
+							/>
+						</div>
+					</Mount>
+					<div style={{position: 'absolute', left: 600, top: 470, display: 'flex', flexDirection: 'column', gap: 18, alignItems: 'flex-start'}}>
+						<Pop f={f} fps={fps} at={wf(119, 'depth')}>
+							<Chip text="DEPTH" tone={colors.cyan} size={36} />
+						</Pop>
+						<Pop f={f} fps={fps} at={wf(119, 'same')}>
+							<Chip text={f >= wf(119, 'strain') ? 'ON THE SAME CHART AS THE STRAIN' : 'ON THE SAME CHART'} tone={colors.cyan} size={30} />
+						</Pop>
+						<Pop f={f} fps={fps} at={wf(119, 'both')}>
+							<Chip text={f >= wf(119, 'clock') ? 'BOTH AGAINST THE CLOCK' : 'BOTH'} tone={colors.amber} size={36} />
+						</Pop>
+					</div>
+				</AbsoluteFill>
+			) : null}
 		</>
 	);
 };
@@ -729,6 +765,6 @@ export const act3a: SceneDef[] = [
 			{frame: wf(115, 'barely'), sfx: 'cockpit_chime', gainDb: -32},
 		],
 	},
-	{id: 'a3-in-the-data', from: sf(117) - 12, to: kramer.gapEndFrame + 20, C: InTheData, cues: [{frame: wf(117, 'data'), sfx: 'whoosh', gainDb: -26}]},
+	{id: 'a3-in-the-data', from: sf(117) - 12, to: ef(119) + 20, C: InTheData, cues: [{frame: wf(117, 'data'), sfx: 'whoosh', gainDb: -26}, {frame: wf(119, 'depth'), sfx: 'relay_click', gainDb: -24}, {frame: wf(119, 'clock'), sfx: 'quartz_tick', gainDb: -22}]},
 ];
 

@@ -602,7 +602,7 @@ Sync audit: `review/sync_audit.md`.
 | `barely` | `F37286` (+3.92 s) | (scene list) | sound effect cue |
 | `never` | `F37364` (+5.22 s) | After80 | text: NEVER GOT WORSE · |
 | `worse` | `F37391` (+5.67 s) | After80 | text: NEVER GOT WORSE · |
-| `not` | `F37461` (+6.83 s) | After80 | <Wd f={f} at={wf(115, 'not')} lightAt={wf(115, 'concern')}>"NOT A CONCERN"</Wd> |
+| `not` | `F37460` (+6.82 s) | After80 | <Wd f={f} at={wf(115, 'not')} lightAt={wf(115, 'concern')}>"NOT A CONCERN"</Wd> |
 | `concern` | `F37504` (+7.55 s) | After80 | <Wd f={f} at={wf(115, 'not')} lightAt={wf(115, 'concern')}>"NOT A CONCERN"</Wd> |
 
 **116** · The N - T - S - B found the sensors never produced the kind of signal that would have triggered an alert.
@@ -610,8 +610,8 @@ Sync audit: `review/sync_audit.md`.
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
 | `N` | `F37590` (+0.27 s) | After80 | lead · <Card x={120} y={954} w={1680} o={lead(f, wf(116, 'n'), 10) * (1 - 0)} |
-| `found` | `F37639` (+1.08 s) | After80 | text: N-T-S-B: |
-| `never` | `F37697` (+2.05 s) | After80 | text: THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL |
+| `found` | `F37639` (+1.08 s) | After80 | text: NTSB: |
+| `never` | `F37698` (+2.07 s) | After80 | text: THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL |
 | `signal` | `F37773` (+3.32 s) | After80 | text: THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL |
 | `triggered` | `F37822` (+4.13 s) | After80 | text: THAT WOULD HAVE TRIGGERED AN ALERT |
 | `alert` | `F37852` (+4.63 s) | After80 | text: THAT WOULD HAVE TRIGGERED AN ALERT |
@@ -624,4 +624,14 @@ Sync audit: `review/sync_audit.md`.
 | `damage` | `F37962` (+0.88 s) | InTheData | <Wd f={f} at={wf(117, 'damage')} tone={colors.red}>damage </Wd> |
 | `in` | `F37984` (+1.25 s) | InTheData | <Wd f={f} at={wf(117, 'in')} base={colors.ink}>in the </Wd> |
 | `data` | `F38000` (+1.52 s) | (scene list) | sound effect cue |
+
+**119** · The depth was there, on the same chart as the strain, but both ran against the clock.
+
+| Trigger | Frame (offset) | Scene | Change |
+| :--- | :--- | :--- | :--- |
+| `depth` | `F39362` (+0.17 s) | (scene list) | sound effect cue |
+| `same` | `F39451` (+1.65 s) | InTheData | <Pop f={f} fps={fps} at={wf(119, 'same')}> |
+| `strain` | `F39507` (+2.58 s) | InTheData | <Chip text={f >= wf(119, 'strain') ? 'ON THE SAME CHART AS THE STRAIN' : 'ON THE |
+| `both` | `F39576` (+3.73 s) | InTheData | <Pop f={f} fps={fps} at={wf(119, 'both')}> |
+| `clock` | `F39636` (+4.73 s) | (scene list) | sound effect cue |
 
