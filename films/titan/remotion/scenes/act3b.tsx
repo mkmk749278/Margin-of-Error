@@ -274,16 +274,23 @@ const Gauges: React.FC = () => {
 						<Chip text="TSB CANADA · M23A0169" tone={colors.ink} size={30} />
 						<div style={{marginTop: 14, ...T(30, {}), whiteSpace: 'nowrap'}}>
 							<Wd f={f} at={wf(147, "canada's")} lightAt={wf(147, 'investigators')}>CANADA'S INVESTIGATORS, </Wd>
-							<Wd f={f} at={wf(147, 'later')}>LATER, </Wd>
-							<Wd f={f} at={wf(147, 'ran')} lightAt={wf(147, 'own')} tone={colors.cyan}>RAN THE SAME TEST ON THEIR OWN</Wd>
+							<Wd f={f} at={wf(147, 'later')}>LATER: </Wd>
+							<Wd f={f} at={wf(147, 'plotted')} lightAt={wf(147, 'strain')} tone={colors.cyan}>STRAIN </Wd><Wd f={f} at={wf(147, 'against')} lightAt={wf(147, 'depth')} tone={colors.cyan}>AGAINST DEPTH, </Wd>
+							<Wd f={f} at={wf(147, 'own')} lightAt={wf(147, 'way')} tone={colors.cyan}>THEIR OWN WAY</Wd>
 						</div>
-						<div style={{marginTop: 26, display: 'flex', gap: 22, alignItems: 'baseline'}}>
+						<div style={{marginTop: 12, ...T(30, {}), whiteSpace: 'nowrap'}}>
+							<Wd f={f} at={wf(147, 'measuring')} lightAt={wf(147, 'dive')} tone={colors.cyan} bold>EACH DIVE </Wd><Wd f={f} at={wf(147, 'against', 1)} lightAt={wf(147, 'itself')} tone={colors.cyan} bold>MEASURED AGAINST ITSELF</Wd>
+						</div>
+						<div style={{marginTop: 26, display: 'flex', gap: 22, alignItems: 'baseline', whiteSpace: 'nowrap'}}>
 							<DatePill f={f} fps={fps} day={19} month={7} year={2022} dayWord={wf(148, 'nineteenth')} monthWord={wf(148, 'july')} fromDay={15} size={32} />
-							<Wd f={f} at={wf(148, 'slope')} lightAt={wf(148, 'surface')} style={T(30, {})}>SLOPE NEAR THE SURFACE</Wd>
+							<Wd f={f} at={wf(148, 'one')} lightAt={wf(148, 'gauge')} style={T(30, {})}>ONE GAUGE · </Wd><Wd f={f} at={wf(148, 'top')} lightAt={wf(148, 'hull')} style={T(30, {})}>TOP OF THE HULL · </Wd>
+							<span style={{...T(30, {}), whiteSpace: 'nowrap'}}>
+								<Wd f={f} at={wf(148, 'slope')} tone={colors.amber}>SLOPE </Wd><Wd f={f} at={wf(148, 'ten')} tone={colors.amber} bold>10</Wd><Wd f={f} at={wf(148, 'three')} lightAt={wf(148, 'metres')} tone={colors.amber} bold>–300 M</Wd>
+							</span>
 						</div>
 						<div style={{marginTop: 14, display: 'flex', gap: 22, alignItems: 'baseline'}}>
 							<span style={{...T(80, {color: f >= wf(148, 'double') + LAND ? colors.red : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(148, 'double') + LAND).toFixed(4)})`}}>{f >= wf(148, 'nearly') - 10 ? `+${dbl}%` : ''}</span>
-							<Wd f={f} at={wf(148, 'double')} style={T(30, {})} tone={colors.red}>NEARLY DOUBLE </Wd><Wd f={f} at={wf(148, 'whole')} lightAt={wf(148, 'dive')} style={T(30, {})} tone={colors.red}>THE WHOLE-DIVE SLOPE</Wd>
+							<Wd f={f} at={wf(148, 'double')} style={T(30, {})} tone={colors.red}>NEARLY DOUBLE </Wd><Wd f={f} at={wf(148, 'its')} lightAt={wf(148, 'dive')} style={T(30, {})} tone={colors.red}>ITS SLOPE FOR THE WHOLE DIVE</Wd>
 						</div>
 						<div style={{marginTop: 26, display: 'flex', gap: 22, alignItems: 'baseline'}}>
 							<Wd f={f} at={wf(149, 'august')} lightAt={wf(149, 'twenty-one')} tone={colors.amber} bold style={T(32, {})}>05 AUG 2021</Wd>

@@ -1,6 +1,6 @@
 # Word alignment: titan
 
-3555 words measured. Shift from the old estimates: median 82 ms, 90th percentile 296 ms, max 1267 ms.
+3589 words measured. Shift from the old estimates: median 80 ms, 90th percentile 292 ms, max 1267 ms.
 
 ## Words to check by ear (score under 0.35)
 - 56.16s `twenty` score 0.001: The eighteenth of June, twenty twenty-three.
@@ -92,114 +92,117 @@
 - 459.36s `two,` score 0.159: On channel two, the acoustic sensor peaked above twenty-five thousand millivolts
 - 461.62s `twenty-five` score 0.048: On channel two, the acoustic sensor peaked above twenty-five thousand millivolts
 - 462.42s `thousand` score 0.137: On channel two, the acoustic sensor peaked above twenty-five thousand millivolts
-- 592.85s `nineteenth` score 0.027: Titan dived again on the nineteenth of July.
+- 592.85s `nineteenth` score 0.026: Titan dived again on the nineteenth of July.
 - 611.04s `twenty` score 0.005: One acoustic sensor, he testified, did show activity on the dives that followed 
 - 611.38s `twenty-one,` score 0.002: One acoustic sensor, he testified, did show activity on the dives that followed 
-- 675.80s `seventy-five,` score 0.156: Dive seventy-five, a straight line.
-- 684.39s `eighty-two.` score 0.182: Dive eighty-two.
-- 685.72s `eighty-three.` score 0.287: Dive eighty-three.
-- 687.50s `five` score 0.191: In the first five hundred metres, every one of them bends away.
-- 687.80s `hundred` score 0.171: In the first five hundred metres, every one of them bends away.
-- 695.64s `fifteen` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
-- 696.30s `a` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
-- 696.42s `hundred` score 0.0: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
-- 696.74s `and` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
-- 696.86s `fifty` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
-- 702.19s `five` score 0.014: Before the event: five point zero zero, and four point seven four.
-- 702.51s `point` score 0.052: Before the event: five point zero zero, and four point seven four.
-- 702.81s `zero` score 0.031: Before the event: five point zero zero, and four point seven four.
-- 703.17s `zero,` score 0.04: Before the event: five point zero zero, and four point seven four.
-- 704.01s `four` score 0.024: Before the event: five point zero zero, and four point seven four.
-- 704.28s `point` score 0.053: Before the event: five point zero zero, and four point seven four.
-- 704.56s `seven` score 0.014: Before the event: five point zero zero, and four point seven four.
-- 704.92s `four.` score 0.01: Before the event: five point zero zero, and four point seven four.
-- 706.52s `eight` score 0.009: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 706.72s `point` score 0.082: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 707.00s `seven` score 0.039: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 707.36s `six,` score 0.053: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 708.07s `eight` score 0.004: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 708.25s `point` score 0.009: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 708.53s `zero` score 0.019: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 708.89s `nine,` score 0.003: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 709.57s `eight` score 0.003: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 709.75s `point` score 0.03: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 710.08s `seven` score 0.02: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 710.44s `seven.` score 0.024: After it: eight point seven six, eight point zero nine, eight point seven seven.
-- 752.31s `eighty-one.` score 0.249: In the N - T - S - B's plots, the bend first appears in dive eighty-one.
-- 760.03s `eighty-two,` score 0.322: Plotted against depth, it would have shown the bend before dive eighty-two, thre
-- 763.03s `eighty-three.` score 0.249: Plotted against depth, it would have shown the bend before dive eighty-two, thre
-- 779.27s `the` score 0.1: They found the slope near the surface on the nineteenth of July nearly double th
-- 780.89s `nineteenth` score 0.036: They found the slope near the surface on the nineteenth of July nearly double th
-- 786.78s `a` score 0.347: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
-- 788.45s `twenty` score 0.0: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
-- 788.81s `twenty-one,` score 0.0: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
-- 818.00s `eighty-one` score 0.038: Two of them, eighty-one and eighty-two, still reached the Titanic, which the N -
-- 818.74s `eighty-two,` score 0.053: Two of them, eighty-one and eighty-two, still reached the Titanic, which the N -
-- 849.56s `twenty-sixth` score 0.007: On the twenty-sixth of July, Titan was set down in a parking lot at a marine bas
-- 856.03s `Uncovered.` score 0.25: Uncovered.
-- 861.26s `one` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 861.44s `thousand` score 0.001: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 861.96s `seven` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 862.26s `hundred` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 862.56s `and` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 862.70s `fifty` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
-- 881.14s `sixth` score 0.066: It stayed outside until the sixth of February, through temperatures from one poi
-- 883.46s `one` score 0.029: It stayed outside until the sixth of February, through temperatures from one poi
-- 883.62s `point` score 0.004: It stayed outside until the sixth of February, through temperatures from one poi
-- 883.96s `four` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
-- 884.56s `eighty-four` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
-- 885.12s `point` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
-- 885.42s `two` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
-- 885.62s `degrees` score 0.339: It stayed outside until the sixth of February, through temperatures from one poi
-- 887.66s `seventeen` score 0.005: It stayed outside until the sixth of February, through temperatures from one poi
-- 888.47s `twenty-nine` score 0.001: It stayed outside until the sixth of February, through temperatures from one poi
-- 923.47s `twenty` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 923.87s `twenty-two` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 925.07s `twenty` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 925.51s `twenty-three,` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 930.16s `one` score 0.001: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 930.36s `point` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 930.74s `eight` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 930.96s `five` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
-- 941.77s `twenty` score 0.001: The ship that had carried Titan was unavailable for twenty twenty-three, the boa
-- 942.09s `twenty-three,` score 0.001: The ship that had carried Titan was unavailable for twenty twenty-three, the boa
-- 949.41s `twenty` score 0.001: Early in twenty twenty-three, Brooks left.
-- 949.75s `twenty-three,` score 0.002: Early in twenty twenty-three, Brooks left.
-- 983.19s `twenty` score 0.001: The board found that the chief executive then left the director of engineering p
-- 983.55s `twenty-three` score 0.001: The board found that the chief executive then left the director of engineering p
-- 988.18s `twenty` score 0.0: And the board drew the line back to twenty nineteen, when, by his own testimony,
-- 988.52s `nineteen,` score 0.0: And the board drew the line back to twenty nineteen, when, by his own testimony,
-- 1034.65s `an` score 0.035: OceanGate never registered Titan, and never arranged an inspection.
-- 1053.61s `nineteen` score 0.0: The Coast Guard's voluntary guidance for passenger submersibles was published in
-- 1054.09s `ninety-three.` score 0.0: The Coast Guard's voluntary guidance for passenger submersibles was published in
-- 1063.30s `twenty` score 0.0: As of its report in October twenty twenty-five, the N - T - S - B found, the gui
-- 1063.68s `twenty-five,` score 0.0: As of its report in October twenty twenty-five, the N - T - S - B found, the gui
-- 1102.84s `twenty` score 0.002: In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
-- 1103.20s `twenty-three,` score 0.098: In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
-- 1109.79s `eighty-two,` score 0.296: At some point after dive eighty-two, the hull was damaged again.
-- 1176.10s `seventy-five` score 0.011: Here is the dive record, from dive seventy-five to eighty-eight, with each dated
-- 1177.08s `eighty-eight,` score 0.043: Here is the dive record, from dive seventy-five to eighty-eight, with each dated
-- 1182.92s `three` score 0.006: Six of these dives reached three thousand eight hundred and forty metres.
-- 1183.18s `thousand` score 0.002: Six of these dives reached three thousand eight hundred and forty metres.
-- 1183.72s `eight` score 0.0: Six of these dives reached three thousand eight hundred and forty metres.
-- 1183.86s `hundred` score 0.0: Six of these dives reached three thousand eight hundred and forty metres.
-- 1184.24s `and` score 0.001: Six of these dives reached three thousand eight hundred and forty metres.
-- 1184.42s `forty` score 0.009: Six of these dives reached three thousand eight hundred and forty metres.
-- 1189.89s `five` score 0.093: Then one line that stops, about five hundred metres short.
-- 1190.21s `hundred` score 0.052: Then one line that stops, about five hundred metres short.
-- 1198.38s `eighty-one,` score 0.215: Its controller: on dive eighty-one, the thruster controls were found to be mappe
-- 1233.60s `were` score 0.252: Contributing were the guidance and the rules that did not make OceanGate meet th
-- 1258.71s `Rush,` score 0.0: Rush, who was both the company's chief executive and its pilot.
-- 1280.74s `because` score 0.001: Whether any crime was committed, the board wrote, was for the Justice Department
-- 1280.88s `Mr.` score 0.0: Whether any crime was committed, the board wrote, was for the Justice Department
-- 1315.83s `twenty` score 0.0: OceanGate suspended its operations in July twenty twenty-three.
-- 1315.95s `twenty-three.` score 0.0: OceanGate suspended its operations in July twenty twenty-three.
-- 1334.31s `One:` score 0.202: One: propose that the International Maritime Organization make its guidance for 
-- 1347.22s `Four:` score 0.254: Four: bring its nineteen ninety-three guidance up to date with the law passed th
-- 1348.41s `nineteen` score 0.001: Four: bring its nineteen ninety-three guidance up to date with the law passed th
-- 1348.83s `ninety-three` score 0.004: Four: bring its nineteen ninety-three guidance up to date with the law passed th
-- 1358.72s `twenty` score 0.0: As of October twenty twenty-six, all four recommendations remain open.
-- 1359.08s `twenty-six,` score 0.004: As of October twenty twenty-six, all four recommendations remain open.
-- 1363.74s `fifteenth` score 0.017: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s
-- 1364.72s `twenty` score 0.002: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s
-- 1365.64s `twenty-two,` score 0.149: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s
+- 681.55s `seventy-five,` score 0.154: Dive seventy-five, a straight line.
+- 690.14s `eighty-two.` score 0.209: Dive eighty-two.
+- 691.47s `eighty-three.` score 0.288: Dive eighty-three.
+- 693.25s `five` score 0.219: In the first five hundred metres, every one of them bends away.
+- 693.55s `hundred` score 0.194: In the first five hundred metres, every one of them bends away.
+- 701.40s `fifteen` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
+- 702.06s `a` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
+- 702.18s `hundred` score 0.0: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
+- 702.50s `and` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
+- 702.62s `fifty` score 0.001: To put a number on it, the N - T - S - B fitted a line to the shallowest stretch
+- 707.94s `five` score 0.015: Before the event: five point zero zero, and four point seven four.
+- 708.26s `point` score 0.052: Before the event: five point zero zero, and four point seven four.
+- 708.56s `zero` score 0.031: Before the event: five point zero zero, and four point seven four.
+- 708.92s `zero,` score 0.039: Before the event: five point zero zero, and four point seven four.
+- 709.76s `four` score 0.021: Before the event: five point zero zero, and four point seven four.
+- 710.03s `point` score 0.051: Before the event: five point zero zero, and four point seven four.
+- 710.31s `seven` score 0.014: Before the event: five point zero zero, and four point seven four.
+- 710.67s `four.` score 0.01: Before the event: five point zero zero, and four point seven four.
+- 712.27s `eight` score 0.009: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 712.47s `point` score 0.085: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 712.75s `seven` score 0.039: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 713.11s `six,` score 0.05: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 713.82s `eight` score 0.003: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 714.00s `point` score 0.008: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 714.28s `zero` score 0.018: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 714.64s `nine,` score 0.002: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 715.32s `eight` score 0.003: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 715.50s `point` score 0.027: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 715.83s `seven` score 0.019: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 716.19s `seven.` score 0.022: After it: eight point seven six, eight point zero nine, eight point seven seven.
+- 758.06s `eighty-one.` score 0.252: In the N - T - S - B's plots, the bend first appears in dive eighty-one.
+- 765.79s `eighty-two,` score 0.294: Plotted against depth, it would have shown the bend before dive eighty-two, thre
+- 768.80s `eighty-three.` score 0.192: Plotted against depth, it would have shown the bend before dive eighty-two, thre
+- 788.53s `nineteenth` score 0.073: On the nineteenth of July, for one gauge at the top of the hull, the slope from 
+- 792.92s `ten` score 0.074: On the nineteenth of July, for one gauge at the top of the hull, the slope from 
+- 793.48s `three` score 0.028: On the nineteenth of July, for one gauge at the top of the hull, the slope from 
+- 793.82s `hundred` score 0.037: On the nineteenth of July, for one gauge at the top of the hull, the slope from 
+- 799.75s `a` score 0.292: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
+- 801.42s `twenty` score 0.0: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
+- 801.78s `twenty-one,` score 0.0: They also found a smaller bend a year earlier, in August twenty twenty-one, and 
+- 830.97s `eighty-one` score 0.039: Two of them, eighty-one and eighty-two, still reached the Titanic, which the N -
+- 831.57s `and` score 0.349: Two of them, eighty-one and eighty-two, still reached the Titanic, which the N -
+- 831.69s `eighty-two,` score 0.048: Two of them, eighty-one and eighty-two, still reached the Titanic, which the N -
+- 862.53s `twenty-sixth` score 0.007: On the twenty-sixth of July, Titan was set down in a parking lot at a marine bas
+- 869.00s `Uncovered.` score 0.251: Uncovered.
+- 874.23s `one` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 874.41s `thousand` score 0.001: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 874.93s `seven` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 875.23s `hundred` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 875.53s `and` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 875.67s `fifty` score 0.0: Two days later, the base passed on a quote for a protective cover: one thousand 
+- 894.11s `sixth` score 0.059: It stayed outside until the sixth of February, through temperatures from one poi
+- 896.43s `one` score 0.022: It stayed outside until the sixth of February, through temperatures from one poi
+- 896.59s `point` score 0.003: It stayed outside until the sixth of February, through temperatures from one poi
+- 896.93s `four` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
+- 897.53s `eighty-four` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
+- 898.09s `point` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
+- 898.39s `two` score 0.0: It stayed outside until the sixth of February, through temperatures from one poi
+- 898.59s `degrees` score 0.322: It stayed outside until the sixth of February, through temperatures from one poi
+- 900.64s `seventeen` score 0.005: It stayed outside until the sixth of February, through temperatures from one poi
+- 901.44s `twenty-nine` score 0.001: It stayed outside until the sixth of February, through temperatures from one poi
+- 936.44s `twenty` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 936.84s `twenty-two` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 938.04s `twenty` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 938.49s `twenty-three,` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 943.13s `one` score 0.001: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 943.33s `point` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 943.71s `eight` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 943.93s `five` score 0.0: From June twenty twenty-two to May twenty twenty-three, the board found, the chi
+- 954.74s `twenty` score 0.0: The ship that had carried Titan was unavailable for twenty twenty-three, the boa
+- 955.06s `twenty-three,` score 0.0: The ship that had carried Titan was unavailable for twenty twenty-three, the boa
+- 962.38s `twenty` score 0.001: Early in twenty twenty-three, Brooks left.
+- 962.72s `twenty-three,` score 0.002: Early in twenty twenty-three, Brooks left.
+- 996.16s `twenty` score 0.0: The board found that the chief executive then left the director of engineering p
+- 996.52s `twenty-three` score 0.001: The board found that the chief executive then left the director of engineering p
+- 1001.15s `twenty` score 0.0: And the board drew the line back to twenty nineteen, when, by his own testimony,
+- 1001.49s `nineteen,` score 0.0: And the board drew the line back to twenty nineteen, when, by his own testimony,
+- 1047.62s `an` score 0.089: OceanGate never registered Titan, and never arranged an inspection.
+- 1066.58s `nineteen` score 0.0: The Coast Guard's voluntary guidance for passenger submersibles was published in
+- 1067.06s `ninety-three.` score 0.0: The Coast Guard's voluntary guidance for passenger submersibles was published in
+- 1076.27s `twenty` score 0.0: As of its report in October twenty twenty-five, the N - T - S - B found, the gui
+- 1076.65s `twenty-five,` score 0.0: As of its report in October twenty twenty-five, the N - T - S - B found, the gui
+- 1115.83s `twenty` score 0.002: In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
+- 1116.21s `twenty-three,` score 0.001: In twenty twenty-three, Titan's first four dives went no deeper than ten metres.
+- 1122.78s `eighty-two,` score 0.28: At some point after dive eighty-two, the hull was damaged again.
+- 1189.09s `seventy-five` score 0.01: Here is the dive record, from dive seventy-five to eighty-eight, with each dated
+- 1190.10s `eighty-eight,` score 0.044: Here is the dive record, from dive seventy-five to eighty-eight, with each dated
+- 1195.91s `three` score 0.006: Six of these dives reached three thousand eight hundred and forty metres.
+- 1196.19s `thousand` score 0.002: Six of these dives reached three thousand eight hundred and forty metres.
+- 1196.71s `eight` score 0.0: Six of these dives reached three thousand eight hundred and forty metres.
+- 1196.85s `hundred` score 0.0: Six of these dives reached three thousand eight hundred and forty metres.
+- 1197.23s `and` score 0.001: Six of these dives reached three thousand eight hundred and forty metres.
+- 1197.41s `forty` score 0.016: Six of these dives reached three thousand eight hundred and forty metres.
+- 1202.88s `five` score 0.076: Then one line that stops, about five hundred metres short.
+- 1203.20s `hundred` score 0.052: Then one line that stops, about five hundred metres short.
+- 1211.37s `eighty-one,` score 0.154: Its controller: on dive eighty-one, the thruster controls were found to be mappe
+- 1246.59s `were` score 0.252: Contributing were the guidance and the rules that did not make OceanGate meet th
+- 1271.68s `Rush,` score 0.0: Rush, who was both the company's chief executive and its pilot.
+- 1293.71s `because` score 0.0: Whether any crime was committed, the board wrote, was for the Justice Department
+- 1293.85s `Mr.` score 0.0: Whether any crime was committed, the board wrote, was for the Justice Department
+- 1328.83s `twenty` score 0.0: OceanGate suspended its operations in July twenty twenty-three.
+- 1328.95s `twenty-three.` score 0.0: OceanGate suspended its operations in July twenty twenty-three.
+- 1347.30s `One:` score 0.18: One: propose that the International Maritime Organization make its guidance for 
+- 1360.21s `Four:` score 0.213: Four: bring its nineteen ninety-three guidance up to date with the law passed th
+- 1361.40s `nineteen` score 0.001: Four: bring its nineteen ninety-three guidance up to date with the law passed th
+- 1361.82s `ninety-three` score 0.007: Four: bring its nineteen ninety-three guidance up to date with the law passed th
+- 1371.71s `twenty` score 0.0: As of October twenty twenty-six, all four recommendations remain open.
+- 1372.07s `twenty-six,` score 0.003: As of October twenty twenty-six, all four recommendations remain open.
+- 1376.73s `fifteenth` score 0.023: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s
+- 1378.07s `twenty` score 0.0: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s
+- 1378.63s `twenty-two,` score 0.148: On the fifteenth of July, twenty twenty-two, Titan's hull changed, and its own s

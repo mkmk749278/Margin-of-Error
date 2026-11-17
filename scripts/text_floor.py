@@ -4,8 +4,8 @@
   python3 scripts/text_floor.py films/<slug>/remotion lib/remotion [--floor 26]
 
 Reports every literal `fontSize` below the floor (26 px at the 1920×1080 authoring size), every text colour that
-is the `muted` token (3.7:1 on a card: never a fact), and every hard-coded hex text colour (tokens only, from
-config/brand.yaml). A line can opt out with a trailing `// floor-ok: <reason>` (decoration that carries no fact,
+is the `muted` token (3.7:1 on a card: never a fact), every hard-coded hex text colour (tokens only, from
+config/brand.yaml), and any acronym in the narration's spelling ("N-T-S-B"): on screen it is "NTSB". A line can opt out with a trailing `// floor-ok: <reason>` (decoration that carries no fact,
 such as grid coordinates). Exit 1 if anything is reported.
 """
 import re
@@ -15,6 +15,9 @@ from pathlib import Path
 FS = re.compile(r"fontSize[=:]\s*\{?\s*(\d+(?:\.\d+)?)")
 MUTED = re.compile(r"(?:color|fill)[=:]\s*\{?\s*colors\.muted")
 HEX = re.compile(r"""color:\s*['"]#[0-9a-fA-F]{3,8}['"]""")  # a text colour off the tokens (shape fills are materials)
+# the narration's spelling of an acronym ("N - T - S - B" in vo.txt, PLAYBOOK §7) must never reach the screen: the
+# record and the viewer read "NTSB" (Titan v5 carried "N-T-S-B" in 19 labels)
+SPELLED = re.compile(r"\b[A-Z](?:\s?-\s?[A-Z]){2,}\b")
 
 
 def main() -> int:
@@ -33,6 +36,9 @@ def main() -> int:
                     notes.append("muted text")
                 if HEX.search(line) and "brand" not in f.name:
                     notes.append("hard-coded colour")
+                code = re.sub(r"wf\([^)]*\)", "", re.sub(r"//.*$", "", line))  # word cues and comments aren't screen text
+                if SPELLED.search(code):
+                    notes.append(f"voice spelling on screen: {SPELLED.search(code).group(0)}")
                 if notes:
                     bad += 1
                     print(f"{f}:{n}: {', '.join(notes)}")

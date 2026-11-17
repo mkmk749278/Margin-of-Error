@@ -183,9 +183,6 @@
    "clip": "h_kramer_time",
    "in": 10.385,
    "out": 16.535,
-   "replace": [
-    "But OceanGate's plots put strain and depth side by side"
-   ],
    "pre": 0.4,
    "post": 0.4,
    "caption": [
@@ -198,7 +195,8 @@
     "when": "25 SEP 2024"
    },
    "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 25 SEP 2024",
-   "why": "the N-T-S-B's own witness says how OceanGate plotted it; the depth re-plot follows as the NTSB's method"
+   "why": "the NTSB's own witness says how OceanGate plotted it, straight after Brooks names the right test; our sentence (s119) then reconciles the two: depth on the same chart, both against the clock (fact-check v3)",
+   "after_clip": "h_brooks_linearity"
   },
   {
    "clip": "h_brooks_cost",

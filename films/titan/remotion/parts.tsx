@@ -47,7 +47,9 @@ export const Pop: React.FC<{f: number; fps: number; at: number; children: React.
 
 type Row = number[];
 const HOOP = d80.fig26d.hoop as Row[];
-const DEPTH = d80.fig26d.depth as Row[];
+// fig. 26d's depth trace picked up the figure's legend for 07:49–08:11 (value column jumps to 4,140 m while the low
+// column stays on the line): there the low column is the trace
+const DEPTH = (d80.fig26d.depth as Row[]).map((r) => (Math.abs(r[1] - r[2]) > 60 ? ([r[0], r[2], r[2], r[3]] as Row) : r));
 export const T0 = 6.74;
 export const T1 = 17.14;
 /** 15:26:45 NDT (C08). */
@@ -75,7 +77,7 @@ export const TimeTrace: React.FC<{
 	dim?: number;
 }> = ({w, h, tEnd, stroke = colors.sub, showDepth = 1, ae = 0, jump = 0, axisLabel, dim = 0}) => {
 	const L = 120;
-	const R = 40;
+	const R = showDepth > 0 ? 110 : 40; // room for the depth axis on the right, as OceanGate's own plot has it
 	const TOP = 40;
 	const B = 92;
 	const pw = w - L - R;
@@ -84,7 +86,7 @@ export const TimeTrace: React.FC<{
 	const MV0 = 2350;
 	const MV1 = 3250;
 	const Y = (mv: number) => TOP + ph - ((mv - MV0) / (MV1 - MV0)) * ph;
-	const YD = (d: number) => TOP + (d / 4500) * ph;
+	const YD = (d: number) => TOP + ph - (d / 4500) * ph; // OceanGate's right-hand axis: 0 m at the bottom, up to 4,500 m
 	const pts = HOOP.filter((r) => r[0] <= tEnd);
 	const path = pts.map((r, i) => `${i ? 'L' : 'M'}${X(r[0]).toFixed(1)} ${Y(r[1]).toFixed(1)}`).join(' ');
 	const band = pts.length > 1 ? `M${pts.map((r) => `${X(r[0]).toFixed(1)} ${Y(r[2]).toFixed(1)}`).join(' L')} L${[...pts].reverse().map((r) => `${X(r[0]).toFixed(1)} ${Y(r[3]).toFixed(1)}`).join(' L')} Z` : '';
@@ -107,10 +109,15 @@ export const TimeTrace: React.FC<{
 				</g>
 			))}
 			<text x={L} y={TOP - 12} style={T(26, {fill: colors.ink})}>STRAIN · GAUGE GROUP 4, HOOP · mV</text>
-			{showDepth > 0 && dpath ? <path d={dpath} fill="none" stroke={colors.cyan} strokeWidth={2} strokeDasharray="6 6" opacity={0.75 * showDepth} /> : null}
-			{showDepth > 0 && dp.length > 40 ? (
-				<text x={X(9.2)} y={YD(1500)} style={T(26, {fill: colors.cyan})} opacity={showDepth}>DEPTH</text>
+			{showDepth > 0 ? (
+				<g opacity={showDepth}>
+					{[0, 1500, 3000].map((d) => (
+						<text key={d} x={L + pw + 12} y={YD(d) + 9} style={T(26, {fill: colors.cyan})}>{d.toLocaleString('en-US')}</text>
+					))}
+					<text x={L + pw + 100} y={TOP - 12} textAnchor="end" style={T(26, {fill: colors.cyan})}>DEPTH · m</text>
+				</g>
 			) : null}
+			{showDepth > 0 && dpath ? <path d={dpath} fill="none" stroke={colors.cyan} strokeWidth={3} strokeLinejoin="round" opacity={0.85 * showDepth} /> : null}
 			{band ? <path d={band} fill={stroke} opacity={0.18} /> : null}
 			<path d={path} fill="none" stroke={stroke} strokeWidth={3} strokeLinejoin="round" />
 			{head ? <circle cx={X(head[0])} cy={Y(head[1])} r={6} fill={colors.ink} /> : null}

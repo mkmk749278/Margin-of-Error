@@ -506,7 +506,10 @@ colleagues); our arithmetic turns that into these floors **at the 1920×1080 aut
 - **Text never sits on a grid line:** a label off a card gets a card or a void scrim behind it (a major grid line ran
   through both labels of the 2005/2025 arc).
 - **Nothing clipped:** check the end state of every build: no label or part crosses its mount's edge (the cotter pin
-  and its label were cut off at 2:41).
+  and its label were cut off at 2:41). Source and credit strips too: a strip never ends in "…". Write each source to
+  fit its strip (26 px mono ≈ 15.6 px a character: a 1,680 px mount with one chip holds about 80, the 1,120 px
+  hearing-clip strip about 69), and let the mount's strip wrap rather than cut. *Why:* Titan v5 cut 11 record ids
+  ("…TSB M…", "…FIG…") and the NTSB clip's "TRACED" off the end of their strips; the ellipsis hid the rule breach.
 - **The 720p review cut is the test:** text that is not plainly readable in a full 720p frame fails on a phone. An
   outside reviewer misreading a label ("EDG FRAME" for a 16 px EDGE FRAME) is a legibility finding.
 - *Why:* the first film's review cut set 92 font sizes below 18 px (tags, captions, panel titles at 13–17 px), and two
@@ -591,7 +594,9 @@ rewrite.
   between paragraphs (tail decay).
 - Numbers as words (`sixteen thousand feet`, `four point eight billion dollars`, `two hundred and fifty-three
   degrees`); acronyms pre-spaced with hyphens (`N - T - S - B`, `F - A - A`, `S - E - C`); words said as words
-  (`MAX`) go in `script/say_as_word.txt`.
+  (`MAX`) go in `script/say_as_word.txt`. The spacing is an instruction to the voice only: on screen the acronym is
+  written as the record writes it (`NTSB`). `scripts/text_floor.py` flags a spelled acronym in screen text. *Why:*
+  Titan v5 showed "N-T-S-B" in 19 labels across all five acts, and four review rounds read past it.
 - `scripts/vo_lint.py script/vo.txt --say-as-word script/say_as_word.txt` must pass.
 - **To measure before the first full recording** (earlier work found a different ElevenLabs voice and model gave
   `...` almost no pause, and tags changed the voice): generate block 1 with the channel voice on the configured model and
@@ -633,6 +638,11 @@ starts) and confirm the voice stem's true peak in `mix_report.md` is back at its
 hearing clip's frame from `vo/timing.json`. *Why:* four re-takes (Titan, 17 NOV 2026) added 8.7 s; the clips' fixed
 frames laid a witness over our own narration (voice stem peak 0.0 dBTP instead of −2.8), and the music cues sat 1–9 s
 off their turns. `film_timing.py` also allowed 1.5 ms of rounding between back-to-back clips (it had stopped on it).
+Two witnesses back to back, then our sentence: a clip in `script/holds.json` can take `after_clip: "<clip>"` in place
+of `replace`; it plays straight after that clip's gap and replaces nothing. *Why:* Titan's NTSB clip had replaced the
+sentence that reconciled it with Brooks's clip just before, so two sworn witnesses seemed to contradict each other.
+Before replacing the mix on Drive, check that no render is still running: the join step pulls `<slug>/mix/mix.wav`,
+and a longer new mix would land under the old picture.
 
 ### 7.8 Checks before the owner hears a narration
 1. Fact gate: every factual line maps to a confirmed or attributed `claims.csv` row.
@@ -696,6 +706,12 @@ documented likelihood, never as certainty.
   audio. Public dispatch or ATC audio is used only when its release and licence are confirmed; LiveATC-style archives
   have their own terms.
 - Victims: no faces, no names unless they are already public and relevant; their story told with dignity.
+- **A traced figure keeps the record's own axes and orientation,** and is checked beside the page it came from
+  before a line of narration points at it. A digitised trace is checked for spikes (a legend or label picked up with
+  the line). *Why (Titan, 17 NOV 2026):* the traced dive-80 depth line was drawn upside down, with a spike from the
+  figure's legend at 07:49–08:11; OceanGate's plot (NTSB fig. 20) has depth rising on a right-hand axis, parallel to
+  the strain. A draft line built on our own picture ("depth on its own chart") would have said the opposite of the
+  record, and only the independent fact-check, reading the figure, caught it.
 
 ### 9.6 Fairness (real companies and real people)
 These films name large companies and sometimes executives, in countries where defamation law is serious (the UK
