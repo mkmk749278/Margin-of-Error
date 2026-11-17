@@ -1,6 +1,30 @@
-# Titan: status (16 NOV 2026, second session, end)
+# Titan: status (17 NOV 2026, third session)
 
-## Done
+## Done this session: the picture, all five acts (Remotion, `films/titan/remotion/`)
+- **Acts I–V coded on the measured words** (`scenes/act1.tsx`, `act2`, `act3a`, `act3b`, `act3c`, `act45`):
+  1,662 word cues on 3,530 words; **sync audit 0 of 244 sentences fail** (`review/sync_audit.md`); text floor 0;
+  claims gate passes (130). Choreography tables generated from the code: `scenes/choreography/*.md`.
+- **The re-plot (signature 2) uses the NTSB's own points:** figs. 29–31 of Materials Lab report 24-012 are vector
+  graphics, so every plotted point was read from the PDF (`research/digitise/`); the points move from time order to
+  strain-vs-depth, then zoom to the first 1,000 m; the NTSB slopes land digit by digit. Dive 80's time trace (cold
+  open, sign-off) traced from fig. 26d.
+- **Real exhibits with located highlights:** CG-098 (incl. its photographs of the delaminated cut-off ends), CG-100
+  (the recorded 2018 meeting), CG 112 hearing pages, the USCG board report, NTSB MIR-25-36 (fig. 17 micrograph,
+  probable cause, footnote 42). Pages in `public/films/titan/pages/`, phrase specs in `remotion/data/*_spec.json`.
+- **Hearing clips play on picture** (USCG hearing video, unaltered) with the official transcript as captions, word by
+  word on the clip's own Whisper word times (`remotion/data/clip_words.json`).
+- **Real footage:** NOAA Titanic bow, the MBI's ROV video (tail cone, debris), DVIDS photos (hull 1 in 2019, recovered
+  hull pieces), CC BY reference footage (North Atlantic, St. John's, composite manufacturing, NDT), each credited and
+  labelled "reference" where a viewer could take it for the day. Built by `films/titan/render_media.sh`.
+- **Sound:** `sound/cues.json` (123 picture cues), `sound/mix.json` (library beds per passage; music out under the
+  axis turn, after the dive-88 line stops, and under the five names; effects from our synthesised bank).
+- `timing.ts` and `scripts/choreo_index.py` now look sentences up by id (sentences replaced by clips are absent).
+
+## Next
+1. 720p review cut on GitHub (`remotion-render.yml`, comp `Titan`), then `/review-cut` and the independent reviews.
+2. `media_manifest.csv` rows for every asset in `render_media.sh` (licences already checked in each `.info.json`).
+
+## Earlier (16 NOV 2026, second session)
 - **Narration v4 APPROVED by the owner (16 NOV 2026)** (`script/narration.md`, `script/vo.txt`, 3,567 words), after an
   independent fact-check v2, fairness pass v2 (both max effort, fresh contexts), an independent audience review (seven
   viewers; "reads as an investigation, not an opinion piece"), and Canada's TSB report M23A0169 read in full. Claims

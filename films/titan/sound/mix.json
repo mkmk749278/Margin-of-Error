@@ -1,0 +1,198 @@
+{
+ "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK \u00a712). Times in film seconds (vo/timing.json). Music: the channel's own library (Music-Library/forensic), slots overlapping 4 s, continuous; out (room tone stays) under the re-plot's axis turn (signature 2: 'no music under the turn'), for the 2 s after the dive-88 line stops (signature 3) and under the five names. Effects: our seeded synthesised bank (scripts/sfx_synth.py), no recordings. The seven USCG hearing clips play their own sound on the picture's frames at speech level; the music ducks deeper under them. Built 17 NOV 2026.",
+ "target_lufs": -14.0,
+ "max_tp": -1.0,
+ "voice": {
+  "comp_threshold_db": -34,
+  "comp_ratio": 4,
+  "makeup_db": 4,
+  "peak_dbtp": -2.8,
+  "target_lufs": -14.3
+ },
+ "music_duck_db": 8,
+ "clip_duck_db": 15,
+ "room": {
+  "file": "assets/sfx/room_bed.wav",
+  "rms_db": -31
+ },
+ "clips": [
+  {
+   "file": "assets/clips/h_brooks_flashlight.wav",
+   "frame": 29904,
+   "lufs": -15.5,
+   "why": "h_brooks_flashlight: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_brooks_decision.wav",
+   "frame": 31340,
+   "lufs": -15.5,
+   "why": "h_brooks_decision: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_brooks_diveagain.wav",
+   "frame": 32020,
+   "lufs": -15.5,
+   "why": "h_brooks_diveagain: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_brooks_linearity.wav",
+   "frame": 38013,
+   "lufs": -15.5,
+   "why": "h_brooks_linearity: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_kramer_time.wav",
+   "frame": 38887,
+   "lufs": -15.5,
+   "why": "h_kramer_time: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_brooks_cost.wav",
+   "frame": 53850,
+   "lufs": -15.5,
+   "why": "h_brooks_cost: USCG hearing video, unaltered"
+  },
+  {
+   "file": "assets/clips/h_brooks_safety.wav",
+   "frame": 57529,
+   "lufs": -15.5,
+   "why": "h_brooks_safety: USCG hearing video, unaltered"
+  }
+ ],
+ "music": [
+  {
+   "file": "assets/music/fx08_countdown.wav",
+   "start": 2.5,
+   "end": 121.8,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act I, the incident"
+  },
+  {
+   "file": "assets/music/fx02_mechanism.wav",
+   "start": 117.8,
+   "end": 290,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act II, the mechanism"
+  },
+  {
+   "file": "assets/music/fx07_evidence.wav",
+   "start": 286,
+   "end": 345,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act II, the monitor and its limits"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "start": 341.1,
+   "end": 515,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III opens on the 2018 report"
+  },
+  {
+   "file": "assets/music/fx07_evidence.wav",
+   "start": 511,
+   "end": 627,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III, dive 80 and the testimony",
+   "from": 60
+  },
+  {
+   "file": "assets/music/fx02_mechanism.wav",
+   "start": 623,
+   "end": 797,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III, the re-plot and the mechanism",
+   "from": 10
+  },
+  {
+   "file": "assets/music/fx09_aftermath.wav",
+   "start": 793,
+   "end": 967,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III, the winter in St. John's"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "start": 963,
+   "end": 1102,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III, the money and the regulator",
+   "from": 60
+  },
+  {
+   "file": "assets/music/fx04_cascade.wav",
+   "start": 1098.1,
+   "end": 1222,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act IV, the cascade"
+  },
+  {
+   "file": "assets/music/fx05_verdict.wav",
+   "start": 1218.0,
+   "end": 1368.23,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act V, the verdict"
+  },
+  {
+   "file": "assets/music/fx10_signoff.wav",
+   "start": 1379.54,
+   "end": 1385.25,
+   "rms_db": -25,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "the outro"
+  }
+ ],
+ "silences": [
+  {
+   "start": 669.16,
+   "end": 674.8,
+   "why": "signature 2: no music under the axis turn"
+  },
+  {
+   "start": 1186.49,
+   "end": 1189.59,
+   "why": "signature 3: the line stops; 2 s of room tone"
+  },
+  {
+   "start": 1366.73,
+   "end": 1380.54,
+   "why": "the five names, in silence"
+  }
+ ],
+ "sfx_trim_db": 0,
+ "sfx_files": {
+  "paper_slide": "assets/sfx/paper_slide.wav",
+  "stamp": "assets/sfx/stamp.wav",
+  "highlighter": "assets/sfx/highlighter.wav",
+  "relay_click": "assets/sfx/relay_click.wav",
+  "metal_snap_sub": "assets/sfx/metal_snap_sub.wav",
+  "pressure_drop": "assets/sfx/pressure_drop.wav",
+  "quartz_tick": "assets/sfx/quartz_tick.wav",
+  "pen_scratch": "assets/sfx/pen_scratch.wav",
+  "whoosh": "assets/sfx/whoosh.wav",
+  "cockpit_chime": "assets/sfx/cockpit_chime.wav",
+  "transformer_hum": "assets/sfx/transformer_hum.wav"
+ },
+ "extra_cues": []
+}

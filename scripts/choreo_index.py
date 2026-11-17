@@ -58,7 +58,7 @@ out=[('# Choreography index: Acts II–V (sentences 23–176)' if DEFAULT else f
  ('Sync audit: 177/177 sentences pass (`review/sync_audit.md`).' if DEFAULT else 'Sync audit: `review/sync_audit.md`.'),'']
 for s in sorted(cues):
     if DEFAULT and s<23: continue
-    S=t['sentences'][s]
+    S=next(x for x in t['sentences'] if x['id']==s)  # by id: clip-replaced sentences are absent from the list
     out+=[f"**{s}** · {S['text']}", '', '| Trigger | Frame (offset) | Scene | Change |','| :--- | :--- | :--- | :--- |']
     for k,(fr,w,sc,what) in sorted(cues[s].items(), key=lambda kv: kv[1][0]):
         out.append(f"| `{w.strip(',.:;?')}` | `F{fr}` (+{(fr-S['startFrame'])/60:.2f} s) | {sc} | {what} |")
