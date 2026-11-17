@@ -54,12 +54,13 @@ const captionTimes = (c: ClipEntry, fps: number): {line: string[]; at: number[]}
  * A hearing clip on the desk: the video in a plate (left), the witness's lower third and the transcript caption on the
  * right. The clip's picture runs from the gap before it to the gap after it (render media: 0.4 s either side).
  */
-export const HearingClip: React.FC<{f: number; id: string; lead?: number; tail?: number}> = ({f, id, lead: pre = 14, tail = 18}) => {
+export const HearingClip: React.FC<{f: number; id: string}> = ({f, id}) => {
 	const {fps} = useVideoConfig();
 	const c = clipOf(id);
-	const from = c.gapStartFrame - pre;
-	const to = c.gapEndFrame + tail;
-	const o = Math.min(lead(f, from + 12, 12), 1 - lead(f, to, 12));
+	// the panel lives exactly as long as the clip's picture: no empty video box either side
+	const from = c.gapStartFrame;
+	const to = c.gapEndFrame - 2;
+	const o = Math.min(lead(f, from + 10, 10), 1 - lead(f, to, 10));
 	if (o <= 0) return null;
 	const caps = captionTimes(c, fps);
 	const V = {x: 96, y: 120, w: 1120, h: 630};

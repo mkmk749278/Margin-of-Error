@@ -523,7 +523,7 @@ const Listen: React.FC = () => {
 			</AbsoluteFill>
 			{ring > 0 ? (
 				<AbsoluteFill style={{opacity: ring}}>
-					<RealFootage f={f} start={wf(48, 'listen') - 8} end={sf(49) + 34} src="footage/ndt_ring.mp4" date="" what="ACOUSTIC SENSORS ON A COMPOSITE RING · REFERENCE, NOT TITAN" source="J P / YOUTUBE · CC BY" push={0.06} />
+					<RealFootage f={f} start={wf(48, 'listen') - 8} end={sf(49) + 34} src="footage/ndt_ring.mp4" date="" what="ACOUSTIC SIGNALS FROM A COMPOSITE RING · REFERENCE, NOT TITAN" source="J P / YOUTUBE · CC BY" push={0.06} />
 					<div style={{position: 'absolute', left: 96, top: 96}}>
 						<Pop f={f} fps={fps} at={wf(48, "oceangate's")}>
 							<Chip text={f >= wf(48, 'listen') ? "OCEANGATE'S ANSWER: LISTEN TO IT" : f >= wf(48, 'answer') ? "OCEANGATE'S ANSWER" : 'OCEANGATE'} tone={colors.cyan} size={34} />

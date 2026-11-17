@@ -14,7 +14,7 @@ enc() { # name src start dur [extra vf]
 enc noaa_bow gov_noaa_titanic.mp4 18 10 "crop=1440:810:0:135"      # NOAA / Ronald H. Brown, ROV Hercules, 2004
 enc afp_place cc_afp_tecnalia.mp4 133 12 "crop=iw*0.82:ih*0.82:iw*0.09:0"   # bottom caption band cropped
 enc afp_robot cc_afp_tecnalia.mp4 66 10 "crop=iw*0.82:ih*0.82:iw*0.09:0"
-enc ndt_ring cc_ndt_canister1.mp4 101 12
+enc ndt_ring cc_ndt_canister2.mp4 99 12
 enc ndt_wave cc_ndt_canister1.mp4 121 8
 # Act III: hearing clips, picture only (sound comes from the mix), from 0.4 s before the cut to 0.4 s after
 enc h_brooks_flashlight h_brooks_flashlight.mp4 55.085 4.650

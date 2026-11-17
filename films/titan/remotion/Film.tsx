@@ -53,8 +53,9 @@ const Scenes: React.FC = () => {
 					const ang = (i * 2.399963) % (2 * Math.PI);
 					const k = 1 + 0.03 * e;
 					const t = (f - s.from) / 60;
-					const dx = Math.cos(ang) * 14 * (e - 0.5) + 9 * Math.sin((2 * Math.PI * t) / 11 + i);
-					const dy = Math.sin(ang) * 9 * (e - 0.5) + 6 * Math.sin((2 * Math.PI * t) / 14 + 2 * i);
+					// drift fast enough to read as motion on a still card (≥ 30 px per 4 s, PLAYBOOK §6.4)
+					const dx = Math.cos(ang) * 14 * (e - 0.5) + 13 * Math.sin((2 * Math.PI * t) / 8 + i);
+					const dy = Math.sin(ang) * 9 * (e - 0.5) + 7 * Math.sin((2 * Math.PI * t) / 10 + 2 * i);
 					const o = Math.min(1, (f - s.from + 1) / XF, (s.to - f) / XF);
 					return (
 						<AbsoluteFill key={s.id} style={{opacity: o, transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: '50% 48%'}}>

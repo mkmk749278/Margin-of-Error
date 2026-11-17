@@ -282,7 +282,6 @@ const Record: React.FC = () => {
 						<g key={row.d} opacity={Math.max(0.2, k)}>
 							<rect x={xOf(i) - 14} y={Y0} width={28} height={(yD(row.m) - Y0) * k + 2} fill={tone} opacity={isSix ? 0.6 + 0.4 * sixO : 0.7} />
 							<text x={xOf(i)} y={Y0 - 14} textAnchor="middle" style={T(26, {fill: colors.ink, fontWeight: 700})}>{row.d}</text>
-							<text x={xOf(i)} y={yD(3840) + 72} textAnchor="middle" style={T(26, {fill: colors.ink})} transform={`rotate(-50 ${xOf(i)} ${yD(3840) + 72})`}>{row.date}</text>
 						</g>
 					);
 				})}
@@ -290,7 +289,6 @@ const Record: React.FC = () => {
 				<g opacity={lead(f, wf(216, 'one'), 8)}>
 					<rect x={xOf(13) - 14} y={Y0} width={28} height={(yD(3363) - Y0) * d88 + 2} fill={colors.ink} />
 					<text x={xOf(13)} y={Y0 - 14} textAnchor="middle" style={T(26, {fill: colors.ink, fontWeight: 700})}>88</text>
-					<text x={xOf(13)} y={yD(3840) + 72} textAnchor="middle" style={T(26, {fill: colors.ink})} transform={`rotate(-50 ${xOf(13)} ${yD(3840) + 72})`}>18 JUN</text>
 				</g>
 				{gap > 0 ? (
 					<g opacity={gap}>
