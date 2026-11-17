@@ -1133,6 +1133,12 @@ metadata, and viewers in this niche reward visible care ("thank you for taking y
 (NTSB DCA24MA063, SEC Form 10-K, FRA, FAA): they are what the film is about, and search reads them. **No AI wording**
 in any description (owner, 2026-11-17: the voice note of 2026-11-06 is dropped); Studio's "Altered or synthetic
 content" is No (owner, 2026-11-10). No hashtag spam, no cross-promotion.
+**Search shape (owner, 2026-11-17: "keep the description clean and optimised for search"):** line 1 opens with the
+case name as viewers type it ("Alaska Airlines Flight 1282 door plug blowout", "East Palestine train derailment"),
+then the record id and the core fact, inside the first ~150 characters (what search and the collapsed description
+show). A Short's description: that line plus one or two facts, `Full investigation: <link>`, `Source: <report id>`,
+then three hashtags (case, company, investigator; the first three show above the title). Long-form ends with the
+corrections line and the same three hashtags. No #Shorts, no outrage words, nothing not already in `claims.csv`.
 
 ### 13.5 Shorts
 **Only where a beat works alone in 20–30 s** (one exhibit line, one threshold crossing, one mechanism), always with the

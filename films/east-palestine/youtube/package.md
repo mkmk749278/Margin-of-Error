@@ -107,9 +107,11 @@ wheel hub (a freight-car bearing is on the journal outboard of the wheel), and i
 ## Description
 
 ```
-On 3 February 2023 a hot bearing detector in Salem, Ohio, read a burning wheel bearing on Norfolk Southern train 32N at 103°F above the air. The line that would have told the crew to stop was 170°F. About nineteen miles later, at East Palestine, the axle came apart.
+East Palestine train derailment, from the NTSB final report (RIR-24-05): on 3 February 2023 a hot bearing detector in Salem, Ohio, read an overheating wheel bearing on Norfolk Southern train 32N at 103°F above the air. The line that would have told the crew to stop was 170°F. About 19 miles later, at East Palestine, the axle came apart.
 
-This film reads the US National Transportation Safety Board (NTSB) final report and the public hearing record: how wayside detectors work, where the 170° line comes from (the industry's car repair billing rules, in the NTSB's words), what Norfolk Southern's 2019 plan and filings show and what the record does not link to this bearing, the last 19 miles, and why the NTSB found the vent and burn of five vinyl chloride tank cars was not necessary. Findings are the NTSB's; Norfolk Southern's responses are given; our own reading is said as ours.
+This film reads the US National Transportation Safety Board (NTSB) report and the public hearing record: how hot bearing detectors work and why they stood 19 miles apart, where the 170° line comes from (the industry's car repair billing rules, in the NTSB's words), what Norfolk Southern's 2019 plan and SEC filings show and what the record does not link to this bearing, the last 19 miles, and why the NTSB found the vent and burn of five vinyl chloride tank cars was not necessary.
+
+Findings are the NTSB's; Norfolk Southern's responses are given; our own reading is said as ours.
 
 0:00 Norfolk Southern 32N passes the Salem detector
 2:08 How a hot bearing detector works
@@ -128,7 +130,7 @@ This film reads the US National Transportation Safety Board (NTSB) final report 
 
 Footage: NTSB drone video and aerial photograph, 5 February 2023; U.S. EPA ASPECT aircraft photograph, 7 February 2023; NTSB investigative hearing, day 2, 23 June 2023, two excerpts shown unaltered (all US government works). The Salem surveillance camera frame is shown as a labelled RECONSTRUCTION; the real frame is Figure 5 of the NTSB report.
 
-Sources
+SOURCES
 NTSB Railroad Investigation Report RIR-24-05, Norfolk Southern Railway Derailment and Hazardous Materials Release, East Palestine, Ohio (adopted 25 June 2024): https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2405%20CORRECTED.pdf
 NTSB public docket RRD23MR005: https://data.ntsb.gov/Docket/?NTSBNumber=RRD23MR005
 NTSB investigative hearing transcript, day 2, 23 June 2023 (DCA23HR001): https://data.ntsb.gov/Docket/Document/docBLOB?ID=16501748&FileExtension=pdf&FileName=DCA23HR001_NS%20Investigative%20Hearing.06-23-23.Day2-Rel.pdf
@@ -149,6 +151,9 @@ US District Court, N.D. Ohio, 4:23-cv-00242 (class settlement): https://www.govi
 US District Court, N.D. Ohio, 4:23-cv-00517 (the federal settlement and consent decree): https://www.govinfo.gov/content/pkg/USCOURTS-ohnd-4_23-cv-00517/pdf/USCOURTS-ohnd-4_23-cv-00517-4.pdf
 
 Reconstructions and illustrations are labelled on screen; values not from a record are marked ILLUSTRATIVE.
+Corrections are pinned in the comments the day we learn of them.
+
+#EastPalestine #NorfolkSouthern #NTSB
 ```
 
 ## Tags (Studio "Tags" field)
