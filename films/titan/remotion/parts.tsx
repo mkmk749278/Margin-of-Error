@@ -148,7 +148,7 @@ export const RealFootage: React.FC<{
 	under?: boolean;
 }> = ({f, start, end, src, video = true, from = 0, date, what, source, push = 0.08, focus = [0.5, 0.5], box = {x: 0, y: 0, w: 1920, h: 1080}, label, rate = 1, under = false}) => {
 	const {fps} = useVideoConfig();
-	const o = Math.min(lead(f, start, 12), 1 - lead(f, end - 14, 14));
+	const o = Math.min(lead(f, start, 12), 1 - lead(f, end, 14)); // fades out on `end`, with the labels that sit on it
 	if (o <= 0) return null;
 	const k = Math.min(1, Math.max(0, (f - start) / Math.max(1, end - start)));
 	const s = 1 + push * (k * k * (3 - 2 * k));
