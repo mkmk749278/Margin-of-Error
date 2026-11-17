@@ -14,7 +14,13 @@
   `titan/review/viewer_cut_r2.md`, now `review/viewer_review_v2_720p.md`) and was checked point by point
   (`review/viewer_review_v2_720p_check.md`); its picture points are fixed for v5.
 - **Cut v5 rendering** (`titan_review_v5_720p.mp4`): measure it, then it goes to the owner.
-- **For the owner (narration, each one sentence, optional):** reconcile Brooks's "linearity with depth" with the
+- **Owner decision (17 NOV 2026): where the record has two accounts, Claude decides the wording and says what each
+  report says** (no further owner gate for these lines). Next session: write the Brooks/NTSB line (both on the
+  record: what Brooks said he looked for; how the NTSB says the plots were drawn) and the TSB +98% vs NTSB +75%
+  line (two measures), fact-check at max, re-take with the API, splice, re-time.
+- **Next session first:** pull and measure cut v5 (`titan_review_v5_720p.mp4`, run started 07:35 UTC), write
+  `picture_gate_r5.md`; then the two lines above; then Act II's "system had limits" card (open on the sensor ring).
+- **Earlier owner leads (now Claude's call):** reconcile Brooks's "linearity with depth" with the
   NTSB's "plotted against time"; say that Canada measured the bend differently (+98% vs +75%). Research leads
   from the viewers (each needs a source first): the 2023 search noises, OceanGate's view on jurisdiction, who the
   five were, ticket price. Structure note: Act III runs 12.5 min (the viewers suggested splitting it).
