@@ -10,9 +10,15 @@
   sync audit 0 of 244; mix −14.0 LUFS / −1.4 dBTP (Drive `titan/mix/mix.wav`).
 - **Round 4:** the law, the two myths, the last findings and Brooks's conversion now each on their record page;
   "What now?" no longer opens on an empty frame.
-- **Cut v4 rendering** on GitHub (`titan_review_v4_720p.mp4`, 12 runners): review it with `/review-cut`
-  (`picture_gate_r4.md`), then it goes to the owner with the viewer review.
-- Open: viewer-panel review session is waiting for the owner to allow the Drive token in that session; the SRT
+- **Cut v4** reviewed (`review/picture_gate_r4.md`). The viewer panel's report on v2 arrived (Drive
+  `titan/review/viewer_cut_r2.md`, now `review/viewer_review_v2_720p.md`) and was checked point by point
+  (`review/viewer_review_v2_720p_check.md`); its picture points are fixed for v5.
+- **Cut v5 rendering** (`titan_review_v5_720p.mp4`): measure it, then it goes to the owner.
+- **For the owner (narration, each one sentence, optional):** reconcile Brooks's "linearity with depth" with the
+  NTSB's "plotted against time"; say that Canada measured the bend differently (+98% vs +75%). Research leads
+  from the viewers (each needs a source first): the 2023 search noises, OceanGate's view on jurisdiction, who the
+  five were, ticket price. Structure note: Act III runs 12.5 min (the viewers suggested splitting it).
+- Open: the SRT (American spelling) is package-step work. `media_manifest.csv` done.
   (American spelling) and `media_manifest.csv` rows are package-step work.
 
 ## Done this session: the picture, all five acts (Remotion, `films/titan/remotion/`)
