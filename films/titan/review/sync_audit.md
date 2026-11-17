@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 1674 word cues on 3555 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+244 sentences · 1675 word cues on 3555 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -108,7 +108,7 @@
 | 105 | 9:24.8 | 8/16 | 0.9 s ok |  | Brooks said that, without being a qualified mechanical engineer, he fo |
 | 106 | 9:30.5 | 7/16 | 0.9 s ok |  | A contractor on that expedition testified that she asked him whether t |
 | 107 | 9:36.1 | 9/27 | 1.3 s ok |  | In her account, he said it was only a few microns, and that the next t |
-| 108 | 9:43.8 | 8/20 | 1.0 s ok |  | Brooks himself testified that they had converted the shift into a phys |
+| 108 | 9:43.8 | 9/20 | 1.0 s ok |  | Brooks himself testified that they had converted the shift into a phys |
 | 109 | 9:51.3 | 4/8 | 0.7 s ok |  | Titan dived again on the nineteenth of July. |
 | 110 | 9:54.7 | 8/15 | 1.0 s ok |  | Brooks testified that after that dive, they didn't see any further shi |
 | 111 | 10:00.4 | 2/3 | 0.5 s ok |  | No loud bangs. |

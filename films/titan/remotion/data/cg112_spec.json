@@ -13,4 +13,7 @@
  "plausible": {"page": 786, "phrase": "without being really a qualified mechanical engineer, his explanation sounded plausible"},
  "barely": {"page": 802, "phrase": "it was under the 5,000 threshold or maybe just barely over it"},
  "microns": {"page": 1405, "phrase": "he said, well, it was only a few microns."},
- "nexttwo": {"page": 1405, "phrase": "we'll do the next two dives on mission 5 and when it gets back to Seattle, we'll do a visual inspection."}}
+ "nexttwo": {"page": 1405, "phrase": "we'll do the next two dives on mission 5 and when it gets back to Seattle, we'll do a visual inspection."},
+ "physical": {"page": 769, "phrase": "shift that you see on the plot to the actual physical distance"},
+ "smallmove": {"page": 769, "phrase": "the level shift that we saw or the amplitude shift was relatively small movement"}
+}

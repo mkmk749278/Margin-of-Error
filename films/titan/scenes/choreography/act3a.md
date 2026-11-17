@@ -518,14 +518,15 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `testified` | `F35077` (+0.85 s) | Theory | text: BROOKS TESTIFIED |
-| `converted` | `F35140` (+1.90 s) | Theory | lead · <span style={{opacity: lead(f, wf(108, 'converted'), 8), color: colors |
-| `shift` | `F35183` (+2.62 s) | Theory | text: THE SHIFT |
-| `physical` | `F35226` (+3.33 s) | Theory | text: A DISTANCE |
-| `distance` | `F35254` (+3.80 s) | Theory | text: A DISTANCE |
-| `judged` | `F35313` (+4.78 s) | Theory | text: JUDGED: |
-| `relatively` | `F35350` (+5.40 s) | Theory | <Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors. |
-| `movement` | `F35409` (+6.38 s) | Theory | <Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors. |
+| `Brooks` | `F35024` (+-0.03 s) | Theory | text: BROOKS TESTIFIED: |
+| `testified` | `F35077` (+0.85 s) | Theory | text: BROOKS TESTIFIED: |
+| `converted` | `F35140` (+1.90 s) | Theory | text: THE SHIFT / A PHYSICAL DISTANCE · |
+| `shift` | `F35183` (+2.62 s) | Theory | text: THE SHIFT / A PHYSICAL DISTANCE · |
+| `physical` | `F35226` (+3.33 s) | (scene list) | sound effect cue |
+| `distance` | `F35254` (+3.80 s) | Theory | text: THE SHIFT / A PHYSICAL DISTANCE · |
+| `judged` | `F35313` (+4.78 s) | Theory | text: JUDGED |
+| `relatively` | `F35350` (+5.40 s) | (scene list) | sound effect cue |
+| `movement` | `F35409` (+6.38 s) | Theory | text: JUDGED |
 
 **109** · Titan dived again on the nineteenth of July.
 

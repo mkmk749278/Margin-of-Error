@@ -501,7 +501,7 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `What` | `F79700` (+0.03 s) | Verdict | lead · <div style={{position: 'absolute', left: 0, right: 0, top: 140, textAl |
+| `What` | `F79700` (+0.03 s) | Verdict | lead · <div style={{position: 'absolute', left: 0, right: 0, top: interpolate |
 
 **239** · The N - T - S - B made four recommendations to the U - S Coast Guard.
 

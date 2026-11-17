@@ -527,18 +527,13 @@ const Theory: React.FC = () => {
 				<Wd f={f} at={wf(107, 'next')} lightAt={wf(107, 'ahead')}>NEXT TWO DIVES AHEAD · </Wd>
 				<Wd f={f} at={wf(107, 'visual')} lightAt={wf(107, 'seattle')}>LOOK IN SEATTLE</Wd>
 			</Note>
-			<Card x={360} y={300} w={1200} o={vis(f, sf(108) - 10, ef(108) + 24)} accent={colors.amber} style={{padding: '30px 40px'}}>
-				<div style={T(28, lit(f, wf(108, 'testified'), colors.amber))}>BROOKS TESTIFIED</div>
-				<div style={{marginTop: 18, display: 'flex', alignItems: 'center', gap: 26, ...T(40, {}), fontWeight: 700}}>
-					<Wd f={f} at={wf(108, 'shift')} tone={colors.amber} bold>THE SHIFT</Wd>
-					<span style={{opacity: lead(f, wf(108, 'converted'), 8), color: colors.ink}}>→</span>
-					<Wd f={f} at={wf(108, 'physical')} lightAt={wf(108, 'distance')} tone={colors.cyan} bold>A DISTANCE</Wd>
-				</div>
-				<div style={{marginTop: 22, ...T(36, {})}}>
-					<Wd f={f} at={wf(108, 'judged')}>JUDGED: </Wd>
-					<Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors.ink} bold>"A RELATIVELY SMALL MOVEMENT"</Wd>
-				</div>
-			</Card>
+			{/* his own words on the transcript page (CG 112 p. 768): the conversion and the judgement, highlighted as said */}
+			<RecordPage set="cg112" start={sf(108) - 14} end={ef(108) + 24} hl={[{key: 'physical', at: wf(108, 'physical')}, {key: 'smallmove', at: wf(108, 'relatively')}]} label="EXHIBIT" title="BROOKS" pushTo={wf(108, 'converted')} />
+			<Note o={vis(f, sf(108) + 8, ef(108) + 16)}>
+				<Wd f={f} at={wf(108, 'brooks')} lightAt={wf(108, 'testified')} tone={colors.cyan}>BROOKS TESTIFIED: </Wd>
+				<Wd f={f} at={wf(108, 'shift')} tone={colors.amber} bold>THE SHIFT </Wd><Wd f={f} at={wf(108, 'converted')}>→ </Wd><Wd f={f} at={wf(108, 'physical')} lightAt={wf(108, 'distance')} tone={colors.amber} bold>A PHYSICAL DISTANCE · </Wd>
+				<Wd f={f} at={wf(108, 'judged')}>JUDGED </Wd><Wd f={f} at={wf(108, 'relatively')} lightAt={wf(108, 'movement')} tone={colors.ink} bold>"RELATIVELY SMALL MOVEMENT"</Wd>
+			</Note>
 		</>
 	);
 };
@@ -718,6 +713,9 @@ export const act3a: SceneDef[] = [
 		cues: [
 			{frame: wf(104, 'sprung'), sfx: 'metal_snap_sub', gainDb: -28},
 			{frame: wf(107, 'microns') - 15, sfx: 'highlighter', gainDb: -22},
+			{frame: sf(108) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(108, 'physical') - 15, sfx: 'highlighter', gainDb: -24},
+			{frame: wf(108, 'relatively') - 15, sfx: 'highlighter', gainDb: -22},
 		],
 	},
 	{

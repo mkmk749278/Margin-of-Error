@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {RecordPage} from '../docs';
@@ -321,7 +321,7 @@ const Verdict: React.FC = () => {
 	const {fps} = useVideoConfig();
 	const myths = vis(f, sf(217) - 10, ef(217) + 12);
 	const day = vis(f, sf(231) - 10, ef(232) + 14);
-	const company = vis(f, sf(236) - 10, ef(237) + 20);
+	const company = vis(f, sf(236) - 10, sf(238) - 14);
 	const recs = vis(f, sf(238) - 10, ef(245) + 30);
 	const recList: [string, [string, number][], number][] = [
 		['M-25-015', [['IMO ', wf(240, 'international')], ['SUBMERSIBLE GUIDANCE ', wf(240, 'submersibles')], ['→ ', wf(240, 'make')], ['MANDATORY', wf(240, 'mandatory')]], wf(240, 'one')],
@@ -501,7 +501,8 @@ const Verdict: React.FC = () => {
 			) : null}
 			{recs > 0 ? (
 				<AbsoluteFill style={{opacity: recs}}>
-					<div style={{position: 'absolute', left: 0, right: 0, top: 140, textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: 56, color: colors.ink, opacity: lead(f, wf(238, 'what'), 8)}}>
+					{/* the question lands centre-screen on its word, then rises to head the four answers as they are said */}
+					<div style={{position: 'absolute', left: 0, right: 0, top: interpolate(f, [sf(239) - 6, sf(239) + 24], [470, 140], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}), textAlign: 'center', fontFamily: sans, fontWeight: 700, fontSize: interpolate(f, [sf(239) - 6, sf(239) + 24], [84, 56], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}), color: colors.ink, opacity: lead(f, wf(238, 'what'), 8)}}>
 						What now?
 					</div>
 					<div style={{position: 'absolute', left: 220, top: 240, ...T(30, {})}}>
