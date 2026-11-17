@@ -103,9 +103,9 @@ Sync audit: `review/sync_audit.md`.
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
 | `number` | `F41477` (+0.40 s) | RePlot | lead · <div style={{...T(26, {color: colors.ink, letterSpacing: 2}), opacity: |
-| `N` | `F41544` (+1.52 s) | RePlot | text: THE N-T-S-B: / A LINE FITTED |
-| `fitted` | `F41591` (+2.30 s) | RePlot | text: THE N-T-S-B: / A LINE FITTED |
-| `line` | `F41617` (+2.73 s) | RePlot | text: THE N-T-S-B: / A LINE FITTED |
+| `N` | `F41544` (+1.52 s) | RePlot | text: THE NTSB: / A LINE FITTED |
+| `fitted` | `F41591` (+2.30 s) | RePlot | text: THE NTSB: / A LINE FITTED |
+| `line` | `F41617` (+2.73 s) | RePlot | text: THE NTSB: / A LINE FITTED |
 | `shallowest` | `F41652` (+3.32 s) | RePlot | text: TO THE SHALLOWEST STRETCH: |
 | `stretch` | `F41684` (+3.85 s) | RePlot | text: TO THE SHALLOWEST STRETCH: |
 | `fifteen` | `F41738` (+4.75 s) | RePlot | text: 15– / 50 M |
@@ -293,8 +293,8 @@ Sync audit: `review/sync_audit.md`.
 | `curves` | `F46045` (+1.00 s) | Gauges | text: THE CURVES STILL MATCH |
 | `match` | `F46095` (+1.83 s) | Gauges | text: THE CURVES STILL MATCH |
 | `which` | `F46148` (+2.72 s) | Gauges | <Note o={vis(f, wf(145, 'which') - 4, ef(146) + 14)} tone={colors.red}> |
-| `N` | `F46177` (+3.20 s) | Gauges | text: N-T-S-B: |
-| `said` | `F46224` (+3.98 s) | Gauges | text: N-T-S-B: |
+| `N` | `F46177` (+3.20 s) | Gauges | text: NTSB: |
+| `said` | `F46224` (+3.98 s) | Gauges | text: NTSB: |
 | `gauges` | `F46275` (+4.83 s) | (scene list) | sound effect cue |
 | `changed` | `F46332` (+5.78 s) | Gauges | text: THE GAUGES HAD NOT CHANGED · |
 
@@ -360,7 +360,7 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `found` | `F47896` (+1.03 s) | Mechanism | text: N-T-S-B: |
+| `found` | `F47896` (+1.03 s) | Mechanism | text: NTSB: |
 | `long` | `F47919` (+1.42 s) | Mechanism | text: LONG VOIDS IN THE BOND · |
 | `voids` | `F47940` (+1.77 s) | (scene list) | sound effect cue |
 | `bond` | `F47983` (+2.48 s) | Mechanism | hl= · <RecordPage set="mir" start={sf(151) - 14} end={ef(151) + 20} hl={[{ke |
@@ -413,10 +413,10 @@ Sync audit: `review/sync_audit.md`.
 | `eighty-two` | `F49125` (+1.58 s) | Mechanism | <Wd f={f} at={wf(155, 'eighty-two')} tone={colors.amber}>· 82 </Wd> |
 | `reached` | `F49200` (+2.83 s) | Mechanism | text: REACHED THE TITANIC |
 | `Titanic` | `F49226` (+3.27 s) | Mechanism | text: REACHED THE TITANIC |
-| `which` | `F49280` (+4.17 s) | Mechanism | text: N-T-S-B: / FIRST DAMAGE |
-| `said` | `F49349` (+5.32 s) | Mechanism | text: N-T-S-B: / FIRST DAMAGE |
-| `first` | `F49396` (+6.10 s) | Mechanism | text: N-T-S-B: / FIRST DAMAGE |
-| `damage` | `F49417` (+6.45 s) | Mechanism | text: N-T-S-B: / FIRST DAMAGE |
+| `which` | `F49280` (+4.17 s) | Mechanism | text: NTSB: / FIRST DAMAGE |
+| `said` | `F49349` (+5.32 s) | Mechanism | text: NTSB: / FIRST DAMAGE |
+| `first` | `F49396` (+6.10 s) | Mechanism | text: NTSB: / FIRST DAMAGE |
+| `damage` | `F49417` (+6.45 s) | Mechanism | text: NTSB: / FIRST DAMAGE |
 | `not` | `F49455` (+7.08 s) | Mechanism | text: NOT ENOUGH TO IMPLODE |
 | `implode` | `F49518` (+8.13 s) | Mechanism | text: NOT ENOUGH TO IMPLODE |
 
@@ -438,11 +438,11 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `finding` | `F50020` (+1.05 s) | Mechanism | text: N-T-S-B: / ANALYSIS |
-| `because` | `F50079` (+2.03 s) | Mechanism | text: N-T-S-B: / ANALYSIS |
-| `analysis` | `F50112` (+2.58 s) | Mechanism | text: N-T-S-B: / ANALYSIS |
-| `flawed` | `F50161` (+3.40 s) | Mechanism | text: N-T-S-B: / ANALYSIS |
-| `OceanGate` | `F50209` (+4.20 s) | Mechanism | text: N-T-S-B: / ANALYSIS |
+| `finding` | `F50020` (+1.05 s) | Mechanism | text: NTSB: / ANALYSIS |
+| `because` | `F50079` (+2.03 s) | Mechanism | text: NTSB: / ANALYSIS |
+| `analysis` | `F50112` (+2.58 s) | Mechanism | text: NTSB: / ANALYSIS |
+| `flawed` | `F50161` (+3.40 s) | Mechanism | text: NTSB: / ANALYSIS |
+| `OceanGate` | `F50209` (+4.20 s) | Mechanism | text: NTSB: / ANALYSIS |
 | `unable` | `F50256` (+4.98 s) | Mechanism | text: UNABLE TO IDENTIFY |
 | `identify` | `F50294` (+5.62 s) | Mechanism | text: UNABLE TO IDENTIFY |
 | `Titan` | `F50352` (+6.58 s) | Mechanism | text: DAMAGE / AFTER DIVE 80 · |

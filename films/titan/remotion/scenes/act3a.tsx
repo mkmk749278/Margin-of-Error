@@ -327,7 +327,7 @@ const Dive80: React.FC = () => {
 			) : null}
 			{panel > 0 ? (
 				<AbsoluteFill style={{opacity: panel}}>
-					<Mount x={160} y={150} w={W} h={H + 58} start={sf(84) - 12} end={ef(85) + 40} source="DIVE 80 · GROUP 4 STRAIN · NTSB MATERIALS LAB 24-012, FIG. 26 · ACOUSTIC PEAK: USCG MBI REPORT" labels={['TRACED']} lean={3}>
+					<Mount x={160} y={150} w={W} h={H + 58} start={sf(84) - 12} end={ef(85) + 40} source="DIVE 80 STRAIN: NTSB MATERIALS LAB 24-012, FIG. 26 · ACOUSTIC PEAK: USCG MBI" labels={['TRACED']} lean={3}>
 						<TimeTrace f={f} w={W} h={H} tEnd={tEnd} ae={ae} jump={jump} showDepth={0} />
 					</Mount>
 					<div style={{position: 'absolute', left: 660, top: 420, width: 660}}>
@@ -395,7 +395,7 @@ const Brooks: React.FC = () => {
 			{/* s90–s91: the insert inside, the cover outside, a flashlight down the gap */}
 			{gap > 0 ? (
 				<AbsoluteFill style={{opacity: gap}}>
-					<Mount x={140} y={130} w={1640} h={760} start={sf(90) - 10} end={clipOf('h_brooks_flashlight').gapStartFrame} source="THE HULL WALL, INSERT AND FAIRING · AS BROOKS DESCRIBED THEM, CG 112 P. 765–766" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
+					<Mount x={140} y={130} w={1640} h={760} start={sf(90) - 10} end={clipOf('h_brooks_flashlight').gapStartFrame} source="WALL, INSERT, FAIRING · AS BROOKS TESTIFIED, CG 112 P. 765–6" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
 					<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 						{/* outer cover (fairing) */}
 						<rect x={300} y={300} width={1320} height={60} fill={colors.sub} opacity={0.35 * lead(f, wf(90, 'covered'), 12)} />
@@ -598,7 +598,7 @@ const After80: React.FC = () => {
 			</div>
 			<Card x={120} y={954} w={1680} o={lead(f, wf(116, 'n'), 10) * (1 - 0)} accent={colors.cyan} style={{padding: '8px 18px'}}>
 				<div style={{...T(28, {}), whiteSpace: 'nowrap'}}>
-					<Wd f={f} at={wf(116, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+					<Wd f={f} at={wf(116, 'found')} tone={colors.cyan}>NTSB: </Wd>
 					<Wd f={f} at={wf(116, 'never')} lightAt={wf(116, 'signal')}>THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL </Wd>
 					<Wd f={f} at={wf(116, 'triggered')} lightAt={wf(116, 'alert')} tone={colors.red}>THAT WOULD HAVE TRIGGERED AN ALERT</Wd>
 				</div>

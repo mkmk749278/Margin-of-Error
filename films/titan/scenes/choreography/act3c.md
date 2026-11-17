@@ -162,8 +162,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F55191` (+0.22 s) | Money | text: THE N-T-S-B'S FINDINGS: |
-| `findings` | `F55235` (+0.95 s) | Money | text: THE N-T-S-B'S FINDINGS: |
+| `N` | `F55191` (+0.22 s) | Money | text: THE NTSB'S FINDINGS: |
+| `findings` | `F55235` (+0.95 s) | Money | text: THE NTSB'S FINDINGS: |
 | `not` | `F55289` (+1.85 s) | Money | text: DO NOT ADDRESS MONEY |
 | `money` | `F55334` (+2.60 s) | Money | text: DO NOT ADDRESS MONEY |
 
@@ -436,8 +436,8 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `October` | `F63773` (+0.98 s) | Law | lead · <g opacity={lead(f, wf(195, 'october'), 8)}> |
 | `twenty-five` | `F63821` (+1.78 s) | Law | <line x1={X(1993)} x2={X(1993) + (X(2025) - X(1993)) * span(f, wf(195, 'october' |
-| `N` | `F63899` (+3.08 s) | Law | text: N-T-S-B · |
-| `found` | `F63941` (+3.78 s) | Law | text: N-T-S-B · |
+| `N` | `F63899` (+3.08 s) | Law | text: NTSB · |
+| `found` | `F63941` (+3.78 s) | Law | text: NTSB · |
 | `never` | `F64026` (+5.20 s) | Law | text: GUIDANCE NEVER UPDATED |
 | `updated` | `F64056` (+5.70 s) | Law | text: NOT UPDATED TO MATCH · |
 | `match` | `F64095` (+6.35 s) | Law | text: NOT UPDATED TO MATCH · |
@@ -472,8 +472,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F64913` (+0.32 s) | Law | text: N-T-S-B: |
-| `found` | `F64974` (+1.33 s) | Law | text: N-T-S-B: |
+| `N` | `F64913` (+0.32 s) | Law | text: NTSB: |
+| `found` | `F64974` (+1.33 s) | Law | text: NTSB: |
 | `Titan` | `F65001` (+1.78 s) | Law | text: TITAN REGULARLY DIVED THERE |
 | `regularly` | `F65037` (+2.38 s) | Law | <rect x={1560} y={340} width={70} height={480 * span(f, wf(198, 'regularly') - 6 |
 | `dived` | `F65072` (+2.97 s) | Law | text: TITAN REGULARLY DIVED THERE |
@@ -487,8 +487,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F65352` (+0.28 s) | Law | text: N-T-S-B: |
-| `found` | `F65406` (+1.18 s) | Law | text: N-T-S-B: |
+| `N` | `F65352` (+0.28 s) | Law | text: NTSB: |
+| `found` | `F65406` (+1.18 s) | Law | text: NTSB: |
 | `voluntary` | `F65436` (+1.68 s) | Law | text: VOLUNTARY GUIDANCE |
 | `guidance` | `F65469` (+2.23 s) | Law | text: VOLUNTARY GUIDANCE |
 | `rules` | `F65523` (+3.13 s) | Law | text: AND SMALL-PASSENGER-VESSEL RULES |

@@ -95,7 +95,7 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 						left: 0,
 						right: 0,
 						bottom: 0,
-						height: S,
+						minHeight: S,
 						borderTop: `1px solid ${colors.border}`,
 						background: colors.card,
 						display: 'flex',
@@ -104,14 +104,15 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 						padding: '0 16px',
 						fontFamily: mono,
 						fontSize: 26,
-						letterSpacing: 0.6,
+						letterSpacing: 0.2,
 						color: colors.ink,
 						whiteSpace: 'nowrap',
 					}}
 				>
 					{tag ? <span style={{color: colors.amber, fontWeight: 700, flexShrink: 0}}>{tag}</span> : null}
-					{/* the honesty chips never give way: if a source line is ever too long it is cut, not the labels */}
-					<span style={{minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis'}}>{source}</span>
+					{/* the honesty chips never give way, and the source is never cut: a source too long for one line wraps and the
+					    strip grows upward (PLAYBOOK §6.7: text is never clipped) */}
+					<span style={{minWidth: 0, whiteSpace: 'normal', lineHeight: 1.25, padding: '6px 0'}}>{source}</span>
 					<span style={{flex: 1}} />
 					{labels.map((l) => (
 						<span key={l} style={{flexShrink: 0, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '0 8px', fontSize: 34, fontWeight: 700}}>

@@ -78,7 +78,7 @@ const Build: React.FC = () => {
 	const LH = 30;
 	return (
 		<>
-			<Mount x={120} y={100} w={1680} h={840} start={sf(23) - 14} end={ef(25) + 30} source="TITAN'S PRESSURE HULL · CONSTRUCTION: NTSB MIR-25-36, USCG MBI REPORT" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
+			<Mount x={120} y={100} w={1680} h={840} start={sf(23) - 14} end={ef(25) + 30} source="TITAN'S HULL · CONSTRUCTION: NTSB MIR-25-36, USCG MBI REPORT" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
 			<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 				{/* the usual way: a sphere */}
 				<g opacity={sphere * (1 - toCyl)}>
@@ -237,7 +237,7 @@ const Margin: React.FC = () => {
 	const P = {x: 1000, y: 190, w: 770};
 	return (
 		<>
-			<Mount x={120} y={100} w={1680} h={860} start={sf(28) - 14} end={ef(46) + 40} source="DESIGN GOAL, ANALYSIS, MODELS, TESTS: NTSB MIR-25-36 · USCG MBI REPORT · TSB M23A0169" labels={['DEPTHS TO SCALE']} lean={3} />
+			<Mount x={120} y={100} w={1680} h={860} start={sf(28) - 14} end={ef(46) + 40} source="GOAL, ANALYSIS, MODELS, TESTS: NTSB MIR-25-36 · USCG MBI · TSB M23A0169" labels={['DEPTHS TO SCALE']} lean={3} />
 			<div style={{position: 'absolute', left: 200, top: 120, ...T(34, lit(f, wf(28, 'strong'), colors.ink)), fontWeight: 700, opacity: lead(f, wf(28, 'how'), 10)}}>HOW STRONG WAS IT?</div>
 			<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 				{/* the depth scale */}
@@ -338,7 +338,7 @@ const Margin: React.FC = () => {
 			</div>
 			<div style={{position: 'absolute', left: P.x, top: P.y, width: P.w, opacity: panelO(wf(33, 'n') - 6, wf(34, 'scale') - 6)}}>
 				<Pop f={f} fps={fps} at={wf(33, 'n')}>
-					<Chip text="THE N-T-S-B NOTED" tone={colors.cyan} size={30} />
+					<Chip text="THE NTSB NOTED" tone={colors.cyan} size={30} />
 				</Pop>
 				<div style={{marginTop: 18, display: 'flex', flexDirection: 'column', gap: 10, ...T(32, {})}}>
 					<span style={{...T(28, {})}}><Wd f={f} at={wf(33, 'noted')}>NOTED: </Wd></span>
@@ -402,7 +402,7 @@ const Margin: React.FC = () => {
 			<div style={{position: 'absolute', left: P.x, top: P.y, width: P.w, opacity: panelO(wf(45, 'never') - 6, ef(46) + 40)}}>
 				<div style={{...T(40, lit(f, wf(45, 'failure'), colors.red)), fontWeight: 700}}>NEVER TESTED TO FAILURE</div>
 				<div style={{marginTop: 34, opacity: lead(f, wf(46, 'n'), 8)}}>
-					<Chip text="N-T-S-B · FINDINGS" tone={colors.cyan} size={30} />
+					<Chip text="NTSB · FINDINGS" tone={colors.cyan} size={30} />
 				</div>
 				<div style={{marginTop: 18, ...T(32, {}), lineHeight: 1.45}}>
 					<div style={{opacity: lead(f, wf(46, 'unlikely'), 8), ...lit(f, wf(46, 'unlikely'), colors.amber)}}>UNLIKELY <Wd f={f} at={wf(46, 'hull')}>THE HULL </Wd><Wd f={f} at={wf(46, 'ever')}>EVER HAD</Wd></div>
@@ -702,7 +702,7 @@ const Listen: React.FC = () => {
 									<span style={{color: colors.red, fontWeight: 700}}>0</span>
 								</span>
 								<span style={{opacity: lead(f, wf(57, 'n'), 8)}}>
-									<Chip text="N-T-S-B FOUND" tone={colors.cyan} size={28} />
+									<Chip text="NTSB FOUND" tone={colors.cyan} size={28} />
 								</span>
 							</div>
 							<div style={{marginTop: 10, ...T(34, {}), fontWeight: 700, whiteSpace: 'nowrap'}}>

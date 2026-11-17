@@ -610,7 +610,7 @@ Sync audit: `review/sync_audit.md`.
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
 | `N` | `F37590` (+0.27 s) | After80 | lead · <Card x={120} y={954} w={1680} o={lead(f, wf(116, 'n'), 10) * (1 - 0)} |
-| `found` | `F37639` (+1.08 s) | After80 | text: N-T-S-B: |
+| `found` | `F37639` (+1.08 s) | After80 | text: NTSB: |
 | `never` | `F37697` (+2.05 s) | After80 | text: THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL |
 | `signal` | `F37773` (+3.32 s) | After80 | text: THE SENSORS NEVER PRODUCED THE KIND OF SIGNAL |
 | `triggered` | `F37822` (+4.13 s) | After80 | text: THAT WOULD HAVE TRIGGERED AN ALERT |

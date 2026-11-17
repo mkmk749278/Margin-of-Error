@@ -63,7 +63,7 @@ const RePlot: React.FC = () => {
 	const pct = Math.round(rollTo(f, [{frame: wf(134, 'three') - 14, value: 0}, {frame: wf(134, 'quarters') + LAND, value: 75}]));
 	return (
 		<>
-			<Mount x={120} y={100} w={1680} h={860} start={sf(120) - 12} end={ef(134) + 40} source="GROUP 4 HOOP GAUGE · THE NTSB'S PLOTTED POINTS: MATERIALS LAB 24-012, FIGS. 29–31 · SLOPES: P. 7" labels={['NTSB DATA · REDRAWN']} lean={3} />
+			<Mount x={120} y={100} w={1680} h={860} start={sf(120) - 12} end={ef(134) + 40} source="GAUGE GROUP 4 HOOP · NTSB MATERIALS LAB 24-012, FIGS. 29–31, P. 7" labels={['NTSB DATA · REDRAWN']} lean={3} />
 			<Replot m={m} z={z} show={show} hi={hi} band={band} fit={fit} event={event} box={BOX} />
 			{/* the right-hand column */}
 			<div style={{position: 'absolute', left: R.x, top: R.y, width: R.w}}>
@@ -79,7 +79,7 @@ const RePlot: React.FC = () => {
 					<Wd f={f} at={wf(121, 'dives')}>THE DIVES: </Wd><Wd f={f} at={wf(121, 'hard')} lightAt={wf(121, 'compare')} tone={colors.red}>HARD TO COMPARE</Wd>
 				</div>
 				<div style={{position: 'absolute', top: 0, opacity: vis(f, wf(122, 'n'), wf(124, 'dive') - 6), ...T(30, {}), lineHeight: 1.55}}>
-					<Chip text="THE N-T-S-B" tone={colors.cyan} size={30} />
+					<Chip text="THE NTSB" tone={colors.cyan} size={30} />
 					<div style={{marginTop: 14}}>
 						<Wd f={f} at={wf(122, 'more')} lightAt={wf(122, 'appropriate')}>A MORE APPROPRIATE WAY: </Wd>
 						<Wd f={f} at={wf(122, 'plot')} lightAt={wf(122, 'strain')}>STRAIN </Wd>
@@ -134,7 +134,7 @@ const RePlot: React.FC = () => {
 				<Wd f={f} at={wf(129, 'bends')} lightAt={wf(129, 'away')} tone={colors.red} bold>BENDS AWAY</Wd>
 			</div>
 			<div style={{position: 'absolute', left: 290, top: 140, width: 960, ...T(28, {}), lineHeight: 1.45, opacity: lead(f, wf(130, 'fitted'), 8) * (1 - lead(f, wf(131, 'before'), 10))}}>
-				<Wd f={f} at={wf(130, 'n')} tone={colors.cyan}>THE N-T-S-B: </Wd><Wd f={f} at={wf(130, 'fitted')} lightAt={wf(130, 'line')} tone={colors.cyan}>A LINE FITTED </Wd>
+				<Wd f={f} at={wf(130, 'n')} tone={colors.cyan}>THE NTSB: </Wd><Wd f={f} at={wf(130, 'fitted')} lightAt={wf(130, 'line')} tone={colors.cyan}>A LINE FITTED </Wd>
 				<Wd f={f} at={wf(130, 'shallowest')} lightAt={wf(130, 'stretch')}>TO THE SHALLOWEST STRETCH:</Wd>
 				<br />
 				<Wd f={f} at={wf(130, 'fifteen')} tone={colors.cyan} bold>15–</Wd><Wd f={f} at={wf(130, 'hundred')} tone={colors.cyan} bold>1</Wd><Wd f={f} at={wf(130, 'fifty')} tone={colors.cyan} bold>50 M</Wd>
@@ -264,7 +264,7 @@ const Gauges: React.FC = () => {
 			) : null}
 			<RecordPage set="mir" start={wf(145, 'which') - 16} end={ef(146) + 24} hl={[{key: 'gages', at: wf(145, 'gauges')}]} label="EXHIBIT" title="FOOTNOTE 42" pushTo={wf(145, 'gauges') + 10} />
 			<Note o={vis(f, wf(145, 'which') - 4, ef(146) + 14)} tone={colors.red}>
-				<Wd f={f} at={wf(145, 'n')} lightAt={wf(145, 'said')} tone={colors.cyan}>N-T-S-B: </Wd>
+				<Wd f={f} at={wf(145, 'n')} lightAt={wf(145, 'said')} tone={colors.cyan}>NTSB: </Wd>
 				<Wd f={f} at={wf(145, 'gauges')} lightAt={wf(145, 'changed')}>THE GAUGES HAD NOT CHANGED · </Wd>
 				<Wd f={f} at={wf(146, 'hull')} lightAt={wf(146, 'had')} tone={colors.red} bold>THE HULL HAD</Wd>
 			</Note>
@@ -331,14 +331,14 @@ const Mechanism: React.FC = () => {
 			</AbsoluteFill>
 			<RecordPage set="mir" start={sf(151) - 14} end={ef(151) + 20} hl={[{key: 'voidsfig', at: wf(151, 'voids')}]} label="EXHIBIT" title="FIGURE 17 · LAYERS 1 AND 2" focus={{x: 200, y: 360, w: 1480, h: 820}} pushTo={wf(151, 'bond')} />
 			<Note o={vis(f, sf(151), ef(151) + 10)}>
-				<Wd f={f} at={wf(151, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
+				<Wd f={f} at={wf(151, 'found')} tone={colors.cyan}>NTSB: </Wd>
 				<Wd f={f} at={wf(151, 'long')} lightAt={wf(151, 'voids')} tone={colors.red}>LONG VOIDS IN THE BOND · </Wd>
 				<Wd f={f} at={wf(151, 'first')} lightAt={wf(151, 'second')} tone={colors.amber}>LAYERS 1–2 </Wd><Wd f={f} at={wf(151, 'layers')} tone={colors.amber}>· </Wd>
 				<Wd f={f} at={wf(151, 'third')} lightAt={wf(151, 'fourth')} tone={colors.amber}>LAYERS 3–4</Wd>
 			</Note>
 			{wall > 0 ? (
 				<AbsoluteFill style={{opacity: wall}}>
-					<Mount x={120} y={100} w={1680} h={860} start={sf(152) - 10} end={ef(157) + 20} source="THE WALL AT THE CYLINDER'S END · AS THE NTSB DESCRIBED IT, MIR-25-36 P. 51" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
+					<Mount x={120} y={100} w={1680} h={860} start={sf(152) - 10} end={ef(157) + 20} source="THE CYLINDER'S END · AS THE NTSB DESCRIBED IT, MIR-25-36 P. 51" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
 					<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
 						{/* outside water pressure: arrows, light then heavy */}
 						{Array.from({length: 9}).map((_, i) => (
@@ -394,7 +394,7 @@ const Mechanism: React.FC = () => {
 								<Wd f={f} at={wf(155, 'eighty-two')} tone={colors.amber}>· 82 </Wd>
 								<Wd f={f} at={wf(155, 'reached')} lightAt={wf(155, 'titanic')} tone={colors.cyan}>REACHED THE TITANIC</Wd>
 								<br />
-								<Wd f={f} at={wf(155, 'which')} lightAt={wf(155, 'said')} tone={colors.cyan}>N-T-S-B: </Wd><Wd f={f} at={wf(155, 'first')} lightAt={wf(155, 'damage')}>FIRST DAMAGE </Wd>
+								<Wd f={f} at={wf(155, 'which')} lightAt={wf(155, 'said')} tone={colors.cyan}>NTSB: </Wd><Wd f={f} at={wf(155, 'first')} lightAt={wf(155, 'damage')}>FIRST DAMAGE </Wd>
 								<Wd f={f} at={wf(155, 'not')} lightAt={wf(155, 'implode')} tone={colors.ink}>NOT ENOUGH TO IMPLODE</Wd>
 								<br />
 								<Wd f={f} at={wf(156, 'not')} lightAt={wf(156, 'wall')} tone={colors.amber}>NOT A CRACK THROUGH THE WALL</Wd>
@@ -407,7 +407,7 @@ const Mechanism: React.FC = () => {
 			) : null}
 			<RecordPage set="mir" start={sf(158) - 16} end={hold(158).from + hold(158).frames + 10} hl={[{key: 'unable', at: wf(158, 'unable')}, {key: 'removed', at: wf(158, 'immediately')}]} label="FINDING" title="CONCLUSION" pushTo={wf(158, 'flawed')} />
 			<Note o={vis(f, sf(158), hold(158).from + hold(158).frames)} tone={colors.red}>
-				<Wd f={f} at={wf(158, 'finding')} tone={colors.cyan}>N-T-S-B: </Wd><Wd f={f} at={wf(158, 'because')} lightAt={wf(158, 'analysis')} tone={colors.cyan}>ANALYSIS </Wd><Wd f={f} at={wf(158, 'flawed')} tone={colors.cyan}>FLAWED · </Wd><Wd f={f} at={wf(158, 'oceangate')}>OCEANGATE </Wd>
+				<Wd f={f} at={wf(158, 'finding')} tone={colors.cyan}>NTSB: </Wd><Wd f={f} at={wf(158, 'because')} lightAt={wf(158, 'analysis')} tone={colors.cyan}>ANALYSIS </Wd><Wd f={f} at={wf(158, 'flawed')} tone={colors.cyan}>FLAWED · </Wd><Wd f={f} at={wf(158, 'oceangate')}>OCEANGATE </Wd>
 				<Wd f={f} at={wf(158, 'unable')} lightAt={wf(158, 'identify')}>UNABLE TO IDENTIFY </Wd>
 				<Wd f={f} at={wf(158, 'titan')} lightAt={wf(158, 'damaged')} tone={colors.red}>DAMAGE </Wd><Wd f={f} at={wf(158, 'after')} lightAt={wf(158, 'eighty')} tone={colors.red}>AFTER DIVE 80 · </Wd>
 				<Wd f={f} at={wf(158, 'needed')} tone={colors.red} bold>REMOVE </Wd><Wd f={f} at={wf(158, 'immediately')} lightAt={wf(158, 'service')} tone={colors.red} bold>FROM SERVICE, IMMEDIATELY</Wd>

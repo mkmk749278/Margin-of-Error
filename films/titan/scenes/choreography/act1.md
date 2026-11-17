@@ -97,7 +97,7 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `After` | `F2543` (+0.03 s) | Monitor | BracketLock · <BracketLock f={f} fps={fps} word={wf(7, 'time')} x={W / 2 - 120} y={H |
 | `implosion` | `F2567` (+0.43 s) | Monitor | const toTrace = span(f, wf(7, 'strain') - 10, wf(8, 'implosion') + 10); |
-| `N` | `F2636` (+1.58 s) | Monitor | bump · <Chip text="N-T-S-B" tone={colors.cyan} size={34} style={{transform: ` |
+| `N` | `F2636` (+1.58 s) | Monitor | bump · <Chip text="NTSB" tone={colors.cyan} size={34} style={{transform: `sca |
 | `America's` | `F2722` (+3.02 s) | Monitor | text: U.S. NATIONAL TRANSPORTATION SAFETY BOARD |
 | `investigator` | `F2786` (+4.08 s) | Monitor | text: U.S. NATIONAL TRANSPORTATION SAFETY BOARD |
 | `plotted` | `F2846` (+5.08 s) | Monitor | flash · const same = Math.max(flash(f, wf(8, 'plotted'), 0), flash(f, wf(8, 's |

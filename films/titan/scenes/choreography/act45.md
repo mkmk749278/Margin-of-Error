@@ -37,8 +37,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F66776` (+0.27 s) | Year2023 | text: N-T-S-B: |
-| `calls` | `F66824` (+1.07 s) | Year2023 | text: N-T-S-B: |
+| `N` | `F66776` (+0.27 s) | Year2023 | text: NTSB: |
+| `calls` | `F66824` (+1.07 s) | Year2023 | text: NTSB: |
 | `unknown` | `F66903` (+2.38 s) | Year2023 | <Wd f={f} at={wf(202, 'unknown')} lightAt={wf(202, 'origin')} tone={colors.ink}  |
 | `origin` | `F66938` (+2.97 s) | Year2023 | <Wd f={f} at={wf(202, 'unknown')} lightAt={wf(202, 'origin')} tone={colors.ink}  |
 
@@ -116,8 +116,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F68869` (+0.28 s) | LastDive | text: N-T-S-B: |
-| `found` | `F68920` (+1.13 s) | LastDive | text: N-T-S-B: |
+| `N` | `F68869` (+0.28 s) | LastDive | text: NTSB: |
+| `found` | `F68920` (+1.13 s) | LastDive | text: NTSB: |
 | `existing` | `F68951` (+1.65 s) | LastDive | text: THE EXISTING DELAMINATIONS |
 | `delaminations` | `F68986` (+2.23 s) | (scene list) | sound effect cue |
 | `later` | `F69064` (+3.53 s) | LastDive | text: AND THE LATER DAMAGE |
@@ -507,8 +507,8 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F79787` (+0.40 s) | Verdict | text: THE N-T-S-B: |
-| `made` | `F79846` (+1.38 s) | Verdict | text: THE N-T-S-B: |
+| `N` | `F79787` (+0.40 s) | Verdict | text: THE NTSB: |
+| `made` | `F79846` (+1.38 s) | Verdict | text: THE NTSB: |
 | `four` | `F79868` (+1.75 s) | (scene list) | sound effect cue |
 | `recommendations` | `F79884` (+2.02 s) | Verdict | text: 4 RECOMMENDATIONS |
 | `U` | `F79961` (+3.30 s) | Verdict | text: TO THE U.S. COAST GUARD |

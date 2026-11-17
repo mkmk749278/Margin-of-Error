@@ -243,7 +243,7 @@ const Monitor: React.FC = () => {
 				</div>
 			) : null}
 			<div style={{position: 'absolute', left: 340, top: 96, display: 'flex', gap: 18, alignItems: 'center', opacity: ntsb * (1 - lead(f, wf(9, 'reports'), 12))}}>
-				<Chip text="N-T-S-B" tone={colors.cyan} size={34} style={{transform: `scale(${bump(f, fps, wf(8, 'n') + LAND, 0.06).toFixed(4)})`}} />
+				<Chip text="NTSB" tone={colors.cyan} size={34} style={{transform: `scale(${bump(f, fps, wf(8, 'n') + LAND, 0.06).toFixed(4)})`}} />
 				<span style={{...T(28, lit(f, wf(8, 'investigator'))), opacity: lead(f, wf(8, "america's"), 8)}}>U.S. NATIONAL TRANSPORTATION SAFETY BOARD</span>
 			</div>
 			<div style={{position: 'absolute', left: 340, top: 800, ...T(30, lit(f, wf(8, 'same'), colors.cyan)), opacity: lead(f, wf(8, 'same'), 8) * (1 - lead(f, wf(9, 'reports'), 12))}}>THE SAME NUMBERS · PLOTTED AGAINST DEPTH</div>
