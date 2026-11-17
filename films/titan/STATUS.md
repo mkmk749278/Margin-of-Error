@@ -1,6 +1,28 @@
-# Titan: status (17 NOV 2026, third session)
+# Titan: status (17 NOV 2026, fourth session)
 
-## Latest (17 NOV 2026, morning)
+## Latest (17 NOV 2026, afternoon)
+- **Cut v5 measured** (`review/picture_gate_r5.md`): −14.0 LUFS / −1.2 dBTP, length exact, no black, 0 still runs.
+  Found: the voice spelling "N-T-S-B" on screen in 19 labels, and 11 source strips cut with "…". Both fixed;
+  **cut v6** (run 44077129315) carries them. `text_floor.py` now flags a voice-spelled acronym on screen.
+- **Act II monitor card** opens on the hull's eight sensors (they shrink into its corner; channels 1, 3, 5 go dark
+  on "three"). Viewer panel v2's last open picture point.
+- **The two lines the owner left to Claude** (independent fact-check v3 at max, `review/factcheck_v3_lines.md`,
+  which corrected all three drafts against the record):
+  - s119 (after the Brooks and Kramer clips, now back to back via `after_clip`): "The depth was there, on the same
+    chart as the strain, but both ran against the clock." On screen: OceanGate's own dive-80 plot, depth rising on
+    its right-hand axis (NTSB fig. 20), traced; the old trace had depth upside down and a legend spike, fixed.
+  - s147–s148: the TSB measured each dive against itself, one gauge at the top of the hull, 10–300 m vs the whole
+    dive (+98%); the NTSB's "about three quarters" is dive against dive (claims C112, C123 revised, C131 new).
+  - Recorded with the API (Marcus, Eleven v4; 3 takes each, picked by Whisper and pitch; 7,543 characters left this
+    period), spliced into `assets/vo/takes/b02.mp3` (original in `takes_pre_retake5/`; Drive `titan/vo/titan_vo_b02_r5.mp3`).
+  - Film now **23:26.9**; timing, words, cues, choreography, mix rebuilt (−14.0 LUFS / −1.4 dBTP; voice stem −2.8).
+    Sync audit 0 of 245; text floor 0; claims gate passes (131).
+- **Next:** when v6 has finished joining, put the new mix on Drive `titan/mix/mix.wav` (old one kept as
+  `mix_v6.wav`), render **cut v7**, measure it (`picture_gate_r6.md`), then it goes to the owner.
+- Open: C130 (Kramer quote) not re-matched this round (uscg.mil refuses the container); viewer research leads
+  (2023 search noises, jurisdiction, the five, ticket price) and the Act III length note remain as below.
+
+## Earlier (17 NOV 2026, morning)
 - **Review cuts:** v2 and v3 on Drive `titan/renders/`; gates `review/picture_gate_r2.md`, `review/picture_gate_r3.md`.
   Forensic review v2 checked point by point (`review/forensic_review_v2_720p_check.md`): every point fixed or closed.
 - **The four approved narration re-takes** (owner, 17 NOV 2026) recorded with the API (Marcus, Eleven v4, 3 takes
