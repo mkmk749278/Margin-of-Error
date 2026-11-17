@@ -218,24 +218,26 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `Two` | `F71641` (+0.08 s) | Verdict | text: TWO THINGS |
-| `things` | `F71655` (+0.32 s) | Verdict | text: TWO THINGS |
-| `often` | `F71680` (+0.73 s) | Verdict | text: OFTEN SAID ABOUT TITAN |
-| `said` | `F71702` (+1.10 s) | Verdict | text: OFTEN SAID ABOUT TITAN |
+| `Two` | `F71641` (+0.08 s) | Verdict | text: Two things |
+| `things` | `F71655` (+0.32 s) | Verdict | text: Two things |
+| `often` | `F71680` (+0.73 s) | Verdict | <Wd f={f} at={wf(217, 'often')} lightAt={wf(217, 'said')} base={colors.ink}>ofte |
+| `said` | `F71702` (+1.10 s) | Verdict | <Wd f={f} at={wf(217, 'often')} lightAt={wf(217, 'said')} base={colors.ink}>ofte |
 
 **218** · Its controller: on dive eighty-one, the thruster controls were found to be mapped in reverse, and the pilot turned the controller around.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `controller` | `F71800` (+0.20 s) | Verdict | lead · <Card x={200} y={260} w={720} o={lead(f, wf(218, 'controller'), 10)} a |
-| `dive` | `F71881` (+1.55 s) | Verdict | text: DIVE 81: |
-| `eighty-one` | `F71902` (+1.90 s) | Verdict | text: DIVE 81: |
+| `controller` | `F71800` (+0.20 s) | Verdict | text: THE CONTROLLER · / DIVE 81: |
+| `dive` | `F71881` (+1.55 s) | Verdict | text: THE CONTROLLER · / DIVE 81: |
+| `eighty-one` | `F71902` (+1.90 s) | Verdict | text: THE CONTROLLER · / DIVE 81: |
 | `thruster` | `F71960` (+2.87 s) | Verdict | text: THRUSTER CONTROLS |
 | `controls` | `F71987` (+3.32 s) | Verdict | text: THRUSTER CONTROLS |
-| `mapped` | `F72059` (+4.52 s) | Verdict | text: MAPPED IN REVERSE · |
+| `mapped` | `F72059` (+4.52 s) | (scene list) | sound effect cue |
 | `reverse` | `F72085` (+4.95 s) | Verdict | text: MAPPED IN REVERSE · |
-| `pilot` | `F72155` (+6.12 s) | Verdict | text: THE PILOT TURNED IT AROUND |
-| `around` | `F72239` (+7.52 s) | Verdict | text: THE PILOT TURNED IT AROUND |
+| `pilot` | `F72155` (+6.12 s) | Verdict | text: THE PILOT TURNED / IT AROUND |
+| `turned` | `F72184` (+6.60 s) | (scene list) | sound effect cue |
+| `controller` | `F72204` (+6.93 s) | Verdict | text: THE PILOT TURNED / IT AROUND |
+| `around` | `F72239` (+7.52 s) | Verdict | text: THE PILOT TURNED / IT AROUND |
 
 **219** · None of the three reports names the controller as a cause.
 
@@ -244,23 +246,24 @@ Sync audit: `review/sync_audit.md`.
 | `None` | `F72311` (+0.07 s) | (scene list) | sound effect cue |
 | `three` | `F72338` (+0.52 s) | Verdict | text: NONE OF THE THREE / REPORTS |
 | `reports` | `F72352` (+0.75 s) | Verdict | text: NONE OF THE THREE / REPORTS |
-| `names` | `F72391` (+1.40 s) | Verdict | text: NAMES IT AS A CAUSE |
-| `cause` | `F72473` (+2.77 s) | Verdict | text: NAMES IT AS A CAUSE |
+| `names` | `F72391` (+1.40 s) | Verdict | text: NAMES THE CONTROLLER / AS A CAUSE |
+| `controller` | `F72416` (+1.82 s) | Verdict | text: NAMES THE CONTROLLER / AS A CAUSE |
+| `cause` | `F72473` (+2.77 s) | Verdict | text: NAMES THE CONTROLLER / AS A CAUSE |
 
 **220** · Its window: the Coast Guard board criticised it as untested and uncertified, but found it unlikely that the window caused the implosion.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `window` | `F72559` (+0.25 s) | Verdict | lead · <Card x={1000} y={260} w={720} o={lead(f, wf(220, 'window'), 10)} acce |
-| `Coast` | `F72621` (+1.28 s) | Verdict | text: COAST GUARD BOARD: |
-| `board` | `F72656` (+1.87 s) | Verdict | text: COAST GUARD BOARD: |
+| `Coast` | `F72621` (+1.28 s) | Verdict | text: THE COAST GUARD BOARD: |
+| `board` | `F72656` (+1.87 s) | Verdict | text: THE COAST GUARD BOARD: |
+| `criticised` | `F72672` (+2.13 s) | Verdict | hl= · <RecordPage set="roi" start={sf(220) - 14} end={ef(221) + 20} page={28 |
 | `untested` | `F72741` (+3.28 s) | Verdict | text: UNTESTED, UNCERTIFIED · |
 | `uncertified` | `F72794` (+4.17 s) | Verdict | text: UNTESTED, UNCERTIFIED · |
-| `found` | `F72877` (+5.55 s) | Verdict | text: FOUND IT UNLIKELY / THE WINDOW CAUSED |
-| `unlikely` | `F72901` (+5.95 s) | Verdict | text: FOUND IT UNLIKELY / THE WINDOW CAUSED |
-| `window` | `F72959` (+6.92 s) | Verdict | text: FOUND IT UNLIKELY / THE WINDOW CAUSED |
-| `caused` | `F72986` (+7.37 s) | Verdict | text: FOUND IT UNLIKELY / THE WINDOW CAUSED |
-| `implosion` | `F73012` (+7.80 s) | Verdict | text: FOUND IT UNLIKELY / THE WINDOW CAUSED |
+| `found` | `F72877` (+5.55 s) | Verdict | text: UNLIKELY / THE WINDOW CAUSED |
+| `unlikely` | `F72901` (+5.95 s) | (scene list) | sound effect cue |
+| `window` | `F72959` (+6.92 s) | Verdict | text: UNLIKELY / THE WINDOW CAUSED |
+| `caused` | `F72986` (+7.37 s) | Verdict | text: UNLIKELY / THE WINDOW CAUSED |
+| `implosion` | `F73012` (+7.80 s) | Verdict | text: UNLIKELY / THE WINDOW CAUSED |
 
 **221** · All three reports place the failure in the hull.
 
@@ -437,12 +440,10 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `implosion` | `F77905` (+1.15 s) | Verdict | text: THE IMPLOSION CAUSED |
 | `caused` | `F77946` (+1.83 s) | Verdict | text: THE IMPLOSION CAUSED |
-| `immediate` | `F77972` (+2.27 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
-| `loss` | `F78007` (+2.85 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
-| `all` | `F78044` (+3.47 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
-| `lives` | `F78059` (+3.72 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
-| `on` | `F78080` (+4.07 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
-| `board` | `F78091` (+4.25 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES |
+| `immediate` | `F77972` (+2.27 s) | (scene list) | sound effect cue |
+| `loss` | `F78007` (+2.85 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES · |
+| `all` | `F78044` (+3.47 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES · |
+| `lives` | `F78059` (+3.72 s) | Verdict | text: THE IMMEDIATE LOSS / OF ALL LIVES · |
 | `before` | `F78124` (+4.80 s) | Verdict | text: BEFORE ANY DISTRESS CALL |
 | `call` | `F78204` (+6.13 s) | Verdict | text: BEFORE ANY DISTRESS CALL |
 
@@ -450,12 +451,12 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F78264` (+0.20 s) | Verdict | text: N-T-S-B: |
-| `found` | `F78311` (+0.98 s) | Verdict | text: N-T-S-B: |
+| `N` | `F78264` (+0.20 s) | Verdict | text: THE NTSB: |
+| `found` | `F78311` (+0.98 s) | Verdict | text: THE NTSB: |
 | `search` | `F78337` (+1.42 s) | Verdict | text: SEARCH AND RESCUE |
 | `rescue` | `F78364` (+1.87 s) | Verdict | text: SEARCH AND RESCUE |
-| `not` | `F78411` (+2.65 s) | Verdict | text: COULD NOT HAVE SAVED THEM · |
-| `saved` | `F78438` (+3.10 s) | Verdict | text: COULD NOT HAVE SAVED THEM · |
+| `not` | `F78411` (+2.65 s) | (scene list) | sound effect cue |
+| `saved` | `F78438` (+3.10 s) | Verdict | text: COULD NOT HAVE SAVED THEM |
 
 **235** · With assets ready, it found, Titan would likely have been found sooner.
 
@@ -463,10 +464,10 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `assets` | `F78509` (+0.22 s) | Verdict | text: WITH ASSETS READY, |
 | `ready` | `F78535` (+0.65 s) | Verdict | text: WITH ASSETS READY, |
-| `Titan` | `F78618` (+2.03 s) | Verdict | text: TITAN / LIKELY FOUND |
-| `likely` | `F78659` (+2.72 s) | Verdict | text: TITAN / LIKELY FOUND |
-| `found` | `F78704` (+3.47 s) | Verdict | text: TITAN / LIKELY FOUND |
-| `sooner` | `F78728` (+3.87 s) | Verdict | text: TITAN / LIKELY FOUND |
+| `Titan` | `F78618` (+2.03 s) | Verdict | text: TITAN / WOULD LIKELY HAVE BEEN FOUND |
+| `likely` | `F78659` (+2.72 s) | (scene list) | sound effect cue |
+| `found` | `F78704` (+3.47 s) | Verdict | text: TITAN / WOULD LIKELY HAVE BEEN FOUND |
+| `sooner` | `F78728` (+3.87 s) | Verdict | text: TITAN / WOULD LIKELY HAVE BEEN FOUND |
 
 **236** · OceanGate suspended its operations in July twenty twenty-three.
 

@@ -343,27 +343,27 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `N` | `F61040` (+0.57 s) | Law | text: BY THE NTSB'S READING / OF THE LAW: |
-| `reading` | `F61097` (+1.52 s) | Law | text: BY THE NTSB'S READING / OF THE LAW: |
-| `law` | `F61134` (+2.13 s) | Law | text: BY THE NTSB'S READING / OF THE LAW: |
+| `N` | `F61040` (+0.57 s) | Law | text: By the NTSB's reading |
+| `reading` | `F61097` (+1.52 s) | Law | text: By the NTSB's reading |
+| `law` | `F61134` (+2.13 s) | Law | <Wd f={f} at={wf(188, 'law')} base={colors.ink} tone={colors.cyan}>of the law,</ |
 | `not` | `F61193` (+3.12 s) | (scene list) | sound effect cue |
 
 **189** · Under U - S law, the N - T - S - B notes, a submersible carrying even one passenger for hire is a small passenger vessel, and must be inspected by the Coast Guard.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `U` | `F61295` (+0.37 s) | Law | text: U.S. LAW, |
-| `law` | `F61318` (+0.75 s) | Law | text: U.S. LAW, |
-| `N` | `F61365` (+1.53 s) | Law | text: AS THE N-T-S-B NOTES: |
-| `notes` | `F61406` (+2.22 s) | Law | text: AS THE N-T-S-B NOTES: |
-| `submersible` | `F61454` (+3.02 s) | Law | text: A SUBMERSIBLE CARRYING |
+| `U` | `F61295` (+0.37 s) | Law | text: U.S. LAW, / THE NTSB NOTES: |
+| `law` | `F61318` (+0.75 s) | Law | text: U.S. LAW, / THE NTSB NOTES: |
+| `N` | `F61365` (+1.53 s) | Law | text: U.S. LAW, / THE NTSB NOTES: |
+| `notes` | `F61406` (+2.22 s) | Law | text: U.S. LAW, / THE NTSB NOTES: |
+| `submersible` | `F61454` (+3.02 s) | (scene list) | sound effect cue |
 | `carrying` | `F61494` (+3.68 s) | Law | text: A SUBMERSIBLE CARRYING |
 | `even` | `F61525` (+4.20 s) | Law | text: EVEN ONE |
 | `one` | `F61550` (+4.62 s) | Law | text: EVEN ONE |
 | `passenger` | `F61562` (+4.82 s) | Law | text: PASSENGER FOR HIRE |
 | `hire` | `F61605` (+5.53 s) | Law | text: PASSENGER FOR HIRE |
-| `is` | `F61633` (+6.00 s) | Law | <Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>= A SMALL PASSENGER VES |
-| `vessel` | `F61703` (+7.17 s) | Law | <Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>= A SMALL PASSENGER VES |
+| `is` | `F61633` (+6.00 s) | Law | text: IS A SMALL PASSENGER VESSEL |
+| `vessel` | `F61703` (+7.17 s) | Law | text: IS A SMALL PASSENGER VESSEL |
 | `must` | `F61752` (+7.98 s) | Law | text: MUST BE INSPECTED |
 | `inspected` | `F61774` (+8.35 s) | Law | text: MUST BE INSPECTED |
 | `by` | `F61807` (+8.90 s) | Law | text: BY THE COAST GUARD |
@@ -373,9 +373,9 @@ Sync audit: `review/sync_audit.md`.
 
 | Trigger | Frame (offset) | Scene | Change |
 | :--- | :--- | :--- | :--- |
-| `OceanGate` | `F61888` (+0.05 s) | Law | text: OCEANGATE · TITAN · USCG MBI REPORT; NTSB MIR-25-36 |
+| `OceanGate` | `F61888` (+0.05 s) | Law | text: OCEANGATE · TITAN: |
 | `registered` | `F61948` (+1.05 s) | (scene list) | sound effect cue |
-| `Titan` | `F61981` (+1.60 s) | Law | text: OCEANGATE · TITAN · USCG MBI REPORT; NTSB MIR-25-36 |
+| `Titan` | `F61981` (+1.60 s) | Law | text: OCEANGATE · TITAN: |
 | `arranged` | `F62050` (+2.75 s) | Law | <Chip text={f >= wf(190, 'arranged') ? 'NO INSPECTION ARRANGED' : 'NO INSPECTION |
 | `inspection` | `F62085` (+3.33 s) | Law | bump · <span style={{opacity: lead(f, wf(190, 'inspection'), 8), transform: ` |
 

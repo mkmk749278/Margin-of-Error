@@ -326,7 +326,7 @@ const Law: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const q = vis(f, sf(187) - 8, ef(187) + 14);
-	const law = vis(f, sf(188) - 10, ef(190) + 20);
+	const law = vis(f, sf(188) - 10, ef(188) + 14);
 	const timeline = vis(f, sf(192) - 10, ef(196) + 20);
 	const rescue = vis(f, sf(197) - 10, ef(198) + 20);
 	const X = (y: number) => 300 + (y - 1993) * 42;
@@ -340,38 +340,42 @@ const Law: React.FC = () => {
 				</div>
 			</AbsoluteFill>
 			{law > 0 ? (
-				<AbsoluteFill style={{opacity: law}}>
-					<Card x={240} y={170} w={1440} o={1} accent={colors.cyan} style={{padding: '30px 40px'}}>
-						<div style={{...T(34, {}), fontWeight: 700}}>
-							<Wd f={f} at={wf(188, 'n')} lightAt={wf(188, 'reading')} tone={colors.cyan}>BY THE NTSB'S READING </Wd><Wd f={f} at={wf(188, 'law')} tone={colors.cyan}>OF THE LAW: </Wd>
-							<Wd f={f} at={wf(188, 'not')} tone={colors.red} bold>IT WAS NOT</Wd>
-						</div>
-						<div style={{marginTop: 26, ...T(32, {}), lineHeight: 1.5}}>
-							<Wd f={f} at={wf(189, 'u')} lightAt={wf(189, 'law')}>U.S. LAW, </Wd>
-							<Wd f={f} at={wf(189, 'n')} lightAt={wf(189, 'notes')} tone={colors.cyan}>AS THE N-T-S-B NOTES: </Wd>
-							<br />
-							<Wd f={f} at={wf(189, 'submersible')} lightAt={wf(189, 'carrying')}>A SUBMERSIBLE CARRYING </Wd>
-							<Wd f={f} at={wf(189, 'even')} lightAt={wf(189, 'one')} tone={colors.amber} bold>EVEN ONE </Wd>
-							<Wd f={f} at={wf(189, 'passenger')} lightAt={wf(189, 'hire')} tone={colors.amber}>PASSENGER FOR HIRE</Wd>
-							<br />
-							<Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>= A SMALL PASSENGER VESSEL · </Wd>
-							<Wd f={f} at={wf(189, 'must')} lightAt={wf(189, 'inspected')} tone={colors.cyan} bold>MUST BE INSPECTED </Wd>
-							<Wd f={f} at={wf(189, 'by')} lightAt={wf(189, 'guard')} tone={colors.cyan}>BY THE COAST GUARD</Wd>
-						</div>
-						<div style={{marginTop: 30, display: 'flex', gap: 18}}>
-							<span style={{opacity: lead(f, wf(190, 'registered'), 8), transform: `scale(${bump(f, fps, wf(190, 'registered') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text="NEVER REGISTERED" tone={colors.red} size={34} />
-							</span>
-							<span style={{opacity: lead(f, wf(190, 'inspection'), 8), transform: `scale(${bump(f, fps, wf(190, 'inspection') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
-								<Chip text={f >= wf(190, 'arranged') ? 'NO INSPECTION ARRANGED' : 'NO INSPECTION'} tone={colors.red} size={34} />
-							</span>
-						</div>
-						<div style={{marginTop: 18, ...T(28, {color: colors.ink})}}>
-							<Wd f={f} at={wf(190, 'oceangate')} lightAt={wf(190, 'titan')}>OCEANGATE · TITAN · USCG MBI REPORT; NTSB MIR-25-36</Wd>
-						</div>
-					</Card>
+				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: law}}>
+					<div style={{fontFamily: sans, fontWeight: 700, fontSize: 56, color: colors.ink, textAlign: 'center', lineHeight: 1.3}}>
+						<Wd f={f} at={wf(188, 'n')} lightAt={wf(188, 'reading')} base={colors.ink} tone={colors.cyan}>By the NTSB's reading </Wd>
+						<Wd f={f} at={wf(188, 'law')} base={colors.ink} tone={colors.cyan}>of the law,</Wd>
+						<br />
+						<Wd f={f} at={wf(188, 'not')} base={colors.ink} tone={colors.red}>it was not.</Wd>
+					</div>
 				</AbsoluteFill>
 			) : null}
+			{/* the law in the NTSB's own words (forensic v2, idea 1): the page, highlighted on the sentence that says it */}
+			<RecordPage set="mir" start={sf(189) - 14} end={ef(190) + 20} page={68} hl={[{key: 'pvsa', at: wf(189, 'submersible')}]} label="EXHIBIT" title="2.6 · OVERSIGHT" pushTo={wf(189, 'submersible')} />
+			<Note o={vis(f, sf(189) + 10, ef(190) + 10)} tone={colors.cyan}>
+				{f < sf(190) - 4 ? (
+					<>
+						<Wd f={f} at={wf(189, 'u')} lightAt={wf(189, 'law')}>U.S. LAW, </Wd><Wd f={f} at={wf(189, 'n')} lightAt={wf(189, 'notes')} tone={colors.cyan}>THE NTSB NOTES: </Wd>
+						<Wd f={f} at={wf(189, 'submersible')} lightAt={wf(189, 'carrying')}>A SUBMERSIBLE CARRYING </Wd>
+						<br />
+						<Wd f={f} at={wf(189, 'even')} lightAt={wf(189, 'one')} tone={colors.amber} bold>EVEN ONE </Wd>
+						<Wd f={f} at={wf(189, 'passenger')} lightAt={wf(189, 'hire')} tone={colors.amber}>PASSENGER FOR HIRE </Wd>
+						<Wd f={f} at={wf(189, 'is')} lightAt={wf(189, 'vessel')}>IS A SMALL PASSENGER VESSEL</Wd>
+						<br />
+						<Wd f={f} at={wf(189, 'must')} lightAt={wf(189, 'inspected')} tone={colors.cyan} bold>MUST BE INSPECTED </Wd>
+						<Wd f={f} at={wf(189, 'by')} lightAt={wf(189, 'guard')} tone={colors.cyan}>BY THE COAST GUARD</Wd>
+					</>
+				) : (
+					<span style={{display: 'inline-flex', gap: 18, alignItems: 'center'}}>
+						<Wd f={f} at={wf(190, 'oceangate')} lightAt={wf(190, 'titan')}>OCEANGATE · TITAN: </Wd>
+						<span style={{opacity: lead(f, wf(190, 'registered'), 8), transform: `scale(${bump(f, fps, wf(190, 'registered') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
+							<Chip text="NEVER REGISTERED" tone={colors.red} size={34} />
+						</span>
+						<span style={{opacity: lead(f, wf(190, 'inspection'), 8), transform: `scale(${bump(f, fps, wf(190, 'inspection') + LAND, 0.06).toFixed(4)})`, display: 'inline-block'}}>
+							<Chip text={f >= wf(190, 'arranged') ? 'NO INSPECTION ARRANGED' : 'NO INSPECTION'} tone={colors.red} size={34} />
+						</span>
+					</span>
+				)}
+			</Note>
 			<RecordPage set="roi" start={sf(191) - 14} end={ef(191) + 20} hl={[{key: 'c53', at: wf(191, 'conceal')}]} label="EXHIBIT" title="SEC. 5.18" pushTo={wf(191, 'mission')} />
 			<Note o={vis(f, sf(191), ef(191) + 10)}>
 				<Wd f={f} at={wf(191, 'board')} lightAt={wf(191, 'found')}>THE BOARD FOUND: </Wd>
@@ -497,6 +501,8 @@ export const act3c: SceneDef[] = [
 		C: Law,
 		cues: [
 			{frame: wf(188, 'not'), sfx: 'stamp', gainDb: -24},
+			{frame: sf(189) - 14, sfx: 'paper_slide', gainDb: -24},
+			{frame: wf(189, 'submersible') - 15, sfx: 'highlighter', gainDb: -22},
 			{frame: wf(190, 'registered'), sfx: 'stamp', gainDb: -26},
 			{frame: wf(191, 'conceal') - 15, sfx: 'highlighter', gainDb: -22},
 			{frame: wf(194, 'december'), sfx: 'quartz_tick', gainDb: -22},

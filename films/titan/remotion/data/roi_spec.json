@@ -86,5 +86,21 @@
  "doj": {
   "page": 330,
   "phrase": "the determination of whether any crime was committed would be made by the DoJ"
+ },
+ "mapping": {
+  "page": 235,
+  "phrase": "The thruster control mapping was found to be incorrect"
+ },
+ "turned": {
+  "page": 235,
+  "phrase": "The pilot overcame the malfunctioning thrusters by turning the controller around and operating the controls in reverse"
+ },
+ "notcert": {
+  "page": 280,
+  "phrase": "meant it could not be officially certified for use in deep-sea submersibles"
+ },
+ "windowok": {
+  "page": 280,
+  "phrase": "it is unlikely that the acrylic window itself caused the implosion"
  }
 }

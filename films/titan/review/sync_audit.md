@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 1673 word cues on 3555 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+244 sentences · 1674 word cues on 3555 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -213,8 +213,8 @@
 | 215 | 19:45.7 | 2/4 | 1.1 s ok |  | Thirteen did, in all. |
 | 216 | 19:47.4 | 5/10 | 1.1 s ok |  | Then one line that stops, about five hundred metres short. |
 | 217 | 19:53.9 | 4/6 | 0.9 s ok |  | Two things often said about Titan. |
-| 218 | 19:56.5 | 9/22 | 1.4 s ok |  | Its controller: on dive eighty-one, the thruster controls were found t |
-| 219 | 20:05.1 | 5/11 | 1.4 s ok |  | None of the three reports names the controller as a cause. |
+| 218 | 19:56.5 | 11/22 | 1.3 s ok |  | Its controller: on dive eighty-one, the thruster controls were found t |
+| 219 | 20:05.1 | 6/11 | 0.9 s ok |  | None of the three reports names the controller as a cause. |
 | 220 | 20:09.1 | 10/22 | 1.4 s ok |  | Its window: the Coast Guard board criticised it as untested and uncert |
 | 221 | 20:18.0 | 5/9 | 1.1 s ok |  | All three reports place the failure in the hull. |
 | 222 | 20:22.6 | 10/26 | 1.5 s ok |  | The N - T - S - B's probable cause was OceanGate's inadequate engineer |
@@ -228,7 +228,7 @@
 | 230 | 21:21.1 | 2/2 | 0.7 s ok |  | Rush died. |
 | 231 | 21:23.5 | 5/9 | 0.7 s ok |  | One more finding concerns the eighteenth of June itself. |
 | 232 | 21:27.0 | 18/29 | 1.2 s ok |  | The board found that the company's own communications plan delayed the |
-| 233 | 21:37.3 | 10/19 | 1.3 s ok |  | It also found that the implosion caused the immediate loss of all live |
+| 233 | 21:37.3 | 8/19 | 1.3 s ok |  | It also found that the implosion caused the immediate loss of all live |
 | 234 | 21:44.2 | 6/15 | 0.8 s ok |  | The N - T - S - B found that search and rescue could not have saved th |
 | 235 | 21:48.3 | 6/12 | 1.4 s ok |  | With assets ready, it found, Titan would likely have been found sooner |
 | 236 | 21:53.2 | 5/8 | 0.9 s ok |  | OceanGate suspended its operations in July twenty twenty-three. |
