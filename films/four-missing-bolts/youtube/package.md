@@ -79,7 +79,6 @@ Boeing Form 8-K, 1 July 2024 (agreement to acquire Spirit AeroSystems): https://
 Boeing Form 8-K, 8 December 2025 (acquisition completed): https://www.sec.gov/Archives/edgar/data/12927/000162828025055825/ba-20251208.htm
 
 Reconstructions and illustrations are labelled on screen; values not from a record are marked ILLUSTRATIVE.
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 ```
 
 ## Tags (Studio "Tags" field)

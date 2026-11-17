@@ -13,8 +13,6 @@ frame YouTube shows in the feed is the best one. Files: Drive `Margin-of-Error/s
 Order: alternate the two films (EP1, FMB1, EP3, FMB2, EP2, FMB3). The Four Missing Bolts Shorts go up after that
 film is public again (their related video must point to it).
 
-The voice note line is required in every description (owner's rule, word for word).
-
 ---
 
 ## EP1 · `ep_s1_crew_not_told.mp4` (39 s) · [Drive](https://drive.google.com/file/d/1Gj0BUw5D54DYxA-l9ixpPjPtDb3amXHR/view)
@@ -27,7 +25,6 @@ Salem, Ohio, 03 FEB 2023, 8:13 p.m. A hot bearing detector read car 23's bearing
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #EastPalestine #NTSB #NorfolkSouthern
 ```
 
@@ -41,7 +38,6 @@ The AAR defines an overheated bearing as one at least 170°F above the air. The 
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #EastPalestine #NTSB #Railroad
 ```
 
@@ -55,7 +51,6 @@ Between the Salem and East Palestine detectors, about 19 miles of track and no d
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #EastPalestine #NTSB #TrainDerailment
 ```
 
@@ -68,8 +63,6 @@ Alaska 1282: The Photo Taken 108 Days Before the Door Plug Blew Out
 19 SEP 2023, Boeing's Renton factory. A text message carried a photo of the closed door plug: in the three bolt positions in view, no bolts, no washers, no nuts, no pins. 108 days later the plug left the airplane. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB
 ```
 
@@ -82,8 +75,6 @@ Alaska 1282: Four Bolts Where One Would Have Done
 After the accident, Boeing's engineers found one lower bolt alone would have held the 737-9 door plug down. There were four. On this airplane all four were missing. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #Aviation
 ```
 
@@ -96,8 +87,6 @@ Alaska 1282: The Door Plug That Walked Itself Up for 154 Flights
 With no bolts, the NTSB found, vibration and flexing in normal flight likely let the plug rise fractions of an inch at a time, across 154 flights, until it reached the top of its stops on 05 JAN 2024. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB
 ```
 
@@ -113,7 +102,6 @@ Remember the East Palestine derailment? Three explanations you may have heard: a
 
 Full investigation: https://youtu.be/PzY0teB3Pdc
 
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #EastPalestine #NTSB #TrainDerailment #Shorts
 ```
 
@@ -126,8 +114,6 @@ Alaska 1282: The Door Plug Had Four Bolts. One Would Have Held It.
 Remember Alaska Airlines flight 1282? You may have heard the door plug was a design flaw. The design had four bolts, where one lower bolt would have held it. On this airplane, the NTSB found, all four were missing. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB #Shorts
 ```
 
@@ -140,8 +126,6 @@ Alaska 1282: The Photo Boeing Workers Texted 108 Days Before the Blowout
 19 SEP 2023, Boeing's Renton factory. Workers texted each other a photo of the closed door plug. In the three bolt positions in view: no bolts, no washers, no nuts, no pins. 108 days later the plug left the airplane over Portland. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB #Shorts
 ```
 
@@ -154,7 +138,5 @@ Alaska 1282: How a Door Plug With No Bolts Lasted 154 Flights
 The failure didn't start on 05 JAN 2024. The NTSB found the door plug likely walked itself upward over 154 flights. From outside, the change was about half an inch, too small to catch on a walk-around. From NTSB report AIR-25-04.
 
 Full investigation: https://youtu.be/2IEMyDxu4yU
-
-Narrated using the studio's calibrated synthetic voice model (Marcus) for forensic clarity.
 #Alaska1282 #Boeing #NTSB #Shorts
 ```
