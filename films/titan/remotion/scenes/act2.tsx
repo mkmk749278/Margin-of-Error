@@ -535,6 +535,8 @@ const Listen: React.FC = () => {
 	const dead = lead(f, wf(54, 'three'), 10);
 	const people = lead(f, wf(55, 'emailed'), 10);
 	const thr = lead(f, wf(56, 'alert'), 12);
+	const inset = interpolate(f, [sf(51) - 6, wf(51, 'limits') + 10], [0, 1], {...clamp, easing: ease.camera});
+	const ringO = vis(f, sf(49) - 6, wf(56, 'alert') + 6, 10, 12);
 	return (
 		<>
 			{/* s47: the question, alone */}
@@ -557,33 +559,6 @@ const Listen: React.FC = () => {
 			{hull > 0 ? (
 				<AbsoluteFill style={{opacity: hull}}>
 					<Mount x={160} y={110} w={1600} h={800} start={sf(49) - 6} end={ef(50) + 20} source="TITAN'S HULL MONITOR · SENSOR COUNT: USCG MBI REPORT" labels={['ILLUSTRATION · NOT TO SCALE']} lean={3} />
-					<svg width={1920} height={1080} style={{position: 'absolute', inset: 0}}>
-						<g transform="translate(0 -40)">
-							<HullLines draw={1} wall={1} />
-							{AE_POS.map(([u, v], i) => {
-								const at = wf(49, 'eight') + i * 3;
-								const x = cx + u * len;
-								const y = cy + v * (r + 18);
-								return (
-									<g key={i} opacity={lead(f, at, 8)}>
-										<circle cx={x} cy={y} r={14 * bump(f, fps, at + LAND, 0.2)} fill={colors.cyan} />
-										{crackle > 0 ? <circle cx={x} cy={y} r={14 + 40 * crackle} fill="none" stroke={colors.amber} strokeWidth={2} opacity={crackle} /> : null}
-									</g>
-								);
-							})}
-							{SG_POS.map(([u, v], i) => {
-								const at = wf(49, 'sixteen') + i * 2;
-								const x = cx + u * len;
-								const y = cy + v * r;
-								return (
-									<g key={i} opacity={lead(f, at, 8)}>
-										<rect x={x - 12} y={y - 7} width={24} height={14} fill="none" stroke={colors.ink} strokeWidth={2} />
-										<rect x={x - 7} y={y - 12} width={14} height={24} fill="none" stroke={colors.ink} strokeWidth={2} opacity={0.7} />
-									</g>
-								);
-							})}
-						</g>
-					</svg>
 					<div style={{position: 'absolute', left: 220, top: 160, display: 'flex', gap: 22, ...T(30, {})}}>
 						<span style={{opacity: lead(f, wf(49, 'eight'), 8), ...lit(f, wf(49, 'sensors'), colors.cyan)}}>● 8 ACOUSTIC SENSORS</span>
 						<span style={{opacity: lead(f, wf(49, 'sixteen'), 8), ...lit(f, wf(49, 'gauges'))}}>▭ 16 STRAIN GAUGES</span>
@@ -714,6 +689,43 @@ const Listen: React.FC = () => {
 						</Card>
 					</AbsoluteFill>
 				</AbsoluteFill>
+			) : null}
+			{ringO > 0 ? (
+				// the hull and its eight sensors stay on screen: on "limits" they shrink into the panel's corner (viewer panel v2:
+				// the card opened near-empty), and channels 1, 3 and 5 go dark there on "three of the eight"
+				<svg width={1920} height={1080} style={{position: 'absolute', inset: 0, opacity: ringO}}>
+					<g transform={`translate(${(1560 - cx) * inset} ${(162 - cy + 40) * inset}) translate(${cx} ${cy - 40}) scale(${1 - 0.8 * inset}) translate(${-cx} ${-(cy - 40)})`}>
+						<g transform="translate(0 -40)">
+							<g opacity={1 - 0.4 * inset}>
+								<HullLines draw={1} wall={1} />
+							</g>
+							{AE_POS.map(([u, v], i) => {
+								const at = wf(49, 'eight') + i * 3;
+								const x = cx + u * len;
+								const y = cy + v * (r + 18);
+								const off = DEAD.includes(i) ? dead : 0;
+								const rr = 14 * bump(f, fps, at + LAND, 0.2) * (1 + 2.9 * inset);
+								return (
+									<g key={i} opacity={lead(f, at, 8)}>
+										<circle cx={x} cy={y} r={rr} fill={off > 0.5 ? colors.card : colors.cyan} stroke={off > 0.5 ? colors.red : colors.cyan} strokeWidth={3 + 8 * inset} />
+										{crackle > 0 ? <circle cx={x} cy={y} r={14 + 40 * crackle} fill="none" stroke={colors.amber} strokeWidth={2} opacity={crackle} /> : null}
+									</g>
+								);
+							})}
+							{SG_POS.map(([u, v], i) => {
+								const at = wf(49, 'sixteen') + i * 2;
+								const x = cx + u * len;
+								const y = cy + v * r;
+								return (
+									<g key={i} opacity={lead(f, at, 8) * (1 - inset)}>
+										<rect x={x - 12} y={y - 7} width={24} height={14} fill="none" stroke={colors.ink} strokeWidth={2} />
+										<rect x={x - 7} y={y - 12} width={14} height={24} fill="none" stroke={colors.ink} strokeWidth={2} opacity={0.7} />
+									</g>
+								);
+							})}
+						</g>
+					</g>
+				</svg>
 			) : null}
 		</>
 	);

@@ -11,7 +11,8 @@ replaces our reading of the same quote): the sentences listed in `replace` (cons
 cut out from the middle of the pause before them to the middle of the pause after, and the gap becomes
 pre + (out - in) + post seconds of picture. Each clip's audio is trimmed from `clips_dir`/<clip>.mp4 to
 assets/clips/<clip>.wav (untouched: no processing, the mix sets its loudness); its film frames go into timing.json
-`clips` for the picture and for sound/mix.json.
+`clips` for the picture and for sound/mix.json. A clip with `after_clip` (no `replace`) is inserted straight after
+that clip's gap and replaces nothing (two witnesses back to back, then our sentence).
 Writes assets/vo/film_vo.wav (48 kHz mono, holds as digital silence: the mix's bed covers it) and vo/timing.json
 (committed: the film's frames for Remotion and the render farm), with every sentence and word shifted, the holds
 listed, and `durationInFrames` for the whole film. Fails if the open loop misses its window.
@@ -50,6 +51,17 @@ def main() -> None:
     removed: set[int] = set()
     clips = []
     for c in cfg.get("clips", []):
+        if "after_clip" in c:  # inserted, replacing nothing: it plays straight after another clip's gap
+            prev = next((e for _, e, _ in clips if e["clip"] == c["after_clip"]), None)
+            if prev is None:
+                sys.exit(f"clip {c['clip']}: after_clip {c['after_clip']!r} must be an earlier entry in clips")
+            length = round(c["out"] - c["in"], 3)
+            pre, post = c.get("pre", 0.4), c.get("post", 0.4)
+            e = {"at": round(prev["at"] + prev["c"], 3), "c": 0.0, "s": round(pre + length + post, 3), "clip": c["clip"],
+                 "pre": pre, "len": length}
+            edits.append(e)
+            clips.append((c, e, []))
+            continue
         ids = [find(x) for x in c["replace"]]
         if ids != list(range(ids[0], ids[0] + len(ids))):
             sys.exit(f"clip {c['clip']}: replaced sentences are not consecutive: {ids}")
@@ -69,7 +81,11 @@ def main() -> None:
         nxt = sents[i + 1]["start"] if i + 1 < len(sents) else sents[i]["end"] + 0.3
         at = round((sents[i]["end"] + nxt) / 2, 3) if i + 1 < len(sents) else round(sents[i]["end"] + 0.3, 3)
         edits.append({"at": at, "c": 0.0, "s": h["s"], "after": i, "why": h.get("why", "")})
-    edits.sort(key=lambda e: e["at"])
+    edits.sort(key=lambda e: (e["at"], e["c"] == 0))  # at a shared cut point the replacing clip comes first
+    run = 0.0
+    for e in edits:  # film time each edit's gap opens (shift() alone is ambiguous when two edits share a cut point)
+        e["gap"] = round(e["at"] + run, 3)
+        run += e["s"] - e["c"]
     for x, y in zip(edits, edits[1:]):
         if x["at"] + x["c"] > y["at"] + 0.0015:  # back-to-back clips share a cut point (rounded to ms)
             sys.exit(f"edits overlap at {y['at']} s")
@@ -103,7 +119,7 @@ def main() -> None:
     clips_dir = Path(cfg.get("clips_dir", "."))
     (film / "assets/clips").mkdir(parents=True, exist_ok=True)
     for c, e, texts in clips:
-        gap = round(shift(e["at"] + e["c"]) - e["s"], 3)  # film time the gap opens
+        gap = e["gap"]  # film time the gap opens
         a = round(gap + e["pre"], 3)
         b = round(a + e["len"], 3)
         wav = film / "assets/clips" / f"{c['clip']}.wav"

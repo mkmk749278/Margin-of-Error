@@ -376,7 +376,7 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `Eight` | `F16935` (+0.03 s) | (scene list) | sound effect cue |
 | `sensors` | `F16984` (+0.85 s) | Listen | lead · <span style={{opacity: lead(f, wf(49, 'eight'), 8), ...lit(f, wf(49, ' |
-| `sixteen` | `F17034` (+1.68 s) | Listen | lead · <span style={{opacity: lead(f, wf(49, 'sixteen'), 8), ...lit(f, wf(49, |
+| `sixteen` | `F17034` (+1.68 s) | Listen | const at = wf(49, 'sixteen') + i * 2; |
 | `gauges` | `F17093` (+2.67 s) | Listen | lead · <span style={{opacity: lead(f, wf(49, 'sixteen'), 8), ...lit(f, wf(49, |
 | `inside` | `F17160` (+3.78 s) | Listen | text: INSIDE THE HULL |
 | `hull` | `F17196` (+4.38 s) | Listen | text: INSIDE THE HULL |
