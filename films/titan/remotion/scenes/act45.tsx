@@ -132,7 +132,7 @@ const LastDive: React.FC = () => {
 							<Wd f={f} at={wf(208, 'first')} lightAt={wf(208, 'deep')} tone={colors.amber} bold>THE FIRST DEEP DIVE </Wd>
 							<Wd f={f} at={wf(208, 'eleven')} lightAt={wf(208, 'months')} tone={colors.amber} bold>IN ELEVEN MONTHS</Wd>
 						</div>
-						<div style={{...T(72, {color: colors.ink, fontWeight: 700}), opacity: lead(f, wf(208, 'made'), 10)}}>
+						<div style={{...T(72, {color: depth >= 3350 ? colors.ink : colors.sub, fontWeight: 700}), opacity: lead(f, wf(208, 'made'), 10)}}>
 							{Math.round(depth).toLocaleString('en-US')} <span style={{fontSize: 36, color: colors.sub}}>M</span>
 						</div>
 						<div style={T(26, {color: colors.ink})}>DIVE 88 · DEPTH · TIMES: NTSB MIR-25-36</div>
@@ -293,8 +293,8 @@ const Record: React.FC = () => {
 				</g>
 				{gap > 0 ? (
 					<g opacity={gap}>
-						<line x1={xOf(13) + 40} x2={xOf(13) + 40} y1={yD(3363)} y2={yD(3363) + (yD(3840) - yD(3363)) * gap} stroke={colors.amber} strokeWidth={3} />
-						<text x={xOf(13) + 56} y={yD(3600) + 10} style={T(28, lit(f, wf(216, 'hundred'), colors.amber))}>≈ 500 M SHORT</text>
+						<line x1={xOf(13) - 22} x2={xOf(13) - 22} y1={yD(3363)} y2={yD(3363) + (yD(3840) - yD(3363)) * gap} stroke={colors.amber} strokeWidth={3} />
+						<text x={xOf(13) - 30} y={yD(3600) + 10} textAnchor="end" style={T(28, lit(f, wf(216, 'hundred'), colors.amber))}>≈ 500 M SHORT</text>
 					</g>
 				) : null}
 			</svg>
@@ -511,10 +511,11 @@ const Verdict: React.FC = () => {
 						<Wd f={f} at={wf(239, 'u')} lightAt={wf(239, 'guard')}>TO THE U.S. COAST GUARD</Wd>
 					</div>
 					{recList.map(([id, text, at], i) => (
-						<div key={id} style={{position: 'absolute', left: 220, top: 320 + i * 110, width: 1480, display: 'flex', alignItems: 'center', gap: 24, opacity: lead(f, at, 10)}}>
-							<span style={{...T(56, {color: colors.cyan, fontWeight: 700}), width: 60, display: 'inline-block', transform: `scale(${bump(f, fps, at + LAND).toFixed(4)})`}}>{i + 1}</span>
-							<span style={{...T(28, {color: colors.ink}), width: 200}}>{id}</span>
-							<span style={{...T(32, {color: colors.ink, fontWeight: 700}), flex: 1}}>{text.map(([t, ta], j) => <Wd key={j} f={f} at={ta} tone={colors.ink} bold>{t}</Wd>)}</span>
+						<div key={id} style={{position: 'absolute', left: 220, top: 320 + i * 110, width: 1480, display: 'flex', alignItems: 'center', gap: 24}}>
+							{/* four numbered slots land on "four", each fills on its own number (no still stretch before the list) */}
+							<span style={{...T(56, {color: f >= at ? colors.cyan : colors.sub, fontWeight: 700}), width: 60, display: 'inline-block', opacity: Math.max(0.45 * lead(f, wf(239, 'four') + i * 6, 8), lead(f, at, 10)), transform: `scale(${bump(f, fps, at + LAND).toFixed(4)})`}}>{i + 1}</span>
+							<span style={{...T(28, {color: colors.ink}), width: 200, opacity: lead(f, at, 10)}}>{id}</span>
+							<span style={{...T(32, {color: colors.ink, fontWeight: 700}), flex: 1, opacity: lead(f, at, 10)}}>{text.map(([t, ta], j) => <Wd key={j} f={f} at={ta} tone={colors.ink} bold>{t}</Wd>)}</span>
 							<span style={{opacity: lead(f, wf(245, 'remain'), 8)}}>
 								<Chip text={f >= wf(245, 'open') ? 'OPEN · ACCEPTABLE RESPONSE' : 'OPEN'} tone={colors.amber} size={26} />
 							</span>

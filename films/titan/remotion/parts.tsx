@@ -162,7 +162,7 @@ export const RealFootage: React.FC<{
 	const strip = (
 		<div style={under ? {position: 'absolute', left: box.x, width: box.w, top: box.y + box.h, height: 58, display: 'flex', alignItems: 'center', gap: 16, padding: '0 16px', background: colors.card, border: `1px solid ${colors.border}`, fontFamily: mono, fontSize: 26, letterSpacing: 1.5, color: colors.ink, whiteSpace: 'nowrap', opacity: o} : {position: 'absolute', left: 96, right: 96, bottom: 54, height: 58, display: 'flex', alignItems: 'center', gap: 16, fontFamily: mono, fontSize: 26, letterSpacing: 1.5, color: colors.ink, whiteSpace: 'nowrap'}}>
 			{date ? <span style={{color: colors.amber, fontWeight: 700}}>{date}</span> : null}
-			<span>{date ? '· ' : ''}{what}</span>
+			<span style={/REFERENCE|RECONSTRUCTION|ILLUSTRATION/.test(what) ? {fontSize: 36, fontWeight: 700} : undefined}>{date ? '· ' : ''}{what}</span>
 			<span style={{marginLeft: 'auto', paddingLeft: 24}}>{source}</span>
 		</div>
 	);

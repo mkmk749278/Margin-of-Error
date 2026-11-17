@@ -37,7 +37,7 @@ const Winter: React.FC = () => {
 			{harbour > 0 ? (
 				<AbsoluteFill style={{opacity: harbour}}>
 					<RealFootage f={f} start={sf(159) - 12} end={ef(161) + 26} src="footage/stj_narrows.mp4" date="" what="ST. JOHN'S HARBOUR · REFERENCE, NOT THE BASE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.06} />
-					<Card x={96} y={96} w={900} o={1} style={{padding: '22px 28px'}}>
+					<Card x={96} y={96} w={900} o={lead(f, wf(159, 'spend') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{...T(34, {}), fontWeight: 700}}>
 							<Wd f={f} at={wf(159, 'spend')} lightAt={wf(159, 'winter')} tone={colors.amber} bold>THE WINTER: </Wd>
 							<Wd f={f} at={wf(159, 'somewhere')}>SOMEWHERE</Wd>
@@ -62,7 +62,7 @@ const Winter: React.FC = () => {
 					<RecordPage set="roi" start={sf(162) - 12} end={ef(166) + 20} page={322} hl={[{key: 'cover', at: wf(162, 'quote')}, {key: 'noreply', at: wf(163, 'never')}]} label="EXHIBIT" title="STORAGE" pushTo={wf(162, 'protective')} />
 					<div style={{position: 'absolute', right: 96, top: 84, display: 'flex', gap: 14, alignItems: 'center', opacity: lead(f, wf(162, 'two'), 8)}}>
 						<DatePill f={f} fps={fps} day={28} month={7} year={2022} dayWord={wf(162, 'later')} fromDay={26} size={30} />
-						<span style={{...T(44, {color: colors.amber, fontWeight: 700}), background: colors.card, border: `1px solid ${colors.border}`, padding: '2px 12px', opacity: lead(f, wf(162, 'one'), 8), display: 'inline-block', transform: `scale(${bump(f, fps, wf(162, 'fifty') + LAND).toFixed(4)})`}}>
+						<span style={{...T(44, {color: f >= wf(162, 'fifty') + LAND ? colors.amber : colors.sub, fontWeight: 700}), background: colors.card, border: `1px solid ${colors.border}`, padding: '2px 12px', opacity: lead(f, wf(162, 'one'), 8), display: 'inline-block', transform: `scale(${bump(f, fps, wf(162, 'fifty') + LAND).toFixed(4)})`}}>
 							CA${cad.toLocaleString('en-US')}
 						</span>
 					</div>
@@ -94,16 +94,16 @@ const Winter: React.FC = () => {
 				<AbsoluteFill style={{opacity: cold}}>
 					<RealFootage f={f} start={sf(167) - 12} end={wf(167, 'freezing') + 4} src="footage/stj_ice.mp4" date="" what="ST. JOHN'S HARBOUR IN WINTER · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.05} />
 					<RealFootage f={f} start={wf(167, 'freezing') - 10} end={ef(168) + 30} src="footage/stj_snow.mp4" date="" what="ST. JOHN'S AFTER SNOWFALL · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.05} />
-					<Card x={96} y={96} w={820} o={1} style={{padding: '22px 28px'}}>
+					<Card x={96} y={96} w={820} o={lead(f, wf(167, 'stayed') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{display: 'flex', gap: 14, alignItems: 'center'}}>
 							<Wd f={f} at={wf(167, 'stayed')} lightAt={wf(167, 'outside')} tone={colors.red} bold style={T(32, {})}>OUTSIDE UNTIL </Wd>
 							<DatePill f={f} fps={fps} day={6} month={2} year={2023} dayWord={wf(167, 'sixth')} monthWord={wf(167, 'february')} size={30} />
 						</div>
 						<div style={{marginTop: 16, display: 'flex', gap: 18, alignItems: 'baseline'}}>
 							<Wd f={f} at={wf(167, 'temperatures')} style={T(28, {})}>TEMPERATURES </Wd>
-							<span style={{...T(56, {color: colors.cyan, fontWeight: 700}), opacity: lead(f, wf(167, 'one'), 8)}}>{lowF.toFixed(1)}°F</span>
+							<span style={{...T(56, {color: f >= wf(167, 'four') + LAND ? colors.cyan : colors.sub, fontWeight: 700}), opacity: lead(f, wf(167, 'one'), 8)}}>{lowF.toFixed(1)}°F</span>
 							<span style={{...T(40, {color: colors.ink}), opacity: lead(f, wf(167, 'to'), 8)}}>→</span>
-							<span style={{...T(56, {color: colors.amber, fontWeight: 700}), opacity: lead(f, wf(167, 'eighty-four'), 8), textShadow: `0 0 ${(14 * flashOn(f, wf(167, 'fahrenheit'))).toFixed(1)}px ${colors.amber}`}}>{highF.toFixed(1)}°F</span>
+							<span style={{...T(56, {color: f >= wf(167, 'two') + LAND ? colors.amber : colors.sub, fontWeight: 700}), opacity: lead(f, wf(167, 'eighty-four'), 8), textShadow: `0 0 ${(14 * flashOn(f, wf(167, 'fahrenheit'))).toFixed(1)}px ${colors.amber}`}}>{highF.toFixed(1)}°F</span>
 						</div>
 						<div style={{marginTop: 6, ...T(30, {})}}>
 							<Wd f={f} at={wf(167, 'minus')} lightAt={wf(167, 'seventeen')} tone={colors.cyan}>−17°C </Wd>

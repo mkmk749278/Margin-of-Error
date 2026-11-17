@@ -106,7 +106,7 @@ Sync audit: `review/sync_audit.md`.
 | `eighteenth` | `F68580` (+0.25 s) | (scene list) | sound effect cue |
 | `June` | `F68616` (+0.85 s) | LastDive | DatePill · <DatePill f={f} fps={fps} day={18} month={6} year={2023} dayWord={wf(2 |
 | `Titan` | `F68651` (+1.43 s) | LastDive | rollTo · const depth = rollTo(f, [{frame: wf(208, 'titan'), value: 0}, {frame:  |
-| `made` | `F68678` (+1.88 s) | LastDive | lead · <div style={{...T(72, {color: colors.ink, fontWeight: 700}), opacity:  |
+| `made` | `F68678` (+1.88 s) | LastDive | lead · <div style={{...T(72, {color: depth >= 3350 ? colors.ink : colors.sub, |
 | `first` | `F68705` (+2.33 s) | LastDive | text: THE FIRST DEEP DIVE |
 | `deep` | `F68729` (+2.73 s) | LastDive | text: THE FIRST DEEP DIVE |
 | `eleven` | `F68779` (+3.57 s) | LastDive | text: IN ELEVEN MONTHS |
@@ -212,7 +212,7 @@ Sync audit: `review/sync_audit.md`.
 | `line` | `F71294` (+0.80 s) | Record | const d88 = span(f, wf(216, 'line') - 4, wf(216, 'stops') + LAND); |
 | `stops` | `F71325` (+1.32 s) | Record | const d88 = span(f, wf(216, 'line') - 4, wf(216, 'stops') + LAND); |
 | `five` | `F71393` (+2.45 s) | Record | lead · const gap = lead(f, wf(216, 'five'), 14); |
-| `hundred` | `F71413` (+2.78 s) | Record | <text x={xOf(13) + 56} y={yD(3600) + 10} style={T(28, lit(f, wf(216, 'hundred'), |
+| `hundred` | `F71413` (+2.78 s) | Record | <text x={xOf(13) - 30} y={yD(3600) + 10} textAnchor="end" style={T(28, lit(f, wf |
 
 **217** · Two things often said about Titan.
 

@@ -47,7 +47,7 @@ Sync audit: `review/sync_audit.md`.
 | `quote` | `F51553` (+2.08 s) | (scene list) | sound effect cue |
 | `protective` | `F51590` (+2.70 s) | Winter | hl= · <RecordPage set="roi" start={sf(162) - 12} end={ef(166) + 20} page={32 |
 | `cover` | `F51628` (+3.33 s) | Winter | text: A QUOTE FOR A COVER: |
-| `one` | `F51676` (+4.13 s) | Winter | bump · <span style={{...T(44, {color: colors.amber, fontWeight: 700}), backgr |
+| `one` | `F51676` (+4.13 s) | Winter | bump · <span style={{...T(44, {color: f >= wf(162, 'fifty') + LAND ? colors.a |
 | `thousand` | `F51687` (+4.32 s) | Winter | rollTo · const cad = Math.round(rollTo(f, [{frame: wf(162, 'one') - 10, value:  |
 | `seven` | `F51718` (+4.83 s) | Winter | rollTo · const cad = Math.round(rollTo(f, [{frame: wf(162, 'one') - 10, value:  |
 | `fifty` | `F51762` (+5.57 s) | (scene list) | sound effect cue |
@@ -101,12 +101,12 @@ Sync audit: `review/sync_audit.md`.
 | `sixth` | `F52868` (+1.53 s) | Winter | DatePill · <DatePill f={f} fps={fps} day={6} month={2} year={2023} dayWord={wf(16 |
 | `February` | `F52895` (+1.98 s) | Winter | DatePill · <DatePill f={f} fps={fps} day={6} month={2} year={2023} dayWord={wf(16 |
 | `temperatures` | `F52952` (+2.93 s) | Winter | text: TEMPERATURES |
-| `one` | `F53008` (+3.87 s) | Winter | lead · <span style={{...T(56, {color: colors.cyan, fontWeight: 700}), opacity |
+| `one` | `F53008` (+3.87 s) | Winter | lead · <span style={{...T(56, {color: f >= wf(167, 'four') + LAND ? colors.cy |
 | `four` | `F53038` (+4.37 s) | (scene list) | sound effect cue |
 | `to` | `F53060` (+4.73 s) | Winter | lead · <span style={{...T(40, {color: colors.ink}), opacity: lead(f, wf(167,  |
-| `eighty-four` | `F53074` (+4.97 s) | Winter | flash · <span style={{...T(56, {color: colors.amber, fontWeight: 700}), opacit |
-| `two` | `F53125` (+5.82 s) | Winter | rollTo · const highF = rollTo(f, [{frame: wf(167, 'eighty-four') - 12, value: 4 |
-| `Fahrenheit` | `F53163` (+6.45 s) | Winter | flash · <span style={{...T(56, {color: colors.amber, fontWeight: 700}), opacit |
+| `eighty-four` | `F53074` (+4.97 s) | Winter | flash · <span style={{...T(56, {color: f >= wf(167, 'two') + LAND ? colors.amb |
+| `two` | `F53125` (+5.82 s) | Winter | flash · <span style={{...T(56, {color: f >= wf(167, 'two') + LAND ? colors.amb |
+| `Fahrenheit` | `F53163` (+6.45 s) | Winter | flash · <span style={{...T(56, {color: f >= wf(167, 'two') + LAND ? colors.amb |
 | `minus` | `F53237` (+7.68 s) | Winter | <Wd f={f} at={wf(167, 'minus')} lightAt={wf(167, 'seventeen')} tone={colors.cyan |
 | `seventeen` | `F53260` (+8.07 s) | Winter | <Wd f={f} at={wf(167, 'minus')} lightAt={wf(167, 'seventeen')} tone={colors.cyan |
 | `twenty-nine` | `F53308` (+8.87 s) | Winter | <Wd f={f} at={wf(167, 'twenty-nine')} lightAt={wf(167, 'celsius')} tone={colors. |

@@ -135,13 +135,13 @@ const Fired: React.FC = () => {
 			</Note>
 			{letter > 0 ? (
 				<AbsoluteFill style={{opacity: letter}}>
-					<Card x={300} y={190} w={1320} o={1} accent={colors.cyan} style={{padding: '30px 40px'}}>
+					<Card x={300} y={190} w={1320} o={lead(f, wf(68, 'march') - 8, 10)} accent={colors.cyan} style={{padding: '30px 40px'}}>
 						<div style={{display: 'flex', gap: 18, alignItems: 'center'}}>
 							<Wd f={f} at={wf(68, 'march')} tone={colors.amber} bold style={T(34, {})}>MARCH 2018</Wd>
 							<Wd f={f} at={wf(68, 'signed')} lightAt={wf(68, 'letter')} style={T(30, {})}>A LETTER TO THE CEO</Wd>
 						</div>
 						<div style={{display: 'flex', alignItems: 'baseline', gap: 16, marginTop: 18}}>
-							<span style={{...T(80, {color: colors.ink, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(68, 'twenty') + LAND).toFixed(4)})`}}>
+							<span style={{...T(80, {color: f >= wf(68, 'twenty') + LAND ? colors.ink : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(68, 'twenty') + LAND).toFixed(4)})`}}>
 								{f >= wf(68, 'twenty') - 14 ? `${Math.round(rollTo(f, [{frame: wf(68, 'twenty') - 14, value: 1}, {frame: wf(68, 'twenty') + LAND, value: 20}]))}+` : ''}
 							</span>
 							<Wd f={f} at={wf(68, 'submersible')} lightAt={wf(68, 'professionals')} style={T(32, {})}>SUBMERSIBLE PROFESSIONALS SIGNED</Wd>
@@ -262,6 +262,7 @@ const Hull2: React.FC = () => {
 				<Wd f={f} at={wf(78, 'fifty')} tone={colors.cyan} bold>50</Wd>
 				<Wd f={f} at={wf(78, 'to')}> → </Wd>
 				<Wd f={f} at={wf(78, 'eighty-eight')} tone={colors.cyan} bold>88</Wd>
+				<Wd f={f} at={wf(78, 'eighty-eight') + 10} tone={colors.ink} style={T(30, {})}>  · SHOWN HERE: 75 → 80, TO THE WRECK</Wd>
 			</div>
 			<Ledger
 				f={f}

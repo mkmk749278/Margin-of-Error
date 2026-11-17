@@ -102,7 +102,7 @@ Sync audit: `review/sync_audit.md`.
 | `investigator` | `F2786` (+4.08 s) | Monitor | text: U.S. NATIONAL TRANSPORTATION SAFETY BOARD |
 | `plotted` | `F2846` (+5.08 s) | Monitor | flash · const same = Math.max(flash(f, wf(8, 'plotted'), 0), flash(f, wf(8, 's |
 | `same` | `F2878` (+5.62 s) | Monitor | text: THE SAME NUMBERS · PLOTTED AGAINST DEPTH |
-| `against` | `F2927` (+6.43 s) | Monitor | const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND,  |
+| `against` | `F2927` (+6.43 s) | Monitor | const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND], |
 | `depth` | `F2953` (+6.87 s) | (scene list) | sound effect cue |
 
 **9** · We will draw that chart with them, from the reports and the sworn testimony.

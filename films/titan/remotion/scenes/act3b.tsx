@@ -123,7 +123,7 @@ const RePlot: React.FC = () => {
 					</div>
 					<div style={{marginTop: 22, display: 'flex', gap: 16, alignItems: 'baseline', opacity: lead(f, wf(134, 'response'), 8)}}>
 						<Wd f={f} at={wf(134, 'response')} lightAt={wf(134, 'changed')} style={T(28, {})}>RESPONSE CHANGED</Wd>
-						<span style={{...T(64, {color: colors.red, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(134, 'quarters') + LAND).toFixed(4)})`}}>{f >= wf(134, 'three') - 14 ? `≈ +${pct}%` : ''}</span>
+						<span style={{...T(64, {color: f >= wf(134, 'quarters') + LAND ? colors.red : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(134, 'quarters') + LAND).toFixed(4)})`}}>{f >= wf(134, 'three') - 14 ? `≈ +${pct}%` : ''}</span>
 					</div>
 				</div>
 			</div>
@@ -282,7 +282,7 @@ const Gauges: React.FC = () => {
 							<Wd f={f} at={wf(148, 'slope')} lightAt={wf(148, 'surface')} style={T(30, {})}>SLOPE NEAR THE SURFACE</Wd>
 						</div>
 						<div style={{marginTop: 14, display: 'flex', gap: 22, alignItems: 'baseline'}}>
-							<span style={{...T(80, {color: colors.red, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(148, 'double') + LAND).toFixed(4)})`}}>{f >= wf(148, 'nearly') - 10 ? `+${dbl}%` : ''}</span>
+							<span style={{...T(80, {color: f >= wf(148, 'double') + LAND ? colors.red : colors.sub, fontWeight: 700}), display: 'inline-block', transform: `scale(${bump(f, fps, wf(148, 'double') + LAND).toFixed(4)})`}}>{f >= wf(148, 'nearly') - 10 ? `+${dbl}%` : ''}</span>
 							<Wd f={f} at={wf(148, 'double')} style={T(30, {})} tone={colors.red}>NEARLY DOUBLE </Wd><Wd f={f} at={wf(148, 'whole')} lightAt={wf(148, 'dive')} style={T(30, {})} tone={colors.red}>THE WHOLE-DIVE SLOPE</Wd>
 						</div>
 						<div style={{marginTop: 26, display: 'flex', gap: 22, alignItems: 'baseline'}}>

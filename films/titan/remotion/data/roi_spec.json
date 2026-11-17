@@ -102,5 +102,13 @@
  "windowok": {
   "page": 280,
   "phrase": "it is unlikely that the acrylic window itself caused the implosion"
+ },
+ "logmax": {
+  "page": 185,
+  "phrase": "indicate the maximum pressure reached (6,154 psi) during the second DOTF test"
+ },
+ "dotfphoto": {
+  "page": 184,
+  "phrase": "Final TITAN hull at the DOTF in Bethesda, Maryland on February 25, 2021"
  }
 }

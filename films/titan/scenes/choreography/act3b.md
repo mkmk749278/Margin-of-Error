@@ -164,7 +164,7 @@ Sync audit: `review/sync_audit.md`.
 | :--- | :--- | :--- | :--- |
 | `response` | `F42913` (+0.12 s) | RePlot | text: RESPONSE CHANGED |
 | `changed` | `F42965` (+0.98 s) | RePlot | text: RESPONSE CHANGED |
-| `three` | `F43022` (+1.93 s) | RePlot | bump · <span style={{...T(64, {color: colors.red, fontWeight: 700}), display: |
+| `three` | `F43022` (+1.93 s) | RePlot | bump · <span style={{...T(64, {color: f >= wf(134, 'quarters') + LAND ? color |
 | `quarters` | `F43041` (+2.25 s) | (scene list) | sound effect cue |
 
 **135** · Could OceanGate have seen this at the time?
@@ -323,7 +323,7 @@ Sync audit: `review/sync_audit.md`.
 | `surface` | `F46813` (+1.37 s) | Gauges | text: SLOPE NEAR THE SURFACE |
 | `nineteenth` | `F46854` (+2.05 s) | Gauges | DatePill · <DatePill f={f} fps={fps} day={19} month={7} year={2022} dayWord={wf(1 |
 | `July` | `F46893` (+2.70 s) | Gauges | DatePill · <DatePill f={f} fps={fps} day={19} month={7} year={2022} dayWord={wf(1 |
-| `nearly` | `F46931` (+3.33 s) | Gauges | bump · <span style={{...T(80, {color: colors.red, fontWeight: 700}), display: |
+| `nearly` | `F46931` (+3.33 s) | Gauges | bump · <span style={{...T(80, {color: f >= wf(148, 'double') + LAND ? colors. |
 | `double` | `F46961` (+3.83 s) | (scene list) | sound effect cue |
 | `whole` | `F47034` (+5.05 s) | Gauges | text: NEARLY DOUBLE / THE WHOLE-DIVE SLOPE |
 | `dive` | `F47054` (+5.38 s) | Gauges | text: NEARLY DOUBLE / THE WHOLE-DIVE SLOPE |

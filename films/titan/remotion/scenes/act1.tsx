@@ -136,7 +136,9 @@ const Monitor: React.FC = () => {
 	const toTrace = span(f, wf(7, 'strain') - 10, wf(8, 'implosion') + 10);
 	const hullO = 1 - toTrace;
 	const tEnd = 17.1;
-	const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND, wf(8, 'depth') + 40, wf(8, 'depth') + 56], [0, 1, 1, 0], clamp);
+	// the axis is promised, not swapped: TIME slides left and dims, "→ DEPTH" arrives beside it and stays (viewer panel v2:
+	// a crossfade in one place garbled the two words, and flicking back read as a broken promise)
+	const depthTease = interpolate(f, [wf(8, 'against') - 2, wf(8, 'depth') + LAND], [0, 1], clamp);
 	const W = 1240;
 	const H = 600;
 	const tx = interpolate(toTrace, [0, 1], [1080, 340]);
@@ -230,8 +232,8 @@ const Monitor: React.FC = () => {
 						showDepth={0}
 						axisLabel={
 							<g>
-								<text textAnchor="middle" style={T(34, {fill: colors.amber, letterSpacing: 6, fontWeight: 700})} opacity={1 - depthTease}>TIME</text>
-								<text textAnchor="middle" style={T(34, {fill: colors.cyan, letterSpacing: 6, fontWeight: 700})} opacity={depthTease}>DEPTH</text>
+								<text x={-110 * depthTease} textAnchor="middle" style={T(34, {fill: depthTease > 0.5 ? colors.sub : colors.amber, letterSpacing: 6, fontWeight: 700})}>TIME</text>
+								<text x={40 + 30 * depthTease} textAnchor="start" style={T(34, {fill: colors.cyan, letterSpacing: 6, fontWeight: 700})} opacity={depthTease}>→ DEPTH</text>
 							</g>
 						}
 					/>
@@ -294,7 +296,7 @@ const LastDive: React.FC = () => {
 			{sea > 0 ? (
 				<AbsoluteFill style={{opacity: sea}}>
 					<RealFootage f={f} start={wf(11, 'at') - 10} end={ef(12) + 30} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA47SWAN / YOUTUBE · CC BY" push={0.06} />
-					<Card x={96} y={96} w={720} o={1} style={{padding: '22px 28px'}}>
+					<Card x={96} y={96} w={720} o={lead(f, wf(11, 'nine') - 8, 10)} style={{padding: '22px 28px'}}>
 						<div style={{...T(26, {color: colors.amber, letterSpacing: 3})}}>18 JUN 2023 · DIVE 88</div>
 						<div style={{display: 'flex', gap: 18, marginTop: 10, alignItems: 'baseline'}}>
 							<span style={{...T(44, lit(f, wf(11, 'nine'))), fontWeight: 700, opacity: lead(f, wf(11, 'nine'), 8)}}>≈ 09:00</span>
