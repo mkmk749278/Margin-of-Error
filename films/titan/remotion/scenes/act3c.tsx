@@ -17,7 +17,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -36,7 +36,7 @@ const Winter: React.FC = () => {
 		<>
 			{harbour > 0 ? (
 				<AbsoluteFill style={{opacity: harbour}}>
-					<RealFootage f={f} start={sf(159) - 12} end={ef(161) + 26} src="footage/stj_narrows.mp4" date="" what="ST. JOHN'S, NEWFOUNDLAND · REFERENCE FOOTAGE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.06} />
+					<RealFootage f={f} start={sf(159) - 12} end={ef(161) + 26} src="footage/stj_narrows.mp4" date="" what="ST. JOHN'S HARBOUR · REFERENCE, NOT THE BASE" source="ALICK TSUI / YOUTUBE · CC BY" push={0.06} />
 					<Card x={96} y={96} w={900} o={1} style={{padding: '22px 28px'}}>
 						<div style={{...T(34, {}), fontWeight: 700}}>
 							<Wd f={f} at={wf(159, 'spend')} lightAt={wf(159, 'winter')} tone={colors.amber} bold>THE WINTER: </Wd>
@@ -178,7 +178,8 @@ const Money: React.FC = () => {
 					<>
 						<Wd f={f} at={wf(174, 'employees')}> · EMPLOYEES </Wd>
 						<Wd f={f} at={wf(174, 'asked')} lightAt={wf(174, 'forgo')} tone={colors.red}>ASKED TO FORGO </Wd><Wd f={f} at={wf(174, 'salaries')} tone={colors.red}>SALARIES · </Wd>
-						<Wd f={f} at={wf(174, 'promise')} lightAt={wf(174, 'pay')}>BACK PAY PROMISED</Wd>
+						<Wd f={f} at={wf(174, 'promise')} lightAt={wf(174, 'pay')}>BACK PAY PROMISED · </Wd>
+						<Wd f={f} at={wf(174, 'pay')} tone={colors.ink}>BROOKS: "THEY ASKED FOR VOLUNTEERS" · CG 112 P. 779</Wd>
 					</>
 				) : null}
 			</Note>
@@ -371,7 +372,7 @@ const Law: React.FC = () => {
 					</Card>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="roi" start={sf(191) - 14} end={ef(191) + 20} hl={[{key: 'conceal', at: wf(191, 'conceal')}]} label="EXHIBIT" title="FINDINGS" pushTo={wf(191, 'mission')} />
+			<RecordPage set="roi" start={sf(191) - 14} end={ef(191) + 20} hl={[{key: 'c53', at: wf(191, 'conceal')}]} label="EXHIBIT" title="SEC. 5.18" pushTo={wf(191, 'mission')} />
 			<Note o={vis(f, sf(191), ef(191) + 10)}>
 				<Wd f={f} at={wf(191, 'board')} lightAt={wf(191, 'found')}>THE BOARD FOUND: </Wd>
 				<Wd f={f} at={wf(191, 'oceangate')} lightAt={wf(191, 'described')}>OCEANGATE DESCRIBED </Wd><Wd f={f} at={wf(191, 'paying')} lightAt={wf(191, 'passengers')}>PAYING PASSENGERS AS </Wd>
@@ -439,7 +440,7 @@ const Law: React.FC = () => {
 					</div>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="mir" start={sf(199) - 14} end={hold(199).from + hold(199).frames + 10} hl={[{key: 'insufficient', at: wf(199, 'insufficient')}]} label="PROBABLE CAUSE" title="CONTRIBUTING" pushTo={wf(199, 'guidance')} />
+			<RecordPage set="mir" start={sf(199) - 14} end={hold(199).from + hold(199).frames + 10} hl={[{key: 'insufficient_es', at: wf(199, 'insufficient')}]} label="FINDING" title="CONTRIBUTING" pushTo={wf(199, 'guidance')} />
 			<Note o={vis(f, sf(199), hold(199).from + hold(199).frames)}>
 				<Wd f={f} at={wf(199, 'n')} lightAt={wf(199, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
 				<Wd f={f} at={wf(199, 'voluntary')} lightAt={wf(199, 'guidance')}>VOLUNTARY GUIDANCE </Wd>

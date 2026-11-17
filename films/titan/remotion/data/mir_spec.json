@@ -34,5 +34,13 @@
  "couldnotsave": {
   "page": 66,
   "phrase": "search and rescue efforts could not have saved lives"
+ },
+ "buckling": {
+  "page": 61,
+  "phrase": "Delaminations are a known cause of local buckling failures"
+ },
+ "insufficient_es": {
+  "page": 8,
+  "phrase": "voluntary guidance and US small passenger vessel regulations that were insufficient"
  }
 }

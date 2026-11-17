@@ -16,7 +16,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -114,7 +114,8 @@ const LastDive: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const dive = vis(f, sf(208) - 10, ef(208) + 20);
-	const depth = rollTo(f, [{frame: wf(208, 'titan'), value: 0}, {frame: ef(208) + 10, value: 1200}]);
+	// the dive's depth rolls under the cut and never lands on a number no record gives (forensic 2.8)
+	const depth = rollTo(f, [{frame: wf(208, 'titan'), value: 0}, {frame: ef(208) + 200, value: 3350}]);
 	const buck = vis(f, sf(210) - 10, ef(211) + 16);
 	const split = lead(f, wf(210, 'splits'), 14);
 	const load = span(f, wf(210, 'buckle') - 6, wf(210, 'easily') + 10);
@@ -138,7 +139,7 @@ const LastDive: React.FC = () => {
 					</div>
 				</AbsoluteFill>
 			) : null}
-			<RecordPage set="mir" start={sf(209) - 14} end={ef(209) + 20} page={74} hl={[{key: 'probable', at: wf(209, 'delaminations')}]} label="PROBABLE CAUSE" pushTo={wf(209, 'found')} />
+			<RecordPage set="mir" start={sf(209) - 14} end={ef(209) + 20} hl={[{key: 'buckling', at: wf(209, 'buckling')}]} label="ANALYSIS" pushTo={wf(209, 'found')} />
 			<Note o={vis(f, sf(209), ef(209) + 10)}>
 				<Wd f={f} at={wf(209, 'n')} lightAt={wf(209, 'found')} tone={colors.cyan}>N-T-S-B: </Wd>
 				<Wd f={f} at={wf(209, 'existing')} lightAt={wf(209, 'delaminations')} tone={colors.amber}>THE EXISTING DELAMINATIONS </Wd>
@@ -231,8 +232,8 @@ const ROWS: Row[] = [
 	{d: '88', m: 3363, date: '18 JUN'},
 ];
 const xOf = (i: number): number => 250 + i * 92 + (i >= 9 ? 150 : 0);
-const Y0 = 470;
-const yD = (m: number): number => Y0 + (m / 4000) * 360;
+const Y0 = 556;
+const yD = (m: number): number => Y0 + (m / 4000) * 300;
 
 const Record: React.FC = () => {
 	const f = useFilmFrame();
@@ -298,10 +299,10 @@ const Record: React.FC = () => {
 				) : null}
 			</svg>
 			{/* the pinned decisions, in order on "each dated decision" */}
-			<div style={{position: 'absolute', left: 200, top: 186, width: 1180, display: 'flex', flexWrap: 'wrap', gap: '8px 12px'}}>
+			<div style={{position: 'absolute', left: 200, top: 186, width: 1180, display: 'flex', flexDirection: 'column', gap: 6}}>
 				{pins.map((p, k) => (
 					<span key={k} style={{opacity: lead(f, pinAt(k), 8), transform: `scale(${bump(f, fps, pinAt(k) + LAND, 0.05).toFixed(4)})`, display: 'inline-block'}}>
-						<Chip text={`${p.i < 9 ? 'AFTER ' + ROWS[p.i].d : 'BEFORE 84'} · ${p.text}`} tone={p.tone} size={24} />
+						<Chip text={`${p.i < 9 ? 'AFTER ' + ROWS[p.i].d : 'BEFORE 84'} · ${p.text}`} tone={p.tone} size={26} style={{whiteSpace: 'nowrap', padding: '1px 10px 0'}} />
 					</span>
 				))}
 			</div>
@@ -401,7 +402,7 @@ const Verdict: React.FC = () => {
 					<Wd f={f} at={wf(225, 'canadian')} lightAt={wf(225, 'ships')} tone={colors.amber}>WITH CANADIAN SHIPS</Wd>
 				</div>
 			</Card>
-			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'willnot', at: wf(229, 'occur')}]} label="EXHIBIT" title="EVIDENCE OF CRIMINAL ACTS" pushTo={wf(228, 'had')} />
+			<RecordPage set="roi" start={sf(226) - 14} end={ef(230) + 20} hl={[{key: 'survived', at: wf(228, 'survived')}, {key: 'doj', at: wf(229, 'investigation')}, {key: 'willnot', at: wf(229, 'occur')}]} label="EXHIBIT" title="6.5 · THE BOARD'S REFERRAL SECTION" pushTo={wf(228, 'had')} />
 			<Note o={vis(f, sf(226), ef(230) + 10)}>
 				{f < sf(228) - 4 ? (
 					<>

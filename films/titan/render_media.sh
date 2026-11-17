@@ -36,7 +36,7 @@ for n, name in [('9057367', 'hull1_2019'), ('9057369', 'cf_debris')]:
 PY
 enc atl_surface cc_atl_passage.mp4 61 18 "crop=1920:864:0:0"
 # Act III: St. John's (CC BY), the winter
-enc stj_narrows cc_stjohns_cruisein.mp4 6 14
+enc stj_narrows cc_stjohns_cruisein.mp4 12 14
 enc stj_aerial cc_stjohns_harbour.mp4 92 14
 enc stj_snow cc_stjohns_snow.mp4 63 14
 enc stj_ice cc_stjohns_packice.mp4 69 14

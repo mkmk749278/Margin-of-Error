@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-244 sentences · 1662 word cues on 3530 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+244 sentences · 1663 word cues on 3530 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -17,7 +17,7 @@
 | 10 | 0:54.9 | 3/6 | 0.9 s ok |  | The eighteenth of June, twenty twenty-three. |
 | 11 | 0:57.7 | 5/13 | 1.1 s ok |  | At about nine in the morning, Titan was released from its launch platf |
 | 12 | 1:02.1 | 4/15 | 1.3 s ok |  | It was the first dive of that year's expedition to go deeper than ten  |
-| 13 | 1:06.8 | 15/32 | 1.2 s ok |  | At ten forty-seven, at about three thousand three hundred and fifty me |
+| 13 | 1:06.8 | 15/32 | 1.4 s ok |  | At ten forty-seven, at about three thousand three hundred and fifty me |
 | 14 | 1:18.2 | 2/7 | 1.3 s ok |  | It was the last message Titan sent. |
 | 15 | 1:20.9 | 5/14 | 1.3 s ok |  | A minute later, the support ship acknowledged it, and kept sending mes |
 | 16 | 1:26.1 | 1/3 | 0.8 s ok |  | No reply came. |
@@ -204,7 +204,7 @@
 | 206 | 18:43.9 | 7/15 | 1.3 s ok |  | The N - T - S - B dates two events: dive eighty, and something after d |
 | 207 | 18:50.2 | 11/16 | 1.3 s ok |  | Canada's Transportation Safety Board found the cylinder likely failed  |
 | 208 | 18:58.2 | 8/14 | 0.8 s ok |  | On the eighteenth of June, Titan made its first deep dive in eleven mo |
-| 209 | 19:02.9 | 10/21 | 1.3 s ok |  | The N - T - S - B found that the existing delaminations and the later  |
+| 209 | 19:02.9 | 11/21 | 1.3 s ok |  | The N - T - S - B found that the existing delaminations and the later  |
 | 210 | 19:10.1 | 10/16 | 0.9 s ok |  | A delamination splits one thick layer into two thinner ones, and thinn |
 | 211 | 19:16.8 | 8/14 | 0.7 s ok |  | In a local buckle, one part of the wall changes shape, and gives way. |
 | 212 | 19:21.4 | 10/25 | 1.5 s ok |  | The damage from dive eighty, it found, had reached the forward end of  |

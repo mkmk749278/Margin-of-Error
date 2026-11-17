@@ -15,7 +15,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -218,7 +218,7 @@ const Hindsight: React.FC = () => {
 						<Wd f={f} at={wf(140, 'dive')} lightAt={wf(140, 'itself')}>DIVE 80 ITSELF: </Wd>
 						<Wd f={f} at={wf(140, 'nothing')} lightAt={wf(140, 'until')} tone={colors.cyan}>NOTHING UNTIL </Wd>
 						<Wd f={f} at={wf(140, 'last')} lightAt={wf(140, 'minutes')}>ITS LAST MINUTES · </Wd>
-						<Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>THE BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} tone={colors.amber}>APPEARS IN 81</Wd>
+						<Wd f={f} at={wf(141, 'bend')} lightAt={wf(141, 'first')} tone={colors.amber}>NTSB PLOTS: THE BEND FIRST </Wd><Wd f={f} at={wf(141, 'appears')} tone={colors.amber}>APPEARS IN 81</Wd>
 						<br />
 						<Wd f={f} at={wf(142, 'data')} lightAt={wf(142, 'computer')} tone={colors.cyan}>THAT DATA: ON THE COMPANY'S COMPUTER </Wd>
 						<Wd f={f} at={wf(142, 'after')} lightAt={wf(142, 'dive')} tone={colors.cyan}>AFTER DIVE 81</Wd>

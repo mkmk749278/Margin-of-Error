@@ -16,7 +16,7 @@ import {SceneDef} from './types';
 const Note: React.FC<{o: number; children: React.ReactNode; tone?: string; y?: number}> = ({o, children, tone = colors.amber, y = 930}) =>
 	o <= 0 ? null : (
 		<div style={{position: 'absolute', left: 96, right: 96, bottom: 1080 - y - 70, opacity: o, display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(32, {color: colors.ink}), lineHeight: 1.4, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
+			<div style={{background: 'rgba(18,24,36,0.96)', border: `1px solid ${colors.border}`, borderLeft: `3px solid ${tone}`, padding: '12px 22px', ...T(36, {color: colors.ink}), lineHeight: 1.35, maxWidth: 1680, textAlign: 'center'}}>{children}</div>
 		</div>
 	);
 
@@ -194,12 +194,12 @@ const FirstHull: React.FC = () => {
 					</g>
 					<text x={150 + cx * 0.42} y={230 + (cy + r + 90) * 0.42} textAnchor="middle" style={T(34, lit(f, wf(71, 'hull'), colors.ink))}>HULL 1</text>
 					<text x={1010 + cx * 0.42} y={230 + (cy + r + 90) * 0.42} textAnchor="middle" style={T(34, lit(f, wf(72, 'second'), colors.ink))} opacity={0.4 + 0.6 * two}>HULL 2</text>
-					<text x={interpolate(word, [0, 1], [150 + cx * 0.42, 1010 + cx * 0.42])} y={760} textAnchor="middle" style={T(44, {fill: colors.red, fontWeight: 700})} opacity={lead(f, wf(72, 'delamination'), 10)}>
+					<text x={interpolate(word, [0, 1], [150 + cx * 0.42, 1010 + cx * 0.42])} y={680} textAnchor="middle" style={T(44, {fill: colors.red, fontWeight: 700})} opacity={lead(f, wf(72, 'delamination'), 10)}>
 						DELAMINATION
 					</text>
 				</svg>
 				<div style={{position: 'absolute', left: 0, right: 0, top: 200, textAlign: 'center', ...T(30, lit(f, wf(72, 'mode'), colors.amber)), opacity: lead(f, wf(72, 'failure'), 8)}}>THE FAILURE MODE</div>
-				<div style={{position: 'absolute', left: 0, right: 0, top: 800, textAlign: 'center', ...T(30, {})}}>
+				<div style={{position: 'absolute', left: 0, right: 0, top: 736, textAlign: 'center', ...T(30, {})}}>
 					<Wd f={f} at={wf(72, 'named')} lightAt={wf(72, 'report')}>NAMED IN THE 2018 REPORT · </Wd>
 					<Wd f={f} at={wf(72, 'what')} lightAt={wf(72, 'investigators')}>WHAT THE INVESTIGATORS </Wd>
 					<Wd f={f} at={wf(72, 'find')} lightAt={wf(72, 'second')} tone={colors.red}>FOUND IN HULL 2</Wd>
@@ -626,7 +626,12 @@ const InTheData: React.FC = () => {
 				</div>
 			</AbsoluteFill>
 			<HearingClip f={f} id="h_brooks_linearity" />
-			<HearingClip f={f} id="h_kramer_time" />
+			<HearingClip
+				f={f}
+				id="h_kramer_time"
+				credit="VOICE: USCG HEARING, 25 SEP 2024 · PICTURE: NTSB 24-012 FIG. 26, TRACED"
+				picture={<div style={{position: 'absolute', inset: 0, background: colors.card}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={0} /></div>}
+			/>
 		</>
 	);
 };

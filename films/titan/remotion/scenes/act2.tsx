@@ -254,7 +254,7 @@ const Margin: React.FC = () => {
 							≈ {fmt(target)} M
 						</text>
 						<text x={G.x + 276} y={gy(target) + 44} style={T(26, {fill: colors.ink})}>
-							{f >= wf(31, 'seven') ? (ghost > 0.5 ? 'IN THEORY: PERFECT GEOMETRY' : 'THE ANALYSIS · 6,000 × 1.25') : 'SHOULD NOT FAIL ABOVE'}
+							{f >= wf(31, 'seven') ? (ghost > 0.5 ? 'IN THEORY: PERFECT GEOMETRY' : 'THE ANALYSIS · 6,000 × 1.25: OUR ARITHMETIC') : 'SHOULD NOT FAIL ABOVE'}
 						</text>
 					</g>
 				) : null}
@@ -393,7 +393,7 @@ const Margin: React.FC = () => {
 };
 
 const Tests: React.FC<{f: number; fps: number; x: number; y: number; w: number}> = ({f, fps, x, y, w}) => {
-	const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 10, 12, 14);
+	const o = vis(f, wf(39, 'in') - 6, wf(45, 'never') - 24, 12, 14);
 	if (o <= 0) return null;
 	// the four test days: the plan (4,200 m on days 1–3) beside what the facility's logbook shows
 	const days: {d: string; plan: boolean; log: string; logAt: number; tone: string}[] = [
@@ -486,7 +486,7 @@ const Tests: React.FC<{f: number; fps: number; x: number; y: number; w: number}>
 				</div>
 			</div>
 			<div style={{position: 'absolute', right: 0, top: 620}}>
-				<Chip text="LOGBOOK: RECONSTRUCTION" tone={colors.amber} size={26} o={logO} />
+				<Chip text="LOGBOOK: TRANSCRIPTION · USCG ROI" tone={colors.amber} size={26} o={logO} />
 			</div>
 		</div>
 	);

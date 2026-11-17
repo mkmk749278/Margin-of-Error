@@ -114,7 +114,7 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 					<span style={{minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis'}}>{source}</span>
 					<span style={{flex: 1}} />
 					{labels.map((l) => (
-						<span key={l} style={{flexShrink: 0, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '2px 8px'}}>
+						<span key={l} style={{flexShrink: 0, color: colors.amber, border: `1px solid ${colors.amber}`, padding: '0 8px', fontSize: 34, fontWeight: 700}}>
 							{l}
 						</span>
 					))}
