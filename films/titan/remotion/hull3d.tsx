@@ -42,6 +42,33 @@ export type Hull3DProps = {
 	interfaces?: number;
 	/** 0..1: bench and lights up (0 = the hull alone in the dark, lit only by its rim) */
 	bench?: number;
+	/** 0..1: a wireframe sphere beside the hull (the usual deep-submersible hull) */
+	sphere?: number;
+	/** 0..1: the titanium end segments glow cyan */
+	ringsLit?: number;
+	/** 0..1: the titanium domes glow cyan */
+	domesLit?: number;
+	/** 0..1: the hull's own visibility (fade it for a sphere-only beat) */
+	hullO?: number;
+	/** 0..1: acoustic sensors / strain gauges shown separately (default: `sensors`) */
+	aeOn?: number;
+	sgOn?: number;
+	/** 0..1: the sensors flash amber (the crackle the monitor was meant to hear) */
+	crackle?: number;
+	/** 0..1: a second gauge, centre top of the cylinder (the one Canada's TSB measured), glows amber */
+	gTop?: number;
+	/** 0..1: at sea on its launch platform (water and platform replace the bench) */
+	sea?: number;
+	/** degrees: the platform and hull tipping bow-down (+) */
+	tilt?: number;
+	/** 0..1: the landing frame bolted under the hull (the CEO's theory of the bang, as testified) */
+	frame?: number;
+	/** 0..1: the hull squeezed (exaggerated ×10 for the eye; ILLUSTRATION) */
+	squeeze?: number;
+	/** 0..1: the frame sprung away from the hull */
+	sprung?: number;
+	/** one-third-scale models on the bench: [first (1 = imploded), second (1 = stopped), never built (ghost)], each 0..1 visible */
+	models?: {o: number; fail: number; ghost?: boolean}[];
 };
 
 // deterministic hash (no Math.random: PLAYBOOK §10)
@@ -158,14 +185,17 @@ const Environment: React.FC = () => {
 export const SENSORS: {kind: 'ae' | 'sg'; ch: number; a: number; z: number}[] = (() => {
 	const out: {kind: 'ae' | 'sg'; ch: number; a: number; z: number}[] = [];
 	const zs = [3.6, 1.2, -1.2, -3.6];
-	for (let i = 0; i < 8; i++) out.push({kind: 'ae', ch: i + 1, a: (i % 2 === 0 ? 0.55 : -0.55) + (i % 2 === 0 ? 0 : Math.PI), z: zs[Math.floor(i / 2)]});
-	for (let i = 0; i < 8; i++) out.push({kind: 'sg', ch: i + 1, a: i % 2 === 0 ? 0.15 : Math.PI + 0.15, z: zs[Math.floor(i / 2)] + 0.5});
+	// illustrative positions on the upper wall, where the cutaway shows them (the count is the record's)
+	for (let i = 0; i < 8; i++) out.push({kind: 'ae', ch: i + 1, a: i % 2 === 0 ? 0.62 : -0.62, z: zs[Math.floor(i / 2)]});
+	for (let i = 0; i < 8; i++) out.push({kind: 'sg', ch: i + 1, a: i % 2 === 0 ? 0.25 : -0.25, z: zs[Math.floor(i / 2)] + 0.5});
 	return out;
 })();
 /** Gauge group 4: top of the cylinder, near the forward end (C82, C87). */
 export const G4: Vec3 = [0, R_IN - 0.02, LEN / 2 - 0.9];
+/** The gauge Canada's TSB plotted: centre top of the carbon fibre cylinder (C123, C131). */
+export const GTOP: Vec3 = [0, R_IN - 0.02, 0];
 
-const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut, g4, sensors, aeDark = [], interfaces = 0}) => {
+const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTop = 0, cut, g4, sensors, aeDark = [], interfaces = 0, ringsLit = 0, domesLit = 0, hullO = 1, aeOn, sgOn, crackle = 0}) => {
 	const carbon = useCarbonTexture();
 	const layers = useMemo(() => {
 		const cq = Math.round(cut * 60) / 60; // geometry rebuilt only when the wedge visibly changes
@@ -180,7 +210,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 		<group>
 			{layers.map((g, i) => (
 				<mesh key={i} geometry={g} castShadow receiveShadow>
-					<meshPhysicalMaterial color={tones[i]} map={carbon} roughness={0.5} metalness={0.2} clearcoat={0.5} clearcoatRoughness={0.35} side={THREE.DoubleSide} />
+					<meshPhysicalMaterial color={tones[i]} map={carbon} roughness={0.5} metalness={0.2} clearcoat={0.5} clearcoatRoughness={0.35} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the adhesive interfaces, seen in section on both faces of the cut: a thin amber line along the hull at each */}
@@ -200,7 +230,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 			{[1, -1].map((s) => (
 				<mesh key={`ring${s}`} position={[0, 0, s * (LEN / 2 + RING / 2 - 0.05)]} rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
 					<cylinderGeometry args={[R_OUT + 0.06, R_OUT + 0.06, RING, 128, 1, true]} />
-					<meshStandardMaterial color="#a7b0ba" metalness={1} roughness={0.55} side={THREE.DoubleSide} />
+					<meshStandardMaterial color="#a7b0ba" metalness={1} roughness={0.55} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.6 * ringsLit} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the domes: 60 in, 3.25 in thick; forward dome carries the viewport */}
@@ -208,7 +238,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 				<group key={`dome${s}`} position={[0, 0, s * (LEN / 2 + RING - 0.05)]} rotation={[s > 0 ? Math.PI / 2 : -Math.PI / 2, 0, 0]}>
 					<mesh castShadow receiveShadow>
 						<sphereGeometry args={[R_OUT + 0.06, 96, 48, 0, Math.PI * 2, 0, Math.PI / 2]} />
-						<meshStandardMaterial color="#9ea8b3" metalness={1} roughness={0.58} side={THREE.DoubleSide} />
+						<meshStandardMaterial color="#9ea8b3" metalness={1} roughness={0.58} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.12 * domesLit} transparent={hullO < 1} opacity={hullO} />
 					</mesh>
 					{/* bolt flange */}
 					<mesh rotation={[Math.PI / 2, 0, 0]}>
@@ -226,13 +256,14 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 			{/* sensors on the inner wall */}
 			{SENSORS.map((x, i) => {
 				const dark = x.kind === 'ae' ? aeDark[x.ch - 1] ?? 0 : 0;
+				const on = x.kind === 'ae' ? (aeOn ?? sensors) : (sgOn ?? sensors);
 				const r = R_IN - 0.03;
 				const ang = Math.PI / 2 - x.a;
-				const col = dark > 0.5 ? '#ef4444' : '#38bdf8';
+				const col = dark > 0.5 ? '#ef4444' : crackle > 0.3 && x.kind === 'ae' ? '#f59e0b' : '#38bdf8';
 				return (
 					<mesh key={`s${i}`} position={[Math.cos(ang) * r, Math.sin(ang) * r, x.z]} rotation={[0, 0, ang - Math.PI / 2]}>
-						<boxGeometry args={x.kind === 'ae' ? [0.22, 0.06, 0.22] : [0.1, 0.04, 0.34]} />
-						<meshStandardMaterial color={col} emissive={col} emissiveIntensity={1.5 * sensors} transparent opacity={0.25 + 0.75 * sensors} />
+						<boxGeometry args={x.kind === 'ae' ? [0.34, 0.08, 0.34] : [0.12, 0.05, 0.4]} />
+						<meshStandardMaterial color={col} emissive={col} emissiveIntensity={1.5 * on + 2 * crackle * (x.kind === 'ae' ? 1 : 0)} transparent opacity={0.25 + 0.75 * on} />
 					</mesh>
 				);
 			})}
@@ -242,6 +273,11 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 				<meshStandardMaterial color="#38bdf8" emissive="#38bdf8" emissiveIntensity={4 * g4} transparent opacity={g4} />
 			</mesh>
 			<pointLight position={[G4[0], G4[1] - 0.25, G4[2]]} color="#38bdf8" intensity={6 * g4} distance={3} decay={2} />
+			<mesh position={GTOP}>
+				<boxGeometry args={[0.18, 0.05, 0.42]} />
+				<meshStandardMaterial color="#f59e0b" emissive="#f59e0b" emissiveIntensity={4 * gTop} transparent opacity={gTop} />
+			</mesh>
+			<pointLight position={[GTOP[0], GTOP[1] - 0.25, GTOP[2]]} color="#f59e0b" intensity={6 * gTop} distance={3} decay={2} />
 		</group>
 	);
 };
@@ -276,13 +312,74 @@ const Lights: React.FC<{bench: number}> = ({bench}) => (
 );
 
 /** The hull in its own canvas. Place it in an AbsoluteFill; overlays (traces, labels) go above it in 2D. */
-export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1}) => (
+const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}> = ({z, o, fail, ghost}) => {
+	// one-third scale (ILLUSTRATION): a carbon cylinder with titanium ends; a failure crushes it and turns it red
+	const r = R_OUT / 3;
+	const len = LEN / 3;
+	const sq = 1 - 0.45 * fail;
+	const col = new THREE.Color('#4a5461').lerp(new THREE.Color('#ef4444'), fail);
+	return (
+		<group position={[5.6, -R_OUT - 0.9 + r * sq, z]} scale={[1, sq, 1]}>
+			<mesh rotation={[Math.PI / 2, 0, 0]} castShadow>
+				<cylinderGeometry args={[r, r, len, 48, 1]} />
+				{ghost ? <meshBasicMaterial color="#94a3b8" wireframe transparent opacity={0.5 * o} /> : <meshStandardMaterial color={col} metalness={0.2} roughness={0.5} transparent opacity={o} emissive="#ef4444" emissiveIntensity={0.4 * fail} />}
+			</mesh>
+			{[1, -1].map((s2) => (
+				<mesh key={s2} position={[0, 0, s2 * (len / 2)]} rotation={[s2 > 0 ? Math.PI / 2 : -Math.PI / 2, 0, 0]}>
+					<sphereGeometry args={[r, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
+					{ghost ? <meshBasicMaterial color="#94a3b8" wireframe transparent opacity={0.5 * o} /> : <meshStandardMaterial color="#9ea8b3" metalness={1} roughness={0.5} transparent opacity={o} />}
+				</mesh>
+			))}
+		</group>
+	);
+};
+
+export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0, sea = 0, tilt = 0}) => (
 	<ThreeCanvas width={width} height={height} shadows gl={{antialias: true, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />
-		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} />
-		{bench > 0.01 ? <Bench bench={bench} /> : null}
+		<group rotation={[(tilt * Math.PI) / 180, 0, 0]} position={[0, -0.8 * sea, 0]}>
+		{sea > 0.01 ? (
+			<mesh position={[0, -R_OUT - 0.7, 0]} receiveShadow castShadow>
+				<boxGeometry args={[8, 0.6, LEN + 2 * RING + 4]} />
+				<meshStandardMaterial color="#f59e0b" metalness={0.3} roughness={0.6} transparent opacity={sea} />
+			</mesh>
+		) : null}
+		<group scale={[1 - 0.05 * squeeze, 1 - 0.05 * squeeze, 1]}>
+		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} ringsLit={ringsLit} domesLit={domesLit} hullO={hullO} aeOn={aeOn} sgOn={sgOn} crackle={crackle} gTop={gTop} />
+		</group>
+		{frame > 0.01 ? (
+			<group position={[0, -0.55 * sprung, 0]}>
+				{[-1.6, 1.6].map((x) => (
+					<mesh key={x} position={[x, -R_OUT - 0.35, 0]} castShadow>
+						<boxGeometry args={[0.28, 0.28, LEN + 2 * RING + 1.2]} />
+						<meshStandardMaterial color={sprung > 0.2 ? '#ef4444' : '#cbd5e1'} emissive={sprung > 0.2 ? '#ef4444' : '#000000'} emissiveIntensity={0.5 * sprung} metalness={0.6} roughness={0.4} transparent opacity={frame} />
+					</mesh>
+				))}
+				{[1, -1].flatMap((sz) => [-1.6, 1.6].map((x) => (
+					<mesh key={`${sz}${x}`} position={[x * 0.8, -R_OUT + 0.15, sz * (LEN / 2 + RING / 2)]}>
+						<boxGeometry args={[0.2, 1.0, 0.2]} />
+						<meshStandardMaterial color="#cbd5e1" metalness={0.6} roughness={0.4} transparent opacity={frame} />
+					</mesh>
+				)))}
+			</group>
+		) : null}
+		</group>
+		{sea > 0.01 ? (
+			<mesh position={[0, -R_OUT - 0.4, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+				<planeGeometry args={[200, 200]} />
+				<meshStandardMaterial color="#0b3147" metalness={0.2} roughness={0.25} transparent opacity={0.88 * sea} />
+			</mesh>
+		) : null}
+		{models.map((m, i) => (m.o > 0.01 ? <ScaleModel key={i} z={4.2 - i * 4.2} o={m.o} fail={m.fail} ghost={m.ghost} /> : null))}
+		{sphere > 0.01 ? (
+			<mesh position={[0, 0, -16.5]}>
+				<sphereGeometry args={[R_OUT * 1.15, 32, 20]} />
+				<meshBasicMaterial color="#94a3b8" wireframe transparent opacity={0.45 * sphere} />
+			</mesh>
+		) : null}
+		{bench > 0.01 && sea < 0.5 ? <Bench bench={bench} /> : null}
 	</ThreeCanvas>
 );
 
@@ -303,3 +400,27 @@ export const lerpCam = (a: HullCam, b: HullCam, t: number): HullCam => ({
 	look: [0, 1, 2].map((i) => a.look[i] + (b.look[i] - a.look[i]) * t) as Vec3,
 	fov: a.fov + (b.fov - a.fov) * t,
 });
+
+const ease3 = (t: number): number => t * t * (3 - 2 * t);
+/** Camera on word-keyed frames, eased between keys (held before the first and after the last). */
+export const camAt = (f: number, keys: {f: number; cam: HullCam}[]): HullCam => {
+	if (f <= keys[0].f) return keys[0].cam;
+	for (let i = 0; i + 1 < keys.length; i++) {
+		const a = keys[i];
+		const b = keys[i + 1];
+		if (f <= b.f) return lerpCam(a.cam, b.cam, ease3((f - a.f) / Math.max(1, b.f - a.f)));
+	}
+	return keys[keys.length - 1].cam;
+};
+
+/** One beat's eased step, 0 → 1 over ~14 frames from just before its word. */
+const beatStep = (f: number, at: number): number => ease3(Math.min(1, Math.max(0, (f - at + 6) / 14)));
+/** Alternating in/out position of a beat track: +1, −1, +1 … eased between, so the picture moves on every listed word. */
+export const beatPos = (f: number, beats: number[]): number => beats.reduce((acc, b, i) => acc + (i % 2 === 0 ? 1 : -1) * beatStep(f, b), 0);
+/** The camera dollies `amp` of its distance in and out on each beat word (PLAYBOOK §6.8: motion on the words, not type). */
+export const dolly = (cam: HullCam, f: number, beats: number[], amp = 0.035): HullCam => {
+	const k = 1 - amp * beatPos(f, beats);
+	return {...cam, pos: [0, 1, 2].map((i) => cam.look[i] + (cam.pos[i] - cam.look[i]) * k) as Vec3};
+};
+/** The same for a photograph or footage: a scale push of `amp` on each beat word. */
+export const beatScale = (f: number, beats: number[], amp = 0.03): number => 1 + amp * beatPos(f, beats);

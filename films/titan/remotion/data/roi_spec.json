@@ -110,5 +110,21 @@
  "dotfphoto": {
   "page": 184,
   "phrase": "Final TITAN hull at the DOTF in Bethesda, Maryland on February 25, 2021"
+ },
+ "letter_urging": {
+  "page": 152,
+  "phrase": "urging Mr. Rush to prioritize safety and adhere to established industry practices"
+ },
+ "letter_twenty": {
+  "page": 152,
+  "phrase": "More than 20 professionals signed the letter"
+ },
+ "letter_notsent": {
+  "page": 152,
+  "phrase": "the letter was not formally sent through the Marine Technology Society"
+ },
+ "letter_received": {
+  "page": 152,
+  "phrase": "it was confirmed that the CEO of OceanGate received the letter"
  }
 }

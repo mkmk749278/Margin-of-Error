@@ -3,8 +3,9 @@ import {AbsoluteFill, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, flash, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {ease} from '../../../../lib/remotion/motion';
-import {Mount, useFilmFrame} from '../kit';
-import {Card, Chip, clamp, lit, Pop, RealFootage, span, T, vis} from '../parts';
+import {media, Mount, Photo, useFilmFrame} from '../kit';
+import {beatScale} from '../hull3d';
+import {Chip, clamp, lit, Pop, RealFootage, span, T, vis} from '../parts';
 import {ef, hold, sf, wf} from '../timing';
 import {SceneDef} from './types';
 
@@ -18,7 +19,7 @@ type Msg = {t: string; text: string; who: 'TITAN' | 'POLAR PRINCE'; at: number; 
 const LastDive: React.FC = () => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
-	const sea = vis(f, wf(12, 'at') - 10, ef(13) + 20);
+	const sea = vis(f, sf(11) - 20, ef(13) + 20);
 	// one driver for the clock and the depth (§10.3): both roll from the 09:00 release and land together on
 	// "forty-seven" (10:47, ≈3,350 m, C37/C50); the narration then confirms the depth
 	const drive = rollTo(f, [{frame: wf(14, 'at') - 16, value: 0}, {frame: wf(14, 'forty-seven') + LAND, value: 1}]);
@@ -37,27 +38,16 @@ const LastDive: React.FC = () => {
 	return (
 		<>
 			{/* s10: the date, alone */}
-			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: vis(f, sf(11) - 20, wf(12, 'at') + 6)}}>
+			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', opacity: vis(f, sf(11) - 20, wf(12, 'at') + 6), zIndex: 2}}>
 				<DatePill f={f} fps={fps} day={18} month={6} year={2023} dayWord={wf(11, 'eighteenth')} monthWord={wf(11, 'june')} yearWord={wf(11, 'twenty-three')} fromYear={2023} fromDay={1} size={64} />
 			</AbsoluteFill>
 			{sea > 0 ? (
-				<AbsoluteFill style={{opacity: sea}}>
-					<RealFootage f={f} start={wf(12, 'at') - 10} end={ef(13) + 30} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA47SWAN / YOUTUBE · CC BY" push={0.06} />
-					<Card x={96} y={96} w={720} o={lead(f, wf(12, 'nine') - 8, 10)} style={{padding: '22px 28px'}}>
-						<div style={{...T(26, {color: colors.amber, letterSpacing: 3})}}>18 JUN 2023 · DIVE 88</div>
-						<div style={{display: 'flex', gap: 18, marginTop: 10, alignItems: 'baseline'}}>
-							<span style={{...T(44, lit(f, wf(12, 'nine'))), fontWeight: 700, opacity: lead(f, wf(12, 'nine'), 8)}}>≈ 09:00</span>
-							<span style={{...T(34, lit(f, wf(12, 'titan'))), opacity: lead(f, wf(12, 'titan'), 8)}}>TITAN</span>
-							<span style={{...T(34, lit(f, wf(12, 'released'), colors.cyan)), opacity: lead(f, wf(12, 'released'), 8)}}>RELEASED</span>
-						</div>
-						<div style={{...T(26, {color: colors.ink}), marginTop: 6, opacity: lead(f, wf(12, 'platform'), 8)}}>FROM ITS LAUNCH PLATFORM</div>
-						<div style={{marginTop: 16, display: 'flex', gap: 12, ...T(30, {})}}>
-							<span style={{opacity: lead(f, wf(13, 'first'), 8), ...lit(f, wf(13, 'first'))}}>FIRST DIVE</span>
-							<span style={{opacity: lead(f, wf(13, "year's"), 8), ...lit(f, wf(13, "year's"))}}>OF 2023</span>
-							<span style={{opacity: lead(f, wf(13, 'deeper'), 8), ...lit(f, wf(13, 'deeper'), colors.cyan)}}>BELOW</span>
-							<span style={{opacity: lead(f, wf(13, 'ten'), 8), ...lit(f, wf(13, 'ten'), colors.cyan), fontWeight: 700}}>10 M</span>
-						</div>
-					</Card>
+				<AbsoluteFill style={{opacity: sea, transform: `scale(${beatScale(f, [wf(11, 'june'), wf(11, 'twenty'), wf(11, 'twenty-three'), wf(12, 'nine'), wf(12, 'morning'), wf(12, 'titan'), wf(12, 'released'), wf(12, 'platform'), wf(13, 'first'), wf(13, 'dive'), wf(13, 'expedition'), wf(13, 'deeper'), wf(13, 'ten'), wf(13, 'metres')], 0.025).toFixed(4)})`}}>
+					<RealFootage f={f} start={sf(11) - 20} end={ef(13) + 30} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA47SWAN / YOUTUBE · CC BY" push={0.06} />
+					<div style={{position: 'absolute', left: 96, top: 110, display: 'flex', gap: 12, flexWrap: 'wrap', width: 1700}}>
+						{f >= wf(12, 'nine') - 10 ? <Chip text="≈ 09:00 · DIVE 88 · RELEASED FROM THE PLATFORM" tone={colors.ink} size={32} style={{transform: `scale(${bump(f, fps, wf(12, 'released')).toFixed(4)})`}} /> : null}
+						{f >= wf(13, 'first') - 10 ? <Chip text="FIRST 2023 DIVE BELOW 10 M" tone={colors.cyan} size={32} style={{transform: `scale(${bump(f, fps, wf(13, 'ten')).toFixed(4)})`}} /> : null}
+					</div>
 				</AbsoluteFill>
 			) : null}
 			{log > 0 ? (
@@ -99,6 +89,9 @@ const LastDive: React.FC = () => {
 					</Mount>
 				</AbsoluteFill>
 			) : null}
+			<AbsoluteFill style={{opacity: vis(f, wf(16, 'kept') - 10, ef(17) + 30, 10, 12)}}>
+				<Photo src={media('photos/pp_log_0618.jpg')} iw={1002} ih={203} start={wf(16, 'kept') - 10} end={ef(17) + 30} source="POLAR PRINCE DECK LOG · 18 JUN 2023, 0600–1200 WATCH · PHOTO BY THE MBI · USCG ROI FIG. 37" from={{x: 0, y: 0, w: 1002, h: 203}} to={{x: 0, y: 0, w: 1002, h: 203}} box={{x: 150, y: 330, w: 1620, h: 390}} labels={['RECORD PHOTO']} />
+			</AbsoluteFill>
 		</>
 	);
 };
@@ -163,7 +156,10 @@ const Thirteen: React.FC = () => {
 	const back = lead(f, wf(22, 'start'), 14);
 	return (
 		<>
-			<Mount x={150} y={110} w={1620} h={820} start={sf(19) - 14} end={hold(22).from + hold(22).frames + 20} source="TITAN'S DIVE LOG, USCG MBI REPORT · DIVE 88: NTSB MIR-25-36" labels={['DEPTHS TO SCALE']} lean={3} />
+			<AbsoluteFill style={{opacity: vis(f, sf(19) - 14, hold(22).from + hold(22).frames + 20, 12, 14)}}>
+				<RealFootage f={f} start={sf(19) - 14} end={hold(22).from + hold(22).frames + 20} src="footage/noaa_bow.mp4" date="2004" what="THE TITANIC'S BOW · NOAA" source="PUBLIC DOMAIN" push={0.05} focus={[0.4, 0.5]} />
+			</AbsoluteFill>
+			<Mount glass x={150} y={110} w={1620} h={820} start={sf(19) - 14} end={hold(22).from + hold(22).frames + 20} source="TITAN'S DIVE LOG, USCG MBI REPORT · DIVE 88: NTSB MIR-25-36" labels={['DEPTHS TO SCALE']} lean={3} />
 			<div style={{position: 'absolute', left: 230, top: 150, ...T(30, lit(f, wf(19, 'log'))), opacity: lead(f, wf(19, 'dive'), 8)}}><span style={lit(f, wf(19, 'titan'), colors.cyan, colors.ink)}>TITAN'S</span> DIVE LOG</div>
 			<div style={{position: 'absolute', left: 620, top: 132, display: 'flex', alignItems: 'baseline', gap: 14}}>
 				<span style={{...T(84, {color: colors.ink, fontWeight: 700}), transform: `scale(${bump(f, fps, lastDrop + LAND, 0.08).toFixed(4)})`, display: 'inline-block'}}>{n}</span>

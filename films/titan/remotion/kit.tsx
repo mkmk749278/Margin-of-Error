@@ -51,13 +51,15 @@ type MountProps = {
 	/** slight 2.5D lean that flattens as it settles */
 	lean?: number;
 	paper?: boolean;
+	/** a translucent plate over real footage (the picture stays a thing; PLAYBOOK §6.8) */
+	glass?: boolean;
 };
 
 /** Height of a mount's source strip: tall enough for 26 px type (PLAYBOOK §6.7). */
 export const STRIP = 58;
 
 /** A desk plate: nothing floats on the void (owner, 2026-11-03). Card, 1 px border, registration corners, source strip. */
-export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [], start, end, children, lean = 6, paper = false}) => {
+export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [], start, end, children, lean = 6, paper = false, glass = false}) => {
 	const f = useFilmFrame();
 	const {fps} = useVideoConfig();
 	const a = settle(f, fps, start);
@@ -79,7 +81,7 @@ export const Mount: React.FC<MountProps> = ({x, y, w, h, tag, source, labels = [
 					height: h,
 					transform: `translateY(${(1 - a) * 60}px) rotateX(${tilt}deg)`,
 					transformOrigin: '50% 60%',
-					background: paper ? colors.paper : colors.card,
+					background: paper ? colors.paper : glass ? 'rgba(18,24,36,0.62)' : colors.card,
 					border: `1px solid ${colors.border}`,
 					boxShadow: '0 30px 80px rgba(0,0,0,0.55)',
 				}}

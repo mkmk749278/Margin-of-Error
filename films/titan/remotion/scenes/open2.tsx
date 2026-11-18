@@ -3,7 +3,7 @@ import {AbsoluteFill, Img, interpolate, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, lead, rollTo, StatusFlip} from '../../../../lib/remotion/Kinetic';
 import {ease} from '../../../../lib/remotion/motion';
-import {G4, Hull3D, HullCam, lerpCam, project} from '../hull3d';
+import {camAt, G4, Hull3D, project} from '../hull3d';
 import {media, Mount, useFilmFrame} from '../kit';
 import {Chip, clamp, hhmm, RealFootage, span, T, T_EVENT, TimeTrace} from '../parts';
 import {HearingClip, clipOf} from '../parts2';
@@ -15,16 +15,6 @@ import {SceneDef} from './types';
 // shot is the 3D hull built from the record, real footage, a real recording or a record chart on its mount
 // (PLAYBOOK §6.8, §5.1 picture test). Every cue is a literal wf(sentence, 'word') on the measured narration.
 
-const ease3 = (t: number): number => t * t * (3 - 2 * t);
-const camAt = (f: number, keys: {f: number; cam: HullCam}[]): HullCam => {
-	if (f <= keys[0].f) return keys[0].cam;
-	for (let i = 0; i + 1 < keys.length; i++) {
-		const a = keys[i];
-		const b = keys[i + 1];
-		if (f <= b.f) return lerpCam(a.cam, b.cam, ease3((f - a.f) / Math.max(1, b.f - a.f)));
-	}
-	return keys[keys.length - 1].cam;
-};
 /** "bang": one sharp 12 px drop, recovered on a damped spring over a few frames (outside review, 18 NOV 2026). */
 const jolt = (f: number, at: number): number => (f < at ? 0 : 12 * Math.exp(-(f - at) / 2.2) * Math.cos((f - at) * 0.8));
 
