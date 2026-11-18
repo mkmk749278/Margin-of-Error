@@ -2,11 +2,6 @@
  "_doc": "Edit holds (PLAYBOOK §10.4, §12): seconds of picture time after a sentence, matched by its words. Holds over 0.8 s only at act turns and signature beats. The Gemini review (checked 16 NOV 2026) asked for beats after the names and after 'Definitely Stockton'. tail = the outro. Clips (owner, 16 NOV 2026): the witness's own voice from the USCG hearing video replaces our reading of the same quote; in/out found by Whisper word times and cut at the quietest 10 ms in the gap, each trim re-transcribed (assets/titan/hearing/cuts.json); captions are the official transcript CG 112 verbatim, never the auto-captions.",
  "holds": [
   {
-   "after": "Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and",
-   "s": 1.0,
-   "why": "the five names, said once; dark frame holds (Gemini check #3: 0.70 s was too brisk)"
-  },
-  {
    "after": "So where did the margin of error run out?",
    "s": 0.4,
    "why": "the open question"
@@ -91,6 +86,26 @@
  },
  "clips_dir": "assets/titan/footage",
  "clips": [
+  {
+   "clip": "h_brooks_diveagain_open",
+   "file": "h_brooks_diveagain",
+   "in": 7.405,
+   "out": 14.885,
+   "after": "OceanGate's director of engineering later testified",
+   "pre": 0.2,
+   "post": 0.45,
+   "caption": [
+    "I think the plan was at that time to \"well, let's dive again and see what happens\" on 81"
+   ],
+   "source": "CG 112, printed p. 765 of 1651, ll. 18–21 (C13); the tail of the same answer played in full at Act III",
+   "lower_third": {
+    "name": "PHIL BROOKS",
+    "role": "OCEANGATE DIRECTOR OF ENGINEERING 2021–23",
+    "when": "SWORN · 23 SEP 2024"
+   },
+   "credit": "U.S. COAST GUARD · MARINE BOARD OF INVESTIGATION HEARING · 23 SEP 2024",
+   "why": "cold open (opening v2): the decision in his own voice by about 0:20; starts 0.26 s before he speaks so the hearing room's air leads in (outside review 18 NOV 2026); ends after \"81\" (no gap before the next word: the mix fades it out over 80 ms)"
+  },
   {
    "clip": "h_brooks_flashlight",
    "in": 55.485,

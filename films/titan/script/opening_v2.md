@@ -19,22 +19,22 @@ Locked promise (unchanged): **The NTSB Graph That Shows Titan Was Damaged 11 Mon
 ## Opening A: narration (VO text `opening_v2_vo.txt`; vo_lint passes)
 | ~Time | VO | Picture (no text cards; every beat a real image or a 3D object) | Claims |
 |---|---|---|---|
-| 0:00 | This is the strain in Titan's hull on its eightieth dive, the fifteenth of July, twenty twenty-two. | **3D hull** (built from the NTSB construction: five carbon layers, titanium rings, domes) in the dark, gauge group 4 at the forward end glowing; on "strain" the trace draws *out of the gauge* across the full frame, large. `15 JUL 2022 · DIVE 80` as one small tag. Thumbnail exhibit on screen from frame 0 | C08, C03, C82 |
-| 0:07 | That afternoon, the four people inside heard a loud bang. And the line jumped. | "bang": a hard low hit in the sound, the camera jolts once; "jumped": the trace jumps (the real dive-80 shift, traced from NTSB fig. 26) | C08, C81 |
+| 0:00 | This is the strain in Titan's hull on dive eighty, the fifteenth of July, twenty twenty-two. | **3D hull** (built from the NTSB construction: five carbon layers, titanium rings, domes) in the dark, gauge group 4 at the forward end glowing; on "strain" the trace draws *out of the gauge* across the full frame, large. `15 JUL 2022 · DIVE 80` as one small tag. Thumbnail exhibit on screen from frame 0 | C08, C03, C82 |
+| 0:07 | That afternoon, the four people inside heard a loud bang. And the line jumped. | "bang": a hard low hit in the sound, the camera jolts once; "jumped": the trace jumps (the real dive-80 shift, traced from NTSB Materials Lab report 24-012, fig. 26) | C08, C81 |
 | 0:13 | OceanGate's director of engineering later testified that Stockton Rush, the chief executive, wanted to keep diving. | **Real hearing video**: Brooks standing to be sworn (`h_brooks_oath`, silent picture, already fetched), lower third on "director of engineering" | C13 |
 | 0:20 | *(clip, 6.6 s)* "I think the plan was at that time to, well, let's dive again and see what happens." | Brooks speaking, `h_brooks_diveagain` 5.26–11.88 s, captioned from CG 112 verbatim; the full clip still plays at 8:56 (this is its tail, a flash-forward) | C13 |
 | 0:27 | Titan dived twice more to the Titanic. | **Real NOAA footage**, the Titanic's bow; a depth readout falls to 3,840 m twice: `81`, `82` | C15 |
 | 0:30 | Eleven months later, on its first deep dive of twenty twenty-three, the hull failed, and all five people on board died. | **Real ROV footage**, the tail cone on the seabed (USCG/DVIDS); on "five people", the picture slows and darkens; no names here (they close the film at 23:08) | C17, C37, C01, C118 |
 | 0:38 | It is often said the warning worked, and was ignored. The record is more complicated. | The 3D hull again, the monitor's sensors lighting on "warning"; on "record", the NTSB report and the Coast Guard report land on the steel bench beside it (real covers) | C102 |
-| 0:44 | OceanGate plotted this strain against time. | OceanGate's own dive-80 plot (NTSB fig. 20), traced, the TIME axis bracketing on "time" | C112, C54, C130 |
+| 0:44 | OceanGate plotted this strain, and the depth beside it, against time. | OceanGate's own dive-80 plot (NTSB MIR-25-36 fig. 20), traced with its depth line and DEPTH axis shown, the TIME axis bracketing on "time" | C112, C54, C130 |
 | 0:47 | After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth. | **The same points physically turn** in 3D (time axis swings away, depth axis swings in); the camera rides the turn and stops before the bend shows | C30, C103 |
-| 0:55 | We will draw that chart from their numbers, and ask why a company that read this data after every dive did not know its hull was damaged. | Slow push into the forward end of the 3D hull, where the gauge sat; cut on "damaged" to the act's first frame | C12, C58, C80 |
+| 0:55 | We will draw that chart from their numbers, and ask why a company that read this data after dive eighty did not know its hull was damaged. | Slow push into the forward end of the 3D hull, where the gauge sat; cut on "damaged" to the act's first frame | C12, C58, C80 |
 
 About 137 words + 6.6 s of clip: **about 61 s** at Marcus's measured 152 wpm (the old opening reached 0:55 at the same
 seam). Then the film continues unchanged at "The eighteenth of June, twenty twenty-three."
 
 ## Promise check (§5.1)
-1. Title, thumbnail, sentence 1: "This is the strain in Titan's hull on its eightieth dive" with the thumbnail's trace
+1. Title, thumbnail, sentence 1: "This is the strain in Titan's hull on dive eighty" with the thumbnail's trace
    on screen. A stranger knows it is the film they clicked. **Pass.**
 2. Sentence 1 on the record: a dive number, a date, the recorded strain (USCG ROI 5.7, NTSB 24-012 fig. 26). **Pass.**
 3. Thumbnail exhibit by 0:07 (from frame 0); new hook, the sworn "let's dive again", about 0:20; "eleven months"
@@ -57,3 +57,33 @@ seam). Then the film continues unchanged at "The eighteenth of June, twenty twen
 New sentences (Marcus, Eleven v4, API, 3 takes each, picked by Whisper and pitch): 1, 2a, 2b, 3, 4, 5, 7, 9, about
 600 characters. Reused takes, same words: "It is often said…", "The record is more complicated.", "After the implosion…".
 Then splice at pauses, re-time, words, cues, choreography, mix.
+
+## Independent fact and fairness check (18 NOV 2026, `review/factcheck_opening_v2.md`): applied
+- "on its eightieth dive" → "on dive eighty": dives were numbered across both hulls (1–49, then 50–88); dive 80 was
+  not the hull's eightieth.
+- "after every dive" → "after dive eighty": the NTSB says OceanGate processed the data for dives it considered notable;
+  "every" is a false absolute.
+- "OceanGate plotted this strain against time" → "…this strain, and the depth beside it, against time": OceanGate's
+  plot had depth beside the strain, both against time (NTSB pp. 32, 51, fig. 20); the old line could be heard as
+  "OceanGate never looked at depth".
+- Picture: the dive-80 trace is credited `NTSB MATERIALS LAB REPORT 24-012, FIG. 26`; the NOAA bow footage carries its
+  own source and year; Brooks's lower third says `DIRECTOR OF ENGINEERING 2021–23`; the bang never leads the line's
+  jump by more than a beat (the USCG ties the bang to 15:26:56, eleven seconds after the strain shift); the clip ends
+  on "…see what happens on 81" (12.48 s), not mid-syllable.
+- Fairness: sentences 3–5 (Rush wanted to keep diving) never run without 6–9 (the NTSB's "did not know") in any Short
+  or trailer.
+
+## Built (18 NOV 2026)
+- **Audio:** the whole opening recorded as one read (Marcus, Eleven v4, API, 3 takes, about 2,600 characters); take 2
+  chosen (every word as written by Whisper medium.en, 140 wpm, no flat window, +1.0 semitone from the original);
+  spliced into block 1 at the 0.89 s pause before "The eighteenth of June" (original pause kept to 0.88 s, −0.5 dB to
+  match). Drive `titan/vo/titan_vo_b01_r6.mp3`; the takes are in `assets/vo/open_takes/` (gitignored).
+- **Brooks's clip:** `h_brooks_diveagain_open` in `script/holds.json` (new `after` mode in `film_timing.py`: inserted
+  after a sentence, replacing nothing; `file` reuses the hearing range). Starts 0.26 s before he speaks, so the
+  hearing room's air leads in; ends after "81" with the mixer's 80 ms fade. Plays 0:20.5–0:27.9.
+- **Picture:** `remotion/scenes/open2.tsx` on `remotion/hull3d.tsx` (the 3D hull from the record: five 1-inch layers,
+  titanium segments, 60-inch domes, 23-inch viewport, 8 + 16 sensors, gauge group 4 forward; length labelled as
+  illustration). Real footage: the hearing (oath, then the clip), NOAA's Titanic bow (2004), the ROV tail cone (22 JUN
+  2023). Report covers rendered from the PDFs. No text card in the first 69 s.
+- **Gates:** sync audit 0 fails in the opening (1,699 cues; the one fail left, 19:53, is an old type-on build the slides
+  phase replaces); text floor 0; claims gate passes (131). Film now 23:41.3. Mix not yet rebuilt (with the slides phase).

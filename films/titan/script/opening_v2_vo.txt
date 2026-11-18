@@ -1,4 +1,4 @@
-This is the strain in Titan's hull on its eightieth dive, the fifteenth of July, twenty twenty-two.
+This is the strain in Titan's hull on dive eighty, the fifteenth of July, twenty twenty-two.
 
 That afternoon, the four people inside heard a loud bang. And the line jumped.
 
@@ -10,8 +10,8 @@ Eleven months later, on its first deep dive of twenty twenty-three, the hull fai
 
 It is often said the warning worked, and was ignored. The record is more complicated.
 
-OceanGate plotted this strain against time.
+OceanGate plotted this strain, and the depth beside it, against time.
 
 After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth.
 
-We will draw that chart from their numbers, and ask why a company that read this data after every dive did not know its hull was damaged.
+We will draw that chart from their numbers, and ask why a company that read this data after dive eighty did not know its hull was damaged.

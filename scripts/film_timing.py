@@ -12,7 +12,10 @@ cut out from the middle of the pause before them to the middle of the pause afte
 pre + (out - in) + post seconds of picture. Each clip's audio is trimmed from `clips_dir`/<clip>.mp4 to
 assets/clips/<clip>.wav (untouched: no processing, the mix sets its loudness); its film frames go into timing.json
 `clips` for the picture and for sound/mix.json. A clip with `after_clip` (no `replace`) is inserted straight after
-that clip's gap and replaces nothing (two witnesses back to back, then our sentence).
+that clip's gap and replaces nothing (two witnesses back to back, then our sentence). A clip with `after` (a
+sentence's opening words, no `replace`) is inserted in the middle of the pause after that sentence and replaces nothing
+(a cold open's lead-in, then the witness). `file` names another clip's file when one hearing range is used twice
+(a flash-forward in the opening, the full answer later).
 Writes assets/vo/film_vo.wav (48 kHz mono, holds as digital silence: the mix's bed covers it) and vo/timing.json
 (committed: the film's frames for Remotion and the render farm), with every sentence and word shifted, the holds
 listed, and `durationInFrames` for the whole film. Fails if the open loop misses its window.
@@ -58,6 +61,16 @@ def main() -> None:
             length = round(c["out"] - c["in"], 3)
             pre, post = c.get("pre", 0.4), c.get("post", 0.4)
             e = {"at": round(prev["at"] + prev["c"], 3), "c": 0.0, "s": round(pre + length + post, 3), "clip": c["clip"],
+                 "pre": pre, "len": length}
+            edits.append(e)
+            clips.append((c, e, []))
+            continue
+        if "after" in c:  # inserted after a sentence, replacing nothing
+            i = find(c["after"], c.get("nth"))
+            nxt = sents[i + 1]["start"] if i + 1 < len(sents) else sents[i]["end"] + 0.3
+            length = round(c["out"] - c["in"], 3)
+            pre, post = c.get("pre", 0.4), c.get("post", 0.4)
+            e = {"at": round((sents[i]["end"] + nxt) / 2, 3), "c": 0.0, "s": round(pre + length + post, 3), "clip": c["clip"],
                  "pre": pre, "len": length}
             edits.append(e)
             clips.append((c, e, []))
@@ -124,7 +137,7 @@ def main() -> None:
         b = round(a + e["len"], 3)
         wav = film / "assets/clips" / f"{c['clip']}.wav"
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(c["in"]), "-to", str(c["out"]), "-i",
-                        str(clips_dir / f"{c['clip']}.mp4"), "-vn", "-ac", "1", "-ar", str(SR), str(wav)], check=True)
+                        str(clips_dir / f"{c.get('file', c['clip'])}.mp4"), "-vn", "-ac", "1", "-ar", str(SR), str(wav)], check=True)
         ft["clips"].append({"clip": c["clip"], "in": c["in"], "out": c["out"], "gapStart": gap, "gapStartFrame": round(gap * fps),
                             "start": a, "end": b, "startFrame": round(a * fps), "endFrame": round(b * fps),
                             "gapEndFrame": round((gap + e["s"]) * fps), "file": f"assets/clips/{c['clip']}.wav",

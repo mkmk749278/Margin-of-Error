@@ -21,6 +21,7 @@ export const CLIP_PAGE: Record<string, number> = {
 	h_brooks_flashlight: 766,
 	h_brooks_decision: 766,
 	h_brooks_diveagain: 765,
+	h_brooks_diveagain_open: 765,
 	h_brooks_linearity: 768,
 	h_kramer_time: 953,
 	h_brooks_cost: 769,
