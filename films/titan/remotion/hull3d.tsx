@@ -304,7 +304,7 @@ const Bench: React.FC<{bench: number}> = ({bench}) => {
 const Lights: React.FC<{bench: number}> = ({bench}) => (
 	<>
 		<ambientLight intensity={0.05 + 0.1 * bench} />
-		<directionalLight position={[8, 14, 10]} intensity={0.4 + 2.2 * bench} castShadow shadow-mapSize-width={1024} shadow-mapSize-height={1024} shadow-camera-left={-14} shadow-camera-right={14} shadow-camera-top={14} shadow-camera-bottom={-14} shadow-bias={-0.0004} />
+		<directionalLight position={[8, 14, 10]} intensity={0.4 + 2.2 * bench} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} shadow-camera-left={-14} shadow-camera-right={14} shadow-camera-top={14} shadow-camera-bottom={-14} shadow-bias={-0.0004} />
 		{/* cold rim light from behind: the hull's silhouette reads even in the dark */}
 		<directionalLight position={[-6, 5, -14]} intensity={1.6} color="#9cc9ff" />
 		<spotLight position={[-9, 9, 12]} angle={0.5} penumbra={0.8} intensity={60 * bench} distance={40} color="#ffe9cc" />
