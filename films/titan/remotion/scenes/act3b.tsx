@@ -173,7 +173,7 @@ const Hindsight: React.FC = () => {
 			</div>
 			{panels > 0 ? (
 				<AbsoluteFill style={{opacity: panels}}>
-					<Mount x={160} y={170} w={1600} h={640} start={sf(139) - 10} end={ef(141) + 10} source="DIVES 75, 80, 81 AGAINST TIME · NTSB 24-012, FIGS. 29–31" labels={['NTSB DATA · REDRAWN']} lean={2}>
+					<Mount x={160} y={170} w={1600} h={640} start={sf(139) - 10} end={ef(141) + 10} source="DIVES 75, 80, 81 IN RECORDED ORDER · OUR RE-PLOT OF NTSB 24-012 FIGS. 29–31" labels={['RECONSTRUCTION']} lean={2}>
 						<svg width={1600} height={580} style={{position: 'absolute', left: 0, top: 0}}>
 							<Replot m={0} z={0} show={{'75': 1, '80': 1, '81': 1, '82': 0, '83': 0}} hi={{'75': 0, '80': lead(f, wf(141, 'eighty'), 8), '81': lead(f, wf(140, 'slope'), 8), '82': 0, '83': 0}} box={{x: 0, y: 0, w: 1600, h: 580}} />
 						</svg>
@@ -248,7 +248,7 @@ const Gauges: React.FC = () => {
 					</div>
 					<div style={{position: 'absolute', right: 120, top: 420, opacity: lead(f, wf(150, 'august'), 8), display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-end'}}>
 						<Chip text="05 AUG 2021 · A SMALLER BEND" tone={colors.amber} size={30} style={{transform: `scale(${bump(f, fps, wf(150, 'smaller')).toFixed(4)})`}} />
-						<div style={{opacity: lead(f, wf(150, 'determine'), 8)}}><Chip text="TSB: CAUSE NOT DETERMINED" tone={colors.ink} size={28} /></div>
+						<div style={{opacity: lead(f, wf(150, 'determine'), 8)}}><Chip text="TSB: LINK TO THE BANG NOT DETERMINED" tone={colors.ink} size={28} /></div>
 					</div>
 					<div style={{position: 'absolute', left: 140, bottom: 54, ...T(26, {color: colors.amber, fontWeight: 700})}}>ILLUSTRATION · AMBER: TSB'S GAUGE · CYAN: NTSB'S GAUGE GROUP 4</div>
 				</AbsoluteFill>

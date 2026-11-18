@@ -76,7 +76,7 @@ const Winter: React.FC = () => {
 						<div style={{position: 'absolute', left: 96, top: 110, padding: '18px 24px', background: 'rgba(10,13,18,0.8)', borderLeft: `3px solid ${colors.amber}`}}>
 							<div style={{fontFamily: sans, fontWeight: 700, fontSize: 44, color: colors.ink}}>PHIL BROOKS</div>
 							<div style={{marginTop: 6, ...T(28, {color: colors.amber})}}>DIRECTOR OF ENGINEERING 2021–23</div>
-							<div style={{marginTop: 12, opacity: lead(f, wf(169, 'everett'), 8)}}><Chip text="PLAN: BACK TO EVERETT · INSERT OUT · LOOK FOR CRACKS" tone={colors.cyan} size={28} /></div>
+							<div style={{marginTop: 12, opacity: lead(f, wf(169, 'everett'), 8)}}><Chip text="WANTED: BACK TO EVERETT · INSERT OUT · LOOK FOR CRACKS" tone={colors.cyan} size={28} /></div>
 						</div>
 					</AbsoluteFill>
 				</AbsoluteFill>
@@ -223,11 +223,11 @@ const Law: React.FC = () => {
 			</AbsoluteFill>
 			{law > 0 ? (
 				<AbsoluteFill style={{opacity: law}}>
-					<RecordPage set="mir" start={sf(189) - 10} end={ef(189) + 14} page={68} hl={[]} label="EXHIBIT" title="2.6 · OVERSIGHT" pushTo={wf(189, 'not')} />
+					<RecordPage set="mir" start={sf(189) - 10} end={ef(189) + 14} page={68} hl={[]} label="EXHIBIT" title="2.6 · OPERATIONS AND REGULATIONS" pushTo={wf(189, 'not')} />
 				</AbsoluteFill>
 			) : null}
 			{/* the law in the NTSB's own words (forensic v2, idea 1): the page, highlighted on the sentence that says it */}
-			<RecordPage set="mir" start={sf(190) - 14} end={ef(191) + 20} page={68} hl={[{key: 'pvsa', at: wf(190, 'submersible')}]} label="EXHIBIT" title="2.6 · OVERSIGHT" pushTo={wf(190, 'submersible')} />
+			<RecordPage set="mir" start={sf(190) - 14} end={ef(191) + 20} page={68} hl={[{key: 'pvsa', at: wf(190, 'submersible')}]} label="EXHIBIT" title="2.6 · OPERATIONS AND REGULATIONS" pushTo={wf(190, 'submersible')} />
 			<RecordPage set="roi" start={sf(192) - 14} end={ef(192) + 20} hl={[{key: 'c53', at: wf(192, 'conceal')}]} label="EXHIBIT" title="SEC. 5.18" pushTo={wf(192, 'mission')} />
 			{timeline > 0 ? (
 				<AbsoluteFill style={{opacity: timeline}}>

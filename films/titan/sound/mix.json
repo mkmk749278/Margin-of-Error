@@ -69,7 +69,7 @@
   {
    "file": "assets/music/fx08_countdown.wav",
    "start": 2.5,
-   "end": 121.8,
+   "end": 136.19,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -77,8 +77,8 @@
   },
   {
    "file": "assets/music/fx02_mechanism.wav",
-   "start": 117.8,
-   "end": 290.0,
+   "start": 132.19,
+   "end": 304.38,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -86,8 +86,8 @@
   },
   {
    "file": "assets/music/fx07_evidence.wav",
-   "start": 286.0,
-   "end": 345.0,
+   "start": 300.38,
+   "end": 359.38,
    "rms_db": -26,
    "fade_in": 4,
    "fade_out": 4,
@@ -95,8 +95,8 @@
   },
   {
    "file": "assets/music/fx03_boardroom.wav",
-   "start": 341.1,
-   "end": 515.9,
+   "start": 355.48,
+   "end": 530.28,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -104,8 +104,8 @@
   },
   {
    "file": "assets/music/fx07_evidence.wav",
-   "start": 511.9,
-   "end": 627.9,
+   "start": 526.28,
+   "end": 642.28,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -114,8 +114,8 @@
   },
   {
    "file": "assets/music/fx02_mechanism.wav",
-   "start": 623.87,
-   "end": 813.21,
+   "start": 638.25,
+   "end": 827.6,
    "rms_db": -26,
    "fade_in": 4,
    "fade_out": 4,
@@ -124,8 +124,8 @@
   },
   {
    "file": "assets/music/fx09_aftermath.wav",
-   "start": 809.21,
-   "end": 983.21,
+   "start": 823.6,
+   "end": 997.59,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -133,8 +133,8 @@
   },
   {
    "file": "assets/music/fx03_boardroom.wav",
-   "start": 979.21,
-   "end": 1119.57,
+   "start": 993.59,
+   "end": 1133.95,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -143,8 +143,8 @@
   },
   {
    "file": "assets/music/fx04_cascade.wav",
-   "start": 1115.67,
-   "end": 1239.57,
+   "start": 1130.05,
+   "end": 1253.95,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -152,8 +152,8 @@
   },
   {
    "file": "assets/music/fx05_verdict.wav",
-   "start": 1235.57,
-   "end": 1389.91,
+   "start": 1249.95,
+   "end": 1404.29,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -161,8 +161,8 @@
   },
   {
    "file": "assets/music/fx10_signoff.wav",
-   "start": 1401.23,
-   "end": 1406.92,
+   "start": 1415.61,
+   "end": 1421.3,
    "rms_db": -25,
    "fade_in": 4,
    "fade_out": 4,
@@ -171,18 +171,18 @@
  ],
  "silences": [
   {
-   "start": 675.81,
-   "end": 681.45,
+   "start": 690.19,
+   "end": 695.84,
    "why": "signature 2: no music under the axis turn"
   },
   {
-   "start": 1204.06,
-   "end": 1207.16,
+   "start": 1218.44,
+   "end": 1221.54,
    "why": "signature 3: the line stops; 2 s of room tone"
   },
   {
-   "start": 1388.41,
-   "end": 1402.23,
+   "start": 1402.79,
+   "end": 1416.61,
    "why": "the five names, in silence"
   }
  ],
