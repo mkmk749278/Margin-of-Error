@@ -158,7 +158,7 @@ const Margin: React.FC = () => {
 	// the right half: the hull and its models, then the record's own photographs of the 2021 tests
 	const R = {x: 980, y: 150, w: 840, h: 660};
 	const photoWin = (a: number, b: number) => vis(f, a, b, 12, 12);
-	const hullO = 1 - Math.max(photoWin(sf(40) - 10, ef(41) + 4), photoWin(sf(42) - 10, ef(43) + 4), photoWin(sf(45) - 10, ef(45) + 6));
+	const hullO = 1 - Math.max(photoWin(sf(42) - 10, ef(43) + 4), photoWin(sf(45) - 10, ef(45) + 6));
 	const BEATS = [wf(29, 'strong'), wf(30, 'original'), wf(30, 'goal'), wf(30, 'rated'), wf(30, 'six'), wf(30, 'thousand'), wf(30, 'metres'), wf(30, 'safety'), wf(30, 'factor'), wf(30, 'two'), wf(30, 'point'), wf(30, 'two', 1), wf(30, 'five'), wf(30, 'a', 2), wf(30, 'should'), wf(30, 'until'), wf(30, 'thirteen'), wf(30, 'half'), wf(30, 'thousand', 1), wf(31, 'transportation'), wf(31, 'safety'), wf(31, 'found'), wf(31, 'oceangate'), wf(31, 'changed'), wf(31, 'factor'), wf(31, 'one'), wf(31, 'point'), wf(31, 'two'), wf(31, 'five'), wf(32, 'hull'), wf(32, 'carbon'), wf(32, 'cylinder'), wf(32, 'hold'), wf(32, 'seven'), wf(32, 'thousand'), wf(32, 'five'), wf(32, 'hundred'), wf(32, 'metres'), wf(32, 'six'), wf(32, 'thousand', 1), wf(32, 'times'), wf(32, 'one'), wf(32, 'point'), wf(32, 'two'), wf(32, 'five', 1), wf(33, 'depth'), wf(33, 'titanic'), wf(34, 't'), wf(34, 'noted'), wf(34, 'analysis'), wf(34, 'assumed'), wf(34, 'geometry'), wf(34, 'perfectly'), wf(34, 'fibres'), wf(34, 'not'), wf(34, 'actually'), wf(35, 'built'), wf(35, 'materials'), wf(35, 'imploded'), wf(35, 'or'), wf(35, 'imploded', 1), wf(35, 'shallower'), wf(35, 'three'), wf(35, 'thousand'), wf(36, 'those'), wf(36, 'wrinkles'), wf(36, 'carbon'), wf(36, 'changed'), wf(36, 'prevent'), wf(37, 'method'), wf(37, 'bonding'), wf(37, 'layers'), wf(37, 'one'), wf(37, 'next'), wf(37, 'never'), wf(37, 'model'), wf(38, 'investigators'), wf(38, 'found'), wf(38, 'model'), wf(38, 'built'), wf(38, 'discussed'), wf(38, 'was', 1), wf(38, 'built', 1), wf(38, 'order'), wf(39, 'one'), wf(39, 'built'), wf(39, 'hull'), wf(39, 'people'), wf(40, 'twenty'), wf(40, 'twenty-one'), wf(40, 'that'), wf(40, 'pressure'), wf(40, 'facility'), wf(40, 'maryland'), wf(41, 'going'), wf(41, 'four'), wf(41, 'thousand'), wf(41, 'two'), wf(41, 'hundred'), wf(41, 'three'), wf(41, 'four', 1), wf(41, 'days'), wf(42, 'logbook'), wf(42, 'reached'), wf(42, 'once'), wf(43, 'first'), wf(43, 'march'), wf(43, 'twenty'), wf(44, 'done'), wf(44, 'company'), wf(44, 'test'), wf(44, 'limited'), wf(44, 'titanium'), wf(44, 'dome'), wf(44, 'the', 2), wf(45, 'days'), wf(45, 'hull'), wf(45, 'four'), wf(45, 'thousand'), wf(45, 'metres'), wf(45, 'then'), wf(45, 'three'), wf(45, 'thousand', 1), wf(45, 'eight'), wf(45, 'hundred'), wf(45, 'forty'), wf(45, 'four', 1), wf(45, 'twice'), wf(46, 'tested'), wf(47, 'found'), wf(47, 'unlikely'), wf(47, 'hull'), wf(47, 'strength'), wf(47, 'predicted'), wf(47, 'that', 1), wf(47, 'company'), wf(47, 'know'), wf(47, 'strength', 1)];
 	const bs = beatScale(f, BEATS, 0.02);
 	const cam = dolly(camAt(f, [
@@ -169,6 +169,8 @@ const Margin: React.FC = () => {
 		{f: wf(37, 'bonding'), cam: {pos: [22, 16, 19], look: [1.5, 0.4, 1], fov: 30}},
 		{f: wf(38, 'scale'), cam: {pos: [22, 9, 12], look: [5, -2.6, -3], fov: 30}},
 		{f: wf(39, 'hull'), cam: {pos: [34, 14, 28], look: [1, -0.8, 0.4], fov: 30}},
+		{f: wf(40, 'facility'), cam: {pos: [27, 10, 22], look: [1, -0.4, 0.8], fov: 30}},
+		{f: wf(41, 'days'), cam: {pos: [24, 9, 25], look: [0.5, -0.2, 2], fov: 30}},
 		{f: wf(44, 'titanium'), cam: {pos: [22, 8, 30], look: [0, 0, 4.5], fov: 30}},
 		{f: wf(46, 'never'), cam: {pos: [36, 15, 30], look: [1, -1, 0], fov: 30}},
 	]), f, BEATS);
@@ -210,7 +212,7 @@ const Margin: React.FC = () => {
 				{testLine > 0 ? (
 					<g opacity={testLine}>
 						<line x1={G.x - 40} x2={G.x + 160} y1={gy(4200)} y2={gy(4200)} stroke={colors.cyan} strokeWidth={4} />
-						<text x={G.x + 176} y={gy(4200) + 38} style={T(28, {fill: colors.cyan, fontWeight: 700})}>4,200 M · {f >= wf(42, 'once') ? 'REACHED ONCE' : 'PLANNED, 3 OF 4 DAYS'}</text>
+						<text x={G.x + 176} y={gy(4200) + 38} style={T(28, {fill: colors.cyan, fontWeight: 700})}>4,200 M · {f >= wf(42, 'once') ? 'REACHED ONCE' : 'PLAN: 3 OF 4 DAYS'}</text>
 						<text x={G.x + 176} y={gy(4200) + 72} style={T(26, lit(f, wf(44, 'dome'), colors.ink))} opacity={lead(f, wf(43, 'first'), 8)}>
 							{f >= wf(45, 'three') ? '3,840 M: 4 H, TWICE' : f >= wf(44, 'titanium') ? 'LIMIT: A TITANIUM DOME' : '01 MAR 2021 · 20 MIN'}
 						</text>
@@ -247,12 +249,10 @@ const Margin: React.FC = () => {
 				</div>
 				<div style={{position: 'absolute', left: 40, bottom: 54, ...T(26, {color: colors.amber, fontWeight: 700})}}>ILLUSTRATION · NOT TO SCALE</div>
 			</div>
-			{/* 2021: the record's own photographs (DOTF, U.S. Navy facility; the board's red arrows) */}
-			{photoWin(sf(40) - 10, ef(41) + 4) > 0 ? (
-				<AbsoluteFill style={{opacity: photoWin(sf(40) - 10, ef(41) + 4), transform: `scale(${bs.toFixed(4)})`, transformOrigin: '70% 45%'}}>
-					<Photo src={media('photos/dotf_hull.jpg')} iw={1042} ih={777} start={sf(40) - 10} end={ef(41) + 4} source="THE FINAL HULL AT THE TEST FACILITY · 25 FEB 2021 · PHOTO: DOTF, IN USCG ROI FIG. 149" from={{x: 0, y: 0, w: 1042, h: 777}} to={{x: 200, y: 140, w: 640, h: 480}} path={[{frame: sf(40), r: {x: 0, y: 0, w: 1042, h: 777}}, {frame: wf(40, 'facility'), r: {x: 120, y: 80, w: 800, h: 600}}, {frame: ef(41), r: {x: 200, y: 140, w: 640, h: 480}}]} box={R} labels={['RECORD PHOTO']} />
-				</AbsoluteFill>
-			) : null}
+			{/* 2021: the test (s40–41) stays on the 3D hull: the DOTF photo (USCG ROI fig. 149) was dropped, rights unconfirmed (owner, 18 NOV 2026) */}
+			<div style={{position: 'absolute', left: R.x + 20, top: 86 + 64, opacity: lead(f, wf(40, 'facility'), 8) * (1 - lead(f, wf(42, 'logbook'), 10))}}>
+				<Chip text={f >= wf(40, 'maryland') ? 'DEEP OCEAN TEST FACILITY · BETHESDA, MD · FEB 2021' : 'DEEP OCEAN TEST FACILITY'} tone={colors.cyan} size={26} />
+			</div>
 			{photoWin(sf(42) - 10, ef(43) + 4) > 0 ? (
 				<AbsoluteFill style={{opacity: photoWin(sf(42) - 10, ef(43) + 4), transform: `scale(${bs.toFixed(4)})`, transformOrigin: '70% 45%'}}>
 					<Photo src={media('photos/dotf_log_0301.jpg')} iw={827} ih={509} start={sf(42) - 10} end={ef(43) + 4} source="LOGBOOK, 01 MAR 2021 · DOTF, IN USCG ROI FIG. 151 · ARROW: MBI" from={{x: 0, y: 0, w: 827, h: 509}} to={{x: 0, y: 170, w: 827, h: 339}} path={[{frame: sf(42), r: {x: 0, y: 0, w: 827, h: 509}}, {frame: wf(42, 'once'), r: {x: 0, y: 170, w: 827, h: 339}}]} box={R} labels={['RECORD']} />
