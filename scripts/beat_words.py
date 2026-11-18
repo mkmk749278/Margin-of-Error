@@ -64,7 +64,10 @@ def main() -> None:
                 break
         # every spoken number gets its own beat (the sync audit's rule: no uncued number)
         nums = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
-                "thirteen", "twenty", "thirty", "forty", "fifty", "hundred", "thousand", "first", "half"}
+                "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty",
+                "fifty", "sixty", "seventy", "eighty", "ninety", "hundred", "thousand", "million", "billion", "first",
+                "second", "third", "half", "zero", "percent", "january", "february", "march", "april", "may", "june",
+                "july", "august", "september", "october", "november", "december"}
         for x in cand:
             if x[1].rstrip(",.:;") in nums and x not in picked:
                 picked.append(x)

@@ -55,6 +55,12 @@ export type Hull3DProps = {
 	sgOn?: number;
 	/** 0..1: the sensors flash amber (the crackle the monitor was meant to hear) */
 	crackle?: number;
+	/** 0..1: the landing frame bolted under the hull (the CEO's theory of the bang, as testified) */
+	frame?: number;
+	/** 0..1: the hull squeezed (exaggerated ×10 for the eye; ILLUSTRATION) */
+	squeeze?: number;
+	/** 0..1: the frame sprung away from the hull */
+	sprung?: number;
 	/** one-third-scale models on the bench: [first (1 = imploded), second (1 = stopped), never built (ghost)], each 0..1 visible */
 	models?: {o: number; fail: number; ghost?: boolean}[];
 };
@@ -315,12 +321,30 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 	);
 };
 
-export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle}) => (
+export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0}) => (
 	<ThreeCanvas width={width} height={height} shadows gl={{antialias: true, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />
+		<group scale={[1 - 0.05 * squeeze, 1 - 0.05 * squeeze, 1]}>
 		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} ringsLit={ringsLit} domesLit={domesLit} hullO={hullO} aeOn={aeOn} sgOn={sgOn} crackle={crackle} />
+		</group>
+		{frame > 0.01 ? (
+			<group position={[0, -0.55 * sprung, 0]}>
+				{[-1.6, 1.6].map((x) => (
+					<mesh key={x} position={[x, -R_OUT - 0.35, 0]} castShadow>
+						<boxGeometry args={[0.28, 0.28, LEN + 2 * RING + 1.2]} />
+						<meshStandardMaterial color={sprung > 0.2 ? '#ef4444' : '#cbd5e1'} emissive={sprung > 0.2 ? '#ef4444' : '#000000'} emissiveIntensity={0.5 * sprung} metalness={0.6} roughness={0.4} transparent opacity={frame} />
+					</mesh>
+				))}
+				{[1, -1].flatMap((sz) => [-1.6, 1.6].map((x) => (
+					<mesh key={`${sz}${x}`} position={[x * 0.8, -R_OUT + 0.15, sz * (LEN / 2 + RING / 2)]}>
+						<boxGeometry args={[0.2, 1.0, 0.2]} />
+						<meshStandardMaterial color="#cbd5e1" metalness={0.6} roughness={0.4} transparent opacity={frame} />
+					</mesh>
+				)))}
+			</group>
+		) : null}
 		{models.map((m, i) => (m.o > 0.01 ? <ScaleModel key={i} z={4.2 - i * 4.2} o={m.o} fail={m.fail} ghost={m.ghost} /> : null))}
 		{sphere > 0.01 ? (
 			<mesh position={[0, 0, -16.5]}>
