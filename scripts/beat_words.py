@@ -69,7 +69,7 @@ def main() -> None:
                 "second", "third", "half", "zero", "percent", "january", "february", "march", "april", "may", "june",
                 "july", "august", "september", "october", "november", "december"}
         for x in cand:
-            if x[1].rstrip(",.:;") in nums and x not in picked:
+            if any(part in nums for part in x[1].rstrip(",.:;").split("-")) and x not in picked:
                 picked.append(x)
         picked.sort()
         for _, c, n, _ in picked:
