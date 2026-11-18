@@ -6,6 +6,7 @@ import {envelope} from '../../../lib/remotion/motion';
 import {SfxCue} from '../../../lib/remotion/sfx';
 import {mono} from './kit';
 import {act1} from './scenes/act1';
+import {open2} from './scenes/open2';
 import {act2} from './scenes/act2';
 import {act3a} from './scenes/act3a';
 import {act3b} from './scenes/act3b';
@@ -18,7 +19,7 @@ import {FILM_FRAMES, s2f} from './timing';
 // TITAN: the whole film on one clock (vo/timing.json). Each scene mounts on absolute frames; scenes fade
 // themselves, and neighbours overlap so a cut is always a dissolve on the desk.
 
-export const scenes: SceneDef[] = [...act1, ...act2, ...act3a, ...act3b, ...act3c, ...act45];
+export const scenes: SceneDef[] = [...open2, ...act1, ...act2, ...act3a, ...act3b, ...act3c, ...act45];
 
 const chapters = timing.chapters.map((c, i, all) => ({title: c.title, from: s2f(c.start), to: i + 1 < all.length ? s2f(all[i + 1].start) : FILM_FRAMES}));
 
@@ -56,7 +57,8 @@ const Scenes: React.FC = () => {
 					// drift fast enough to read as motion on a still card (≥ 30 px per 4 s, PLAYBOOK §6.4)
 					const dx = Math.cos(ang) * 14 * (e - 0.5) + 13 * Math.sin((2 * Math.PI * t) / 8 + i);
 					const dy = Math.sin(ang) * 9 * (e - 0.5) + 7 * Math.sin((2 * Math.PI * t) / 10 + 2 * i);
-					const o = Math.min(1, (f - s.from + 1) / XF, (s.to - f) / XF);
+					// the film's first frame is already the picture (PLAYBOOK §5.1 picture test): no fade up from black at 0
+					const o = Math.min(1, s.from === 0 ? 1 : (f - s.from + 1) / XF, (s.to - f) / XF);
 					return (
 						<AbsoluteFill key={s.id} style={{opacity: o, transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: '50% 48%'}}>
 							<s.C />

@@ -4,6 +4,7 @@ import {video} from '../lib/remotion/brand';
 import {loadBrandFonts} from '../lib/remotion/fonts';
 import {EngineCheck} from './dev/EngineCheck';
 import {PlugCheck} from './dev/PlugCheck';
+import {HullCheck} from './dev/HullCheck';
 import {FourMissingBolts} from '../films/four-missing-bolts/remotion/Film';
 import {FILM_FRAMES} from '../films/four-missing-bolts/remotion/timing';
 import {EastPalestine} from '../films/east-palestine/remotion/Film';
@@ -52,6 +53,7 @@ export const Root: React.FC = () => (
 		</Folder>
 		<Folder name="Dev">
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />
+			<Composition id="HullCheck" component={HullCheck} durationInFrames={241} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="EngineCheck" component={EngineCheck} durationInFrames={600} fps={video.fps} width={video.width} height={video.height} />
 		</Folder>
 	</>

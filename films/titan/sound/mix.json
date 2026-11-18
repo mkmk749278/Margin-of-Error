@@ -17,6 +17,12 @@
  },
  "clips": [
   {
+   "file": "assets/clips/h_brooks_diveagain_open.wav",
+   "frame": 0,
+   "lufs": -15.5,
+   "why": "h_brooks_diveagain_open: USCG hearing video, unaltered (opening v2; the frame is read from vo/timing.json)"
+  },
+  {
    "file": "assets/clips/h_brooks_flashlight.wav",
    "frame": 29958,
    "lufs": -15.5,

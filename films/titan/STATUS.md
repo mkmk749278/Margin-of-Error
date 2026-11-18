@@ -4,10 +4,11 @@
 - **Owner: v7 looks like slides.** Measured: 60% dark card frames, first real image 0:58 (`review/slide_audit_v7.md`);
   both outside reviews checked (`review/outside_slides_review_check.md`). Rules for every future film: PLAYBOOK §6.8
   and §5.1 picture test, CLAUDE.md, `scripts/slide_audit.py` gate.
-- **Opening rewritten and APPROVED by the owner (18 NOV 2026):** `script/opening_v2.md` (opening A: the 3D hull and
-  its strain line, the bang, Brooks under oath by 0:20, NOAA bow, ROV tail cone, the axis turn). Next: fact-check and
-  fairness at max on the new lines, record the new sentences (Marcus, API), splice, re-time; build the 3D hull; then
-  replace every card run over 12 s (list in `slide_audit_v7.md`).
+- **Opening rewritten, APPROVED by the owner, fact-checked, recorded and BUILT (18 NOV 2026):** `script/opening_v2.md`
+  (its last section has the build). Independent fact-check applied three wording fixes (`review/factcheck_opening_v2.md`).
+  The 3D hull (`remotion/hull3d.tsx`) is now the film's hero object. Sentence ids from 11 on are the old 10 on (+1).
+- **Next: the slides phase.** Replace every card run over 12 s (`review/slide_audit_v7.md`) with the hull, the record's
+  photographs and real footage; then the mix, cut v8 on GitHub, `slide_audit.py` on it until it passes.
 
 
 ## Latest (17 NOV 2026, afternoon)

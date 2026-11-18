@@ -20,6 +20,7 @@ enc ndt_wave cc_ndt_canister1.mp4 121 8
 enc h_brooks_flashlight h_brooks_flashlight.mp4 55.085 4.650
 enc h_brooks_decision h_brooks_decision.mp4 1.915 10.340
 enc h_brooks_diveagain h_brooks_diveagain.mp4 2.005 15.030
+enc h_brooks_diveagain_open h_brooks_diveagain.mp4 7.205 8.130   # opening v2: the tail of the same answer, 0.2 s before (room air) to 0.45 s after
 enc h_brooks_linearity h_brooks_linearity.mp4 5.625 14.570
 enc h_kramer_time h_kramer_time.mp4 9.985 6.950
 enc h_brooks_cost h_brooks_cost.mp4 9.615 8.740

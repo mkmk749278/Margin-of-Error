@@ -1,4 +1,8 @@
-# Titan: narration v4 (16 NOV 2026) · **APPROVED by the owner 16 NOV 2026, as written**
+# Titan: narration v4 (16 NOV 2026) · **APPROVED by the owner 16 NOV 2026, as written** · opening v2 approved 18 NOV 2026
+
+**Opening v2 (owner, 18 NOV 2026):** the first paragraphs below are the rewritten opening (`opening_v2.md`), with the
+independent fact-check's three wording fixes; after "…wanted to keep diving." Brooks's own voice plays ("I think the
+plan was at that time to, well, let's dive again and see what happens on 81"). The five names now close the film only.
 
 **What this is:** the full narration as Marcus will read it (3,703 words; about 22 minutes of voice at Marcus's
 measured pace, about 24 minutes with the exhibit holds). The approved treatment estimated 27 minutes; this is what the
@@ -47,15 +51,23 @@ Canada's Transportation Safety Board (JUN 2026), plus the sworn hearing transcri
 
 ### I · The Incident
 
-The fifteenth of July, twenty twenty-two. On dive eighty, the Titan submersible's hull monitor recorded a burst of sound, and a sudden shift in strain.
+This is the strain in Titan's hull on dive eighty, the fifteenth of July, twenty twenty-two.
 
-Eleven months later, on the way down to the Titanic, the hull failed. Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood and Hamish Harding died.
+That afternoon, the four people inside heard a loud bang. And the line jumped.
 
-Titan's hull was hard to inspect, so OceanGate relied on this monitor to warn it when the hull was weakening.
+OceanGate's director of engineering later testified that Stockton Rush, the chief executive, wanted to keep diving.
 
-It is often said the warning worked, and was ignored. The record is more complicated. The monitor had gaps, its alerts were set on other hulls, and its strain was read against time.
+Titan dived twice more to the Titanic.
 
-After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth. We will draw that chart with them, from the reports and the sworn testimony.
+Eleven months later, on its first deep dive of twenty twenty-three, the hull failed, and all five people on board died.
+
+It is often said the warning worked, and was ignored. The record is more complicated.
+
+OceanGate plotted this strain, and the depth beside it, against time.
+
+After the implosion, the N - T - S - B, America's accident investigator, plotted the same numbers against depth.
+
+We will draw that chart from their numbers, and ask why a company that read this data after dive eighty did not know its hull was damaged.
 
 
 The eighteenth of June, twenty twenty-three. At about nine in the morning, Titan was released from its launch platform. It was the first dive of that year's expedition to go deeper than ten metres.
