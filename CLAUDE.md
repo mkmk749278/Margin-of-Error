@@ -174,6 +174,10 @@ are in **bold**.
 - **The first 45 s in three beats (2026-11-06, PLAYBOOK §5.1a):** 0:00–0:10 the anomaly on the record; 0:10–0:25 the
   stakes beyond this one failure; 0:25–0:45 the method (which records we read). Each act ends with its finding, the
   contradiction it exposes, and the next act's question.
+- **The first 30 s are a picture test too (owner, 2026-11-18; PLAYBOOK §5.1):** frame 0 is a thing in motion (the
+  thumbnail's exhibit on the 3D hero, real footage or a real document), a real human from the record by about 0:20
+  (sworn hearing video, a released radio call), the consequence on real footage, no hold on type. Three cold opens
+  sketched shot by shot; the chosen one is built and checked one frame a second before any other scene.
 
 ## The look (owner's spec §4; PLAYBOOK §6)
 - **An investigator's desk:** Void `#0a0d12` (never `#000000`), cards `#121824` with a 1 px `#1e293b` border.
@@ -190,6 +194,12 @@ are in **bold**.
   ≥ 26 px for every other fact-carrying label; `muted` never carries a fact; text inside the 90% safe area, never on
   a grid line, never clipped. If it isn't plainly readable in the 720p cut, it fails.
 - No stock footage of generic offices, no AI imagery of real places, people or aircraft, no neon dashboards.
+- **A film, not slides (owner, 2026-11-18; PLAYBOOK §6.8).** The screen never repeats the narration: no bullet lists,
+  text panels, quote boxes or names on black; text is only record ids, a number that is the evidence, part labels,
+  dates and honesty labels. Every frame holds a thing: real footage, a real photo or document, the **hero object in
+  3D** built from the record (every film has one), or a record chart on a lit mount. Mine the reports' own photographs
+  first. `scripts/slide_audit.py` gates every cut (card frames ≤ 30%, no card run over 12 s, first real image by 0:02).
+  *Why:* Titan v7 measured 60% dark cards and no real image until 0:58; US/UK viewers read that as an automated video.
 
 ## Narration (owner's spec §5; PLAYBOOK §7)
 - **Voice: "Marcus - Baritone(Stoic)"** (owner, 2026-11-06), a professional ElevenLabs Voice Library voice on the

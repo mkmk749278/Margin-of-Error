@@ -5,10 +5,10 @@ description: Review a rendered Margin of Error cut before anyone sees it - measu
 
 # Review a cut
 
-Rules: PLAYBOOK §14.2 (picture gate), §6.4, §6.7, §9.4, §10.6, §12. `high` effort or above; final cuts at `max`.
+Rules: PLAYBOOK §14.2 (picture gate), §5.1, §6.4, §6.8, §6.7, §9.4, §10.6, §12. `high` effort or above; final cuts at `max`.
 
 1. **Measure the decoded cut:** flash frames (darker than 45% of both neighbours; 1–9-frame shots at cuts), frozen
-   holds (`freezedetect=n=0.002:d=1.5` at 480p), `python3 scripts/stillness_audit.py <cut.mp4>` reads 0, judder
+   holds (`freezedetect=n=0.002:d=1.5` at 480p), `python3 scripts/stillness_audit.py <cut.mp4>` reads 0, `python3 scripts/slide_audit.py <cut.mp4> --out review/slide_audit_rN.md` passes (§6.8; the opening's first 60 s also one frame a second against §5.1's picture test), judder
    (`tblend` difference), black frames, loudness (`ebur128`: −14 LUFS ±1, −1 dBTP), picture = film length, audio
    within 0.15 s.
 2. **Frames against the words:** `python3 scripts/contact_sheet.py <cut.mp4> --out <qa> --every 0.5` (two frames a
