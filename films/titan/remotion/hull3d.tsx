@@ -339,7 +339,7 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 };
 
 export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0, sea = 0, tilt = 0}) => (
-	<ThreeCanvas width={width} height={height} gl={{antialias: false, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
+	<ThreeCanvas width={Math.round(width)} height={Math.round(height)} gl={{antialias: false, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />

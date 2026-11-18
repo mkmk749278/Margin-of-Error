@@ -563,7 +563,9 @@ on screen; the hero object was never built in 3D; the real photographs inside th
    default; `render_shards.mjs` sets `timeoutInMilliseconds: 240000`. Keep the scene cheap for software GL: no real-time
    shadows (a drawn contact shadow instead), standard materials (no clearcoat or transmission), no MSAA, modest segment
    counts. *Why:* Titan's hull measured 2.6–4.5 s a frame with them and 0.5–0.85 s without, same look. A re-rendered
-   block must use the same scene code as the blocks it joins.
+   block must use the same scene code as the blocks it joins. `<ThreeCanvas>` throws on a width or height that is
+   not a whole number; `Hull3D` rounds them, so an animated split (`1920 - 860 * t`) is safe. *Why:* Titan v8's
+   block 14400-27000 died at frame 28373 (width 1916.22) after 2 h 40 min; stills at the key frames never landed on it.
 8. **Measured on every cut** (§14.2): `python3 scripts/slide_audit.py CUT.mp4 --out review/slide_audit_rN.md` must
    pass: card frames ≤ 30% of the film, no card run over 12 s, the first non-card frame by 0:02, card frames ≤ 25% of
    the first 60 s. A declared signature data build (rule 6) may exceed the run gate when the treatment names it and
