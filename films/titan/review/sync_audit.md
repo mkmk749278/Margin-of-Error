@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-246 sentences · 1699 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+246 sentences · 1692 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -28,41 +28,41 @@
 | 21 | 2:03.3 | 1/9 | 1.3 s ok |  | So where did the margin of error run out? |
 | 22 | 2:06.3 | 2/8 | 1.0 s ok |  | And when did the hull start to go? |
 | 23 | 2:12.2 | 13/26 | 1.2 s ok |  | At three thousand eight hundred and forty metres, the ocean presses on |
-| 24 | 2:20.6 | 4/10 | 1.0 s ok |  | Titan was not built the way deep submersibles usually are. |
-| 25 | 2:24.1 | 8/21 | 1.3 s ok |  | Its pressure hull was a cylinder of carbon fibre, five layers, each ab |
-| 26 | 2:31.7 | 5/15 | 1.2 s ok |  | Titanium rings were bonded to each end, and titanium domes were bolted |
-| 27 | 2:37.3 | 11/26 | 1.2 s ok |  | According to a former director of marine operations, the company's chi |
-| 28 | 2:46.6 | 10/32 | 1.4 s ok |  | He also believed that, because it was lighter, it would need less buoy |
+| 24 | 2:20.6 | 5/10 | 0.8 s ok |  | Titan was not built the way deep submersibles usually are. |
+| 25 | 2:24.1 | 12/21 | 0.7 s ok |  | Its pressure hull was a cylinder of carbon fibre, five layers, each ab |
+| 26 | 2:31.7 | 6/15 | 1.1 s ok |  | Titanium rings were bonded to each end, and titanium domes were bolted |
+| 27 | 2:37.3 | 12/26 | 1.0 s ok |  | According to a former director of marine operations, the company's chi |
+| 28 | 2:46.6 | 15/32 | 1.1 s ok |  | He also believed that, because it was lighter, it would need less buoy |
 | 29 | 2:55.9 | 2/4 | 0.9 s ok |  | How strong was it? |
-| 30 | 2:57.6 | 21/35 | 1.2 s ok |  | The company's original goal was a hull rated to six thousand metres, w |
-| 31 | 3:09.5 | 13/17 | 1.1 s ok |  | Canada's Transportation Safety Board found that OceanGate later change |
-| 32 | 3:16.9 | 15/25 | 1.4 s ok |  | The analysis for this hull said the carbon cylinder would hold to abou |
-| 33 | 3:26.1 | 4/8 | 0.6 s ok |  | Less than twice the depth of the Titanic. |
-| 34 | 3:28.8 | 11/23 | 1.5 s ok |  | And, the N - T - S - B noted, that analysis assumed perfect geometry a |
-| 35 | 3:38.1 | 10/16 | 1.3 s ok |  | Scale models built with the new materials imploded, or nearly imploded |
-| 36 | 3:45.2 | 7/16 | 1.0 s ok |  | OceanGate traced those failures to wrinkles in the carbon, and changed |
-| 37 | 3:50.7 | 8/16 | 0.9 s ok |  | That new method, bonding the layers one onto the next, was never teste |
-| 38 | 3:56.0 | 10/21 | 1.4 s ok |  | Canada's investigators found that a scale model built that way was dis |
-| 39 | 4:03.3 | 6/11 | 0.9 s ok |  | The only one ever built was the hull that carried people. |
-| 40 | 4:06.9 | 8/14 | 1.2 s ok |  | In early twenty twenty-one, that hull went to a pressure test facility |
-| 41 | 4:11.9 | 10/21 | 1.1 s ok |  | The test plan had it going to the pressure of four thousand two hundre |
-| 42 | 4:17.7 | 5/9 | 0.7 s ok |  | The facility's logbook shows it reached that pressure once. |
-| 43 | 4:21.2 | 4/7 | 0.8 s ok |  | The first of March, for twenty minutes. |
-| 44 | 4:24.0 | 8/20 | 1.2 s ok |  | According to analysis done for the company, the test depth was limited |
-| 45 | 4:30.9 | 16/25 | 1.3 s ok |  | On the other days, the hull was held near four thousand metres, and th |
+| 30 | 2:57.6 | 18/35 | 1.0 s ok |  | The company's original goal was a hull rated to six thousand metres, w |
+| 31 | 3:09.5 | 11/17 | 1.1 s ok |  | Canada's Transportation Safety Board found that OceanGate later change |
+| 32 | 3:16.9 | 17/25 | 1.0 s ok |  | The analysis for this hull said the carbon cylinder would hold to abou |
+| 33 | 3:26.1 | 2/8 | 1.1 s ok |  | Less than twice the depth of the Titanic. |
+| 34 | 3:28.8 | 12/23 | 1.1 s ok |  | And, the N - T - S - B noted, that analysis assumed perfect geometry a |
+| 35 | 3:38.1 | 11/16 | 1.0 s ok |  | Scale models built with the new materials imploded, or nearly imploded |
+| 36 | 3:45.2 | 5/16 | 1.0 s ok |  | OceanGate traced those failures to wrinkles in the carbon, and changed |
+| 37 | 3:50.7 | 7/16 | 1.0 s ok |  | That new method, bonding the layers one onto the next, was never teste |
+| 38 | 3:56.0 | 12/21 | 1.1 s ok |  | Canada's investigators found that a scale model built that way was dis |
+| 39 | 4:03.3 | 5/11 | 0.9 s ok |  | The only one ever built was the hull that carried people. |
+| 40 | 4:06.9 | 7/14 | 1.0 s ok |  | In early twenty twenty-one, that hull went to a pressure test facility |
+| 41 | 4:11.9 | 8/21 | 1.1 s ok |  | The test plan had it going to the pressure of four thousand two hundre |
+| 42 | 4:17.7 | 3/9 | 1.0 s ok |  | The facility's logbook shows it reached that pressure once. |
+| 43 | 4:21.2 | 3/7 | 0.8 s ok |  | The first of March, for twenty minutes. |
+| 44 | 4:24.0 | 8/20 | 1.1 s ok |  | According to analysis done for the company, the test depth was limited |
+| 45 | 4:30.9 | 14/25 | 1.0 s ok |  | On the other days, the hull was held near four thousand metres, and th |
 | 46 | 4:39.3 | 3/6 | 0.6 s ok |  | It was never tested to failure. |
-| 47 | 4:42.8 | 10/28 | 1.2 s ok |  | The N - T - S - B found it unlikely that the hull ever had the strengt |
-| 48 | 4:51.2 | 3/9 | 0.8 s ok |  | Then how would anyone know if it was failing? |
-| 49 | 4:53.8 | 3/7 | 1.0 s ok |  | OceanGate's answer was to listen to it. |
-| 50 | 4:56.6 | 6/11 | 1.1 s ok |  | Eight acoustic sensors and sixteen strain gauges, fixed inside the hul |
-| 51 | 5:01.7 | 6/19 | 1.1 s ok |  | A carbon hull, the theory went, would crackle as it weakened, and the  |
+| 47 | 4:42.8 | 10/28 | 1.0 s ok |  | The N - T - S - B found it unlikely that the hull ever had the strengt |
+| 48 | 4:51.2 | 2/9 | 1.0 s ok |  | Then how would anyone know if it was failing? |
+| 49 | 4:53.8 | 2/7 | 1.0 s ok |  | OceanGate's answer was to listen to it. |
+| 50 | 4:56.6 | 7/11 | 1.0 s ok |  | Eight acoustic sensors and sixteen strain gauges, fixed inside the hul |
+| 51 | 5:01.7 | 7/19 | 0.9 s ok |  | A carbon hull, the theory went, would crackle as it weakened, and the  |
 | 52 | 5:07.7 | 2/4 | 0.7 s ok |  | The system had limits. |
-| 53 | 5:09.5 | 7/15 | 1.3 s ok |  | The pilot saw live readings, but the full data were downloaded only af |
-| 54 | 5:14.9 | 8/22 | 1.4 s ok |  | Acoustic data were analysed only from the dive itself, so damage at th |
-| 55 | 5:22.6 | 8/15 | 1.2 s ok |  | In twenty twenty-two, three of the eight acoustic channels registered  |
-| 56 | 5:28.7 | 12/25 | 1.1 s ok |  | After each dive, the engineering director looked at the data first, an |
-| 57 | 5:37.2 | 11/20 | 1.0 s ok |  | And the alert criteria had been set on the sounds of earlier hulls and |
-| 58 | 5:43.0 | 13/29 | 1.5 s ok |  | No model had ever been built this hull's way, so, the N - T - S - B fo |
+| 53 | 5:09.5 | 7/15 | 1.0 s ok |  | The pilot saw live readings, but the full data were downloaded only af |
+| 54 | 5:14.9 | 9/22 | 1.1 s ok |  | Acoustic data were analysed only from the dive itself, so damage at th |
+| 55 | 5:22.6 | 9/15 | 1.0 s ok |  | In twenty twenty-two, three of the eight acoustic channels registered  |
+| 56 | 5:28.7 | 11/25 | 1.1 s ok |  | After each dive, the engineering director looked at the data first, an |
+| 57 | 5:37.2 | 6/20 | 1.0 s ok |  | And the alert criteria had been set on the sounds of earlier hulls and |
+| 58 | 5:43.0 | 11/29 | 1.1 s ok |  | No model had ever been built this hull's way, so, the N - T - S - B fo |
 | 59 | 5:55.5 | 3/5 | 0.6 s ok |  | Had anyone warned about this? |
 | 60 | 5:57.9 | 3/6 | 1.1 s ok |  | The eighteenth of January, twenty eighteen. |
 | 61 | 6:00.6 | 6/14 | 1.2 s ok |  | The company's director of marine operations filed an inspection report |
