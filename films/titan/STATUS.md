@@ -7,8 +7,15 @@
 - **Opening rewritten, APPROVED by the owner, fact-checked, recorded and BUILT (18 NOV 2026):** `script/opening_v2.md`
   (its last section has the build). Independent fact-check applied three wording fixes (`review/factcheck_opening_v2.md`).
   The 3D hull (`remotion/hull3d.tsx`) is now the film's hero object. Sentence ids from 11 on are the old 10 on (+1).
-- **Next: the slides phase.** Replace every card run over 12 s (`review/slide_audit_v7.md`) with the hull, the record's
-  photographs and real footage; then the mix, cut v8 on GitHub, `slide_audit.py` on it until it passes.
+- **Slides phase done (18 NOV 2026):** every act rebuilt without text cards: the 3D hull (`remotion/hull3d.tsx`), 19
+  new government photos and pages (Navy test facility, NTSB materials photos, MBI and FBI photos of recovered parts,
+  the Polar Prince deck log, DVIDS hearing and search photos; `media_manifest.csv`), real footage, record pages with
+  located highlights. Typed notes removed everywhere. `scripts/beat_words.py` + `dolly`/`beatScale` keep the picture
+  moving on the words; sync audit 0 of 246. Sign-off answers the cold open; the five names over the quiet sea.
+- **Mix rebuilt** on the new timeline (music slots and silences remapped sentence by sentence): −14.0 LUFS / −1.4 dBTP,
+  Drive `titan/mix/mix.wav` (v7's kept as `mix_v7.wav`).
+- **Cut v8 rendering** on GitHub (720p, `titan_review_v8_720p.mp4`). Next: `slide_audit.py` and the picture gate on the
+  decoded cut; the independent check of the new screen text (`review/factcheck_screen_v8.md`); then v8 to the owner.
 
 
 ## Latest (17 NOV 2026, afternoon)
