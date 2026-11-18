@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-246 sentences · 1668 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+246 sentences · 1648 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -135,30 +135,30 @@
 | 133 | 12:05.8 | 13/14 | 0.8 s ok |  | After it: eight point seven six, eight point zero nine, eight point se |
 | 134 | 12:11.4 | 4/6 | 1.0 s ok |  | Same gauge, same hull, same sea. |
 | 135 | 12:15.2 | 4/9 | 0.9 s ok |  | A response that had changed by about three quarters. |
-| 136 | 12:18.5 | 2/8 | 1.1 s ok |  | Could OceanGate have seen this at the time? |
-| 137 | 12:21.3 | 15/31 | 1.3 s ok |  | The Coast Guard board found that OceanGate had all the data it needed  |
-| 138 | 12:31.4 | 7/17 | 1.2 s ok |  | The timing that follows is our own reading of the record, not a findin |
-| 139 | 12:36.4 | 4/9 | 0.8 s ok |  | Brooks was right that there was no new jump. |
-| 140 | 12:39.1 | 8/16 | 1.0 s ok |  | What changed was the slope, and against time a change in slope is hard |
-| 141 | 12:44.6 | 7/9 | 1.0 s ok |  | Dive eighty itself shows nothing until its last minutes. |
-| 142 | 12:48.1 | 6/14 | 1.1 s ok |  | In the N - T - S - B's plots, the bend first appears in dive eighty-on |
-| 143 | 12:53.5 | 4/10 | 1.1 s ok |  | That data was on the company's computer after that dive. |
-| 144 | 12:56.9 | 11/19 | 1.0 s ok |  | Plotted against depth, it would have shown the bend before dive eighty |
-| 145 | 13:04.2 | 3/7 | 0.5 s ok |  | And it was not a faulty gauge. |
-| 146 | 13:06.5 | 9/19 | 0.9 s ok |  | Deeper down, the curves still match, which the N - T - S - B said show |
+| 136 | 12:18.5 | 1/8 | 1.1 s ok |  | Could OceanGate have seen this at the time? |
+| 137 | 12:21.3 | 12/31 | 1.1 s ok |  | The Coast Guard board found that OceanGate had all the data it needed  |
+| 138 | 12:31.4 | 7/17 | 0.9 s ok |  | The timing that follows is our own reading of the record, not a findin |
+| 139 | 12:36.4 | 2/9 | 0.9 s ok |  | Brooks was right that there was no new jump. |
+| 140 | 12:39.1 | 7/16 | 1.0 s ok |  | What changed was the slope, and against time a change in slope is hard |
+| 141 | 12:44.6 | 4/9 | 1.0 s ok |  | Dive eighty itself shows nothing until its last minutes. |
+| 142 | 12:48.1 | 7/14 | 1.1 s ok |  | In the N - T - S - B's plots, the bend first appears in dive eighty-on |
+| 143 | 12:53.5 | 3/10 | 0.9 s ok |  | That data was on the company's computer after that dive. |
+| 144 | 12:56.9 | 9/19 | 1.0 s ok |  | Plotted against depth, it would have shown the bend before dive eighty |
+| 145 | 13:04.2 | 1/7 | 1.0 s ok |  | And it was not a faulty gauge. |
+| 146 | 13:06.5 | 8/19 | 1.0 s ok |  | Deeper down, the curves still match, which the N - T - S - B said show |
 | 147 | 13:13.3 | 2/3 | 0.5 s ok |  | The hull had. |
-| 148 | 13:15.0 | 13/16 | 1.0 s ok |  | Canada's investigators later plotted the strain against depth their ow |
-| 149 | 13:22.7 | 14/31 | 1.2 s ok |  | On the nineteenth of July, for one gauge at the top of the hull, the s |
-| 150 | 13:32.4 | 12/23 | 1.1 s ok |  | They also found a smaller bend a year earlier, in August twenty twenty |
-| 151 | 13:40.6 | 6/10 | 0.7 s ok |  | Why would a damaged hull bend only near the surface? |
-| 152 | 13:44.6 | 9/23 | 1.3 s ok |  | The N - T - S - B found long voids in the bond between the first and s |
-| 153 | 13:51.6 | 9/19 | 1.1 s ok |  | Where a layer separates at the end of the cylinder, it can move on its |
-| 154 | 13:57.0 | 6/11 | 1.1 s ok |  | Deeper down, it found, the layers respond like the intact hull. |
-| 155 | 14:01.7 | 4/7 | 0.8 s ok |  | Titan made three more dives that July. |
-| 156 | 14:04.5 | 11/28 | 1.3 s ok |  | Two of them, eighty-one and eighty-two, still reached the Titanic, whi |
-| 157 | 14:13.7 | 2/9 | 1.3 s ok |  | A delamination is not a crack through the wall. |
-| 158 | 14:17.0 | 2/10 | 1.2 s ok |  | But the wall was no longer what it had been. |
-| 159 | 14:20.0 | 14/34 | 1.4 s ok |  | The N - T - S - B's finding: because its analysis was flawed, OceanGat |
+| 148 | 13:15.0 | 9/16 | 1.0 s ok |  | Canada's investigators later plotted the strain against depth their ow |
+| 149 | 13:22.7 | 16/31 | 1.0 s ok |  | On the nineteenth of July, for one gauge at the top of the hull, the s |
+| 150 | 13:32.4 | 10/23 | 1.1 s ok |  | They also found a smaller bend a year earlier, in August twenty twenty |
+| 151 | 13:40.6 | 3/10 | 1.1 s ok |  | Why would a damaged hull bend only near the surface? |
+| 152 | 13:44.6 | 9/23 | 1.1 s ok |  | The N - T - S - B found long voids in the bond between the first and s |
+| 153 | 13:51.6 | 7/19 | 1.1 s ok |  | Where a layer separates at the end of the cylinder, it can move on its |
+| 154 | 13:57.0 | 6/11 | 1.0 s ok |  | Deeper down, it found, the layers respond like the intact hull. |
+| 155 | 14:01.7 | 3/7 | 0.8 s ok |  | Titan made three more dives that July. |
+| 156 | 14:04.5 | 12/28 | 1.1 s ok |  | Two of them, eighty-one and eighty-two, still reached the Titanic, whi |
+| 157 | 14:13.7 | 4/9 | 0.9 s ok |  | A delamination is not a crack through the wall. |
+| 158 | 14:17.0 | 3/10 | 0.9 s ok |  | But the wall was no longer what it had been. |
+| 159 | 14:20.0 | 15/34 | 1.1 s ok |  | The N - T - S - B's finding: because its analysis was flawed, OceanGat |
 | 160 | 14:34.1 | 3/8 | 0.9 s ok |  | Then it had to spend the winter somewhere. |
 | 161 | 14:36.7 | 10/21 | 0.7 s ok |  | On the twenty-sixth of July, Titan was set down in a parking lot at a  |
 | 162 | 14:43.4 | 1/1 | 0.6 s ok |  | Uncovered. |

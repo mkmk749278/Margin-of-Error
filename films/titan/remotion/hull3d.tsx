@@ -55,6 +55,8 @@ export type Hull3DProps = {
 	sgOn?: number;
 	/** 0..1: the sensors flash amber (the crackle the monitor was meant to hear) */
 	crackle?: number;
+	/** 0..1: a second gauge, centre top of the cylinder (the one Canada's TSB measured), glows amber */
+	gTop?: number;
 	/** 0..1: the landing frame bolted under the hull (the CEO's theory of the bang, as testified) */
 	frame?: number;
 	/** 0..1: the hull squeezed (exaggerated ×10 for the eye; ILLUSTRATION) */
@@ -186,8 +188,10 @@ export const SENSORS: {kind: 'ae' | 'sg'; ch: number; a: number; z: number}[] = 
 })();
 /** Gauge group 4: top of the cylinder, near the forward end (C82, C87). */
 export const G4: Vec3 = [0, R_IN - 0.02, LEN / 2 - 0.9];
+/** The gauge Canada's TSB plotted: centre top of the carbon fibre cylinder (C123, C131). */
+export const GTOP: Vec3 = [0, R_IN - 0.02, 0];
 
-const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut, g4, sensors, aeDark = [], interfaces = 0, ringsLit = 0, domesLit = 0, hullO = 1, aeOn, sgOn, crackle = 0}) => {
+const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTop = 0, cut, g4, sensors, aeDark = [], interfaces = 0, ringsLit = 0, domesLit = 0, hullO = 1, aeOn, sgOn, crackle = 0}) => {
 	const carbon = useCarbonTexture();
 	const layers = useMemo(() => {
 		const cq = Math.round(cut * 60) / 60; // geometry rebuilt only when the wedge visibly changes
@@ -265,6 +269,11 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({cut
 				<meshStandardMaterial color="#38bdf8" emissive="#38bdf8" emissiveIntensity={4 * g4} transparent opacity={g4} />
 			</mesh>
 			<pointLight position={[G4[0], G4[1] - 0.25, G4[2]]} color="#38bdf8" intensity={6 * g4} distance={3} decay={2} />
+			<mesh position={GTOP}>
+				<boxGeometry args={[0.18, 0.05, 0.42]} />
+				<meshStandardMaterial color="#f59e0b" emissive="#f59e0b" emissiveIntensity={4 * gTop} transparent opacity={gTop} />
+			</mesh>
+			<pointLight position={[GTOP[0], GTOP[1] - 0.25, GTOP[2]]} color="#f59e0b" intensity={6 * gTop} distance={3} decay={2} />
 		</group>
 	);
 };
@@ -321,13 +330,13 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 	);
 };
 
-export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0}) => (
+export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0}) => (
 	<ThreeCanvas width={width} height={height} shadows gl={{antialias: true, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />
 		<group scale={[1 - 0.05 * squeeze, 1 - 0.05 * squeeze, 1]}>
-		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} ringsLit={ringsLit} domesLit={domesLit} hullO={hullO} aeOn={aeOn} sgOn={sgOn} crackle={crackle} />
+		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} ringsLit={ringsLit} domesLit={domesLit} hullO={hullO} aeOn={aeOn} sgOn={sgOn} crackle={crackle} gTop={gTop} />
 		</group>
 		{frame > 0.01 ? (
 			<group position={[0, -0.55 * sprung, 0]}>
