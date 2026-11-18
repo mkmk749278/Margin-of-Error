@@ -14,7 +14,7 @@ Rules: PLAYBOOK §10.3 (handoff, sync rules), §10.6 (the four laws, the table, 
 3. **Plan each sentence as a small scene:** a base picture that carries the whole sentence; every number, part, verb,
    place and record id changes something on its word (30–100 ms); the cues together say the sentence (law 4). Where
    no exhibit exists, draw what the words say, labelled. Ask the creative question: what makes the viewer *see* the
-   margin shrink here?
+   margin shrink here? A cue is an action on a thing, never the narrated word typed on a card (§6.8).
 4. **Choreography table** → `scenes/choreography/<scene>.md` (trigger words · 60 fps frames · state change · eye target ·
    implementation), then the code on literal `wf(id, 'word')` cues (`lib/remotion/Kinetic.tsx`). Highlights start ~15
    frames early; locks land on the word +2 frames; numbers roll and land as said; a readout and its trace share one

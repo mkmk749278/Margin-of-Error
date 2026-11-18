@@ -33,7 +33,7 @@ Only finished work goes to the owner. At session start: unmerged branches check 
    first, through the promise check** (§5.1: sentence 1 confirms the thumbnail), then the rest; creative pass, lean-in test,
    `vo_lint.py`, `/fairness-pass`, audience review (§7.8) → `script/narration.md` with SendUserFile and the recording
    blocks in the chat. **[owner approves the narration]**
-   In parallel from treatment approval: `/source-exhibits`, owner fetch requests, reference sheets, hero builds in stills.
+   In parallel from treatment approval: `/source-exhibits`, owner fetch requests, reference sheets, hero builds in stills (the hero object in 3D from the record's dimensions, and a contact sheet of every photograph and figure in the record, §6.8).
 6. **Audio** (never before the opening is verified and the narration approved): `vo_blocks.py` → `tts_elevenlabs.py --dry-run` → `--blocks 1` → `vo_review.py` and listen → all
    blocks → Drive `<slug>/vo/`. Then `vo_timing.py` → `film_timing.py` → `word_align.py`. **[owner approves the audio]**
 

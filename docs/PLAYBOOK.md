@@ -374,6 +374,22 @@ the length; some films run shorter, some longer). The act times below are Film 1
   5. Does it match both challenger pairs too?
   The result goes at the top of `script/narration.md`. A failure is fixed in the opening, or, if the opening is right
   and the package is wrong, in the package (with the owner, who approved it with the treatment).
+- **The first 30 seconds are a picture test too (owner, 2026-11-18).** The promise check passes on words and
+  can still lose the viewer on picture (Titan v7: words fine, no real image until 0:58). In the opening:
+  1. **Frame 0 is a thing in motion:** the thumbnail's exhibit on a 3D hero object, real footage or a real document,
+     never a chart on a dark card or type on black.
+  2. **A real human by about 0:20 where the record has one:** the sworn witness on public hearing video, the
+     investigator at the briefing, the crew's released radio. A real face or voice from the record is the strongest
+     proof that this is an investigation, not a generated video.
+  3. **No hold on type.** No names, dates or quotes alone on screen; the dead are named with dignity where the film
+     ends, or said over a real, quiet image, never as a 7-second list in the hook.
+  4. **The consequence on real footage** (the wreck, the site, the recovered part), never a drawn stand-in when a
+     public-domain image exists.
+  5. **The method is shown as an act, not a list:** the reports land on the bench, the same data physically turns.
+  6. **Three cold opens that differ in picture as well as words** (CLAUDE.md: 3+ cold opens), each sketched shot by shot before one is
+     chosen; the chosen one is built and checked frame by frame (one frame a second, 0:00–0:60) before any other scene.
+  *Why:* Titan's opening was rewritten after the owner's review (`films/titan/script/opening_v2.md`); a viewer decides
+  in the first 30 seconds, and every later strength depends on surviving them.
 - **Act turns in three steps:** close the act on its finding; show the contradiction that finding exposes; turn it
   into the next act's question. *Why:* a resolved act with no new question is where viewers leave.
 - **Name the open loop by about 0:30, at the latest 60 s** (what we will find), and end the act on the question
@@ -514,6 +530,39 @@ colleagues); our arithmetic turns that into these floors **at the 1920×1080 aut
   outside reviewer misreading a label ("EDG FRAME" for a 16 px EDGE FRAME) is a legibility finding.
 - *Why:* the first film's review cut set 92 font sizes below 18 px (tags, captions, panel titles at 13–17 px), and two
   independent reviews found the same labels unreadable on a phone.
+
+### 6.8 A film, not slides (owner, 2026-11-18)
+**The failure this prevents.** Titan cut v7 measured 60% dark card frames (`scripts/slide_audit.py`), runs of 58–81 s
+with no real image, and the first real image at 0:58. The owner and an outside review both called it "a dark-mode
+PowerPoint"; US and UK viewers read narration typed onto dark cards as an automated video, the content they distrust
+most (§4.1), and leave before the film's best evidence. The research, script and exhibits were strong; the picture
+threw it away. *Root cause (ours):* the word-level rule (§10.6) was met the cheapest way, by typing the narrated word
+on screen; the hero object was never built in 3D; the real photographs inside the official reports were never mined.
+
+**The rules.**
+1. **The picture never repeats the narration.** No sentence, clause or bullet list of what the voice is saying. Text
+   on screen is only: a record id or source strip, a number with its unit when it is the evidence, a label on a part of
+   an object, a date tag, an honesty label, a caption of a real recording. If the voice says "twenty-six items needing
+   action", the screen shows the report's own page with item 26, not `26 ITEMS NEEDING ACTION`. *Why:* the viewer
+   reads ahead in half a second, then waits for the voice, then leaves (split attention).
+2. **No bullet lists, no text panels, no quote boxes, no names on black.** A list of facts becomes the artifact that
+   holds them (the log, the page, the weather table, the exhibit diagram) or the object they describe.
+3. **Every frame holds a thing, not a card.** In order: real footage or a real recording; a real photograph or document
+   from the record; a 3D object built from the record's dimensions, lit and grounded on a bench or plate; a data chart
+   from the record, itself on a lit physical mount. A flat 2D outline of the hero object (a rectangle with dashed
+   ends for a hull) is never the hero.
+4. **Every film builds its hero object in 3D** (Three.js inside Remotion, §10; Blender Cycles where a still needs
+   photoreal) from the record's construction data: the hull, the bogie, the door plug, the valve. It returns in every
+   act as the film's spine: the camera goes to the part the voice names.
+5. **Mine the record's own pictures first.** Before drawing anything: every figure and photograph in the final reports,
+   the docket's photo and materials files, the hearing exhibits shown on screen, DVIDS and agency galleries. A
+   contact sheet of all of them goes in `scenes/` before the beat sheet's picture column is written.
+6. **The data chart is a signature, not wallpaper.** One or two data builds per film may run long (the re-plot); every
+   other chart is on screen only while it changes, then the film returns to a real image.
+7. **Measured on every cut** (§14.2): `python3 scripts/slide_audit.py CUT.mp4 --out review/slide_audit_rN.md` must
+   pass: card frames ≤ 30% of the film, no card run over 12 s, the first non-card frame by 0:02, card frames ≤ 25% of
+   the first 60 s. A declared signature data build (rule 6) may exceed the run gate when the treatment names it and
+   says why; nothing else may.
 
 ## 7. Narration
 The narration holds the viewer through 20 minutes; the voice is calm, so the writing carries the tension.
@@ -844,6 +893,9 @@ its syllable (2–6 frames at 60 fps) on **measured** word times (§10.4).
    sale" needs the 2005 filing, "Renton" needs Renton on the record's own diagram.
 - **When no exhibit exists for a sentence, draw what the words say** (a labelled `RECONSTRUCTION` or `ILLUSTRATION`,
   §9.4), never a related filler picture.
+- **A cue is an action on a thing, never the word typed (2026-11-18).** "The hull" lights the hull; "jumped" jumps
+  the line; "the record" lands the report on the bench. Typing the narrated word or clause onto a card is not a cue and
+  fails the sync audit's intent even when it passes its timing (Titan v7: 60% card frames, §6.8).
 - **Audit it twice:** the sync audit below (does every cue land), then a **sentence pass** at the cut: one strip of
   frames per sentence, read against the sentence, graded WRONG / WEAK / OK (§14.2).
 
@@ -996,7 +1048,10 @@ site, but it must match what the voice says, and it is labelled when a viewer co
   306 cues, no gap over 15 s outside the hearing clips. Re-run it after any scene edit, before exporting the cues.
 - **Released recordings in the mix:** `sound/mix.json` `clips` lays each excerpt's own sound on the frame the picture
   plays it (read the frame from the scene code, not from notes: STATUS had both clips one frame early), at a set
-  loudness in the voice stem, with the music ducked `clip_duck_db` (14 dB) under it. `mix_film.py` needs `scipy`
+  loudness in the voice stem, with the music ducked `clip_duck_db` (14 dB) under it. **Room tone into a clip
+  (outside review, 2026-11-18):** don't over-clean the hearing audio; high-pass it at 80 Hz, and let the room's own air
+  fade in about 0.2 s before the witness speaks, so the cut from the dry narrator feels like cutting to a broadcast,
+  not a jump. `mix_film.py` needs `scipy`
   (`pip install scipy==1.16.2`; not in the base image).
 - **Only effects moved?** When `sound/cues.json` changes but `vo/timing.json`, the voice and the music slots don't,
   patch instead of rebuilding: `python3 scripts/patch_mix_sfx.py films/<slug> OLD_CUES.json` (old mix − the removed
@@ -1302,6 +1357,9 @@ and read it back once the video is public.
 - Two frames a second with the words heard under each; every sheet read; every frame shows what is said.
 - No flash frames (`render_shards.mjs` checks every shard), nothing frozen over 2.5 s, no black frames.
 - Every exhibit carries its source tag; every readout its claim id or ILLUSTRATIVE; reconstructions labelled.
+- **A film, not slides (§6.8):** `scripts/slide_audit.py` passes on the decoded cut (card frames ≤ 30%, no card run
+  over 12 s except a declared signature build, first non-card frame by 0:02, ≤ 25% in the first 60 s), and the
+  opening's first 60 s are checked one frame a second against §5.1's picture test.
 - Text readable on a phone; nothing important under YouTube's overlays.
 - **Legibility measured (§6.7):** no fact-carrying text under 26 px at 1080, nothing the narration points to under
   36 px, no fact in `muted`, nothing outside the 90% graphics-safe area, no text on a grid line, nothing clipped at a
@@ -1417,6 +1475,15 @@ only against our own rules hides what the competing films already do better.
 
 ## 16. Lessons log
 *(Newest first. Each: what happened, the rule, why.)*
+
+**Slides and the opening hook (owner, 2026-11-18).**
+- *A strong investigation can look like a slide deck.* Titan cut v7 had world-class sourcing and a dark-card picture:
+  60% card frames, runs up to 81 s, no real image until 0:58. The owner asked why we use "so many PPT-like slides" and
+  whether top-tier viewers like it; an outside review agreed (substance yes, delivery no). **Rules:** §6.8 (a film,
+  not slides: no read-along text, a 3D hero object, the record's own photographs first, `slide_audit.py` gate) and
+  §5.1 (the first 30 seconds are a picture test: a thing in motion at frame 0, a real human by about 0:20, no hold on
+  type). *Why:* our own word-level rule was met by typing words; a measured gate and a picture test for the opening
+  stop it recurring. Measurement: `films/titan/review/slide_audit_v7.md`.
 
 **Outside research documents (2026-11-09).**
 - *A confident dossier can be wrong exactly where the story wants it.* A 17-page research dossier on East Palestine

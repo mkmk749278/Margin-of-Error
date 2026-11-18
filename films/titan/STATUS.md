@@ -1,4 +1,14 @@
-# Titan: status (17 NOV 2026, fourth session)
+# Titan: status (18 NOV 2026, fifth session)
+
+## Latest (18 NOV 2026)
+- **Owner: v7 looks like slides.** Measured: 60% dark card frames, first real image 0:58 (`review/slide_audit_v7.md`);
+  both outside reviews checked (`review/outside_slides_review_check.md`). Rules for every future film: PLAYBOOK §6.8
+  and §5.1 picture test, CLAUDE.md, `scripts/slide_audit.py` gate.
+- **Opening rewritten and APPROVED by the owner (18 NOV 2026):** `script/opening_v2.md` (opening A: the 3D hull and
+  its strain line, the bang, Brooks under oath by 0:20, NOAA bow, ROV tail cone, the axis turn). Next: fact-check and
+  fairness at max on the new lines, record the new sentences (Marcus, API), splice, re-time; build the 3D hull; then
+  replace every card run over 12 s (list in `slide_audit_v7.md`).
+
 
 ## Latest (17 NOV 2026, afternoon)
 - **Cut v5 measured** (`review/picture_gate_r5.md`): −14.0 LUFS / −1.2 dBTP, length exact, no black, 0 still runs.
