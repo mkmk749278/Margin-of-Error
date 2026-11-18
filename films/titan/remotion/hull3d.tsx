@@ -57,6 +57,10 @@ export type Hull3DProps = {
 	crackle?: number;
 	/** 0..1: a second gauge, centre top of the cylinder (the one Canada's TSB measured), glows amber */
 	gTop?: number;
+	/** 0..1: at sea on its launch platform (water and platform replace the bench) */
+	sea?: number;
+	/** degrees: the platform and hull tipping bow-down (+) */
+	tilt?: number;
 	/** 0..1: the landing frame bolted under the hull (the CEO's theory of the bang, as testified) */
 	frame?: number;
 	/** 0..1: the hull squeezed (exaggerated ×10 for the eye; ILLUSTRATION) */
@@ -330,11 +334,18 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 	);
 };
 
-export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0}) => (
+export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0, sea = 0, tilt = 0}) => (
 	<ThreeCanvas width={width} height={height} shadows gl={{antialias: true, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />
+		<group rotation={[(tilt * Math.PI) / 180, 0, 0]} position={[0, -0.8 * sea, 0]}>
+		{sea > 0.01 ? (
+			<mesh position={[0, -R_OUT - 0.7, 0]} receiveShadow castShadow>
+				<boxGeometry args={[8, 0.6, LEN + 2 * RING + 4]} />
+				<meshStandardMaterial color="#f59e0b" metalness={0.3} roughness={0.6} transparent opacity={sea} />
+			</mesh>
+		) : null}
 		<group scale={[1 - 0.05 * squeeze, 1 - 0.05 * squeeze, 1]}>
 		<HullModel cut={cut} g4={g4} sensors={sensors} aeDark={aeDark} interfaces={interfaces} bench={bench} ringsLit={ringsLit} domesLit={domesLit} hullO={hullO} aeOn={aeOn} sgOn={sgOn} crackle={crackle} gTop={gTop} />
 		</group>
@@ -354,6 +365,13 @@ export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sens
 				)))}
 			</group>
 		) : null}
+		</group>
+		{sea > 0.01 ? (
+			<mesh position={[0, -R_OUT - 0.4, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+				<planeGeometry args={[200, 200]} />
+				<meshStandardMaterial color="#0b3147" metalness={0.2} roughness={0.25} transparent opacity={0.88 * sea} />
+			</mesh>
+		) : null}
 		{models.map((m, i) => (m.o > 0.01 ? <ScaleModel key={i} z={4.2 - i * 4.2} o={m.o} fail={m.fail} ghost={m.ghost} /> : null))}
 		{sphere > 0.01 ? (
 			<mesh position={[0, 0, -16.5]}>
@@ -361,7 +379,7 @@ export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sens
 				<meshBasicMaterial color="#94a3b8" wireframe transparent opacity={0.45 * sphere} />
 			</mesh>
 		) : null}
-		{bench > 0.01 ? <Bench bench={bench} /> : null}
+		{bench > 0.01 && sea < 0.5 ? <Bench bench={bench} /> : null}
 	</ThreeCanvas>
 );
 

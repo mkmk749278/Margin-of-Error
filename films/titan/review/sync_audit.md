@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-246 sentences · 1648 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+246 sentences · 1636 word cues on 3599 words · 1 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -159,44 +159,44 @@
 | 157 | 14:13.7 | 4/9 | 0.9 s ok |  | A delamination is not a crack through the wall. |
 | 158 | 14:17.0 | 3/10 | 0.9 s ok |  | But the wall was no longer what it had been. |
 | 159 | 14:20.0 | 15/34 | 1.1 s ok |  | The N - T - S - B's finding: because its analysis was flawed, OceanGat |
-| 160 | 14:34.1 | 3/8 | 0.9 s ok |  | Then it had to spend the winter somewhere. |
-| 161 | 14:36.7 | 10/21 | 0.7 s ok |  | On the twenty-sixth of July, Titan was set down in a parking lot at a  |
+| 160 | 14:34.1 | 2/8 | 0.9 s ok |  | Then it had to spend the winter somewhere. |
+| 161 | 14:36.7 | 8/21 | 1.0 s ok |  | On the twenty-sixth of July, Titan was set down in a parking lot at a  |
 | 162 | 14:43.4 | 1/1 | 0.6 s ok |  | Uncovered. |
-| 163 | 14:44.5 | 13/21 | 0.8 s ok |  | Two days later, the base passed on a quote for a protective cover: one |
-| 164 | 14:51.9 | 6/13 | 0.9 s ok |  | The base told the Coast Guard board that OceanGate never answered that |
-| 165 | 14:56.2 | 5/12 | 1.3 s ok |  | In September, the base wrote again: Titan still had not been covered. |
-| 166 | 15:00.9 | 3/8 | 1.3 s ok |  | OceanGate's logistics director said it would be discussed. |
-| 167 | 15:04.5 | 4/6 | 0.6 s ok |  | The board found no action followed. |
-| 168 | 15:07.0 | 19/32 | 1.2 s ok |  | It stayed outside until the sixth of February, through temperatures fr |
-| 169 | 15:20.3 | 12/24 | 1.2 s ok |  | Brooks testified that what they really wanted was to bring Titan back  |
+| 163 | 14:44.5 | 12/21 | 1.0 s ok |  | Two days later, the base passed on a quote for a protective cover: one |
+| 164 | 14:51.9 | 4/13 | 1.1 s ok |  | The base told the Coast Guard board that OceanGate never answered that |
+| 165 | 14:56.2 | 6/12 | 1.0 s ok |  | In September, the base wrote again: Titan still had not been covered. |
+| 166 | 15:00.9 | 3/8 | 1.0 s ok |  | OceanGate's logistics director said it would be discussed. |
+| 167 | 15:04.5 | 3/6 | 0.6 s ok |  | The board found no action followed. |
+| 168 | 15:07.0 | 22/32 | 1.0 s ok |  | It stayed outside until the sixth of February, through temperatures fr |
+| 169 | 15:20.3 | 8/24 | 1.0 s ok |  | Brooks testified that what they really wanted was to bring Titan back  |
 | 171 | 15:36.7 | 4/5 | 0.6 s ok |  | Was money behind these decisions? |
-| 172 | 15:38.9 | 11/20 | 1.4 s ok |  | The Coast Guard board says it was: in its words, a troubling prioritiz |
-| 173 | 15:47.0 | 4/10 | 0.9 s ok |  | The N - T - S - B's findings do not address money. |
-| 174 | 15:50.3 | 13/23 | 1.3 s ok |  | From June twenty twenty-two to May twenty twenty-three, the board foun |
-| 175 | 16:00.2 | 6/18 | 1.2 s ok |  | The board found that employees were asked to temporarily forgo their s |
-| 176 | 16:06.5 | 6/14 | 1.1 s ok |  | The ship that had carried Titan was unavailable for twenty twenty-thre |
+| 172 | 15:38.9 | 9/20 | 1.1 s ok |  | The Coast Guard board says it was: in its words, a troubling prioritiz |
+| 173 | 15:47.0 | 2/10 | 1.0 s ok |  | The N - T - S - B's findings do not address money. |
+| 174 | 15:50.3 | 16/23 | 1.2 s ok |  | From June twenty twenty-two to May twenty twenty-three, the board foun |
+| 175 | 16:00.2 | 7/18 | 1.0 s ok |  | The board found that employees were asked to temporarily forgo their s |
+| 176 | 16:06.5 | 8/14 | 1.0 s ok |  | The ship that had carried Titan was unavailable for twenty twenty-thre |
 | 177 | 16:11.6 | 7/15 | 0.7 s ok |  | Titan would be towed to the site on its launch platform, behind a smal |
-| 178 | 16:16.3 | 4/6 | 1.0 s ok |  | Early in twenty twenty-three, Brooks left. |
-| 179 | 16:19.5 | 14/30 | 1.2 s ok |  | Under oath, he said his main reason was that plan to tow Titan, which  |
-| 182 | 16:38.0 | 6/18 | 1.3 s ok |  | He said he suggested they not go, and was told that wasn't possible: t |
-| 183 | 16:43.9 | 13/26 | 1.3 s ok |  | The board found that the chief executive then left the director of eng |
-| 184 | 16:54.0 | 13/28 | 1.4 s ok |  | And the board drew the line back to twenty nineteen, when, by his own  |
-| 185 | 17:03.3 | 6/16 | 1.3 s ok |  | Leaving the post empty, it wrote, removed the possibility of a replace |
+| 178 | 16:16.3 | 5/6 | 1.0 s ok |  | Early in twenty twenty-three, Brooks left. |
+| 179 | 16:19.5 | 17/30 | 1.0 s ok |  | Under oath, he said his main reason was that plan to tow Titan, which  |
+| 182 | 16:38.0 | 6/18 | 1.1 s ok |  | He said he suggested they not go, and was told that wasn't possible: t |
+| 183 | 16:43.9 | 12/26 | 1.1 s ok |  | The board found that the chief executive then left the director of eng |
+| 184 | 16:54.0 | 11/28 | 1.0 s ok |  | And the board drew the line back to twenty nineteen, when, by his own  |
+| 185 | 17:03.3 | 8/16 | 0.9 s ok |  | Leaving the post empty, it wrote, removed the possibility of a replace |
 | 186 | 17:10.0 | 7/13 | 0.9 s ok |  | That spring, at sea and in port, the platform tipped more than once. |
 | 187 | 17:14.9 | 8/15 | 1.0 s ok |  | Once, in May, its bow went partly under water, and Titan's tail cone w |
-| 188 | 17:20.6 | 4/10 | 1.5 s ok |  | How was a hull like this allowed to carry passengers? |
+| 188 | 17:20.6 | 3/10 | 0.8 s ok |  | How was a hull like this allowed to carry passengers? |
 | 189 | 17:24.1 | 4/13 | 1.0 s ok |  | By the N - T - S - B's reading of the law, it was not. |
-| 190 | 17:28.6 | 16/31 | 1.2 s ok |  | Under U - S law, the N - T - S - B notes, a submersible carrying even  |
-| 191 | 17:38.8 | 5/9 | 1.1 s ok |  | OceanGate never registered Titan, and never arranged an inspection. |
-| 192 | 17:43.2 | 13/24 | 1.2 s ok |  | The Coast Guard board found that OceanGate described its paying passen |
-| 193 | 17:53.3 | 4/8 | 0.9 s ok |  | The regulator's own guidance gets the same scrutiny. |
-| 194 | 17:56.5 | 8/14 | 1.2 s ok |  | The Coast Guard's voluntary guidance for passenger submersibles was pu |
-| 195 | 18:02.6 | 6/17 | 1.2 s ok |  | That December, a new law changed the definition, to cover any submersi |
-| 196 | 18:09.3 | 7/22 | 1.4 s ok |  | As of its report in October twenty twenty-five, the N - T - S - B foun |
-| 197 | 18:16.5 | 9/18 | 1.1 s ok |  | The Coast Guard, it found, had no specific inspection standards for ho |
-| 198 | 18:22.9 | 7/15 | 0.9 s ok |  | That guidance also recommended that a submersible dive no deeper than  |
-| 199 | 18:28.9 | 10/22 | 1.1 s ok |  | The N - T - S - B found that Titan regularly dived to the Titanic with |
-| 200 | 18:36.3 | 13/26 | 1.4 s ok |  | The N - T - S - B found that voluntary guidance and the rules for smal |
+| 190 | 17:28.6 | 14/31 | 1.1 s ok |  | Under U - S law, the N - T - S - B notes, a submersible carrying even  |
+| 191 | 17:38.8 | 4/9 | 1.0 s ok |  | OceanGate never registered Titan, and never arranged an inspection. |
+| 192 | 17:43.2 | 11/24 | 1.1 s ok |  | The Coast Guard board found that OceanGate described its paying passen |
+| 193 | 17:53.3 | 2/8 | 1.0 s ok |  | The regulator's own guidance gets the same scrutiny. |
+| 194 | 17:56.5 | 9/14 | 0.9 s ok |  | The Coast Guard's voluntary guidance for passenger submersibles was pu |
+| 195 | 18:02.6 | 8/17 | 1.1 s ok |  | That December, a new law changed the definition, to cover any submersi |
+| 196 | 18:09.3 | 9/22 | 1.1 s ok |  | As of its report in October twenty twenty-five, the N - T - S - B foun |
+| 197 | 18:16.5 | 6/18 | 1.1 s ok |  | The Coast Guard, it found, had no specific inspection standards for ho |
+| 198 | 18:22.9 | 6/15 | 1.1 s ok |  | That guidance also recommended that a submersible dive no deeper than  |
+| 199 | 18:28.9 | 9/22 | 1.0 s ok |  | The N - T - S - B found that Titan regularly dived to the Titanic with |
+| 200 | 18:36.3 | 11/26 | 1.1 s ok |  | The N - T - S - B found that voluntary guidance and the rules for smal |
 | 201 | 18:50.1 | 9/13 | 1.2 s ok |  | In twenty twenty-three, Titan's first four dives went no deeper than t |
 | 202 | 18:55.6 | 7/11 | 1.1 s ok |  | At some point after dive eighty-two, the hull was damaged again. |
 | 203 | 19:00.0 | 4/11 | 1.3 s ok |  | The N - T - S - B calls that damage of unknown origin. |
