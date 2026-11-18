@@ -1,6 +1,6 @@
 # Sync audit: titan
 
-246 sentences · 1613 word cues on 3599 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
+246 sentences · 1618 word cues on 3599 words · 0 sentences fail (longest uncued stretch > 1.5 s, or a spoken number with no cue)
 
 | s | time | cues/words | longest uncued | numbers with no cue | sentence |
 |---|---|---|---|---|---|
@@ -15,12 +15,12 @@
 | 8 | 0:47.7 | 7/11 | 1.0 s ok |  | OceanGate plotted this strain, and the depth beside it, against time. |
 | 9 | 0:52.7 | 7/17 | 1.3 s ok |  | After the implosion, the N - T - S - B, America's accident investigato |
 | 10 | 1:00.5 | 10/27 | 1.3 s ok |  | We will draw that chart from their numbers, and ask why a company that |
-| 11 | 1:09.3 | 3/6 | 0.9 s ok |  | The eighteenth of June, twenty twenty-three. |
-| 12 | 1:12.1 | 5/13 | 1.1 s ok |  | At about nine in the morning, Titan was released from its launch platf |
-| 13 | 1:16.5 | 4/15 | 1.3 s ok |  | It was the first dive of that year's expedition to go deeper than ten  |
+| 11 | 1:09.3 | 4/6 | 0.6 s ok |  | The eighteenth of June, twenty twenty-three. |
+| 12 | 1:12.1 | 6/13 | 1.1 s ok |  | At about nine in the morning, Titan was released from its launch platf |
+| 13 | 1:16.5 | 6/15 | 1.0 s ok |  | It was the first dive of that year's expedition to go deeper than ten  |
 | 14 | 1:21.2 | 15/32 | 1.4 s ok |  | At ten forty-seven, at about three thousand three hundred and fifty me |
 | 15 | 1:32.6 | 2/7 | 1.3 s ok |  | It was the last message Titan sent. |
-| 16 | 1:35.3 | 5/14 | 1.3 s ok |  | A minute later, the support ship acknowledged it, and kept sending mes |
+| 16 | 1:35.3 | 6/14 | 1.3 s ok |  | A minute later, the support ship acknowledged it, and kept sending mes |
 | 17 | 1:40.5 | 1/3 | 0.8 s ok |  | No reply came. |
 | 18 | 1:42.2 | 11/27 | 1.2 s ok |  | Four days later, a remotely operated vehicle found the tail cone and b |
 | 19 | 1:51.5 | 9/19 | 1.5 s ok |  | By its dive log, Titan had reached the wreck, three thousand eight hun |
