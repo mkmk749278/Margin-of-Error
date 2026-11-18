@@ -136,7 +136,7 @@ const layerGeometry = (rIn: number, rOut: number, cut: number): THREE.BufferGeom
 	const a0 = Math.PI / 2 + gap / 2;
 	const a1 = Math.PI / 2 - gap / 2 + 2 * Math.PI;
 	const s = new THREE.Shape();
-	const steps = 96;
+	const steps = 48;
 	for (let i = 0; i <= steps; i++) {
 		const a = a0 + ((a1 - a0) * i) / steps;
 		const p = [Math.cos(a) * rOut, Math.sin(a) * rOut] as const;
@@ -209,8 +209,8 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 	return (
 		<group>
 			{layers.map((g, i) => (
-				<mesh key={i} geometry={g} castShadow receiveShadow>
-					<meshPhysicalMaterial color={tones[i]} map={carbon} roughness={0.5} metalness={0.2} clearcoat={0.5} clearcoatRoughness={0.35} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
+				<mesh key={i} geometry={g}>
+					<meshStandardMaterial color={tones[i]} map={carbon} roughness={0.45} metalness={0.25} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the adhesive interfaces, seen in section on both faces of the cut: a thin amber line along the hull at each */}
@@ -228,27 +228,27 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 				: null}
 			{/* titanium end segments (rings) */}
 			{[1, -1].map((s) => (
-				<mesh key={`ring${s}`} position={[0, 0, s * (LEN / 2 + RING / 2 - 0.05)]} rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
-					<cylinderGeometry args={[R_OUT + 0.06, R_OUT + 0.06, RING, 128, 1, true]} />
+				<mesh key={`ring${s}`} position={[0, 0, s * (LEN / 2 + RING / 2 - 0.05)]} rotation={[Math.PI / 2, 0, 0]}>
+					<cylinderGeometry args={[R_OUT + 0.06, R_OUT + 0.06, RING, 64, 1, true]} />
 					<meshStandardMaterial color="#a7b0ba" metalness={1} roughness={0.55} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.6 * ringsLit} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the domes: 60 in, 3.25 in thick; forward dome carries the viewport */}
 			{[1, -1].map((s) => (
 				<group key={`dome${s}`} position={[0, 0, s * (LEN / 2 + RING - 0.05)]} rotation={[s > 0 ? Math.PI / 2 : -Math.PI / 2, 0, 0]}>
-					<mesh castShadow receiveShadow>
-						<sphereGeometry args={[R_OUT + 0.06, 96, 48, 0, Math.PI * 2, 0, Math.PI / 2]} />
+					<mesh>
+						<sphereGeometry args={[R_OUT + 0.06, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2]} />
 						<meshStandardMaterial color="#9ea8b3" metalness={1} roughness={0.58} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.12 * domesLit} transparent={hullO < 1} opacity={hullO} />
 					</mesh>
 					{/* bolt flange */}
 					<mesh rotation={[Math.PI / 2, 0, 0]}>
-						<torusGeometry args={[R_OUT + 0.08, 0.07, 12, 128]} />
+						<torusGeometry args={[R_OUT + 0.08, 0.07, 8, 64]} />
 						<meshStandardMaterial color="#8d97a2" metalness={1} roughness={0.4} />
 					</mesh>
 					{s > 0 ? (
 						<mesh position={[0, R_OUT + 0.02, 0]}>
 							<cylinderGeometry args={[1.15, 1.15, 0.12, 64]} />
-							<meshPhysicalMaterial color="#9fc6d8" metalness={0} roughness={0.05} transmission={0.6} transparent opacity={0.55} />
+							<meshStandardMaterial color="#9fc6d8" metalness={0} roughness={0.05} transparent opacity={0.55} />
 						</mesh>
 					) : null}
 				</group>
@@ -286,13 +286,17 @@ const Bench: React.FC<{bench: number}> = ({bench}) => {
 	const brushed = useBrushedTexture();
 	return (
 		<group>
+			<mesh position={[0, -R_OUT - 0.89, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[1, 2.6, 1]}>
+				<circleGeometry args={[3.4, 48]} />
+				<meshBasicMaterial color="#000000" transparent opacity={0.45 * bench} />
+			</mesh>
 			{/* a matte steel inspection bench, the hull on two cradles */}
-			<mesh position={[0, -R_OUT - 0.9 - 0.25, 0]} receiveShadow>
+			<mesh position={[0, -R_OUT - 0.9 - 0.25, 0]}>
 				<boxGeometry args={[14, 0.5, 22]} />
 				<meshStandardMaterial color="#2b3038" metalness={0.75} roughness={0.55} roughnessMap={brushed} envMapIntensity={0.6 * bench} />
 			</mesh>
 			{[3.2, -3.2].map((z) => (
-				<mesh key={z} position={[0, -R_OUT - 0.45, z]} castShadow receiveShadow>
+				<mesh key={z} position={[0, -R_OUT - 0.45, z]}>
 					<boxGeometry args={[4.2, 0.9, 0.6]} />
 					<meshStandardMaterial color="#1d2229" metalness={0.6} roughness={0.6} />
 				</mesh>
@@ -304,7 +308,7 @@ const Bench: React.FC<{bench: number}> = ({bench}) => {
 const Lights: React.FC<{bench: number}> = ({bench}) => (
 	<>
 		<ambientLight intensity={0.05 + 0.1 * bench} />
-		<directionalLight position={[8, 14, 10]} intensity={0.4 + 2.2 * bench} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} shadow-camera-left={-14} shadow-camera-right={14} shadow-camera-top={14} shadow-camera-bottom={-14} shadow-bias={-0.0004} />
+		<directionalLight position={[8, 14, 10]} intensity={0.4 + 2.2 * bench} />
 		{/* cold rim light from behind: the hull's silhouette reads even in the dark */}
 		<directionalLight position={[-6, 5, -14]} intensity={1.6} color="#9cc9ff" />
 		<spotLight position={[-9, 9, 12]} angle={0.5} penumbra={0.8} intensity={60 * bench} distance={40} color="#ffe9cc" />
@@ -320,7 +324,7 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 	const col = new THREE.Color('#4a5461').lerp(new THREE.Color('#ef4444'), fail);
 	return (
 		<group position={[5.6, -R_OUT - 0.9 + r * sq, z]} scale={[1, sq, 1]}>
-			<mesh rotation={[Math.PI / 2, 0, 0]} castShadow>
+			<mesh rotation={[Math.PI / 2, 0, 0]}>
 				<cylinderGeometry args={[r, r, len, 48, 1]} />
 				{ghost ? <meshBasicMaterial color="#94a3b8" wireframe transparent opacity={0.5 * o} /> : <meshStandardMaterial color={col} metalness={0.2} roughness={0.5} transparent opacity={o} emissive="#ef4444" emissiveIntensity={0.4 * fail} />}
 			</mesh>
@@ -335,13 +339,13 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 };
 
 export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0, sea = 0, tilt = 0}) => (
-	<ThreeCanvas width={width} height={height} shadows gl={{antialias: true, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
+	<ThreeCanvas width={width} height={height} gl={{antialias: false, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
 		<Lights bench={bench} />
 		<group rotation={[(tilt * Math.PI) / 180, 0, 0]} position={[0, -0.8 * sea, 0]}>
 		{sea > 0.01 ? (
-			<mesh position={[0, -R_OUT - 0.7, 0]} receiveShadow castShadow>
+			<mesh position={[0, -R_OUT - 0.7, 0]}>
 				<boxGeometry args={[8, 0.6, LEN + 2 * RING + 4]} />
 				<meshStandardMaterial color="#f59e0b" metalness={0.3} roughness={0.6} transparent opacity={sea} />
 			</mesh>
@@ -352,7 +356,7 @@ export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sens
 		{frame > 0.01 ? (
 			<group position={[0, -0.55 * sprung, 0]}>
 				{[-1.6, 1.6].map((x) => (
-					<mesh key={x} position={[x, -R_OUT - 0.35, 0]} castShadow>
+					<mesh key={x} position={[x, -R_OUT - 0.35, 0]}>
 						<boxGeometry args={[0.28, 0.28, LEN + 2 * RING + 1.2]} />
 						<meshStandardMaterial color={sprung > 0.2 ? '#ef4444' : '#cbd5e1'} emissive={sprung > 0.2 ? '#ef4444' : '#000000'} emissiveIntensity={0.5 * sprung} metalness={0.6} roughness={0.4} transparent opacity={frame} />
 					</mesh>

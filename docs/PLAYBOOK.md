@@ -560,7 +560,10 @@ on screen; the hero object was never built in 3D; the real photographs inside th
 6. **The data chart is a signature, not wallpaper.** One or two data builds per film may run long (the re-plot); every
    other chart is on screen only while it changes, then the film returns to a real image.
 7. **3D on the runners (2026-11-18):** a Three.js scene's first frame under software GL can exceed Remotion's 30 s
-   default; `render_shards.mjs` sets `timeoutInMilliseconds: 240000`. A re-rendered block must use the same scene code as the blocks it joins.
+   default; `render_shards.mjs` sets `timeoutInMilliseconds: 240000`. Keep the scene cheap for software GL: no real-time
+   shadows (a drawn contact shadow instead), standard materials (no clearcoat or transmission), no MSAA, modest segment
+   counts. *Why:* Titan's hull measured 2.6–4.5 s a frame with them and 0.5–0.85 s without, same look. A re-rendered
+   block must use the same scene code as the blocks it joins.
 8. **Measured on every cut** (§14.2): `python3 scripts/slide_audit.py CUT.mp4 --out review/slide_audit_rN.md` must
    pass: card frames ≤ 30% of the film, no card run over 12 s, the first non-card frame by 0:02, card frames ≤ 25% of
    the first 60 s. A declared signature data build (rule 6) may exceed the run gate when the treatment names it and
