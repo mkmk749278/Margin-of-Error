@@ -45,9 +45,9 @@ const Year2023: React.FC = () => {
 					) : null}
 					{f >= wf(202, 'after') - 10 && f < sf(205) ? <Chip text="AFTER DIVE 82: DAMAGED AGAIN" tone={colors.red} size={30} /> : null}
 					{f >= wf(203, 'n') - 10 && f < sf(205) ? <Chip text="NTSB: OF UNKNOWN ORIGIN" tone={colors.cyan} size={30} /> : null}
-					{f >= wf(204, 'coast') - 10 && f < sf(205) ? <Chip text="USCG BOARD: MADE WORSE BY THE WINTER OUTDOORS AND THE TOWING" tone={colors.amber} size={28} /> : null}
+					{f >= wf(204, 'coast') - 10 && f < sf(205) ? <Chip text="USCG BOARD: LIKELY MADE WORSE BY THE WINTER OUTDOORS AND THE TOWING" tone={colors.amber} size={28} /> : null}
 					{f >= wf(207, 'n') - 10 ? <Chip text="NTSB: TWO EVENTS · DIVE 80 · AFTER DIVE 82" tone={colors.cyan} size={30} /> : null}
-					{f >= wf(208, "canada's") - 10 ? <Chip text="TSB: PROGRESSIVE · DAMAGE EACH DIVE" tone={colors.amber} size={30} /> : null}
+					{f >= wf(208, "canada's") - 10 ? <Chip text="TSB: LIKELY PROGRESSIVE · DAMAGE EACH DIVE" tone={colors.amber} size={30} /> : null}
 				</div>
 				<div style={{position: 'absolute', left: 140, bottom: 54, ...T(26, {color: colors.amber, fontWeight: 700})}}>ILLUSTRATION · 2023 DIVES: NTSB MIR-25-36 TABLE 6</div>
 			</AbsoluteFill>
@@ -73,7 +73,7 @@ const LastDive: React.FC = () => {
 		<AbsoluteFill style={{transform: `scale(${bs.toFixed(4)})`, transformOrigin: '50% 45%'}}>
 			{dive > 0 ? (
 				<AbsoluteFill style={{opacity: dive}}>
-					<RealFootage f={f} start={sf(209) - 10} end={ef(209) + 20} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA4TSMAN / YOUTUBE · CC BY" push={0.06} />
+					<RealFootage f={f} start={sf(209) - 10} end={ef(209) + 20} src="footage/atl_swell.mp4" date="" what="THE NORTH ATLANTIC · REFERENCE FOOTAGE, NOT THE DAY" source="SAGA47SWAN / YOUTUBE · CC BY" push={0.06} />
 					<div style={{position: 'absolute', left: 140, top: 86, display: 'flex', gap: 14, alignItems: 'center'}}>
 						<DatePill f={f} fps={fps} day={18} month={6} year={2023} dayWord={wf(209, 'eighteenth')} monthWord={wf(209, 'june')} fromDay={18} size={40} />
 						{f >= wf(209, 'first') - 10 ? <Chip text="DIVE 88 · FIRST DEEP DIVE IN 11 MONTHS" tone={colors.amber} size={32} /> : null}
@@ -315,7 +315,7 @@ const Verdict: React.FC = () => {
 						{recList.map(([id, , at]) => (
 							<div key={id} style={{display: 'flex', flexDirection: 'column', gap: 8, opacity: Math.max(0.25, lead(f, at, 10))}}>
 								<span style={{...T(36, {color: f >= at ? colors.cyan : colors.sub, fontWeight: 700}), transform: `scale(${bump(f, fps, at).toFixed(4)})`, transformOrigin: 'left center', display: 'inline-block'}}>{id}</span>
-								<span style={{opacity: lead(f, wf(246, 'remain'), 8)}}><Chip text={f >= wf(246, 'open') ? 'OPEN · OCT 2026' : 'OPEN'} tone={colors.amber} size={26} /></span>
+								<span style={{opacity: lead(f, wf(246, 'remain'), 8)}}><Chip text={f >= wf(246, 'open') ? 'OPEN · ACCEPTABLE RESPONSE · OCT 2026' : 'OPEN'} tone={colors.amber} size={26} /></span>
 							</div>
 						))}
 						<div style={{opacity: lead(f, wf(245, 'agreed'), 8)}}><Chip text="USCG: AGREED TO M-25-014" tone={colors.ink} size={26} /></div>

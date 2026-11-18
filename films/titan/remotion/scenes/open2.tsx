@@ -139,7 +139,7 @@ const Twice: React.FC = () => {
 	]);
 	return (
 		<>
-			<RealFootage f={f} start={sf(4) - 14} end={ef(4) + 26} src="footage/noaa_bow.mp4" date="2004" what="THE TITANIC'S BOW · 3,840 M DOWN" source="NOAA · PUBLIC DOMAIN" push={0.07} focus={[0.4, 0.5]} />
+			<RealFootage f={f} start={sf(4) - 14} end={ef(4) + 26} src="footage/noaa_bow.mp4" date="2004" what="THE TITANIC'S BOW · ≈3,800 M DOWN" source="NOAA · PUBLIC DOMAIN" push={0.07} focus={[0.4, 0.5]} />
 			<div style={{position: 'absolute', right: 120, top: 140, textAlign: 'right', opacity: lead(f, a, 10)}}>
 				<div style={T(30, {color: colors.cyan})}>TITAN · DEPTH</div>
 				<div style={{...T(96, {color: colors.ink, fontWeight: 700}), textShadow: '0 4px 20px rgba(0,0,0,0.8)'}}>
@@ -168,7 +168,7 @@ const Seabed: React.FC = () => {
 	return (
 		<>
 			<div style={{position: 'absolute', inset: 0, transform: `scale(${(1 + 0.035 * span(f, wf(5, 'hull'), wf(5, 'failed') + 30)).toFixed(4)})`, transformOrigin: '52% 40%'}}>
-			<RealFootage f={f} start={sf(5) - 14} end={sf(6) + 8} src="footage/rov_tailcone.mp4" date="22 JUN 2023" what="ROV VIDEO · TITAN'S TAIL CONE ON THE SEA FLOOR" source="USCG MBI · DVIDS · PUBLIC DOMAIN" push={0.05} focus={[0.5, 0.45]} />
+			<RealFootage f={f} start={sf(5) - 14} end={sf(6) + 8} src="footage/rov_tailcone.mp4" date="22 JUN 2023" what="ROV VIDEO · TITAN'S TAIL CONE ON THE SEA FLOOR" source="RELEASED BY THE USCG MARINE BOARD · DVIDS" push={0.05} focus={[0.5, 0.45]} />
 			</div>
 			<AbsoluteFill style={{background: colors.void, opacity: quiet}} />
 			<div style={{position: 'absolute', right: 96, top: 86, display: 'flex', gap: 16, alignItems: 'center', opacity: Math.min(lead(f, wf(5, 'eleven'), 8), 1 - interpolate(f, [ef(5) + 10, ef(5) + 40], [0, 1], clamp))}}>
@@ -177,7 +177,7 @@ const Seabed: React.FC = () => {
 					<Chip text="DIVE 88" tone={colors.ink} size={36} />
 				</div>
 				<div style={{opacity: lead(f, wf(5, 'failed'), 6)}}>
-					<Chip text="HULL FAILED · ABOUT 3,363 M" tone={colors.red} size={36} />
+					<Chip text="HULL FAILED · ABOUT 3,350 M" tone={colors.red} size={36} />
 				</div>
 			</div>
 		</>

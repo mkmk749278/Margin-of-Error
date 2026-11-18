@@ -99,19 +99,19 @@ const FirstHull: React.FC = () => {
 	return (
 		<AbsoluteFill style={{transform: `scale(${bs.toFixed(4)})`, transformOrigin: '50% 45%'}}>
 			<AbsoluteFill style={{opacity: vis(f, sf(72) - 12, wf(73, 'failure') + 4)}}>
-				<RealFootage f={f} start={sf(72) - 12} end={wf(73, 'failure') + 4} src="photos/hull1_2019.jpg" video={false} date="29 MAY 2019" what="THE FIRST HULL" source="USCG · DVIDS" push={0.08} focus={[0.55, 0.5]} />
+				<RealFootage f={f} start={sf(72) - 12} end={wf(73, 'failure') + 4} src="photos/hull1_2019.jpg" video={false} date="" what="THE FIRST HULL, IN STORAGE · COAST GUARD PHOTO" source="USCG · DVIDS" push={0.08} focus={[0.55, 0.5]} />
 			</AbsoluteFill>
 			{delam > 0 ? (
 				<AbsoluteFill style={{opacity: delam}}>
-					<Photo src={media('photos/delam_hull1.jpg')} iw={1950} ih={627} start={wf(73, 'failure') - 10} end={sf(74) + 4} source="DELAMINATION IN A TRIMMED END OF THE FIRST HULL · NTSB MIR-25-36 FIG. 18" from={{x: 0, y: 0, w: 1950, h: 627}} to={{x: 0, y: 0, w: 1000, h: 627}} box={{x: 150, y: 200, w: 1620, h: 620}} labels={['NTSB PHOTO']} />
+					<Photo src={media('photos/delam_hull1.jpg')} iw={1950} ih={627} start={wf(73, 'failure') - 10} end={sf(74) + 4} source="DELAMINATION IN A TRIMMED END OF THE FIRST HULL · NTSB MIR-25-36 FIG. 18" from={{x: 0, y: 0, w: 975, h: 627}} to={{x: 40, y: 40, w: 860, h: 560}} box={{x: 150, y: 200, w: 1620, h: 620}} labels={['NTSB PHOTO']} />
 					<div style={{position: 'absolute', left: 170, top: 120, opacity: lead(f, wf(73, 'second'), 8)}}>
-						<Chip text="THE SAME FAILURE MODE, FOUND IN HULL 2 · NTSB" tone={colors.red} size={30} />
+						<Chip text="DELAMINATION: FOUND IN HULL 2 BY THE NTSB" tone={colors.red} size={30} />
 					</div>
 				</AbsoluteFill>
 			) : null}
 			{photo > 0 ? (
 				<AbsoluteFill style={{opacity: photo}}>
-					<RealFootage f={f} start={sf(74) - 12} end={ef(77) + 30} src="photos/hull1_2019.jpg" video={false} date="29 MAY 2019" what="HULL 1 IN STORAGE" source="USCG · DVIDS" push={0.06} focus={[0.6, 0.55]} box={{x: 96, y: 110, w: 860, h: 640}} under />
+					<RealFootage f={f} start={sf(74) - 12} end={ef(77) + 30} src="photos/hull1_2019.jpg" video={false} date="" what="THE FIRST HULL, IN STORAGE · COAST GUARD PHOTO" source="USCG · DVIDS" push={0.06} focus={[0.6, 0.55]} box={{x: 96, y: 110, w: 860, h: 640}} under />
 					<div style={{position: 'absolute', left: 990, top: 110, opacity: crack}}>
 						<Photo src={media('photos/hull1_crack.jpg')} iw={808} ih={342} start={wf(75, 'testified') - 10} end={ef(77) + 30} source="THE FIRST HULL, CRACK GROUND OUT (CIRCLE: MBI) · USCG ROI FIG. 132" from={{x: 0, y: 0, w: 808, h: 342}} to={{x: 300, y: 40, w: 480, h: 260}} box={{x: 0, y: 0, w: 830, h: 460}} labels={['RECORD PHOTO']} />
 					</div>
@@ -378,7 +378,7 @@ const After80: React.FC = () => {
 				{f < wf(114, 'one') ? <span style={{opacity: lead(f, wf(111, 'brooks'), 8)}}><Chip text="BROOKS, UNDER OATH · CG 112 P. 801" tone={colors.ink} size={28} /></span> : null}
 				{f >= wf(114, 'one') - 10 ? <span style={{opacity: lead(f, wf(114, 'one'), 8)}}><Chip text="ONE ACOUSTIC CHANNEL · LATER DIVES" tone={colors.cyan} size={28} /></span> : null}
 			</div>
-			<Mount x={960} y={560} w={860} h={360} start={wf(114, 'acoustic') - 10} end={ef(117) + 30} source="CHANNEL 4 · BROOKS, CG 112 P. 802" labels={['ILLUSTRATIVE VALUES']} lean={2}>
+			<Mount x={960} y={560} w={860} h={360} start={wf(114, 'acoustic') - 10} end={ef(117) + 30} source="CHANNEL 4 · BROOKS, CG 112 P. 801" labels={['ILLUSTRATIVE VALUES']} lean={2}>
 				<svg width={860} height={300} style={{position: 'absolute', left: 0, top: 0}}>
 					<line x1={20} x2={840} y1={thrY} y2={thrY} stroke={colors.amber} strokeWidth={3} strokeDasharray="12 8" opacity={lead(f, wf(116, 'threshold'), 12)} />
 					<text x={840} y={thrY - 14} textAnchor="end" style={T(28, lit(f, wf(116, 'set'), colors.amber))} opacity={lead(f, wf(116, 'threshold'), 8)}>THEIR THRESHOLD · 5,000</text>

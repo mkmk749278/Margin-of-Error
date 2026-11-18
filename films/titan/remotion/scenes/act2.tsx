@@ -68,7 +68,6 @@ const Build: React.FC = () => {
 	const cut = interpolate(f, [wf(25, 'five') - 16, wf(25, 'five') + 20], [0, 0.6], {...clamp, easing: ease.camera});
 	const inter = lead(f, wf(25, 'bonded'), 10);
 	const photoO = Math.min(lead(f, wf(25, 'layers'), 12), 1 - lead(f, wf(26, 'titanium') - 6, 12));
-	const drawO = Math.min(lead(f, wf(26, 'rings'), 12), 1 - lead(f, ef(26) + 24, 12));
 	return (
 		<>
 			<Hull3D width={1920} height={1080} cam={cam} cut={cut} g4={0} sensors={0} interfaces={inter} sphere={sphere} hullO={hullO} ringsLit={lead(f, wf(26, 'rings'), 10) * (1 - 0.5 * lead(f, wf(26, 'domes'), 10))} domesLit={lead(f, wf(26, 'domes'), 10)} bench={1} />
@@ -79,14 +78,10 @@ const Build: React.FC = () => {
 			</div>
 			{photoO > 0 ? (
 				<AbsoluteFill style={{opacity: photoO}}>
-					<Photo src={media('photos/layers_section.jpg')} iw={814} ih={546} start={wf(25, 'layers') - 12} end={wf(26, 'titanium')} source="TITAN'S CUT-OFF END, IN SECTION · NTSB MATERIALS LAB REPORT 24-012" from={{x: 0, y: 0, w: 814, h: 546}} to={{x: 60, y: 40, w: 700, h: 470}} box={{x: 1000, y: 170, w: 820, h: 620}} labels={['NTSB PHOTO']} />
+					<Photo src={media('photos/layers_section.jpg')} iw={814} ih={546} start={wf(25, 'layers') - 12} end={wf(26, 'titanium')} source="TITAN'S CUT-OFF END, IN SECTION · NTSB MATERIALS LAB, IN USCG ROI FIG. 255" from={{x: 0, y: 0, w: 814, h: 546}} to={{x: 60, y: 40, w: 700, h: 470}} box={{x: 1000, y: 170, w: 820, h: 620}} labels={['NTSB PHOTO']} />
 				</AbsoluteFill>
 			) : null}
-			{drawO > 0 ? (
-				<AbsoluteFill style={{opacity: drawO}}>
-					<Photo src={media('photos/ntsb_cyl_drawing.jpg')} iw={1950} ih={1323} start={wf(26, 'rings') - 12} end={ef(26) + 30} source="CYLINDER AND TITANIUM END SEGMENTS · NTSB MIR-25-36 FIG. 2" from={{x: 0, y: 0, w: 1950, h: 1323}} to={{x: 80, y: 40, w: 1700, h: 1150}} box={{x: 1060, y: 170, w: 760, h: 560}} labels={['NTSB DRAWING']} />
-				</AbsoluteFill>
-			) : null}
+
 			<div style={{position: 'absolute', left: 140, bottom: 54, ...T(26, {color: colors.amber, fontWeight: 700})}}>ILLUSTRATION · HULL FROM NTSB MIR-25-36, USCG ROI</div>
 		</>
 	);
@@ -113,7 +108,7 @@ const WhyCarbon: React.FC = () => {
 			</AbsoluteFill>
 			<div style={{position: 'absolute', left: 96, top: 120, opacity: attrib, padding: '14px 22px', background: 'rgba(10,13,18,0.8)', borderLeft: `3px solid ${colors.amber}`}}>
 				<div style={T(30, {color: f >= wf(27, 'operations') ? colors.amber : colors.ink})}>ACCORDING TO A FORMER DIRECTOR OF MARINE OPERATIONS</div>
-				<div style={{marginTop: 6, ...T(26, {color: f >= wf(27, 'believed') ? colors.ink : colors.sub})}}>THE CEO'S REASONS, AS HE DESCRIBED THEM · NTSB MIR-25-36 P. 25</div>
+				<div style={{marginTop: 6, ...T(26, {color: f >= wf(27, 'believed') ? colors.ink : colors.sub})}}>THE CEO'S REASONS, AS THE NTSB REPORTS THEM · MIR-25-36 P. 17</div>
 			</div>
 		</>
 	);
@@ -247,25 +242,25 @@ const Margin: React.FC = () => {
 				<Hull3D width={1920 - R.x + 20} height={1080} cam={cam} cut={cut} g4={0} sensors={0} interfaces={cut > 0.1 ? 1 : 0} domesLit={lead(f, wf(44, 'dome'), 10) * (1 - lead(f, wf(45, 'other'), 10))} models={models} bench={1} />
 				<div style={{position: 'absolute', left: 40, top: 86, display: 'flex', gap: 12}}>
 					{f < wf(35, 'scale') + 10 ? <div style={{opacity: lead(f, wf(34, 'n'), 8) * (1 - lead(f, wf(35, 'scale'), 10))}}><Chip text="NTSB · ANALYSIS ASSUMED A PERFECT HULL" tone={colors.cyan} size={26} /></div> : null}
-					{f >= wf(35, 'scale') - 12 && f < wf(38, "canada's") ? <div style={{opacity: models[0].o}}><Chip text="ONE-THIRD SCALE MODELS" tone={colors.ink} size={26} /></div> : null}
-					{f >= wf(38, "canada's") - 12 ? <div style={{opacity: lead(f, wf(38, "canada's"), 8) * (1 - lead(f, wf(39, 'only'), 10))}}><Chip text="TSB · NOT BUILT, TO SAVE MONEY" tone={colors.amber} size={26} /></div> : null}
+					{f >= wf(35, 'scale') - 12 && f < wf(38, "canada's") ? <div style={{opacity: models[0].o}}><Chip text="SCALE MODELS" tone={colors.ink} size={26} /></div> : null}
+					{f >= wf(38, "canada's") - 12 ? <div style={{opacity: lead(f, wf(38, "canada's"), 8) * (1 - lead(f, wf(39, 'only'), 10))}}><Chip text="TSB: SCALE MODEL NOT BUILT, TO SAVE MONEY" tone={colors.amber} size={26} /></div> : null}
 				</div>
 				<div style={{position: 'absolute', left: 40, bottom: 54, ...T(26, {color: colors.amber, fontWeight: 700})}}>ILLUSTRATION · NOT TO SCALE</div>
 			</div>
 			{/* 2021: the record's own photographs (DOTF, U.S. Navy facility; the board's red arrows) */}
 			{photoWin(sf(40) - 10, ef(41) + 4) > 0 ? (
 				<AbsoluteFill style={{opacity: photoWin(sf(40) - 10, ef(41) + 4), transform: `scale(${bs.toFixed(4)})`, transformOrigin: '70% 45%'}}>
-					<Photo src={media('photos/dotf_hull.jpg')} iw={1042} ih={777} start={sf(40) - 10} end={ef(41) + 4} source="TITAN'S FINAL HULL AT THE DEEP OCEAN TEST FACILITY · 25 FEB 2021 · USCG ROI FIG. 149" from={{x: 0, y: 0, w: 1042, h: 777}} to={{x: 200, y: 140, w: 640, h: 480}} path={[{frame: sf(40), r: {x: 0, y: 0, w: 1042, h: 777}}, {frame: wf(40, 'facility'), r: {x: 120, y: 80, w: 800, h: 600}}, {frame: ef(41), r: {x: 200, y: 140, w: 640, h: 480}}]} box={R} labels={['RECORD PHOTO']} />
+					<Photo src={media('photos/dotf_hull.jpg')} iw={1042} ih={777} start={sf(40) - 10} end={ef(41) + 4} source="THE FINAL HULL AT THE TEST FACILITY · 25 FEB 2021 · PHOTO: DOTF, IN USCG ROI FIG. 149" from={{x: 0, y: 0, w: 1042, h: 777}} to={{x: 200, y: 140, w: 640, h: 480}} path={[{frame: sf(40), r: {x: 0, y: 0, w: 1042, h: 777}}, {frame: wf(40, 'facility'), r: {x: 120, y: 80, w: 800, h: 600}}, {frame: ef(41), r: {x: 200, y: 140, w: 640, h: 480}}]} box={R} labels={['RECORD PHOTO']} />
 				</AbsoluteFill>
 			) : null}
 			{photoWin(sf(42) - 10, ef(43) + 4) > 0 ? (
 				<AbsoluteFill style={{opacity: photoWin(sf(42) - 10, ef(43) + 4), transform: `scale(${bs.toFixed(4)})`, transformOrigin: '70% 45%'}}>
-					<Photo src={media('photos/dotf_log_0301.jpg')} iw={827} ih={509} start={sf(42) - 10} end={ef(43) + 4} source="DOTF LOGBOOK · 01 MAR 2021 · ARROW ADDED BY THE MBI · USCG ROI FIG. 151" from={{x: 0, y: 0, w: 827, h: 509}} to={{x: 0, y: 170, w: 827, h: 339}} path={[{frame: sf(42), r: {x: 0, y: 0, w: 827, h: 509}}, {frame: wf(42, 'once'), r: {x: 0, y: 170, w: 827, h: 339}}]} box={R} labels={['RECORD']} />
+					<Photo src={media('photos/dotf_log_0301.jpg')} iw={827} ih={509} start={sf(42) - 10} end={ef(43) + 4} source="LOGBOOK, 01 MAR 2021 · DOTF, IN USCG ROI FIG. 151 · ARROW: MBI" from={{x: 0, y: 0, w: 827, h: 509}} to={{x: 0, y: 170, w: 827, h: 339}} path={[{frame: sf(42), r: {x: 0, y: 0, w: 827, h: 509}}, {frame: wf(42, 'once'), r: {x: 0, y: 170, w: 827, h: 339}}]} box={R} labels={['RECORD']} />
 				</AbsoluteFill>
 			) : null}
 			{photoWin(sf(45) - 10, ef(45) + 6) > 0 ? (
 				<AbsoluteFill style={{opacity: photoWin(sf(45) - 10, ef(45) + 6), transform: `scale(${bs.toFixed(4)})`, transformOrigin: '70% 45%'}}>
-					<Photo src={media('photos/dotf_log_0302.jpg')} iw={847} ih={380} start={sf(45) - 10} end={ef(45) + 6} source="DOTF LOGBOOK · 02–03 MAR 2021 · ARROWS ADDED BY THE MBI · USCG ROI FIG. 152" from={{x: 0, y: 0, w: 847, h: 380}} to={{x: 0, y: 140, w: 560, h: 240}} path={[{frame: sf(45), r: {x: 0, y: 0, w: 847, h: 380}}, {frame: wf(45, 'then'), r: {x: 0, y: 0, w: 560, h: 250}}, {frame: wf(45, 'twice'), r: {x: 0, y: 140, w: 560, h: 240}}]} box={R} labels={['RECORD']} />
+					<Photo src={media('photos/dotf_log_0302.jpg')} iw={847} ih={380} start={sf(45) - 10} end={ef(45) + 6} source="LOGBOOK, 02–03 MAR 2021 · DOTF, IN USCG ROI FIG. 152 · ARROWS: MBI" from={{x: 0, y: 0, w: 847, h: 380}} to={{x: 0, y: 140, w: 560, h: 240}} path={[{frame: sf(45), r: {x: 0, y: 0, w: 847, h: 380}}, {frame: wf(45, 'then'), r: {x: 0, y: 0, w: 560, h: 250}}, {frame: wf(45, 'twice'), r: {x: 0, y: 140, w: 560, h: 240}}]} box={R} labels={['RECORD']} />
 				</AbsoluteFill>
 			) : null}
 			<div style={{position: 'absolute', left: R.x + 20, top: 86, opacity: lead(f, wf(47, 'n'), 8)}}>
