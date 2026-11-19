@@ -570,6 +570,11 @@ on screen; the hero object was never built in 3D; the real photographs inside th
    pass: card frames ≤ 30% of the film, no card run over 12 s, the first non-card frame by 0:02, card frames ≤ 25% of
    the first 60 s. A declared signature data build (rule 6) may exceed the run gate when the treatment names it and
    says why; nothing else may.
+- **Light the hero object like a real thing on a real bench** (2026-11-19). A dark object on a dark set in the void
+  scores as a card (≥ 80% dark pixels) and reads as one on a TV. Light it: material tones mid-grey so the texture's
+  detail shows, a fill light from the camera side, and a lit floor pool whose alpha falls off into the void (the desk
+  stays the desk). A lit procedural texture needs mipmaps and anisotropy, or it shimmers into moiré without MSAA.
+  *Why:* Titan v8's hull frames measured 86% dark; lit, 63–68%.
 
 ## 7. Narration
 The narration holds the viewer through 20 minutes; the voice is calm, so the writing carries the tension.
