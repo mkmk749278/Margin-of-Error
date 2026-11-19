@@ -3,6 +3,7 @@ import {ThreeCanvas} from '@remotion/three';
 import {useThree} from '@react-three/fiber';
 import * as THREE from 'three';
 import {RoomEnvironment} from 'three/examples/jsm/environments/RoomEnvironment.js';
+import {glide} from '../../../lib/remotion/motion';
 
 // TITAN'S PRESSURE HULL IN 3D (PLAYBOOK §6.8 rule 4): the film's hero object, built from the record.
 // Units: 1 scene unit = 10 inches. The record's numbers:
@@ -202,7 +203,7 @@ const Environment: React.FC = () => {
 		const pmrem = new THREE.PMREMGenerator(gl);
 		const env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 		scene.environment = env;
-		scene.environmentIntensity = 0.25;
+		scene.environmentIntensity = 0.38; // studio reflections: what makes resin and titanium read as real materials
 		return () => {
 			env.dispose();
 			pmrem.dispose();
@@ -225,6 +226,30 @@ export const G4: Vec3 = [0, R_IN - 0.02, LEN / 2 - 0.9];
 /** The gauge Canada's TSB plotted: centre top of the carbon fibre cylinder (C123, C131). */
 export const GTOP: Vec3 = [0, R_IN - 0.02, 0];
 
+/** A ring of hex bolt heads on a flange: one instanced mesh, cheap to draw. */
+const Bolts: React.FC<{r: number; n?: number}> = ({r, n = 36}) => {
+	const geo = useMemo(() => new THREE.CylinderGeometry(0.075, 0.075, 0.07, 6), []);
+	const mats = useMemo(() => {
+		const m = new THREE.Object3D();
+		return Array.from({length: n}, (_, i) => {
+			const a = (i / n) * Math.PI * 2;
+			m.position.set(Math.cos(a) * r, 0.05, Math.sin(a) * r);
+			m.rotation.set(0, -a, 0);
+			m.updateMatrix();
+			return m.matrix.clone();
+		});
+	}, [r, n]);
+	return (
+		<instancedMesh args={[geo, undefined, n]} ref={(im) => {
+			if (!im) return;
+			mats.forEach((mx, i) => im.setMatrixAt(i, mx));
+			im.instanceMatrix.needsUpdate = true;
+		}}>
+			<meshStandardMaterial color="#c3cad1" metalness={1} roughness={0.28} envMapIntensity={1.4} />
+		</instancedMesh>
+	);
+};
+
 const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTop = 0, cut, g4, sensors, aeDark = [], interfaces = 0, ringsLit = 0, domesLit = 0, hullO = 1, aeOn, sgOn, crackle = 0}) => {
 	const carbon = useCarbonTexture();
 	const layers = useMemo(() => {
@@ -235,12 +260,12 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 			return layerGeometry(rIn, rOut, cq);
 		});
 	}, [cut]);
-	const tones = ['#8a95a3', '#828d9b', '#8e99a6', '#7f8a98', '#919ca9'];
+	const tones = ['#5a6370', '#545d6a', '#5e6774', '#515a67', '#606976']; // dark resin carbon; the weave and clearcoat carry the light
 	return (
 		<group>
 			{layers.map((g, i) => (
 				<mesh key={i} geometry={g}>
-					<meshStandardMaterial color={tones[i]} map={carbon} roughness={0.45} metalness={0.25} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
+					<meshPhysicalMaterial color={tones[i]} map={carbon} bumpMap={carbon} bumpScale={1.4} roughness={0.55} metalness={0.1} clearcoat={0.6} clearcoatRoughness={0.3} envMapIntensity={0.9} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the adhesive interfaces, seen in section on both faces of the cut: a thin amber line along the hull at each */}
@@ -260,7 +285,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 			{[1, -1].map((s) => (
 				<mesh key={`ring${s}`} position={[0, 0, s * (LEN / 2 + RING / 2 - 0.05)]} rotation={[Math.PI / 2, 0, 0]}>
 					<cylinderGeometry args={[R_OUT + 0.06, R_OUT + 0.06, RING, 64, 1, true]} />
-					<meshStandardMaterial color="#a7b0ba" metalness={1} roughness={0.55} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.6 * ringsLit} transparent={hullO < 1} opacity={hullO} />
+					<meshStandardMaterial color="#8e97a1" metalness={1} roughness={0.45} envMapIntensity={0.8} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.6 * ringsLit} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the domes: 60 in, 3.25 in thick; forward dome carries the viewport */}
@@ -268,13 +293,15 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 				<group key={`dome${s}`} position={[0, 0, s * (LEN / 2 + RING - 0.05)]} rotation={[s > 0 ? Math.PI / 2 : -Math.PI / 2, 0, 0]}>
 					<mesh>
 						<sphereGeometry args={[R_OUT + 0.06, 48, 24, 0, Math.PI * 2, 0, Math.PI / 2]} />
-						<meshStandardMaterial color="#9ea8b3" metalness={1} roughness={0.58} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.12 * domesLit} transparent={hullO < 1} opacity={hullO} />
+						<meshStandardMaterial color="#959ea8" metalness={1} roughness={0.48} envMapIntensity={0.8} side={THREE.DoubleSide} emissive="#38bdf8" emissiveIntensity={0.12 * domesLit} transparent={hullO < 1} opacity={hullO} />
 					</mesh>
 					{/* bolt flange */}
 					<mesh rotation={[Math.PI / 2, 0, 0]}>
 						<torusGeometry args={[R_OUT + 0.08, 0.07, 8, 64]} />
-						<meshStandardMaterial color="#8d97a2" metalness={1} roughness={0.4} />
+						<meshStandardMaterial color="#8d97a2" metalness={1} roughness={0.35} envMapIntensity={1.2} />
 					</mesh>
+					{/* the dome's bolt circle (the record photographs the forward dome's bolts; count illustrative) */}
+					<Bolts r={R_OUT + 0.1} />
 					{s > 0 ? (
 						<mesh position={[0, R_OUT + 0.02, 0]}>
 							<cylinderGeometry args={[1.15, 1.15, 0.12, 64]} />
@@ -349,6 +376,8 @@ const Lights: React.FC<{bench: number}> = ({bench}) => (
 		{/* cold rim light from behind: the hull's silhouette reads even in the dark */}
 		<directionalLight position={[-6, 5, -14]} intensity={1.6} color="#9cc9ff" />
 		<spotLight position={[-9, 9, 12]} angle={0.5} penumbra={0.8} intensity={60 * bench} distance={40} color="#ffe9cc" />
+		{/* a second, cooler rim from the far side: a bright edge separates the hull from the floor (a three-point setup) */}
+		<directionalLight position={[9, 6, -12]} intensity={1.2 * bench} color="#bcd8ff" />
 	</>
 );
 
@@ -376,6 +405,7 @@ const ScaleModel: React.FC<{z: number; o: number; fail: number; ghost?: boolean}
 };
 
 export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sensors, aeDark, interfaces, bench = 1, sphere = 0, ringsLit = 0, domesLit = 0, hullO = 1, models = [], aeOn, sgOn, crackle, frame = 0, squeeze = 0, sprung = 0, gTop = 0, sea = 0, tilt = 0}) => (
+	<>
 	<ThreeCanvas width={Math.round(width)} height={Math.round(height)} gl={{antialias: false, toneMapping: THREE.ACESFilmicToneMapping, outputColorSpace: THREE.SRGBColorSpace}} camera={{fov: cam.fov, position: cam.pos, near: 0.1, far: 200}} style={{background: 'transparent'}}>
 		<CameraRig cam={cam} />
 		<Environment />
@@ -422,6 +452,9 @@ export const Hull3D: React.FC<Hull3DProps> = ({width, height, cam, cut, g4, sens
 		) : null}
 		{bench > 0.01 && sea < 0.5 ? <Bench bench={bench} /> : null}
 	</ThreeCanvas>
+	{/* the lens: a soft vignette over the 3D picture only (overlays drawn after the hull stay untouched) */}
+	<div style={{position: 'absolute', left: 0, top: 0, width: Math.round(width), height: Math.round(height), pointerEvents: 'none', background: 'radial-gradient(ellipse 70% 65% at 50% 50%, rgba(10,13,18,0) 55%, rgba(10,13,18,0.45) 100%)'}} />
+	</>
 );
 
 /** Screen position (px) of a world point for a camera, so 2D overlays can start exactly at a 3D part. */
@@ -442,26 +475,57 @@ export const lerpCam = (a: HullCam, b: HullCam, t: number): HullCam => ({
 	fov: a.fov + (b.fov - a.fov) * t,
 });
 
-const ease3 = (t: number): number => t * t * (3 - 2 * t);
-/** Camera on word-keyed frames, eased between keys (held before the first and after the last). */
-export const camAt = (f: number, keys: {f: number; cam: HullCam}[]): HullCam => {
-	if (f <= keys[0].f) return keys[0].cam;
-	for (let i = 0; i + 1 < keys.length; i++) {
-		const a = keys[i];
-		const b = keys[i + 1];
-		if (f <= b.f) return lerpCam(a.cam, b.cam, ease3((f - a.f) / Math.max(1, b.f - a.f)));
-	}
-	return keys[keys.length - 1].cam;
+const clamp01 = (t: number): number => Math.min(1, Math.max(0, t));
+
+/** Hermite on one axis: a camera that passes through each key with a continuous velocity. */
+const herm = (p0: number, p1: number, m0: number, m1: number, t: number, dt: number): number => {
+	const t2 = t * t;
+	const t3 = t2 * t;
+	return (2 * t3 - 3 * t2 + 1) * p0 + (t3 - 2 * t2 + t) * m0 * dt + (-2 * t3 + 3 * t2) * p1 + (t3 - t2) * m1 * dt;
 };
 
-/** One beat's eased step, 0 → 1 over ~14 frames from just before its word. */
-const beatStep = (f: number, at: number): number => ease3(Math.min(1, Math.max(0, (f - at + 6) / 14)));
-/** Alternating in/out position of a beat track: +1, −1, +1 … eased between, so the picture moves on every listed word. */
-export const beatPos = (f: number, beats: number[]): number => beats.reduce((acc, b, i) => acc + (i % 2 === 0 ? 1 : -1) * beatStep(f, b), 0);
-/** The camera dollies `amp` of its distance in and out on each beat word (PLAYBOOK §6.8: motion on the words, not type). */
-export const dolly = (cam: HullCam, f: number, beats: number[], amp = 0.035): HullCam => {
-	const k = 1 - amp * beatPos(f, beats);
-	return {...cam, pos: [0, 1, 2].map((i) => cam.look[i] + (cam.pos[i] - cam.look[i]) * k) as Vec3};
+/**
+ * Camera on word-keyed frames: one continuous move through every key (non-uniform Catmull-Rom), easing in at the first
+ * key and out at the last, never stopping between them (owner 19 NOV 2026: "smooth, like a real camera moving").
+ * Held before the first key and after the last.
+ */
+export const camAt = (f: number, keys: {f: number; cam: HullCam}[]): HullCam => {
+	if (f <= keys[0].f) return keys[0].cam;
+	const n = keys.length;
+	if (f >= keys[n - 1].f) return keys[n - 1].cam;
+	const vec = (c: HullCam): number[] => [...c.pos, ...c.look, c.fov];
+	const vs = keys.map((k) => vec(k.cam));
+	// velocity at each key: zero at the ends (ease in, ease out), the neighbours' chord in between
+	const vel = (i: number): number[] =>
+		i === 0 || i === n - 1 ? vs[i].map(() => 0) : vs[i].map((_, d) => (vs[i + 1][d] - vs[i - 1][d]) / Math.max(1, keys[i + 1].f - keys[i - 1].f));
+	let i = 0;
+	while (i + 2 < n && f > keys[i + 1].f) i++;
+	const dt = Math.max(1, keys[i + 1].f - keys[i].f);
+	const t = clamp01((f - keys[i].f) / dt);
+	const m0 = vel(i);
+	const m1 = vel(i + 1);
+	const v = vs[i].map((_, d) => herm(vs[i][d], vs[i + 1][d], m0[d], m1[d], t, dt));
+	return {pos: [v[0], v[1], v[2]], look: [v[3], v[4], v[5]], fov: v[6]};
 };
-/** The same for a photograph or footage: a scale push of `amp` on each beat word. */
-export const beatScale = (f: number, beats: number[], amp = 0.03): number => 1 + amp * beatPos(f, beats);
+
+/** Kept for the word lists the scenes pass: progress through the span of the listed words (monotonic, no pumping). */
+export const beatPos = (f: number, beats: number[]): number => (beats.length ? glide(f, Math.min(...beats) - 30, Math.max(...beats) + 45) : 0);
+
+/**
+ * A real camera move across the listed words: a slow arc around the subject (yaw) with a slight crane down and a small
+ * push, always forward through the shot, never in and out on a word (owner 19 NOV 2026). `amp` sets the size of the move.
+ */
+export const dolly = (cam: HullCam, f: number, beats: number[], amp = 0.035): HullCam => {
+	const p = beatPos(f, beats);
+	const yaw = (amp * 3.2) * (p - 0.5); // radians: about 6.4° across the shot at the default
+	const off = [0, 1, 2].map((i) => cam.pos[i] - cam.look[i]);
+	const c = Math.cos(yaw);
+	const s = Math.sin(yaw);
+	const x = off[0] * c - off[2] * s;
+	const z = off[0] * s + off[2] * c;
+	const k = 1 - amp * 0.8 * p; // a small push in as the arc travels
+	const y = off[1] * (1 - amp * 1.2 * p); // the camera cranes down a touch
+	return {...cam, pos: [cam.look[0] + x * k, cam.look[1] + y * k, cam.look[2] + z * k]};
+};
+/** No more scale pumping on photos and footage: the scene's camera does the moving (Film.tsx). */
+export const beatScale = (_f: number, _beats: number[], _amp = 0.03): number => 1;

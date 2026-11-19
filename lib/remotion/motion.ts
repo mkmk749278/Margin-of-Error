@@ -43,3 +43,16 @@ export const shudder = (frame: number, fps: number, start: number, amplitude: nu
 	if (t < 0) return 0;
 	return amplitude * Math.exp(-decay * t) * Math.sin(2 * Math.PI * hz * t);
 };
+
+/**
+ * A camera move's progress, 0 → 1 between `from` and `to`: eases in over the first fifth, travels at a constant speed,
+ * eases out over the last fifth (a real camera on a track or head, not a spring). Clamped outside the span.
+ */
+export const glide = (f: number, from: number, to: number): number => {
+	const t = Math.min(1, Math.max(0, (f - from) / Math.max(1, to - from)));
+	const a = 0.2;
+	const v = 1 / (1 - a); // peak speed so the curve ends at 1
+	if (t < a) return (v * t * t) / (2 * a);
+	if (t > 1 - a) return 1 - (v * (1 - t) * (1 - t)) / (2 * a);
+	return v * (t - a / 2);
+};
