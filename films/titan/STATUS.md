@@ -1,4 +1,17 @@
-# Titan: status (18 NOV 2026, fifth session)
+# Titan: status (19 NOV 2026, sixth session)
+
+## Latest (19 NOV 2026)
+- **Round 8 built and merged (PRs #104–#106):** the 3D hull lit as a physical object (weave, lit floor, fill light);
+  every chart and readout plate on the lit mount (`lamp` tokens; `Mount`/`Card` default); the opening re-plot under the
+  lamp; outro sources two lines at 30 px, 18 JUN 2023 at 36 px; MODELS label ≥ 65%. Record cut-ins were not needed
+  (a 1 fps sweep of every round-7 run found none over 7 s once lit).
+- **Cut v9** (run 44449474377, Drive `titan/renders/titan_review_v9_720p.mp4`): slide audit **1% · 4 s · 0:00 · 2%,
+  pass** (v8: 36% · 82 s · 0:09 · 37%); every other measure passes (`review/picture_gate_r8.md`). **v9 is with the
+  owner for review.**
+- **Next:** the owner's notes on v9; the independent viewer and forensic reviews of v9 if the owner wants another
+  round; the owner's approval of the cut; the 4K master (split the hull blocks smaller: v9 blocks ran ~1.8× v8);
+  the YouTube package.
+
 
 ## Latest (18 NOV 2026)
 - **Owner: v7 looks like slides.** Measured: 60% dark card frames, first real image 0:58 (`review/slide_audit_v7.md`);

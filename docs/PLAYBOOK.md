@@ -878,6 +878,9 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   of three frames either side of every seam on the joined film. Place shot starts a hair *before* their frame, never
   after (rounded times landed half a millisecond late in earlier work and flashed the background for one frame, 13
   times in one film).
+- **Lit 3D costs render time:** Titan's lit hull (fill light, floor texture, mipmapped weave) rendered about 1.8× its
+  dark version on the runners (v9 block 14400–27000: 4 h 10 min against the 350 min job limit). For a hull-heavy film,
+  use more runners (smaller blocks) and start an insurance run of the slowest block's halves early (`blocks`, `reuse_from`).
 - **Look at the runner's frames, not only the session's stills:** a runner image once lacked a font the session had,
   and its labels rendered as empty boxes.
 - **In the session:** Remotion's own browser download (`remotion.media`) is blocked, so stills need
