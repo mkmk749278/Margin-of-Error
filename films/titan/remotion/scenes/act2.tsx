@@ -204,7 +204,7 @@ const Margin: React.FC = () => {
 					</g>
 				) : null}
 				{lead(f, wf(35, 'imploded'), 10) > 0 ? (
-					<g opacity={lead(f, wf(35, 'imploded'), 10) * (1 - 0.6 * lead(f, wf(40, 'early'), 14))}>
+					<g opacity={lead(f, wf(35, 'imploded'), 10) * (1 - 0.35 * lead(f, wf(40, 'early'), 14))}>
 						<line x1={G.x - 40} x2={G.x + 160} y1={gy(2800)} y2={gy(2800)} stroke={colors.red} strokeWidth={5} />
 						<text x={G.x - 20} y={gy(2500) - 18} style={T(26, {fill: colors.red, fontWeight: 700})}>MODELS: 2,800 M · 2,500 M</text>
 					</g>

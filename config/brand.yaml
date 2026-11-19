@@ -9,6 +9,8 @@ colors:
   void: "#0a0d12"        # Void Background: cold ballistic slate
   card: "#121824"        # Card Surface (exhibit mounts, telemetry panels)
   border: "#1e293b"      # 1 px card border
+  lamp: "#2e3a4b"        # Lit mount, lamp centre: a record chart under a desk lamp (PLAYBOOK §6.8; luma ~57)
+  lamp_edge: "#283344"   # Lit mount, rim: just above the slide-audit dark line (luma ~50); red labels keep 3:1
   grid: "#e2e8f0"        # coordinate grid lines; drawn at 0.05 opacity (spec §4 Motion)
   ink: "#e5e7eb"         # primary type on the void
   sub: "#94a3b8"         # secondary type, axis labels
