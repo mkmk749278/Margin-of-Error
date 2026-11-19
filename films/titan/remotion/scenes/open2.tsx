@@ -4,7 +4,7 @@ import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, lead, rollTo, StatusFlip} from '../../../../lib/remotion/Kinetic';
 import {ease} from '../../../../lib/remotion/motion';
 import {camAt, G4, Hull3D, project} from '../hull3d';
-import {media, Mount, useFilmFrame} from '../kit';
+import {LAMP, media, Mount, useFilmFrame} from '../kit';
 import {Chip, clamp, hhmm, RealFootage, span, T, T_EVENT, TimeTrace} from '../parts';
 import {HearingClip, clipOf} from '../parts2';
 import {Replot} from '../replot';
@@ -272,7 +272,7 @@ const Turn: React.FC = () => {
 				<Chip text="NTSB · U.S. NATIONAL TRANSPORTATION SAFETY BOARD" tone={f >= wf(9, 'investigator') ? colors.cyan : colors.ink} size={36} style={{transform: `scale(${bump(f, fps, wf(9, "america's"), 0.05).toFixed(4)})`, transformOrigin: 'left center'}} />
 			</div>
 			<div style={{position: 'absolute', left: 180, top: 170, width: 1560, height: 760, perspective: '1000px'}}>
-				<div style={{position: 'absolute', inset: 0, transform: `translateY(${(30 * (1 - lead(f, wf(9, 'implosion'), 14))).toFixed(1)}px) rotateY(${rot.toFixed(2)}deg) scale(${(1 - 0.06 * Math.sin(Math.PI * m)).toFixed(4)})`, transformOrigin: '50% 50%', background: 'rgba(18,24,36,0.9)', border: `1px solid ${colors.border}`, boxShadow: '0 40px 90px rgba(0,0,0,0.6)'}}>
+				<div style={{position: 'absolute', inset: 0, transform: `translateY(${(30 * (1 - lead(f, wf(9, 'implosion'), 14))).toFixed(1)}px) rotateY(${rot.toFixed(2)}deg) scale(${(1 - 0.06 * Math.sin(Math.PI * m)).toFixed(4)})`, transformOrigin: '50% 50%', background: LAMP, border: `1px solid ${colors.border}`, boxShadow: '0 40px 90px rgba(0,0,0,0.6)'}}>
 					<div style={{position: 'absolute', left: 0, top: 20}}>
 						<svg width={box.w} height={box.h}>
 							<Replot m={m} z={0} show={{'80': 1}} hi={{'80': lead(f, wf(9, 'same'), 10)}} box={box} />
