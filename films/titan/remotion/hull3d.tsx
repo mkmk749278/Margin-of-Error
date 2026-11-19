@@ -265,7 +265,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 		<group>
 			{layers.map((g, i) => (
 				<mesh key={i} geometry={g}>
-					<meshPhysicalMaterial color={tones[i]} map={carbon} bumpMap={carbon} bumpScale={1.4} roughness={0.55} metalness={0.1} clearcoat={0.6} clearcoatRoughness={0.3} envMapIntensity={0.9} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
+					<meshStandardMaterial color={tones[i]} map={carbon} bumpMap={carbon} bumpScale={1.4} roughness={0.36} metalness={0.2} envMapIntensity={1.1} side={THREE.DoubleSide} transparent={hullO < 1} opacity={hullO} />
 				</mesh>
 			))}
 			{/* the adhesive interfaces, seen in section on both faces of the cut: a thin amber line along the hull at each */}
@@ -517,7 +517,11 @@ export const beatPos = (f: number, beats: number[]): number => (beats.length ? g
  */
 export const dolly = (cam: HullCam, f: number, beats: number[], amp = 0.035): HullCam => {
 	const p = beatPos(f, beats);
-	const yaw = (amp * 3.2) * (p - 0.5); // radians: about 6.4° across the shot at the default
+	// a steady orbit rate (about 1.3° a second, at least the old 6.4° a shot, at most 75°): a long shot keeps moving
+	// (v10's fixed 6.4° over a minute read as a still frame: 24 still holds, PLAYBOOK §6.4)
+	const span = beats.length ? (Math.max(...beats) - Math.min(...beats) + 75) / 60 : 0;
+	const total = Math.min((75 * Math.PI) / 180, Math.max(amp * 3.2, ((1.3 * Math.PI) / 180) * span));
+	const yaw = total * (p - 0.5);
 	const off = [0, 1, 2].map((i) => cam.pos[i] - cam.look[i]);
 	const c = Math.cos(yaw);
 	const s = Math.sin(yaw);

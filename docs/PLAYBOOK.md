@@ -490,6 +490,14 @@ kinetic accents (exhibit tag, readout, timeline bar) → atmosphere (grain, vign
   glide down and across the paper to the line, then a slow creep. Footage pans at a fixed overscan. *Why:* Titan v9
   pumped scale on nearly every word through 20 scenes (`beatScale`, `dolly`), and every scene added a push and an 8 s
   wobble; the owner read the film as one long zoom.
+- **A camera move has a minimum speed, not a fixed size** (2026-11-19). A move sized per shot (6.4° of orbit, 36 px of
+  track) crawls in a long shot: Titan v10 had 24 still holds of 3–8 s. Orbit at a steady rate (about 1.3° a second,
+  capped at 75° a shot), add a slow circular float to every 2D shot (16 px, one turn in 20 s), and keep a document's
+  rostrum creeping (~11 px a second). Check a changed move with 4 fps stills and the stillness audit's own measure
+  before the render.
+- **Render cost of materials:** a clearcoat (`meshPhysicalMaterial`) on the full-frame hull ran 70–240 min per 30 s
+  shard under software GL and lost two blocks to the 350 min job limit. One specular lobe (`meshStandardMaterial`,
+  lower roughness, studio reflections) gives the same resin look on screen.
 
 ### 6.5 Looks to avoid
 Glass cards, neon dashboards, glitch transitions, "hacker" green text, red-string conspiracy boards, stock footage of

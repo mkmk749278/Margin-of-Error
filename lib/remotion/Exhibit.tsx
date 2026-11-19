@@ -61,9 +61,9 @@ export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, hi
 		const inY = (y: number): number => Math.min(page.h - half.h * 0.5, Math.max(half.h * 0.5, y));
 		const end = {x: c1.x, y: c1.y};
 		const begin = {x: inX(end.x - SCREEN.w * 0.07 / s), y: inY(end.y - SCREEN.h * 0.42 / s)};
-		// after the move lands the camera keeps creeping down the page (~5 px a second on screen): never a held frame
+		// after the move lands the camera keeps creeping down the page (~11 px a second on screen): never a held frame
 		const after = push ? Math.max(0, frame - push.to) : Math.max(0, frame - start);
-		const creep = (Math.min(after, 900) * 0.08) / s;
+		const creep = (Math.min(after, 1800) * 0.18) / s;
 		cx = begin.x + (end.x - begin.x) * g;
 		cy = inY(begin.y + (end.y - begin.y) * g + creep);
 	}
