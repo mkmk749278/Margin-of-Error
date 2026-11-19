@@ -3,7 +3,7 @@ import {AbsoluteFill, useVideoConfig} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {bump, DatePill, LAND, lead, rollTo} from '../../../../lib/remotion/Kinetic';
 import {RecordPage} from '../docs';
-import {ActTitle, media, Mount, Photo, useFilmFrame} from '../kit';
+import {ActTitle, LAMP, media, Mount, Photo, useFilmFrame} from '../kit';
 import {beatScale, camAt, dolly, Hull3D} from '../hull3d';
 import {Chip, lit, Pop, RealFootage, sans, span, T, T_EVENT, TimeTrace, vis, Wd} from '../parts';
 import {HearingClip, clipOf} from '../parts2';
@@ -418,7 +418,7 @@ const InTheData: React.FC = () => {
 				f={f}
 				id="h_kramer_time"
 				credit="USCG, 25 SEP 2024 · TRACED: NTSB 24-012 FIG. 26"
-				picture={<div style={{position: 'absolute', inset: 0, background: colors.card}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={1} /></div>}
+				picture={<div style={{position: 'absolute', inset: 0, background: LAMP}}><TimeTrace f={f} w={1120} h={630} tEnd={17.1} showDepth={1} /></div>}
 			/>
 			{s119 > 0 ? (
 				// s119 (fact-check v3): OceanGate's own dive-80 plot carried the depth on the strain chart (NTSB fig. 20);

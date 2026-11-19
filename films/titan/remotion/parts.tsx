@@ -3,7 +3,7 @@ import {Img, interpolate, OffthreadVideo, Sequence, useVideoConfig} from 'remoti
 import {colors} from '../../../lib/remotion/brand';
 import {bump, flash, LAND, lead} from '../../../lib/remotion/Kinetic';
 import {ease, tween} from '../../../lib/remotion/motion';
-import {media, mono, sans} from './kit';
+import {LAMP, media, mono, sans} from './kit';
 import d80 from './data/dive80_time.json';
 
 // Titan's shared parts: the dive 80 time trace (NTSB 24-012 fig. 26d), the hull schematic, the dive ledger, the
@@ -31,7 +31,7 @@ export const Chip: React.FC<{text: string; tone?: string; size?: number; style?:
 /** A word-arriving card: the card holds the sentence; its content changes on the words. */
 export const Card: React.FC<{x: number; y: number; w: number; h?: number; o: number; children: React.ReactNode; accent?: string; style?: React.CSSProperties}> = ({x, y, w, h, o, children, accent, style}) =>
 	o <= 0 ? null : (
-		<div style={{position: 'absolute', left: x, top: y, width: w, height: h, opacity: o, background: colors.card, border: `1px solid ${colors.border}`, boxShadow: '0 26px 70px rgba(0,0,0,0.5)', ...style}}>
+		<div style={{position: 'absolute', left: x, top: y, width: w, height: h, opacity: o, background: LAMP, border: `1px solid ${colors.border}`, boxShadow: '0 26px 70px rgba(0,0,0,0.5)', ...style}}>
 			{accent ? <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: accent}} /> : null}
 			{children}
 		</div>

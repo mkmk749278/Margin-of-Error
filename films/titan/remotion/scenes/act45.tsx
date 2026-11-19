@@ -378,14 +378,18 @@ const SignOff: React.FC = () => {
 							</div>
 						))}
 						<div style={{width: 520 * lead(f, wf(253, 'harding') + 40, 30), height: 1, background: colors.sub, marginTop: 14}} />
-						<div style={{...T(30, {color: colors.ink, letterSpacing: 4}), opacity: lead(f, wf(253, 'harding') + 50, 20)}}>18 JUN 2023</div>
+						<div style={{...T(36, {color: colors.ink, letterSpacing: 4}), opacity: lead(f, wf(253, 'harding') + 50, 20)}}>18 JUN 2023</div>
 					</div>
 				</AbsoluteFill>
 			) : null}
 			{outro > 0 ? (
 				<AbsoluteFill style={{background: colors.void, alignItems: 'center', justifyContent: 'center', opacity: outro}}>
 					<div style={{fontFamily: sans, fontWeight: 700, fontSize: 64, letterSpacing: 14, color: colors.ink, marginRight: -14}}>MARGIN OF ERROR</div>
-					<div style={{marginTop: 30, ...T(26, {color: colors.ink, letterSpacing: 2})}}>SOURCES: NTSB MIR-25-36 · NTSB DOCKET DCA23FM036 · USCG MARINE BOARD REPORT · TSB M23A0169</div>
+					<div style={{marginTop: 34, ...T(30, {color: colors.ink, letterSpacing: 2}), textAlign: 'center', lineHeight: 1.5}}>
+						SOURCES: NTSB MIR-25-36 · NTSB DOCKET DCA23FM036
+						<br />
+						USCG MARINE BOARD REPORT · TSB M23A0169
+					</div>
 				</AbsoluteFill>
 			) : null}
 		</>

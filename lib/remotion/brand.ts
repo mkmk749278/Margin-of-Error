@@ -4,6 +4,8 @@ export const colors = {
   void: '#0a0d12',
   card: '#121824',
   border: '#1e293b',
+  lamp: '#2e3a4b',
+  lamp_edge: '#283344',
   grid: '#e2e8f0',
   ink: '#e5e7eb',
   sub: '#94a3b8',

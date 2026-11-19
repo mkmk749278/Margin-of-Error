@@ -575,6 +575,11 @@ on screen; the hero object was never built in 3D; the real photographs inside th
   detail shows, a fill light from the camera side, and a lit floor pool whose alpha falls off into the void (the desk
   stays the desk). A lit procedural texture needs mipmaps and anisotropy, or it shimmers into moiré without MSAA.
   *Why:* Titan v8's hull frames measured 86% dark; lit, 63–68%.
+- **Charts sit on a lit mount, not a dark card** (2026-11-19). `Mount` and `Card` default to the lamp plate
+  (`lamp` → `lamp_edge` in `config/brand.yaml`, a radial gradient): luma 50–57, above the slide audit's dark line,
+  while light ink (9:1), cyan and amber (5:1) and bold red (3:1) still read. Paper stays for real documents.
+  `lit={false}` keeps a dark card where the dark is the point. *Why:* Titan v8's charts on `#121824` measured
+  95–98% dark; lit, 39–46%.
 
 ## 7. Narration
 The narration holds the viewer through 20 minutes; the voice is calm, so the writing carries the tension.
