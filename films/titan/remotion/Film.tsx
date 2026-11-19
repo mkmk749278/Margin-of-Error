@@ -48,15 +48,17 @@ const XF = 14;
 const timed = [...scenes].sort((a, b) => a.from - b.from).map((s, i, all) => ({...s, to: i + 1 < all.length ? Math.max(s.to, all[i + 1].from + XF) : s.to}));
 
 /** One camera move per shot (owner 19 NOV 2026: no zoom in and out, move like a real camera): a steady lateral track in
- * a direction that turns scene by scene, eased only at its ends, at a fixed 2% overscan so no edge shows (36 px of travel
- * stays inside the 19 px margin each side). */
+ * a direction that turns scene by scene, eased only at its ends, plus a slow circular float, at a fixed 3% overscan so no edge shows (travel stays inside the 29 px margin). */
 const shotCam = (f: number, s: {from: number; to: number}, i: number): string => {
 	const g = glide(f, s.from, s.to);
 	const ang = (i * 2.399963) % (2 * Math.PI);
-	const A = 36; // px across the whole shot
-	const dx = Math.cos(ang) * A * (g - 0.5);
-	const dy = Math.sin(ang) * A * 0.45 * (g - 0.5);
-	return `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(1.02)`;
+	const A = 24; // px across the whole shot
+	// and a slow circular float (16 px, one turn in 20 s, ~5 px/s): a long shot never holds still, never zooms
+	const t = (f - s.from) / 60;
+	const ph = (2 * Math.PI * t) / 20 + ang;
+	const dx = Math.cos(ang) * A * (g - 0.5) + 16 * Math.cos(ph);
+	const dy = Math.sin(ang) * A * 0.45 * (g - 0.5) + 10 * Math.sin(ph);
+	return `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(1.03)`;
 };
 const CAM_ORIGIN = '50% 48%';
 
