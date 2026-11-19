@@ -88,7 +88,7 @@ const useCarbonTexture = (): THREE.DataTexture =>
 				const tow = Math.floor(y / 8); // a hoop tow band
 				const band = 0.5 + 0.5 * Math.sin((y % 8) / 8 * Math.PI); // the tow's own curvature catches light
 				const n = hash(tow, Math.floor(x / 64));
-				const v = 44 + 34 * band + 16 * n;
+				const v = 78 + 70 * band + 24 * n; // dark grey carbon, its tows legible under the lamp
 				const i = (y * W + x) * 4;
 				data[i] = v;
 				data[i + 1] = v + 2;
@@ -101,6 +101,11 @@ const useCarbonTexture = (): THREE.DataTexture =>
 		t.wrapT = THREE.RepeatWrapping;
 		t.repeat.set(1, 6);
 		t.colorSpace = THREE.SRGBColorSpace;
+		// mipmapped and anisotropic: a lit weave under no MSAA otherwise shimmers into moiré
+		t.generateMipmaps = true;
+		t.minFilter = THREE.LinearMipmapLinearFilter;
+		t.magFilter = THREE.LinearFilter;
+		t.anisotropy = 8;
 		t.needsUpdate = true;
 		return t;
 	}, []);
@@ -126,6 +131,31 @@ const useBrushedTexture = (): THREE.DataTexture =>
 		t.wrapS = THREE.RepeatWrapping;
 		t.wrapT = THREE.RepeatWrapping;
 		t.repeat.set(2, 18);
+		t.needsUpdate = true;
+		return t;
+	}, []);
+
+/** The lab floor under the lamp: a lit pool that falls off into the void at its edge (alpha), so the desk stays the desk. */
+const useFloorTexture = (): THREE.DataTexture =>
+	useMemo(() => {
+		const N = 256;
+		const data = new Uint8Array(N * N * 4);
+		for (let y = 0; y < N; y++) {
+			for (let x = 0; x < N; x++) {
+				const dx = (x - N / 2) / (N / 2);
+				const dy = (y - N / 2) / (N / 2);
+				const r = Math.min(1, Math.sqrt(dx * dx + dy * dy));
+				const fall = Math.pow(1 - r, 0.9); // bright under the lamp, gone at the rim
+				const grit = 6 * hash(Math.floor(x / 2), Math.floor(y / 2)); // sealed-concrete speckle
+				const i = (y * N + x) * 4;
+				data[i] = 96 + grit;
+				data[i + 1] = 104 + grit;
+				data[i + 2] = 116 + grit;
+				data[i + 3] = Math.round(255 * fall);
+			}
+		}
+		const t = new THREE.DataTexture(data, N, N);
+		t.colorSpace = THREE.SRGBColorSpace;
 		t.needsUpdate = true;
 		return t;
 	}, []);
@@ -205,7 +235,7 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 			return layerGeometry(rIn, rOut, cq);
 		});
 	}, [cut]);
-	const tones = ['#55606e', '#4d5866', '#58636f', '#4a5461', '#5b6674'];
+	const tones = ['#8a95a3', '#828d9b', '#8e99a6', '#7f8a98', '#919ca9'];
 	return (
 		<group>
 			{layers.map((g, i) => (
@@ -284,8 +314,13 @@ const HullModel: React.FC<Omit<Hull3DProps, 'width' | 'height' | 'cam'>> = ({gTo
 
 const Bench: React.FC<{bench: number}> = ({bench}) => {
 	const brushed = useBrushedTexture();
+	const floor = useFloorTexture();
 	return (
 		<group>
+			<mesh position={[0, -R_OUT - 1.42, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+				<circleGeometry args={[34, 64]} />
+				<meshBasicMaterial map={floor} transparent opacity={bench} depthWrite={false} toneMapped={false} />
+			</mesh>
 			<mesh position={[0, -R_OUT - 0.89, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[1, 2.6, 1]}>
 				<circleGeometry args={[3.4, 48]} />
 				<meshBasicMaterial color="#000000" transparent opacity={0.45 * bench} />
@@ -293,12 +328,12 @@ const Bench: React.FC<{bench: number}> = ({bench}) => {
 			{/* a matte steel inspection bench, the hull on two cradles */}
 			<mesh position={[0, -R_OUT - 0.9 - 0.25, 0]}>
 				<boxGeometry args={[14, 0.5, 22]} />
-				<meshStandardMaterial color="#2b3038" metalness={0.75} roughness={0.55} roughnessMap={brushed} envMapIntensity={0.6 * bench} />
+				<meshStandardMaterial color="#5a636e" metalness={0.6} roughness={0.55} roughnessMap={brushed} envMapIntensity={0.6 * bench} />
 			</mesh>
 			{[3.2, -3.2].map((z) => (
 				<mesh key={z} position={[0, -R_OUT - 0.45, z]}>
 					<boxGeometry args={[4.2, 0.9, 0.6]} />
-					<meshStandardMaterial color="#1d2229" metalness={0.6} roughness={0.6} />
+					<meshStandardMaterial color="#3a424c" metalness={0.6} roughness={0.6} />
 				</mesh>
 			))}
 		</group>
@@ -307,8 +342,10 @@ const Bench: React.FC<{bench: number}> = ({bench}) => {
 
 const Lights: React.FC<{bench: number}> = ({bench}) => (
 	<>
-		<ambientLight intensity={0.05 + 0.1 * bench} />
-		<directionalLight position={[8, 14, 10]} intensity={0.4 + 2.2 * bench} />
+		<ambientLight intensity={0.12 + 0.35 * bench} />
+		<directionalLight position={[8, 14, 10]} intensity={0.6 + 2.8 * bench} />
+		{/* soft fill from the camera side: the weave reads on the shadow side too */}
+		<directionalLight position={[10, 4, 14]} intensity={0.9 * bench} color="#dfe8f2" />
 		{/* cold rim light from behind: the hull's silhouette reads even in the dark */}
 		<directionalLight position={[-6, 5, -14]} intensity={1.6} color="#9cc9ff" />
 		<spotLight position={[-9, 9, 12]} angle={0.5} penumbra={0.8} intensity={60 * bench} distance={40} color="#ffe9cc" />
