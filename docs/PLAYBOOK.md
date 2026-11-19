@@ -481,6 +481,16 @@ kinetic accents (exhibit tag, readout, timeline bar) → atmosphere (grain, vign
   to the next focus, or the next element on its word.
 - Real geometry and real kinematics for every mechanism; a numeric check in code for anything drawn from an equation.
 
+- **Move like a camera, never pump a zoom** (owner, 2026-11-19: "most of the film is just zoom in zoom out").
+  One continuous move per shot, eased only at its ends (`glide()` in `lib/remotion/motion.ts`): a track, an arc
+  around the subject, a crane, a rostrum glide down a page. Never scale a picture in on one word and out on the next;
+  word emphasis comes from what changes in the frame (a part lights, a line draws, a number lands), not from the lens.
+  3D keyframes are passed through with a continuous velocity (`camAt`, non-uniform Catmull-Rom), never eased to a stop
+  at each key. Documents use the rostrum move (`Exhibit move="rostrum"`): reading distance from the first frame, a
+  glide down and across the paper to the line, then a slow creep. Footage pans at a fixed overscan. *Why:* Titan v9
+  pumped scale on nearly every word through 20 scenes (`beatScale`, `dolly`), and every scene added a push and an 8 s
+  wobble; the owner read the film as one long zoom.
+
 ### 6.5 Looks to avoid
 Glass cards, neon dashboards, glitch transitions, "hacker" green text, red-string conspiracy boards, stock footage of
 office workers or traders, AI imagery of real aircraft, trains, places or people, dramatic lens flares.

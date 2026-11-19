@@ -19,7 +19,10 @@ on:
         description: "2/3 = 720p review cut (always first), 1 = 1080p, 2 = 4K master (only after the owner approves)"
         default: "2/3"
       runners:
-        description: "parallel runners (1-20; default 6: the account's 20 are shared, PLAYBOOK §10.5)"
+        description: "blocks to split the film into (1-20; default 6). More blocks = shorter jobs"
+        default: "6"
+      max_parallel:
+        description: "at most this many blocks render at once (default 6: the account's 20 runners are shared, PLAYBOOK §10.5)"
         default: "6"
       crf:
         description: "x264 CRF"
@@ -80,6 +83,7 @@ jobs:
     timeout-minutes: 350
     strategy:
       fail-fast: false
+      max-parallel: ${{ fromJson(inputs.max_parallel) }}
       matrix:
         block: ${{ fromJson(needs.plan.outputs.blocks) }}
     env:

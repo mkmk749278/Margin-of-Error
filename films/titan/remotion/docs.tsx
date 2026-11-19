@@ -66,7 +66,7 @@ export const RecordPage: React.FC<{set: DocSet; start: number; end: number; hl: 
 	const fc = focus ?? {x: 150, w: 1570, y: u.y, h: Math.max(u.h, 420)};
 	return (
 		<Fade start={start} end={end}>
-			<Exhibit page={{w: 1870, h: 2420}} start={start} push={{from: start + 12, to: pushTo ?? start + 110, focus: fc}} highlights={highlights} label={label} source={source}>
+			<Exhibit page={{w: 1870, h: 2420}} start={start} push={{from: start + 12, to: pushTo ?? start + 110, focus: fc}} highlights={highlights} label={label} source={source} move="rostrum">
 				<Img src={media(`pages/${S.file(pg)}.jpg`)} style={{width: 1870, height: 2420}} />
 			</Exhibit>
 		</Fade>

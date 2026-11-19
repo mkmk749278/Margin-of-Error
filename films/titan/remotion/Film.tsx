@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {colors} from '../../../lib/remotion/brand';
 import {Desk} from '../../../lib/remotion/Desk';
-import {envelope} from '../../../lib/remotion/motion';
+import {envelope, glide} from '../../../lib/remotion/motion';
 import {SfxCue} from '../../../lib/remotion/sfx';
 import {mono} from './kit';
 import {act1} from './scenes/act1';
@@ -13,6 +13,7 @@ import {act3b} from './scenes/act3b';
 import {act3c} from './scenes/act3c';
 import {act45} from './scenes/act45';
 import {SceneDef} from './scenes/types';
+
 import timing from '../vo/timing.json';
 import {FILM_FRAMES, s2f} from './timing';
 
@@ -27,18 +28,37 @@ const ActChip: React.FC = () => {
 	const f = useCurrentFrame();
 	const c = chapters.find((x) => f >= x.from && f < x.to);
 	if (!c) return null;
-	const o = envelope(f, c.from + 240, Math.min(c.to, FILM_FRAMES - 14 * 60), 30, 30) * 0.9;
+	// on for five seconds after each act opens, then gone: the act title and YouTube's chapters carry the rest
+	const o = envelope(f, c.from + 240, Math.min(c.from + 540, c.to, FILM_FRAMES - 14 * 60), 30, 30) * 0.9;
 	const [n, t] = c.title.split(' · ');
+	// the chip rides on the newest scene's camera, so the chips a scene sets under it keep their gap (no overlap)
+	const live = timed.map((s, i) => ({s, i})).filter(({s}) => f >= s.from && f < s.to);
+	const top = live.length ? live[live.length - 1] : null;
 	return (
-		<div style={{position: 'absolute', left: 96, top: 54, opacity: o, fontFamily: mono, fontSize: 20, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap'}}>{/* floor-ok: the act chip is navigation, the act title carries it */}
-			<span style={{color: colors.amber}}>ACT {n}</span>
-			<span style={{marginLeft: 14}}>{t.toUpperCase()}</span>
-		</div>
+		<AbsoluteFill style={{transform: top ? shotCam(f, top.s, top.i) : undefined, transformOrigin: CAM_ORIGIN}}>
+			<div style={{position: 'absolute', left: 96, top: 54, opacity: o, fontFamily: mono, fontSize: 20, letterSpacing: 2.4, color: colors.sub, whiteSpace: 'nowrap'}}>{/* floor-ok: the act chip is navigation, the act title carries it */}
+				<span style={{color: colors.amber}}>ACT {n}</span>
+				<span style={{marginLeft: 14}}>{t.toUpperCase()}</span>
+			</div>
+		</AbsoluteFill>
 	);
 };
 
 const XF = 14;
 const timed = [...scenes].sort((a, b) => a.from - b.from).map((s, i, all) => ({...s, to: i + 1 < all.length ? Math.max(s.to, all[i + 1].from + XF) : s.to}));
+
+/** One camera move per shot (owner 19 NOV 2026: no zoom in and out, move like a real camera): a steady lateral track in
+ * a direction that turns scene by scene, eased only at its ends, at a fixed 2% overscan so no edge shows (36 px of travel
+ * stays inside the 19 px margin each side). */
+const shotCam = (f: number, s: {from: number; to: number}, i: number): string => {
+	const g = glide(f, s.from, s.to);
+	const ang = (i * 2.399963) % (2 * Math.PI);
+	const A = 36; // px across the whole shot
+	const dx = Math.cos(ang) * A * (g - 0.5);
+	const dy = Math.sin(ang) * A * 0.45 * (g - 0.5);
+	return `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(1.02)`;
+};
+const CAM_ORIGIN = '50% 48%';
 
 const Scenes: React.FC = () => {
 	const f = useCurrentFrame();
@@ -48,19 +68,10 @@ const Scenes: React.FC = () => {
 				.map((s, i) => ({s, i}))
 				.filter(({s}) => f >= s.from && f < s.to)
 				.map(({s, i}) => {
-					// the camera never stops: a slow push (1.000 → 1.03) and a drift whose direction turns scene by scene
-					const p = Math.min(1, Math.max(0, (f - s.from) / Math.max(1, s.to - s.from)));
-					const e = p * p * (3 - 2 * p);
-					const ang = (i * 2.399963) % (2 * Math.PI);
-					const k = 1 + 0.03 * e;
-					const t = (f - s.from) / 60;
-					// drift fast enough to read as motion on a still card (≥ 30 px per 4 s, PLAYBOOK §6.4)
-					const dx = Math.cos(ang) * 14 * (e - 0.5) + 13 * Math.sin((2 * Math.PI * t) / 8 + i);
-					const dy = Math.sin(ang) * 9 * (e - 0.5) + 7 * Math.sin((2 * Math.PI * t) / 10 + 2 * i);
 					// the film's first frame is already the picture (PLAYBOOK §5.1 picture test): no fade up from black at 0
 					const o = Math.min(1, s.from === 0 ? 1 : (f - s.from + 1) / XF, (s.to - f) / XF);
 					return (
-						<AbsoluteFill key={s.id} style={{opacity: o, transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: '50% 48%'}}>
+						<AbsoluteFill key={s.id} style={{opacity: o, transform: shotCam(f, s, i), transformOrigin: CAM_ORIGIN}}>
 							<s.C />
 						</AbsoluteFill>
 					);

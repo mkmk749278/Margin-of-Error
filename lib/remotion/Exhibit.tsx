@@ -28,11 +28,17 @@ type ExhibitProps = {
 	source: string;
 	/** "TRANSCRIPTION" when the page is set by us, not a scan (PLAYBOOK §9.4). */
 	note?: string;
+	/**
+	 * How the camera reaches the focus. 'zoom' (default, the earlier films): a log zoom from the full page. 'rostrum': a
+	 * rostrum camera already at reading distance glides down the page to the line and keeps drifting, the scale almost
+	 * constant (owner 19 NOV 2026: documents read like a camera moving over paper, not a zoom).
+	 */
+	move?: 'zoom' | 'rostrum';
 };
 
 const SCREEN = {w: 1920, h: 1080};
 
-export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, highlights = [], label, source, note}) => {
+export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, highlights = [], label, source, note, move = 'zoom'}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const arrive = settle(frame, fps, start);
@@ -42,14 +48,30 @@ export const Exhibit: React.FC<ExhibitProps> = ({page, children, start, push, hi
 	const t = push ? tween(frame, push.from, push.to, 0, 1, ease.camera) : 0;
 	const s1 = push ? Math.min((SCREEN.w * 0.78) / push.focus.w, (SCREEN.h * 0.62) / push.focus.h) : s0;
 	const c1 = push ? {x: push.focus.x + push.focus.w / 2, y: push.focus.y + push.focus.h / 2} : c0;
-	const s = s0 * Math.pow(s1 / s0, t); // log zoom: constant perceived speed
-	const cx = c0.x + (c1.x - c0.x) * t;
-	const cy = c0.y + (c1.y - c0.y) * t;
+	let s = s0 * Math.pow(s1 / s0, t); // log zoom: constant perceived speed
+	let cx = c0.x + (c1.x - c0.x) * t;
+	let cy = c0.y + (c1.y - c0.y) * t;
+	if (move === 'rostrum') {
+		// reading distance from the first frame; the camera travels down and across the paper to the line
+		const sr = push ? s1 : Math.min((SCREEN.w * 0.8) / page.w, (SCREEN.h * 1.5) / page.h);
+		const g = push ? tween(frame, push.from - 20, push.to, 0, 1, ease.camera) : 0;
+		s = sr * (0.95 + 0.05 * g);
+		const half = {w: SCREEN.w / 2 / s, h: SCREEN.h / 2 / s};
+		const inX = (x: number): number => Math.min(page.w - half.w * 0.6, Math.max(half.w * 0.6, x));
+		const inY = (y: number): number => Math.min(page.h - half.h * 0.5, Math.max(half.h * 0.5, y));
+		const end = {x: c1.x, y: c1.y};
+		const begin = {x: inX(end.x - SCREEN.w * 0.07 / s), y: inY(end.y - SCREEN.h * 0.42 / s)};
+		// after the move lands the camera keeps creeping down the page (~5 px a second on screen): never a held frame
+		const after = push ? Math.max(0, frame - push.to) : Math.max(0, frame - start);
+		const creep = (Math.min(after, 900) * 0.08) / s;
+		cx = begin.x + (end.x - begin.x) * g;
+		cy = inY(begin.y + (end.y - begin.y) * g + creep);
+	}
 	// every document lies on the same table: it never goes fully flat (one tilt, one light, as in the owner's 2026-11-03 note)
 	const tilt = 4 + (1 - t) * 5 + (1 - arrive) * 14;
 	const yaw = -1.4 + (1 - t) * -0.8;
 	const slide = (1 - arrive) * 220;
-	const breathe = tween(frame, start, start + 900, 1, 1.02); // never static
+	const breathe = move === 'rostrum' ? 1 : tween(frame, start, start + 900, 1, 1.02); // never static
 	return (
 		<AbsoluteFill style={{perspective: camera.perspective, perspectiveOrigin: '50% 40%'}}>
 			<AbsoluteFill style={{transform: `translateY(${slide}px) rotateX(${tilt}deg) rotateZ(${yaw}deg) scale(${breathe})`, transformOrigin: '50% 55%', opacity: arrive}}>

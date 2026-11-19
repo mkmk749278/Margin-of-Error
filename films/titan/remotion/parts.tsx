@@ -2,7 +2,7 @@ import React from 'react';
 import {Img, interpolate, OffthreadVideo, Sequence, useVideoConfig} from 'remotion';
 import {colors} from '../../../lib/remotion/brand';
 import {bump, flash, LAND, lead} from '../../../lib/remotion/Kinetic';
-import {ease, tween} from '../../../lib/remotion/motion';
+import {ease, glide, tween} from '../../../lib/remotion/motion';
 import {LAMP, media, mono, sans} from './kit';
 import d80 from './data/dive80_time.json';
 
@@ -134,7 +134,7 @@ export const TimeTrace: React.FC<{
 /** Screen x of a time on a TimeTrace of width w (same layout constants). */
 export const traceX = (w: number, t: number): number => 120 + ((t - T0) / (T1 - T0)) * (w - 160);
 
-// ── Real footage on the desk (PLAYBOOK §9.5, §11): unaltered, a slow push, a strip with date, what and credit ─────
+// ── Real footage on the desk (PLAYBOOK §9.5, §11): unaltered, a slow pan, a strip with date, what and credit ─────
 
 export const RealFootage: React.FC<{
 	f: number;
@@ -157,8 +157,13 @@ export const RealFootage: React.FC<{
 	const {fps} = useVideoConfig();
 	const o = Math.min(lead(f, start, 12), 1 - lead(f, end, 14)); // fades out on `end`, with the labels that sit on it
 	if (o <= 0) return null;
-	const k = Math.min(1, Math.max(0, (f - start) / Math.max(1, end - start)));
-	const s = 1 + push * (k * k * (3 - 2 * k));
+	// a camera pan across the frame, not a zoom (owner 19 NOV 2026): fixed overscan, a steady lateral move toward `focus`
+	const g = glide(f, start, end);
+	const s = 1 + push * 0.6;
+	const room = {x: (box.w * (s - 1)) / 2, y: (box.h * (s - 1)) / 2};
+	const dir = src.length % 2 === 0 ? 1 : -1; // footage alternates its pan direction
+	const tx = dir * room.x * (1 - 2 * g) * 0.9;
+	const ty = room.y * (focus[1] - 0.5) * 2 * g * 0.9;
 	const m = video ? (
 		<Sequence from={start - 12} durationInFrames={end - start + 26} layout="none">
 			<OffthreadVideo src={media(src)} muted startFrom={Math.round(from * fps)} playbackRate={rate} style={{width: box.w, height: box.h, objectFit: 'cover'}} />
@@ -176,7 +181,7 @@ export const RealFootage: React.FC<{
 	return (
 		<>
 		<div style={{position: 'absolute', left: box.x, top: box.y, width: box.w, height: box.h, overflow: 'hidden', opacity: o, background: colors.void, border: under ? `1px solid ${colors.border}` : undefined}}>
-			<div style={{position: 'absolute', inset: 0, transform: `scale(${s.toFixed(4)})`, transformOrigin: `${(focus[0] * 100).toFixed(1)}% ${(focus[1] * 100).toFixed(1)}%`}}>{m}</div>
+			<div style={{position: 'absolute', inset: 0, transform: `translate(${tx.toFixed(2)}px, ${ty.toFixed(2)}px) scale(${s.toFixed(4)})`, transformOrigin: '50% 50%'}}>{m}</div>
 			{under ? null : <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 220, background: 'linear-gradient(to top, rgba(10,13,18,0.92), rgba(10,13,18,0))'}} />}
 			{under ? null : strip}
 			{label ? <div style={{position: 'absolute', right: 96, top: 54}}><Chip text={label} /></div> : null}
