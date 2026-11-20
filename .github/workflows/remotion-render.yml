@@ -161,31 +161,29 @@ jobs:
           done
           echo "$HOME/bin" >> "$GITHUB_PATH"
           "$HOME/bin/ffmpeg" -version | head -1
-      - name: Earlier run's shards (reuse_from), overwritten below by this run's
-        if: inputs.reuse_from != ''
-        uses: actions/download-artifact@v4.1.8
-        with:
-          pattern: shards_*
-          path: out
-          merge-multiple: true
-          run-id: ${{ inputs.reuse_from }}
-          github-token: ${{ github.token }}
-      - name: A second earlier run's shards (reuse_from2), over reuse_from's
-        if: inputs.reuse_from2 != ''
-        uses: actions/download-artifact@v4.1.8
-        with:
-          pattern: shards_*
-          path: out
-          merge-multiple: true
-          run-id: ${{ inputs.reuse_from2 }}
-          github-token: ${{ github.token }}
-      - uses: actions/download-artifact@v4.1.8
-        with:
-          pattern: shards_*
-          path: out
-          merge-multiple: true
-          run-id: ${{ inputs.join_from || github.run_id }}
-          github-token: ${{ github.token }}
+      - name: Shards, one download at a time (reuse_from, then reuse_from2, then this run's or join_from's on top)
+        # actions/download-artifact fetches every artifact at once; 356 4K shards hit GitHub's secondary rate limit
+        # (Titan master join, 20 NOV 2026). gh api, one by one, with retries.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUNS: ${{ format('{0} {1} {2}', inputs.reuse_from, inputs.reuse_from2, inputs.join_from || github.run_id) }}
+        run: |
+          mkdir -p out
+          for r in $RUNS; do
+            gh api --paginate "repos/$REPO/actions/runs/$r/artifacts?per_page=100" \
+              --jq '.artifacts[] | select(.name | startswith("shards_")) | select(.expired | not) | .id' > ids.txt
+            echo "run $r: $(wc -l < ids.txt) shard artifacts"
+            while read -r id; do
+              for t in 1 2 3 4 5 6; do
+                curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -o a.zip "https://api.github.com/repos/$REPO/actions/artifacts/$id/zip" && unzip -tq a.zip > /dev/null && break
+                echo "artifact $id: attempt $t failed"; sleep $((t * 20))
+              done
+              unzip -oq a.zip -d out
+              rm -f a.zip
+            done < ids.txt
+          done
+          echo "$(ls out/shard_*.mp4 | wc -l) shards in out/"; du -sh out
       - name: Mix from Drive
         run: scripts/gdrive_pull.sh "$FILM/mix" mix
       - name: Join, lay the sound, check
