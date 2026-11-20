@@ -85,6 +85,7 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
   (PLAYBOOK §11.1), and one click-to-copy Termux line for YouTube clips. Licence-clean YouTube footage is found
   the same way: a Termux block searches with YouTube's Creative Commons filter and reads each video's licence with
   yt-dlp; the licence is checked again in each clip's `.info.json` before use (owner, 2026-11-15, PLAYBOOK §11.1).
+- **Times in the session chat are in IST (owner, 2026-11-20).** Every time told to the owner in chat (next check-in, render or CI ETA, reminder, scheduled run, when something finished) is Indian Standard Time, written like "11:00 AM IST", never UTC alone: the owner reads it on a phone in India. Convert first (IST = UTC + 5:30; 05:00 UTC is 10:30 AM IST); add the UTC time in brackets only when it helps match a log. Chat only: the films, files, logs and code keep their own conventions (on-screen dates stay `05 JAN 2024` for the US/UK audience).
 - **Real footage carries the story; made pictures carry the mechanism** (owner, 2026-11-15, PLAYBOOK §11).
 - **Google Drive:** channel folder **`Margin-of-Error`** at the top of My Drive (id `1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn`),
   one folder per film, `<slug>/`. Videos: `scripts/upload_gdrive.sh --sub <slug> FILE…` (needs `GDRIVE_RCLONE_TOKEN`);
