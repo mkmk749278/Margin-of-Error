@@ -1,15 +1,22 @@
 # Titan: status (20 NOV 2026, sixth session)
 
 ## Latest (20 NOV 2026)
-- **4K master, native (owner, 20 NOV 2026: "render in 4K using 18 runners"; chose native 4K over a 1080p hull):** v11's
-  picture at `scale` 2, 4 s shards (356 jobs) in two runs of 9 runners at once (18 in all), both render-only, then one
-  join-only run. Estimate ~17–18 h of rendering (PLAYBOOK §10.5 measurements).
+- **4K MASTER DONE (21 NOV 2026, 03:49 IST):** Drive `titan/renders/titan_master_4k.mp4`
+  (https://drive.google.com/file/d/1mAp4rN66vb28NfhAs2yGLTE8iDiXWZuA/view), v11's picture, native 4K (owner chose native
+  over a 1080p hull, 20 NOV 2026). h264 3840x2160 60 fps, 1,421.32 s picture = composition = sound, AAC, 20.8 Mbps,
+  3.70 GB; −14.0 LUFS, LRA 2.8, −1.2 dBTP (same as v11). 355 seams read at 64x36 (three frames each side): no jump, no
+  dark flash. Runner frames looked at (fonts, hull, documents, hearing video, honesty labels): fine.
+  Runs: 44720084881 (first half, 12 at once) + 44720103795 (second half, 6) = 18 runners, 4 s shards, 356 jobs, ~10 h;
+  block 18000 failed on Remotion's 240 s first-frame timeout and was rescued by 44749392229 (timeout now 900 s,
+  PR #114); the first join hit GitHub's artifact rate limit (PR #115: one-by-one downloads); joined by 44822812126.
+  4K cost on the runners: ~2.4x the 720p render (PLAYBOOK §10.5). Shard artifacts expire 27 NOV 2026.
+- **Next:** the YouTube package (§13.7) and a 1080p copy for the phone (PLAYBOOK §1).
 - **Owner's notes on v9 (19 NOV 2026):** hull not cinematic; camera should move like a real camera; too much zoom in /
   zoom out, documents too. **Round 9** (PRs #108, #110): one continuous camera move per shot (orbiting hull, tracked
   and floating 2D shots, rostrum glide on documents, panned footage), no zoom pumping; the hull in dark resin carbon,
   satin titanium, bolt circles, studio light. v10 failed stillness (24 holds, moves too slow in long shots); fixed.
 - **Cut v11** (run 44622430558, Drive `titan/renders/titan_review_v11_720p.mp4`): every gate passes, stillness 0
-  (`review/picture_gate_r9.md`). **v11 is with the owner for review.**
+  (`review/picture_gate_r9.md`). **The owner ordered the 4K master of v11 (20 NOV 2026).**
 - Render: 24 one-minute blocks, max 6 at once (`max_parallel`), ~7.5 h. For the 4K master, plan single-shard blocks.
 
 
