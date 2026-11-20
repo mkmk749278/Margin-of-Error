@@ -1,6 +1,9 @@
 # Titan: status (20 NOV 2026, sixth session)
 
 ## Latest (20 NOV 2026)
+- **4K master, native (owner, 20 NOV 2026: "render in 4K using 18 runners"; chose native 4K over a 1080p hull):** v11's
+  picture at `scale` 2, 4 s shards (356 jobs) in two runs of 9 runners at once (18 in all), both render-only, then one
+  join-only run. Estimate ~17–18 h of rendering (PLAYBOOK §10.5 measurements).
 - **Owner's notes on v9 (19 NOV 2026):** hull not cinematic; camera should move like a real camera; too much zoom in /
   zoom out, documents too. **Round 9** (PRs #108, #110): one continuous camera move per shot (orbiting hull, tracked
   and floating 2D shots, rostrum glide on documents, panned footage), no zoom pumping; the hull in dark resin carbon,

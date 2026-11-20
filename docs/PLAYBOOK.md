@@ -899,6 +899,14 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
 - **Lit 3D costs render time:** Titan's lit hull (fill light, floor texture, mipmapped weave) rendered about 1.8× its
   dark version on the runners (v9 block 14400–27000: 4 h 10 min against the 350 min job limit). For a hull-heavy film,
   use more runners (smaller blocks) and start an insurance run of the slowest block's halves early (`blocks`, `reuse_from`).
+- **A native 4K hull costs about 7.7× its 720p render (measured 20 NOV 2026, session VM, Titan `HullCheck`, 30 frames):**
+  720p 148 s, 4K with the 3D canvas at `dpr` 2/3 162 s, at `dpr` 1 (1080p hull) 315 s, native 4K 1,139 s. The cost
+  follows the canvas's pixels; the 2D layers barely count. Titan v11's heaviest 720p minute took 290 min, so a native
+  4K 30 s shard would need ~18 h against the 350 min job limit. *Rule:* for a 3D-heavy 4K master, size the shard from
+  the 720p run (`shard_seconds`; 4 s for Titan), one shard per job; GitHub runs at most 256 jobs per run, so a longer
+  plan goes in two runs with `blocks` and `skip_join: true`, then a join-only run (`join_from` + `reuse_from`). A 1080p
+  hull inside the 4K frame (`ThreeCanvas dpr={1}`) is the cheaper fallback: close to native in a 1:1 crop; at `dpr`
+  2/3 the edges show stair-steps.
 - **Look at the runner's frames, not only the session's stills:** a runner image once lacked a font the session had,
   and its labels rendered as empty boxes.
 - **In the session:** Remotion's own browser download (`remotion.media`) is blocked, so stills need
