@@ -907,6 +907,8 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   plan goes in two runs with `blocks` and `skip_join: true`, then a join-only run (`join_from` + `reuse_from`). A 1080p
   hull inside the 4K frame (`ThreeCanvas dpr={1}`) is the cheaper fallback: close to native in a 1:1 crop; at `dpr`
   2/3 the edges show stair-steps.
+  The first frame of a cold 4K hull shard can pass Remotion's 240 s page timeout (Titan block 18000); the
+  timeout is now 900 s.
 - **Look at the runner's frames, not only the session's stills:** a runner image once lacked a font the session had,
   and its labels rendered as empty boxes.
 - **In the session:** Remotion's own browser download (`remotion.media`) is blocked, so stills need

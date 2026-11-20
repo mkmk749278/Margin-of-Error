@@ -88,8 +88,9 @@ for (const [a, b] of rest.includes('--join-only') ? [] : shards) {
 		await renderMedia({
 			serveUrl, composition, codec: 'h264', outputLocation: tmp, frameRange: [a, b], scale, crf,
 			concurrency: attempt === 1 ? concurrency : 1,
-			// 3D scenes (Three.js under software GL) can take far longer than the 30 s default for their first frame
-			timeoutInMilliseconds: 240000,
+			// 3D scenes (Three.js under software GL) can take far longer than the 30 s default for their first frame;
+			// at 4K a cold hull frame passed 240 s (Titan master, block 18000, 20 NOV 2026)
+			timeoutInMilliseconds: 900000,
 			muted: true, chromiumOptions, browserExecutable, x264Preset: 'medium', pixelFormat: 'yuv420p',
 			encodingMaxRate: maxrate, encodingBufferSize: `${parseInt(maxrate) * 2}M`,
 		});
