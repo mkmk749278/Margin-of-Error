@@ -16,7 +16,7 @@
   and floating 2D shots, rostrum glide on documents, panned footage), no zoom pumping; the hull in dark resin carbon,
   satin titanium, bolt circles, studio light. v10 failed stillness (24 holds, moves too slow in long shots); fixed.
 - **Cut v11** (run 44622430558, Drive `titan/renders/titan_review_v11_720p.mp4`): every gate passes, stillness 0
-  (`review/picture_gate_r9.md`). **The owner approved v11 by ordering the 4K master (20 NOV 2026).**
+  (`review/picture_gate_r9.md`). **The owner ordered the 4K master of v11 (20 NOV 2026).**
 - Render: 24 one-minute blocks, max 6 at once (`max_parallel`), ~7.5 h. For the 4K master, plan single-shard blocks.
 
 
