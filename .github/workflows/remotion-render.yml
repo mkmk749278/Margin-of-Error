@@ -39,6 +39,12 @@ on:
       reuse_from:
         description: "run id whose shards fill every block not rendered here (use with blocks; kept 7 days)"
         default: ""
+      shard_seconds:
+        description: "seconds per shard (default 30). A native 4K hull needs 4: Titan ran ~37 min per second of film (PLAYBOOK §10.5)"
+        default: "30"
+      skip_join:
+        description: "true = render only (the first of two runs when the film needs more than GitHub's 256 jobs per run)"
+        default: "false"
       reuse_from2:
         description: "a second earlier run whose shards are laid over reuse_from's (when a rescue itself needed a rescue)"
         default: ""
@@ -64,11 +70,12 @@ jobs:
           FILM: ${{ inputs.film }}
           RUNNERS: ${{ inputs.runners }}
           BLOCKS: ${{ inputs.blocks }}
+          SHARD: ${{ inputs.shard_seconds }}
         run: |
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
           import json, os
           t = json.load(open(f"films/{os.environ['FILM']}/vo/timing.json"))
-          total, per = t["durationInFrames"], 30 * t["fps"]
+          total, per = t["durationInFrames"], round(float(os.environ["SHARD"]) * t["fps"])
           starts = list(range(0, total, per))
           n = max(1, min(len(starts), int(os.environ["RUNNERS"])))  # concurrency is max_parallel's job
           size = -(-len(starts) // n)
@@ -116,7 +123,7 @@ jobs:
       - name: Render
         shell: bash  # -eo pipefail: a failed render fails the step even through the log filter
         run: |
-          node scripts/render_shards.mjs . ${{ inputs.comp }} out --seconds 30 \
+          node scripts/render_shards.mjs . ${{ inputs.comp }} out --seconds ${{ inputs.shard_seconds }} \
             --scale ${{ inputs.scale }} --crf ${{ inputs.crf }} --concurrency 4 --frames ${{ matrix.block }} --render-only \
             2>&1 | grep --line-buffered -vE "differing memory|CGroup|MemAvailable|--memory flag|lower amount of memory"
       - uses: actions/upload-artifact@v4.6.2
@@ -129,7 +136,7 @@ jobs:
 
   join:
     needs: render
-    if: always() && (needs.render.result == 'success' || inputs.join_from != '')
+    if: always() && inputs.skip_join != 'true' && (needs.render.result == 'success' || inputs.join_from != '')
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
@@ -184,7 +191,7 @@ jobs:
       - name: Join, lay the sound, check
         shell: bash
         run: |
-          node scripts/render_shards.mjs . ${{ inputs.comp }} out --join-only \
+          node scripts/render_shards.mjs . ${{ inputs.comp }} out --join-only --seconds ${{ inputs.shard_seconds }} \
             --audio mix/mix.wav --out "${{ inputs.name }}" 2>&1 | grep -vE "differing memory|CGroup|MemAvailable|--memory flag|lower amount of memory"
           rm -rf out
           ffprobe -v error -show_entries format=duration,bit_rate:stream=codec_name,width,height,r_frame_rate -of compact "${{ inputs.name }}"
