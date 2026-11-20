@@ -1,4 +1,14 @@
-# Titan: status (19 NOV 2026, sixth session)
+# Titan: status (20 NOV 2026, sixth session)
+
+## Latest (20 NOV 2026)
+- **Owner's notes on v9 (19 NOV 2026):** hull not cinematic; camera should move like a real camera; too much zoom in /
+  zoom out, documents too. **Round 9** (PRs #108, #110): one continuous camera move per shot (orbiting hull, tracked
+  and floating 2D shots, rostrum glide on documents, panned footage), no zoom pumping; the hull in dark resin carbon,
+  satin titanium, bolt circles, studio light. v10 failed stillness (24 holds, moves too slow in long shots); fixed.
+- **Cut v11** (run 44622430558, Drive `titan/renders/titan_review_v11_720p.mp4`): every gate passes, stillness 0
+  (`review/picture_gate_r9.md`). **v11 is with the owner for review.**
+- Render: 24 one-minute blocks, max 6 at once (`max_parallel`), ~7.5 h. For the 4K master, plan single-shard blocks.
+
 
 ## Latest (19 NOV 2026)
 - **Round 8 built and merged (PRs #104–#106):** the 3D hull lit as a physical object (weave, lit floor, fill light);
