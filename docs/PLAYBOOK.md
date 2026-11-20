@@ -911,6 +911,9 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   timeout is now 900 s.
   The join's `actions/download-artifact` fetched all 356 shard artifacts at once and hit GitHub's secondary
   rate limit; the join now downloads them one at a time (`gh api` list, `curl` each zip, retries).
+  *Measured on the runners (Titan master, 20 NOV 2026):* native 4K cost ~2.4x the 720p render, not the 7.7x the
+  session VM showed (the slowest 4 s hull shard took ~2.7 h); 356 shards on 18 runners took ~10 h. The session VM
+  over-states 4K cost: size shards from it, but expect the runners to beat it.
 - **Look at the runner's frames, not only the session's stills:** a runner image once lacked a font the session had,
   and its labels rendered as empty boxes.
 - **In the session:** Remotion's own browser download (`remotion.media`) is blocked, so stills need
