@@ -3,7 +3,7 @@
 Cut: `titan_master_4k.mp4` (Drive `titan/renders/`), 3840×2160, 60 fps, 23:41.3 (85,279 frames), v11's picture,
 rendered 21 NOV 2026. Mix −14.0 LUFS. Chapters from `vo/timing.json`, the timing the master is rendered on.
 Release: **Saturday 21 NOV 2026, 8:30 PM IST (15:00 UTC; 10:00 AM US Eastern, 3:00 PM UK)**, uploaded private and
-scheduled by API (owner, 21 NOV 2026). Studio: "Altered or synthetic content" No, Science & Technology, not made for kids.
+scheduled by API (owner, 21 NOV 2026): **https://youtu.be/OdV_50qoRRk**, uploaded 21 NOV 2026 with thumbnail A, tags and `titan.en.srt` as English captions. Studio: "Altered or synthetic content" No, Science & Technology, not made for kids.
 
 ## Titles: the locked three (treatment.md, approved 13 NOV 2026; one promise)
 The promise: Titan's own hull monitor recorded the damage on dive 80, 15 JUL 2022, eleven months before the implosion;
