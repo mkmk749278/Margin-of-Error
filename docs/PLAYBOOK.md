@@ -1222,6 +1222,15 @@ true. No question-mark bait, no "EXPOSED", no all-caps, no tabloid words ("shock
   found" form is the fallback, not the first choice: it is what the zero-view template channels use.
 - **The three titles, keep a search-safe fallback (company +
   report + flight) for a low click-through rate at 7 days.
+- **Lint every variant with `scripts/title_lint.py films/<slug> --file variants.txt`** (30+ ranked; `films/<slug>` alone
+  lints the three in `youtube/package.md` with their Record ids against `claims.csv`). It fails a question mark, hype or
+  tabloid words, all-caps words that aren't record acronyms, "!", ellipses, emoji and a missing case name; it warns when
+  the case name ends after character 40, the title runs over 70, there is no number, date or record id, a verdict or
+  motive word appears, the thumbnail repeats the title's words or runs over 4 words, or the title opens like one already
+  in the catalogue (§14.2a). *Why (2026-11-21):* YouTube publishes no truncation point and it moves with the device and
+  the font, so the subject must survive the shortest cut (40 is our conservative phone guide, 70 a full search line);
+  the Titan title is 72 characters, and its last word can be cut in search. A score only ranks variants; it never
+  predicts views.
 
 ### 13.3 Thumbnail
 One object or one line of evidence, one question. Two elements at most (the part and the number; the exhibit line and
@@ -1325,6 +1334,13 @@ says otherwise. "Final report" films slot in when a report publishes.
   that automatic slots don't land mid-sentence (automatic plus manual earned >5% more in YouTube's test).
 - **Before upload, write a predicted outcome** (impressions, click-through, average view duration, TV share at 7 days)
   in `films/<slug>/youtube/`, to judge the reads against.
+- **Read the retention curve against the film's own timeline with `scripts/retention_read.py films/<slug> --csv FILE`**
+  (Studio → the video → Analytics → Advanced mode → Audience retention → download CSV, from the laptop through Cowork;
+  or `--api` once the token carries `yt-analytics.readonly`). It writes `youtube/retention_<date>.md`: retention at
+  0:30, 1:00, the open question, each act turn and the end; the first-30-second loss; the slide per minute; each cliff
+  beyond the slide with its act, the sentences spoken and the scene on screen (from `scenes/choreography/`); and the
+  rewinds. *Why (2026-11-21):* the token can't read Analytics yet, and a percentage tells us nothing until it is joined to the
+  line of the film where viewers left. Studio gives about 100 points, so a cliff names a ~1% window, never one word.
 - **Then at 7 and 28 days** (plus the satisfaction proxies: minutes watched per impression, the device split with TV
   share, likes per view, returning viewers): click-through and impressions per traffic source (browse, suggested, search), retention at
   0:30, 1:00 and each act turn, rewinds and cliffs with what was on screen, the search-terms report. Low click-through
