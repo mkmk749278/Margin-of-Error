@@ -5,7 +5,7 @@ Uses only YT_CLIENT_ID, YT_CLIENT_SECRET and YT_REFRESH_TOKEN_MARGINOFERROR (sco
 
   python3 scripts/yt_upload.py FILE --sheet films/shorts_upload.md --key EP1 [--publish-at 2026-11-10T17:00:00Z]
       title and description = the first two code blocks under the sheet heading that starts "## <KEY> ·"
-  python3 scripts/yt_upload.py FILE --title T --description-file D [--publish-at …] [--thumbnail JPG]
+  python3 scripts/yt_upload.py FILE --title T --description-file D [--publish-at …] [--thumbnail JPG] [--tags "a,b"] [--srt FILE]
 
 Without --publish-at the video goes up public at once. Always: category Science & Technology (28), English, not made
 for kids, "altered or synthetic content" No (owner, 10 NOV 2026).
@@ -42,6 +42,8 @@ def main() -> int:
     ap.add_argument("--title"); ap.add_argument("--description-file")
     ap.add_argument("--publish-at", help="RFC3339 UTC, e.g. 2026-11-10T17:00:00Z (uploads private, then publishes)")
     ap.add_argument("--thumbnail")
+    ap.add_argument("--tags", help="comma-separated search tags, added to the description's hashtags")
+    ap.add_argument("--srt", help="our English SRT, uploaded as the video's English captions")
     ap.add_argument("--location", help='"East Palestine, Ohio,40.8339,-80.5409": the case\'s place (search by place)')
     a = ap.parse_args()
     if a.sheet:
@@ -52,7 +54,9 @@ def main() -> int:
         raise SystemExit(f"title is {len(title)} characters (limit 100)")
     if re.search(r"synthetic voice|\bAI\b|artificial intelligence", desc, re.I):
         raise SystemExit("description carries AI wording (CLAUDE.md: none in public text, owner 2026-11-17)")
-    tags = re.findall(r"#(\w+)", desc)
+    tags = re.findall(r"#(\w+)", desc) + [x.strip() for x in (a.tags or "").split(",") if x.strip()]
+    if sum(len(x) + 2 for x in tags) > 500:
+        raise SystemExit("tags exceed YouTube's 500-character limit")
     status = {"privacyStatus": "private" if a.publish_at else "public", "selfDeclaredMadeForKids": False,
               "containsSyntheticMedia": False, "embeddable": True}
     if a.publish_at:
@@ -93,6 +97,19 @@ def main() -> int:
             urllib.request.urlopen(req); print("thumbnail set")
         except urllib.error.HTTPError as e:
             print(f"thumbnail not set (HTTP {e.code}): {e.read()[:300]!r}")
+    if a.srt:
+        meta = json.dumps({"snippet": {"videoId": vid["id"], "language": "en", "name": "English"}})
+        bnd = "mOeSrtBoundary"
+        payload = (f"--{bnd}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{meta}\r\n"
+                   f"--{bnd}\r\nContent-Type: application/octet-stream\r\n\r\n").encode() + \
+            open(a.srt, "rb").read() + f"\r\n--{bnd}--\r\n".encode()
+        req = urllib.request.Request("https://www.googleapis.com/upload/youtube/v3/captions?uploadType=multipart&part=snippet",
+                                     data=payload, method="POST",
+                                     headers={**hdr, "Content-Type": f"multipart/related; boundary={bnd}"})
+        try:
+            urllib.request.urlopen(req); print("captions uploaded")
+        except urllib.error.HTTPError as e:
+            print(f"captions not uploaded (HTTP {e.code}): {e.read()[:300]!r}")
     return 0
 
 
