@@ -1,0 +1,46 @@
+Titan submersible implosion, from the NTSB report MIR-25-36: on 15 July 2022, on dive 80, the four people inside OceanGate's Titan heard a loud bang and its hull monitor recorded a sudden shift in strain. Eleven months later, on 18 June 2023, the hull failed and all five aboard died.
+
+The NTSB found that OceanGate's analysis of the hull monitoring data was flawed, so the company did not identify that Titan was damaged and needed to come out of service after dive 80. This film draws that data on screen: OceanGate plotted strain against time; the NTSB plotted the same numbers against depth.
+
+We read the US National Transportation Safety Board (NTSB) report and its Materials Laboratory data, the US Coast Guard Marine Board of Investigation report and sworn hearing testimony, and Canada's Transportation Safety Board (TSB) report: how the carbon fibre hull was built and tested, the 2018 inspection report, what the hull monitor recorded on dive 80, the decision to dive again, the winter outdoors in St. John's, the law on passenger submersibles, and what each investigation found.
+
+Findings are the investigators'; where the reports differ, the film says what each one found; our own reading is said as ours. Charts marked NTSB DATA · REDRAWN are drawn from the NTSB's published figures; scenes marked ILLUSTRATION are labelled on screen.
+
+The five aboard on 18 June 2023: Stockton Rush, Paul-Henri Nargeolet, Shahzada Dawood, Suleman Dawood, Hamish Harding.
+
+0:00 Titan's dive 80: the bang and the strain jump
+1:09 18 June 2023: Titan's last dive
+2:12 How Titan's carbon fibre hull was built
+4:06 The 2021 pressure test: 4,200 metres, once
+4:51 The hull monitor: acoustic sensors and strain gauges
+5:55 The 2018 inspection report and the first hull
+7:34 Dive 80: what the hull monitor recorded
+8:01 Phil Brooks under oath: "Let's dive again"
+9:23 What OceanGate thought the bang was
+10:46 The NTSB graph: strain against depth
+12:18 Could OceanGate have seen it?
+13:40 Why the damage showed only near the surface
+14:34 A winter outdoors in St. John's
+15:36 Money: the Coast Guard board's findings
+17:20 Was Titan legal? The passenger vessel law
+18:50 The final dive and the implosion
+20:01 The dive record, 75 to 88
+20:21 The controller and the window
+20:49 Probable cause: NTSB, Coast Guard and TSB
+22:35 The NTSB recommendations, still open
+
+Footage and photos: USCG Marine Board of Investigation hearing video (September 2024), excerpts shown unaltered with the official transcript; USCG, FBI and NTSB evidence photographs; NOAA Ocean Exploration; DVIDS (all US government works). Reference footage under Creative Commons Attribution: Alick Tsui (https://www.youtube.com/watch?v=qLGOkaCZalA, https://www.youtube.com/watch?v=B8d5jmw0Ezs, https://www.youtube.com/watch?v=hICCfrzDkp0), TECNALIA (https://www.youtube.com/watch?v=u8xX04ZPJWQ), Saga47swan Sailing (https://www.youtube.com/watch?v=5GivgpNfUvg), Real Navigation (https://www.youtube.com/watch?v=xgyUMrtV6hI), J P (https://www.youtube.com/watch?v=KbVqK26Wo4w).
+
+SOURCES
+NTSB Marine Investigation Report MIR-25-36, Implosion of the Submersible Titan (adopted 2 October 2025): https://www.ntsb.gov/investigations/AccidentReports/Reports/MIR2536.pdf
+NTSB Materials Laboratory Factual Report 24-012 (strain data): https://data.ntsb.gov/Docket/Document/docBLOB?ID=17683484&FileExtension=pdf&FileName=Materials%20Laboratory%20Factual%20Report%2024-012-Rel.pdf
+NTSB public docket DCA23FM036: https://data.ntsb.gov/Docket/?NTSBNumber=DCA23FM036
+NTSB safety recommendation M-25-012: https://data.ntsb.gov/carol-main-public/sr-details/M-25-012
+US Coast Guard Marine Board of Investigation, Report of Investigation (4 August 2025), exhibits and hearing transcripts (CG 112): https://www.news.uscg.mil/News-by-Region/Headquarters/Titan-Submersible/
+USCG Marine Board hearing video, 23 September 2024: https://www.youtube.com/watch?v=Xw0rnBv-Pa8
+USCG Marine Board hearing video, 25 September 2024: https://www.youtube.com/watch?v=YupblW5tgiM
+Transportation Safety Board of Canada, marine investigation report M23A0169: https://www.tsb.gc.ca/eng/rapports-reports/marine/2023/m23a0169/m23a0169.html
+
+Corrections: if you find an error in how we present the record, reply with the source. A correction is pinned the day we confirm it.
+
+#Titan #OceanGate #NTSB
