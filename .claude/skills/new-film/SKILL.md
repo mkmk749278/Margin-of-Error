@@ -12,7 +12,7 @@ Only finished work goes to the owner. At session start: unmerged branches check 
 **Phase A: find the case**
 1. **Case** → `films/<slug>/brief.md`: the case sheet (decision · failure mode · smoking-gun document · target
    length, argued from the story: §5) and the package first (30+ title variants, thumbnail concepts, the search
-   phrase the viewer types; the promise in one sentence). The slate's fact flags: §17.3; the 2026 candidates and the final-report kit: §17.4.
+   phrase the viewer types; the promise in one sentence); rank the variants with `scripts/title_lint.py` (§13.2). The slate's fact flags: §17.3; the 2026 candidates and the final-report kit: §17.4.
 2. **Research** → `research/landscape.md`: what everyone says (news, statements, regulator releases, the 3–5
    strongest films and what their comments say they missed), what the record says (draft `claims.csv` as you go),
    **our edge in one sentence**, what exhibits exist and their licence, and the human through-line the record offers

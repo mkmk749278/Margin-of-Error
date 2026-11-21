@@ -12,7 +12,7 @@ Rules: `CLAUDE.md`; PLAYBOOK §1 (delivery), §13 (package, launch, comments), �
 2. **Files with SendUserFile:** the contact sheet, the round's `_check.md` or picture gate, the SRT.
 3. **YouTube package (final films)** in `films/<slug>/youtube/`:
    - the three locked titles, one per angle and one shared promise (re-run the promise check, §5.1), each word on a
-     confirmed `claims.csv` row, plus a search-safe fallback (§13.2);
+     confirmed `claims.csv` row, plus a search-safe fallback (§13.2); `scripts/title_lint.py films/<slug>` clean of FAILs;
    - three 1280×720 thumbnails, one per title, built from the locked concepts on the real exhibit, gated at 168 px wide (§13.3);
    - the description: 2–3 plain lines with the searched names, chapters from `0:00` taken from the exact uploaded
      file, the sources with record ids (§13.4); no AI line, no cross-promotion;
@@ -20,7 +20,8 @@ Rules: `CLAUDE.md`; PLAYBOOK §1 (delivery), §13 (package, launch, comments), �
    - title and description also in the chat as click-to-copy blocks.
 4. **Release plan in the reply** (§13.6): Unlisted at least 3 hours ahead, the window, Studio's "Altered or synthetic
    content" No (owner, 10 NOV 2026), Test & Compare with the three thumbnails, the pinned comment within 60 s, no
-   self-views, the 24 h / 7 d / 28 d reads and the challenger rule.
+   self-views, the 24 h / 7 d / 28 d reads and the challenger rule; at 7 and 28 days, `scripts/retention_read.py` on the
+   Studio retention CSV (§13.6).
 5. **Report in plain words:** what changed since the last cut, what is reconstructed or illustrative, rights risks
    (docket items with owners' marks, third-party clips), what you need from the owner.
 6. **Close-out:** commit (no large media), push, PR to `main`, merge, name the branch to delete, archive review
