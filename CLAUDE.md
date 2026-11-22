@@ -144,7 +144,7 @@ are in **bold**.
 6. **Audio** with the channel voice (Marcus), never before the opening is verified and the narration approved, block 1 measured first; timing chain to measured words. **The owner approves the audio.**
 7. **Exhibits and footage**, the record first; every file looked at and logged.
 8. **Word-level choreography** (the major part): every word cued, and each sentence's cues say the whole sentence.
-9. **Render on GitHub**, at most 6 runners at once (the account's 20 are shared).
+9. **Render on Modal**, never on GitHub's runners (Engine, below).
 10. **Music and sound** from the library; a cue on every visual event; dips, never dropouts.
 11. **720p review cut** after our own measured review (§14.2), until a round finds nothing.
 12. **Independent viewer review and forensic review**, each point checked (§14.3). **The owner approves the cut.**
@@ -242,8 +242,7 @@ are in **bold**.
   never a dropout (§12). To change a locked spoken word, regenerate that one sentence and cut it in at its pauses (§10.4).
 - In the session, pass `--browser-executable` (PLAYBOOK §10.5): Remotion's own browser download is blocked here.
 - Loop: `npx tsc --noEmit` → stills at key frames → look at every image → fix → render.
-- **Full renders run on GitHub's runners** (`remotion-render.yml`), never in the session: **at most 6 runners at
-  once** (the account's 20 concurrent jobs are shared with other repos; check `actions_list` before a big render).
+- **Renders run on Modal, never on GitHub's runners (owner, 2026-11-22):** GitHub removed the owner's Creator repo for rendering 4K video on its runners, so no render, Blender plate, Short or other heavy media job runs on GitHub Actions in any repo, at any resolution. The old workflows sit in `.github/workflows-retired/` (GitHub never runs that folder), kept only as the reference for the Modal port. Until the Modal pipeline is built and tested, no full renders; the session renders stills and short tests only. Modal is paid compute past its monthly free credit: state the expected cost of every render and ask before going past the free credit.
 - Remotion is free for individuals and companies with up to 3 employees; beyond that a company licence is needed.
 
 ## Facts, fairness and rights (PLAYBOOK §9, §11)

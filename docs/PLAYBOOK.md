@@ -870,6 +870,7 @@ high-score neighbours, so their times hold; check one by ear only if a neighbour
   witness's words is the weaker version of the same fact.
 
 ### 10.5 Rendering
+- **2026-11-22: GitHub's runners are retired for rendering; renders move to Modal (owner).** GitHub removed the owner's Creator repo for rendering 4K video on its runners. GitHub's Actions terms allow its compute only for building, testing and shipping the repository's own software, and a video farm is not that, so the same could happen to this repo. No render, plate or Short runs on GitHub Actions any more, at any resolution; the workflows moved to `.github/workflows-retired/` and are kept only as the reference for the Modal port (the shard plan, the join, the loudness pass and the Drive upload carry over). The notes below on runners are history until the Modal pipeline replaces them.
 - **720p review cuts first** (`scale` `2/3`, written as a fraction), **4K master** (`scale` 2) only after approval.
 - **Full renders on GitHub's runners** (`.github/workflows/remotion-render.yml`: 30 s shards, joined, mix laid
   under, film to Drive `<film>/renders/`). Needs the repo secret `GDRIVE_RCLONE_TOKEN`. The session triggers the
