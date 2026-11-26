@@ -114,6 +114,18 @@ earn the subscribers, case choice and packaging earn both. Current read: `docs/r
 - **An outside review is a list of leads (§14.3):** check each point in the code, `vo/timing.json` and a rendered still,
   write `review/<name>_check.md` (CONFIRMED / PARTLY / NOT CONFIRMED), then fix in the next round.
 
+## The Gemini handoff (PLAYBOOK §14.6; owner, 2026-11-26)
+- Gemini (the owner's workspace agent: memory, skills, Drive, YouTube; it listens and watches) does the **first pass**
+  at seven gates to save usage: `research`, `narration-review`, `fact-check`, `audio-audit`, `cut-audit` (every
+  720p cut), `fresh-facts`, `analytics-audit`. The no-repo review sessions of §14.5 become the fallback; the fairness
+  pass and the forensic review stay with fresh Claude sessions.
+- `scripts/gemini_handoff.sh new <slug> <task>` → fill → `push` → send the printed `[GEMINI-HANDOFF]` email with the
+  Gmail connector to the owner's own address (never written in this public repo) → carry on, never wait or poll →
+  `pull <slug>` at the next step (exit 4: search Gmail `[GEMINI-RESULT]`) → `review/gemini_<task>_check.md`
+  (CONFIRMED / PARTLY / NOT CONFIRMED) → fix.
+- Gemini's answer is a list of leads; every fact still gets its record opened by us. No 4K before the cut audit is
+  checked and the owner approves the cut. No raw Gemini API calls for audits. Requests stay inside this channel.
+
 ## Promise first (owner, 2026-11-08; PLAYBOOK §3a, §5.1, §13.2)
 The same order on all three channels, so the film keeps what the package promises:
 1. **Lock the title and thumbnail concept first** (brief, then locked with the treatment): the promise in one
