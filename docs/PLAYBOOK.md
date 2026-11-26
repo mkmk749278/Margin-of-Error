@@ -652,7 +652,8 @@ rewrite.
   trips it), split only at paragraph breaks: `scripts/vo_blocks.py films/<slug> --max 9500`. Block 1 is still
   measured first (`vo_review.py`) before the owner records the rest. The timing chain (`vo_timing.py` →
   `word_align.py`) runs on the owner's files unchanged.
-- **Gemini listening review (owner, 2026-11-16):** once all blocks are generated, the owner shares the MP3s and
+- **Gemini listening review (owner, 2026-11-16; automatic since 2026-11-26 as the `audio-audit` handoff, §14.6):**
+  once all blocks are generated, the owner shares the MP3s and
   `script/narration.md` with Gemini (it can listen) using `prompts/gemini_audio_review_v1.md`, and saves the answer to
   Drive `<slug>/review/gemini_audio_review.md`. It is a list of leads (§14.3): each point is checked against
   `vo_review.py` and the word timings in `review/gemini_audio_review_check.md` before any sentence is re-taken.
@@ -1520,6 +1521,46 @@ films on the case from `research/landscape.md`. Archived when done.
 - Every review is a list of leads (§14.3); only fixes that keep every fact true are applied.
 *Why:* we read our own script and watch our own cut so often that we can't see them as a stranger does, and judging
 only against our own rules hides what the competing films already do better.
+
+### 14.6 The Gemini handoff: Drive bus, Gmail bell (owner, 2026-11-26)
+The owner's Gemini workspace agent (account memory, custom audit skills, Drive, YouTube search, live web; it listens
+to audio and watches video) does the **first pass** at seven gates, so the session spends its usage on building.
+*Why:* owner, 2026-11-26: make films better and simpler and reduce usage; Gemini hears takes and watches cuts
+directly, which the session cannot, and keeps the channel's memory, which a stateless API call lacks. No raw Gemini API
+call is used for these audits (Lyria music is not an audit and stays).
+
+| Gate | Task | Replaces |
+|---|---|---|
+| Step 2 research | `research` | — (a sweep; `research/landscape.md` is still ours) |
+| Step 3 treatment, step 5 narration | `narration-review` | the no-repo audience sessions of §14.5; those are the fallback |
+| Step 4 facts | `fact-check` | nothing: a first pass; every row is still checked at `max` against its record |
+| Step 6 audio | `audio-audit` | the manual Gemini listening review of §7.6 (same checks, now automatic) |
+| Step 11–12, every 720p cut | `cut-audit` | the no-repo viewer session of §14.5; that session is the fallback |
+| Release −24 h | `fresh-facts` | part of the fresh-facts gate (we still run it) |
+| 24 h / 7 d / 28 d reads | `analytics-audit` | the session reading Studio screenshots |
+
+The **fairness pass (§9.6) and the independent forensic review (§14.4) stay with fresh Claude sessions**: they carry
+the legal risk.
+
+**The loop:**
+1. `scripts/gemini_handoff.sh new <slug> <task>` writes `films/<slug>/handoff/to_gemini.md` from
+   `prompts/gemini_handoff.md`; fill every `<fill: …>` line with Drive view links (takes, cut, narration and claims are
+   already in Drive) and add the film's own checks.
+2. `scripts/gemini_handoff.sh push <slug> <task> [--attach FILE …]` lints it (no placeholders, secrets, email
+   addresses or names from outside this channel), uploads it to `Margin-of-Error/<slug>/handoff/to_gemini.md` and
+   prints the wake-up email.
+3. The session sends that email with the **Gmail connector** (`send_message`, plain text, to the owner's own address:
+   the account the connector is signed in to; never written in this public repo). Subject
+   `[GEMINI-HANDOFF] Margin-of-Error <slug> <task>`. Gemini's Gmail monitor wakes on it; a twice-daily scheduled
+   check is the backup. **Then carry on with other work; never poll or wait.**
+4. At the start of the next step: `scripts/gemini_handoff.sh pull <slug>` saves the newest reply newer than the
+   request to `films/<slug>/review/gemini_<task>.md` (a Google Doc reply is exported and un-escaped). Exit 4 = no
+   reply yet: search Gmail for `subject:"[GEMINI-RESULT]" <slug>` (Gemini's fallback when it cannot write to Drive);
+   if neither, say so in one line and run the fallback review.
+5. Check every point (§14.3): `review/gemini_<task>_check.md`, CONFIRMED / PARTLY / NOT CONFIRMED with the evidence,
+   then fix. Gemini misreads timestamps on long files (§7.6, Titan): every timed finding is confirmed by measurement.
+- **Hard stops:** no 4K master before the Gemini cut audit is checked and the owner approves the cut; Gemini never
+  writes to the repo or decides a gate. The owner's one-time Gemini setup lives in the owner's Gemini, not in git.
 
 ## 15. Tools
 - `scripts/brand_ts.py`: `config/brand.yaml` → `lib/remotion/brand.ts`.
