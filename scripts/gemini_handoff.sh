@@ -166,7 +166,14 @@ with tempfile.TemporaryDirectory() as t:
     text = open(os.path.join(t, got[0]), encoding="utf-8", errors="replace").read().lstrip("\ufeff")
 if f.get("Size", 0) < 0:  # a Google Doc: its Markdown export escapes punctuation ("\\---", "task\\_type") and pads lines
     text = "\n".join(re.sub(r"\\([-\\`*_{}\[\]()#+.!|>~=<])", r"\1", l).rstrip() for l in text.splitlines()) + "\n"
-fm = dict(re.findall(r"^(\w+):\s*(.+?)\s*$", text.split("---")[1], re.M)) if text.lstrip().startswith("---") else {}
+# front matter as written ("---" block) or as a Google Doc renders it (a bullet list, bold markers): read the keys
+# from the first 20 lines either way
+KEYS = ("repo", "slug", "task_type", "completed_ist", "verdict")
+fm = {}
+for line in text.splitlines()[:20]:
+    m = re.match(r"^[\s*•-]*\**(\w+)\**:\**\s*(.+?)\s*$", line)
+    if m and m.group(1) in KEYS and m.group(1) not in fm:
+        fm[m.group(1)] = m.group(2).strip("* ")
 task = fm.get("task_type", "reply").split("#")[0].strip()
 out = dest or os.path.join(local, "review", f"gemini_{task}.md")
 os.makedirs(os.path.dirname(out), exist_ok=True)
