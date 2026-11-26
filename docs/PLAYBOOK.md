@@ -1561,6 +1561,11 @@ the legal risk.
    then fix. Gemini misreads timestamps on long files (§7.6, Titan): every timed finding is confirmed by measurement.
 - **Hard stops:** no 4K master before the Gemini cut audit is checked and the owner approves the cut; Gemini never
   writes to the repo or decides a gate. The owner's one-time Gemini setup lives in the owner's Gemini, not in git.
+- *Tested 2026-11-26:* the Gmail monitor fired the minute the email arrived and the answer was right (it quoted the
+  check word from the attached file). Two lessons: an unattended run stops at Gemini's "create files in Drive?"
+  prompt unless Drive is set to always allowed in Gemini's app permissions (the owner set it); and a 5-hour usage
+  limit can pause a run until it resets, so a reply can take hours. A Google Doc reply renders the front matter as
+  a bullet list; `pull` reads either form.
 
 ## 15. Tools
 - `scripts/brand_ts.py`: `config/brand.yaml` → `lib/remotion/brand.ts`.
