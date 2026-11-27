@@ -3,7 +3,7 @@
 Status 27 NOV 2026: **Phase A done** (PLAYBOOK §3a steps 1–2). Track B, The Invisible Moats. Research:
 `research/landscape.md`; Gemini's two passes checked in `review/gemini_research_check.md` and
 `review/gemini_research_r2_check.md`; `claims.csv` 95 rows after the max fact-check (`review/factcheck_v1.md`), gate passes. Owner decision 27 NOV 2026: this film first,
-the North Hyde substation fire as its own film next. Treatment v2 approved by the owner 27 NOV 2026; next: the fact-check (step 4), then the opening.
+the North Hyde substation fire as its own film next. Treatment v2 approved by the owner 27 NOV 2026; fact-check done (treatment v3); title fixes accepted; next: the opening.
 
 ## Case sheet (PLAYBOOK §4.3)
 | | |
@@ -21,8 +21,8 @@ Department's national-security report recorded transformer makers' concern that 
 | # | Title | Thumbnail (concept, built at step 14) | Claims |
 |---|---|---|---|
 | A (main) | **America Has One Transformer Steel Mill. Its Coils Stop at 920 mm** (64 ch) | A real large power transformer (public-domain DOE photo) left; right, the edge of a steel coil with a red `920 MM` line and an amber `NEED 932+` line just beyond it. Words: `920 MM / NEED 932+` | C07, C10, C16 |
-| B (proposed fix, owner to confirm) | Transformer Shortage: America's One Core-Steel Mill Stops at 920 mm (67 ch) · was "America's Only Steel Mill", which reads as one steel mill in America | The Section 232 report page, the `>932mm` line highlighted, over the same coil edge. Words: `12+ MM SHORT` (was `12 MM SHORT`: the need is >932) | C07, C10, C16, C35 |
-| C (proposed fix, owner to confirm) | The 2020 Transformer Security Report: US Core Steel Stops at 920 mm (67 ch) · was "America's Steel", which reads as all US steel | The report's cover and finding line, a real substation behind. Words: `NATIONAL SECURITY / 2020` | C13, C16, C10 |
+| B | Transformer Shortage: America's One Core-Steel Mill Stops at 920 mm (67 ch) (owner accepted the fact-check fix 27 NOV 2026) | The Section 232 report page, the `>932mm` line highlighted, over the same coil edge. Words: `12+ MM SHORT` | C07, C10, C16, C35 |
+| C | The 2020 Transformer Security Report: US Core Steel Stops at 920 mm (67 ch) (owner accepted the fact-check fix 27 NOV 2026) | The report's cover and finding line, a real substation behind. Words: `NATIONAL SECURITY / 2020` | C13, C16, C10 |
 
 All three pass `title_lint.py` (case word "Transformer"). 35 variants in `youtube/title_variants.txt`. Rejected forms:
 "Comes Down to" and "Hinges on" (overclaim one cause of a shortage with several); "Duty-Free" (other duties may apply;
