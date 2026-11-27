@@ -102,7 +102,7 @@ Transformer makers are building too. Hitachi Energy announced about four hundred
 
 There is a faster lever. In the Johns Hopkins model, utilities use sensors that track a transformer's actual temperature and load, instead of conservative fixed ratings, and run the units they already have closer to their true limit. That cuts the twenty thirty transformer gap from fourteen point five percent to five.
 
-And the question from the start. Why not roll the coil wider? The records we read give no engineering reason. Commerce found that years of poor profitability had held back investment. The Breakthrough Institute puts a retrofit of the mill, or a new one, at about one to two billion dollars.
+And the question from the start. Why not roll the coil wider? The records we examined give no engineering reason. Commerce found that years of poor profitability had held back investment. The Breakthrough Institute puts a retrofit of the mill, or a new one, at about one to two billion dollars.
 
 A large power transformer is typically designed to run for about forty years. The steel at its core is still measured in millimeters. Nine hundred and twenty, from the one mill at home. More than nine hundred and thirty-two, for the larger cores.
 
@@ -213,7 +213,7 @@ Transformer makers are building too. Hitachi Energy announced about four hundred
 
 There is a faster lever. In the Johns Hopkins model, utilities use sensors that track a transformer's actual temperature and load, instead of conservative fixed ratings, and run the units they already have closer to their true limit. That cuts the twenty thirty transformer gap from fourteen point five percent to five.
 
-And the question from the start. Why not roll the coil wider? The records we read give no engineering reason. Commerce found that years of poor profitability had held back investment. The Breakthrough Institute puts a retrofit of the mill, or a new one, at about one to two billion dollars.
+And the question from the start. Why not roll the coil wider? The records we examined give no engineering reason. Commerce found that years of poor profitability had held back investment. The Breakthrough Institute puts a retrofit of the mill, or a new one, at about one to two billion dollars.
 
 A large power transformer is typically designed to run for about forty years. The steel at its core is still measured in millimeters. Nine hundred and twenty, from the one mill at home. More than nine hundred and thirty-two, for the larger cores.
 
