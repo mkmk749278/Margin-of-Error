@@ -1,0 +1,13 @@
+# SHOT_ID|MODE|query   (PLAYBOOK §11.1; read by scripts/termux_footage_search.sh)
+LPT01|cc|large power transformer substation
+LPT02|cc|power transformer installation substation crane
+LPT03|cc|transformer transport heavy haul superload
+LPT04|cc|substation at dusk high voltage
+LPT05|cc|transformer core lamination stacking factory
+LPT06|cc|electrical steel coil mill
+LPT07|cc|transformer factory winding
+LPT08|gov|Department of Energy transformer substation
+LPT09|gov|Bonneville Power Administration transformer
+LPT10|gov|Western Area Power Administration transformer substation
+LPT11|gov|Army Corps of Engineers power transformer replacement
+LPT12|cc|Schnabel car transformer rail
