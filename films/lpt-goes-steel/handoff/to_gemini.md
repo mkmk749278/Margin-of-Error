@@ -1,40 +1,37 @@
 ---
 repo: Margin-of-Error
 slug: lpt-goes-steel
-task_type: narration-review
+task_type: audio-audit
 created_ist: 2026-11-28 IST
 return_path: lpt-goes-steel/handoff/from_gemini.md
 ---
 
-# Request for Gemini: narration-review, lpt-goes-steel (narration v2, before the owner approves it)
+# Request for Gemini: audio-audit, lpt-goes-steel
 
-The owner asked for your read of **narration v2** before approving it for recording. Since your v1 review, two things
-changed it:
-1. Your review, checked point by point (`gemini_narration-review_v2_check.md`, attached): all applied except the
-   foreign-grade baseline figure, which had no source.
-2. An independent fairness pass at max effort (`fairness_v1.md`, attached): 32 fixes. The main ones: the heat lines
-   now match Cleveland-Cliffs' own datasheets (its non-refined grades are sold for annealed wound cores; only the
-   laser-refined grades lose their treatment); the circumvention argument is attributed (members of Congress) with
-   Canada's reasons; "what did those years cost" became "how much came in" plus "whether an earlier tariff would have
-   changed that, no record we read can say"; the docket parties' stakes are stated; the 40-year line is labelled as
-   our reading. The owner chose the payoff line "Why the twenty twenty finding ended without one, and why one came in
-   twenty twenty-five, the record we read does not say", no red on the company's 920 mm, and thumbnail B `12+ MM GAP`.
+The owner recorded the approved narration v2 with Marcus (Eleven v4, Natural) and asked for your listening review:
+word mapping and accuracy against the script. Two takes, in order.
 
 ## Files in Drive to inspect
-- Narration v2 with the viewer question and claim ids per paragraph: `narration.md` (uploaded with this request)
-- Recording text: `vo.txt` (uploaded with this request)
-- `fairness_v1.md` and `gemini_narration-review_v2_check.md` (uploaded with this request)
-- Locked promise (title + thumbnail concept): main pair "America Has One Transformer Steel Mill. Its Coils Stop at
-  920 mm" with a real large power transformer and a coil edge marked `920 MM` (cyan) / `NEED 932+` (amber).
+- Takes (in order): lpt-goes-steel_vo_b01.mp3 https://drive.google.com/file/d/1XPJgloZz_mSDSQS3YmDatZxvp4t9ULr0/view
+  (9:38) and lpt-goes-steel_vo_b02.mp3 https://drive.google.com/file/d/1Ynf2oh0acazdJ48bCTRAPyNWI-Yvvwm_/view (3:51)
+- Script: `vo.txt` (uploaded with this request). Block 1 ends at "...twenty-five percent, on their full value."; block 2
+  starts at "How much came in, in those years?"
 
 ## Specific checks requested
-Read it as the same five viewers: a US utility substation engineer, a UK transmission engineer, a US finance analyst,
-a Canadian manufacturing manager, and a curious German software developer watching in English.
-1. Did the fixes cost anything? Any line now slower, vaguer or harder to follow than in v1? Quote it.
-2. Where would each viewer stop watching now? Quote the line.
-3. Any line that sounds like commentary, outrage, PR or an AI voice-over script; any partisan word; any unglossed body.
-4. Spoken-word problems for Eleven v4 (Marcus): the longest sentences, number runs, "Section two thirty-two",
-   "four hundred and seven product codes".
-5. Scores 1-10 per viewer (watch to the end, trust, subscribe), compared with your v1 scores.
-6. Your verdict: ready for the owner to approve for recording, or not (and the exact lines that block it).
-Findings as leads: quote the line, say why, give the fix. Add no new fact without the URL of the record you opened.
+Listen to every file in full against the script. The voice is clinical, precise, understated, never dramatic.
+1. **Word map:** for each paragraph of the script, the take and the start time (mm:ss.s) where its first word is
+   spoken, so we can cut and cue. Then every wrong, skipped, repeated or added word, with its time.
+2. Every number, date and decimal read exactly as scripted ("nine hundred and twenty", "nine hundred and thirty-two",
+   "four thousand nine hundred", "six thousand seven hundred and ninety-nine", "one point zero one",
+   "fourteen point five", "four hundred and seven", "twenty-two million", "one hundred and sixty-seven million",
+   "six hundred and fifty percent", years); acronyms letter by letter as written ("U - S", "H - D").
+3. Names and places: Cleveland-Cliffs, Butler Works, Howard Industries, Yury Dvorkin, Johns Hopkins, Hitachi Energy,
+   Siemens Energy, Hyundai, Warren (Ohio), Charlotte, Montgomery, South Boston, "Section two thirty-two". Any
+   mispronunciation, with how it sounded.
+4. Delivery: uptalk, vocal fry or whisper, breathiness, swallowed endings, robotic or glitchy spots, clicks, loudness,
+   tone or room changes between the two files.
+5. Pace: rushed numbers, quotes or document lines; a missing pause before a key number or after an exhibit line
+   (the 920 / 932 lines, the national-security finding, "None of it was a tariff on cores.", the payoff line after it).
+6. Re-take list (exact sentences, in order of importance) and a keep list (5 best moments). Scores 1-10: clarity,
+   naturalness, authority, pace, consistency.
+Times are leads: we confirm every timed finding by measurement before any sentence is re-taken.
