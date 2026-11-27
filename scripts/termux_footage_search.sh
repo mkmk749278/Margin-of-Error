@@ -17,7 +17,7 @@ SLUG="${1:?usage: termux_footage_search.sh <slug> [branch]}"; BRANCH="${2:-main}
 MOE_FOLDER_ID=1-_G3XZkhZNlziKrdMrc3baMqOFcxjcfn
 RAW="https://raw.githubusercontent.com/mkmk749278/Margin-of-Error/$BRANCH"
 PER_QUERY=12
-GOV_CHANNELS='^(U\.?S\.? Coast Guard|United States Coast Guard|USCG|NTSB|NTSBgov|National Transportation Safety Board|NOAA Ocean Exploration|NOAA|NOAA Ocean Service|DVIDS|DVIDSHUB|U\.S\. Navy|Naval Sea Systems Command|NASA)$'
+GOV_CHANNELS='^(U\.?S\.? Coast Guard|United States Coast Guard|USCG|NTSB|NTSBgov|National Transportation Safety Board|NOAA Ocean Exploration|NOAA|NOAA Ocean Service|DVIDS|DVIDSHUB|U\.S\. Navy|Naval Sea Systems Command|NASA|U\.S\. Department of Energy|US Department of Energy|Energy\.gov|Office of Electricity|Bonneville Power Administration|BPA|Western Area Power Administration|WAPA|U\.S\. Army Corps of Engineers|USACE|U\.S\. Department of Commerce|Bureau of Reclamation)$'
 NEWS='(news|tv|cnn|bbc|abc|cbs|nbc|fox|sky|reuters|associated press|\bap\b|guardian|times|post|global|ctv|cbc|7news|9news|wion|insider|vice|telegraph|independent|daily|channel ?4|itv|al jazeera|euronews|bloomberg|cnbc|msnbc|nyt|wsj|usa today|inside edition|60 minutes|dateline|documentary|no copyright|free footage)'
 OUT="$HOME/moe_fetch/$SLUG/candidates"; mkdir -p "$OUT/thumbs" && cd "$OUT" || exit 1
 
