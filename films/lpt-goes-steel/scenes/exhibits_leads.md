@@ -35,3 +35,14 @@ Logged before use (PLAYBOOK §11). Nothing here is cleared for the cut until its
 House Energy & Commerce subcommittee, "Keeping the Lights On", 13 SEP 2023, full video `B7GiblerTt8` (5 h). The
 spoken words may differ from the written testimony: we need the captions to find the moment, then the clip's licence
 (congressional hearing recordings; the upload's own licence is the platform standard) before asking for a clip.
+
+### Captions read (27 NOV 2026; owner's Termux fetch, Drive `lpt-goes-steel/captions/`)
+Upload: "Keeping the Lights On: Enhancing Reliability and Efficiency to Power American Homes", Energy & Commerce
+Democrats channel (the committee minority's official channel), 13 SEP 2023; no licence field in the metadata. A House
+committee recording of a public hearing: §11 review before use (government-work status of the recording; credit line).
+Auto-captions only: every word is checked by ear (`vo_review.py`) on the clip before any line is quoted.
+| Time in video | Speaker (role) | Words (auto-captions) | Use |
+|---|---|---|---|
+| 01:28:06–01:28:40 | Gene Rodrigues, Assistant Secretary for Electricity, DOE (answering a member) | "…the one US manufacturer of grain oriented electrical steel, we're meeting, we're working together and we're collaborating, not just coordinating but collaborating on the solution sets" | **0:20**: a federal official naming the one mill, on camera. Neutral; no partisan words in the clip window. |
+| 03:13:04–03:13:35 | B. Robert Paulling, President and CEO, Mid-Carolina Electric Cooperative (opening statement) | "electric cooperatives are waiting a year or longer on average to receive these critical grid components, which is basically double the time it used to be. We have been constructing a substation for over two years and we're still waiting on key components to energize that substation" | **11:00**: the wait, from a utility's own mouth. Cut before his next sentence (a policy argument about the DOE rule). |
+| 01:53:04 | a committee member | "12 weeks to 16 months or longer" | Not used: surrounded by partisan framing. |
