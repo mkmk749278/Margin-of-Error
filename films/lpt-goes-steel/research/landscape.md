@@ -1,10 +1,10 @@
 # Transformer steel: the landscape (PLAYBOOK §3a step 2, 27 NOV 2026)
 
 Track B (The Invisible Moats). Working slug `lpt-goes-steel`; slate entry `transformer-waiting-list` (§17.4).
-Claim ids refer to `../claims.csv` (draft, 22 rows; the gate reads 12 confirmed, 6 claim, 4 unverified).
+Claim ids refer to `../claims.csv` (31 rows: 20 confirmed, 11 claim; the gate passes).
 Gemini's first pass (dossier, 50 leads) is checked in `../review/gemini_research_check.md`; a second Gemini request
 (answers to our feedback, the pages blocked from the cloud, the human through-line, exhibits) went out 27 NOV 2026,
-4:30 PM IST. Its answer lands in `../review/gemini_research.md`.
+4:25 PM IST. Its answer is `../review/gemini_research.md` and our check of it is `../review/gemini_research_r2_check.md`.
 
 ## 1. What everyone says
 
@@ -55,13 +55,22 @@ refinement for wound cores. Gemini's draft built its title on that headline.
    and cores threatened to impair national security. Canada and Mexico supplied over 95% of them, and neither makes
    GOES (C13, C14). Domestic LPT makers need steel wider than 932 mm (C16). Option 1 was negotiation, option 2 tariffs
    (C15).
-5. **The dated decision:** on 05 NOV 2020, USTR announced that, "in light of" Mexico's monitoring regime, imports from
-   Mexico "will not be subject to any action" under Section 232 on transformers and parts (C17). Three days earlier
-   Cleveland-Cliffs had publicly welcomed a coming 232 remedy on cores (lead, to confirm). The report was published in
-   the Federal Register in NOV 2021. **Lead to confirm: no 232 duty covered cores until BIS's inclusion took effect on
-   18 AUG 2025 (C18).** In that window the think tank counts core imports rising from $126M (2018) to $524M (2025)
-   (C21). Three administrations held the file: the finding and the Mexico carve-out (2020), publication and no tariff
-   (2021–2024), and the inclusion (2025). Each gets the same scrutiny.
+5. **The dated decision (now on record from both sides):**
+   - 15 OCT 2020: Commerce finds cores "threaten to impair the national security" (C13); Cleveland-Cliffs' domain-refined
+     steel tops out at 920 mm, "not wide enough (>932mm)" for the cores of larger transformers (C16); core imports up
+     650% from 2015 to 2019, 97% from Canada and Mexico (C23).
+   - 02 NOV 2020: Cleveland-Cliffs announces the administration "will be moving forward with a Section 232 action"
+     covering laminations and cores (C28). The same release argues that the US needs only 1,400 tons of GOES wider than
+     920 mm a year (C29): the company's side of the width question.
+   - 05 NOV 2020: USTR excludes Mexico from any such action, in light of a monitoring regime (C17).
+   - 18 AUG 2025: laminations and cores become subject to the 50% steel tariff, "effective today" (C18, company release
+     and Federal Register). Until then no tariff covered them; the think tank counts core imports at $126M in 2018 and
+     $524M in 2025 (C21).
+   - Meanwhile, DOE (2024): the highest-grade domain-refined steel "is not manufactured in the U.S."; wound cores were
+     100% imported in 2019 (C25, C26). A competitor, Howard Industries, says Cleveland-Cliffs "does not produce enough"
+     (C30, an allegation, with the company's answer).
+   Three administrations held the file. Each gets the same scrutiny. We say what each record shows and draw no motive
+   (Gemini's lobbying explanation is rejected: no record).
 6. **The collision:** JHU (Yao and Dvorkin, NOV 2026) projects an almost 15% transformer shortfall by 2030 under high
    demand, about 25% with a trade shock (C22, to verify from the paper).
 7. **The other side, in full:** Cleveland-Cliffs' $200M Butler Works investment with a $75M DOE award, up to +25% GOES
@@ -99,8 +108,10 @@ oriented electrical steel", "Cleveland-Cliffs Butler". The case word a viewer ty
 title (title_lint failed Gemini's title for lacking it).
 
 ## 6. Next
-1. Gemini's answer: the blocked pages, the human through-line, the YouTube read (cross-check ours), exhibits.
-2. Confirm C13, C16, C18 and the "no 232 action on cores 2020–2025" lead from the records.
+1. Done: Gemini's answer checked (`../review/gemini_research_r2_check.md`); C13, C16, C18 confirmed.
+2. Owner fetch: the two blocked pages (Breakthrough Institute, JHU release) as PDFs, for the record.
 3. Find the Act I incident; if none holds, say so to the owner before the treatment.
-4. Then the treatment: 3+ angles, 3+ cold opens, 30+ titles, beat sheet; reviewed with Gemini (narration-review), then
+4. A real person on screen by about 0:20: video of the 16 FEB 2023 DOE public meeting, or a congressional hearing on
+   grid supply chains.
+5. Then the treatment: 3+ angles, 3+ cold opens, 30+ titles, beat sheet; reviewed with Gemini (narration-review), then
    to the owner.
