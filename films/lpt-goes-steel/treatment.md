@@ -87,7 +87,7 @@ On-screen dates as `15 OCT 2020`. Units as the record states them, SI beside: `9
 
 | Time | Act | Q | Turn | Picture (exhibit · id) | Sound | Bed |
 |---|---|---|---|---|---|---|
-| 0:00 | I | What am I looking at? | A steel coil and a line on a federal page | frame 0: hero 1, a coil of transformer steel turning under a work light; a red line lands at its edge, `920 MM`; the camera pulls to the 232 report page as the highlight runs first across "Another concern expressed by domestic transformer manufacturers", then across "(>932mm)" (C07, C16); caption on first sight: `SECTION 232 REPORT · US DEPARTMENT OF COMMERCE · 15 OCT 2020` | 60 Hz hum, one tick on the highlight | none |
+| 0:00 | I | What am I looking at? | A steel coil and a line on a federal page | frame 0: hero 1, a coil of transformer steel turning under a work light; a cyan caliper line lands at its edge, `920 MM` (a published spec: cyan; >932 in amber; no red on the company's number); the camera pulls to the 232 report page as the highlight runs first across "Another concern expressed by domestic transformer manufacturers", then across "(>932mm)" (C07, C16); caption on first sight: `SECTION 232 REPORT · US DEPARTMENT OF COMMERCE · 15 OCT 2020` | 60 Hz hum, one tick on the highlight | none |
 | 0:12 | I | Why should I care? | The stakes | real substation footage; `90%` of US electricity through one class of machine (C01); most of their core steel comes from Japan and South Korea (C93) | hum | fx07 in |
 | 0:20 | I | Is this real? | A real official, on camera | hearing clip 01:28:22–01:28:40, his own words: "the one US manufacturer of grain-oriented electrical steel. We're meeting, we're working together" (clip01; lower-third `GENE RODRIGUES · ASSISTANT SECRETARY FOR ELECTRICITY, DOE · HOUSE HEARING, 13 SEP 2023`) | the room | fx07 dip |
 | 0:32 | I | **Loop** | "Three weeks after that report was written, the US Trade Representative announced a decision about these cores. It is on the record. What followed took almost five years." | the USTR statement, face down on the desk | paper | fx07 |
@@ -120,7 +120,7 @@ On-screen dates as `15 OCT 2020`. Units as the record states them, SI beside: `9
 | 14:40 | V | And the factories? | Assembly capacity | company statements with dates: Hitachi Energy, about $457M, South Boston VA (C76); Siemens Energy, $150M, Charlotte NC (C77; no start date on air unless a company record is found); HD Hyundai Electric, about $200M, Montgomery AL (C78). None says where its core steel will come from | | fx05 |
 | 15:20 | V | Anything faster? | Sensors | the model: dynamic thermal rating cuts the 2030 transformer gap from `14.5%` to `5.0%` (C22) | | fx05 |
 | 15:50 | V | Why not roll it wider? | What the record holds | "The records we read give no engineering reason." Commerce: years of poor profitability impeded investment (C88); the think tank: a Butler Works retrofit or a new mill, about $1–2 billion (C79, attributed) | | fx10 |
-| 16:20 | V | — | Sign-off (below) | the coil, the red line | hum | fx10 out |
+| 16:20 | V | — | Sign-off (below) | the coil, the cyan 920 and the amber >932 lines | hum | fx10 out |
 | 16:50 | V | — | Channel name, end screen | | | tail |
 
 Length, argued: Act I 2:30 (the anomaly, the official, the wait, the wall); Act II 4:00 (two physical limits and the
@@ -128,7 +128,7 @@ company's framing: the film's core); Act III 4:00 (the tariff's scope, Canada, t
 Act IV 3:30 (the cost, a utility's wait, the model, the myth); Act V 2:50 (the fixes, their size, the open question).
 
 ## Cold opens (3, sketched shot by shot)
-1. **The coil and the page** (chosen): 0:00 the coil turning under a work light (hero 1) · 0:03 a red caliper line lands
+1. **The coil and the page** (chosen): 0:00 the coil turning under a work light (hero 1) · 0:03 a cyan caliper line lands
    at its edge, `920 MM (36.22 IN)` · 0:06 pull to the 232 page, the highlight runs "does not produce steel wide enough
    (>932mm)" · 0:10 real substation footage, `90%`. First words: "Only one mill in America makes the steel for
    transformer cores. Its widest coil is nine hundred and twenty millimetres. In twenty twenty, a Commerce Department
@@ -141,7 +141,7 @@ Act IV 3:30 (the cost, a utility's wait, the model, the myth); Act V 2:50 (the f
 
 ## Signature moments
 1. **The coil and the leg** (3:40): the camera at true relative scale along a 920 mm coil edge (about 5.5 t, datasheet
-   p. 8); a larger core's leg pattern laid across it overhangs by more than 12 mm; the overhang lights red; then two
+   p. 8); a larger core's leg pattern laid across it overhangs by more than 12 mm; the overhang lights amber; then two
    strips butted together and the seam marked. RECONSTRUCTION, numbers from C07, C16, C35.
 2. **The calendar** (8:20): pages in the desk pose, one date at a time. `15 OCT 2020` the report; `16 OCT` delivered to
    the President (C47); `02 NOV` the company release, tagged `CLEVELAND-CLIFFS RELEASE`; `05 NOV` the USTR statement (Mexico); `JUL 2021` posted; `18 NOV
@@ -149,8 +149,8 @@ Act IV 3:30 (the cost, a utility's wait, the model, the myth); Act V 2:50 (the f
    (C57); `13 SEP 2023` DOE: no appropriated funds for it (C58); `AUG 2024` DOE's first $19.07M to the Butler Works
    project (C60); `04 JUN 2025` the steel tariff rises to 50% (C54); `18 AUG 2025` cores included, "effective today"
    (C51, C18). Beside it, only sourced import points, each tagged with its source and scope: Commerce, cores, 2015 and 2019 (C23). The Breakthrough Institute's series (C21) waits for Act IV, where its two causes are said. No year is drawn without a claims row. No narration under the run, only the hum. Then: "Until
-   August twenty twenty-five, no Section two-thirty-two tariff covered imported cores. Why it took that long, the record
-   we read does not say." (C52)
+   August twenty twenty-five, no Section two-thirty-two tariff covered imported cores. Why the twenty twenty finding ended
+   without one, and why one came in twenty twenty-five, the record we read does not say." (C52, C51)
 3. **600 °C** (5:00): a microscope-scale surface of the steel, laser lines across it; the furnace glow rises; at `600 °C`
    the lines soften and vanish as the datasheet sentence highlights; beside it a second sheet whose grooves hold
    (ILLUSTRATION; Commerce's description of the heat-proof kind, C66). The wound core then closes around the sheet whose grooves held.

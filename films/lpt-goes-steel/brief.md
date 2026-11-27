@@ -20,8 +20,8 @@ Department's national-security report recorded transformer makers' concern that 
 
 | # | Title | Thumbnail (concept, built at step 14) | Claims |
 |---|---|---|---|
-| A (main) | **America Has One Transformer Steel Mill. Its Coils Stop at 920 mm** (64 ch) | A real large power transformer (public-domain DOE photo) left; right, the edge of a steel coil with a red `920 MM` line and an amber `NEED 932+` line just beyond it. Words: `920 MM / NEED 932+` | C07, C10, C16 |
-| B | Transformer Shortage: America's One Core-Steel Mill Stops at 920 mm (67 ch) (owner accepted the fact-check fix 27 NOV 2026) | The Section 232 report page, the `>932mm` line highlighted, over the same coil edge. Words: `12+ MM SHORT` | C07, C10, C16, C35 |
+| A (main) | **America Has One Transformer Steel Mill. Its Coils Stop at 920 mm** (64 ch) | A real large power transformer (public-domain DOE photo) left; right, the edge of a steel coil with a cyan `920 MM` line and an amber `NEED 932+` line just beyond it (no red on the company's number: owner, 28 NOV 2026). Words: `920 MM / NEED 932+` | C07, C10, C16 |
+| B | Transformer Shortage: America's One Core-Steel Mill Stops at 920 mm (67 ch) (owner accepted the fact-check fix 27 NOV 2026) | The Section 232 report page, the `>932mm` line highlighted with "Another concern expressed by domestic transformer manufacturers" kept in the crop, over the same coil edge. Words: `12+ MM GAP` (owner, 28 NOV 2026) | C07, C10, C16, C35 |
 | C | The 2020 Transformer Security Report: US Core Steel Stops at 920 mm (67 ch) (owner accepted the fact-check fix 27 NOV 2026) | The report's cover and finding line, a real substation behind. Words: `NATIONAL SECURITY / 2020` | C13, C16, C10 |
 
 All three pass `title_lint.py` (case word "Transformer"). 35 variants in `youtube/title_variants.txt`. Rejected forms:
