@@ -65,3 +65,10 @@ argument. Licence: §11 review still open (House committee recording); media_man
 - Credit on screen: `HOUSE ENERGY & COMMERCE SUBCOMMITTEE HEARING · 13 SEP 2023`; lower-thirds by role.
 - Status: **cleared for use as short credited excerpts**, subject to the step-12 forensic review. Not legal advice; the
   owner can ask for a lawyer's view before release.
+
+### Photo search, Wikimedia Commons (27 NOV 2026)
+- Schnabel car carrying a transformer, Cologne: `Tragschnabelwagen mit Transformator (8788).jpg` and `(8789).jpg`,
+  Raimond Spekking, CC BY-SA 4.0, 3600–3800 px. Real and sharp, but a European car: usable only as "a Schnabel car"
+  with the place in the credit, never as a US scene. Share-alike terms to note in `media_manifest.csv`.
+- No licence-clean photo of a US large power transformer found on Commons in this pass. Next: federal photo libraries
+  (DOE, BPA, WAPA, TVA, Army Corps) and the owner's Creative Commons footage search (§11.1) for substation footage.
