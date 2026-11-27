@@ -34,3 +34,11 @@ In the body of that study, the figure is hedged: various sources, including powe
 That report found the dependence on imported cores threatened national security.
 ```
 The last line is optional. Each is spliced in at its measured pauses (§10.4) and checked again with vo_review.
+
+## Re-take received and spliced (28 NOV 2026)
+`lpt-goes-steel_vo_r01.mp3` (29.2 s, -23.4 LUFS): all five sentences word-perfect by faster-whisper medium.en; "The
+administration" now 0.80/0.75 (was 0.39/0.63); "made this steel" heard as steel (was "deal"). Spliced by
+`vo/splice_r01.py`: each cut on the quietest 10 ms in the middle 60% of a measured pause; re-take gain-matched to its
+block (-25.1 / -26.3 LUFS); 10 ms equal-power crossfades. Every join re-transcribed: all words present, no clipped
+onsets. Finals: `lpt-goes-steel_vo_b01_final.wav` (577.97 s) and `_b02_final.wav` (231.97 s), WAV and MP3 in Drive
+`lpt-goes-steel/vo/`. The optional P04 re-take was used (the owner recorded it).
