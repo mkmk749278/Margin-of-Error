@@ -54,3 +54,14 @@ Auto-captions only: every word is checked by ear (`vo_review.py`) on the clip be
 | clip02.mp4 (40 s, 720p) | B7GiblerTt8 3:13:00–3:13:40 | 17.2–33.6 s | "The problem is electric cooperatives are waiting a year or longer on average to receive these critical grid components, which is basically double the time it used to be. We have been constructing a substation for over two years and we're still waiting on key components to energize that substation." | Paulling reading his statement, placard "Mr. Paulling" |
 Both match the auto-captions. Our lower-thirds name each speaker by role and date. The clip ends before any policy
 argument. Licence: §11 review still open (House committee recording); media_manifest rows at exhibit stage.
+
+### Licence note for the hearing clips (27 NOV 2026)
+- Works of the US government are not copyrighted (17 U.S.C. 105). A recording a House committee makes of its own public
+  hearing falls under that; the uploads carry no licence field, and a licence notice on government video has no
+  copyright behind it. Witnesses' own words at a public hearing are part of the public record.
+- The House's own restriction (Rule XI, clause 4(b), modernised in the 116th Congress): committee coverage may not be
+  used as partisan political campaign material. Our use is a non-partisan documentary excerpt, credited; no member of
+  Congress appears in either clip window; no campaign use. Consistent with the rule.
+- Credit on screen: `HOUSE ENERGY & COMMERCE SUBCOMMITTEE HEARING · 13 SEP 2023`; lower-thirds by role.
+- Status: **cleared for use as short credited excerpts**, subject to the step-12 forensic review. Not legal advice; the
+  owner can ask for a lawyer's view before release.
