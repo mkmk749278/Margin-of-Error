@@ -72,3 +72,17 @@ argument. Licence: §11 review still open (House committee recording); media_man
   with the place in the credit, never as a US scene. Share-alike terms to note in `media_manifest.csv`.
 - No licence-clean photo of a US large power transformer found on Commons in this pass. Next: federal photo libraries
   (DOE, BPA, WAPA, TVA, Army Corps) and the owner's Creative Commons footage search (§11.1) for substation footage.
+
+### Creative Commons footage search, round 1 (owner's Termux, 27 NOV 2026; Drive `footage/candidates/`)
+39 candidates from queries LPT01–LPT04 only (the run stopped before LPT05–LPT12, including the four federal-channel
+queries: re-run, it skips what it has read). Licence as YouTube reports it; the uploader must be the rights holder,
+checked per clip in its `.info.json` before use (§11.1).
+| Shot | Video | Uploader | Use | Verdict |
+|---|---|---|---|---|
+| 1:50 transport | `1AiQzYdMUGk` "Now Habersham" (25 s, 2015) | Now Georgia (local news) | a large transformer on a multi-axle heavy-haul rig, Georgia, USA | **Best US transport lead**: fetch, check frames and uploader |
+| generic install | `Eirfq5xleTI` "Transformer unloading" (2017) | Centrans | a power transformer craned off a trailer, crew in hi-vis | lead; Europe, credited by place |
+| generic install | `EYa57ux0YCo`, `-UjQ_pbAU-g` (2026) | Salzburg AG (the utility itself) | 85 t and 90 t transformers in a hall and on a night road | lead; Austria, credited by place; burned-in titles to crop |
+| UK substation | `E1Y-dTmrB7s` "400kv to 132kv substation in essex uk" (2020) | Djpioneer2026 | through the fence | weak; UK viewers' moment only if nothing better |
+| — | `rNhtkryo1Ac` (Baltimore to St. Albans) | Hambleton Transportation | a crated transformer, the driver's face on screen | not used: a private person's vlog |
+Still missing: a US large power transformer standing in a substation (the cold open's 0:18). The federal-channel
+queries are the best chance.
