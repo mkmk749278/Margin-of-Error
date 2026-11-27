@@ -8,7 +8,8 @@ Energy and Commerce subcommittee (13 SEP 2023), the DOE distribution-transformer
 BIS inclusions docket (BIS-2025-0023), Yao and Dvorkin's model (Cell Reports Sustainability, 17 NOV 2026) and the
 Breakthrough Institute analysis (14 AUG 2026). Every fact carries its `claims.csv` id (C01–C40, gate passes); a
 **(lead)** is not yet a row and is confirmed at step 4 or cut.
-v1 → v2: Gemini's audience review and our check of it, `review/gemini_narration-review_check.md` (11 fixes).
+**Owner approved v2 on 27 NOV 2026 (IST), with the three title-and-thumbnail pairs in `brief.md`; the promise is
+locked.** v1 → v2: Gemini's audience review and our check of it, `review/gemini_narration-review_check.md` (11 fixes).
 
 Track B (The Invisible Moats): a single supply point, not a single failure. The five acts keep their duties; Act I's
 "incident" is the record's own anomaly, the 2020 finding, because no US transformer failure with a documented

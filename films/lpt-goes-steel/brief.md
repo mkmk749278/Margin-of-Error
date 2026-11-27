@@ -3,7 +3,7 @@
 Status 27 NOV 2026: **Phase A done** (PLAYBOOK §3a steps 1–2). Track B, The Invisible Moats. Research:
 `research/landscape.md`; Gemini's two passes checked in `review/gemini_research_check.md` and
 `review/gemini_research_r2_check.md`; `claims.csv` 35 rows, gate passes. Owner decision 27 NOV 2026: this film first,
-the North Hyde substation fire as its own film next. Next: the treatment (`treatment.md`), owner approval.
+the North Hyde substation fire as its own film next. Treatment v2 approved by the owner 27 NOV 2026; next: the fact-check (step 4), then the opening.
 
 ## Case sheet (PLAYBOOK §4.3)
 | | |
@@ -13,7 +13,7 @@ the North Hyde substation fire as its own film next. Next: the treatment (`treat
 | Smoking-gun documents | Two, side by side: **the Section 232 report, the width sentence** ("does not produce steel wide enough (>932mm)", C16) and **the USTR statement of 05 NOV 2020** ("will not be subject to any action", C17). |
 | Target length | About 17 minutes (argued beat by beat in the treatment). |
 
-## Package (locked with the treatment; three pairs, one promise)
+## Package (LOCKED: owner approved with the treatment, 27 NOV 2026; three pairs, one promise)
 **The promise:** America's only transformer-steel mill makes coils no wider than 920 mm, and in 2020 the government's
 own investigators found that larger transformer cores need steel wider than 932 mm and that the import dependence
 threatened national security. The film shows the steel, the finding and the five years that followed.
