@@ -86,3 +86,15 @@ checked per clip in its `.info.json` before use (§11.1).
 | — | `rNhtkryo1Ac` (Baltimore to St. Albans) | Hambleton Transportation | a crated transformer, the driver's face on screen | not used: a private person's vlog |
 Still missing: a US large power transformer standing in a substation (the cold open's 0:18). The federal-channel
 queries are the best chance.
+
+### Round 2 (owner's Termux, 27 NOV 2026) and a second Commons pass
+- Footage search round 2: 17 more candidates (56 in all). The federal-channel queries matched no video from the listed
+  channels. New leads: coil slitting lines (`_LhgJoeAHP8`, `FHrot9I1eGw`, China Slitting & Cut-to-Length, CC BY) for
+  "laminations are cut from the coil" (2:55), credited, never implying Butler Works; `kkvX-nv5YdI` (Wisconsin
+  Technical Colleges, Eaton) to view for transformer-factory shots.
+- Commons, public-domain filter on BPA, WAPA, TVA, Reclamation, Army Corps: no usable photo of a US large power
+  transformer (maps, PDFs, one foreign substation).
+- **Open:** the 0:18 shot. Options at the exhibit stage: (1) a utility's or manufacturer's photo or footage under
+  licence (ask the owner; may be paid or need permission); (2) DOE's Flickr stream (public domain) searched by hand;
+  (3) carry 0:18 on hero 2 (the 3D core in its tank) and keep real footage for the transport shot. Decision at
+  step 7, not now.
