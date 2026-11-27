@@ -107,7 +107,23 @@ Without one, the cold open is the demand collision (JHU) and the 232 page, which
 oriented electrical steel", "Cleveland-Cliffs Butler". The case word a viewer types is **transformer**: it goes in the
 title (title_lint failed Gemini's title for lacking it).
 
-## 6. Next
+## 6. Act I and human through-line search (27 NOV 2026)
+- **US documented LPT failure with a long wait:** none found on the public record yet. Met-Ed Lebanon PA (JUN 2024):
+  failed and could not be repaired; a spare was swapped in by SEP 2024 (utility release). Shows the spare system
+  working, not the wait.
+- **North Hyde, 20 MAR 2025 (UK):** NESO final review (77 pp, opened): SGT3's bushing gave a category 1 moisture reading
+  in JUL 2018, which NGET guidance says indicates "an imminent fault and that the bushing should be replaced"; the
+  mitigations "were not actioned"; in 2022 "a decision was taken to defer basic maintenance on SGT3"; 71,655 customers
+  lost power and Heathrow closed. This is a complete Track A case in its own right (dated warning, dated decision,
+  consequence, official finding), and YouTube coverage is thin (news clips; one explainer at 11.8K). **Recommended as
+  its own film, not spent as this film's cold open.**
+- **Real person on screen:** House Energy & Commerce subcommittee hearing "Keeping the Lights On", 13 SEP 2023 (DOE
+  witness on transformer chokepoints), full 5-hour video on the committee minority's YouTube channel (B7GiblerTt8).
+  Congressional hearing footage is a lead for §11 licence review; fetch by Termux once the moment is chosen. Senate
+  ENR hearing 23 JUL 2025 (written testimony names GOES as the critical element) is the second lead.
+- New competitor: "Why America Can't Build the Most Important Machine on Earth" (Azimuth, 19 NOV 2026, 57 views).
+
+## 7. Next
 1. Done: Gemini's answer checked (`../review/gemini_research_r2_check.md`); C13, C16, C18 confirmed.
 2. Owner fetch: the two blocked pages (Breakthrough Institute, JHU release) as PDFs, for the record.
 3. Find the Act I incident; if none holds, say so to the owner before the treatment.
