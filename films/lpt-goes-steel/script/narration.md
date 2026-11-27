@@ -66,4 +66,4 @@ other unsupported beats, and nothing was padded back in (CLAUDE.md: the story se
 ## Status
 - `vo_lint.py`: passes. `claims_check.py`: passes (99 rows).
 - Owner's calls settled 28 NOV 2026: the payoff line "ended without one" (with the 407-code context); 920 mm in cyan, >932 and the overhang in amber, no red on the company's number (owner: no preference, the reviewer's recommendation); thumbnail B `12+ MM GAP`, attributed.
-- Next: the owner hears nothing until the owner approves this text; then recording blocks (Marcus).
+- **Owner approved narration v2 for recording, 28 NOV 2026 (IST)**, after Gemini's v2 review (`review/gemini_narration-review_v3_check.md`). Next: recording blocks (`vo/vo_blocks.md`), block 1 measured first.
