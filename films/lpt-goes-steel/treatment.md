@@ -150,7 +150,7 @@ Act IV 3:30 (the cost, a utility's wait, the model, the myth); Act V 2:50 (the f
    project (C60); `04 JUN 2025` the steel tariff rises to 50% (C54); `18 AUG 2025` cores included, "effective today"
    (C51, C18). Beside it, only sourced import points, each tagged with its source and scope: Commerce, cores, 2015 and 2019 (C23). The Breakthrough Institute's series (C21) waits for Act IV, where its two causes are said. No year is drawn without a claims row. No narration under the run, only the hum. Then: "Until
    August twenty twenty-five, no Section two-thirty-two tariff covered imported cores. Why the twenty twenty finding ended
-   without one, and why one came in twenty twenty-five, the record we read does not say." (C52, C51)
+   without a tariff, and why one came in twenty twenty-five, the record we read does not say." (C52, C51)
 3. **600 °C** (5:00): a microscope-scale surface of the steel, laser lines across it; the furnace glow rises; at `600 °C`
    the lines soften and vanish as the datasheet sentence highlights; beside it a second sheet whose grooves hold
    (ILLUSTRATION; Commerce's description of the heat-proof kind, C66). The wound core then closes around the sheet whose grooves held.
