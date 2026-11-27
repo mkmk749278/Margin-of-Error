@@ -20,9 +20,9 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
   `clip02.mp4` (Paulling, use 17.2–33.6 s); licence note in `scenes/exhibits_leads.md`.
 
 ## Next (in order)
-1. Audio check done (`review/gemini_audio-audit_check.md`): the owner records the re-take block in that file (4
-   sentences + 1 optional) as `lpt-goes-steel_vo_r01.mp3`; we splice at measured pauses, re-run `vo_review.py`, and
-   the owner **approves the audio**. Takes measured: b01 152 wpm, 98.2%; b02 161 wpm, 99.4%; b02 +1.2 dB in the mix.
+1. Re-take spliced (`review/gemini_audio-audit_check.md`, `vo/splice_r01.py`): finals
+   `assets/lpt-goes-steel/vo/lpt-goes-steel_vo_b01_final.wav` (577.97 s) and `_b02_final.wav` (231.97 s), also in
+   Drive `lpt-goes-steel/vo/` with MP3 copies. **Waiting: the owner approves the audio.**
 2. Timing chain on the final takes: `vo_timing.py` → `word_align.py` (§10.4); splice the two clips at 0:24 and after
    "described it" (Act IV); the calendar run hold (signature 2).
 3. Exhibits (step 7): the open item is the 0:18 shot (a US large power transformer in a substation; options in
