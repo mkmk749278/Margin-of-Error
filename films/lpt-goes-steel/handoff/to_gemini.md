@@ -1,54 +1,39 @@
 ---
 repo: Margin-of-Error
 slug: lpt-goes-steel
-task_type: research
-created_ist: 2026-11-27 16:06 IST
+task_type: narration-review
+created_ist: 2026-11-27 18:10 IST
 return_path: lpt-goes-steel/handoff/from_gemini.md
 ---
 
-# Request for Gemini: research, lpt-goes-steel
+# Request for Gemini: narration-review, lpt-goes-steel
 
-Thank you for the first pass. The dossier is strong: we opened the DOE 2024 and 2014 reports, the Cleveland-Cliffs
-TRAN-COR H datasheet and the 05 OCT 2026 Cleveland-Cliffs release, and every core fact we checked holds (90%, 137/617,
-36–60 months, about 3 heavy cars, footnote 95, 920 mm, above 600 °C, 1.01 W/kg, $200M / $75M / up to 25% / 1,200 jobs).
-
-The owner has decided: **we build this film the channel's own way, starting from the research landscape**, and then
-finalise everything together with you. So the title, narration, VO blocks and spec you sent are set aside for now (not
-deleted). Our full feedback is attached as `gemini_research_check.md`. Please read it first.
+This round reviews the **treatment** (the plan, before any narration is written), so the owner, you and we finalise it
+together. Thank you for the research round: your answers are checked in `gemini_research_r2_check.md` (attached). Two
+of your leads were not used (the lobbying explanation and the 13 JAN 2021 expiry: no record). The owner chose this
+film first and the North Hyde fire as its own film next.
 
 ## Files in Drive to inspect
-- Your brief: https://docs.google.com/document/d/1Nm_ymc0sWxQmMFOJqxn0LTJGEaZ_J-6G-5MXZ6czlTE/view
-- Your dossier: https://docs.google.com/document/d/1ha2PbyxXStsIMtHSRRsrVlkq2M7szsaM8x0yR4lEgvA/view
-- Your narration: https://docs.google.com/document/d/1XIfQHAZ7K0YXytYLQ1wRexhs62_woIPv48IJFMffVEk/view
-- Your claims sheet: https://docs.google.com/spreadsheets/d/1WaNnWWFDVejqN1ZDbzX10PPVSBny2NZUALG4PSJhjVo/view
-- Our feedback: `gemini_research_check.md` (uploaded with this request, below)
+- Treatment: `treatment.md` (uploaded with this request, below)
+- Brief with the three title-and-thumbnail pairs: `brief.md` (uploaded with this request)
+- Our check of your research: `gemini_research_r2_check.md` (uploaded with this request)
+- Locked promise (title + thumbnail concept): America's only transformer-steel mill makes coils no wider than 920 mm,
+  and in 2020 Commerce found larger cores need steel wider than 932 mm and that import dependence threatened national
+  security. Main pair: "America Has One Transformer Steel Mill. Its Coils Stop at 920 mm" with a real large power
+  transformer and a coil edge marked `920 MM / NEED 932+`.
 
 ## Specific checks requested
-1. **Answer our feedback, point by point** (section 2 of the attached file): AGREE or DISAGREE, with the page you opened
-   for any disagreement. In particular: the "thirty times noisier" line; the think-tank headline used as our title; the
-   two claim numberings.
-2. **Pages we cannot open from our side (they refuse cloud fetches):** open these and paste the exact sentences that
-   carry the 920 mm / 932 mm / 1,000 mm, the 17–39% wound-core loss, the "only Nippon, JFE and POSCO" line, the $126M →
-   $524M figure, the 21%, the "almost 15%", the 25% / 36% and the two-thirds lines:
-   - https://thebreakthrough.org/issues/energy/america-makes-the-wrong-steel-for-its-transformer-supply-chain
-   - https://hub.jhu.edu/2026/11/17/transformer-shortages-loom-for-strained-us-power-grid/
-   - The Cell Reports Sustainability paper itself (DOI 10.1016/j.crsus.2026.100923): which figure or table gives 14.5%,
-     107.3 GVA, 25.0%, 5.0% with DTR, and the 1,030 / 445.7 t/GVA steel figures. Paper, not preprint, where they differ.
-3. **What everyone says (landscape):** the 3–5 strongest YouTube films on the US transformer shortage or GOES / Butler
-   Works (title, channel, views, length, publish date, their angle in one line) and, for each, what the top 20 comments
-   ask or doubt. Plus the common news line in US and UK outlets. YouTube is blocked on our side, so this is where you
-   help most.
-4. **A human through-line from the record:** one person in a public role whose own documented words could carry the
-   film: sworn testimony at a congressional hearing, a USITC or Commerce hearing transcript, a DOE rulemaking comment,
-   a utility engineer's public statement. Give the transcript or video URL, the date and the exact quoted sentence. No
-   private individuals.
-5. **The dated, documented decision** (Act III). Candidates: the March 2018 Section 232 proclamation's product scope;
-   ATI's 2016 Bagdad closure statement; the 2021 Commerce Section 232 transformer report and what the President did or
-   did not do after it; DOE's 2023 proposal and the April 2024 final rule. For each: the record id, the date, who
-   signed, the exact sentence, and the other side's public response.
-6. **Exhibits that exist:** public-domain photos (DOE, NREL, FERC, Commerce), Butler Works or Schnabel-car photos with
-   a commercial-use licence, report figures we can show, hearing video. Link and licence for each.
-7. **Search words** US and UK viewers type for this topic (with any volume signal you can see).
-
-Do not write a script, a title or a spec this round: we will draft those from the landscape and send them back to you
-for review.
+Read the treatment as five viewers: a US utility substation engineer, a UK transmission engineer, a US finance
+analyst, a Canadian manufacturing manager (Canada is named in the record), and a curious German software developer
+watching in English.
+1. Does the chosen cold open (the coil and the page) keep the thumbnail's promise in sentence 1? Is the exhibit on
+   screen by 0:07, the open loop by 0:30, the question by 2:30, re-hooks near 3 and 6 minutes?
+2. Where would each viewer stop watching? Name the beat and its time.
+3. Which of the three title-and-thumbnail pairs would each viewer click, and why? Any word that overclaims?
+4. Fairness: any beat a US or UK lawyer would flag about Cleveland-Cliffs, Howard Industries, USTR, Commerce, or any
+   administration; anything that reads as taking a side on tariffs or on a party; any line that sounds like
+   commentary, outrage or PR.
+5. Missing: any viewer question the beat sheet does not answer; anything Act III needs that the record has and we
+   left out.
+6. Scores 1-10 per viewer: watch to the end, trust, subscribe.
+Do not write the narration or a new title list. Findings as leads, each with the beat time and the fix.
