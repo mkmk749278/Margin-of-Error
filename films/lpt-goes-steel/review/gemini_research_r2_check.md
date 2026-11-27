@@ -57,3 +57,15 @@ The Act III spine is now on record from both sides: the 15 OCT 2020 finding, the
 05 NOV 2020 Mexico exclusion, and the 18 AUG 2025 inclusion. Two Gemini lines are rejected (the lobbying causation, the
 13 JAN 2021 expiry). Still open: the Act I incident, hearing video for the human through-line, and an owner fetch of
 the two blocked pages.
+
+## Addendum: owner fetch (27 NOV 2026, 5:04 PM IST)
+The owner's Cowork saved both blocked pages as PDFs to the top of My Drive; copies are now in Drive
+`lpt-goes-steel/records/`. Both are re-rendered reading copies (WeasyPrint), not prints of the pages, so they are
+evidence of the text, never on-screen exhibits.
+- Breakthrough Institute (Ryan Alimento, 14 AUG 2026): the 920/932/1,000 mm, "up to 39 percent", Nippon/JFE/POSCO,
+  $126M → $524M and "filled recently in August 2025" sentences are CONFIRMED word for word (C19–C21). New for
+  fairness: the article argues for "immediate tariff relaxation" (C33), the opposite of Cleveland-Cliffs' position.
+- JHU release (Jill Rosen, 17 NOV 2026): 21%, "almost 15%", 16% baseline, 25%/36%, "two-thirds" and both Dvorkin
+  quotes CONFIRMED (C22, C32). Note: the release says sensors "could slightly ease the shortages", while the paper models
+  dynamic thermal rating cutting the 2030 transformer gap from 14.5% to 5.0%. The film uses the paper's number,
+  attributed to the model.
