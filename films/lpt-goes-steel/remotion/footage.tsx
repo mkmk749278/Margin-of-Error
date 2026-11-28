@@ -12,22 +12,22 @@ import {mono, sans} from './kit';
 export type BrollId = keyof typeof BROLL;
 type Clip = {file: string; secs: number; what: string; source: string; illustration?: boolean};
 export const BROLL = {
-	bpa: {file: 'hero_01_bpa_500kv_transformer_pd', secs: 39, what: 'A 500 KV TRANSFORMER MOVED ON RAILS · CUSTER SUBSTATION, WASHINGTON', source: 'VIDEO: BONNEVILLE POWER ADMINISTRATION · PUBLIC DOMAIN'},
-	schnabelTx: {file: 'hero_02_tx_schnabel_ptdx202_ccby', secs: 20, what: 'SCHNABEL CAR PTDX 202 · MOUNT PLEASANT, TEXAS', source: 'VIDEO: JASON LEE DAVIS · CC BY 3.0'},
-	schnabelNs: {file: 'hero_03_ns_schnabel_wecx800_ccby', secs: 35, what: 'NORFOLK SOUTHERN WITH SCHNABEL CAR WECX 800', source: 'VIDEO: SAXT PRODUCTIONS · CC BY 3.0'},
-	coreLift: {file: 'hero_04_lpt_core_factory_ccby', secs: 40, what: "A LARGE TRANSFORMER'S CORE, LIFTED FOR OVERHAUL · AUSTRIA", source: 'VIDEO: SALZBURG AG · CC BY 3.0'},
-	fortRandall: {file: 'us_fort_randall_lpt_install_pd', secs: 23.5, what: 'A LARGE POWER TRANSFORMER INSTALLED · FORT RANDALL DAM, SOUTH DAKOTA, OCT 2023', source: 'VIDEO: USACE · DVIDS 902345 · PUBLIC DOMAIN'},
-	substation: {file: 'us_broll_04_us_substation_transformer_pd', secs: 13, what: 'SUBSTATION EQUIPMENT · FORT CARSON, COLORADO, MAR 2023', source: 'VIDEO: JOHN SWITZER, US ARMY · DVIDS 882844 · PUBLIC DOMAIN'},
-	insulators: {file: 'us_broll_05_us_substation_insulators_pd', secs: 7.8, what: 'SUBSTATION INSULATORS · FORT CARSON, COLORADO, MAR 2023', source: 'VIDEO: JOHN SWITZER, US ARMY · DVIDS 882840 · PUBLIC DOMAIN'},
-	switchyard: {file: 'us_broll_06_us_doe_switchyard_pd', secs: 12, what: 'A FEDERAL SWITCHYARD · SOUTHWESTERN POWER ADMINISTRATION, OKLAHOMA, JAN 2026', source: 'VIDEO: BRANNEN PARRISH, USACE · DVIDS 993768 · PUBLIC DOMAIN'},
+	bpa: {file: 'hero_01_bpa_500kv_transformer_pd', secs: 39, what: 'A 500 KV TRANSFORMER MOVED ON RAILS · WASHINGTON, 2014', source: 'VIDEO: BPA (US DOE) · PUBLIC DOMAIN'},
+	schnabelTx: {file: 'hero_02_tx_schnabel_ptdx202_ccby', secs: 20, what: 'SCHNABEL CAR PTDX 202 · MOUNT PLEASANT, TEXAS, 30 MAR 2012', source: 'VIDEO: JASON LEE DAVIS · CC BY 3.0'},
+	schnabelNs: {file: 'hero_03_ns_schnabel_wecx800_ccby', secs: 35, what: 'SCHNABEL CAR WECX 800 · LOAD: A NUCLEAR STEAM GENERATOR', source: 'VIDEO: SAXT PRODUCTIONS · CC BY 3.0'},
+	coreLift: {file: 'hero_04_lpt_core_factory_ccby', secs: 40, what: "AN LPT'S CORE AND WINDINGS, LIFTED FROM ITS TANK · AUSTRIA", source: 'VIDEO: SALZBURG AG · CC BY 3.0'},
+	fortRandall: {file: 'us_fort_randall_lpt_install_pd', secs: 23.5, what: 'AN LPT INSTALLED · FORT RANDALL DAM, S. DAKOTA, 2023', source: 'VIDEO: USACE · DVIDS · PUBLIC DOMAIN'},
+	substation: {file: 'us_broll_04_us_substation_transformer_pd', secs: 13, what: 'A SUBSTATION · FORT CARSON, COLORADO, 2023', source: 'VIDEO: US ARMY · DVIDS · PUBLIC DOMAIN'},
+	insulators: {file: 'us_broll_05_us_substation_insulators_pd', secs: 7.8, what: 'SUBSTATION INSULATORS · FORT CARSON, COLORADO, 2023', source: 'VIDEO: US ARMY · DVIDS · PUBLIC DOMAIN'},
+	switchyard: {file: 'us_broll_06_us_doe_switchyard_pd', secs: 12, what: 'A FEDERAL SWITCHYARD (SWPA) · OKLAHOMA, 2026', source: 'VIDEO: USACE · DVIDS · PUBLIC DOMAIN'},
 	furnace: {file: 'broll_03_uhp_steel_furnace_ccby3', secs: 18, what: 'ILLUSTRATION · AN ELECTRIC ARC FURNACE, SLOVENIA', source: 'VIDEO: SOUNDS OF CHANGES · CC BY 3.0', illustration: true},
 	anneal: {file: 'broll_04_annealing_furnace_ccby3', secs: 18, what: 'ILLUSTRATION · AN ANNEALING FURNACE, SLOVENIA', source: 'VIDEO: SOUNDS OF CHANGES · CC BY 3.0', illustration: true},
-	coreArc: {file: 'broll_05_transformer_core_arc_ccbysa4', secs: 18, what: 'ILLUSTRATION · A LAMINATED CORE UNDER LOAD (TEACHING MODEL)', source: 'VIDEO: GEORG FUCHS, MIKERUN · CC BY-SA 4.0', illustration: true},
+	coreArc: {file: 'broll_05_transformer_core_arc_ccbysa4', secs: 18, what: 'ILLUSTRATION · A LAMINATED CORE, TEACHING MODEL', source: 'VIDEO: GEORG FUCHS, MIKERUN · CC BY-SA 4.0', illustration: true},
 	lines: {file: 'broll_07_hv_transmission_linemen_ccby2', secs: 7.9, what: 'OVERHEAD LINE WORK · PORTUGAL, 2018', source: 'VIDEO: FERNANDO MOITAL · CC BY 2.0'},
 	machining: {file: 'broll_08_steel_plant_machining_ccby3', secs: 16, what: 'ILLUSTRATION · GRINDING IN A STEEL PLANT, SLOVENIA', source: 'VIDEO: SOUNDS OF CHANGES · CC BY 3.0', illustration: true},
 } satisfies Record<string, Clip>;
 
-const src = (id: BrollId): string => staticFile(`broll/${BROLL[id].file}.mp4`);
+const src = (id: BrollId): string => staticFile(`films/lpt-goes-steel/broll/${BROLL[id].file}.mp4`);
 
 /** Playback rate so a clip covers its beat without running out: real time when it fits, slowed (never below 0.5) when not. */
 const rateFor = (id: BrollId, from: number, frames: number, fps: number, rate?: number): number => {

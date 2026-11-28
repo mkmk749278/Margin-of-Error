@@ -18,6 +18,18 @@ export const Outro: React.FC = () => {
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 72, letterSpacing: 14, color: colors.ink, marginRight: -14}}>MARGIN OF ERROR</div>
 			<div style={{...T(30, {color: colors.ink, letterSpacing: 4}), marginTop: 18}}>WHERE ACCOUNTING MEETS THE LAWS OF PHYSICS</div>
 		</div>
+		{/* footage credits (r03): every CC BY / CC BY-SA clip by name and licence, the federal ones as public domain */}
+		<div style={{position: 'absolute', left: 80, right: 80, top: 660, textAlign: 'center', opacity: o, ...T(26, {color: colors.ink, lineHeight: 1.55})}}>
+			{CREDITS.map((c) => (
+				<div key={c}>{c}</div>
+			))}
+		</div>
 		</>
 	);
 };
+
+export const CREDITS = [
+	'FOOTAGE · PUBLIC DOMAIN: BONNEVILLE POWER ADMINISTRATION · USACE AND US ARMY VIA DVIDS',
+	'CC BY 3.0: JASON LEE DAVIS · SAXT PRODUCTIONS · SALZBURG AG · SOUNDS OF CHANGES',
+	'CC BY-SA 4.0: GEORG FUCHS, MIKERUN · CC BY 2.0: FERNANDO MOITAL · FULL LIST IN THE DESCRIPTION',
+];

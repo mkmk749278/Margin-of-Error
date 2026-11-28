@@ -415,7 +415,7 @@ export const Tray: React.FC<{f: number; start: number; end: number; pages: TrayP
  * The located phrase(s) of a record page, cropped with a margin and shown on a paper plate in the desk pose, over a
  * blurred clip; the highlight draws on its words. The page itself is unaltered: this is a crop, never a retyping.
  */
-export const Excerpt: React.FC<{f: number; doc: DocId; start: number; end: number; hl: HL[]; bg?: BrollId | null; bgFrom?: number; label?: string; title?: string; x?: number; y?: number; w?: number; pad?: [number, number]; maxH?: number}> = ({f, doc, start, end, hl, bg, bgFrom = 0, label = 'EXHIBIT', title, x = 210, y, w = 1500, pad = [70, 60], maxH = 560}) => {
+export const Excerpt: React.FC<{f: number; doc: DocId; start: number; end: number; hl: HL[]; bg?: BrollId | null; bgFrom?: number; label?: string; title?: string; x?: number; y?: number; w?: number; pad?: [number, number]; maxH?: number}> = ({f, doc, start, end, hl, bg, bgFrom = 0, label = 'EXHIBIT', title, x = 210, y, w = 1500, pad = [70, 14], maxH = 560}) => {
 	const o = Math.min(lead(f, start, 12), 1 - interpolate(f, [end - 14, end], [0, 1], clamp));
 	if (o <= 0) return null;
 	const pg = phraseOf(doc, hl[0].key).page;
@@ -449,9 +449,10 @@ export const Excerpt: React.FC<{f: number; doc: DocId; start: number; end: numbe
 							return d > 0 ? <div key={i} style={{position: 'absolute', left: r.x * k, top: r.y * k, width: r.w * k * d, height: r.h * k, background: colors.highlight, mixBlendMode: 'multiply'}} /> : null;
 						})}
 					</div>
+					<div style={{position: 'absolute', inset: 0, background: `linear-gradient(180deg, ${colors.paper} 0%, rgba(243,244,246,0) 9%, rgba(243,244,246,0) 91%, ${colors.paper} 100%)`}} />
 				</div>
 				<div style={{position: 'absolute', left: px, top: py - 50 + (1 - settle) * 40, ...T(26, {color: colors.amber, fontWeight: 700}), opacity: settle}}>{label}</div>
-				<div style={{position: 'absolute', left: px, width: Math.max(pw, 900), top: py + ph + 18 + (1 - settle) * 40, ...T(26, {color: colors.ink}), opacity: settle, whiteSpace: 'nowrap'}}>{`${DOCS[doc].src} · P. ${pg}${title ? ` · ${title}` : ''}`}</div>
+				<div style={{position: 'absolute', left: px, width: Math.max(pw, 1100), top: py + ph + 18 + (1 - settle) * 40, ...T(26, {color: colors.ink, lineHeight: 1.4}), opacity: settle}}>{`${DOCS[doc].src} · P. ${pg}${title ? ` · ${title}` : ''}`}</div>
 			</div>
 		</div>
 	);

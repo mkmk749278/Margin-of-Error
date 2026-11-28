@@ -30,6 +30,15 @@ const Open01: React.FC = () => {
 				<Pop f={f} at={wf(0, 'one')} until={CUT} style={{left: 96, top: 84}}>
 					<Chip text="SOLE US GOES PRODUCER · DOE OCED FACT SHEET · AUG 2024" tone={colors.cyan} />
 				</Pop>
+				<Pop f={f} at={wf(0, 'steel')} until={wf(1, 'widest')} style={{left: 96, top: 164}}>
+					<Chip text="GRAIN-ORIENTED ELECTRICAL STEEL (GOES)" tone={colors.ink} size={30} />
+				</Pop>
+				<Pop f={f} at={wf(0, 'transformer')} until={wf(1, 'widest')} style={{left: 96, top: 236}}>
+					<Chip text="→ TRANSFORMER CORES" tone={colors.cyan} size={30} />
+				</Pop>
+				<Pop f={f} at={wf(0, 'America')} until={CUT} style={{right: 96, top: 84}}>
+					<Chip text="USA" tone={colors.ink} size={30} />
+				</Pop>
 				<Pop f={f} at={wf(1, 'widest')} until={CUT} style={{left: 96, top: 640}}>
 					<div style={{background: 'rgba(10,13,18,0.82)', border: `1px solid ${colors.cyan}`, padding: '16px 26px'}}>
 						<div style={T(28, {color: colors.ink})}>WIDEST US GOES MASTER COIL</div>
@@ -44,8 +53,14 @@ const Open01: React.FC = () => {
 				<Pop f={f} at={wf(2, 'report')} until={wf(2, 'larger') - 6} style={{left: 96, top: 84}}>
 					<Chip text="US COMMERCE · SECTION 232 REPORT · 15 OCT 2020" tone={colors.amber} />
 				</Pop>
+				<Pop f={f} at={wf(2, 'recorded')} until={wf(2, 'larger') - 6} style={{left: 96, top: 156}}>
+					<Chip text="SECTION VII · RECORDED, NOT FOUND" tone={colors.ink} size={28} />
+				</Pop>
+				<Pop f={f} at={wf(2, 'makers')} until={wf(2, 'larger') - 6} style={{left: 96, top: 222}}>
+					<Chip text="SOURCE: TRANSFORMER MAKERS" tone={colors.ink} size={28} />
+				</Pop>
 			</Footage>
-			<Excerpt f={f} doc="goes232" start={wf(2, 'larger') - 8} end={ef(2) + 12} bg="furnace" bgFrom={6} hl={[{key: 'concern', at: wf(2, 'larger') + 6}, {key: 'width', at: wf(2, 'thirty-two')}]} title="SECTION VII · WHAT TRANSFORMER MAKERS TOLD COMMERCE" y={200} />
+			<Excerpt f={f} doc="goes232" start={wf(2, 'larger') - 8} end={ef(2) + 12} bg="furnace" bgFrom={6} hl={[{key: 'concern', at: wf(2, 'larger') + 6}, {key: 'width', at: wf(2, 'thirty-two')}]} title="SECTION VII" y={200} />
 			<Pop f={f} at={wf(2, 'thirty-two')} until={ef(2)} style={{right: 120, top: 800}}>
 				<span style={{...T(64, {color: colors.amber, fontWeight: 700}), background: 'rgba(10,13,18,0.9)', padding: '6px 18px', border: `2px solid ${colors.amber}`}}>&gt;932 MM</span>
 			</Pop>
@@ -61,14 +76,23 @@ const Core03: React.FC = () => {
 			<Pop f={f} at={wf(3, 'ninety')} until={ef(4) + 30} style={{left: 120, top: 120}}>
 				<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '18px 26px'}}>
 					<Num f={f} keys={[{frame: wf(3, 'ninety') - 12, value: 0}, {frame: wf(3, 'percent'), value: 90}]} fmt={(x) => `${Math.round(x)}%`} size={120} tone={colors.cyan} step />
-					<div style={T(28, {color: colors.ink, marginTop: 4})}>OF US ELECTRICITY PASSES THROUGH AN LPT</div>
+					<div style={T(28, {color: colors.ink, marginTop: 4})}>
+						<span style={{opacity: 0.35 + 0.65 * lead(f, wf(3, 'electricity'), 8)}}>OF US ELECTRICITY </span>
+						<span style={{opacity: 0.35 + 0.65 * lead(f, wf(3, 'passes'), 8)}}>PASSES THROUGH AN LPT</span>
+					</div>
 					<div style={T(26, {color: colors.ink, marginTop: 4})}>DOE ESTIMATE · EXEC-2022-001242 · P. 8</div>
 				</div>
+			</Pop>
+			<Pop f={f} at={wf(3, 'Energy')} until={wf(3, 'ninety')} style={{left: 120, top: 120}}>
+				<Chip text="US DEPARTMENT OF ENERGY" tone={colors.ink} size={30} />
+			</Pop>
+			<Pop f={f} at={wf(3, 'estimate')} until={wf(3, 'ninety')} style={{left: 120, top: 186}}>
+				<Chip text="ITS ESTIMATE" tone={colors.amber} size={30} />
 			</Pop>
 			<Pop f={f} at={wf(3, 'transformers')} until={ef(4) + 30} style={{right: 120, top: 120}}>
 				<Chip text="A LARGE POWER TRANSFORMER (LPT)" tone={colors.ink} size={30} />
 			</Pop>
-			<Pop f={f} at={wf(4, 'imported')} until={ef(4) + 30} style={{left: 120, top: 520}}>
+			<Pop f={f} at={wf(4, 'imported')} until={ef(4) + 30} style={{left: 120, top: 470}}>
 				<Chip text="GOES: PRIMARILY IMPORTED FROM JAPAN AND SOUTH KOREA · DOE 2024, P. 22" tone={colors.amber} size={28} />
 			</Pop>
 		</Footage>
@@ -267,7 +291,7 @@ const Rail11: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Footage f={f} start={sf(18) - 10} end={wf(20, 'rail') + 2} clip="schnabelNs" from={RAIL.ns} focus={[0.5, 0.55]}>
+			<Footage f={f} start={sf(18) - 10} end={wf(20, 'rail') + 2} clip="bpa" from={RAIL.bpa} focus={[0.5, 0.5]}>
 				<Pop f={f} at={wf(19, 'weighs')} style={{left: 120, top: 110}}>
 					<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
 						<Num f={f} keys={[{frame: wf(19, 'one') - 8, value: 0}, {frame: wf(19, 'fifty'), value: 150}, {frame: wf(19, 'four'), value: 400}]} fmt={(v) => (v <= 150 ? `${Math.round(v)} TONS` : `150–${Math.round(v)} TONS`)} size={80} tone={colors.amber} step />
@@ -275,7 +299,7 @@ const Rail11: React.FC = () => {
 					</div>
 				</Pop>
 			</Footage>
-			<Footage f={f} start={wf(20, 'rail') - 2} end={ef(20) + 30} clip="schnabelTx" from={RAIL.tx} hard focus={[0.5, 0.55]}>
+			<Footage f={f} start={wf(20, 'rail') - 2} end={ef(20) + 30} clip="schnabelNs" from={RAIL.ns} hard focus={[0.6, 0.5]}>
 				<Pop f={f} at={wf(20, 'specialized')} until={wf(20, 'nine') - 6} style={{right: 120, top: 110, width: 760, background: colors.paper, padding: 10, border: `1px solid ${colors.border}`}}>
 					<Img src={media('photos/us_schnabel_patent_US4041879_pd.jpg')} style={{width: 740}} />
 					<div style={T(26, {color: colors.paper_ink, marginTop: 4})}>US PATENT 4,041,879 · 1977 · PUBLIC DOMAIN</div>
@@ -291,7 +315,7 @@ const Rail11: React.FC = () => {
 	);
 };
 /** Where each Schnabel clip's best pass starts (seconds into the trimmed clip), set after looking at every frame. */
-export const RAIL = {ns: 0, tx: 0, nsQueue: 12};
+export const RAIL = {bpa: 29, ns: 11, tx: 0};
 
 // ── 12 · The act question (S21–S22): back to the coil, into the steel ─────────────────────────────────────────────
 const Question12: React.FC = () => {

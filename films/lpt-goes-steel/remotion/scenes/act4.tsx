@@ -3,10 +3,11 @@ import {useCurrentFrame} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {lead} from '../../../../lib/remotion/Kinetic';
 import {camAt, COIL} from '../coil3d';
-import {BarChart, Chip, clipOf, Doc, HearingClip, Num, Photo, Pop, Strip, Surface, T, Tray} from '../parts';
+import {BarChart, Chip, clipOf, Doc, HearingClip, Num, Pop, Strip, T, Tray} from '../parts';
 import {ef, hold, sf, wf} from '../timing';
 import {Caliper, HeroShot} from './hero';
 import {SceneDef} from './types';
+import {Footage} from '../footage';
 
 // ACT IV · THE COST (S103–S131, clip02). The import line, a utility in its own voice, the 2030 model, the 40-year
 // footnote, the line. Every cue a literal wf(sentence, 'word').
@@ -47,14 +48,14 @@ const Came01: React.FC = () => {
 const Waited02: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
-		<Photo f={f} start={sf(110) - 14} end={clipOf('clip02').gapStartFrame + 16} src="photos/us_virginia_manassas_substation_ccbysa4.jpg" what="A US UTILITY SUBSTATION · MANASSAS PARK, VIRGINIA, 2016" source="PHOTO: FAMARTIN · CC BY-SA 4.0" focus={[0.55, 0.6]}>
+		<Footage f={f} start={sf(110) - 14} end={clipOf('clip02').gapStartFrame + 16} clip="substation" from={1} focus={[0.55, 0.6]}>
 			<Pop f={f} at={wf(111, 'September')} style={{left: 120, top: 110}}>
 				<Chip text="HOUSE HEARING · 13 SEP 2023" tone={colors.amber} size={36} />
 			</Pop>
 			<Pop f={f} at={wf(111, 'Carolina')} style={{left: 120, top: 190}}>
 				<Chip text="MID-CAROLINA ELECTRIC COOPERATIVE · SOUTH CAROLINA" tone={colors.ink} size={30} />
 			</Pop>
-		</Photo>
+		</Footage>
 	);
 };
 const Clip02: React.FC = () => <HearingClip f={useCurrentFrame()} id="clip02" />;
@@ -64,7 +65,8 @@ const Model03: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Doc doc="jhu_hub" start={sf(112) - 14} end={ef(113) + 10} hl={[{key: 'c81', at: 0, ats: [wf(113, 'modeled') - 12, wf(113, 'thirty') - 12]}]} label="EXHIBIT" />
+			<Footage f={f} start={sf(112) - 14} end={sf(113) + 30} clip="insulators" from={0} />
+			<Doc doc="jhu_hub" start={sf(113) + 16} end={ef(113) + 10} hl={[{key: 'c81', at: 0, ats: [wf(113, 'modeled') - 12, wf(113, 'thirty') - 12]}]} label="EXHIBIT" />
 			<Pop f={f} at={wf(113, 'November')} until={ef(113)} style={{right: 110, top: 900}}>
 				<Chip text="17 NOV 2026" tone={colors.amber} size={40} />
 			</Pop>
@@ -103,10 +105,12 @@ const Footnote04: React.FC = () => {
 	const h = hold(128);
 	return (
 		<>
-			<Doc doc="doe2022" start={sf(121) - 14} end={ef(122) + 10} hl={[{key: 'c85', at: wf(122, 'thirty-eight')}]} label="EXHIBIT" title="ONE OF THE REPEATS" />
-			<Pop f={f} at={wf(121, 'number')} until={ef(122)} style={{left: 96, top: 960}}>
-				<Chip text="THE NUMBER" tone={colors.ink} size={32} />
-			</Pop>
+			<Footage f={f} start={sf(121) - 14} end={sf(122) + 8} clip="switchyard" from={7.4} focus={[0.5, 0.45]}>
+				<Pop f={f} at={wf(121, 'number')} style={{left: 120, top: 120}}>
+					<Chip text="THE NUMBER" tone={colors.ink} size={36} />
+				</Pop>
+			</Footage>
+			<Doc doc="doe2022" start={sf(122) - 6} end={ef(122) + 10} hl={[{key: 'c85', at: wf(122, 'thirty-eight')}]} label="EXHIBIT" title="ONE OF THE REPEATS" />
 			<Pop f={f} at={wf(122, 'thirty-eight')} until={ef(122)} style={{right: 120, top: 860}}>
 				<Box>
 					<Num f={f} keys={[{frame: wf(122, 'thirty-eight') - 10, value: 0}, {frame: wf(122, 'thirty-eight') + 8, value: 38}, {frame: wf(122, 'forty'), value: 40}]} fmt={(v) => (v < 39 ? `${Math.round(v)} YEARS` : `38–${Math.round(v)} YEARS`)} size={72} tone={colors.amber} step />
@@ -155,12 +159,12 @@ const Line05: React.FC = () => {
 			<HeroShot f={f} start={sf(129) - 20} end={wf(129, 'anneal') + 4} cam={cam} props={{spin: f * 0.0035}}>
 				<Caliper cam={cam} k={lead(f, wf(129, 'coil'), 10)} halfW={COIL.w / 2} tone={colors.cyan} label={<span>920 MM</span>} />
 			</HeroShot>
-			<Surface f={f} start={wf(129, 'anneal') - 8} end={wf(129, 'queue') + 4} align={1} laser={1} heat={0.8} erase={0.7} />
-			<Photo f={f} start={wf(129, 'queue') - 8} end={wf(131, 'All') + 4} src="photos/schnabel_rail_16x9_ccbysa4.jpg" what="A TRANSFORMER ON A SCHNABEL CAR · KRAUTHAUSEN, GERMANY" source="PHOTO: KLAUSMINIWOLF · CC BY-SA 4.0" focus={[0.5, 0.5]} dir={-1}>
+			<Footage f={f} start={wf(129, 'anneal') - 4} end={wf(129, 'queue') + 2} clip="anneal" from={10} hard />
+			<Footage f={f} start={wf(129, 'queue') - 2} end={wf(131, 'All') + 4} clip="schnabelTx" from={0} hard focus={[0.5, 0.55]}>
 				<Pop f={f} at={wf(130, 'wreckage')} style={{left: 120, top: 110}}>
 					<Chip text="NO WRECKAGE" tone={colors.ink} size={36} />
 				</Pop>
-			</Photo>
+			</Footage>
 			<Tray
 				f={f}
 				start={wf(131, 'All') - 10}
