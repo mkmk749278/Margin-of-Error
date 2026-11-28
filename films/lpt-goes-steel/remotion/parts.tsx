@@ -121,7 +121,7 @@ const DOCS = {
 	hitachi: {p: hitachi as PhraseSet, src: 'HITACHI · NEWS RELEASE · 05 SEP 2025'},
 	siemens: {p: siemens as PhraseSet, src: 'SIEMENS ENERGY · PRESS RELEASE'},
 	hdhyundai: {p: hdhyundai as PhraseSet, src: 'HD HYUNDAI ELECTRIC · PRESS RELEASE'},
-	howard: {p: howard as PhraseSet, src: 'HOWARD INDUSTRIES · COMMENT, DOCKET BIS-2025-0023-0784 · 21 OCT 2025'},
+	howard: {p: howard as PhraseSet, src: 'HOWARD INDUSTRIES · BIS-2025-0023-0784 · 21 OCT 2025'},
 	cliffs_filing: {p: cliffsFiling as PhraseSet, src: 'CLEVELAND-CLIFFS · FILING, DOCKET BIS-2025-0023-0647 · 29 SEP 2025'},
 	joint_mexico: {p: jointMexico as PhraseSet, src: 'USTR · JOINT STATEMENT, US AND MEXICO · 17 MAY 2019'},
 } as const;
@@ -147,7 +147,7 @@ export type HL = {key: string; at: number; ats?: number[]};
  * A record page on the desk: slides on at `start`, a rostrum camera glides to the union of its highlighted phrases
  * (or `focus`), the highlights draw on their words. `page` overrides the page (a cover: page 1).
  */
-export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; label?: string; title?: string; page?: number; pushTo?: number; focus?: Rect; move?: 'zoom' | 'rostrum'}> = ({doc, start, end, hl = [], label, title, page, pushTo, focus, move = 'rostrum'}) => {
+export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; label?: string; title?: string; page?: number; pushTo?: number; focus?: Rect; move?: 'zoom' | 'rostrum'; cropH?: number}> = ({doc, start, end, hl = [], label, title, page, pushTo, focus, move = 'rostrum', cropH}) => {
 	const f = useCurrentFrame();
 	const o = Math.min(lead(f, start, 14), 1 - interpolate(f, [end - 14, end], [0, 1], clamp));
 	if (o <= 0) return null;
@@ -167,7 +167,7 @@ export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; l
 	const source = `${DOCS[doc].src} · P. ${pg}${title ? ` · ${title}` : ''}`;
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
-			<Exhibit page={{w: size[0], h: size[1]}} start={start} push={{from: start + 10, to: pushTo ?? start + 100, focus: fc}} highlights={highlights} label={label ?? 'RECORD'} source={source} move={move}>
+			<Exhibit page={{w: size[0], h: cropH ?? size[1]}} start={start} push={{from: start + 10, to: pushTo ?? start + 100, focus: fc}} highlights={highlights} label={label ?? 'RECORD'} source={source} move={move}>
 				<Img src={media(`pages/${file}.jpg`)} style={{width: size[0], height: size[1]}} />
 			</Exhibit>
 		</div>

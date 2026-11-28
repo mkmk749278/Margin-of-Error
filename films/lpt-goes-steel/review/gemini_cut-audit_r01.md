@@ -1,0 +1,6 @@
+Gemini watched the full 14:27 r01 720p cut (audio -14.0 LUFS / -1.7 dBTP and pacing are approved — do not touch audio or timing). Apply these 5 visual fixes for r02, re-render 720p, and upload lpt-goes-steel_cut_r02_720p.mp4:
+1. 14:20-14:27 end card: dim the 3D coil to opacity 0.22 (or add a dark radial scrim) behind the MARGIN OF ERROR / WHERE ACCOUNTING MEETS THE LAWS OF PHYSICS lockup so the tagline is crisp and readable.
+2. 07:33-07:40 USTR reveal: skip the blank red ARCHIVE warning page (P. 1) and open directly on the 05 NOV 2020 statement headline/body (P. 2), cropped below the red archive banner.
+3. 08:59-09:01 Cleveland-Cliffs 02 NOV 2020 release: tighten the bottom crop so the "condemnation" sentence never peeks into frame behind the 1,400 TONS counter.
+4. Fix 3 right-edge clipped labels: 02:05-02:19 ("232 REPORT PP. 41-42"), 03:10-03:19 ("GAP NOT TO SCALE"), and 09:09-09:19 (shorten Howard Industries top-left pill so "CROPPED TO ITS FINDING" does not clip).
+5. At 10:31 change caption "A COOPERATIVE'S SUBSTATION" to "A US UTILITY SUBSTATION · MANASSAS PARK, VIRGINIA, 2016"; at 13:38 animate the 2030 GAP counter smoothly downward from 14.5% to 5.0%.

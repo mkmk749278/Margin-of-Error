@@ -150,7 +150,7 @@ const Dtr04: React.FC = () => {
 			<Doc doc="jhu_paper" start={ef(143)} end={ef(144) + 20} hl={[{key: 'dtr', at: 0, ats: [wf(144, 'fourteen') - 12, wf(144, 'five', 1) - 12]}]} label="EXHIBIT" title="THE MODEL" />
 			<Pop f={f} at={wf(144, 'fourteen')} until={ef(144) + 12} style={{right: 120, top: 860}}>
 				<Box>
-					<Num f={f} keys={[{frame: wf(144, 'fourteen') - 10, value: 0}, {frame: wf(144, 'percent'), value: 14.5}, {frame: wf(144, 'five', 1), value: 5}]} fmt={(v) => `2030 GAP ${v.toFixed(1)}%`} size={60} tone={colors.amber} />
+					<Num f={f} keys={[{frame: wf(144, 'percent'), value: 14.5}, {frame: wf(144, 'five', 1) + 14, value: 5}]} fmt={(v) => `2030 GAP ${v.toFixed(1)}%`} size={60} tone={colors.amber} />
 				</Box>
 			</Pop>
 		</>

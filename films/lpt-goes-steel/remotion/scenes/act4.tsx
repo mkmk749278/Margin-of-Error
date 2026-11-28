@@ -47,7 +47,7 @@ const Came01: React.FC = () => {
 const Waited02: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
-		<Photo f={f} start={sf(110) - 14} end={clipOf('clip02').gapStartFrame + 16} src="photos/us_virginia_manassas_substation_ccbysa4.jpg" what="A COOPERATIVE'S SUBSTATION · MANASSAS PARK, VIRGINIA, 2016" source="PHOTO: FAMARTIN · CC BY-SA 4.0" focus={[0.55, 0.6]}>
+		<Photo f={f} start={sf(110) - 14} end={clipOf('clip02').gapStartFrame + 16} src="photos/us_virginia_manassas_substation_ccbysa4.jpg" what="A US UTILITY SUBSTATION · MANASSAS PARK, VIRGINIA, 2016" source="PHOTO: FAMARTIN · CC BY-SA 4.0" focus={[0.55, 0.6]}>
 			<Pop f={f} at={wf(111, 'September')} style={{left: 120, top: 110}}>
 				<Chip text="HOUSE HEARING · 13 SEP 2023" tone={colors.amber} size={36} />
 			</Pop>
@@ -116,7 +116,7 @@ const Footnote04: React.FC = () => {
 			<Pop f={f} at={wf(123, 'fourteen')} until={ef(123)} style={{right: 110, top: 900}}>
 				<Chip text="APR 2014" tone={colors.amber} size={40} />
 			</Pop>
-			<Doc doc="doe2014" start={ef(123)} end={ef(125) + 10} hl={[{key: 'c06', at: 0, ats: [wf(124, 'hedged') - 12, wf(124, 'sources') - 12, wf(124, 'estimated') - 12]}, {key: 'fn95', at: wf(125, 'Korea')}]} label="EXHIBIT" title="THE BODY · P. 35" />
+			<Doc doc="doe2014" start={ef(123)} end={ef(125) + 10} hl={[{key: 'c06', at: 0, ats: [wf(124, 'hedged') - 12, wf(124, 'sources') - 12, wf(124, 'estimated') - 12]}, {key: 'fn95', at: wf(125, 'Korea')}]} label="EXHIBIT" title="THE BODY" />
 			<Pop f={f} at={wf(125, 'footnote')} until={ef(125)} style={{left: 96, top: 960}}>
 				<Chip text="FN. 95 → USITC 731-TA-1189 · 04 AUG 2011" tone={colors.amber} size={30} />
 			</Pop>

@@ -12,9 +12,12 @@ export const Outro: React.FC = () => {
 	const o = envelope(f, from, FILM_FRAMES, 30, 40);
 	if (o <= 0) return null;
 	return (
+		<>
+		<div style={{position: 'absolute', inset: 0, opacity: o, background: 'radial-gradient(ellipse 62% 48% at 50% 46%, rgba(10,13,18,0.92) 0%, rgba(10,13,18,0.84) 45%, rgba(10,13,18,0.4) 100%)'}} />
 		<div style={{position: 'absolute', left: 0, right: 0, top: 430, textAlign: 'center', opacity: o}}>
 			<div style={{fontFamily: sans, fontWeight: 700, fontSize: 72, letterSpacing: 14, color: colors.ink, marginRight: -14}}>MARGIN OF ERROR</div>
-			<div style={{...T(30, {color: colors.sub, letterSpacing: 4}), marginTop: 18}}>WHERE ACCOUNTING MEETS THE LAWS OF PHYSICS</div>
+			<div style={{...T(30, {color: colors.ink, letterSpacing: 4}), marginTop: 18}}>WHERE ACCOUNTING MEETS THE LAWS OF PHYSICS</div>
 		</div>
+		</>
 	);
 };

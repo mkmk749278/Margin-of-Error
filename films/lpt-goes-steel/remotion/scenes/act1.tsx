@@ -290,7 +290,7 @@ const Rail11: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-		<Photo f={f} start={sf(18) - 10} end={wf(20, 'rail') + 4} src="photos/schnabel_rail_16x9_ccbysa4.jpg" what="A TRANSFORMER ON A SCHNABEL CAR · KRAUTHAUSEN, GERMANY, 10 OCT 2017" source="PHOTO: KLAUSMINIWOLF · CC BY-SA 4.0" focus={[0.55, 0.5]}>
+		<Photo f={f} start={sf(18) - 10} end={wf(20, 'rail') + 4} src="photos/schnabel_rail_16x9_ccbysa4.jpg" what="A TRANSFORMER ON A SCHNABEL CAR · KRAUTHAUSEN, GERMANY, 2017" source="PHOTO: KLAUSMINIWOLF · CC BY-SA 4.0" focus={[0.55, 0.5]}>
 			<Pop f={f} at={wf(19, 'weighs')} style={{left: 120, top: 110}}>
 				<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
 					<Num f={f} keys={[{frame: wf(19, 'one') - 8, value: 0}, {frame: wf(19, 'fifty'), value: 150}, {frame: wf(19, 'four'), value: 400}]} fmt={(v) => (v <= 150 ? `${Math.round(v)} TONS` : `150–${Math.round(v)} TONS`)} size={80} tone={colors.amber} step />
@@ -298,7 +298,7 @@ const Rail11: React.FC = () => {
 				</div>
 			</Pop>
 		</Photo>
-		<Photo f={f} start={wf(20, 'rail') - 10} end={ef(20) + 30} src="photos/us_norfolk_southern_schnabel_pa_ccby2.jpg" what="AN EMPTY SCHNABEL CAR · ROCKVILLE BRIDGE, PENNSYLVANIA, 24 MAY 2014" source="PHOTO: DAVID WILSON · CC BY 2.0" focus={[0.6, 0.4]} dir={-1}>
+		<Photo f={f} start={wf(20, 'rail') - 10} end={ef(20) + 30} src="photos/us_norfolk_southern_schnabel_pa_ccby2.jpg" what="AN EMPTY SCHNABEL CAR · ROCKVILLE BRIDGE, PENNSYLVANIA, 2014" source="PHOTO: DAVID WILSON · CC BY 2.0" focus={[0.6, 0.4]} dir={-1}>
 			<Pop f={f} at={wf(20, 'specialized')} until={wf(20, 'nine') - 6} style={{right: 120, top: 110, width: 760, background: colors.paper, padding: 10, border: `1px solid ${colors.border}`}}>
 				<Img src={media('photos/us_schnabel_patent_US4041879_pd.jpg')} style={{width: 740}} />
 				<div style={T(26, {color: colors.paper_ink, marginTop: 4})}>US PATENT 4,041,879 · 1977 · PUBLIC DOMAIN</div>
