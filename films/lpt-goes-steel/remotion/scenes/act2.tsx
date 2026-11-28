@@ -5,7 +5,8 @@ import {lead} from '../../../../lib/remotion/Kinetic';
 import {ease} from '../../../../lib/remotion/motion';
 import {camAt, COIL, CORE_X, WOUND_X} from '../coil3d';
 import {media} from '../kit';
-import {BarChart, Chip, clamp, Doc, Num, Pop, Strip, Surface, T} from '../parts';
+import {BarChart, Chip, clamp, Doc, Excerpt, Num, Pop, Strip, Surface, T} from '../parts';
+import {Backdrop, Footage} from '../footage';
 import {ef, hold, sf, wf} from '../timing';
 import {Caliper, HeroShot, P} from './hero';
 import {SceneDef} from './types';
@@ -151,14 +152,21 @@ const Width05: React.FC = () => {
 };
 const Mill06: React.FC = () => {
 	const f = useCurrentFrame();
+	// r03: the white-page streak broken. Molten steel full frame on "that one mill", then the two records as cropped
+	// excerpts over the same furnace, seen through glass.
 	return (
 		<>
-			<Doc doc="doe_oced" start={sf(33) - 12} end={ef(33) + 14} hl={[{key: 'c10', at: 0, ats: [wf(33, 'mill') - 12, wf(33, 'Butler') - 12]}]} label="EXHIBIT" />
-			<Pop f={f} at={wf(33, 'Pennsylvania')} until={ef(33) + 10} style={{left: 96, top: 960}}>
+			<Footage f={f} start={sf(33) - 12} end={wf(33, 'Butler') - 4} clip="furnace" from={3} push={[1.02, 1.08]} focus={[0.42, 0.6]}>
+				<Pop f={f} at={wf(33, 'Cleveland-Cliffs')} style={{left: 96, top: 110}}>
+					<Chip text="CLEVELAND-CLIFFS" tone={colors.cyan} size={36} />
+				</Pop>
+			</Footage>
+			<Excerpt f={f} doc="doe_oced" start={wf(33, 'Butler') - 8} end={ef(33) + 10} bg="furnace" bgFrom={8} hl={[{key: 'c10', at: 0, ats: [wf(33, 'Butler') + 4, wf(33, 'Pennsylvania')]}]} y={250} />
+			<Pop f={f} at={wf(33, 'Pennsylvania')} until={ef(33) + 10} style={{left: 96, top: 110}}>
 				<Chip text="BUTLER WORKS · LYNDORA, PENNSYLVANIA" tone={colors.cyan} size={30} />
 			</Pop>
-			<Doc doc="trancorh" start={ef(33)} end={ef(34) + 30} hl={[{key: 'c07', at: wf(34, 'twenty')}]} label="EXHIBIT" />
-			<Pop f={f} at={wf(34, 'fourteen')} until={ef(34) + 24} style={{right: 120, top: 900}}>
+			<Excerpt f={f} doc="trancorh" start={ef(33)} end={ef(34) + 30} bg="anneal" bgFrom={2} hl={[{key: 'c07', at: wf(34, 'twenty')}]} y={220} />
+			<Pop f={f} at={wf(34, 'fourteen')} until={ef(34) + 24} style={{right: 120, top: 800}}>
 				<Box>
 					<Num f={f} keys={[{frame: wf(34, 'nine') - 8, value: 0}, {frame: wf(34, 'fourteen'), value: 914}, {frame: wf(34, 'twenty'), value: 920}]} fmt={(v) => (v < 915 ? `${Math.round(v)} MM` : `914 · ${Math.round(v)} MM`)} size={64} tone={colors.cyan} step />
 				</Box>
@@ -220,7 +228,7 @@ const Overhang07: React.FC = () => {
 	);
 };
 const Patch08: React.FC = () => (
-	<Doc doc="goes232" start={sf(37) - 12} end={ef(37) + 30} hl={[{key: 'patch', at: 0, ats: [wf(37, 'increased') - 14, wf(37, 'efficiencies') - 14]}]} label="EXHIBIT" title={useCurrentFrame() >= wf(37, 'citing') ? 'CITING THE TRANSFORMER MAKERS (FN. 66)' : undefined} />
+	<Excerpt f={useCurrentFrame()} doc="goes232" start={sf(37) - 12} end={ef(37) + 30} bg="machining" bgFrom={2} hl={[{key: 'patch', at: 0, ats: [wf(37, 'increased') - 14, wf(37, 'efficiencies') - 14]}]} title={useCurrentFrame() >= wf(37, 'citing') ? 'CITING THE TRANSFORMER MAKERS (FN. 66)' : undefined} />
 );
 
 // ── 9 · The question (S38–S40): the line tries to reach 932 and falls back ────────────────────────────────────────────
@@ -261,21 +269,85 @@ const Limits10: React.FC = () => {
 	const glowW = lead(f, wf(41, 'width'), 12) * (1 - lead(f, wf(42, 'wound'), 16));
 	const anneal = Math.max(lead(f, wf(42, 'heat'), 14) * 0.5, interpolate(f, [wf(43, 'annealed') - 10, wf(43, 'heated') + 10, ef(43) + 20], [0.3, 1, 0.4], clamp) * (f >= wf(43, 'annealed') - 10 ? 1 : 0));
 	return (
-		<HeroShot f={f} start={from} end={ef(43) + 40} cam={cam} props={{coil: 0, core: 1, wound: lead(f, wf(42, 'wound'), 16), anneal, flux: 0.6 * glowW}}>
-			<Pop f={f} at={wf(41, 'stacked')} until={wf(42, 'wound')} style={{left: 120, top: 120}}>
-				<Chip text="STACKED CORE · LIMIT: WIDTH" tone={colors.cyan} size={32} />
-			</Pop>
+		<>
+		<HeroShot f={f} start={wf(42, 'For') - 14} end={wf(43, 'annealed') + 10} cam={cam} props={{coil: 0, core: 1, wound: lead(f, wf(42, 'wound'), 16), anneal, flux: 0.6 * glowW}}>
 			<Pop f={f} at={wf(42, 'smaller')} style={{left: 120, top: 120}}>
 				<Chip text="WOUND CORE · SMALLER TRANSFORMERS" tone={colors.cyan} size={32} />
 			</Pop>
 			<Pop f={f} at={wf(42, 'heat')} style={{left: 120, top: 200}}>
 				<Chip text="LIMIT: HEAT" tone={colors.amber} size={32} />
 			</Pop>
-			<Pop f={f} at={wf(43, 'stress')} style={{left: 120, top: 280}}>
-				<Chip text="STRESS-RELIEF ANNEAL" tone={colors.amber} size={32} />
-			</Pop>
 			<Strip what="RECONSTRUCTION" source="CORE TYPES: 232 REPORT PP. 41–42" />
 		</HeroShot>
+		{/* r03: a real large core and windings on "the larger stacked cores" (Salzburg AG; the burned-in source line cropped out) */}
+		<Footage f={f} start={from} end={wf(42, 'For') + 2} clip="coreLift" from={20} focus={[0.4, 0.3]} crop={1.1}>
+			<Pop f={f} at={wf(41, 'stacked')} style={{left: 120, top: 120}}>
+				<Chip text="STACKED CORE · LIMIT: WIDTH" tone={colors.cyan} size={32} />
+			</Pop>
+		</Footage>
+		{/* r03: "annealed: heated" on a real annealing furnace, full frame, into the domain sequence */}
+		<Footage f={f} start={wf(43, 'annealed') - 6} end={ef(43) + 40} clip="anneal" from={0} push={[1.02, 1.07]}>
+			<Pop f={f} at={wf(43, 'stress')} style={{left: 120, top: 120}}>
+				<Chip text="STRESS-RELIEF ANNEAL" tone={colors.amber} size={32} />
+			</Pop>
+		</Footage>
+		</>
+	);
+};
+
+// ── The magnetic domains as a vector overlay on a real annealing furnace (r03; ILLUSTRATION): bands magnetised along
+//    the rolling direction, alternating; the laser lines cross the strip and the bands narrow ("refine"); above 600 °C
+//    the lines fade and the bands widen back. Replaces r02's flat grey ovals. ─────────────────────────────────────────
+const DomainHud: React.FC<{f: number; start: number; end: number; laser: number; heat: number; erase: number; from: number}> = ({f, start, end, laser, heat, erase, from}) => {
+	const o = Math.min(lead(f, start, 14), 1 - interpolate(f, [end - 14, end], [0, 1], clamp));
+	if (o <= 0) return null;
+	const refine = laser * (1 - erase);
+	const X0 = 200;
+	const X1 = 1720;
+	const Y0 = 220;
+	const Y1 = 860;
+	const flow = ((f - start) / 60) * 40;
+	const bands = (n: number, op: number) =>
+		Array.from({length: n}, (_, i) => {
+			const h = (Y1 - Y0) / n;
+			const y = Y0 + i * h + h / 2;
+			const dir = i % 2 === 0 ? 1 : -1;
+			const arrows = Array.from({length: 9}, (_, j) => {
+				const x = X0 + 80 + ((j * 170 + dir * flow) % 1520 + 1520) % 1520;
+				const len = Math.min(110, h * 1.4);
+				const x1 = dir > 0 ? x : x + len;
+				const x2 = dir > 0 ? x + len : x;
+				return (
+					<g key={j}>
+						<line x1={x1} y1={y} x2={x2} y2={y} stroke={colors.cyan} strokeWidth={2} />
+						<polyline points={`${x2 - dir * 14},${y - 8} ${x2},${y} ${x2 - dir * 14},${y + 8}`} fill="none" stroke={colors.cyan} strokeWidth={2} />
+					</g>
+				);
+			});
+			return (
+				<g key={i} opacity={op}>
+					{i > 0 ? <line x1={X0} y1={Y0 + i * h} x2={X1} y2={Y0 + i * h} stroke={colors.cyan} strokeWidth={1} strokeDasharray="4 8" opacity={0.6} /> : null}
+					{arrows}
+				</g>
+			);
+		});
+	const scribes = Array.from({length: 9}, (_, i) => X0 + 90 + i * 170);
+	return (
+		<div style={{position: 'absolute', inset: 0, opacity: o}}>
+			<Footage f={f} start={start} end={end} clip="anneal" from={from} strip={false} push={[1.04, 1.09]}>
+				<div style={{position: 'absolute', inset: 0, background: `rgba(10,13,18,${(0.65 - 0.4 * heat).toFixed(3)})`}} />
+			</Footage>
+			<svg width={1920} height={1080} style={{position: 'absolute', inset: 0, filter: `drop-shadow(0 0 6px ${colors.cyan})`}}>
+				<rect x={X0} y={Y0} width={X1 - X0} height={Y1 - Y0} fill="none" stroke={colors.cyan} strokeWidth={2} opacity={0.8} />
+				{bands(4, 1 - refine)}
+				{bands(8, refine)}
+				{scribes.map((x, i) => (
+					<line key={i} x1={x} y1={Y0} x2={x} y2={Y0 + (Y1 - Y0) * Math.min(1, laser * 1.3)} stroke={colors.amber} strokeWidth={3} opacity={laser * (1 - erase)} />
+				))}
+			</svg>
+			<div style={{position: 'absolute', left: X0, top: Y1 + 16, ...T(28, {color: colors.cyan})}}>ROLLING DIRECTION →</div>
+			<div style={{position: 'absolute', right: 1920 - X1, top: Y1 + 16, ...T(28, {color: refine > 0.5 ? colors.cyan : colors.ink})}}>{refine > 0.5 ? 'DOMAINS REFINED' : 'MAGNETIC DOMAINS'}</div>
+		</div>
 	);
 };
 
@@ -289,9 +361,9 @@ const Laser11: React.FC = () => {
 	const temp = interpolate(f, [wf(46, 'furnace'), wf(47, 'annealing'), wf(47, 'six'), wf(47, 'Celsius')], [20, 380, 560, 600], {...clamp, easing: ease.camera});
 	return (
 		<>
-			<Surface f={f} start={sf(44) - 20} end={sf(46) + 4} align={1} laser={laser} heat={0} erase={0} />
-			<Doc doc="trancorh" start={sf(46) - 10} end={wf(47, 'six') - 10} hl={[{key: 'erad', at: 0, ats: [wf(47, 'eradicated') - 14, wf(47, 'temperatures') - 14]}]} label="EXHIBIT" />
-			<Surface f={f} start={wf(47, 'six') - 24} end={h.from + h.frames + 20} align={1} laser={1} heat={heat} erase={erase} />
+			<DomainHud f={f} start={sf(44) - 20} end={sf(46) + 4} laser={laser} heat={0} erase={0} from={2} />
+			<Doc doc="trancorh" start={sf(46) - 10} end={wf(47, 'six') - 10} bg="anneal" hl={[{key: 'erad', at: 0, ats: [wf(47, 'eradicated') - 14, wf(47, 'temperatures') - 14]}]} label="EXHIBIT" />
+			<DomainHud f={f} start={wf(47, 'six') - 24} end={h.from + h.frames + 20} laser={1} heat={heat} erase={erase} from={9} />
 			<Pop f={f} at={wf(44, 'domains')} until={sf(46)} style={{left: 120, top: 120}}>
 				<Chip text="DOMAIN REFINEMENT" tone={colors.cyan} size={32} />
 			</Pop>
@@ -314,15 +386,20 @@ const Grades12: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Doc doc="trancorh" page={1} start={sf(48) - 16} end={ef(48) + 12} hl={[{key: 'c67', at: 0, ats: [wf(48, 'presents') - 12, wf(48, 'transformers') - 12, wf(48, 'stress-relief') - 12, wf(48, 'other') - 12]}]} label="EXHIBIT" title="THE COMPANY'S OWN WORDS" />
-			<Doc doc="trancorh" start={ef(48)} end={ef(49) + 16} hl={[{key: 'm080', at: wf(49, 'refined')}]} label="EXHIBIT" title="TABLE: TYPICAL CORE LOSS" />
-			<Pop f={f} at={wf(49, 'one')} until={ef(49) + 12} style={{right: 120, top: 860}}>
-				<Box>
-					<Num f={f} keys={[{frame: wf(49, 'one') - 10, value: 0}, {frame: wf(49, 'zero'), value: 1}, {frame: wf(49, 'watts'), value: 1.01}]} fmt={(v) => `${v.toFixed(2)} W/KG`} size={72} tone={colors.cyan} />
-					<div style={T(26, {color: colors.ink, marginTop: 6})}>H-0 DR · 0.23 MM · 1.7 T, 60 HZ</div>
-				</Box>
-			</Pop>
-			<Doc doc="goes232" start={ef(49)} end={ef(50) + 30} hl={[{key: 'noknown', at: 0, ats: [wf(50, 'known') - 12, wf(50, 'survives') - 12]}]} label="EXHIBIT" />
+			<Excerpt f={f} doc="trancorh" start={sf(48) - 16} end={ef(48) + 12} bg="coreLift" bgFrom={18} hl={[{key: 'c67', at: 0, ats: [wf(48, 'presents') - 12, wf(48, 'transformers') - 12, wf(48, 'stress-relief') - 12, wf(48, 'other') - 12]}]} title="THE COMPANY'S OWN WORDS" />
+			{/* r03: the loss figure on a real laminated core under load (a teaching model, cropped to the core) */}
+			<Footage f={f} start={ef(48)} end={ef(49) + 16} clip="coreArc" from={2} focus={[0.42, 0.12]} crop={1.6}>
+				<Pop f={f} at={wf(49, 'refined')} style={{left: 120, top: 120}}>
+					<Chip text="TRAN-COR H DATASHEET · TABLE: TYPICAL CORE LOSS" tone={colors.ink} size={28} />
+				</Pop>
+				<Pop f={f} at={wf(49, 'one')} style={{right: 120, top: 560}}>
+					<Box>
+						<Num f={f} keys={[{frame: wf(49, 'one') - 10, value: 0}, {frame: wf(49, 'zero'), value: 1}, {frame: wf(49, 'watts'), value: 1.01}]} fmt={(v) => `${v.toFixed(2)} W/KG`} size={88} tone={colors.amber} />
+						<div style={T(28, {color: colors.ink, marginTop: 6})}>LOST AS HEAT · H-0 DR · 0.23 MM · 1.7 T, 60 HZ</div>
+					</Box>
+				</Pop>
+			</Footage>
+			<Excerpt f={f} doc="goes232" start={ef(49)} end={ef(50) + 30} bg="coreLift" bgFrom={22} hl={[{key: 'noknown', at: 0, ats: [wf(50, 'known') - 12, wf(50, 'survives') - 12]}]} y={240} />
 			<Pop f={f} at={wf(50, 'wound')} until={ef(50) + 20} style={{left: 96, top: 960}}>
 				<Chip text="WOUND CORES MUST BE ANNEALED" tone={colors.amber} size={30} />
 			</Pop>
@@ -334,7 +411,10 @@ const Grades12: React.FC = () => {
 const Share13: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
+		<>
+		<Backdrop f={f} start={sf(51) - 12} end={ef(51) + 30} clip="coreLift" from={24} opacity={0.3} blur={5} />
 		<BarChart
+			grid
 			f={f}
 			start={sf(51) - 12}
 			end={ef(51) + 30}
@@ -353,6 +433,7 @@ const Share13: React.FC = () => {
 				<span style={T(30, {color: colors.ink})}>IMPORTED</span>
 			</Pop>
 		</BarChart>
+		</>
 	);
 };
 

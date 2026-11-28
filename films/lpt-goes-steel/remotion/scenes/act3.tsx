@@ -9,6 +9,7 @@ import {BarChart, Calendar, Chip, Doc, Num, Pop, Strip, T} from '../parts';
 import {ef, hold, sf, wf} from '../timing';
 import {HeroShot, P} from './hero';
 import {SceneDef} from './types';
+import {Backdrop} from '../footage';
 
 // ACT III · THE TARIFF (S56–S102). Opens on a new exhibit (the company's release), then the gap in the 2018 tariff,
 // the imports, the pledges, the finding, the announcement (paid), the calendar (signature 2), both sides on width,
@@ -268,6 +269,7 @@ const Calendar09: React.FC = () => {
 	const none = lead(f, wf(89, 'None'), 12);
 	return (
 		<>
+			<Backdrop f={f} start={sf(86) - 80} end={ef(91) + 70} clip="machining" from={0} opacity={0.3} />
 			<Calendar f={f} start={sf(86) - 80} end={ef(91) + 70} pages={pages.map((p) => ({...p, tone: p.tone ?? (none > 0 ? colors.cyan : colors.sub)}))} />
 			<Pop f={f} at={wf(89, 'tariff')} until={h.from + 40} style={{left: 0, right: 0, top: 860, textAlign: 'center'}}>
 				<span style={T(40, {color: colors.cyan, fontWeight: 700})}>NONE A TARIFF ON CORES</span>

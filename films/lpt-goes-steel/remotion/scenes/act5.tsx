@@ -8,6 +8,7 @@ import {Chip, clamp, Doc, Num, Pop, Strip, T, Tray} from '../parts';
 import {ef, FILM_FRAMES, hold, sf, wf} from '../timing';
 import {Caliper, HeroShot, P} from './hero';
 import {SceneDef} from './types';
+import {Footage} from '../footage';
 
 // ACT V · THE VERDICT (S132–S154). What is being done; the plants; the faster lever; the question answered; the
 // sign-off on the coil. Every cue a literal wf(sentence, 'word').
@@ -75,6 +76,7 @@ const Plants02: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
+			<Footage f={f} start={sf(137) - 14} end={sf(138) + 6} clip="coreLift" from={20.5} focus={[0.4, 0.3]} crop={1.1} />
 			<Tray
 				f={f}
 				start={sf(137) - 14}
@@ -216,9 +218,6 @@ const Signoff06: React.FC = () => {
 			<div style={{position: 'absolute', inset: 0, opacity: dim}}>
 				<Caliper cam={cam} k={cy} halfW={W920} tone={colors.cyan} label={<span>920 MM · MADE AT HOME</span>} labelAbove={false} />
 				<Caliper cam={cam} k={am} halfW={W932} y={COIL.ro + 2.4} tone={colors.amber} label={<span>&gt;932 MM · LARGER CORES</span>} />
-				<Pop f={f} at={wf(150, 'forty')} until={wf(152, 'nine')} style={{left: 120, top: 120}}>
-					<Chip text="DESIGN LIFE ~40 YEARS · DOE 2024 P. 11" tone={colors.ink} size={30} />
-				</Pop>
 				<Pop f={f} at={wf(154, 'meet')} style={{left: 120, top: 120}}>
 					<Chip text="12+ MM APART" tone={colors.amber} size={40} />
 				</Pop>
@@ -227,6 +226,12 @@ const Signoff06: React.FC = () => {
 				</Pop>
 				<Strip what="RECONSTRUCTION" source="TRAN-COR H DATASHEET TABLE 7 · 232 REPORT P. 104" />
 			</div>
+			{/* r03: "designed to run for about forty years" on a real one, set on its pad */}
+			<Footage f={f} start={sf(150) - 30} end={sf(151) + 6} clip="fortRandall" from={14} focus={[0.5, 0.4]}>
+				<Pop f={f} at={wf(150, 'forty')} style={{left: 120, top: 120}}>
+					<Chip text="DESIGN LIFE ~40 YEARS · DOE 2024 P. 11" tone={colors.ink} size={30} />
+				</Pop>
+			</Footage>
 		</HeroShot>
 	);
 };

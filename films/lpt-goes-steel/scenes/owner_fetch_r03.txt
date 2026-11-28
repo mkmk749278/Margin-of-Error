@@ -1,0 +1,6 @@
+# r03 hero footage (YouTube refuses the cloud container). Windows from Drive footage/broll/us_specific_footage_sources.md.
+# The session mutes and re-encodes each clip into public/broll/ and checks the licence in each .info.json first.
+hero_01_bpa_500kv_transformer_pd https://www.youtube.com/watch?v=jqNmh-V8H1E@00:03-00:42  # BPA, Custer Substation 500 kV transformer move (US federal work)
+hero_02_tx_schnabel_ptdx202_ccby https://www.youtube.com/watch?v=M5ELhRBScF4@00:18-00:38  # Schnabel car PTDX202, Mt. Pleasant TX (CC BY, Jason Lee Davis)
+hero_03_ns_schnabel_wecx800_ccby https://www.youtube.com/watch?v=PkGkGbhP0Vs@00:20-00:55  # Norfolk Southern with Schnabel car WECX 800 (CC BY, SAXT Productions)
+hero_04_lpt_core_factory_ccby https://www.youtube.com/watch?v=EYa57ux0YCo@00:35-01:15  # large transformer core overhaul, Salzburg AG (CC BY)
