@@ -3,11 +3,12 @@ import {Img, interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../../../../lib/remotion/brand';
 import {lead} from '../../../../lib/remotion/Kinetic';
 import {ease, tween} from '../../../../lib/remotion/motion';
-import {camAt, COIL, CORE_X} from '../coil3d';
+import {camAt, COIL} from '../coil3d';
 import {media} from '../kit';
-import {BarChart, Chip, clamp, Doc, HearingClip, Num, Photo, Pop, Strip, T, clipOf} from '../parts';
+import {BarChart, Chip, clamp, Doc, Excerpt, HearingClip, Num, Pop, Strip, T, clipOf} from '../parts';
 import {ef, sf, wf} from '../timing';
-import {Caliper, HeroShot, Loupe, P} from './hero';
+import {Caliper, HeroShot} from './hero';
+import {Backdrop, Footage, TitleCard} from '../footage';
 import {SceneDef} from './types';
 
 // ACT I · THE WAIT (S0–S22, clip01). Opening per script/opening.md: the coil (frame 0 in motion), the 232 page, the
@@ -17,91 +18,60 @@ import {SceneDef} from './types';
 const W920 = COIL.w / 2; // 460 mm either side of the centre
 const W932 = 9.32 / 2;
 
-// ── 1 · The coil (S0–S1) ──────────────────────────────────────────────────────────────────────────────────────────
-const Coil01: React.FC = () => {
-	const f = useCurrentFrame();
-	const cam = camAt(f, [
-		{f: 0, cam: {pos: [15, 4.5, 17], look: [0, -0.4, 0], fov: 36}},
-		{f: wf(0, 'steel'), cam: {pos: [10, 4, 19], look: [0, -0.2, 0], fov: 36}},
-		{f: wf(1, 'widest'), cam: {pos: [3, 3.6, 21], look: [0, 0.6, 0], fov: 36}},
-		{f: wf(1, 'nine'), cam: {pos: [0.6, 3.4, 21.5], look: [0, 1.4, 0], fov: 36}},
-		{f: ef(1) + 60, cam: {pos: [-0.6, 3.3, 21], look: [0, 1.5, 0], fov: 35}},
-	]);
-	const spin = f * 0.0035;
-	const lamp = interpolate(f, [wf(0, 'makes') - 10, wf(0, 'makes') + 20], [0.6, 1], {...clamp, easing: ease.arrive});
-	const glint = interpolate(f, [wf(0, 'steel') - 10, wf(0, 'steel') + 40], [0, 1], clamp);
-	const ghost = Math.min(lead(f, wf(0, 'cores'), 14), 1 - lead(f, wf(1, 'widest'), 20)) * 0.7;
-	const cal = lead(f, wf(1, 'nine'), 14);
-	const v = (
-		<span>
-			<Num f={f} keys={[{frame: wf(1, 'nine') - 6, value: 0}, {frame: wf(1, 'nine'), value: 900}, {frame: wf(1, 'twenty'), value: 920}]} fmt={(x) => String(Math.round(x))} size={56} tone={colors.cyan} step />
-			<span style={{opacity: lead(f, wf(1, 'millimeters'), 8)}}> MM (36.22 IN)</span>
-		</span>
-	);
-	return (
-		<HeroShot f={f} start={0} end={sf(2) + 30} cam={cam} props={{spin, lamp, glint: f < wf(0, 'steel') - 10 ? -1 : glint, ghost}}>
-			<Caliper cam={cam} k={cal} halfW={W920} tone={colors.cyan} label={cal > 0.2 ? v : null} />
-			<Pop f={f} at={wf(0, 'one')} until={wf(1, 'widest')} style={{left: 96, top: 84}}>
-				<Chip text="SOLE US GOES PRODUCER · DOE OCED FACT SHEET · AUG 2024" tone={colors.cyan} />
-			</Pop>
-			<Strip what="RECONSTRUCTION" source={f >= wf(1, 'coil') ? 'TRAN-COR H DATASHEET · OCT 2024 · TABLE 7: 920 MM, 508 MM BORE, 600 KG PER 100 MM' : 'A MASTER COIL OF GRAIN-ORIENTED ELECTRICAL STEEL'} />
-		</HeroShot>
-	);
-};
-
-// ── 2 · The report and its line (S2) ────────────────────────────────────────────────────────────────────────────────
-const Report02: React.FC = () => {
+// ── 1 · The cold open (S0–S2), r03 (owner, 28 NOV 2026): real footage from frame 0. A US 500 kV transformer moving
+//    on rails (BPA) under the first two sentences, 920 MM landing on its words; a hard cut on "a Commerce Department
+//    report" to molten steel under the film's title; then the report's own lines, cropped, on "larger cores". ──────
+const CUT = wf(2, 'a'); // the hard cut: transformer → steel
+const Open01: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Doc doc="goes232" page={1} start={wf(2, 'twenty') - 8} end={wf(2, 'report') + 26} label="COVER" focus={{x: 150, y: 1700, w: 1570, h: 600}} pushTo={wf(2, 'report')} />
-			<Doc doc="goes232" start={wf(2, 'report')} end={ef(2) + 12} hl={[{key: 'concern', at: wf(2, 'transformer')}, {key: 'width', at: wf(2, 'thirty-two')}]} label="EXHIBIT" />
-			<Pop f={f} at={wf(2, 'larger')} until={ef(2)} style={{left: 96, top: 960}}>
-				<Chip text="SECTION VII · WHAT TRANSFORMER MAKERS TOLD COMMERCE" tone={colors.ink} />
-			</Pop>
-			<Pop f={f} at={wf(2, 'thirty-two')} until={ef(2)} style={{right: 120, top: 860}}>
+			<Footage f={f} start={0} end={CUT} clip="bpa" from={0} hard>
+				<Pop f={f} at={wf(0, 'one')} until={CUT} style={{left: 96, top: 84}}>
+					<Chip text="SOLE US GOES PRODUCER · DOE OCED FACT SHEET · AUG 2024" tone={colors.cyan} />
+				</Pop>
+				<Pop f={f} at={wf(1, 'widest')} until={CUT} style={{left: 96, top: 640}}>
+					<div style={{background: 'rgba(10,13,18,0.82)', border: `1px solid ${colors.cyan}`, padding: '16px 26px'}}>
+						<div style={T(28, {color: colors.ink})}>WIDEST US GOES MASTER COIL</div>
+						<Num f={f} keys={[{frame: wf(1, 'nine') - 6, value: 0}, {frame: wf(1, 'nine'), value: 900}, {frame: wf(1, 'twenty'), value: 920}]} fmt={(x) => `${Math.round(x)} MM`} size={96} tone={colors.cyan} step />
+						<span style={{...T(34, {color: colors.ink}), marginLeft: 16, opacity: lead(f, wf(1, 'millimeters'), 8)}}>(36.22 IN)</span>
+						<div style={T(26, {color: colors.ink, marginTop: 4})}>TRAN-COR H DATASHEET · OCT 2024 · TABLE 7</div>
+					</div>
+				</Pop>
+			</Footage>
+			<Footage f={f} start={CUT} end={wf(2, 'larger') - 6} clip="furnace" from={1.2} hard push={[1.04, 1.1]} focus={[0.42, 0.62]}>
+				<TitleCard f={f} at={CUT + 4} until={wf(2, 'larger') - 6} title={['AMERICA HAS ONE', 'TRANSFORMER STEEL MILL']} kicker={<span>ITS COILS STOP AT 920 MM</span>} />
+				<Pop f={f} at={wf(2, 'report')} until={wf(2, 'larger') - 6} style={{left: 96, top: 84}}>
+					<Chip text="US COMMERCE · SECTION 232 REPORT · 15 OCT 2020" tone={colors.amber} />
+				</Pop>
+			</Footage>
+			<Excerpt f={f} doc="goes232" start={wf(2, 'larger') - 8} end={ef(2) + 12} bg="furnace" bgFrom={6} hl={[{key: 'concern', at: wf(2, 'larger') + 6}, {key: 'width', at: wf(2, 'thirty-two')}]} title="SECTION VII · WHAT TRANSFORMER MAKERS TOLD COMMERCE" y={200} />
+			<Pop f={f} at={wf(2, 'thirty-two')} until={ef(2)} style={{right: 120, top: 800}}>
 				<span style={{...T(64, {color: colors.amber, fontWeight: 700}), background: 'rgba(10,13,18,0.9)', padding: '6px 18px', border: `2px solid ${colors.amber}`}}>&gt;932 MM</span>
 			</Pop>
 		</>
 	);
 };
 
-// ── 3 · Back to the coil: >932 lands; the core it is for; 90 % (S3–S4) ─────────────────────────────────────────────
+// ── 3 · The stakes on real footage (S3–S4): a large power transformer set on its pad (USACE, Fort Randall Dam) ─────
 const Core03: React.FC = () => {
 	const f = useCurrentFrame();
-	const from = ef(2);
-	const cam = camAt(f, [
-		{f: from, cam: {pos: [-0.6, 3.3, 21], look: [0, 1.5, 0], fov: 35}},
-		{f: wf(3, 'estimate'), cam: {pos: [3, 3.6, 23], look: [1.5, 1.3, 0], fov: 35}},
-		{f: wf(3, 'ninety'), cam: {pos: [CORE_X + 6, 4, 26], look: [CORE_X - 1, 1, 0], fov: 36}},
-		{f: wf(3, 'transformers'), cam: {pos: [CORE_X + 9, 4.5, 23], look: [CORE_X, 1, 0], fov: 36}},
-		{f: wf(4, 'imported'), cam: {pos: [CORE_X + 10, 3.6, 20], look: [CORE_X, 0.6, 0], fov: 36}},
-		{f: ef(4) + 40, cam: {pos: [CORE_X + 10.4, 3.5, 19.4], look: [CORE_X, 0.6, 0], fov: 36}},
-	]);
-	const amber = lead(f, from + 14, 16);
-	const lines = 1 - lead(f, wf(3, 'ninety') - 20, 16);
-	const edge = P([W920, COIL.ro, 0], cam);
-	const loupe = Math.min(lead(f, from + 24, 14), lines);
-	const build = interpolate(f, [wf(3, 'electricity') - 20, wf(3, 'large')], [0, 1], {...clamp, easing: ease.arrive});
-	const flux = f < wf(3, 'electricity') ? 0 : Math.sin(((f - wf(3, 'electricity')) / 60) * Math.PI * 2 * 0.5) * lead(f, wf(3, 'passes'), 20);
-	const imported = interpolate(f, [wf(4, 'imported') - 12, wf(4, 'imported') + 10], [0, 0.8], {...clamp, easing: ease.arrive});
 	return (
-		<HeroShot f={f} start={from - 10} end={clipOf('clip01').gapStartFrame + 20} cam={cam} props={{spin: f * 0.0035, core: lead(f, wf(3, 'estimate'), 20), build, flux, imported, peel: 0.15 * lead(f, wf(4, 'core'), 14)}}>
-			<Caliper cam={cam} k={1} halfW={W920} tone={colors.cyan} o={lines} label={<span>920 MM</span>} />
-			<Caliper cam={cam} k={amber} halfW={W932} y={COIL.ro + 2.2} tone={colors.amber} o={lines} label={<span>&gt;932 MM · LARGER CORES</span>} />
-			<Loupe x={edge.x + 40} y={edge.y + 160} k={loupe} />
-			<Pop f={f} at={wf(3, 'ninety')} until={ef(4) + 30} style={{left: 120, top: 150}}>
+		<Footage f={f} start={ef(2) - 10} end={clipOf('clip01').gapStartFrame + 20} clip="fortRandall" from={0} focus={[0.55, 0.45]}>
+			<Pop f={f} at={wf(3, 'ninety')} until={ef(4) + 30} style={{left: 120, top: 120}}>
 				<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '18px 26px'}}>
 					<Num f={f} keys={[{frame: wf(3, 'ninety') - 12, value: 0}, {frame: wf(3, 'percent'), value: 90}]} fmt={(x) => `${Math.round(x)}%`} size={120} tone={colors.cyan} step />
 					<div style={T(28, {color: colors.ink, marginTop: 4})}>OF US ELECTRICITY PASSES THROUGH AN LPT</div>
-					<div style={T(26, {color: colors.sub, marginTop: 4})}>DOE ESTIMATE · EXEC-2022-001242 · P. 8</div>
+					<div style={T(26, {color: colors.ink, marginTop: 4})}>DOE ESTIMATE · EXEC-2022-001242 · P. 8</div>
 				</div>
+			</Pop>
+			<Pop f={f} at={wf(3, 'transformers')} until={ef(4) + 30} style={{right: 120, top: 120}}>
+				<Chip text="A LARGE POWER TRANSFORMER (LPT)" tone={colors.ink} size={30} />
 			</Pop>
 			<Pop f={f} at={wf(4, 'imported')} until={ef(4) + 30} style={{left: 120, top: 520}}>
 				<Chip text="GOES: PRIMARILY IMPORTED FROM JAPAN AND SOUTH KOREA · DOE 2024, P. 22" tone={colors.amber} size={28} />
 			</Pop>
-			<Strip what="RECONSTRUCTION" source={f < wf(3, 'ninety') - 20 ? 'TRAN-COR H 920 MM · 232 REPORT P. 104: >932 MM' : 'A STACKED THREE-LEG CORE · LAMINATIONS OF GRAIN-ORIENTED STEEL'} />
-		</HeroShot>
+		</Footage>
 	);
 };
 
@@ -247,26 +217,33 @@ const Large10: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
+			{/* r03: "the large ones" on a real one (no empty mount before the first number), then the chart enters on
+			    "Commerce" over moving line work, its axis and grid already drawn, the 617 bar rising on "six hundred" */}
+			<Footage f={f} start={sf(14) - 10} end={wf(15, 'Commerce') + 4} clip="fortRandall" from={13.2} focus={[0.5, 0.4]}>
+				<Pop f={f} at={wf(15, 'nineteen')} style={{left: 120, top: 120}}>
+					<Chip text="2019" tone={colors.amber} size={36} />
+				</Pop>
+			</Footage>
+			<Backdrop f={f} start={wf(15, 'Commerce') - 12} end={sf(17) + 10} clip="lines" opacity={0.14} blur={4} />
 			<BarChart
 				f={f}
-				start={sf(14) - 10}
+				start={wf(15, 'Commerce') - 12}
 				end={sf(17) + 10}
+				grid
 				title="LARGE POWER TRANSFORMERS FOR US USE, 2019"
 				source="COMMERCE ESTIMATE, CITED IN DOE · LPT RESILIENCE · JUL 2024 · P. 20"
 				max={700}
 				bars={[
-					{label: 'IMPORTED', value: 617, at: wf(15, 'seventeen'), tone: colors.amber},
-					{label: 'BUILT IN THE US', value: 137, at: wf(16, 'thirty-seven'), tone: colors.cyan},
+					{label: 'IMPORTED', value: 617, at: wf(15, 'seventeen'), from: wf(15, 'six') - 4, tone: colors.amber},
+					{label: 'BUILT IN THE US', value: 137, at: wf(16, 'thirty-seven'), from: wf(16, 'One') - 4, tone: colors.cyan},
 				]}
 			>
-				<Pop f={f} at={wf(15, 'nineteen')} style={{left: 1300, top: 150}}>
-					<Chip text="2019" tone={colors.amber} size={36} />
-				</Pop>
+				<Chip text="2019" tone={colors.amber} size={36} style={{position: 'absolute', left: 1300, top: 150}} />
 				<Pop f={f} at={wf(16, 'here')} style={{left: 1220, top: 230}}>
 					<span style={T(30, {color: colors.ink})}>US SHARE 18%</span>
 				</Pop>
 			</BarChart>
-			<Photo f={f} start={sf(17) - 6} end={ef(17) + 30} src="photos/us_virginia_manassas_substation_ccbysa4.jpg" what="A UTILITY SUBSTATION · MANASSAS PARK, VIRGINIA, 2016" source="PHOTO: FAMARTIN · CC BY-SA 4.0" focus={[0.45, 0.55]} dir={-1}>
+			<Footage f={f} start={sf(17) - 6} end={ef(17) + 30} clip="substation" from={0} focus={[0.5, 0.6]}>
 				<Pop f={f} at={wf(17, 'four')} style={{left: 120, top: 110}}>
 					<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
 						<Num f={f} keys={[{frame: wf(17, 'four') - 10, value: 0}, {frame: wf(17, 'nine'), value: 4900}, {frame: wf(17, 'seven'), value: 6799}]} fmt={(v) => (v < 4900 ? comma0(v) : `4,900–${comma0(v)}`)} size={80} tone={colors.cyan} step />
@@ -279,7 +256,7 @@ const Large10: React.FC = () => {
 						<div style={T(26, {color: colors.ink, marginTop: 6})}>WAIT FOR A NEW LPT · DOE 2024, P. 8</div>
 					</div>
 				</Pop>
-			</Photo>
+			</Footage>
 		</>
 	);
 };
@@ -290,29 +267,31 @@ const Rail11: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-		<Photo f={f} start={sf(18) - 10} end={wf(20, 'rail') + 4} src="photos/schnabel_rail_16x9_ccbysa4.jpg" what="A TRANSFORMER ON A SCHNABEL CAR · KRAUTHAUSEN, GERMANY, 2017" source="PHOTO: KLAUSMINIWOLF · CC BY-SA 4.0" focus={[0.55, 0.5]}>
-			<Pop f={f} at={wf(19, 'weighs')} style={{left: 120, top: 110}}>
-				<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
-					<Num f={f} keys={[{frame: wf(19, 'one') - 8, value: 0}, {frame: wf(19, 'fifty'), value: 150}, {frame: wf(19, 'four'), value: 400}]} fmt={(v) => (v <= 150 ? `${Math.round(v)} TONS` : `150–${Math.round(v)} TONS`)} size={80} tone={colors.amber} step />
-					<div style={T(26, {color: colors.ink, marginTop: 6})}>TYPICAL LPT WEIGHT · DOE 2024, P. 8</div>
-				</div>
-			</Pop>
-		</Photo>
-		<Photo f={f} start={wf(20, 'rail') - 10} end={ef(20) + 30} src="photos/us_norfolk_southern_schnabel_pa_ccby2.jpg" what="AN EMPTY SCHNABEL CAR · ROCKVILLE BRIDGE, PENNSYLVANIA, 2014" source="PHOTO: DAVID WILSON · CC BY 2.0" focus={[0.6, 0.4]} dir={-1}>
-			<Pop f={f} at={wf(20, 'specialized')} until={wf(20, 'nine') - 6} style={{right: 120, top: 110, width: 760, background: colors.paper, padding: 10, border: `1px solid ${colors.border}`}}>
-				<Img src={media('photos/us_schnabel_patent_US4041879_pd.jpg')} style={{width: 740}} />
-				<div style={T(26, {color: colors.paper_ink, marginTop: 4})}>US PATENT 4,041,879 · 1977 · PUBLIC DOMAIN</div>
-			</Pop>
-			<Pop f={f} at={wf(20, 'nine')} style={{left: 120, top: 110}}>
-				<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
-					<Num f={f} keys={[{frame: wf(20, 'nine') - 10, value: 0}, {frame: wf(20, 'months'), value: 9}]} fmt={(v) => `${Math.round(v)} MONTHS`} size={80} tone={colors.amber} step />
-					<div style={T(26, {color: colors.ink, marginTop: 6})}>ROUTE CLEARANCE, UP TO · DOE 2024, P. 25</div>
-				</div>
-			</Pop>
-		</Photo>
+			<Footage f={f} start={sf(18) - 10} end={wf(20, 'rail') + 2} clip="schnabelNs" from={RAIL.ns} focus={[0.5, 0.55]}>
+				<Pop f={f} at={wf(19, 'weighs')} style={{left: 120, top: 110}}>
+					<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
+						<Num f={f} keys={[{frame: wf(19, 'one') - 8, value: 0}, {frame: wf(19, 'fifty'), value: 150}, {frame: wf(19, 'four'), value: 400}]} fmt={(v) => (v <= 150 ? `${Math.round(v)} TONS` : `150–${Math.round(v)} TONS`)} size={80} tone={colors.amber} step />
+						<div style={T(26, {color: colors.ink, marginTop: 6})}>TYPICAL LPT WEIGHT · DOE 2024, P. 8</div>
+					</div>
+				</Pop>
+			</Footage>
+			<Footage f={f} start={wf(20, 'rail') - 2} end={ef(20) + 30} clip="schnabelTx" from={RAIL.tx} hard focus={[0.5, 0.55]}>
+				<Pop f={f} at={wf(20, 'specialized')} until={wf(20, 'nine') - 6} style={{right: 120, top: 110, width: 760, background: colors.paper, padding: 10, border: `1px solid ${colors.border}`}}>
+					<Img src={media('photos/us_schnabel_patent_US4041879_pd.jpg')} style={{width: 740}} />
+					<div style={T(26, {color: colors.paper_ink, marginTop: 4})}>US PATENT 4,041,879 · 1977 · PUBLIC DOMAIN</div>
+				</Pop>
+				<Pop f={f} at={wf(20, 'nine')} style={{left: 120, top: 110}}>
+					<div style={{background: 'rgba(10,13,18,0.86)', border: `1px solid ${colors.border}`, padding: '16px 24px'}}>
+						<Num f={f} keys={[{frame: wf(20, 'nine') - 10, value: 0}, {frame: wf(20, 'months'), value: 9}]} fmt={(v) => `${Math.round(v)} MONTHS`} size={80} tone={colors.amber} step />
+						<div style={T(26, {color: colors.ink, marginTop: 6})}>ROUTE CLEARANCE, UP TO · DOE 2024, P. 25</div>
+					</div>
+				</Pop>
+			</Footage>
 		</>
 	);
 };
+/** Where each Schnabel clip's best pass starts (seconds into the trimmed clip), set after looking at every frame. */
+export const RAIL = {ns: 0, tx: 0, nsQueue: 12};
 
 // ── 12 · The act question (S21–S22): back to the coil, into the steel ─────────────────────────────────────────────
 const Question12: React.FC = () => {
@@ -335,8 +314,7 @@ const Question12: React.FC = () => {
 };
 
 export const act1: SceneDef[] = [
-	{id: 'coil01', from: 0, to: sf(2) + 30, C: Coil01},
-	{id: 'report02', from: wf(2, 'twenty') - 10, to: ef(2) + 12, C: Report02},
+	{id: 'open01', from: 0, to: ef(2) + 12, C: Open01},
 	{id: 'core03', from: ef(2) - 10, to: clipOf('clip01').gapStartFrame + 20, C: Core03},
 	{id: 'clip01', from: clipOf('clip01').gapStartFrame, to: clipOf('clip01').gapEndFrame + 16, C: Clip01},
 	{id: 'finding05', from: sf(5) - 16, to: ef(5) + 30, C: Finding05},

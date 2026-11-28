@@ -8,6 +8,7 @@ import {LAMP, media, mono, sans} from './kit';
 import pages from './data/pages.json';
 import timing from '../vo/timing.json';
 import clipWords from './data/clip_words.json';
+import {Backdrop, backdropFor, BrollId} from './footage';
 
 // The transformer-steel film's shared parts. Scenes use ABSOLUTE film frames (timing.ts wf()); every component takes
 // `f` (the frame) or reads useCurrentFrame() directly: scenes are not wrapped in Sequences.
@@ -147,7 +148,7 @@ export type HL = {key: string; at: number; ats?: number[]};
  * A record page on the desk: slides on at `start`, a rostrum camera glides to the union of its highlighted phrases
  * (or `focus`), the highlights draw on their words. `page` overrides the page (a cover: page 1).
  */
-export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; label?: string; title?: string; page?: number; pushTo?: number; focus?: Rect; move?: 'zoom' | 'rostrum'; cropH?: number}> = ({doc, start, end, hl = [], label, title, page, pushTo, focus, move = 'rostrum', cropH}) => {
+export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; label?: string; title?: string; page?: number; pushTo?: number; focus?: Rect; move?: 'zoom' | 'rostrum'; cropH?: number; bg?: BrollId | null}> = ({doc, start, end, hl = [], label, title, page, pushTo, focus, move = 'rostrum', cropH, bg}) => {
 	const f = useCurrentFrame();
 	const o = Math.min(lead(f, start, 14), 1 - interpolate(f, [end - 14, end], [0, 1], clamp));
 	if (o <= 0) return null;
@@ -167,6 +168,7 @@ export const Doc: React.FC<{doc: DocId; start: number; end: number; hl?: HL[]; l
 	const source = `${DOCS[doc].src} · P. ${pg}${title ? ` · ${title}` : ''}`;
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
+			{bg !== null ? <Backdrop f={f} start={start} end={end} clip={bg ?? backdropFor(start).clip} from={bg ? 0 : backdropFor(start).from} /> : null}
 			<Exhibit page={{w: size[0], h: cropH ?? size[1]}} start={start} push={{from: start + 10, to: pushTo ?? start + 100, focus: fc}} highlights={highlights} label={label ?? 'RECORD'} source={source} move={move}>
 				<Img src={media(`pages/${file}.jpg`)} style={{width: size[0], height: size[1]}} />
 			</Exhibit>
@@ -254,8 +256,8 @@ export const HearingClip: React.FC<{f: number; id: string}> = ({f, id}) => {
 
 // ── A record chart on a lit mount (PLAYBOOK §6.8): bars that grow as their numbers are said ─────────────────────────
 
-export type Bar = {label: string; value: number; at: number; tone?: string; fmt?: (v: number) => string};
-export const BarChart: React.FC<{f: number; start: number; end: number; bars: Bar[]; max: number; title: string; source: string; unit?: string; x?: number; y?: number; w?: number; h?: number; children?: React.ReactNode}> = ({f, start, end, bars, max, title, source, x = 150, y = 120, w = 1620, h = 800, children}) => {
+export type Bar = {label: string; value: number; at: number; from?: number; tone?: string; fmt?: (v: number) => string};
+export const BarChart: React.FC<{f: number; start: number; end: number; bars: Bar[]; max: number; title: string; source: string; unit?: string; x?: number; y?: number; w?: number; h?: number; grid?: boolean; children?: React.ReactNode}> = ({f, start, end, bars, max, title, source, x = 150, y = 120, w = 1620, h = 800, grid = false, children}) => {
 	const o = Math.min(lead(f, start, 14), 1 - lead(f, end, 14));
 	if (o <= 0) return null;
 	const rise = tween(f, start, start + 30, 40, 0, ease.arrive);
@@ -264,10 +266,11 @@ export const BarChart: React.FC<{f: number; start: number; end: number; bars: Ba
 	return (
 		<div style={{position: 'absolute', left: x, top: y + rise, width: w, height: h, opacity: o, background: LAMP, border: `1px solid ${colors.border}`, boxShadow: '0 30px 80px rgba(0,0,0,0.55)'}}>
 			<div style={{position: 'absolute', left: 40, top: 30, ...T(30, {color: colors.ink, fontWeight: 700})}}>{title}</div>
+			{grid ? [0.25, 0.5, 0.75, 1].map((g) => <div key={g} style={{position: 'absolute', left: 80, right: 60, top: 110 + plotH * (1 - g), height: 1, background: colors.border, transform: `scaleX(${lead(f, start + g * 10, 14).toFixed(3)})`, transformOrigin: '0 50%'}} />) : null}
 			{/* the axis */}
 			<div style={{position: 'absolute', left: 80, right: 60, top: 110 + plotH, height: 2, background: colors.sub}} />
 			{bars.map((b, i) => {
-				const k = interpolate(f, [b.at - 24, b.at + 4], [0, 1], {...clamp, easing: ease.arrive});
+				const k = interpolate(f, [b.from ?? b.at - 24, b.at + 4], [0, 1], {...clamp, easing: ease.arrive});
 				const bh = (b.value / max) * plotH * k;
 				const bx = 120 + i * ((w - 200) / bars.length);
 				const tone = b.tone ?? colors.cyan;
@@ -401,6 +404,54 @@ export const Tray: React.FC<{f: number; start: number; end: number; pages: TrayP
 						</div>
 					);
 				})}
+			</div>
+		</div>
+	);
+};
+
+// ── A record excerpt (r03): the highlighted lines cut from the real page, a tight plate over moving footage ──────────
+
+/**
+ * The located phrase(s) of a record page, cropped with a margin and shown on a paper plate in the desk pose, over a
+ * blurred clip; the highlight draws on its words. The page itself is unaltered: this is a crop, never a retyping.
+ */
+export const Excerpt: React.FC<{f: number; doc: DocId; start: number; end: number; hl: HL[]; bg?: BrollId | null; bgFrom?: number; label?: string; title?: string; x?: number; y?: number; w?: number; pad?: [number, number]; maxH?: number}> = ({f, doc, start, end, hl, bg, bgFrom = 0, label = 'EXHIBIT', title, x = 210, y, w = 1500, pad = [70, 60], maxH = 560}) => {
+	const o = Math.min(lead(f, start, 12), 1 - interpolate(f, [end - 14, end], [0, 1], clamp));
+	if (o <= 0) return null;
+	const pg = phraseOf(doc, hl[0].key).page;
+	const file = `${doc}_p${String(pg).padStart(3, '0')}`;
+	const size = PAGES[file];
+	if (!size) throw new Error(`docs: page ${file} not rendered`);
+	const all = hl.filter((h) => phraseOf(doc, h.key).page === pg);
+	const u = union(all.flatMap((h) => phraseOf(doc, h.key).rects), pad[0], pad[1]);
+	const ux = Math.max(0, u.x);
+	const uw = Math.min(size[0] - ux, u.w);
+	const k = Math.min(w / uw, maxH / u.h);
+	const pw = uw * k;
+	const ph = u.h * k;
+	const px = x + (w - pw) / 2;
+	const py = y ?? (1080 - ph) / 2 - 50;
+	const settle = tween(f, start, start + 26, 0, 1, ease.arrive);
+	const push = tween(f, start, end, 1, 1.035, ease.camera);
+	const lines = all.flatMap((h) => {
+		const rs = phraseOf(doc, h.key).rects;
+		return rs.map((r, i) => ({...r, from: h.ats?.[i] ?? h.at - 15 - (rs.length - 1 - i) * 18}));
+	});
+	return (
+		<div style={{position: 'absolute', inset: 0, opacity: o}}>
+			{bg !== null ? <Backdrop f={f} start={start} end={end} clip={bg ?? backdropFor(start).clip} from={bg ? bgFrom : backdropFor(start).from} opacity={0.34} /> : null}
+			<div style={{position: 'absolute', inset: 0, perspective: 1000, perspectiveOrigin: '50% 40%'}}>
+				<div style={{position: 'absolute', left: px, top: py + (1 - settle) * 40, width: pw, height: ph, transform: `rotateX(${(8 * (1 - settle) + 2).toFixed(2)}deg) rotateZ(${(-0.8 + 0.4 * settle).toFixed(2)}deg) scale(${push.toFixed(4)})`, transformOrigin: '50% 60%', background: colors.paper, overflow: 'hidden', border: `1px solid ${colors.border}`, boxShadow: '0 24px 60px rgba(0,0,0,0.65)'}}>
+					<div style={{position: 'absolute', left: -ux * k, top: -u.y * k, width: size[0] * k, height: size[1] * k}}>
+						<Img src={media(`pages/${file}.jpg`)} style={{width: size[0] * k, height: size[1] * k}} />
+						{lines.map((r, i) => {
+							const d = interpolate(f, [r.from, r.from + 20], [0, 1], {...clamp, easing: ease.arrive});
+							return d > 0 ? <div key={i} style={{position: 'absolute', left: r.x * k, top: r.y * k, width: r.w * k * d, height: r.h * k, background: colors.highlight, mixBlendMode: 'multiply'}} /> : null;
+						})}
+					</div>
+				</div>
+				<div style={{position: 'absolute', left: px, top: py - 50 + (1 - settle) * 40, ...T(26, {color: colors.amber, fontWeight: 700}), opacity: settle}}>{label}</div>
+				<div style={{position: 'absolute', left: px, width: Math.max(pw, 900), top: py + ph + 18 + (1 - settle) * 40, ...T(26, {color: colors.ink}), opacity: settle, whiteSpace: 'nowrap'}}>{`${DOCS[doc].src} · P. ${pg}${title ? ` · ${title}` : ''}`}</div>
 			</div>
 		</div>
 	);
