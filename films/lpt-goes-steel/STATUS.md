@@ -1,6 +1,31 @@
-# Transformer steel (lpt-goes-steel): status and handoff (28 NOV 2026)
+# Transformer steel (lpt-goes-steel): status and handoff (28 NOV 2026, r03)
 
 Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playbook parts it names.
+
+## NOW (r03, 28 NOV 2026, ~11:30 PM IST)
+- **r03 built and merged** (PR #140): real footage per the owner's Drive spec `lpt-goes-steel/handoff/r03_cinematic_polish_spec.md`
+  and `footage/broll/us_specific_footage_sources.md`. Components: `remotion/footage.tsx` (`Footage`, `Backdrop`,
+  `TitleCard`, `BROLL` registry with every credit), `parts.tsx` `Excerpt` (cropped record lines over moving footage);
+  every `Doc` now sits over a blurred clip by act (`backdropFor`). Gates: tsc clean, `sync_audit` 0 fails
+  (`review/sync_audit_r03.md`), text floor 0, claims gate passes. Stills at every changed beat looked at.
+- **Render in flight:** GitHub run 46173008664 (remotion-render.yml, 720p, 15 runners, ref `ccr-2737a15b-mxmdq9`, the
+  same commit as main after merge). Output: Drive `lpt-goes-steel/renders/lpt-goes-steel_cut_r03_720p.mp4`.
+  **Next session:** check the run; if it failed, read the logs and re-run (or `blocks` + `reuse_from`). Then pull the cut,
+  run `scripts/stillness_audit.py` and `scripts/slide_audit.py`, look at frames (0:00–0:30 above all), write
+  `review/picture_gate_r03.md`, send the owner the Drive link (times in IST), then the Gemini `cut-audit` handoff.
+  No 4K until the owner approves the cut.
+- **Media:** all r03 clips are muted 1080p30 in Drive `lpt-goes-steel/render-media/broll/` (the runners pull them into
+  `public/films/lpt-goes-steel/broll/`); originals with `.info.json` in Drive `lpt-goes-steel/footage/hero_*`.
+  Licences in `media_manifest.csv` (13 rows, r03); description credits in `youtube/description_credits_r03.md`;
+  end-card credits in `scenes/outro.tsx` `CREDITS`. Owner (28 NOV): Gemini's Drive clips are licence-checked.
+- **Deviations from the spec, told to the owner:** Schnabel clips sit where the narration speaks of rail (1:42, 12:16),
+  not 8:10–9:30; WECX 800 carries a nuclear steam generator and is labelled so; the width beat (2:52) stays 3D;
+  Slovenian industrial clips are labelled ILLUSTRATION; the teaching-model transformer is cropped above its badge;
+  hero_04 used from 20 s (its burned-in "Quelle" line is at 12–16 s); hero_03 from 11 s (burned-in text before).
+- Mix unchanged (narration timing unchanged): Drive `lpt-goes-steel/mix/mix.wav`. New visual events have no new SFX
+  cues yet: a candidate fix for r04 if the cut review asks for it.
+
+## Earlier record (r02 and before)
 
 ## Done (owner gates in bold)
 - Research: `research/landscape.md`; Gemini's research passes checked (`review/gemini_research_check.md`,
