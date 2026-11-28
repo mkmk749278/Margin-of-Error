@@ -1955,6 +1955,18 @@ margin), **Titan from the USCG report**, **Camp Fire / PG&E** (the clearest cove
 Horizon stay on hold for the UK contempt check. CSB reports with a decision layer are a steady stream (CSB's own
 unpackaged animations draw 0.4–0.7M views).
 
+**After the master slate review (28 NOV 2026; leads, records opened, each needs its brief).** The owner's 2026–2027
+slate was checked against the repo and by a Gemini second opinion (`docs/research/2026-11-28_master_slate_review.md`,
+`films/slate-2026-2027/review/gemini_second-opinion_check.md`). Ratio stays 3 A : 1 B (item 12); North Hyde stays next.
+Order after `lpt-goes-steel`: `north-hyde`, `pes-refinery` (CSB 2019-04-I-PA), `fern-hollow` (NTSB HIR-24-02),
+`subsea-hvdc` (B), `freeport-lng` (PHMSA NOPV CPF 4-2024-033; the IFO RCFA needs Cowork), `west-reading-ugi` (NTSB
+PIR-25-01), `grande-costa-davorio` (NTSB MIR-25-16), then B: `bayer-gallium` or `jsw-forgings`. Winter Storm Elliott
+waits for a dated Act III decision. No "China" pillar: Track B dossiers on Chinese supply points are told through the
+dependency and the chemistry (§17.1 item 10). Unsupported slate figures, not to be used: Fern Hollow "$300,000 budget
+cut" and "100% loss on the tie plate" (12.5% remained), Elliott "$1.8B" (not in the FERC-NERC report), Freeport "20%"
+and "$6–8B" (unsourced). *Why the order:* a big existing video on the same case (CSB's PES animation, NTSB's Fern
+Hollow animation) is demand we sit beside in Suggested, not a closed door (items 12–13).
+
 **The bank of later cases** (from the strategy review; each needs its case sheet filled from primary records first):
 Baltimore Key Bridge (NTSB, MV Dali), OceanGate Titan (USCG MBI report), Grenfell (Inquiry Phase 2), Carillion and
 the Royal Liverpool hospital (HC 769), Deepwater Horizon (National Commission), the February 2021 Texas outages

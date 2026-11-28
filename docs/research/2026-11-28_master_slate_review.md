@@ -20,7 +20,7 @@ half of the output.
 | 1 | Alternate Track A and Track B | Owner, 10 NOV (§17.1 item 12): 3 Track A : 1 Track B until monetised | Owner's call (Q1) |
 | 2 | Next after `lpt-goes-steel`: `key-bridge-dali` | Owner, 27 NOV (`lpt-goes-steel/STATUS.md`): next is **North Hyde** (Heathrow substation fire); `films/key-bridge/` holds research only | Owner's call (Q2) |
 | 3 | Order #10: Alaska 1282 final-report film, "4 MISSING BOLTS" | Already made: Film 1 `four-missing-bolts` is built from NTSB AIR-25-04 (claims C51) and is public with three Shorts | Drop from the order; the slot's demand is better served by a re-edited compilation (§17.1 item 13, booster 2) |
-| 4 | Pillar 3 #8: East Palestine, "HBD read 103°F (below Norfolk Southern's 200°F alarm threshold)" | Already made (`east-palestine`, public). Our confirmed claims C07/C25: **103°F above ambient**, below the **170°F-above-ambient** threshold (AAR Rule 36); 253°F above ambient at the last detector (C11) | Drop; the slate's "200°F" is wrong and must not be reused anywhere (comment replies use `claims.csv` only) |
+| 4 | Pillar 3 #8: East Palestine, "HBD read 103°F (below Norfolk Southern's 200°F alarm threshold)" | Already made (`east-palestine`, public). Our confirmed claims C07/C25: **103°F above ambient**, below the **170°F-above-ambient** threshold (AAR Rule 36); 253°F above ambient at the last detector (C11) | Drop. *Corrected after the Gemini check:* RIR-24-05 also gives a "critical" alarm at more than 200°F above ambient (the 170–200°F band is the "warm bearing" alarm that first radios the crew); the slate's line drops "above ambient" and names the wrong level. Replies use `claims.csv` only |
 | 5 | "Pillar 2 — China Industrial & Supply-Chain Choke Points" as a named track | CLAUDE.md domain: US, UK, Canada, Australia, Europe; "no geopolitics from other regions"; §17.1 item 10: Track B allowed as a physical limit or single supply point **the economy rests on**, with **no national-rivalry framing** | Keep the physics films that a US/UK/European economy visibly rests on (gallium, heavy rare earths, graphite anodes), told from the dependency and the chemistry, never as "China's" track; bench the ones with no US/European stake or a security frame (Q3) |
 | 6 | ±1,100 kV Changji–Guquan UHVDC (order #11) | No US/UK/European failure, decision or dependency in the dossier; closest to the "physics-trivia detour" the domain rule excludes | Bench, unless a European/US line (e.g. a grid operator's HVDC plan citing it) gives it a stake |
 | 7 | ZPMC port cranes (China #8), anchored in House Homeland Security testimony | A security/geopolitics frame by its source | Bench (domain rule) |
@@ -66,6 +66,10 @@ research (`films/key-bridge/research/notes.md`).
 - Every figure in the pillar (Prysmian €17B backlog, NKT €13.0B, JSW 14,000-tonne presses, Ajinomoto ">95%", the
   83% quartz crucible price fall, the Quartz Corp closure) comes from a filing we open; TrendForce and similar market
   trackers are leads, never the source of a number on screen.
+
+## 4a. After the Gemini second opinion (28 NOV 2026)
+Checked in `films/slate-2026-2027/review/gemini_second-opinion_check.md`: HIR-24-02 is the right number, the PHMSA
+NOPV does call Freeport a BLEVE, and the East Palestine point is corrected above. The resulting order is in PLAYBOOK §17.4.
 
 ## 5. Open questions for the owner (asked in the session, 28 NOV 2026)
 Q1 ratio (3:1 vs alternating), Q2 the next film (North Hyde vs Key Bridge), Q3 the "China" pillar framing, Q4 whether
