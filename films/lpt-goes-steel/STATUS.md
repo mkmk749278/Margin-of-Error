@@ -19,20 +19,27 @@ Read this first in a new session, then `CLAUDE.md`, `treatment.md` and the playb
 - Hearing clips fetched and checked by ear: Drive `lpt-goes-steel/footage/clip01.mp4` (Rodrigues, use 29.4–36.2 s) and
   `clip02.mp4` (Paulling, use 17.2–33.6 s); licence note in `scenes/exhibits_leads.md`.
 
+## Done 28 NOV 2026 (this session)
+- **Audio approved by the owner**, with notes applied (`vo/splice_r02.py`): P49 −3.0 dB, its pre-pause 0.90 → 0.48 s; P04 +1.0 dB, P26 +1.2 dB
+  (within ±1 dB of their neighbours; P23 already was). Finals `*_final_r02.wav/.mp3` in Drive `lpt-goes-steel/vo/`.
+- Timing chain on the finals: film 14:27.6; holds in `script/holds.json`; clip01 (Rodrigues) at 0:27, clip02 (Paulling)
+  at 10:38; open loop 6:48.
+- **0:18 shot: carried on the 3D core** (owner's call).
+- Gemini second opinion on the shot plan checked: `review/gemini_second-opinion_check.md`.
+- Full build: `remotion/` (3D coil and cores in `coil3d.tsx`; parts; acts 1–5; beats; outro). Records in
+  `assets/lpt-goes-steel/records/` (fetched by `scenes/fetch_records.py` and `scenes/print_web.cjs`), pages and highlight
+  rectangles in `remotion/data/`. Gates: tsc ✓, text_floor 0 ✓, claims_check ✓, sync_audit 0 fails ✓ (405 scene cues
+  plus 438 generated camera steps from `scenes/beats_gen.py`). Mix: `sound/mix.json`, −14.0 LUFS / −1.9 dBTP.
+- Render media and the mix in Drive (`render-media/`, `mix/`). 720p run 49 on GitHub's runners (15), started 2:26 PM IST.
+
 ## Next (in order)
-1. Re-take spliced (`review/gemini_audio-audit_check.md`, `vo/splice_r01.py`): finals
-   `assets/lpt-goes-steel/vo/lpt-goes-steel_vo_b01_final.wav` (577.97 s) and `_b02_final.wav` (231.97 s), also in
-   Drive `lpt-goes-steel/vo/` with MP3 copies. **Waiting: the owner approves the audio.**
-2. Timing chain on the final takes: `vo_timing.py` → `word_align.py` (§10.4); splice the two clips at 0:24 and after
-   "described it" (Act IV); the calendar run hold (signature 2).
-3. Exhibits (step 7): the open item is the 0:18 shot (a US large power transformer in a substation; options in
-   `scenes/exhibits_leads.md`, owner's call); fetch the transport clip `1AiQzYdMUGk` and the slitting-line clips;
-   document pages from the 232 report, USTR, DOE 2014/2024, the Cliffs datasheets; `media_manifest.csv`.
-4. Hero builds (coil, core, surface, calendar), then word-level choreography, Modal renders (not built yet: stills and
-   short tests only until it is), music, the 720p cut, Gemini cut audit, owner.
+1. Pull the 720p cut, run `slide_audit.py` and `stillness_audit.py`, look at it, then Gemini `cut-audit` (§14.6).
+2. Check Gemini's audit, fix, and re-render only the blocks that changed (`reuse_from`).
+3. **The owner approves the cut**, then the 4K master, then the YouTube package.
+4. Before release: re-check the core-tariff rate (C56) and the DOE award status (fresh-facts); re-check the CC0 licence
+   of the laminations photo on Commons (the API was rate-limited on 28 NOV).
 
 ## Open owner decisions
-- The 0:18 substation shot (licence a photo, DOE Flickr by hand, or carry it on the 3D core).
 - Next film after this one: North Hyde (Heathrow substation fire), owner decision 27 NOV 2026.
 
 ## Notes
