@@ -53,8 +53,8 @@ const Mill01: React.FC = () => {
 const Release01b: React.FC = () => {
 	const f = useCurrentFrame();
 	const cam = camAt(f, [
-		{f: ef(135) - 10, cam: {pos: [6, 4.5, 21], look: [0, 0.9, 0], fov: 36}},
-		{f: ef(136) + 30, cam: {pos: [2, 4, 20], look: [0, 1.2, 0], fov: 35}},
+		{f: ef(135) - 10, cam: {pos: [6, 6.7, 24], look: [0, 2.9, 0], fov: 36}},
+		{f: ef(136) + 30, cam: {pos: [2, 6.2, 23], look: [0, 3.2, 0], fov: 35}},
 	]);
 	return (
 		<HeroShot f={f} start={ef(135) - 10} end={ef(136) + 30} cam={cam} props={{spin: f * 0.0035}}>
@@ -79,7 +79,7 @@ const Plants02: React.FC = () => {
 				f={f}
 				start={sf(137) - 14}
 				end={ef(141) + 30}
-				w={420}
+				w={520}
 				pages={[
 					{img: 'hitachi_p002', tag: 'HITACHI ENERGY · SOUTH BOSTON, VA', at: wf(138, 'Hitachi'), mark: '$457M', markAt: wf(138, 'fifty-seven')},
 					{img: 'siemens_p001', tag: 'SIEMENS ENERGY · CHARLOTTE, NC', at: wf(139, 'Siemens'), mark: '$150M', markAt: wf(139, 'fifty')},
@@ -162,9 +162,9 @@ const Answer05: React.FC = () => {
 	const f = useCurrentFrame();
 	const h = hold(149);
 	const cam = camAt(f, [
-		{f: sf(145) - 20, cam: {pos: [5, 4, 20], look: [0, 1.2, 0], fov: 35}},
-		{f: wf(146, 'wider'), cam: {pos: [0, 3.4, 18], look: [0, 1.3, 0], fov: 33}},
-		{f: ef(146) + 30, cam: {pos: [-1, 3.4, 18], look: [0, 1.3, 0], fov: 33}},
+		{f: sf(145) - 20, cam: {pos: [5, 6.2, 23], look: [0, 3.2, 0], fov: 35}},
+		{f: wf(146, 'wider'), cam: {pos: [0, 5.6, 21], look: [0, 3.3, 0], fov: 33}},
+		{f: ef(146) + 30, cam: {pos: [-1, 5.6, 21], look: [0, 3.3, 0], fov: 33}},
 	]);
 	const reach = interpolate(f, [wf(146, 'roll') - 6, wf(146, 'wider'), wf(146, 'wider') + 24], [W920, W932, W920], {...clamp, easing: ease.camera});
 	return (
@@ -202,20 +202,20 @@ const Answer05: React.FC = () => {
 const Signoff06: React.FC = () => {
 	const f = useCurrentFrame();
 	const cam = camAt(f, [
-		{f: sf(150) - 30, cam: {pos: [12, 5, 22], look: [0, 0.6, 0], fov: 36}},
-		{f: wf(151, 'millimeters'), cam: {pos: [4, 4, 21], look: [0, 1.2, 0], fov: 35}},
-		{f: wf(153, 'thirty-two'), cam: {pos: [1, 4, 20], look: [0, 1.6, 0], fov: 34}},
-		{f: wf(154, 'abroad'), cam: {pos: [0, 5, 23], look: [0, 1.4, 0], fov: 35}},
-		{f: FILM_FRAMES, cam: {pos: [-2, 6, 27], look: [0, 1.2, 0], fov: 36}},
+		{f: sf(150) - 30, cam: {pos: [12, 7.2, 25], look: [0, 2.6, 0], fov: 36}},
+		{f: wf(151, 'millimeters'), cam: {pos: [4, 6.2, 24], look: [0, 3.2, 0], fov: 35}},
+		{f: wf(153, 'thirty-two'), cam: {pos: [1, 6.2, 23], look: [0, 3.6, 0], fov: 34}},
+		{f: wf(154, 'abroad'), cam: {pos: [0, 7.2, 26], look: [0, 3.4, 0], fov: 35}},
+		{f: FILM_FRAMES, cam: {pos: [-2, 8.2, 30], look: [0, 3.2, 0], fov: 36}},
 	]);
 	const cy = lead(f, wf(152, 'nine'), 12);
 	const am = lead(f, wf(153, 'thirty-two'), 12);
-	const dim = interpolate(f, [FILM_FRAMES - 420, FILM_FRAMES - 360], [1, 0.25], clamp);
+	const dim = interpolate(f, [FILM_FRAMES - 420, FILM_FRAMES - 360], [1, 0], clamp);
 	return (
 		<HeroShot f={f} start={sf(150) - 30} end={FILM_FRAMES + 30} cam={cam} props={{spin: f * 0.0035, lamp: 0.6 + 0.4 * dim}}>
 			<div style={{position: 'absolute', inset: 0, opacity: dim}}>
-				<Caliper cam={cam} k={cy} halfW={W920} tone={colors.cyan} label={<span>920 MM · THE ONE MILL AT HOME</span>} />
-				<Caliper cam={cam} k={am} halfW={W932} y={COIL.ro + 2.4} tone={colors.amber} label={<span>&gt;932 MM · THE LARGER CORES</span>} />
+				<Caliper cam={cam} k={cy} halfW={W920} tone={colors.cyan} label={<span>920 MM · MADE AT HOME</span>} labelAbove={false} />
+				<Caliper cam={cam} k={am} halfW={W932} y={COIL.ro + 2.4} tone={colors.amber} label={<span>&gt;932 MM · LARGER CORES</span>} />
 				<Pop f={f} at={wf(150, 'forty')} until={wf(152, 'nine')} style={{left: 120, top: 120}}>
 					<Chip text="DESIGN LIFE ~40 YEARS · DOE 2024 P. 11" tone={colors.ink} size={30} />
 				</Pop>

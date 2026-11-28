@@ -1,0 +1,137 @@
+{
+ "_doc": "Mix plan for scripts/mix_film.py (PLAYBOOK §12). Music: the channel's own library (Music-Library/forensic), beds per the treatment fx07 → fx08 → fx02 → fx03 → fx04 → fx09 → fx05 → fx10; no music under the calendar run (signature 2), only room tone and the hum. Effects: our seeded synthesised bank (scripts/sfx_synth.py). The two hearing clips play their own sound on their frames; the music ducks under them. Built 28 NOV 2026.",
+ "target_lufs": -14.0,
+ "max_tp": -1.5,
+ "voice": {
+  "comp_threshold_db": -34,
+  "comp_ratio": 4,
+  "makeup_db": 4,
+  "peak_dbtp": -2.8,
+  "target_lufs": -14.3
+ },
+ "music_duck_db": 8,
+ "clip_duck_db": 15,
+ "room": {
+  "file": "assets/sfx/room_bed.wav",
+  "rms_db": -31
+ },
+ "clips": [
+  {
+   "file": "assets/clips/clip01.wav",
+   "frame": 1644,
+   "lufs": -16.0,
+   "why": "clip01: House E&C hearing video, 13 SEP 2023, unaltered"
+  },
+  {
+   "file": "assets/clips/clip02.wav",
+   "frame": 38337,
+   "lufs": -16.0,
+   "why": "clip02: House E&C hearing video, 13 SEP 2023, unaltered"
+  }
+ ],
+ "music": [
+  {
+   "file": "assets/music/fx07_evidence.wav",
+   "start": 0.8,
+   "end": 56.13,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "cold open: the coil and the record"
+  },
+  {
+   "file": "assets/music/fx08_countdown.wav",
+   "start": 52.13,
+   "end": 127.06,
+   "rms_db": -27,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act I: the wait"
+  },
+  {
+   "file": "assets/music/fx02_mechanism.wav",
+   "start": 123.06,
+   "end": 315.47,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act II: the steel"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "start": 311.47,
+   "end": 491.92,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III: the tariff, to the calendar"
+  },
+  {
+   "file": "assets/music/fx03_boardroom.wav",
+   "start": 527.18,
+   "end": 608.42,
+   "rms_db": -27,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act III: both sides, August 2025"
+  },
+  {
+   "file": "assets/music/fx04_cascade.wav",
+   "start": 604.42,
+   "end": 697.47,
+   "rms_db": -27,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act IV: the cost and the model"
+  },
+  {
+   "file": "assets/music/fx09_aftermath.wav",
+   "start": 693.47,
+   "end": 748.32,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act IV: the footnote and the line"
+  },
+  {
+   "file": "assets/music/fx05_verdict.wav",
+   "start": 744.32,
+   "end": 842.5,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "Act V: what is being done"
+  },
+  {
+   "file": "assets/music/fx10_signoff.wav",
+   "start": 838.5,
+   "end": 867.62,
+   "rms_db": -26,
+   "fade_in": 4,
+   "fade_out": 4,
+   "why": "sign-off and outro"
+  }
+ ],
+ "silences": [
+  {
+   "start": 491.92,
+   "end": 527.18,
+   "why": "signature 2: no music under the calendar run"
+  }
+ ],
+ "sfx_trim_db": 0,
+ "sfx_files": {
+  "paper_slide": "assets/sfx/paper_slide.wav",
+  "stamp": "assets/sfx/stamp.wav",
+  "highlighter": "assets/sfx/highlighter.wav",
+  "relay_click": "assets/sfx/relay_click.wav",
+  "metal_snap_sub": "assets/sfx/metal_snap_sub.wav",
+  "pressure_drop": "assets/sfx/pressure_drop.wav",
+  "quartz_tick": "assets/sfx/quartz_tick.wav",
+  "pen_scratch": "assets/sfx/pen_scratch.wav",
+  "whoosh": "assets/sfx/whoosh.wav",
+  "cockpit_chime": "assets/sfx/cockpit_chime.wav",
+  "transformer_hum": "assets/sfx/transformer_hum.wav"
+ },
+ "extra_cues": []
+}

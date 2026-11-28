@@ -147,8 +147,8 @@ const Line05: React.FC = () => {
 	const f = useCurrentFrame();
 	const h = hold(131);
 	const cam = camAt(f, [
-		{f: sf(129) - 20, cam: {pos: [10, 4.5, 19], look: [0, 0.4, 0], fov: 36}},
-		{f: wf(129, 'anneal'), cam: {pos: [8, 4, 18], look: [0, 0.4, 0], fov: 35}},
+		{f: sf(129) - 20, cam: {pos: [10, 6.7, 22], look: [0, 2.4, 0], fov: 36}},
+		{f: wf(129, 'anneal'), cam: {pos: [8, 6.2, 21], look: [0, 2.4, 0], fov: 35}},
 	]);
 	return (
 		<>

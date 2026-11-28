@@ -124,10 +124,10 @@ const Make04: React.FC = () => (
 const Width05: React.FC = () => {
 	const f = useCurrentFrame();
 	const cam = camAt(f, [
-		{f: sf(31) - 30, cam: {pos: [6, 5, 22], look: [0, 0.8, 0], fov: 36}},
-		{f: wf(31, 'width'), cam: {pos: [1, 4, 21.5], look: [0, 1.2, 0], fov: 36}},
-		{f: wf(32, 'limits'), cam: {pos: [-1, 4.5, 20], look: [0, 1.4, 0], fov: 35}},
-		{f: ef(32) + 40, cam: {pos: [-1.5, 4.5, 19.6], look: [0, 1.4, 0], fov: 35}},
+		{f: sf(31) - 30, cam: {pos: [6, 7.2, 25], look: [0, 2.8, 0], fov: 36}},
+		{f: wf(31, 'width'), cam: {pos: [1, 6.2, 24.5], look: [0, 3.2, 0], fov: 36}},
+		{f: wf(32, 'limits'), cam: {pos: [-1, 6.7, 23], look: [0, 3.4, 0], fov: 35}},
+		{f: ef(32) + 40, cam: {pos: [-1.5, 6.7, 22.6], look: [0, 3.4, 0], fov: 35}},
 	]);
 	const cut = interpolate(f, [wf(32, 'cut') - 8, wf(32, 'coil') + 10], [0, 1], {...clamp, easing: ease.arrive});
 	const a = P([-W920, COIL.ro + 0.2, 1.2], cam);
@@ -173,12 +173,12 @@ const Overhang07: React.FC = () => {
 	const from = sf(35) - 20;
 	const h = hold(35);
 	const cam = camAt(f, [
-		{f: from, cam: {pos: [-1.5, 4.5, 19.6], look: [0, 1.4, 0], fov: 35}},
-		{f: wf(35, 'larger'), cam: {pos: [2, 5, 18], look: [2.5, 1.6, 0], fov: 33}},
-		{f: wf(35, 'thirty-two'), cam: {pos: [7, 4.5, 11], look: [W920, 1.6, 0], fov: 30}},
-		{f: h.from + h.frames, cam: {pos: [7.4, 4.4, 10], look: [W920, 1.6, 0], fov: 29}},
-		{f: wf(36, 'joined'), cam: {pos: [2, 6, 17], look: [0, 1.6, 0], fov: 34}},
-		{f: ef(36) + 30, cam: {pos: [1.5, 6, 17.2], look: [0, 1.6, 0], fov: 34}},
+		{f: from, cam: {pos: [-1.5, 6.7, 22.6], look: [0, 3.4, 0], fov: 35}},
+		{f: wf(35, 'larger'), cam: {pos: [2, 7.2, 21], look: [2.5, 3.6, 0], fov: 33}},
+		{f: wf(35, 'thirty-two'), cam: {pos: [7, 7.5, 13], look: [W920, 4.6, 0], fov: 30}},
+		{f: h.from + h.frames, cam: {pos: [7.4, 7.4, 12], look: [W920, 4.6, 0], fov: 29}},
+		{f: wf(36, 'joined'), cam: {pos: [2, 8.2, 20], look: [0, 3.6, 0], fov: 34}},
+		{f: ef(36) + 30, cam: {pos: [1.5, 8.2, 20.2], look: [0, 3.6, 0], fov: 34}},
 	]);
 	const pat = interpolate(f, [wf(35, 'larger') - 10, wf(35, 'cores') + 10], [0, 1], {...clamp, easing: ease.arrive});
 	const over = lead(f, wf(35, 'thirty-two'), 14);
@@ -206,7 +206,7 @@ const Overhang07: React.FC = () => {
 					<div style={{position: 'absolute', left: mid.x - 2, top: a.y - 70, width: 6, height: 88, background: colors.amber, opacity: joined, boxShadow: `0 0 18px ${colors.amber}`}} />
 				</>
 			) : null}
-			<Pop f={f} at={wf(35, 'thirty-two')} until={wf(36, 'Two')} style={{left: 120, top: 120}}>
+			<Pop f={f} at={wf(35, 'thirty-two')} until={wf(36, 'Two')} style={{right: 120, top: 560}}>
 				<Box>
 					<span style={T(72, {color: colors.amber, fontWeight: 700})}>12+ MM SHORT</span>
 					<div style={T(26, {color: colors.ink, marginTop: 6})}>&gt;932 MM NEEDED · 920 MM MADE</div>
@@ -227,10 +227,10 @@ const Patch08: React.FC = () => (
 const Question09: React.FC = () => {
 	const f = useCurrentFrame();
 	const cam = camAt(f, [
-		{f: sf(38) - 20, cam: {pos: [5, 4, 20], look: [0, 1.2, 0], fov: 35}},
-		{f: wf(38, 'obvious'), cam: {pos: [2, 3.6, 19], look: [0, 1.2, 0], fov: 34}},
-		{f: wf(39, 'wider'), cam: {pos: [0, 3.4, 18], look: [0, 1.3, 0], fov: 33}},
-		{f: wf(40, 'record'), cam: {pos: [-2, 3.6, 18.5], look: [0, 1.2, 0], fov: 33}},
+		{f: sf(38) - 20, cam: {pos: [5, 6.2, 23], look: [0, 3.2, 0], fov: 35}},
+		{f: wf(38, 'obvious'), cam: {pos: [2, 5.8, 22], look: [0, 3.2, 0], fov: 34}},
+		{f: wf(39, 'wider'), cam: {pos: [0, 5.6, 21], look: [0, 3.3, 0], fov: 33}},
+		{f: wf(40, 'record'), cam: {pos: [-2, 5.8, 21.5], look: [0, 3.2, 0], fov: 33}},
 	]);
 	const reach = interpolate(f, [wf(39, 'roll') - 6, wf(39, 'wider'), wf(39, 'wider') + 30, wf(40, 'back')], [W920, W932, W932, W920], {...clamp, easing: ease.camera});
 	return (

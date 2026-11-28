@@ -15,6 +15,7 @@ import {SceneDef} from './scenes/types';
 
 import timing from '../vo/timing.json';
 import {FILM_FRAMES, s2f} from './timing';
+import {BEATS} from './beats';
 
 // TRANSFORMER STEEL: the whole film on one clock (vo/timing.json). Each scene mounts on absolute frames; scenes fade
 // themselves, and neighbours overlap so a cut is always a dissolve on the desk.
@@ -61,6 +62,20 @@ const shotCam = (f: number, s: {from: number; to: number}, i: number): string =>
 };
 const CAM_ORIGIN = '50% 48%';
 
+/** The desk camera steps on the word (PLAYBOOK §10.6): each beat eases a 26 px lateral move over 14 frames, the
+ * direction alternating, so the frame answers the narration where the scene's own cues leave a gap (scenes/beats_gen.py). */
+const beatCam = (f: number): string => {
+	let x = 0;
+	let y = 0;
+	for (let i = 0; i < BEATS.length && BEATS[i] <= f; i++) {
+		const t = Math.min(1, (f - BEATS[i]) / 14);
+		const e = t * t * (3 - 2 * t);
+		x += (i % 2 === 0 ? 1 : -1) * 26 * e;
+		y += (i % 4 < 2 ? 1 : -1) * 8 * e;
+	}
+	return `translate(${(x - 13).toFixed(2)}px, ${(y - 4).toFixed(2)}px) scale(1.02)`; // centred, inside a 2% overscan: no edge shows
+};
+
 const Scenes: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
@@ -84,7 +99,9 @@ const Scenes: React.FC = () => {
 export const LptSteel: React.FC = () => (
 	<AbsoluteFill style={{background: colors.void}}>
 		<Desk duration={FILM_FRAMES} coords>
-			<Scenes />
+			<AbsoluteFill style={{transform: beatCam(useCurrentFrame())}}>
+				<Scenes />
+			</AbsoluteFill>
 			<ActChip />
 			<Outro />
 		</Desk>

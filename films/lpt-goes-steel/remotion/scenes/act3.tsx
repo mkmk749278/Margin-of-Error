@@ -60,13 +60,13 @@ const Codes03: React.FC = () => {
 	const outK = lead(f, wf(62, 'not'), 10);
 	return (
 		<HeroShot f={f} start={from} end={ef(62) + 40} cam={cam} props={{spin: f * 0.0035, core: 1, imported: 0}}>
-			<Pop f={f} at={wf(61, 'coil')} style={{left: c.x - 260, top: c.y - 150, width: 520, textAlign: 'center'}}>
+			<Pop f={f} at={wf(61, 'coil')} style={{left: c.x - 260, top: Math.max(130, c.y - 150), width: 520, textAlign: 'center'}}>
 				<Box>
 					<div style={T(32, {color: colors.ink, fontWeight: 700})}>HTS 7225.11 · THE COIL</div>
 					<div style={{...T(40, {color: colors.amber, fontWeight: 700}), opacity: inK, marginTop: 8}}>25% TARIFF · IN</div>
 				</Box>
 			</Pop>
-			<Pop f={f} at={wf(62, 'core')} style={{left: k.x - 300, top: k.y - 170, width: 600, textAlign: 'center'}}>
+			<Pop f={f} at={wf(62, 'core')} style={{left: k.x - 300, top: Math.max(130, k.y - 170), width: 600, textAlign: 'center'}}>
 				<Box>
 					<div style={T(32, {color: colors.ink, fontWeight: 700})}>HTS 8504.90 · THE CORE</div>
 					<div style={T(26, {color: colors.ink, marginTop: 4})}>{f >= wf(62, 'electrical') ? 'ELECTRICAL EQUIPMENT' : ' '}</div>
@@ -269,10 +269,10 @@ const Calendar09: React.FC = () => {
 	return (
 		<>
 			<Calendar f={f} start={sf(86) - 80} end={ef(91) + 70} pages={pages.map((p) => ({...p, tone: p.tone ?? (none > 0 ? colors.cyan : colors.sub)}))} />
-			<Pop f={f} at={wf(89, 'tariff')} until={h.from + 40} style={{left: 0, right: 0, top: 820, textAlign: 'center'}}>
+			<Pop f={f} at={wf(89, 'tariff')} until={h.from + 40} style={{left: 0, right: 0, top: 860, textAlign: 'center'}}>
 				<span style={T(40, {color: colors.cyan, fontWeight: 700})}>NONE A TARIFF ON CORES</span>
 			</Pop>
-			<Pop f={f} at={wf(90, 'August')} until={ef(91) + 60} style={{left: 0, right: 0, top: 820, textAlign: 'center'}}>
+			<Pop f={f} at={wf(90, 'August')} until={ef(91) + 60} style={{left: 0, right: 0, top: 860, textAlign: 'center'}}>
 				<Num f={f} keys={[{frame: wf(90, 'August') - 4, value: 0}, {frame: wf(90, 'twenty-five'), value: 58}]} fmt={(v) => `${Math.round(v)} MONTHS FROM THE FINDING`} size={44} tone={colors.amber} step />
 			</Pop>
 			<Pop f={f} at={wf(91, 'say')} until={ef(91) + 60} style={{left: 96, top: 96}}>

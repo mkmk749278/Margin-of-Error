@@ -318,10 +318,10 @@ const Rail11: React.FC = () => {
 const Question12: React.FC = () => {
 	const f = useCurrentFrame();
 	const cam = camAt(f, [
-		{f: sf(21) - 20, cam: {pos: [9, 4, 20], look: [0, 0.6, 0], fov: 36}},
-		{f: wf(21, 'margin'), cam: {pos: [5, 3, 18], look: [0, 0.8, 0], fov: 34}},
-		{f: wf(22, 'steel'), cam: {pos: [9.5, 1.5, 5.5], look: [W920, 0.5, 0], fov: 30}},
-		{f: sf(23) - 10, cam: {pos: [7.2, 1.0, 3.4], look: [W920, 0.2, 0], fov: 26}},
+		{f: sf(21) - 20, cam: {pos: [9, 6.2, 23], look: [0, 2.6, 0], fov: 36}},
+		{f: wf(21, 'margin'), cam: {pos: [5, 5.2, 21], look: [0, 2.8, 0], fov: 34}},
+		{f: wf(22, 'steel'), cam: {pos: [9.5, 3.7, 8.5], look: [W920, 2.5, 0], fov: 30}},
+		{f: sf(23) - 10, cam: {pos: [7.2, 3.2, 6.4], look: [W920, 2.2, 0], fov: 26}},
 	]);
 	const k = lead(f, wf(21, 'margin'), 14);
 	const o = 1 - lead(f, wf(22, 'steel'), 20);
