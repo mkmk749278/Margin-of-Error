@@ -29,6 +29,7 @@ for key, s in spec.items():
     if pg not in cache:
         x = subprocess.run(["pdftotext", "-f", str(pg), "-l", str(pg), "-bbox", pdf, "-"], capture_output=True, text=True, check=True).stdout
         x = re.sub(r"<!DOCTYPE[^>]*>", "", x).replace("&nbsp;", " ")
+        x = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", x)  # pdftotext can emit control characters, which XML rejects
         root = ET.fromstring(re.sub(r' xmlns="[^"]+"', "", x))
         page = root.find(".//page")
         pw = float(page.get("width"))

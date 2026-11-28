@@ -1,0 +1,30 @@
+{
+"c07": {
+"page": 2,
+"phrase": "Standard: 914 mm (36.00 in.)"
+},
+"c08": {
+"page": 3,
+"phrase": "SRA Epstein testing is not applicable to TRAN-COR CARLITE DR products since the domain refinement treatment is eradicated upon annealing at temperatures greater than 600 \u00b0C"
+},
+"c64": {
+"page": 2,
+"phrase": "H-0: 0.23 mm (0.009 in.)"
+},
+"c67": {
+"page": 1,
+"phrase": "products are suitable for those types of transformers where a stress relief annealing treatment of the magnetic core is not used. Stress-relief annealing will result in the eradication"
+},
+"c97": {
+"page": 1,
+"phrase": "TRAN-COR\u00ae H CARLITE\u00ae products are suitable for all types of transformers while TRAN-COR H DR\u00ae (Domain Refined) products are suitable for those types of transformers where a stress"
+},
+"erad": {
+"page": 3,
+"phrase": "domain refinement treatment is eradicated upon annealing at temperatures greater than 600 \u00b0C"
+},
+"m080": {
+"page": 3,
+"phrase": "M080-23P5"
+}
+}

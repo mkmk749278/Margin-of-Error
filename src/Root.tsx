@@ -18,6 +18,9 @@ import type {ShortProps} from '../lib/remotion/Short';
 import {Reel, calcReelMetadata, REEL_W, REEL_H} from '../lib/remotion/Reel';
 import type {ReelProps} from '../lib/remotion/Reel';
 import {ReelMyths} from '../lib/remotion/ReelMyths';
+import {HeroCheck as LptHeroCheck} from '../films/lpt-goes-steel/remotion/dev';
+import {LptSteel} from '../films/lpt-goes-steel/remotion/Film';
+import {FILM_FRAMES as LPT_FRAMES} from '../films/lpt-goes-steel/remotion/timing';
 
 // Shorts render with --props films/<slug>/shorts/<id>.props.json (scripts/shorts_build.py writes them).
 const shortDefaults: ShortProps = {id: 'none', clip: 'shorts/none.mp4', duration: 1, chip: '', hook: [], words: [], sentences: [], cover: 0};
@@ -44,6 +47,9 @@ export const Root: React.FC = () => (
 			<Composition id="EPThumbG" component={ThumbPoster} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="EPThumbF" component={ThumbBearing} durationInFrames={1} fps={video.fps} width={video.width} height={video.height} defaultProps={{headline: ['CREW', 'NOT', 'TOLD'], accent: 'red' as const}} />
 		</Folder>
+		<Folder name="LptSteel">
+			<Composition id="LptSteel" component={LptSteel} durationInFrames={LPT_FRAMES} fps={video.fps} width={video.width} height={video.height} />
+		</Folder>
 		<Folder name="Shorts">
 			<Composition id="Short" component={Short} durationInFrames={60} fps={video.fps} width={SHORT_W} height={SHORT_H} defaultProps={shortDefaults} calculateMetadata={calcShortMetadata} />
 		</Folder>
@@ -52,6 +58,7 @@ export const Root: React.FC = () => (
 			<Composition id="ReelMyths" component={ReelMyths} durationInFrames={60} fps={video.fps} width={REEL_W} height={REEL_H} defaultProps={reelDefaults} calculateMetadata={calcReelMetadata} />
 		</Folder>
 		<Folder name="Dev">
+			<Composition id="LptHeroCheck" component={LptHeroCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="PlugCheck" component={PlugCheck} durationInFrames={4} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="HullCheck" component={HullCheck} durationInFrames={241} fps={video.fps} width={video.width} height={video.height} />
 			<Composition id="EngineCheck" component={EngineCheck} durationInFrames={600} fps={video.fps} width={video.width} height={video.height} />

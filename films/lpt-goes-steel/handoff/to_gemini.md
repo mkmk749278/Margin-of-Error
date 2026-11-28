@@ -1,37 +1,54 @@
 ---
 repo: Margin-of-Error
 slug: lpt-goes-steel
-task_type: audio-audit
-created_ist: 2026-11-28 IST
+task_type: second-opinion
+created_ist: 2026-11-28 13:44 IST
 return_path: lpt-goes-steel/handoff/from_gemini.md
 ---
 
-# Request for Gemini: audio-audit, lpt-goes-steel
-
-The owner recorded the approved narration v2 with Marcus (Eleven v4, Natural) and asked for your listening review:
-word mapping and accuracy against the script. Two takes, in order.
+# Request for Gemini: second-opinion, lpt-goes-steel
 
 ## Files in Drive to inspect
-- Takes (in order): lpt-goes-steel_vo_b01.mp3 https://drive.google.com/file/d/1XPJgloZz_mSDSQS3YmDatZxvp4t9ULr0/view
-  (9:38) and lpt-goes-steel_vo_b02.mp3 https://drive.google.com/file/d/1Ynf2oh0acazdJ48bCTRAPyNWI-Yvvwm_/view (3:51)
-- Script: `vo.txt` (uploaded with this request). Block 1 ends at "...twenty-five percent, on their full value."; block 2
-  starts at "How much came in, in those years?"
+- Shot plan: `handoff/shotlist.md` (attached: the picture for every sentence of the locked narration)
+- Locked narration: `handoff/vo.txt` (attached; recorded and approved, words cannot change)
+- Brief with the locked title and thumbnail promise: `handoff/brief.md` (attached)
+- Already staged by you: `assets/` (substation CC0, two Schnabel-car photos, the core workshop photo) and `records/`
 
 ## Specific checks requested
-Listen to every file in full against the script. The voice is clinical, precise, understated, never dramatic.
-1. **Word map:** for each paragraph of the script, the take and the start time (mm:ss.s) where its first word is
-   spoken, so we can cut and cue. Then every wrong, skipped, repeated or added word, with its time.
-2. Every number, date and decimal read exactly as scripted ("nine hundred and twenty", "nine hundred and thirty-two",
-   "four thousand nine hundred", "six thousand seven hundred and ninety-nine", "one point zero one",
-   "fourteen point five", "four hundred and seven", "twenty-two million", "one hundred and sixty-seven million",
-   "six hundred and fifty percent", years); acronyms letter by letter as written ("U - S", "H - D").
-3. Names and places: Cleveland-Cliffs, Butler Works, Howard Industries, Yury Dvorkin, Johns Hopkins, Hitachi Energy,
-   Siemens Energy, Hyundai, Warren (Ohio), Charlotte, Montgomery, South Boston, "Section two thirty-two". Any
-   mispronunciation, with how it sounded.
-4. Delivery: uptalk, vocal fry or whisper, breathiness, swallowed endings, robotic or glitchy spots, clicks, loudness,
-   tone or room changes between the two files.
-5. Pace: rushed numbers, quotes or document lines; a missing pause before a key number or after an exhibit line
-   (the 920 / 932 lines, the national-security finding, "None of it was a tariff on cores.", the payoff line after it).
-6. Re-take list (exact sentences, in order of importance) and a keep list (5 best moments). Scores 1-10: clarity,
-   naturalness, authority, pace, consistency.
-Times are leads: we confirm every timed finding by measurement before any sentence is re-taken.
+1. **Shot plan review.** Read shotlist.md against vo.txt as a US or UK viewer on a TV, desk or phone. Per row: is
+   there a stronger *real* picture (a document page, a public-domain photo, public hearing or agency video) than what
+   we planned? Where does the picture risk repeating the narration as text, or holding one picture too long? Which
+   beats will lose viewers, and what picture would keep them? Name the row's time and S id.
+2. **Footage and photo leads, licence first.** For these beats, find real pictures we may use commercially (US
+   federal public domain, CC0, CC BY, CC BY-SA; never NC/ND, never stock-site watermarks), each with its page URL,
+   licence line as written on the page, size, and what it shows:
+   a) a US large power transformer in a US substation (0:18, 10:28); b) a US Schnabel-car or heavy-rail move of a
+   transformer (1:42); c) Cleveland-Cliffs Butler Works, Pennsylvania (exterior or aerial; USGS/NAIP aerial counts);
+   d) grain-oriented electrical steel coils or slitting lines; e) a transformer core being stacked (US preferred);
+   f) DOE, BPA, WAPA, TVA or Army Corps photo or video of transformer delivery or installation; g) public video of
+   the 13 SEP 2023 House hearing is already in hand (do not search for it).
+   For video, give the exact time range of the useful shot.
+3. **Record pages we still need as files.** Confirm the live URL (or archive URL) of: the Cleveland-Cliffs release of
+   02 NOV 2020 about a Section 232 remedy on laminations and cores; the USTR statement of 05 NOV 2020 on Mexico;
+   Proclamation 9705 (2018) Annex; the two 17 MAY 2019 joint statements (US-Canada, US-Mexico); the CRS report that
+   says no other action was taken; the Howard Industries 2025 tariff-docket comment; the Cleveland-Cliffs filing three
+   weeks earlier ("sufficient capacity"); the Cleveland-Cliffs October 2026 release on the Butler Works project; the
+   Hitachi Energy South Boston, Siemens Energy Charlotte and HD Hyundai Electric Montgomery announcements.
+Do not rewrite the narration (it is recorded). Every lead is checked by us before use.
+
+## How to answer (every task)
+Save the answer as `from_gemini.md` (a file or a Google Doc named from_gemini) at the `return_path` above. If you
+cannot write to Drive, email the whole answer instead, subject `[GEMINI-RESULT] <repo> lpt-goes-steel <task_type>`.
+Start with this front matter, then the sections:
+```
+---
+repo: <repo>
+slug: lpt-goes-steel
+task_type: <task_type>
+completed_ist: YYYY-MM-DD HH:MM IST
+verdict: APPROVED | FIXES_REQUIRED | DO_NOT_PROCEED
+---
+```
+1. Verdict in one sentence. 2. Findings, most serious first, each with a timestamp (file, mm:ss) or line, what you
+saw or heard, why it matters to the viewer, and the exact fix. 3. What is good and must be kept. 4. Anything you
+could not open or check (say so; never guess). Every fact you report carries the URL of the page you opened.

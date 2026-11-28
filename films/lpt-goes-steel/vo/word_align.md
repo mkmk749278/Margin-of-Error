@@ -1,0 +1,204 @@
+# Word alignment: lpt-goes-steel
+
+2102 words measured. Shift from the old estimates: median 77 ms, 90th percentile 231 ms, max 882 ms.
+
+## Words to check by ear (score under 0.35)
+- 5.84s `nine` score 0.006: Its widest coil is nine hundred and twenty millimeters.
+- 6.12s `hundred` score 0.018: Its widest coil is nine hundred and twenty millimeters.
+- 6.58s `twenty` score 0.182: Its widest coil is nine hundred and twenty millimeters.
+- 6.99s `millimeters.` score 0.209: Its widest coil is nine hundred and twenty millimeters.
+- 8.34s `twenty` score 0.001: In twenty twenty, a Commerce Department report recorded what transformer makers 
+- 8.68s `twenty,` score 0.001: In twenty twenty, a Commerce Department report recorded what transformer makers 
+- 15.90s `nine` score 0.25: In twenty twenty, a Commerce Department report recorded what transformer makers 
+- 16.26s `hundred` score 0.001: In twenty twenty, a Commerce Department report recorded what transformer makers 
+- 16.64s `thirty-two.` score 0.001: In twenty twenty, a Commerce Department report recorded what transformer makers 
+- 19.90s `ninety` score 0.037: By the Energy Department's estimate, ninety percent of America's electricity pas
+- 56.49s `twenty` score 0.0: In September twenty twenty-three, that Energy Department official's written test
+- 56.87s `twenty-three,` score 0.0: In September twenty twenty-three, that Energy Department official's written test
+- 69.04s `twenty` score 0.003: In twenty nineteen, they had taken two to four months.
+- 69.34s `nineteen,` score 0.003: In twenty nineteen, they had taken two to four months.
+- 80.58s `twenty` score 0.0: In twenty nineteen, by the Commerce Department's estimate, six hundred and seven
+- 80.86s `nineteen,` score 0.0: In twenty nineteen, by the Commerce Department's estimate, six hundred and seven
+- 83.58s `six` score 0.024: In twenty nineteen, by the Commerce Department's estimate, six hundred and seven
+- 83.76s `hundred` score 0.003: In twenty nineteen, by the Commerce Department's estimate, six hundred and seven
+- 84.36s `seventeen` score 0.094: In twenty nineteen, by the Commerce Department's estimate, six hundred and seven
+- 88.66s `One` score 0.023: One hundred and thirty-seven were built here.
+- 88.78s `hundred` score 0.047: One hundred and thirty-seven were built here.
+- 89.21s `thirty-seven` score 0.032: One hundred and thirty-seven were built here.
+- 93.40s `four` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 93.66s `thousand` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 94.08s `nine` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 94.36s `hundred` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 95.14s `six` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 95.40s `thousand` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 95.86s `seven` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 96.16s `hundred` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 96.48s `and` score 0.0: The Energy Department estimates that between four thousand nine hundred and six 
+- 96.56s `ninety-nine` score 0.001: The Energy Department estimates that between four thousand nine hundred and six 
+- 107.32s `one` score 0.002: A large power transformer typically weighs between one hundred and fifty and fou
+- 107.46s `hundred` score 0.002: A large power transformer typically weighs between one hundred and fifty and fou
+- 107.76s `and` score 0.186: A large power transformer typically weighs between one hundred and fifty and fou
+- 107.92s `fifty` score 0.002: A large power transformer typically weighs between one hundred and fifty and fou
+- 108.66s `four` score 0.017: A large power transformer typically weighs between one hundred and fifty and fou
+- 108.98s `hundred` score 0.028: A large power transformer typically weighs between one hundred and fifty and fou
+- 143.36s `millimeter` score 0.303: So the core is built from thin sheets, about a quarter of a millimeter thick, of
+- 145.61s `three` score 0.173: So the core is built from thin sheets, about a quarter of a millimeter thick, of
+- 166.29s `twenty` score 0.0: Another American steelmaker, the Energy Department noted in twenty twenty-four, 
+- 166.61s `twenty-four,` score 0.0: Another American steelmaker, the Energy Department noted in twenty twenty-four, 
+- 186.16s `nine` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 186.46s `hundred` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 186.74s `and` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 186.85s `fourteen` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 187.68s `nine` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 187.96s `hundred` score 0.0: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 188.22s `and` score 0.006: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 188.36s `twenty` score 0.044: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 188.72s `millimeters.` score 0.191: Its datasheet lists its master coils at nine hundred and fourteen and nine hundr
+- 195.70s `nine` score 0.25: In the Commerce report, transformer makers raised a concern: the larger cores ne
+- 196.04s `hundred` score 0.0: In the Commerce report, transformer makers raised a concern: the larger cores ne
+- 196.28s `and` score 0.0: In the Commerce report, transformer makers raised a concern: the larger cores ne
+- 196.42s `thirty-two.` score 0.001: In the Commerce report, transformer makers raised a concern: the larger cores ne
+- 248.58s `six` score 0.009: The treatment is eradicated upon annealing at temperatures greater than six hund
+- 248.86s `hundred` score 0.001: The treatment is eradicated upon annealing at temperatures greater than six hund
+- 249.18s `degrees` score 0.244: The treatment is eradicated upon annealing at temperatures greater than six hund
+- 262.60s `one` score 0.027: For the refined grades, typical loss is one point zero one watts per kilogram.
+- 262.80s `point` score 0.015: For the refined grades, typical loss is one point zero one watts per kilogram.
+- 263.11s `zero` score 0.007: For the refined grades, typical loss is one point zero one watts per kilogram.
+- 263.55s `one` score 0.005: For the refined grades, typical loss is one point zero one watts per kilogram.
+- 273.77s `twenty` score 0.002: In twenty nineteen, according to the Commerce survey, about seventy-five percent
+- 274.07s `nineteen,` score 0.001: In twenty nineteen, according to the Commerce survey, about seventy-five percent
+- 276.94s `seventy-five` score 0.048: In twenty nineteen, according to the Commerce survey, about seventy-five percent
+- 280.50s `fifty-four` score 0.043: In twenty nineteen, according to the Commerce survey, about seventy-five percent
+- 284.20s `twenty` score 0.0: The Energy Department, in twenty twenty-four, put it more bluntly: the highest g
+- 284.52s `twenty-four,` score 0.0: The Energy Department, in twenty twenty-four, put it more bluntly: the highest g
+- 314.71s `twenty` score 0.0: On the second of November, twenty twenty, Cleveland-Cliffs put out a release.
+- 315.06s `twenty,` score 0.0: On the second of November, twenty twenty, Cleveland-Cliffs put out a release.
+- 321.49s `two` score 0.079: The administration, it said, will be moving forward with a Section two thirty-tw
+- 321.75s `thirty-two` score 0.015: The administration, it said, will be moving forward with a Section two thirty-tw
+- 328.36s `two` score 0.0: Section two thirty-two is the law that lets the U - S President restrict imports
+- 328.58s `thirty-two` score 0.0: Section two thirty-two is the law that lets the U - S President restrict imports
+- 339.34s `twenty` score 0.078: To see why the company wanted it, go back to twenty eighteen.
+- 339.70s `eighteen.` score 0.054: To see why the company wanted it, go back to twenty eighteen.
+- 365.96s `twenty` score 0.0: And from May twenty nineteen, Canada and Mexico were excluded from the steel tar
+- 366.24s `nineteen,` score 0.0: And from May twenty nineteen, Canada and Mexico were excluded from the steel tar
+- 376.00s `twenty-two` score 0.015: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 377.54s `twenty` score 0.003: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 377.84s `fifteen` score 0.001: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 379.08s `one` score 0.001: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 379.26s `hundred` score 0.001: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 379.60s `and` score 0.012: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 379.78s `sixty-seven` score 0.034: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 381.21s `twenty` score 0.003: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 381.53s `nineteen.` score 0.0: Imports of stacked and wound cores went from twenty-two million dollars in twent
+- 382.94s `hundred` score 0.016: A six hundred and fifty percent increase, in its words.
+- 383.58s `fifty` score 0.046: A six hundred and fifty percent increase, in its words.
+- 387.42s `fifty-two` score 0.019: Canada supplied fifty-two percent.
+- 389.69s `forty-five.` score 0.127: Mexico, forty-five.
+- 395.87s `twenty` score 0.0: Both countries, in May twenty nineteen, had signed joint statements with the Uni
+- 396.17s `nineteen,` score 0.0: Both countries, in May twenty nineteen, had signed joint statements with the Uni
+- 422.94s `fifteenth` score 0.113: On the fifteenth of October, twenty twenty, the Commerce report reached its find
+- 424.13s `twenty` score 0.004: On the fifteenth of October, twenty twenty, the Commerce report reached its find
+- 424.47s `twenty,` score 0.005: On the fifteenth of October, twenty twenty, the Commerce report reached its find
+- 464.83s `thirty-two` score 0.018: Imports from Mexico would not be subject to any Section two thirty-two action on
+- 515.11s `twenty` score 0.0: Until August twenty twenty-five, no Section two thirty-two tariff covered import
+- 515.43s `twenty-five,` score 0.0: Until August twenty twenty-five, no Section two thirty-two tariff covered import
+- 517.35s `thirty-two` score 0.059: Until August twenty twenty-five, no Section two thirty-two tariff covered import
+- 524.05s `twenty` score 0.028: Why the twenty twenty finding ended without a tariff, and why one came in twenty
+- 524.35s `twenty-five,` score 0.016: Why the twenty twenty finding ended without a tariff, and why one came in twenty
+- 533.50s `twenty` score 0.001: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 533.83s `twenty` score 0.006: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 536.99s `one` score 0.001: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 537.17s `thousand` score 0.005: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 537.65s `four` score 0.0: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 537.91s `hundred` score 0.002: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 539.93s `nine` score 0.002: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 540.19s `hundred` score 0.002: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 540.47s `and` score 0.044: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 540.57s `twenty` score 0.015: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 540.89s `millimeters.` score 0.174: Cleveland-Cliffs, in that same November twenty twenty release: the U - S market 
+- 547.03s `nine` score 0.25: The transformer makers, through the Commerce report, said the larger cores need 
+- 547.35s `hundred` score 0.0: The transformer makers, through the Commerce report, said the larger cores need 
+- 547.61s `and` score 0.001: The transformer makers, through the Commerce report, said the larger cores need 
+- 547.73s `thirty-two.` score 0.0: The transformer makers, through the Commerce report, said the larger cores need 
+- 548.88s `twenty` score 0.0: In twenty twenty-five, in a tariff docket, Howard Industries, a transformer make
+- 549.18s `twenty-five,` score 0.0: In twenty twenty-five, in a tariff docket, Howard Industries, a transformer make
+- 570.63s `eighteenth` score 0.055: On the eighteenth of August, twenty twenty-five, the Commerce Department added f
+- 571.57s `twenty` score 0.0: On the eighteenth of August, twenty twenty-five, the Commerce Department added f
+- 571.87s `twenty-five,` score 0.0: On the eighteenth of August, twenty twenty-five, the Commerce Department added f
+- 574.30s `four` score 0.023: On the eighteenth of August, twenty twenty-five, the Commerce Department added f
+- 574.58s `hundred` score 0.008: On the eighteenth of August, twenty twenty-five, the Commerce Department added f
+- 585.02s `fifty` score 0.17: Among them were laminations, cores and large liquid-filled transformers, taxed a
+- 597.21s `twenty` score 0.0: Since April twenty twenty-six, the charge on cores has changed: twenty-five perc
+- 597.53s `twenty-six,` score 0.0: Since April twenty twenty-six, the charge on cores has changed: twenty-five perc
+- 600.59s `twenty-five` score 0.011: Since April twenty twenty-six, the charge on cores has changed: twenty-five perc
+- 612.92s `One` score 0.05: One hundred and twenty-six million dollars in twenty eighteen.
+- 613.10s `hundred` score 0.076: One hundred and twenty-six million dollars in twenty eighteen.
+- 613.63s `twenty-six` score 0.243: One hundred and twenty-six million dollars in twenty eighteen.
+- 615.44s `twenty` score 0.061: One hundred and twenty-six million dollars in twenty eighteen.
+- 615.78s `eighteen.` score 0.028: One hundred and twenty-six million dollars in twenty eighteen.
+- 616.71s `Five` score 0.012: Five hundred and twenty-four million in twenty twenty-five.
+- 617.01s `hundred` score 0.012: Five hundred and twenty-four million in twenty twenty-five.
+- 617.48s `twenty-four` score 0.102: Five hundred and twenty-four million in twenty twenty-five.
+- 618.80s `twenty` score 0.015: Five hundred and twenty-four million in twenty twenty-five.
+- 619.10s `twenty-five.` score 0.013: Five hundred and twenty-four million in twenty twenty-five.
+- 633.78s `twenty` score 0.0: At that September twenty twenty-three hearing, the head of a South Carolina elec
+- 634.14s `twenty-three` score 0.0: At that September twenty twenty-three hearing, the head of a South Carolina elec
+- 656.53s `twenty` score 0.0: In November twenty twenty-six, researchers at Johns Hopkins University modeled t
+- 656.89s `twenty-six,` score 0.0: In November twenty twenty-six, researchers at Johns Hopkins University modeled t
+- 662.13s `twenty` score 0.0: In November twenty twenty-six, researchers at Johns Hopkins University modeled t
+- 662.47s `thirty.` score 0.0: In November twenty twenty-six, researchers at Johns Hopkins University modeled t
+- 664.83s `fourteen` score 0.005: Under high demand growth, fourteen point five percent of transformer demand goes
+- 665.38s `point` score 0.007: Under high demand growth, fourteen point five percent of transformer demand goes
+- 665.74s `five` score 0.017: Under high demand growth, fourteen point five percent of transformer demand goes
+- 668.70s `twenty` score 0.001: Under high demand growth, fourteen point five percent of transformer demand goes
+- 669.02s `thirty.` score 0.0: Under high demand growth, fourteen point five percent of transformer demand goes
+- 671.34s `twenty-five` score 0.036: With a disruption to trade, twenty-five percent.
+- 700.96s `thirty-eight` score 0.009: That America's large transformers average thirty-eight to forty years old.
+- 701.86s `forty` score 0.092: That America's large transformers average thirty-eight to forty years old.
+- 704.78s `twenty` score 0.015: It comes from the Energy Department's twenty fourteen study.
+- 705.10s `fourteen` score 0.063: It comes from the Energy Department's twenty fourteen study.
+- 716.41s `twenty` score 0.0: Its footnote leads to a trade hearing in August twenty eleven, a case about larg
+- 716.73s `eleven,` score 0.0: Its footnote leads to a trade hearing in August twenty eleven, a case about larg
+- 725.41s `twenty` score 0.0: The Energy Department's reports in twenty twenty-two and twenty twenty-four repe
+- 725.80s `twenty-two` score 0.0: The Energy Department's reports in twenty twenty-two and twenty twenty-four repe
+- 726.62s `twenty` score 0.001: The Energy Department's reports in twenty twenty-two and twenty twenty-four repe
+- 726.92s `twenty-four` score 0.001: The Energy Department's reports in twenty twenty-two and twenty twenty-four repe
+- 728.05s `it.` score 0.001: The Energy Department's reports in twenty twenty-two and twenty twenty-four repe
+- 737.76s `queue.` score 0.152: The coil, the anneal, the queue.
+- 748.42s `twenty` score 0.0: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 748.76s `twenty-six,` score 0.0: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 758.25s `twenty-five` score 0.0: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 758.89s `percent` score 0.167: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 761.70s `twenty` score 0.0: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 761.98s `twenty-eight.` score 0.0: In October twenty twenty-six, Cleveland-Cliffs showcased its two-hundred-million
+- 764.89s `twenty` score 0.001: The Energy Department's share, begun in twenty twenty-four, is up to seventy-fiv
+- 765.19s `twenty-four,` score 0.0: The Energy Department's share, begun in twenty twenty-four, is up to seventy-fiv
+- 766.58s `seventy-five` score 0.065: The Energy Department's share, begun in twenty twenty-four, is up to seventy-fiv
+- 781.80s `four` score 0.001: Hitachi Energy announced about four hundred and fifty-seven million dollars for 
+- 782.00s `hundred` score 0.0: Hitachi Energy announced about four hundred and fifty-seven million dollars for 
+- 782.35s `and` score 0.001: Hitachi Energy announced about four hundred and fifty-seven million dollars for 
+- 782.55s `fifty-seven` score 0.003: Hitachi Energy announced about four hundred and fifty-seven million dollars for 
+- 789.16s `one` score 0.0: Siemens Energy, one hundred and fifty million in Charlotte, North Carolina.
+- 789.32s `hundred` score 0.0: Siemens Energy, one hundred and fifty million in Charlotte, North Carolina.
+- 789.60s `and` score 0.001: Siemens Energy, one hundred and fifty million in Charlotte, North Carolina.
+- 789.80s `fifty` score 0.0: Siemens Energy, one hundred and fifty million in Charlotte, North Carolina.
+- 794.49s `two` score 0.012: H - D Hyundai Electric, about two hundred million in Montgomery, Alabama.
+- 794.74s `hundred` score 0.027: H - D Hyundai Electric, about two hundred million in Montgomery, Alabama.
+- 816.15s `twenty` score 0.34: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 816.49s `thirty` score 0.061: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 818.08s `fourteen` score 0.003: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 818.56s `point` score 0.001: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 818.86s `five` score 0.006: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 819.16s `percent` score 0.192: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 820.02s `five.` score 0.174: That cuts the twenty thirty transformer gap from fourteen point five percent to 
+- 836.98s `one` score 0.295: The Breakthrough Institute puts a retrofit of the mill, or a new one, at about o
+- 837.38s `two` score 0.318: The Breakthrough Institute puts a retrofit of the mill, or a new one, at about o
+- 847.76s `millimeters.` score 0.21: The steel at its core is still measured in millimeters.
+- 848.91s `Nine` score 0.002: Nine hundred and twenty, from the one mill at home.
+- 849.17s `hundred` score 0.007: Nine hundred and twenty, from the one mill at home.
+- 849.46s `and` score 0.172: Nine hundred and twenty, from the one mill at home.
+- 849.58s `twenty,` score 0.129: Nine hundred and twenty, from the one mill at home.
+- 852.01s `nine` score 0.001: More than nine hundred and thirty-two, for the larger cores.
+- 852.23s `hundred` score 0.001: More than nine hundred and thirty-two, for the larger cores.
+- 852.55s `and` score 0.042: More than nine hundred and thirty-two, for the larger cores.
+- 852.63s `thirty-two,` score 0.009: More than nine hundred and thirty-two, for the larger cores.

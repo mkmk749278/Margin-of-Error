@@ -12,7 +12,7 @@ Writes, in --out: vo_full.wav (48 kHz mono), timing.json (blocks, sentences and 
 in frames at --fps; chapter starts), captions.en.srt (one cue per sentence) and timing.md (sentences to check by ear).
 
 Usage: scripts/vo_timing.py films/<slug> [--fps 60]
-  reads films/<slug>/assets/vo/takes/bNN.mp3, films/<slug>/script/blocks_performance.md and script/vo.txt
+  reads films/<slug>/assets/vo/takes/bNN.wav (or .mp3), films/<slug>/script/blocks_performance.md and script/vo.txt
 """
 import argparse
 import json
@@ -130,7 +130,7 @@ def main() -> None:
                 if norm(para).startswith(norm(opening)):
                     chap = title
             beats.append((norm(para), chap))
-    takes = sorted((out / "takes").glob("b*.mp3"))
+    takes = sorted((out / "takes").glob("b*.wav")) or sorted((out / "takes").glob("b*.mp3"))  # spliced finals are WAV
     if len(takes) != len(blocks):
         sys.exit(f"{len(takes)} takes for {len(blocks)} blocks")
 
