@@ -204,7 +204,7 @@ const Announce08: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Doc doc="ustr_mexico" page={1} start={sf(80) - 12} end={ef(80) + 10} label="NOW FACE UP" focus={{x: 150, y: 500, w: 1570, h: 800}} />
+			<Doc doc="ustr_mexico" page={2} start={sf(80) - 12} end={ef(80) + 10} label="NOW FACE UP" focus={{x: 150, y: 240, w: 1570, h: 640}} />
 			<Pop f={f} at={wf(80, 'fifth')} until={ef(80)} style={{right: 110, top: 900}}>
 				<Date_ text="05 NOV 2020 · 21 DAYS LATER" />
 			</Pop>
@@ -288,7 +288,7 @@ const Width10: React.FC = () => {
 	const f = useCurrentFrame();
 	return (
 		<>
-			<Doc doc="cliffs_2020" start={sf(92) - 12} end={ef(93) + 12} hl={[{key: 'only1400', at: 0, ats: [wf(93, 'market') - 12, wf(93, 'wider') - 12]}]} label="EXHIBIT" title="COMPANY STATEMENT" />
+			<Doc doc="cliffs_2020" cropH={1400} start={sf(92) - 12} end={ef(93) + 12} hl={[{key: 'only1400', at: 0, ats: [wf(93, 'market') - 12, wf(93, 'wider') - 12]}]} label="EXHIBIT" title="COMPANY STATEMENT" />
 			<Pop f={f} at={wf(92, 'sides')} until={sf(93)} style={{left: 96, top: 960}}>
 				<Chip text="SIDE 1 · THE STEELMAKER" tone={colors.cyan} size={30} />
 			</Pop>
@@ -302,7 +302,7 @@ const Width10: React.FC = () => {
 			<Pop f={f} at={wf(94, 'transformer')} until={ef(94)} style={{left: 96, top: 960}}>
 				<Chip text="SIDE 2 · THE TRANSFORMER MAKERS" tone={colors.amber} size={30} />
 			</Pop>
-			<Doc doc="howard" start={ef(94)} end={ef(95) + 12} hl={[{key: 'c30', at: wf(95, 'enough')}]} label="EXHIBIT" title="CROPPED TO ITS FINDING LINE" />
+			<Doc doc="howard" start={ef(94)} end={ef(95) + 12} hl={[{key: 'c30', at: wf(95, 'enough')}]} label="EXHIBIT" title="CROPPED TO ITS FINDING" />
 			<Pop f={f} at={wf(95, 'twenty-five')} until={ef(95)} style={{right: 110, top: 900}}>
 				<Date_ text="21 OCT 2025" />
 			</Pop>

@@ -51,7 +51,7 @@ const Ac01: React.FC = () => {
 			<Pop f={f} at={wf(25, 'heat')} style={{left: 120, top: 410}}>
 				{amberChip('LOSS AS HEAT IN THE CORE')}
 			</Pop>
-			<Strip what="RECONSTRUCTION" source="SLOWED FOR THE EYE: THE REAL FIELD REVERSES 120 TIMES A SECOND · 232 REPORT PP. 41–42" />
+			<Strip what="RECONSTRUCTION" source="SLOWED: THE REAL FIELD REVERSES 120 TIMES A SECOND · 232 REPORT PP. 41–42" />
 		</HeroShot>
 	);
 };
@@ -215,7 +215,7 @@ const Overhang07: React.FC = () => {
 			<Pop f={f} at={wf(36, 'strips')} style={{left: 120, top: 120}}>
 				<Chip text="TWO STRIPS, ONE SEAM" tone={colors.amber} size={36} />
 			</Pop>
-			<Strip what="RECONSTRUCTION" source="LEG WIDTH >932 MM: 232 REPORT P. 104 · COIL 920 MM: TRAN-COR H TABLE 7 · GAP NOT TO SCALE ON SCREEN" />
+			<Strip what="RECONSTRUCTION · GAP NOT TO SCALE" source="232 REPORT P. 104 · TRAN-COR H TABLE 7" />
 		</HeroShot>
 	);
 };
