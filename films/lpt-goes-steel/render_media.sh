@@ -15,3 +15,12 @@ PG=public/films/lpt-goes-steel/pages; mkdir -p "$PG"
 for p in 1 17 104; do
   pdftoppm -f $p -l $p -scale-to-x 1870 -scale-to-y -1 -jpeg -jpegopt quality=90 -singlefile assets/lpt-goes-steel/records/goes232.pdf "$PG/g232_p$(printf %03d $p)"
 done
+# photos (Drive lpt-goes-steel/assets/, licences in media_manifest.csv): EXIF-rotated, 2600 px max
+python3 - <<'PY'
+from PIL import Image, ImageOps
+import os
+os.makedirs('public/films/lpt-goes-steel/photos', exist_ok=True)
+for f in ['lpt_substation_cc0', 'schnabel_rail_16x9_ccbysa4', 'schnabel_rail_side_ccbysa4', 'transformer_core_workshop_ccbysa4']:
+    im = ImageOps.exif_transpose(Image.open(f'films/lpt-goes-steel/assets/drive/assets/{f}.jpg')).convert('RGB'); im.thumbnail((2600, 2600))
+    im.save(f'public/films/lpt-goes-steel/photos/{f}.jpg', quality=88)
+PY
