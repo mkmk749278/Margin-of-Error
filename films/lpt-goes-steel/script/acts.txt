@@ -1,0 +1,6 @@
+# Act starts for vo_timing.py: "Title | the first words of the act's first paragraph" (vo.txt keeps no headers).
+I · The Wait | Only one mill in America makes the steel
+II · The Steel | A transformer runs on alternating current.
+III · The Tariff | On the second of November, twenty twenty, Cleveland-Cliffs
+IV · The Cost | How much came in, in those years?
+V · The Verdict | What is being done?
